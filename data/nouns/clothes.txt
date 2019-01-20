@@ -1,0 +1,72 @@
+одежда - clothes
+рубашка - shirt
+
+костюм - suit
+
+брюки - trousers
+
+носки - socks
+
+свитер - sweater
+
+футболка - t-shirt
+
+тенниска - t-shirt, polo-shirt
+
+майка - singlet, tank-top
+
+кофта - blouse
+
+джинсы - jeans
+
+юбка - skirt
+
+платье - dress
+
+водолазка - poloneck
+
+жакет - jacket
+
+жилет - waistcoat
+
+пиджак - coat
+
+шарф - scarf
+
+куртка - jacket
+
+пальто - coat
+
+шуба - fur coat
+
+шапка - cap, hat
+
+ботинки - shoes
+
+кроссовки - sneakers, sport shoes
+
+спортивный костюм - sport suit
+
+кеды - gumshoes
+
+туфли - shoes
+
+босоножки - sandals
+
+тапочки - slippers
+
+бюстгалтер - bra
+
+
+украшения - jewelry
+кольцо - ring
+
+цепочка - chain
+
+браслет - bracelet
+
+ожерелье - necklace
+
+сережки - earrings
+
+кулон - pendant

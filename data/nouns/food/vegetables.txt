@@ -1,0 +1,41 @@
+Овощи - Vegtables
+
+Огурец (огурцы) - cucumber
+
+Помидор (помидоры) - tomato
+
+Кабачок (кабачки) - vegtable marrow
+
+Картофель (-) - potato
+
+Баклажан (баклажаны) - aubergine, egg-plant
+
+Капуста (-) - cabbage
+
+Цветная капуста (-) - cauliflower
+
+Брокколи (-) - broccoli
+
+Патисон (патисоны) - squash
+
+Тыква (тыквы) - pumpkin
+
+Морковь (-) - carrot
+
+Лук (-) - onion
+
+Перец (перцы) - pepper, capsicum
+
+Фасоль (-) - bean
+
+Горох (-) - pea
+
+Сельдерей - celery
+
+пюре картофельное - mashed potatoes
+
+Свекла - beetroot, beet
+
+Салат - lettuce
+
+Гриб (грибы) - mushroom

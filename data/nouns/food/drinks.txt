@@ -1,0 +1,39 @@
+Напитки - Drinks
+
+Чай - Tea
+
+Кофе - Coffee
+
+Сок - Juice
+
+Апельсиновый - orange juice
+
+Яблочный - apple juice
+
+Грушевый - pear juice
+
+Персиковый - peach juice
+
+Абрикосовый - apricot juice
+
+Вишневый - cherry juice
+
+Смешанный - mixed juice
+
+грейпфрутовый - gapefruit juice
+
+Молочный коктейль - milkshake
+
+Вода - water
+
+Молоко - milk
+
+Кефир - kefir
+
+Сливки - cream
+
+лимонад - lemonade
+
+кока-кола - coke
+
+какао - hot chocolate

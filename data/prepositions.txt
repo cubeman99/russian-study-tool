@@ -1,0 +1,20 @@
+name = Prepositions
+side = russian
+
+в + acc. - to, into, in (motion)
+на + acc. - to, into, onto, on (motion)
+в + prep. - in, at (location)
+на + prep. - on, at, in (location)
+за + acc. - behind, beyond (motion)
+под + acc. - under (motion)
+за + inst. - behind, beyond (location)
+под + inst. - under (location)
+без + gen. - without
+дла + gen. - for the benefit of
+с (со) + gen. - from a place
+у + gen. - by, at a place
+из + gen. - from, out of
+до + gen. - before or until a certain time
+о (об, обо) + prep. - about, concerning
+к + dat. - toward, up to a point; toward, by point in time, to a persion
+

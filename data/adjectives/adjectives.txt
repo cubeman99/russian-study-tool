@@ -1,0 +1,121 @@
+белый - white
+
+чёрный - black
+
+красный - red
+
+зелёный - green
+
+жёлтый - yellow
+
+синий - blue (dark)
+
+голубой - blue
+
+оранжевый - orange
+
+коричневый - brown
+
+серый - grey
+
+розовый - pink
+
+пурпурный - purple
+
+быстрый - fast
+
+близкий - near, close
+
+большой - big
+
+важный - important
+
+высокий - tall, high
+
+главный - main
+
+грязный - dirty
+
+громкий - loud
+
+густой - dense, thick
+
+дешёвый - cheap
+
+добрый - kind
+
+дорогой - dear, expensive
+
+жаркий - hot
+
+интересный - interesting
+
+красивый - beautiful
+
+крепкий - strong, tough
+
+лёгкий - easy
+
+маленький - small
+
+медленный - slow
+
+молодой - young
+
+мягкий - soft
+
+новый - new
+
+острый - sharp
+
+первый - first
+
+печальный - sad
+
+плохой - bad
+
+последний - last
+
+приятный - pleasant
+
+простой - simple
+
+скорый - rapid, quick
+
+скучный - boring
+
+сильный - strong, powerful
+
+спокойный - peaceful
+
+старый - old
+
+строгий - strict
+
+сухой - dry
+
+счастливый - happy
+
+твёрдый - hard, firm
+
+тёмный - dark
+
+тёплый - warm
+
+толстый - fat, thick
+
+трудный - difficult
+
+удобный - comfortable
+
+холодный - cold
+
+хороший - good, nice
+
+частный - private
+
+частый - frequent, close together, dense
+
+чистый - clean
+
+яркий - bright

@@ -1,0 +1,44 @@
+name = Verbs
+side = english
+
+пи´ть/вы´пить - to drink
+учи´ть/вы´учить - to learn
+плати´ть/заплати´ть - to pay
+хоте´ть/захоте´ть - to want
+пе´чь/испе´чь - to bake
+печа´тать/напеча´тать - to print, type
+писа´ть/написа´ть - to write
+рисова´ть/нарисова´ть - to draw
+звони´ть/позвони´ть - to ring, telephone
+смотре´ть/посмотре´ть - to look, watch
+стро´ить/постро´ить - to build
+гото´вить/пригото´вить - to prepare
+чита´ть/прочита´ть - to read
+буди´ть/разбуди´ть - to awaken
+де´лать/сде´лать - to do, make
+е´сть/съе´сть - to eat
+игра´ть/сыгра´ть - to play
+пе´ть/спе´ть - to sing
+мо´чь/смо´чь - to be able
+ви´деть/уви´деть - to see
+слы´шать/услы´шать - to hear
+
+изуча´ть/изучи´ть - to study
+конча´ть/ко´нчить - to finish
+покупа´ть/купи´ть - to finish
+реша´ть/реши´ть - to decide, solve
+крича´ть/кри´кнуть - to shout
+отдыха´ть/отдохну´ть - to rest
+узнава´ть/узна´ть - to find out, recognize
+дава´ть/да´ть - to give
+переводи´ть/перевести´ - to translate
+спра´шивать/спроси´ть - to ask
+отвеча´ть/отве´тить - to answer
+
+бра´ть/взя´ть - to take
+говори´ть/сказа´ть - to speak, say / to tell
+иска´ть/найти´ - to look for / to find
+кла´сть/положи´ть - to put in a lying position
+лови´ть/пойма´ть - to try to catch / to catch
+
+	

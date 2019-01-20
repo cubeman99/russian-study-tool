@@ -1,0 +1,19 @@
+Мука - flour
+
+Хлеб - bread
+
+Белый хлеб - white bread
+
+Чёрный хлеб - black bread (dark rye bread)
+
+Булочка - cookie
+
+Кекс - cake
+
+Торт - tart, pie
+
+Пирожок - pie, patty
+
+булочка - muffin
+
+блин - pancake
