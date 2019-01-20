@@ -1,4 +1,3 @@
-
 from cmg.input import *
 from cmg.graphics import *
 

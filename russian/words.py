@@ -1,10 +1,4 @@
-
 from russian.types import *
-
-class Card:
-  def __init__(self, english, russian):
-    self.english = english
-    self.russian = russian
 
 class Word(Card):
   def __init__(self, english, russian,
@@ -15,7 +9,8 @@ class Word(Card):
                person=None,
                tense=None,
                aspect=None):
-    Card.__init__(self, english=english, russian=russian)
+    self.english = english
+    self.russian = russian
     self.word_type = word_type
     self.gender = gender
     self.case = case

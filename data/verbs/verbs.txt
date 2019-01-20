@@ -1,5 +1,6 @@
 name = Verbs
 side = english
+info = perfective/imperfective
 
 пи´ть/вы´пить - to drink
 учи´ть/вы´учить - to learn

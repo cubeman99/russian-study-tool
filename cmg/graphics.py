@@ -1,7 +1,7 @@
 import pygame
 import time
 from enum import IntFlag
-# Define some colors
+
 BLACK   = (  0,   0,   0)
 GRAY    = (128, 128, 128)
 LIGHT_GRAY = (192, 192, 192)

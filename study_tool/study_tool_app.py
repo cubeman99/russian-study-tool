@@ -1,16 +1,12 @@
-
 import pygame
 import time
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
 from enum import IntEnum
-from study_cards.study_state import *
-from study_cards.menu_state import *
+from study_tool.study_state import *
+from study_tool.menu_state import *
 
-# Define some colors
-BLACK = (  0,   0,   0)
-WHITE = (255, 255, 255)
 DEAD_ZONE = 0.01
 
 class StudyCardsApp(Application):
@@ -82,3 +78,7 @@ class StudyCardsApp(Application):
     self.screen.fill(WHITE)
     self.state.draw(self.graphics)
         
+
+if __name__ == "__main__":
+  app = StudyCardsApp()
+  app.run()

@@ -1,4 +1,3 @@
-
 from enum import IntEnum
 
 class Language(IntEnum):
@@ -15,8 +14,8 @@ class Plurality(IntEnum):
   Plural = 1
   
 class Person(IntEnum):
-  First = 0,
-  Second = 1,
+  First = 0
+  Second = 1
   Third = 2
 
 class WordType(IntEnum):

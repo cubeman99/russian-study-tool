@@ -1,4 +1,3 @@
-
 from enum import IntEnum
 import os
 import pygame
@@ -7,7 +6,7 @@ import time
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
-from study_cards.state import *
+from study_tool.state import *
 
 class CardSide(IntEnum):
   Front = 0
@@ -24,6 +23,7 @@ class CardSet:
   def __init__(self, cards=()):
     self.name = "Untitled"
     self.path = ""
+    self.info = ""
     self.cards = list(cards)
     self.card_count = len(cards)
 
@@ -31,7 +31,8 @@ class CardSet:
     self.path = path
     self.cards = []
     self.header_dict = {"name": os.path.splitext(os.path.basename(path))[0],
-                        "side": "english"}
+                        "side": "english",
+                        "info": ""}
     with open(path, "r", encoding="utf8") as f:
       header = True
       for line in f:
@@ -51,6 +52,7 @@ class CardSet:
               self.cards.append(card)
 
     self.name = self.header_dict["name"]
+    self.info = self.header_dict["info"]
     self.side = CardSide.Front if self.header_dict["side"] == "russian" else CardSide.Back
     self.card_count = len(self.cards)
 
@@ -163,6 +165,3 @@ class StudyState(State):
                   color=BLACK,
                   align=Align.Centered)
     State.draw(self, g)
-    #text = "[" + ", ".join("{}.{}.{}".format(c.front, c.age, c.marked) for c in self.encountered_cards) + "]"
-    #g.draw_text(32, 330, text)
-

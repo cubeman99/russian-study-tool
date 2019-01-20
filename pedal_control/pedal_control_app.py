@@ -1,20 +1,12 @@
-
 import pygame
 import time
-from cmg.input import *
-from cmg.graphics import *
-from russian.russian_app import *
-from study_cards.study_cards import *
-
-# Define some colors
-BLACK    = (  0,   0,   0)
-WHITE    = (255, 255, 255)
-
 from pynput.keyboard import Key, Controller as KeyboardController
 from pynput.mouse import Button, Controller as MouseController
-import time
+from cmg.application import *
+from cmg.graphics import *
+from cmg.input import *
 
-class PedalControls:
+class PedalControlApp:
 
   def __init__(self):
     self.done = False
@@ -233,7 +225,7 @@ class PedalControls:
     
     pygame.quit()
 
-#app = PedalControls()
-#app = RussianApp()
-app = StudyCardsApp()
-app.run()
+
+if __name__ == "__main__":
+  app = PedalControlApp()
+  app.run()

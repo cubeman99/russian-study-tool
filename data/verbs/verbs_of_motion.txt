@@ -1,5 +1,6 @@
 name = Verbs of Motion
 side = english
+info = multidirectional/unidirectional
 
 ходи´ть/идти´ - to walk, to go on foot
 е´здить/е´хать - to ride, to go by vehicle

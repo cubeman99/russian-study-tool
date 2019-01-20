@@ -1,12 +1,9 @@
-
 import pygame
 import time
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
 from enum import IntEnum
-from russian.types import *
-from russian.words import *
 
 class Button:
   def __init__(self, name, action=lambda: None, hold_time=0):

@@ -1,4 +1,3 @@
-
 from enum import IntEnum
 import os
 import pygame
@@ -7,8 +6,8 @@ import time
 from cmg.application import *
 from cmg.graphics import *
 from cmg.input import *
-from study_cards.state import *
-from study_cards.study_state import *
+from study_tool.state import *
+from study_tool.study_state import *
 
 class MenuState(State):
   def __init__(self, local_path):
@@ -100,4 +99,3 @@ class MenuState(State):
 
     State.draw(self, g)
     
-
