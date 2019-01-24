@@ -1,3 +1,6 @@
+@name Nature
+@side english
+
 ве´тер - wind
 волна´ - wave
 пля´ж - beach
@@ -16,8 +19,9 @@
 равни´на - plain
 река´ - river
 во´здух air
-восхо´д (со´лнца) sunrise
-зака´т sunset
-моро´з frost, intense cold
-рассве´т dawn
-со´лнце sun
+восхо´д (со´лнца) - sunrise
+зака´т - sunset
+моро´з - frost, intense cold
+рассве´т - dawn
+со´лнце - sun
+снег - snow

@@ -1,54 +1,30 @@
+@name Days/Months
+
 понедельник - Monday
-
 вторник - Tuesday
-
 среда - Wednesday
-
 четверг - Thursday
-
 пятница - Friday
-
 суббота - Saturday
-
 воскресенье - Sunday
 
-
 январь - January
-
 февраль - February
-
 март - March
-
 апрель - April
-
 май - May
-
 июнь - June
-
 июль - July
-
 август - August
-
 сентябрь - September
-
 октябрь - October
-
 ноябрь - November
-
 декабрь - December
 
-
-
 сегодня - today
-
 завтра - tomorrow
-
 вчера - yesterday
-
 день - day
-
 неделя - week
-
 месяц - month
-
 год - year

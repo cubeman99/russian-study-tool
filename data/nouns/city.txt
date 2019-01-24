@@ -1,3 +1,5 @@
+@name City
+
 у´лица - street
 институ´т - institute
 музе´й - museum

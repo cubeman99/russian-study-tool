@@ -1,2 +1,1 @@
-python main.py study_tool
-pause
+start pythonw main.py study_tool

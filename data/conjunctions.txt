@@ -1,4 +1,4 @@
-name = Conjuctions
+@name Conjuctions
 
 и - and
 и´ли - or

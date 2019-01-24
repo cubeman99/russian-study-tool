@@ -1,3 +1,5 @@
+@name Body Parts
+
 лицо´ - face
 рука´ - hand/arm
 нога´ - leg

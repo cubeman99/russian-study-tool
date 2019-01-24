@@ -1,0 +1,62 @@
+@name Professions
+
+чита´тель - reader
+покупа´тель - shopper
+води´тель - driver
+зри´тель - spectator
+библиоте´карь - librarian
+апте´карь - pharmacist
+пе´карь - baker
+врата´рь - goalkeeper
+
+хиру´рг - surgeon
+гео´граф - geographer
+вра´ч - doctor
+карто´граф - cartographer
+ветерина´р - veterinarian
+архите´ктор - architect
+профе´ссор - professor
+космона´вт - cosmonaut
+доце´нт - university lecturer
+инжене´р - engineer
+адвока´т - lawyer
+парикма´хер - hairdresser
+педаго´г - teacher
+строи´тель - builder
+био´лог - biologist
+секрета´рь - secretary
+гео´лог - geologist
+журнали´ст / журнали´стка - journalist
+арти´ст / арти´стка - performing artist
+программи´ст / программи´стка - computer programmer
+официа´нт / официа´нтка - waiter/waitress
+актёр / актри´са - actor/actress
+поэ´т / поэте´сса - poet/poetess
+при´нц / принце´сса - prince/princess
+по´вар / повари´ха - cook
+сто´рож / сторожи´ха - guard
+портно´й / портни´ха - tailor/dressmaker
+вегетариа´нец / вегетариа´нка - vegetarian
+америка´нец / америка´нка - American
+кана´дец / кана´дка - Canadian
+не´мец / не´мка German
+англича´нин / англича´нка - Englishman/Englishwoman
+христиани´н / христиа´нка - Christian
+крестья´нин / крестья´нка - peasant
+славяни´н / славя´нка - Slav
+россия´нин / россия´нка Russian (citizen)
+продаве´ц / продавщи´ца - salesperson
+танцо´вщик / танцо´вщица - ballet dancer
+гардеро´бщик / гардеро´бщица - cloakroom attendant
+перево´дчик / перево´дчица - translator
+лётчик / лётчица - pilot
+буфе´тчик / буфе´тчица - snack bar attendant
+певе´ц / певи´ца - singer
+краса´вец / краса´вица - attractive person
+счастли´вец / счастли´вица - lucky person
+худо´жник / худо´жница - artist
+рабо´тник / рабо´тница - helper
+учени´к / учени´ца - pupil
+уч´итель / учи´тельница - (school) teacher
+преподав´атель / преподава´тельница - (university) instructor
+писа´тель / пис´ательница - writer

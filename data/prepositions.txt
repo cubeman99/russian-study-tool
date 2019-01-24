@@ -1,5 +1,5 @@
-name = Prepositions
-side = russian
+@name Prepositions
+@side ru
 
 в + acc. - to, into, in (motion)
 на + acc. - to, into, onto, on (motion)

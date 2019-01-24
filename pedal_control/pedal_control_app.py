@@ -183,7 +183,7 @@ class PedalControlApp:
               self.mouse_dir[axis] = -self.mouse_dir[axis]
               self.mouse_moving[axis] = False
             else:
-              movement[axis] = int(1 + amount * amount * 10) * self.mouse_dir[axis]
+              movement[axis] = int(1 + amount * amount * amount * 25) * self.mouse_dir[axis]
           elif amount >= 0.05:
             self.mouse_moving[axis] = True
         if any(self.mouse_moving):

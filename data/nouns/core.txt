@@ -1,3 +1,5 @@
+@name Core
+
 клю´ч - key
 каранда´ш - pencil
 портфе´ль - briefcase

@@ -1,1 +1,1 @@
-start python main.py pedal_control
+start pythonw main.py pedal_control

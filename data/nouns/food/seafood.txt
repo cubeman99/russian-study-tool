@@ -1,53 +1,29 @@
+@name Seafood
+
 Морепродукты - Seafood
-
 Рыба - fish
-
 Окунь - bass
-
 Семга - salmon
-
 Осетр - sturgeon
-
 Горбуша - humpback salmon
-
 Форель - trout
-
 Судак - pike perch
-
 Щука - pike
-
 Камбала - flatfish
-
 Сом - sheatfish, catfish
-
 Треска - codfish
-
 Сардина - sardine
-
 Ставрида - horse-mackerel
-
 Скумбрия - mackerel
-
 Карась - crucian
-
 Карп - carp
-
 Палтус - fluke
-
 Тунец - tuna
-
 Белуга - huso
-
 Хек - hake
-
 Сельдь - herring
-
 Устрица (устрицы) - oyster
-
 Мидия (мидии) - mussel
-
 Креветка (креветки) - shrimp
-
 Краб (крабы) - crab
-
 Кальмар (кальмары) - squid

@@ -1,7 +1,4 @@
-
-пла´щ - raincoat
-пла´тье - dress
-бро´шь - brooch
+@name Misc
 
 но´ж - knife
 

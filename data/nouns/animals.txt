@@ -1,177 +1,93 @@
+@name Animals
+
 животные - animals
-
 кот, кошка - cat
-
 собака - dog
-
 медведь - bear
-
 слон - elephant
-
 лев - lion
-
 тигр - tiger
-
 жираф - giraffe
-
 верблюд - camel
-
 кролик - rabbit
-
 заяц - hare
-
 обезьяна - monkey
-
 белка - squirrel
-
 волк - wolf
-
 лиса - fox
-
 крот - mole
-
 мышь - mouse
-
 крыса - rat
-
 ежик - hedge-hog
-
 змея - snake
-
 антилопа - antelope
-
 бизон - bison
-
 буйвол - buffalo
-
 лось - elk, moose
-
 олень - deer
-
 дикобраз - porcupine
-
 зебра - zebra
-
 носорог - rhino
-
 гиппопотам - hippopotamus
-
 горилла - gorilla
-
 шимпанзе - chimpanzee
-
 орангутанг - orangutan
-
 белка - squirrel
-
 обезьяна - ape
-
 леопард - leopard
-
 гепард - cheetah
-
 панда - panda
-
 газель - gazelle
 
-
 курица - chicken
-
 петух - cock
-
 корова - cow
-
 бык - bull
-
 буйвол - buffalo
-
 овца - sheep
-
 баран - ram
-
 коза, козёл - goat
-
 осел - donkey
-
 лошадь - horse
-
 гусь - goose
-
 утка - duck
 
-
 паук - spider
-
 муравей - ant
-
 пчела - bee
-
 оса - wasp
-
 червяк - worm
-
 бабочка - butterfly
-
 моль - moth
 
-
 кенгуру - kangaroo
-
 эму - emu
-
 вомбат - wombat
-
 коала - koala
 
-
 рыба - fish
-
 дельфин - dolphin
-
 крокодил - crocodile
-
 аллигатор - alligator
-
 осьминог - octopus
-
 кит - whale
-
 акула - shark
-
 черепаха - turtle
-
 лягушка - frog
-
 нерпа - seal
-
 жаба - toad
-
 кальмар - squid
-
 птица - bird
-
 скворец - starling
-
 дятел - woodpecker
-
 воробей - sparrow
-
 ворона - crow
-
 снегирь - bullfinch
-
 сова - owl
-
 пингвин - penguin
-
 попугай - parrot
-
 малиновка - robin
-
 голубь - pigeon
-
 павлин - peacock
-
 фламинго - flamingo
-
 страус - ostrich

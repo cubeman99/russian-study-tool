@@ -1,21 +1,13 @@
+@name Meat
+
 Мясо - Meat
-
 Говядина - beef
-
 Баранина - mutton
-
 Свинина - pork
-
 Телятина - veal
-
 Курица - chichen
-
 Ягнятина - lamb
-
 Крольчатина (кролик) - rabbit
-
 Ветчина - ham
-
 Бекон - bacon
-
 колбаса´ - sausage

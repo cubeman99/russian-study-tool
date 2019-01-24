@@ -29,22 +29,26 @@ class MenuState(State):
     self.title = self.app.title if self.top_level else os.path.basename(self.local_path)
     back_option = "Quit" if self.top_level else "Back"
     self.options = [(back_option, self.app.pop_state)]
-    set_options = []
     dir_options = []
+    card_sets = []
     for name in os.listdir(self.app.root + "/" + self.local_path):
       path = os.path.join(self.local_path, name)
-      if os.path.isdir(self.app.root + "/" + path):
+      full_path = os.path.join(self.app.root, path)
+      if os.path.isdir(full_path):
         dir_options.append(("[" + name + "]", self.open_directory_lambda(path)))
-      elif os.path.isfile(self.app.root + "/" + path) and path.endswith(".txt"):
-        set_options.append((name[:-4], self.open_set_lambda(path)))
-    self.options += sorted(dir_options) + sorted(set_options)
+      elif os.path.isfile(full_path) and path.endswith(".txt"):
+        card_sets += load_card_set_file(full_path)
+    self.options += sorted(dir_options)
+    for card_set in card_sets:
+      self.options.append(("{} [{}]".format(card_set.name, card_set.card_count),
+                           self.open_set_lambda(card_set)))
     self.cursor = 1.0 if self.top_level else 0.0
 
   def open_directory_lambda(self, path):
     return lambda: self.app.push_state(MenuState(path))
   
-  def open_set_lambda(self, path):
-    return lambda: self.app.push_state(StudyState(path))
+  def open_set_lambda(self, card_set):
+    return lambda: self.app.push_state(StudyState(card_set))
 
   def select(self):
     option_index = int(round(self.cursor))

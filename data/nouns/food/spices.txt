@@ -1,43 +1,24 @@
+@name Spices
+
 Специи - Spice
-
 Соль - salt
-
 Сахар - sugar
-
 Тимьян - thyme
-
 Черный перец - pepper
-
 Маслина - olive
-
 Оливка - olive
-
 Гвоздика - carnation
-
 Каперсы - caper
-
 Эстрагон - estragon
-
 Тархун - estragon
-
 Шафран - saffron
-
 Ваниль - vanilla
-
 Имбирь - ginger
-
 Кардамон - cardamom
-
 Розмарин - rosemary
-
 Горчица - mustard
-
 Корица - cinnamon
-
 Укроп - dill
-
 Петрушка - punch
-
 Базилик - basil
-
 Щавель - sorrel

@@ -7,73 +7,20 @@ from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
 from study_tool.state import *
-
-class CardSide(IntEnum):
-  Front = 0
-  Back = 1
-
-class Card:
-  def __init__(self, front, back):
-    self.text = [front, back]
-    self.marked = False
-    self.encountered = False
-    self.age = 0
-  
-class CardSet:
-  def __init__(self, cards=()):
-    self.name = "Untitled"
-    self.path = ""
-    self.info = ""
-    self.cards = list(cards)
-    self.card_count = len(cards)
-
-  def load(self, path):
-    self.path = path
-    self.cards = []
-    self.header_dict = {"name": os.path.splitext(os.path.basename(path))[0],
-                        "side": "english",
-                        "info": ""}
-    with open(path, "r", encoding="utf8") as f:
-      header = True
-      for line in f:
-        line = line.strip()
-        if header and "=" in line:
-          key, value = [t.strip() for t in line.split("=")]
-          if key in self.header_dict:
-            self.header_dict[key] = value
-          else:
-            raise KeyError(key)
-        else:
-          header = False
-          if "-" in line:
-            tokens = [t.strip() for t in line.split("-")]
-            if len(tokens) == 2:
-              card = Card(tokens[0], tokens[1])
-              self.cards.append(card)
-
-    self.name = self.header_dict["name"]
-    self.info = self.header_dict["info"]
-    self.side = CardSide.Front if self.header_dict["side"] == "russian" else CardSide.Back
-    self.card_count = len(self.cards)
-
-  def next(self):
-    index = random.randint(0, len(self.cards) - 1)
-    card = self.cards[index]
-    del self.cards[index]
-    return card
+from study_tool.card_set import *
 
 class StudyState(State):
-  def __init__(self, path):
+  def __init__(self, card_set):
     super().__init__()
     self.card_font = pygame.font.Font(None, 72)
-    self.path = path
+    self.card_set = card_set
+    self.path = card_set.path
     self.name = os.path.basename(self.path)
-    self.shown_side = CardSide.Back
-    self.hidden_side = CardSide.Front
+    self.shown_side = CardSide.English
+    self.hidden_side = CardSide.Russian
     self.encountered_cards = []
     self.card = None
     self.revealed = False
-    self.card_set = None
 
   def begin(self):
     self.buttons[0] = Button("Reveal", self.reveal)
@@ -83,8 +30,6 @@ class StudyState(State):
     self.encountered_cards = []
     self.card = None
     self.revealed = False
-    self.card_set = CardSet()
-    self.card_set.load(os.path.join(self.app.root, self.path))
     self.shown_side = self.card_set.side
     self.hidden_side = CardSide(1 - self.card_set.side)
     self.next_card()
