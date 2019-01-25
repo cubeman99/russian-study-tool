@@ -18,7 +18,7 @@ class StudyState(State):
     self.name = os.path.basename(self.path)
     self.shown_side = CardSide.English
     self.hidden_side = CardSide.Russian
-    self.encountered_cards = []
+    self.seen_cards = []
     self.card = None
     self.revealed = False
 
@@ -27,7 +27,8 @@ class StudyState(State):
     self.buttons[1] = Button("Exit", self.app.pop_state, hold_time=0.7)
     self.buttons[2] = Button("Next", self.next)
 
-    self.encountered_cards = []
+    self.unseen_cards = list(self.card_set.cards)
+    self.seen_cards = []
     self.card = None
     self.revealed = False
     self.shown_side = self.card_set.side
@@ -38,27 +39,30 @@ class StudyState(State):
     self.app.quit()
 
   def next(self):
-    self.card.marked = False
+    self.card.skip()
+    self.app.save()
     self.next_card()
   
   def mark(self):
-    self.card.marked = True
+    self.card.mark()
+    self.app.save()
     self.next_card()
 
   def next_card(self):
     self.revealed = False
     self.buttons[0] = Button("Reveal", self.reveal)
 
-    for card in self.encountered_cards:
+    for card in self.seen_cards:
       card.age += 1
 
     if len(self.card_set.cards) > 0:
-      self.card = self.card_set.next()
+      self.card = self.card_set.next(seen=self.seen_cards,
+                                     unseen=self.unseen_cards)
     else:
       choices = []
       total_odds = 0
-      for index, card in enumerate(self.encountered_cards):
-        odds = card.age - min(len(self.encountered_cards) / 2, 4)
+      for index, card in enumerate(self.seen_cards):
+        odds = card.age - min(len(self.seen_cards) / 2, 4)
         odds *= odds
         if card.marked:
           odds *= odds
@@ -70,12 +74,11 @@ class StudyState(State):
         if odds_index < odds:
           picked_index = index
           break
-      self.card = self.encountered_cards[picked_index]
-      del self.encountered_cards[picked_index]
+      self.card = self.seen_cards[picked_index]
+      del self.seen_cards[picked_index]
     
-    self.encountered_cards.insert(0, self.card)
-    self.card.age = 0
-    self.card.encountered = True
+    self.seen_cards.insert(0, self.card)
+    self.card.encounter()
 
   def reveal(self):
     self.revealed = True
@@ -86,14 +89,14 @@ class StudyState(State):
     screen_center_x = screen_width / 2
     screen_center_y = screen_height / 2
 
-    marked_count = len([x for x in self.encountered_cards if not x.marked])
+    marked_count = len([x for x in self.card_set.cards if not x.marked])
     g.draw_text(32, 32,
                 text=self.card_set.name,
                 color=GRAY,
                 align=Align.TopLeft)
     g.draw_text(screen_width - 32, 32,
                 text="{} / {} / {}".format(marked_count,
-                                           len(self.encountered_cards),
+                                           len(self.seen_cards),
                                            self.card_set.card_count),
                 color=GRAY,
                 align=Align.TopRight)

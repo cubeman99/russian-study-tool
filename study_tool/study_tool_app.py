@@ -1,3 +1,4 @@
+import json
 import pygame
 import time
 from cmg.input import *
@@ -6,6 +7,7 @@ from cmg.application import *
 from enum import IntEnum
 from study_tool.study_state import *
 from study_tool.menu_state import *
+from study_tool.card_set import *
 
 DEAD_ZONE = 0.01
 
@@ -25,12 +27,15 @@ class StudyCardsApp(Application):
       Input(index=2, name="Middle", reversed=True, max=1, min=-1),
       Input(index=1, name="Left", reversed=True, max=1, min=-1),
       Input(index=3, name="Right", reversed=True, max=1, min=-1)]
-   
-    self.root = "data"
-    self.states = [MenuState("")]
+
+    # Load all card data
+    self.save_file_name = ".study_data.sav"
+    self.root = load_card_package_directory(path="data", name="root")
+    self.states = [MenuState(self.root)]
     self.state.app = self
     self.state.begin()
     self.graphics = Graphics(self.screen)
+    self.load()
     
     self.input.bind(pygame.K_ESCAPE, pressed=self.quit)
 
@@ -57,6 +62,18 @@ class StudyCardsApp(Application):
   @property
   def state(self):
     return self.states[-1]
+
+  def save(self):
+    state = self.root.serialize()
+    path = os.path.join(self.root.path, self.save_file_name)
+    with open(path, "w", encoding="utf8") as f:
+      json.dump(state, f, indent=2, sort_keys=True)
+
+  def load(self):
+    path = os.path.join(self.root.path, self.save_file_name)
+    with open(path, "r", encoding="utf8") as f:
+      state = json.load(f)
+      self.root.deserialize(state)
 
   def update(self, dt):
     if not self.joystick_ready:

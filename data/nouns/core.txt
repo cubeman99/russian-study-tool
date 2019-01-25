@@ -2,6 +2,7 @@
 
 клю´ч - key
 каранда´ш - pencil
+бума'га - paper
 портфе´ль - briefcase
 ру´чка - pen
 слова´рь - dictionary
@@ -14,7 +15,12 @@
 журна´л - magazine
 фотогра´фия - photo
 
-страна´ country
+оши'бка - mistake
+шу'тка - joke
+
+кусо'к (кусочки) - a piece (pieces)
+
+страна´ - country
 
 вре´мя - time
 пла´мя - flame
@@ -27,3 +33,5 @@
 бре´мя - burden
 се´мя - seed
 ло´жь - lie
+шаг - step
+

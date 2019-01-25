@@ -10,42 +10,38 @@ from study_tool.state import *
 from study_tool.study_state import *
 
 class MenuState(State):
-  def __init__(self, local_path):
+  def __init__(self, package):
     super().__init__()
-    self.local_path = local_path
+    self.package = package
     self.buttons[0] = Button("Up")
     self.buttons[1] = Button("Select", self.select)
     self.buttons[2] = Button("Down")
     self.cursor = 0.0
     self.options = []
     self.title = None
-    self.top_level = False
+    self.top_level = package.parent == None
     self.title_font = pygame.font.Font(None, 50)
     self.option_font = pygame.font.Font(None, 42)
 
   def begin(self):
     # Create menu options
-    self.top_level = (len(self.app.states) == 1)
-    self.title = self.app.title if self.top_level else os.path.basename(self.local_path)
-    back_option = "Quit" if self.top_level else "Back"
-    self.options = [(back_option, self.app.pop_state)]
-    dir_options = []
-    card_sets = []
-    for name in os.listdir(self.app.root + "/" + self.local_path):
-      path = os.path.join(self.local_path, name)
-      full_path = os.path.join(self.app.root, path)
-      if os.path.isdir(full_path):
-        dir_options.append(("[" + name + "]", self.open_directory_lambda(path)))
-      elif os.path.isfile(full_path) and path.endswith(".txt"):
-        card_sets += load_card_set_file(full_path)
-    self.options += sorted(dir_options)
-    for card_set in card_sets:
-      self.options.append(("{} [{}]".format(card_set.name, card_set.card_count),
-                           self.open_set_lambda(card_set)))
+    count = sum(s.card_count for s in self.package.all_card_sets())
+    self.title = self.app.title if self.package.parent is None else self.package.name
+    self.title = "[{}] {}".format(count, self.title)
     self.cursor = 1.0 if self.top_level else 0.0
 
-  def open_directory_lambda(self, path):
-    return lambda: self.app.push_state(MenuState(path))
+    back_option = "Quit" if self.top_level else "Back"
+    self.options = [(back_option, self.app.pop_state)]
+    for package in self.package.packages:
+      count = sum(s.card_count for s in package.all_card_sets())
+      self.options.append(("[{}] **{}**".format(count, package.name),
+                           self.open_directory_lambda(package)))
+    for card_set in self.package.card_sets:
+      self.options.append(("[{}] {}".format(card_set.card_count, card_set.name),
+                           self.open_set_lambda(card_set)))
+
+  def open_directory_lambda(self, package):
+    return lambda: self.app.push_state(MenuState(package))
   
   def open_set_lambda(self, card_set):
     return lambda: self.app.push_state(StudyState(card_set))
@@ -65,12 +61,8 @@ class MenuState(State):
       self.cursor -= len(self.options)
 
   def draw(self, g):
-    title = os.path.dirname(self.local_path)
-    if title != "":
-      title += " - "
-    title += self.title
     g.draw_text(64, 48,
-                text=title,
+                text=self.title,
                 font=self.title_font,
                 color=BLACK)
 

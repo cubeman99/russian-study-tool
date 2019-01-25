@@ -1,4 +1,6 @@
-@name Adjectives
+#==============================================================================
+@name Colors
+#==============================================================================
 
 белый - white
 чёрный - black
@@ -12,52 +14,78 @@
 серый - grey
 розовый - pink
 пурпурный - purple
-быстрый - fast
-близкий - near, close
+
+
+#==============================================================================
+@name General Adjectives
+#==============================================================================
+
+к'аждый - each
+це'лый  - whole
+
+хороший - good, nice
+плохой - bad
 большой - big
+маленький - small
+быстрый - fast
+медленный - slow
+скорый - rapid, quick
+новый - new
+старый - old
+молодой - young
+первый - first
+последний - last
+главный - main
+интересный - interesting
+скучный - boring
+красивый - beautiful
+лёгкий - easy
+простой - simple
+трудный - difficult
 важный - important
 высокий - tall, high
-главный - main
-грязный - dirty
+частый - frequent, close together, dense
+частный - private
+близкий - near, close
 громкий - loud
-густой - dense, thick
-дешёвый - cheap
-добрый - kind
 дорогой - dear, expensive
-жаркий - hot
-интересный - interesting
-красивый - beautiful
-крепкий - strong, tough
-лёгкий - easy
-маленький - small
-медленный - slow
-молодой - young
-мягкий - soft
-новый - new
-острый - sharp
-первый - first
+дешёвый - cheap
+строгий - strict
+
+добрый - kind
+ми'лой - cute
+у'мной - clever
+вкусне'йший - delicious
+
+
+#==============================================================================
+@name Emotions
+#==============================================================================
+
+счастливый - happy
 печальный - sad
-плохой - bad
-последний - last
-приятный - pleasant
-простой - simple
-скорый - rapid, quick
-скучный - boring
 сильный - strong, powerful
 спокойный - peaceful
-старый - old
-строгий - strict
+приятный - pleasant
+
+
+#==============================================================================
+@name Texture
+#==============================================================================
+
+густой - dense, thick
+крепкий - strong, tough
 сухой - dry
-счастливый - happy
-твёрдый - hard, firm
-тёмный - dark
-тёплый - warm
 толстый - fat, thick
-трудный - difficult
+твёрдый - hard, firm
+мягкий - soft
+острый - sharp
 удобный - comfortable
-холодный - cold
-хороший - good, nice
-частный - private
-частый - frequent, close together, dense
 чистый - clean
+грязный - dirty
 яркий - bright
+тёмный - dark
+холодный - cold
+тёплый - warm
+жаркий - hot
+

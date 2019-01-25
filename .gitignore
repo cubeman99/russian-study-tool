@@ -109,3 +109,5 @@ venv.bak/
 *.pyproj.user
 *.sln
 
+# Study tool save file
+*.sav
