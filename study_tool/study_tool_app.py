@@ -26,23 +26,24 @@ class StudyCardsApp(Application):
     self.font_bar_text = pygame.font.Font(None, 30)
 
     self.clock = pygame.time.Clock()
+    self.graphics = Graphics(self.screen)
     self.joystick_ready = False
     self.inputs = [
       Input(index=2, name="Middle", reversed=True, max=1, min=-1),
       Input(index=1, name="Left", reversed=True, max=1, min=-1),
       Input(index=3, name="Right", reversed=True, max=1, min=-1)]
-
+    
     # Load all card data
     self.save_file_name = ".study_data.sav"
     self.root = load_card_package_directory(path="data", name="root")
+    
+    self.load()
+
     self.states = []
     self.push_state(MenuState(self.root))
     #self.push_study_state(self.root.card_sets[0], CardSide.Russian)
     #self.push_card_list_state(self.root.card_sets[0])
 
-    self.graphics = Graphics(self.screen)
-    self.load()
-    
     self.input.bind(pygame.K_ESCAPE, pressed=self.quit)
 
   def pop_state(self):

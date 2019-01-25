@@ -6,6 +6,7 @@ from cmg import color
 class Config:
   background_color = color.WHITE
   window_border_color = color.BLACK
+  window_border_thickness = 4
 
   margin_top = 70
   margin_bottom = 80

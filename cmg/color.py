@@ -20,6 +20,12 @@ class Color:
       self.r = r
       self.g = r
       self.b = r
+    self.r = max(0, min(255, self.r))
+    self.g = max(0, min(255, self.g))
+    self.b = max(0, min(255, self.b))
+
+  def __repr__(self):
+    return "Color({}, {}, {})".format(self.r, self.g, self.b)
 
   def __iter__(self):
     yield self.r
@@ -38,6 +44,14 @@ class Color:
       return Color(int(self.r * other + 0.5),
                    int(self.g * other + 0.5),
                    int(self.b * other + 0.5))
+
+  def __add__(self, other):
+    if isinstance(other, Color):
+      return Color(self.r + other.r,
+                   self.g + other.g,
+                   self.b + other.b)
+    else:
+      raise TypeError(other.__class__)
 
 def make_gray(amount):
   return gray(amount)
