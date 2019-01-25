@@ -7,7 +7,6 @@ from cmg.application import *
 from cmg.graphics import *
 from cmg.input import *
 from study_tool.state import *
-from study_tool.study_state import *
 
 class SubMenuState(State):
   def __init__(self, title, options=()):
@@ -46,8 +45,6 @@ class SubMenuState(State):
         self.cursor += len(self.options)
       if self.cursor > len(self.options) - 0.5:
         self.cursor -= len(self.options)
-    else:
-      self.cursor = round(self.cursor)
 
   def draw(self, g):
     screen_width, screen_height = self.app.screen.get_size()

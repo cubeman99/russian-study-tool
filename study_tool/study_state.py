@@ -6,9 +6,10 @@ import time
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
+from study_tool.card import *
 from study_tool.card_set import *
 from study_tool.state import *
-from study_tool.sub_menu_state import *
+from study_tool.sub_menu_state import SubMenuState
 
 class StudyState(State):
   def __init__(self, card_set, side=CardSide.English):
@@ -44,7 +45,8 @@ class StudyState(State):
     self.app.push_state(SubMenuState(
       "Pause",
       [("Resume", None),
-       ("List", None),
+       ("List", lambda: (self.app.pop_state,
+                         self.app.push_card_list_state(self.card_set))),
        ("Quiz " + other_side_name, self.switch_sides),
        ("Menu", self.app.pop_state),
        ("Exit", self.app.quit)]))
@@ -102,28 +104,31 @@ class StudyState(State):
     screen_width, screen_height = self.app.screen.get_size()
     screen_center_x = screen_width / 2
     screen_center_y = screen_height / 2
-
-    marked_count = len([x for x in self.card_set.cards if not x.marked])
-    g.draw_text(32, 32,
-                text=self.card_set.name,
-                color=GRAY,
-                align=Align.TopLeft)
-    g.draw_text(screen_width - 32, 32,
-                text="{} / {} / {}".format(marked_count,
-                                           len(self.seen_cards),
-                                           self.card_set.card_count),
-                color=GRAY,
-                align=Align.TopRight)
+    
+    # Draw card text
     g.draw_text(screen_center_x, screen_center_y - 50,
                 text=self.card.text[self.shown_side],
                 font=self.card_font,
                 color=BLACK,
                 align=Align.Centered)
     if self.revealed:
-
       g.draw_text(screen_center_x, screen_center_y + 50,
                   text=self.card.text[self.hidden_side],
                   font=self.card_font,
                   color=BLACK,
                   align=Align.Centered)
+
     State.draw(self, g)
+
+    # Draw text at top
+    marked_count = len([x for x in self.card_set.cards if not x.marked])
+    g.draw_text(32, self.margin_top / 2,
+                text=self.card_set.name,
+                color=GRAY,
+                align=Align.MiddleLeft)
+    g.draw_text(screen_width - 32, self.margin_top / 2,
+                text="{} / {} / {}".format(marked_count,
+                                           len(self.seen_cards),
+                                           self.card_set.card_count),
+                color=GRAY,
+                align=Align.MiddleRight)

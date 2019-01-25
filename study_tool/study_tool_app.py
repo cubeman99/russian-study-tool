@@ -5,9 +5,10 @@ from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
 from enum import IntEnum
-from study_tool.study_state import *
-from study_tool.menu_state import *
 from study_tool.card_set import *
+from study_tool.menu_state import MenuState
+from study_tool.study_state import StudyState
+from study_tool.card_list_state import CardListState
 
 DEAD_ZONE = 0.01
 
@@ -49,6 +50,12 @@ class StudyCardsApp(Application):
     state.app = self
     self.states.append(state)
     state.begin()
+
+  def push_study_state(self, card_set, side):
+    self.push_state(StudyState(card_set, side))
+
+  def push_card_list_state(self, card_set):
+    self.push_state(CardListState(card_set))
 
   def draw_text_box(self, text, x, y, width, height,
                     border_color=BLACK, border_width=2,

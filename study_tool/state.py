@@ -1,5 +1,6 @@
 import pygame
 import time
+from cmg import color
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
@@ -35,8 +36,11 @@ class State:
     self.buttons = [
       Button("Left"),
       Button("Middle"),
-      Button("Right")
-    ]
+      Button("Right")]
+    self.margin_top = 70
+    self.margin_bottom = 80
+    self.line_spacing = 30
+    self.margin_color = color.make_gray(210)
     
   def begin(self):
     self.app.input.bind(pygame.K_z, pressed=lambda: self.buttons[0].action())
@@ -50,9 +54,19 @@ class State:
     pass
 
   def draw(self, g):
+    screen_width, screen_height = self.app.screen.get_size()
     w, h = self.app.screen.get_size()
     center_x = w / 2
     center_y = h - 40
+    
+    # Draw top and bottom margins
+    g.fill_rect(0, 0, screen_width, self.margin_top,
+                color=self.margin_color)
+    g.fill_rect(0, screen_height - self.margin_bottom,
+                screen_width, self.margin_bottom,
+                color=self.margin_color)
+
+    # Draw buttons
     for index, button in enumerate(self.buttons):
       #x = center_x + (index - 1) * 200
       #y = h - 40

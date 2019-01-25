@@ -6,9 +6,9 @@ import time
 from cmg.application import *
 from cmg.graphics import *
 from cmg.input import *
+from study_tool.card import CardSide
 from study_tool.state import *
-from study_tool.study_state import *
-from study_tool.sub_menu_state import *
+from study_tool.sub_menu_state import SubMenuState
 
 class MenuState(State):
   def __init__(self, package):
@@ -50,9 +50,9 @@ class MenuState(State):
   def open_set(self, card_set):
     self.app.push_state(SubMenuState(
       card_set.name,
-      [("Quiz En", lambda: self.app.push_state(StudyState(card_set, CardSide.English))),
-       ("Quiz Ru", lambda: self.app.push_state(StudyState(card_set, CardSide.Russian))),
-       ("List", None),
+      [("Quiz En", lambda: self.app.push_study_state(card_set, CardSide.English)),
+       ("Quiz Ru", lambda: self.app.push_study_state(card_set, CardSide.Russian)),
+       ("List", lambda: self.app.push_card_list_state(card_set)),
        ("Cancel", None)]))
 
   def select(self):
@@ -70,11 +70,6 @@ class MenuState(State):
       self.cursor -= len(self.options)
 
   def draw(self, g):
-    g.draw_text(64, 48,
-                text=self.title,
-                font=self.title_font,
-                color=BLACK)
-
     row_count = 8
     option_index = int(round(self.cursor))
     x = 0
@@ -103,4 +98,11 @@ class MenuState(State):
         y += 44
 
     State.draw(self, g)
+
+    # Draw title
+    g.draw_text(64, self.margin_top / 2,
+                text=self.title,
+                font=self.title_font,
+                color=BLACK,
+                align=Align.MiddleLeft)
     

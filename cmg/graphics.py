@@ -26,6 +26,8 @@ class Align(IntFlag):
   BottomLeft = Bottom | Left
   BottomRight = Bottom | Right
   BottomCenter = Bottom | Center
+  MiddleLeft = Middle | Left
+  MiddleRight = Middle | Right
   Centered = Center | Middle
 
 class Graphics:
@@ -50,6 +52,15 @@ class Graphics:
     else:
       rect = pygame.Rect(x, y, width, height)
     pygame.draw.rect(self.screen, color, rect, 0)
+
+
+  def measure_text(self, text, font=None):
+    if font is None:
+      font = self.font
+    text_to_render = text
+    for accent_char in self.accent_input_chars:
+      text_to_render = text_to_render.replace(accent_char, "")
+    return font.size(text_to_render)
 
   def draw_text(self, x, y, text, color=BLACK, font=None, align=Align.TopLeft):
     if font is None:
