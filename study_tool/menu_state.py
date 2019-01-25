@@ -8,6 +8,7 @@ from cmg.graphics import *
 from cmg.input import *
 from study_tool.state import *
 from study_tool.study_state import *
+from study_tool.sub_menu_state import *
 
 class MenuState(State):
   def __init__(self, package):
@@ -44,7 +45,15 @@ class MenuState(State):
     return lambda: self.app.push_state(MenuState(package))
   
   def open_set_lambda(self, card_set):
-    return lambda: self.app.push_state(StudyState(card_set))
+    return lambda: self.open_set(card_set)
+
+  def open_set(self, card_set):
+    self.app.push_state(SubMenuState(
+      card_set.name,
+      [("Quiz En", lambda: self.app.push_state(StudyState(card_set, CardSide.English))),
+       ("Quiz Ru", lambda: self.app.push_state(StudyState(card_set, CardSide.Russian))),
+       ("List", None),
+       ("Cancel", None)]))
 
   def select(self):
     option_index = int(round(self.cursor))

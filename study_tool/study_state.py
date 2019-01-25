@@ -6,34 +6,48 @@ import time
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
-from study_tool.state import *
 from study_tool.card_set import *
+from study_tool.state import *
+from study_tool.sub_menu_state import *
 
 class StudyState(State):
-  def __init__(self, card_set):
+  def __init__(self, card_set, side=CardSide.English):
     super().__init__()
     self.card_font = pygame.font.Font(None, 72)
     self.card_set = card_set
     self.path = card_set.path
     self.name = os.path.basename(self.path)
-    self.shown_side = CardSide.English
-    self.hidden_side = CardSide.Russian
+    self.shown_side = side
+    self.hidden_side = CardSide(1 - side)
     self.seen_cards = []
     self.card = None
     self.revealed = False
 
   def begin(self):
     self.buttons[0] = Button("Reveal", self.reveal)
-    self.buttons[1] = Button("Exit", self.app.pop_state, hold_time=0.7)
+    self.buttons[1] = Button("Exit", self.pause)
     self.buttons[2] = Button("Next", self.next)
 
     self.unseen_cards = list(self.card_set.cards)
     self.seen_cards = []
     self.card = None
     self.revealed = False
-    self.shown_side = self.card_set.side
-    self.hidden_side = CardSide(1 - self.card_set.side)
     self.next_card()
+
+  def switch_sides(self):
+    self.shown_side = CardSide(1 - self.shown_side)
+    self.hidden_side = CardSide(1 - self.shown_side)
+    
+  def pause(self):
+    other_side = CardSide(1 - self.shown_side)
+    other_side_name = "En" if other_side == CardSide.English else "Ru"
+    self.app.push_state(SubMenuState(
+      "Pause",
+      [("Resume", None),
+       ("List", None),
+       ("Quiz " + other_side_name, self.switch_sides),
+       ("Menu", self.app.pop_state),
+       ("Exit", self.app.quit)]))
 
   def exit_to_menu(self):
     self.app.quit()

@@ -22,8 +22,10 @@ class Align(IntFlag):
   Middle = 0x20
   TopLeft = Top | Left
   TopRight = Top | Right
+  TopCenter = Top | Center
   BottomLeft = Bottom | Left
   BottomRight = Bottom | Right
+  BottomCenter = Bottom | Center
   Centered = Center | Middle
 
 class Graphics:
@@ -35,12 +37,18 @@ class Graphics:
     self.accent_render_char = "´"
     self.accent_bitmap = {}
 
-  def draw_rect(self, x, y, width, height, color=BLACK, thickness=1):
-    rect = pygame.Rect(x, y, width, height)
+  def draw_rect(self, x, y=None, width=None, height=None, color=BLACK, thickness=1):
+    if isinstance(x, pygame.Rect):
+      rect = x
+    else:
+      rect = pygame.Rect(x, y, width, height)
     pygame.draw.rect(self.screen, color, rect, thickness)
 
-  def fill_rect(self, x, y, width, height, color=BLACK):
-    rect = pygame.Rect(x, y, width, height)
+  def fill_rect(self, x, y=None, width=None, height=None, color=BLACK):
+    if isinstance(x, pygame.Rect):
+      rect = x
+    else:
+      rect = pygame.Rect(x, y, width, height)
     pygame.draw.rect(self.screen, color, rect, 0)
 
   def draw_text(self, x, y, text, color=BLACK, font=None, align=Align.TopLeft):

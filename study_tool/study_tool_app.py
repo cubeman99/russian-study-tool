@@ -31,9 +31,9 @@ class StudyCardsApp(Application):
     # Load all card data
     self.save_file_name = ".study_data.sav"
     self.root = load_card_package_directory(path="data", name="root")
-    self.states = [MenuState(self.root)]
-    self.state.app = self
-    self.state.begin()
+    self.states = []
+    self.push_state(MenuState(self.root))
+
     self.graphics = Graphics(self.screen)
     self.load()
     
@@ -93,7 +93,14 @@ class StudyCardsApp(Application):
 
   def draw(self):
     self.screen.fill(WHITE)
-    self.state.draw(self.graphics)
+    states_to_draw = []
+    for state in reversed(self.states):
+      states_to_draw.append(state)
+      if not state.draw_state_below:
+        break
+    for state in reversed(states_to_draw):
+      # TODO: fade background
+      state.draw(self.graphics)
         
 
 if __name__ == "__main__":

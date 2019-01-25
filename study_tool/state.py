@@ -31,6 +31,7 @@ class State:
 
   def __init__(self):
     self.app = None
+    self.draw_state_below = False
     self.buttons = [
       Button("Left"),
       Button("Middle"),
