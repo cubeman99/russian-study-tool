@@ -3,9 +3,11 @@ import os
 import pygame
 import random
 import time
+import cmg
 from cmg.application import *
 from cmg.graphics import *
 from cmg.input import *
+from study_tool.config import Config
 from study_tool.state import *
 
 class SubMenuState(State):
@@ -19,9 +21,9 @@ class SubMenuState(State):
     self.height = None
     self.title_font = pygame.font.Font(None, 50)
     self.option_font = pygame.font.Font(None, 42)
-    self.background_color = WHITE
-    self.border_color = BLACK
-    self.title_color = BLACK
+    self.background_color = Config.background_color
+    self.border_color = Config.window_border_color
+    self.title_color = Config.title_color
 
   def begin(self):
     self.cursor = 0.0
@@ -84,12 +86,12 @@ class SubMenuState(State):
     y = rect.y + rect.height - 16
     for index, (option, _) in enumerate(self.options):
       option_width, option_height = self.option_font.size(option)
-      color = BLACK
+      color = Config.button_text_color
       button_rect = pygame.Rect(x, y - option_height, option_width, option_height)
       button_rect.inflate_ip(8, 8)
       button_back_color = self.background_color
       if index == option_index:
-        button_back_color = YELLOW
+        button_back_color = cmg.color.YELLOW
       g.fill_rect(button_rect, color=button_back_color)
       g.draw_rect(button_rect, color=self.border_color, thickness=2)
       g.draw_text(x, y,
@@ -100,7 +102,7 @@ class SubMenuState(State):
       if index == option_index:
         t = self.cursor - option_index + 0.5
         tx = x + (option_width * t) - 2
-        g.fill_rect(tx, y, 4, 8, color=BLUE)
+        g.fill_rect(tx, y, 4, 8, color=cmg.color.BLUE)
 
 
       x += option_width + 16

@@ -5,6 +5,7 @@ from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
 from enum import IntEnum
+from study_tool.config import Config
 
 class Button:
   def __init__(self, name, action=lambda: None, hold_time=0):
@@ -37,10 +38,9 @@ class State:
       Button("Left"),
       Button("Middle"),
       Button("Right")]
-    self.margin_top = 70
-    self.margin_bottom = 80
-    self.line_spacing = 30
-    self.margin_color = color.make_gray(210)
+    self.margin_top = Config.margin_top
+    self.margin_bottom = Config.margin_top
+    self.margin_color = Config.margin_color
     
   def begin(self):
     self.app.input.bind(pygame.K_z, pressed=lambda: self.buttons[0].action())
@@ -55,9 +55,6 @@ class State:
 
   def draw(self, g):
     screen_width, screen_height = self.app.screen.get_size()
-    w, h = self.app.screen.get_size()
-    center_x = w / 2
-    center_y = h - 40
     
     # Draw top and bottom margins
     g.fill_rect(0, 0, screen_width, self.margin_top,
@@ -65,22 +62,32 @@ class State:
     g.fill_rect(0, screen_height - self.margin_bottom,
                 screen_width, self.margin_bottom,
                 color=self.margin_color)
+    g.draw_rect(0, 0, screen_width, self.margin_top,
+                thickness=Config.margin_border_thickness,
+                color=Config.margin_border_color)
+    g.draw_rect(0, screen_height - self.margin_bottom,
+                screen_width, self.margin_bottom,
+                color=Config.margin_border_color,
+                thickness=Config.margin_border_thickness)
 
     # Draw buttons
+    center_x = screen_width / 2
+    center_y = screen_height - (self.margin_bottom / 2)
     for index, button in enumerate(self.buttons):
-      #x = center_x + (index - 1) * 200
-      #y = h - 40
-      #self.app.draw_text_box("", x, y, 100, 40)
-      #self.app.draw_text_box(x, y, button.name, align=Align.Centered, color=BLACK)
       text_width, text_height = g.font.size(button.name)
       r = pygame.Rect(center_x, center_y, 0, 0)
       r.inflate_ip(text_width, text_height)
       r.inflate_ip(16, 10)
       r.x += (index - 1) * 200
-      g.fill_rect(r.x, r.y, r.width, r.height, color=LIGHT_GRAY)
+      g.fill_rect(r.x, r.y, r.width, r.height,
+                  color=Config.button_background_color)
       if button.is_down and button.hold_time > 0 and button.timer > 0:
         percent = button.timer / button.hold_time
-        g.fill_rect(r.x, r.y, r.width * percent, r.height, color=YELLOW)
-      g.draw_rect(r.x, r.y, r.width, r.height, thickness=2, color=BLACK)
-      g.draw_text(r.x + (r.width / 2), r.y + (r.height / 2), button.name, align=Align.Centered, color=BLACK)
+        g.fill_rect(r.x, r.y, r.width * percent, r.height, color=color.YELLOW)
+      g.draw_rect(r.x, r.y, r.width, r.height,
+                  thickness=Config.button_border_thickness,
+                  color=Config.button_border_color)
+      g.draw_text(r.x + (r.width / 2), r.y + (r.height / 2),
+                  text=button.name, align=Align.Centered,
+                  color=Config.button_text_color)
 

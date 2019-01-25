@@ -1,3 +1,4 @@
+from cmg import color
 from cmg.input import *
 from cmg.graphics import *
 
@@ -43,7 +44,7 @@ class Application:
       self.update(dt=1.0 / self.framerate)
 
       # Draw
-      self.screen.fill(WHITE)
+      self.screen.fill(tuple(color.WHITE))
       self.draw()
       pygame.display.flip()
 

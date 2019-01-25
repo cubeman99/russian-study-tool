@@ -1,6 +1,7 @@
 import json
 import pygame
 import time
+from cmg import color
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
@@ -15,12 +16,14 @@ DEAD_ZONE = 0.01
 class StudyCardsApp(Application):
 
   def __init__(self):
-    self.title = "Russian Study Tool"
+    self.title = "Russian"
     Application.__init__(self, title=self.title, width=800, height=600)
     
     pygame.joystick.init()
     self.joystick = pygame.joystick.Joystick(0)
     self.joystick.init()
+    
+    self.font_bar_text = pygame.font.Font(None, 30)
 
     self.clock = pygame.time.Clock()
     self.joystick_ready = False
@@ -34,6 +37,8 @@ class StudyCardsApp(Application):
     self.root = load_card_package_directory(path="data", name="root")
     self.states = []
     self.push_state(MenuState(self.root))
+    #self.push_study_state(self.root.card_sets[0], CardSide.Russian)
+    #self.push_card_list_state(self.root.card_sets[0])
 
     self.graphics = Graphics(self.screen)
     self.load()
@@ -57,9 +62,46 @@ class StudyCardsApp(Application):
   def push_card_list_state(self, card_set):
     self.push_state(CardListState(card_set))
 
+  def draw_completion_bar(self, g, center_y, left, right, card_set):
+    cards = []
+    if isinstance(card_set, CardSet):
+      cards = list(card_set.cards)
+    else:
+      for cs in card_set.all_card_sets():
+        cards += cs.cards
+    total_cards = len(cards)
+    marked_cards = len([c for c in cards if c.marked and c.encountered])
+    unmarked_cards = len([c for c in cards if not c.marked and c.encountered])
+    unseen_cards = len([c for c in cards if not c.encountered])
+    percent = int(round((float(unmarked_cards) / total_cards) * 100))
+
+    color_unmarked = color.GREEN
+    color_marked = color.RED
+    color_unseen = color.GRAY
+    font = self.font_bar_text
+    left_margin = g.measure_text("100%", font=font)[0] + 4
+    right_margin = g.measure_text(str(total_cards), font=font)[0] + 4
+    bar_height = g.measure_text("1", font=font)[1]
+    bar_width = right - left - left_margin - right_margin
+    top = center_y - (bar_height / 2)
+    
+    bar_width_unmarked = int(round(bar_width * float(unmarked_cards) / total_cards))
+    bar_width_marked = int(round(bar_width * float(marked_cards + unmarked_cards) / total_cards))
+
+    g.draw_text(left + left_margin - 4, center_y, text="{}%".format(percent),
+                color=color.BLACK, align=Align.MiddleRight, font=font)
+    g.draw_text(right, center_y, text=str(total_cards),
+                color=color.BLACK, align=Align.MiddleRight, font=font)
+    g.fill_rect(left + left_margin, top, bar_width, bar_height,
+                color=color_unseen)
+    g.fill_rect(left + left_margin, top, bar_width_marked, bar_height,
+                color=color_marked)
+    g.fill_rect(left + left_margin, top, bar_width_unmarked, bar_height,
+                color=color_unmarked)
+
   def draw_text_box(self, text, x, y, width, height,
-                    border_color=BLACK, border_width=2,
-                    background_color=WHITE, text_color=BLACK):
+                    border_color=color.BLACK, border_width=2,
+                    background_color=color.WHITE, text_color=color.BLACK):
     r = pygame.Rect(x, y, 0, 0)
     r.inflate_ip(width, height)
     self.graphics.fill_rect(r.x, r.y, r.width, r.height, color=background_color)
@@ -99,7 +141,7 @@ class StudyCardsApp(Application):
     self.state.update(dt)
 
   def draw(self):
-    self.screen.fill(WHITE)
+    self.graphics.clear(color.WHITE)
     states_to_draw = []
     for state in reversed(self.states):
       states_to_draw.append(state)

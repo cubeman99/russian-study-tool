@@ -1,17 +1,7 @@
 import pygame
 import time
 from enum import IntFlag
-
-BLACK   = (  0,   0,   0)
-GRAY    = (128, 128, 128)
-LIGHT_GRAY = (192, 192, 192)
-WHITE   = (255, 255, 255)
-RED     = (255,   0,   0)
-GREEN   = (  0, 255,   0)
-BLUE    = (  0,   0, 255)
-YELLOW  = (255, 255,   0)
-CYAN    = (  0, 255, 255)
-MAGENTA = (255,   0, 255)
+from cmg import color
 
 class Align(IntFlag):
   Center = 0x1
@@ -39,19 +29,22 @@ class Graphics:
     self.accent_render_char = "´"
     self.accent_bitmap = {}
 
-  def draw_rect(self, x, y=None, width=None, height=None, color=BLACK, thickness=1):
-    if isinstance(x, pygame.Rect):
-      rect = x
-    else:
-      rect = pygame.Rect(x, y, width, height)
-    pygame.draw.rect(self.screen, color, rect, thickness)
+  def clear(self, color):
+    self.screen.fill(tuple(color))
 
-  def fill_rect(self, x, y=None, width=None, height=None, color=BLACK):
+  def draw_rect(self, x, y=None, width=None, height=None, color=color.BLACK, thickness=1):
     if isinstance(x, pygame.Rect):
       rect = x
     else:
       rect = pygame.Rect(x, y, width, height)
-    pygame.draw.rect(self.screen, color, rect, 0)
+    pygame.draw.rect(self.screen, tuple(color), rect, thickness)
+
+  def fill_rect(self, x, y=None, width=None, height=None, color=color.BLACK):
+    if isinstance(x, pygame.Rect):
+      rect = x
+    else:
+      rect = pygame.Rect(x, y, width, height)
+    pygame.draw.rect(self.screen, tuple(color), rect, 0)
 
 
   def measure_text(self, text, font=None):
@@ -62,11 +55,11 @@ class Graphics:
       text_to_render = text_to_render.replace(accent_char, "")
     return font.size(text_to_render)
 
-  def draw_text(self, x, y, text, color=BLACK, font=None, align=Align.TopLeft):
+  def draw_text(self, x, y, text, color=color.BLACK, font=None, align=Align.TopLeft):
     if font is None:
       font = self.font
     if font not in self.accent_bitmap:
-      self.accent_bitmap[font] = font.render(self.accent_render_char, True, BLACK)
+      self.accent_bitmap[font] = font.render(self.accent_render_char, True, tuple(color))
     self.accent_half_width = self.font.size(self.accent_render_char)[0] / 2
     
     text_to_render = text
@@ -94,7 +87,7 @@ class Graphics:
                          [x + center_x - self.accent_half_width, y])
       else:
         text_to_render += c
-    text_bitmap = font.render(text_to_render, True, color)
+    text_bitmap = font.render(text_to_render, True, tuple(color))
     self.screen.blit(text_bitmap, [x, y])
 
 # This is a simple class that will help us print to the self.screen

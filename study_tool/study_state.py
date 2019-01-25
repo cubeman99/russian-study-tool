@@ -3,11 +3,13 @@ import os
 import pygame
 import random
 import time
+import cmg
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
 from study_tool.card import *
 from study_tool.card_set import *
+from study_tool.config import Config
 from study_tool.state import *
 from study_tool.sub_menu_state import SubMenuState
 
@@ -109,26 +111,25 @@ class StudyState(State):
     g.draw_text(screen_center_x, screen_center_y - 50,
                 text=self.card.text[self.shown_side],
                 font=self.card_font,
-                color=BLACK,
+                color=Config.card_front_text_color,
                 align=Align.Centered)
     if self.revealed:
       g.draw_text(screen_center_x, screen_center_y + 50,
                   text=self.card.text[self.hidden_side],
                   font=self.card_font,
-                  color=BLACK,
+                  color=Config.card_back_text_color,
                   align=Align.Centered)
-
+      
+    # Draw state
     State.draw(self, g)
 
     # Draw text at top
     marked_count = len([x for x in self.card_set.cards if not x.marked])
     g.draw_text(32, self.margin_top / 2,
                 text=self.card_set.name,
-                color=GRAY,
+                color=cmg.color.GRAY,
                 align=Align.MiddleLeft)
-    g.draw_text(screen_width - 32, self.margin_top / 2,
-                text="{} / {} / {}".format(marked_count,
-                                           len(self.seen_cards),
-                                           self.card_set.card_count),
-                color=GRAY,
-                align=Align.MiddleRight)
+    self.app.draw_completion_bar(g, self.margin_top / 2,
+                                 screen_center_x - 80,
+                                 screen_width - 32,
+                                 self.card_set)

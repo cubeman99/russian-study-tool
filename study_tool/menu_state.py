@@ -3,9 +3,11 @@ import os
 import pygame
 import random
 import time
+import cmg
 from cmg.application import *
 from cmg.graphics import *
 from cmg.input import *
+from study_tool.config import Config
 from study_tool.card import CardSide
 from study_tool.state import *
 from study_tool.sub_menu_state import SubMenuState
@@ -27,8 +29,8 @@ class MenuState(State):
   def begin(self):
     # Create menu options
     count = sum(s.card_count for s in self.package.all_card_sets())
-    self.title = self.app.title if self.package.parent is None else self.package.name
-    self.title = "[{}] {}".format(count, self.title)
+    self.title = (self.app.title if self.package.parent is None
+                  else self.package.name)
     self.cursor = 1.0 if self.top_level else 0.0
 
     back_option = "Quit" if self.top_level else "Back"
@@ -70,6 +72,10 @@ class MenuState(State):
       self.cursor -= len(self.options)
 
   def draw(self, g):
+    screen_width, screen_height = self.app.screen.get_size()
+    screen_center_x = screen_width / 2
+    screen_center_y = screen_height / 2
+
     row_count = 8
     option_index = int(round(self.cursor))
     x = 0
@@ -78,14 +84,14 @@ class MenuState(State):
     for index, (option, _) in enumerate(self.options):
       text_width, _ = self.option_font.size("> " + option)
       if index == option_index:
-        color = BLUE
+        color = cmg.color.BLUE
         g.draw_text(64 + x, 128 + y,
                     text="> ",
                     font=self.option_font,
                     color=color,
                     align=Align.TopRight)
       else:
-        color = BLACK
+        color = cmg.color.BLACK
       g.draw_text(64 + x, 128 + y,
                   text=option,
                   font=self.option_font,
@@ -100,9 +106,18 @@ class MenuState(State):
     State.draw(self, g)
 
     # Draw title
-    g.draw_text(64, self.margin_top / 2,
+    title_left = 64
+    title_right = title_left + g.measure_text(text=self.title,
+                                              font=self.title_font)[0]
+    g.draw_text(title_left, self.margin_top / 2,
                 text=self.title,
                 font=self.title_font,
-                color=BLACK,
+                color=Config.title_color,
                 align=Align.MiddleLeft)
+
+    # Draw completion progress
+    self.app.draw_completion_bar(g, self.margin_top / 2,
+                                 max(screen_center_x, title_right + 32),
+                                 screen_width - 32,
+                                 self.package)
     
