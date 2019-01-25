@@ -52,8 +52,8 @@ class MenuState(State):
   def open_set(self, card_set):
     self.app.push_state(SubMenuState(
       card_set.name,
-      [("Quiz En", lambda: self.app.push_study_state(card_set, CardSide.English)),
-       ("Quiz Ru", lambda: self.app.push_study_state(card_set, CardSide.Russian)),
+      [("Quiz English", lambda: self.app.push_study_state(card_set, CardSide.English)),
+       ("Quiz Russian", lambda: self.app.push_study_state(card_set, CardSide.Russian)),
        ("List", lambda: self.app.push_card_list_state(card_set)),
        ("Cancel", None)]))
 

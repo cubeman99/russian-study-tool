@@ -19,12 +19,30 @@ class Card:
   @property
   def english(self):
     return self.text[CardSide.English]
+
   @property
   def russian(self):
     return self.text[CardSide.Russian]
+
   @property
   def encountered(self):
     return self.last_encounter_time is not None
+
+  def elapsed_time_string(self):
+    elapsed_time = time.time() - self.last_encounter_time
+    units = "second"
+    if elapsed_time > 60:
+      units = "minute"
+      elapsed_time /= 60
+      if elapsed_time > 60:
+        units = "hour"
+        elapsed_time /= 60
+        if elapsed_time > 24:
+          units = "day"
+          elapsed_time /= 24
+    elapsed_time = int(round(elapsed_time))
+    return "{} {}{} ago".format(elapsed_time, units,
+                                "s" if elapsed_time != 1 else "")
 
   def encounter(self):
     self.age = 0

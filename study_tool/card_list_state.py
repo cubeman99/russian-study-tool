@@ -52,10 +52,10 @@ class CardListState(State):
     self.app.push_state(SubMenuState(
       "Pause",
       [("Resume", None),
-       ("Quiz En", lambda: (self.app.pop_state,
-                            self.app.push_study_state(self.card_set, CardSide.English))),
-       ("Quiz Ru", lambda: (self.app.pop_state,
-                            self.app.push_study_state(self.card_set, CardSide.Russian))),
+       ("Quiz English", lambda: (self.app.pop_state,
+                                 self.app.push_study_state(self.card_set, CardSide.English))),
+       ("Quiz Russian", lambda: (self.app.pop_state,
+                                 self.app.push_study_state(self.card_set, CardSide.Russian))),
        ("Menu", self.app.pop_state),
        ("Exit", self.app.quit)]))
 

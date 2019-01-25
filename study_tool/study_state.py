@@ -17,6 +17,7 @@ class StudyState(State):
   def __init__(self, card_set, side=CardSide.English):
     super().__init__()
     self.card_font = pygame.font.Font(None, 72)
+    self.card_status_font = pygame.font.Font(None, 30)
     self.card_set = card_set
     self.path = card_set.path
     self.name = os.path.basename(self.path)
@@ -43,13 +44,12 @@ class StudyState(State):
     
   def pause(self):
     other_side = CardSide(1 - self.shown_side)
-    other_side_name = "En" if other_side == CardSide.English else "Ru"
     self.app.push_state(SubMenuState(
       "Pause",
       [("Resume", None),
        ("List", lambda: (self.app.pop_state,
                          self.app.push_card_list_state(self.card_set))),
-       ("Quiz " + other_side_name, self.switch_sides),
+       ("Quiz " + other_side.name, self.switch_sides),
        ("Menu", self.app.pop_state),
        ("Exit", self.app.quit)]))
 
@@ -106,6 +106,22 @@ class StudyState(State):
     screen_width, screen_height = self.app.screen.get_size()
     screen_center_x = screen_width / 2
     screen_center_y = screen_height / 2
+
+    if self.card.encountered:
+      if self.card.marked:
+        marked_state_color = Config.card_marked_background_color
+      else:
+        marked_state_color = Config.card_unmarked_background_color
+      g.fill_rect(0, self.margin_top, screen_width, 32,
+                  color=marked_state_color)
+      g.fill_rect(0, screen_height - self.margin_bottom - 32,
+                  screen_width, 32,
+                  color=marked_state_color)
+      g.draw_text(screen_width - 16, self.margin_top + (32 / 2),
+                  text=self.card.elapsed_time_string(),
+                  align=Align.MiddleRight,
+                  color=marked_state_color * 0.7,
+                  font=self.card_status_font)
     
     # Draw card text
     g.draw_text(screen_center_x, screen_center_y - 50,
