@@ -20,7 +20,7 @@ class CardListState(State):
     self.card_font = pygame.font.Font(None, 30)
     self.line_spacing = 30
     self.row_colors = [color.WHITE,
-                       color.make_gray(230)]
+                       color.gray(230)]
     self.scroll_speed = 35.0  # rows per second
 
     self.row_marked_color = color.rgb(255, 200, 200)
@@ -76,7 +76,7 @@ class CardListState(State):
       else:
         row_color = self.row_unmarked_color
       if index % 2 == 1:
-        row_color = row_color * 0.94
+        row_color *= 0.94
 
       g.fill_rect(0, y,
                   screen_width, self.line_spacing,

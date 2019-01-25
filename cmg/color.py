@@ -40,7 +40,10 @@ class Color:
                    int(self.b * other + 0.5))
 
 def make_gray(amount):
-  return tuple([amount] * 3)
+  return gray(amount)
+
+def gray(amount):
+  return Color(amount)
 
 def rgb(red, green, blue):
   return Color(red, green, blue)
