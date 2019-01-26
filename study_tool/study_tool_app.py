@@ -1,4 +1,5 @@
 import json
+import os
 import pygame
 import time
 from cmg import color
@@ -7,6 +8,7 @@ from cmg.graphics import *
 from cmg.application import *
 from enum import IntEnum
 from study_tool.card_set import *
+from study_tool.config import Config
 from study_tool.menu_state import MenuState
 from study_tool.study_state import StudyState
 from study_tool.card_list_state import CardListState
@@ -41,8 +43,8 @@ class StudyCardsApp(Application):
 
     self.states = []
     self.push_state(MenuState(self.root))
-    #self.push_study_state(self.root.card_sets[0], CardSide.Russian)
-    #self.push_card_list_state(self.root.card_sets[0])
+    self.push_study_state(self.root.card_sets[1], CardSide.Russian)
+    #self.push_card_list_state(self.root.card_sets[1])
 
     self.input.bind(pygame.K_ESCAPE, pressed=self.quit)
 
@@ -71,35 +73,32 @@ class StudyCardsApp(Application):
       for cs in card_set.all_card_sets():
         cards += cs.cards
     total_cards = len(cards)
-    marked_cards = len([c for c in cards if c.marked and c.encountered])
-    unmarked_cards = len([c for c in cards if not c.marked and c.encountered])
-    unseen_cards = len([c for c in cards if not c.encountered])
-    percent = int(round((float(unmarked_cards) / total_cards) * 100))
 
-    color_unmarked = color.GREEN
-    color_marked = color.RED
-    color_unseen = color.GRAY
     font = self.font_bar_text
     left_margin = g.measure_text("100%", font=font)[0] + 4
     right_margin = g.measure_text(str(total_cards), font=font)[0] + 4
     bar_height = g.measure_text("1", font=font)[1]
     bar_width = right - left - left_margin - right_margin
     top = center_y - (bar_height / 2)
-    
-    bar_width_unmarked = int(round(bar_width * float(unmarked_cards) / total_cards))
-    bar_width_marked = int(round(bar_width * float(marked_cards + unmarked_cards) / total_cards))
 
-    g.draw_text(left + left_margin - 4, center_y, text="{}%".format(percent),
+    x = left + left_margin
+    score = 0
+    for level in range(Config.proficiency_levels, -1, -1):
+      count = len([c for c in cards if c.proficiency_level == level])
+      score += count * level
+      level_width = int(round(bar_width * (float(count) / total_cards)))
+      if x + level_width > left + left_margin + bar_width:
+        level_width = (left + left_margin + bar_width) - x
+      g.fill_rect(x, top, level_width, bar_height,
+                  color=Config.proficiency_level_colors[level])
+      x += level_width
+    score /= float(Config.proficiency_levels * len(cards))
+    score = int(round(score * 100))
+    g.draw_text(left + left_margin - 4, center_y, text="{}%".format(score),
                 color=color.BLACK, align=Align.MiddleRight, font=font)
     g.draw_text(right, center_y, text=str(total_cards),
                 color=color.BLACK, align=Align.MiddleRight, font=font)
-    g.fill_rect(left + left_margin, top, bar_width, bar_height,
-                color=color_unseen)
-    g.fill_rect(left + left_margin, top, bar_width_marked, bar_height,
-                color=color_marked)
-    g.fill_rect(left + left_margin, top, bar_width_unmarked, bar_height,
-                color=color_unmarked)
-
+  
   def draw_text_box(self, text, x, y, width, height,
                     border_color=color.BLACK, border_width=2,
                     background_color=color.WHITE, text_color=color.BLACK):
@@ -121,9 +120,10 @@ class StudyCardsApp(Application):
 
   def load(self):
     path = os.path.join(self.root.path, self.save_file_name)
-    with open(path, "r", encoding="utf8") as f:
-      state = json.load(f)
-      self.root.deserialize(state)
+    if os.path.isfile(path):
+      with open(path, "r", encoding="utf8") as f:
+        state = json.load(f)
+        self.root.deserialize(state)
 
   def update(self, dt):
     if not self.joystick_ready:

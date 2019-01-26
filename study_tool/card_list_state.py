@@ -24,8 +24,6 @@ class CardListState(State):
     self.row_colors = [color.WHITE,
                        color.gray(230)]
     self.menu = None
-    self.row_marked_color = color.rgb(255, 200, 200)
-    self.row_unmarked_color = color.rgb(200, 255, 200)
     self.row_unseen_color = color.make_gray(230)
 
   def begin(self):
@@ -38,7 +36,7 @@ class CardListState(State):
                            screen_height - self.margin_top - self.margin_bottom)
 
     self.menu = Menu(options=self.card_set.cards, viewport=viewport)
-    self.menu.option_margin = 4
+    self.menu.option_margin = 10
     self.menu.draw_menu_option_text = self.draw_menu_option_text
     self.menu.get_option_background_color = self.get_option_background_color
 
@@ -52,9 +50,9 @@ class CardListState(State):
     self.app.push_state(SubMenuState(
       "Pause",
       [("Resume", None),
-       ("Quiz English", lambda: (self.app.pop_state,
+       ("Quiz English", lambda: (self.app.pop_state(),
                                  self.app.push_study_state(self.card_set, CardSide.English))),
-       ("Quiz Russian", lambda: (self.app.pop_state,
+       ("Quiz Russian", lambda: (self.app.pop_state(),
                                  self.app.push_study_state(self.card_set, CardSide.Russian))),
        ("Menu", self.app.pop_state),
        ("Exit", self.app.quit)]))
@@ -68,10 +66,9 @@ class CardListState(State):
     #else:
     if not card.encountered:
       row_color = self.row_unseen_color
-    elif card.marked:
-      row_color = self.row_marked_color
     else:
-      row_color = self.row_unmarked_color
+      row_color = math.lerp(Config.proficiency_level_colors[
+        card.proficiency_level], color.WHITE, 0.7)
     if index % 2 == 1:
       row_color *= 0.94
     if highlighted:
@@ -102,43 +99,6 @@ class CardListState(State):
     screen_center_x = screen_width / 2
     screen_center_y = screen_height / 2
     
-    #max_column_width = 0
-    #for card in self.card_set.cards:
-    #  max_column_width = max(max_column_width,
-    #                         g.measure_text(card.russian, font=self.card_font)[0])
-
-    ## Draw cards
-    #column_1_x = 32
-    #column_2_x = max(32 + max_column_width + 16,
-    #                 screen_center_x + 32)
-    #y = self.margin_top + int(round(self.scroll_position * self.line_spacing))
-    #for index, card in enumerate(self.card_set.cards):
-    #  row_color = self.row_colors[index % 2]
-
-    #  if not card.encountered:
-    #    row_color = self.row_unseen_color
-    #  elif card.marked:
-    #    row_color = self.row_marked_color
-    #  else:
-    #    row_color = self.row_unmarked_color
-    #  if index % 2 == 1:
-    #    row_color *= 0.94
-
-    #  g.fill_rect(0, y,
-    #              screen_width, self.line_spacing,
-    #              color=row_color)
-    #  g.draw_text(column_1_x, y + (self.line_spacing / 2),
-    #              text=card.russian,
-    #              font=self.card_font,
-    #              color=color.BLACK,
-    #              align=Align.MiddleLeft)
-    #  g.draw_text(column_2_x, y + (self.line_spacing / 2),
-    #              text=card.english,
-    #              font=self.card_font,
-    #              color=color.BLACK,
-    #              align=Align.MiddleLeft)
-    #  y += self.line_spacing
-      
     # Draw the list of menu options
     self.menu.draw_menu(g)
 

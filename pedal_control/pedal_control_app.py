@@ -201,7 +201,7 @@ class PedalControlApp:
             if not self.gesture_end.reset:
               self.mouse.scroll(0, -scroll_amount)  # down
 
-      self.screen.fill(WHITE)
+      self.screen.fill((255, 255, 255))
       self.textPrint.reset()
 
       mode_name = "Normal Mode"

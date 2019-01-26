@@ -34,3 +34,19 @@ class Config:
   card_back_text_color = color.BLACK
   card_unmarked_background_color = color.rgb(200, 255, 200)
   card_marked_background_color = color.rgb(255, 200, 200)
+
+  proficiency_levels = 4  # 0 = new, 1 = hardest, 4 = easiest
+  new_card_interval = 4
+  proficiency_level_intervals = {1: 4,
+                               2: 8,
+                               3: 12,
+                               4: 16}
+  proficiency_level_names = {1: "Hard",
+                           2: "Medium",
+                           3: "Easy",
+                           4: "Learned"}
+  proficiency_level_colors = {0: color.GRAY,
+                            1: color.RED,
+                            2: color.rgb(255, 128, 0),
+                            3: color.YELLOW,
+                            4: color.GREEN}

@@ -4,13 +4,15 @@ import pygame
 import random
 import time
 import cmg
+from cmg import math
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
-from study_tool.card import *
-from study_tool.card_set import *
+from study_tool.card import Card, CardSide
+from study_tool.card_set import CardSet, CardSetPackage
 from study_tool.config import Config
-from study_tool.state import *
+from study_tool.scheduler import Scheduler
+from study_tool.state import State, Button
 from study_tool.sub_menu_state import SubMenuState
 
 class StudyState(State):
@@ -23,16 +25,16 @@ class StudyState(State):
     self.name = os.path.basename(self.path)
     self.shown_side = side
     self.hidden_side = CardSide(1 - side)
-    self.seen_cards = []
     self.card = None
     self.revealed = False
+    self.scheduler = None
 
   def begin(self):
     self.buttons[0] = Button("Reveal", self.reveal)
     self.buttons[1] = Button("Exit", self.pause)
     self.buttons[2] = Button("Next", self.next)
 
-    self.unseen_cards = list(self.card_set.cards)
+    self.scheduler = Scheduler(self.card_set.cards)
     self.seen_cards = []
     self.card = None
     self.revealed = False
@@ -47,7 +49,7 @@ class StudyState(State):
     self.app.push_state(SubMenuState(
       "Pause",
       [("Resume", None),
-       ("List", lambda: (self.app.pop_state,
+       ("List", lambda: (self.app.pop_state(),
                          self.app.push_card_list_state(self.card_set))),
        ("Quiz " + other_side.name, self.switch_sides),
        ("Menu", self.app.pop_state),
@@ -57,46 +59,19 @@ class StudyState(State):
     self.app.quit()
 
   def next(self):
-    self.card.skip()
+    self.scheduler.mark(self.card, knew_it=True)
     self.app.save()
     self.next_card()
   
   def mark(self):
-    self.card.mark()
+    self.scheduler.mark(self.card, knew_it=False)
     self.app.save()
     self.next_card()
 
   def next_card(self):
     self.revealed = False
     self.buttons[0] = Button("Reveal", self.reveal)
-
-    for card in self.seen_cards:
-      card.age += 1
-
-    if len(self.card_set.cards) > 0:
-      self.card = self.card_set.next(seen=self.seen_cards,
-                                     unseen=self.unseen_cards)
-    else:
-      choices = []
-      total_odds = 0
-      for index, card in enumerate(self.seen_cards):
-        odds = card.age - min(len(self.seen_cards) / 2, 4)
-        odds *= odds
-        if card.marked:
-          odds *= odds
-        total_odds += odds
-        choices.append((total_odds, index))
-      odds_index = random.randint(0, total_odds - 1)
-      picked_index = None
-      for odds, index in choices:
-        if odds_index < odds:
-          picked_index = index
-          break
-      self.card = self.seen_cards[picked_index]
-      del self.seen_cards[picked_index]
-    
-    self.seen_cards.insert(0, self.card)
-    self.card.encounter()
+    self.card = self.scheduler.next()
 
   def reveal(self):
     self.revealed = True
@@ -107,11 +82,9 @@ class StudyState(State):
     screen_center_x = screen_width / 2
     screen_center_y = screen_height / 2
 
-    if self.card.encountered:
-      if self.card.marked:
-        marked_state_color = Config.card_marked_background_color
-      else:
-        marked_state_color = Config.card_unmarked_background_color
+    if self.card.proficiency_level > 0:
+      marked_state_color = math.lerp(Config.proficiency_level_colors[
+        self.card.proficiency_level], color.WHITE, 0.7)
       g.fill_rect(0, self.margin_top, screen_width, 32,
                   color=marked_state_color)
       g.fill_rect(0, screen_height - self.margin_bottom - 32,

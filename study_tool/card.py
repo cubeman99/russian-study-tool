@@ -10,11 +10,11 @@ class Card:
   def __init__(self, front, back):
     self.text = [front, back]
     self.marked = False
-    self.age = 0
-    self.card_set = None
     self.last_encounter_time = None
-    self.marked_count = 0
-    self.skipped_count = 0
+    self.proficiency_level = 0  # new/unseen
+
+    self.rep = None  # used by Scheduler
+    self.age = 0
 
   @property
   def english(self):
@@ -49,27 +49,25 @@ class Card:
 
   def mark(self):
     self.marked = True
-    self.marked_count += 1
     self.last_encounter_time = time.time()
     
   def skip(self):
     self.marked = False
-    self.skipped_count += 1
     self.last_encounter_time = time.time()
 
   def serialize(self):
     return dict(russian=self.text[CardSide.Russian],
                 english=self.text[CardSide.English],
-                marked_count=self.marked_count,
-                skipped_count=self.skipped_count,
                 marked=self.marked,
+                age=self.age,
+                proficiency_level=self.proficiency_level,
                 last_encounter_time=self.last_encounter_time)
 
   def deserialize(self, state):
     self.text[CardSide.Russian] = state["russian"]
     self.text[CardSide.English] = state["english"]
-    self.marked_count = state["marked_count"]
-    self.skipped_count = state["skipped_count"]
+    self.proficiency_level = state["proficiency_level"]
     self.marked = state["marked"]
     self.last_encounter_time = state["last_encounter_time"]
+    self.age = state["age"]
   
