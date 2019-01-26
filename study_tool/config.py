@@ -1,9 +1,12 @@
 from enum import IntEnum
 import os
 import time
+import cmg
 from cmg import color
 
 class Config:
+  logger = None
+
   background_color = color.WHITE
   window_border_color = color.BLACK
   window_border_thickness = 4

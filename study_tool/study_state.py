@@ -75,7 +75,9 @@ class StudyState(State):
     self.card = self.scheduler.next()
     if self.card is None:
       self.app.pop_state()
-    print("No cards left!")
+      Config.logger.info("No cards left to study!")
+    else:
+      Config.logger.info("Showing card: " + self.card.text[self.shown_side])
 
   def reveal(self):
     self.revealed = True

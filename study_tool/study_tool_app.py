@@ -3,7 +3,9 @@ import os
 import pygame
 import time
 import shutil
+import cmg
 from cmg import color
+import cmg.logging
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
@@ -20,6 +22,10 @@ DEAD_ZONE = 0.01
 class StudyCardsApp(Application):
 
   def __init__(self):
+    Config.logger = cmg.logging.create_logger("study_tool",
+                                              stdout=True,
+                                              level=cmg.logging.LogLevel.Info)
+
     self.title = "Russian"
     Application.__init__(self, title=self.title, width=800, height=600)
     
@@ -115,8 +121,9 @@ class StudyCardsApp(Application):
     return self.states[-1]
 
   def save(self):
-    state = self.root.serialize()
     path = os.path.join(self.root.path, self.save_file_name)
+    Config.logger.debug("Saving study data to: " + path)
+    state = self.root.serialize()
     temp_path = path + ".temp"
     with open(temp_path, "w", encoding="utf8") as f:
       json.dump(state, f, indent=2, sort_keys=True)
@@ -124,6 +131,7 @@ class StudyCardsApp(Application):
 
   def load(self):
     path = os.path.join(self.root.path, self.save_file_name)
+    Config.logger.info("Loading study data from: " + path)
     if os.path.isfile(path):
       with open(path, "r", encoding="utf8") as f:
         state = json.load(f)
