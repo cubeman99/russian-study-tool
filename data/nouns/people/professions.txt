@@ -1,4 +1,5 @@
 @name Professions
+@key people_professions
 
 чита´тель - reader
 покупа´тель - shopper

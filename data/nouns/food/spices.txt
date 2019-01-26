@@ -1,24 +1,24 @@
 @name Spices
+@key food_spices
 
-Специи - Spice
-Соль - salt
-Сахар - sugar
-Тимьян - thyme
-Черный перец - pepper
-Маслина - olive
-Оливка - olive
-Гвоздика - carnation
-Каперсы - caper
-Эстрагон - estragon
-Тархун - estragon
-Шафран - saffron
-Ваниль - vanilla
-Имбирь - ginger
-Кардамон - cardamom
-Розмарин - rosemary
-Горчица - mustard
-Корица - cinnamon
-Укроп - dill
-Петрушка - punch
-Базилик - basil
-Щавель - sorrel
+специи - spice
+соль - salt
+сахар - sugar
+тимьян - thyme
+черный перец - pepper
+маслина?, оливка - olive
+гвоздика - carnation
+каперсы - caper
+эстрагон - estragon
+тархун - estragon
+шафран - saffron
+ваниль - vanilla
+имбирь - ginger
+кардамон - cardamom
+розмарин - rosemary
+горчица - mustard
+корица - cinnamon
+укроп - dill
+петрушка - punch
+базилик - basil
+щавель - sorrel

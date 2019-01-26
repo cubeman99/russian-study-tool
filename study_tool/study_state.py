@@ -11,30 +11,31 @@ from cmg.application import *
 from study_tool.card import Card, CardSide
 from study_tool.card_set import CardSet, CardSetPackage
 from study_tool.config import Config
-from study_tool.scheduler import Scheduler
+from study_tool.scheduler import Scheduler, ScheduleMode
 from study_tool.state import State, Button
 from study_tool.sub_menu_state import SubMenuState
 
 class StudyState(State):
-  def __init__(self, card_set, side=CardSide.English):
+  def __init__(self, card_set,
+               side=CardSide.English,
+               mode=ScheduleMode.Learning):
     super().__init__()
     self.card_font = pygame.font.Font(None, 72)
     self.card_status_font = pygame.font.Font(None, 30)
     self.card_set = card_set
-    self.path = card_set.path
-    self.name = os.path.basename(self.path)
     self.shown_side = side
     self.hidden_side = CardSide(1 - side)
     self.card = None
     self.revealed = False
     self.scheduler = None
+    self.mode = mode
 
   def begin(self):
     self.buttons[0] = Button("Reveal", self.reveal)
     self.buttons[1] = Button("Exit", self.pause)
     self.buttons[2] = Button("Next", self.next)
 
-    self.scheduler = Scheduler(self.card_set.cards)
+    self.scheduler = Scheduler(cards=self.card_set.cards, mode=self.mode)
     self.seen_cards = []
     self.card = None
     self.revealed = False
@@ -72,6 +73,9 @@ class StudyState(State):
     self.revealed = False
     self.buttons[0] = Button("Reveal", self.reveal)
     self.card = self.scheduler.next()
+    if self.card is None:
+      self.app.pop_state()
+    print("No cards left!")
 
   def reveal(self):
     self.revealed = True
@@ -113,7 +117,6 @@ class StudyState(State):
     State.draw(self, g)
 
     # Draw text at top
-    marked_count = len([x for x in self.card_set.cards if not x.marked])
     g.draw_text(32, self.margin_top / 2,
                 text=self.card_set.name,
                 color=cmg.color.GRAY,
@@ -121,4 +124,4 @@ class StudyState(State):
     self.app.draw_completion_bar(g, self.margin_top / 2,
                                  screen_center_x - 80,
                                  screen_width - 32,
-                                 self.card_set)
+                                 self.scheduler.cards + self.scheduler.new_cards)

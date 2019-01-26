@@ -1,11 +1,12 @@
 @name Nuts
+@key food_nuts
 
-Орехи - Nuts
-Лесной орех - hazelnut
-Грецкий орех - walnut
-Кешью - cashew
-Миндаль - almond
-Кокосовый орех - cocoanut
-Фисташки - pistachio
-Арахис - peanut
-Мускатный орех - nutmeg
+орехи - nuts
+лесной орех - hazelnut
+грецкий орех - walnut
+кешью - cashew
+миндаль - almond
+кокосовый орех - cocoanut
+фисташки - pistachio
+арахис - peanut
+мускатный орех - nutmeg

@@ -1,5 +1,9 @@
+#==============================================================================
 @name Days/Months
+@key nouns_days
+#==============================================================================
 
+# Days of the Week
 понедельник - Monday
 вторник - Tuesday
 среда - Wednesday
@@ -8,6 +12,7 @@
 суббота - Saturday
 воскресенье - Sunday
 
+# Months
 январь - January
 февраль - February
 март - March
@@ -21,10 +26,21 @@
 ноябрь - November
 декабрь - December
 
+# Seasons
+весна´ - spring
+ле´то - summer
+о´сень - fall
+зима´ - winter
+
+ # Other
+год - year
+месяц - month
+неделя - week
+день - day
+ча´с - hour
+мину´та - minute
+секу´нда - second (1/60 minute)
+
 сегодня - today
 завтра - tomorrow
 вчера - yesterday
-день - day
-неделя - week
-месяц - month
-год - year

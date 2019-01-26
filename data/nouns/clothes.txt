@@ -1,4 +1,5 @@
 @name Clothes
+@key clothes
 
 одежда - clothes
 рубашка - shirt

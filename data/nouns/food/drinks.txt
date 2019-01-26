@@ -1,22 +1,23 @@
 @name Drinks
+@key food_drinks
 
-Напитки - Drinks
-Чай - Tea
-Кофе - Coffee
-Сок - Juice
-Апельсиновый - orange juice
-Яблочный - apple juice
-Грушевый - pear juice
-Персиковый - peach juice
-Абрикосовый - apricot juice
-Вишневый - cherry juice
-Смешанный - mixed juice
+напитки - drinks
+чай - tea
+кофе - coffee
+сок - juice
+апельсиновый - orange juice
+яблочный - apple juice
+грушевый - pear juice
+персиковый - peach juice
+абрикосовый - apricot juice
+вишневый - cherry juice
+смешанный - mixed juice
 грейпфрутовый - gapefruit juice
-Молочный коктейль - milkshake
-Вода - water
-Молоко - milk
-Кефир - kefir
-Сливки - cream
+молочный коктейль - milkshake
+вода - water
+молоко - milk
+кефир - kefir
+сливки - cream
 лимонад - lemonade
 кока-кола - coke
 какао - hot chocolate

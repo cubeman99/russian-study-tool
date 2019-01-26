@@ -9,7 +9,7 @@
 жёлтый - yellow
 синий - blue (dark)
 голубой - blue
-оранжевый - orange
+оранжевый - orange (color)
 коричневый - brown
 серый - grey
 розовый - pink

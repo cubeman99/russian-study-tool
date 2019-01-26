@@ -1,29 +1,30 @@
 @name Seafood
+@key food_seafood
 
-Морепродукты - Seafood
-Рыба - fish
-Окунь - bass
-Семга - salmon
-Осетр - sturgeon
-Горбуша - humpback salmon
-Форель - trout
-Судак - pike perch
-Щука - pike
-Камбала - flatfish
-Сом - sheatfish, catfish
-Треска - codfish
-Сардина - sardine
-Ставрида - horse-mackerel
-Скумбрия - mackerel
-Карась - crucian
-Карп - carp
-Палтус - fluke
-Тунец - tuna
-Белуга - huso
-Хек - hake
-Сельдь - herring
-Устрица (устрицы) - oyster
-Мидия (мидии) - mussel
-Креветка (креветки) - shrimp
-Краб (крабы) - crab
-Кальмар (кальмары) - squid
+морепродукты - seafood
+рыба - fish
+окунь - bass
+семга - salmon
+осетр - sturgeon
+горбуша - humpback salmon
+форель - trout
+судак - pike perch
+щука - pike
+камбала - flatfish
+сом - sheatfish, catfish
+треска - codfish
+сардина - sardine
+ставрида - horse-mackerel
+скумбрия - mackerel
+карась - crucian
+карп - carp
+палтус - fluke
+тунец - tuna
+белуга - huso
+хек - hake
+сельдь - herring
+устрица (устрицы) - oyster
+мидия (мидии) - mussel
+креветка (креветки) - shrimp
+краб (крабы) - crab
+кальмар (кальмары) - squid

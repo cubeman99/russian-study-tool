@@ -1,4 +1,5 @@
 @name Core
+@key nouns_core
 
 клю´ч - key
 каранда´ш - pencil

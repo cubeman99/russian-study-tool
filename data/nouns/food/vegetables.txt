@@ -1,23 +1,24 @@
 @name Vegetables
+@key food_vegetables
 
-Овощи - Vegtables
-Огурец (огурцы) - cucumber
-Помидор (помидоры) - tomato
-Кабачок (кабачки) - vegtable marrow
-Картофель (-) - potato
-Баклажан (баклажаны) - aubergine, egg-plant
-Капуста (-) - cabbage
-Цветная капуста (-) - cauliflower
-Брокколи (-) - broccoli
-Патисон (патисоны) - squash
-Тыква (тыквы) - pumpkin
-Морковь (-) - carrot
-Лук (-) - onion
-Перец (перцы) - pepper, capsicum
-Фасоль (-) - bean
-Горох (-) - pea
-Сельдерей - celery
+овощи - vegtables
+огурец (огурцы) - cucumber
+помидор (помидоры) - tomato
+кабачок (кабачки) - vegtable marrow
+картофель (-) - potato
+баклажан (баклажаны) - aubergine, egg-plant
+капуста (-) - cabbage
+цветная капуста (-) - cauliflower
+брокколи (-) - broccoli
+патисон (патисоны) - squash
+тыква (тыквы) - pumpkin
+морковь (-) - carrot
+лук (-) - onion
+перец (перцы) - pepper, capsicum
+фасоль (-) - bean
+горох (-) - pea
+сельдерей - celery
 пюре картофельное - mashed potatoes
-Свекла - beetroot, beet
-Салат - lettuce
-Гриб (грибы) - mushroom
+свекла - beetroot, beet
+салат - lettuce
+гриб (грибы) - mushroom

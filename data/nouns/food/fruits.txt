@@ -1,26 +1,27 @@
 @name Fruit
+@key food_fruit
 
-Фрукты - Fruit
-Яблоко (яблоки) - apple
-Груша (груши) - pear
-Апельсин (апельсины) - orange
-Виноград - grapes
-Грейпфрут (грейпфруты) - grapefruit
-Киви (киви) - kiwi fruit
-Мандарин (мандарины) - mandarine
-Манго (-) - mango
-Банан (бананы) - banana
-Ананас - pineapple
-Персик (персики) - peach
-Абрикос (абрикосы) - apricot
-Слива (Сливы) - plum
-Клубника (-) - strawberry
-Малина (-) - raspberry
-Лимон (лимоны) - lemon
-Ежевика (-) - blackberry
-Вишня, Черешня (-) - cherry
-Дыня - melon
-Арбуз - watermelon
-Смородина красная - red currant
-Смородина чёрная - black currant
-Крыжовник - gooseberry
+фрукты - fruit
+яблоко (яблоки) - apple
+груша (груши) - pear
+апельсин (апельсины) - orange (fruit)
+виноград - grapes
+грейпфрут (грейпфруты) - grapefruit
+киви (киви) - kiwi fruit
+мандарин (мандарины) - mandarine
+манго (-) - mango
+банан (бананы) - banana
+ананас - pineapple
+персик (персики) - peach
+абрикос (абрикосы) - apricot
+слива (сливы) - plum
+клубника (-) - strawberry
+малина (-) - raspberry
+лимон (лимоны) - lemon
+ежевика (-) - blackberry
+вишня, черешня (-) - cherry
+дыня - melon
+арбуз - watermelon
+смородина красная - red currant
+смородина чёрная - black currant
+крыжовник - gooseberry

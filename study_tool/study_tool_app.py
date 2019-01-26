@@ -2,6 +2,7 @@ import json
 import os
 import pygame
 import time
+import shutil
 from cmg import color
 from cmg.input import *
 from cmg.graphics import *
@@ -12,6 +13,7 @@ from study_tool.config import Config
 from study_tool.menu_state import MenuState
 from study_tool.study_state import StudyState
 from study_tool.card_list_state import CardListState
+from study_tool.scheduler import ScheduleMode
 
 DEAD_ZONE = 0.01
 
@@ -37,13 +39,13 @@ class StudyCardsApp(Application):
     
     # Load all card data
     self.save_file_name = ".study_data.sav"
-    self.root = load_card_package_directory(path="data", name="root")
+    self.root = load_card_package_directory(path="data", name="words")
     
     self.load()
 
     self.states = []
     self.push_state(MenuState(self.root))
-    self.push_study_state(self.root.card_sets[1], CardSide.Russian)
+    #self.push_study_state(self.root.card_sets[1], CardSide.Russian)
     #self.push_card_list_state(self.root.card_sets[1])
 
     self.input.bind(pygame.K_ESCAPE, pressed=self.quit)
@@ -59,19 +61,18 @@ class StudyCardsApp(Application):
     self.states.append(state)
     state.begin()
 
-  def push_study_state(self, card_set, side):
-    self.push_state(StudyState(card_set, side))
+  def push_study_state(self, card_set, side, mode=ScheduleMode.Learning):
+    self.push_state(StudyState(card_set, side=side, mode=mode))
 
   def push_card_list_state(self, card_set):
     self.push_state(CardListState(card_set))
 
   def draw_completion_bar(self, g, center_y, left, right, card_set):
     cards = []
-    if isinstance(card_set, CardSet):
-      cards = list(card_set.cards)
+    if isinstance(card_set, list):
+      cards = card_set
     else:
-      for cs in card_set.all_card_sets():
-        cards += cs.cards
+      cards = list(card_set.cards)
     total_cards = len(cards)
 
     font = self.font_bar_text
@@ -85,14 +86,15 @@ class StudyCardsApp(Application):
     score = 0
     for level in range(Config.proficiency_levels, -1, -1):
       count = len([c for c in cards if c.proficiency_level == level])
-      score += count * level
-      level_width = int(round(bar_width * (float(count) / total_cards)))
-      if x + level_width > left + left_margin + bar_width:
-        level_width = (left + left_margin + bar_width) - x
-      g.fill_rect(x, top, level_width, bar_height,
-                  color=Config.proficiency_level_colors[level])
-      x += level_width
-    score /= float(Config.proficiency_levels * len(cards))
+      if count > 0:
+        score += count * max(0, level - 1)
+        level_width = int(round(bar_width * (float(count) / total_cards)))
+        if x + level_width > left + left_margin + bar_width:
+          level_width = (left + left_margin + bar_width) - x
+        g.fill_rect(x, top, level_width, bar_height,
+                    color=Config.proficiency_level_colors[level])
+        x += level_width
+    score /= float((Config.proficiency_levels - 1) * len(cards))
     score = int(round(score * 100))
     g.draw_text(left + left_margin - 4, center_y, text="{}%".format(score),
                 color=color.BLACK, align=Align.MiddleRight, font=font)
@@ -115,8 +117,10 @@ class StudyCardsApp(Application):
   def save(self):
     state = self.root.serialize()
     path = os.path.join(self.root.path, self.save_file_name)
-    with open(path, "w", encoding="utf8") as f:
+    temp_path = path + ".temp"
+    with open(temp_path, "w", encoding="utf8") as f:
       json.dump(state, f, indent=2, sort_keys=True)
+    shutil.move(temp_path, path)
 
   def load(self):
     path = os.path.join(self.root.path, self.save_file_name)

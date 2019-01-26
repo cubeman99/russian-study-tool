@@ -1,41 +1,26 @@
+#==============================================================================
 @name Family
+@key people_family
+#==============================================================================
 
+семья - family
 отец - father
-мать - mother
-папа - dad
+ма´ть - mother
+па´па - dad
 мама - mom
 брат - brother
-сестра - sister
+сестра´ - sister
 сын - son
-дочь - daughter
-жена - wife
-муж - husband
+до´чь - daughter
 родители - parents
-дети - children
-ребенок - child
-бабушка - grandmother
-дедушка - grandfather
+ба'бушка - grandmother
+де´душка - grandfather
 внучка - granddaughter
 внук - grandson
-дядя - uncle
-тётя - auntie
-племянник - nephew
-племянница - niece
-двоюродный брат - cousin (male)
-двоюродная сестра - cousin (female)
-семья - family
-родственники - relatives
 близнецы - twins
-детство - childhood
-малыш, грудной ребенок - baby
-мальчик - young boy
-девочка - young girl
-девушка - young woman
-молодой человек - young man
-мужчина - man
-женщина - woman
-человек - person
-взрослый - adult
+
+жена´ - wife
+муж - husband
 невеста - bride
 жених - groom
 медовый месяц - honey moon
@@ -45,3 +30,20 @@
 холостой - single
 вдова - widow
 вдовец - widower
+
+#==============================================================================
+@name Extended Family
+@key people_extended_family
+#==============================================================================
+
+родственники - relatives
+дя´дя - uncle
+тётя - auntie
+племянник - nephew
+племянница - niece
+двоюродный брат - cousin (male)
+двоюродная сестра - cousin (female)
+зя´ть - son-in-law, brother-in-law
+те´сть - father-in-law (wife’s father)
+свекро´вь - mother-in-law (husband’s mother)
+

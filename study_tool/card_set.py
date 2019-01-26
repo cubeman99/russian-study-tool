@@ -6,6 +6,7 @@ from study_tool.card import *
 class CardSet:
   def __init__(self, cards=()):
     self.name = "Untitled"
+    self.key = None
     self.path = ""
     self.info = ""
     self.cards = list(cards)
@@ -19,7 +20,7 @@ class CardSet:
     return card
   
   def serialize(self):
-    state = {"name": self.name,
+    state = {"key": self.key,
              "cards": []}
     for card in self.cards:
       state["cards"].append(card.serialize())
@@ -48,6 +49,12 @@ class CardSetPackage:
     for card_set in self.card_sets:
       yield card_set 
 
+  @property
+  def cards(self):
+    for card_set in self.all_card_sets():
+      for card in card_set.cards:
+        yield card
+
   def serialize(self):
     state = {"name": self.name,
              "packages": [],
@@ -66,13 +73,23 @@ class CardSetPackage:
           break
     for card_set_state in state["card_sets"]:
       for card_set in self.card_sets:
-        if card_set.name == card_set_state["name"]:
+        if card_set.key == card_set_state["key"]:
           card_set.deserialize(card_set_state)
           break
 
 def load_card_set_file(path):
   card_set = None
   card_sets = []
+  left_side = CardSide.Russian
+
+  def name_to_side(name):
+    if name.lower() in ["ru", "russian"]:
+      return CardSide.Russian
+    elif name.lower() in ["en", "english"]:
+      return CardSide.English
+    else:
+      raise KeyError(name)
+
   with open(path, "r", encoding="utf8") as f:
     for line in f:
       line = line.strip()
@@ -82,11 +99,17 @@ def load_card_set_file(path):
         if command == "name":
           card_set = CardSet()
           card_set.name = value
+          card_set.key = card_set.name.lower().replace(" ", "_")
           card_sets.append(card_set)
+          left_side = CardSide.Russian
+        elif command == "key":
+          card_set.key = value
         elif command == "info":
           card_set.info = value
         elif command == "side":
-          card_set.side = CardSide.Russian if value in ["ru", "russian"] else CardSide.English
+          card_set.side = name_to_side(value)
+        elif command == "left":
+          left_side = name_to_side(value)
         else:
           raise KeyError(command)
       elif line.startswith("#"):
@@ -95,7 +118,9 @@ def load_card_set_file(path):
         if "-" in line:
           tokens = [t.strip() for t in line.split("-")]
           if len(tokens) == 2:
-            card = Card(tokens[0], tokens[1])
+            card = Card()
+            card.text[left_side] = tokens[0]
+            card.text[1 - left_side] = tokens[1]
             card_set.cards.append(card)
             card_set.card_count = len(card_set.cards)
   return sorted(card_sets, key=lambda x: x.name)

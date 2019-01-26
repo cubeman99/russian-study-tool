@@ -1,4 +1,5 @@
 @name City
+@key city
 
 у´лица - street
 институ´т - institute

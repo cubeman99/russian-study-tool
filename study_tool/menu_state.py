@@ -14,6 +14,7 @@ from study_tool.card_set import CardSet, CardSetPackage
 from study_tool.menu import Menu
 from study_tool.state import *
 from study_tool.sub_menu_state import SubMenuState
+from study_tool.scheduler import ScheduleMode
 
 class MenuState(State):
   def __init__(self, package):
@@ -48,19 +49,25 @@ class MenuState(State):
       self.menu.options.append(("[...] {}".format(package.name), package))
     for card_set in self.package.card_sets:
       self.menu.options.append((card_set.name, card_set))
+    self.menu.options.append(("Study all " + self.package.name, self.package))
       
   def open_set(self, card_set):
-    self.app.push_state(SubMenuState(
-      card_set.name,
-      [("Quiz English", lambda: self.app.push_study_state(card_set, CardSide.English)),
-       ("Quiz Russian", lambda: self.app.push_study_state(card_set, CardSide.Russian)),
-       ("List", lambda: self.app.push_card_list_state(card_set)),
-       ("Cancel", None)]))
+    options = [("Quiz English", lambda: self.app.push_study_state(card_set, CardSide.English)),
+               ("Quiz Russian", lambda: self.app.push_study_state(card_set, CardSide.Russian))]
+    options += [("Quiz New Cards", lambda: self.app.push_study_state(card_set,
+                                                                      side=CardSide.English,
+                                                                      mode=ScheduleMode.NewOnly))]
+    options += [("List", lambda: self.app.push_card_list_state(card_set)),
+                ("Cancel", None)]
+    self.app.push_state(SubMenuState(card_set.name, options))
 
   def select(self):
     option, action = self.menu.selected_option()
     if isinstance(action, CardSetPackage):
-      self.app.push_state(MenuState(action))
+      if action == self.package:
+        self.open_set(action)
+      else:
+        self.app.push_state(MenuState(action))
     elif isinstance(action, CardSet):
       self.open_set(action)
     else:

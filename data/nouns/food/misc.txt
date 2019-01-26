@@ -1,6 +1,7 @@
 @name Misc Food
+@key food_misc
 
-Крупа - Grain
+крупа - grain
 овес - oatmeal
 гречка - buckwheat
 ячмень - barley
@@ -11,7 +12,7 @@
 сыр - cheese
 яйцо - egg
 масло - butter
-картофель фри - French fries
+картофель фри - french fries
 жевательная резинка, жевачка - (chewing) gum
 варенье - jam
 пицца - pizza
@@ -25,8 +26,8 @@
 бутерброд - sandwich
 суп - soup
 сметана - sour cream
-Пища - Meals
-Завтрак - breakfast
-Обед - lunch
-Ужин - dinner
-Полдник - supper
+пища - meals
+завтрак - breakfast
+обед - lunch
+ужин - dinner
+полдник - supper

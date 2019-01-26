@@ -1,0 +1,50 @@
+#==============================================================================
+@name Personal Pronoun Cases
+@key personal_pronoun_cases
+#==============================================================================
+
+# Nominative
+я - I (nom.)
+ты - you (nom., informal)
+он - he/it (nom.)
+оно' - it (nom.)
+она' - she/it (nom.)
+мы - we (nom.)
+вы - you (nom., formal)
+они' - they (nom.)
+
+# Accusative/Genetive
+меня' - me (acc.)
+тебя' - you (acc., informal)
+его'/его' - him/it (acc.)
+её - her/it (acc.)
+на'с - us (acc.)
+ва'с - you (acc., formal)
+и'х - them (acc.)
+
+# Dative
+мне' - me (dat.)
+тебе' - you (dat., informal)
+ему' - him/it (dat.)
+е'й - her/it (dat.)
+на'м - us (dat.)
+ва'м - you (dat., formal)
+и'м - them (dat.)
+
+# Prepositional
+мне' - me (prep.)
+тебе' - you (prep., informal)
+нём - him/it (prep.)
+не'й - her/it (prep.)
+на'с - us (prep.)
+ва'с - you (prep., formal)
+ни'х - them (prep.)
+
+# Instrumental
+мно´й - me (ins.)
+тобо´й - you (ins., informal)
+и'м - him/it (ins.)
+е'й - her/it (ins.)
+на'ми - us (ins.)
+ва'ми - you (ins., formal)
+и'ми - them (ins.)

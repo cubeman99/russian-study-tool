@@ -1,4 +1,5 @@
 @name Body Parts
+@key body_parts
 
 лицо´ - face
 рука´ - hand/arm

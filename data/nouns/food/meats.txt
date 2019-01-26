@@ -1,13 +1,13 @@
 @name Meat
+@key food_meat
 
-Мясо - Meat
-Говядина - beef
-Баранина - mutton
-Свинина - pork
-Телятина - veal
-Курица - chichen
-Ягнятина - lamb
-Крольчатина (кролик) - rabbit
-Ветчина - ham
-Бекон - bacon
-колбаса´ - sausage
+мясо - meat
+говядина - beef
+баранина - mutton
+свинина - pork
+телятина - veal
+курица - chichen
+ягнятина - lamb
+крольчатина (кролик) - rabbit
+ветчина - ham
+бекон - bacon

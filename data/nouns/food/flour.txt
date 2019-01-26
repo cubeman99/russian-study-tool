@@ -1,12 +1,13 @@
 @name Flour Products
+@key food_flour_products
 
-Мука - flour
-Хлеб - bread
-Белый хлеб - white bread
-Чёрный хлеб - black bread (dark rye bread)
-Булочка - cookie
-Кекс - cake
-Торт - tart, pie
-Пирожок - pie, patty
+мука - flour
+хлеб - bread
+белый хлеб - white bread
+чёрный хлеб - black bread (dark rye bread)
+булочка - cookie
+кекс - cake
+торт - tart, pie
+пирожок - pie, patty
 булочка - muffin
 блин - pancake

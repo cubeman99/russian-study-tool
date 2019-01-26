@@ -1,13 +1,34 @@
+#==============================================================================
 @name People
+@key people_general
+#==============================================================================
 
-мужчи´на - man
+человек - person
 лю'ди - people
+мужчи´на - man
+женщина - woman
+мальчик - young boy
+девочка - young girl
+девушка - young woman
+молодой человек - young man
+молодёжь - young people
+взрослый - adult
 ю´ноша - youth
+детство - childhood
+ребенок - child
+дети - children
+малыш, грудной ребенок - baby
+малю´тка - baby, little one
+
+===========================================================
+@name People Labels
+@key people_labels
+#==============================================================================
+
 кня´зь - prince
 па´рень - lad
 коро´ль - king
 ца´рь - tsar
-молодёжь - young people
 у´мница - clever person
 пла´кса - crybaby
 колле´га - colleague
@@ -17,6 +38,5 @@
 пья´ница - drunkard
 обжо´ра - glutton
 бродя´га - tramp
-малю´тка - baby, little one
 неве´жда - ignoramus
 одино´чка - lone person

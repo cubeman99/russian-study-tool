@@ -35,12 +35,21 @@ def choose(cards):
     return None
   return cards[random.randint(0, len(cards) - 1)]
 
+class ScheduleMode(IntEnum):
+  Learning = 1
+  NewOnly = 2
+
+
 class Scheduler:
-  def __init__(self, cards):
+  def __init__(self, cards, mode=ScheduleMode.Learning):
+    self.mode = mode
     self.new_cards = [c for c in cards if c.proficiency_level == 0]
-    self.cards = [c for c in cards if c.proficiency_level > 0]
-    for card in self.cards:
-      card.rep = -card.age
+    if self.mode == ScheduleMode.NewOnly:
+      self.cards = []
+    else:
+      self.cards = [c for c in cards if c.proficiency_level > 0]
+      for card in self.cards:
+        card.rep = -card.age
     self.proficiency_levels = Config.proficiency_levels
     self.proficiency_level_intervals = Config.proficiency_level_intervals
     self.new_card_interval = Config.new_card_interval
@@ -48,7 +57,7 @@ class Scheduler:
 
   def mark(self, card: Card, knew_it: bool):
     if card in self.new_cards:
-      card.proficiency_level = 2 if knew_it else 1
+      card.proficiency_level = 3 if knew_it else 1
       del self.new_cards[self.new_cards.index(card)]
       self.cards.append(card)
     elif knew_it:
@@ -59,6 +68,9 @@ class Scheduler:
     card.rep = self.rep
     card.marked = not knew_it
     card.last_encounter_time = time.time()
+    card.history.insert(0, knew_it)
+    if len(card.history) > Config.max_card_history_size:
+      card.history = card.history[:Config.max_card_history_size]
 
   def next(self) -> Card:
     card = self._get_next_card()
@@ -69,6 +81,10 @@ class Scheduler:
 
   def _get_next_card(self) -> Card:
     card = None
+
+    if self.mode == ScheduleMode.NewOnly:
+      card = self._get_new_card()
+      return card
 
     if self.rep % self.new_card_interval == 0:
       card = self._get_new_card()

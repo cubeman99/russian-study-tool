@@ -35,6 +35,8 @@ class Config:
   card_unmarked_background_color = color.rgb(200, 255, 200)
   card_marked_background_color = color.rgb(255, 200, 200)
 
+  max_card_history_size = 100
+
   proficiency_levels = 4  # 0 = new, 1 = hardest, 4 = easiest
   new_card_interval = 4
   proficiency_level_intervals = {1: 4,
