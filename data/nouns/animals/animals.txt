@@ -16,7 +16,7 @@
 крот - mole
 мышь - mouse
 крыса - rat
-ежик - hedge-hog
+ежик -- hedge-hog
 змея - snake
 лось - elk, moose
 олень - deer

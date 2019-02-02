@@ -5,18 +5,18 @@
 огурец (огурцы) - cucumber
 помидор (помидоры) - tomato
 кабачок (кабачки) - vegtable marrow
-картофель (-) - potato
-баклажан (баклажаны) - aubergine, egg-plant
-капуста (-) - cabbage
-цветная капуста (-) - cauliflower
-брокколи (-) - broccoli
+картофель @nopl - potato
+баклажан (баклажаны) -- aubergine, egg-plant
+капуста @nopl - cabbage
+цветная капуста @nopl - cauliflower
+брокколи @nopl - broccoli
 патисон (патисоны) - squash
 тыква (тыквы) - pumpkin
-морковь (-) - carrot
-лук (-) - onion
+морковь @nopl - carrot
+лук @nopl - onion
 перец (перцы) - pepper, capsicum
-фасоль (-) - bean
-горох (-) - pea
+фасоль @nopl - bean
+горох @nopl - pea
 сельдерей - celery
 пюре картофельное - mashed potatoes
 свекла - beetroot, beet

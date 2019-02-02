@@ -5,12 +5,12 @@
 волна´ - wave
 пля´ж - beach
 гора´ - mountain
-звезда´ star
+звезда´ - star
 земля´ - earth
 мо´ре - sea
 пого´да - weather
-бе´рег shore
-лу´г meadow
+бе´рег - shore
+лу´г - meadow
 о´зеро - lake
 океа´н - ocean
 о´стров - island
@@ -18,7 +18,7 @@
 полуо´стров - peninsula
 равни´на - plain
 река´ - river
-во´здух air
+во´здух - air
 восхо´д (со´лнца) - sunrise
 зака´т - sunset
 моро´з - frost, intense cold

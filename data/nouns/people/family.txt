@@ -1,5 +1,5 @@
 #==============================================================================
-@name Family
+@name Immediate Family
 @key people_family
 #==============================================================================
 
@@ -18,6 +18,11 @@
 внучка - granddaughter
 внук - grandson
 близнецы - twins
+
+#==============================================================================
+@name Marraige
+@key people_love
+#==============================================================================
 
 жена´ - wife
 муж - husband
@@ -43,7 +48,7 @@
 племянница - niece
 двоюродный брат - cousin (male)
 двоюродная сестра - cousin (female)
-зя´ть - son-in-law, brother-in-law
-те´сть - father-in-law (wife’s father)
-свекро´вь - mother-in-law (husband’s mother)
+зя´ть -- son-in-law, brother-in-law
+те´сть -- father-in-law (wife’s father)
+свекро´вь -- mother-in-law (husband’s mother)
 

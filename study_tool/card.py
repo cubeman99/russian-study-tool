@@ -1,4 +1,4 @@
-from enum import IntEnum
+from enum import Enum, IntEnum
 import os
 import time
 from study_tool.config import Config
@@ -6,10 +6,37 @@ from study_tool.config import Config
 class CardSide(IntEnum):
   Russian = 0
   English = 1
+  
+class CardAttributes(Enum):
+  Masculine = "m"
+  Femanine = "f"
+  Neuter = "n"
+  Singular = "sing"
+  Plural = "pl"
+  NoPural = "nopl"
+  FirstPerson = "1st"
+  SecondPerson = "2nd"
+  ThirdPerson = "3rd"
+  Perfective = "pf"
+  Imperfective = "impf"
+  Informal = "infl"
+  Formal = "frml"
+  Unidirectional = "uni"
+  Multidirectional = "multi"
+  Nominative =  "nom"
+  Accusative = "acc"
+  Genetive = "gen"
+  Dative = "dat"
+  Prepositional = "prep"
+  Instrumental = "instr"
+  Indeclinable = "indec"
+  Animate = "anim"
+  Inanimate = "inanim"
 
 class Card:
   def __init__(self, front="", back=""):
     self.text = [front, back]
+    self.attributes = [[], []]
     self.marked = False
     self.last_encounter_time = None
     self.proficiency_level = 0  # new/unseen
@@ -17,6 +44,13 @@ class Card:
 
     self.rep = None  # used by Scheduler
     self.age = 0
+
+  def get_display_text(self, side):
+    text = self.text[side]
+    attributes = self.attributes[side]
+    if len(attributes) > 0:
+      text += " (" + ", ".join(a.value + "." for a in attributes) + ")"
+    return text
 
   @property
   def english(self):
@@ -51,7 +85,6 @@ class Card:
     return dict(russian=self.text[CardSide.Russian],
                 english=self.text[CardSide.English],
                 marked=self.marked,
-                age=self.age,
                 proficiency_level=self.proficiency_level,
                 last_encounter_time=self.last_encounter_time,
                 history=history_str)
@@ -62,7 +95,6 @@ class Card:
     self.proficiency_level = state["proficiency_level"]
     self.marked = state["marked"]
     self.last_encounter_time = state["last_encounter_time"]
-    self.age = state["age"]
     history_str = state["history"]
     self.history = [c == "T" for c in history_str]
   

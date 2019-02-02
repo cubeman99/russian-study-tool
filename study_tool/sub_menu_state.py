@@ -40,6 +40,9 @@ class SubMenuState(State):
                      self.window_margin_top + self.window_margin_sides)
     if self.width is None:
       self.width = 400
+      self.width = max(self.width,
+                       self.app.graphics.measure_text(self.title, font=self.title_font)[0] +
+                       (self.window_margin_sides * 2))
       
     screen_width, screen_height = self.app.screen.get_size()
     screen_center_x = screen_width / 2

@@ -104,13 +104,13 @@ class StudyState(State):
     
     # Draw card text
     g.draw_text(screen_center_x, screen_center_y - 50,
-                text=self.card.text[self.shown_side],
+                text=self.card.get_display_text(self.shown_side),
                 font=self.card_font,
                 color=Config.card_front_text_color,
                 align=Align.Centered)
     if self.revealed:
       g.draw_text(screen_center_x, screen_center_y + 50,
-                  text=self.card.text[self.hidden_side],
+                  text=self.card.get_display_text(self.hidden_side),
                   font=self.card_font,
                   color=Config.card_back_text_color,
                   align=Align.Centered)
@@ -126,4 +126,4 @@ class StudyState(State):
     self.app.draw_completion_bar(g, self.margin_top / 2,
                                  screen_center_x - 80,
                                  screen_width - 32,
-                                 self.scheduler.cards + self.scheduler.new_cards)
+                                 [c for c in self.scheduler.get_all_cards()])

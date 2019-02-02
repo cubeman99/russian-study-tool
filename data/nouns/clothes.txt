@@ -7,9 +7,9 @@
 брюки - trousers
 носки - socks
 свитер - sweater
-футболка - t-shirt
-тенниска - t-shirt, polo-shirt
-майка - singlet, tank-top
+футболка -- t-shirt
+тенниска -- t-shirt, polo-shirt
+майка -- singlet, tank-top
 кофта - blouse
 джинсы - jeans
 юбка - skirt

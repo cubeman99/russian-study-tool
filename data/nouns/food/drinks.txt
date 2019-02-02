@@ -3,7 +3,7 @@
 
 напитки - drinks
 чай - tea
-кофе - coffee
+ко'фе @m - coffee
 сок - juice
 апельсиновый - orange juice
 яблочный - apple juice
@@ -15,9 +15,9 @@
 грейпфрутовый - gapefruit juice
 молочный коктейль - milkshake
 вода - water
-молоко - milk
+молоко' - milk
 кефир - kefir
-сливки - cream
+сли'вки - cream
 лимонад - lemonade
-кока-кола - coke
+кока-кола -- coke
 какао - hot chocolate

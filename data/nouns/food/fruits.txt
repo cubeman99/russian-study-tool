@@ -9,17 +9,17 @@
 грейпфрут (грейпфруты) - grapefruit
 киви (киви) - kiwi fruit
 мандарин (мандарины) - mandarine
-манго (-) - mango
+манго - mango
 банан (бананы) - banana
 ананас - pineapple
 персик (персики) - peach
 абрикос (абрикосы) - apricot
 слива (сливы) - plum
-клубника (-) - strawberry
-малина (-) - raspberry
+клубника - strawberry
+малина - raspberry
 лимон (лимоны) - lemon
-ежевика (-) - blackberry
-вишня, черешня (-) - cherry
+ежевика - blackberry
+вишня, черешня - cherry
 дыня - melon
 арбуз - watermelon
 смородина красная - red currant

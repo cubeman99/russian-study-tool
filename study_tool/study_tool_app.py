@@ -1,5 +1,6 @@
 import json
 import os
+os.environ["SDL_VIDEO_WINDOW_POS"] = "420,80"  # Set initial window position
 import pygame
 import time
 import shutil
@@ -16,6 +17,7 @@ from study_tool.menu_state import MenuState
 from study_tool.study_state import StudyState
 from study_tool.card_list_state import CardListState
 from study_tool.scheduler import ScheduleMode
+from study_tool.keyboard_state import KeyboardState
 
 DEAD_ZONE = 0.01
 
@@ -27,7 +29,7 @@ class StudyCardsApp(Application):
                                               level=cmg.logging.LogLevel.Info)
 
     self.title = "Russian"
-    Application.__init__(self, title=self.title, width=800, height=600)
+    Application.__init__(self, title=self.title, width=1100, height=900)
     
     pygame.joystick.init()
     self.joystick = pygame.joystick.Joystick(0)
@@ -53,6 +55,7 @@ class StudyCardsApp(Application):
     self.push_state(MenuState(self.root))
     #self.push_study_state(self.root.card_sets[1], CardSide.Russian)
     #self.push_card_list_state(self.root.card_sets[1])
+    #self.push_state(KeyboardState())
 
     self.input.bind(pygame.K_ESCAPE, pressed=self.quit)
 

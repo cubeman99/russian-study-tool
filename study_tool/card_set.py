@@ -1,5 +1,6 @@
 import os
 import random
+import re
 import time
 from study_tool.card import *
   
@@ -56,26 +57,22 @@ class CardSetPackage:
         yield card
 
   def serialize(self):
-    state = {"name": self.name,
-             "packages": [],
-             "card_sets": []}
-    for package in self.packages:
-      state["packages"].append(package.serialize())
-    for card_set in self.card_sets:
-      state["card_sets"].append(card_set.serialize())
+    state = {"card_sets": {}}
+    for card_set in self.all_card_sets():
+      if card_set.key in state["card_sets"]:
+        raise Exception("Duplicate card set key '{}'".format(card_set.key))
+      state["card_sets"][card_set.key] = card_set.serialize()
     return state
   
   def deserialize(self, state):
-    for package_state in state["packages"]:
-      for package in self.packages:
-        if package.name == package_state["name"]:
-          package.deserialize(package_state)
-          break
-    for card_set_state in state["card_sets"]:
-      for card_set in self.card_sets:
-        if card_set.key == card_set_state["key"]:
-          card_set.deserialize(card_set_state)
-          break
+    for card_set in self.all_card_sets():
+      if card_set.key in state["card_sets"]:
+        card_set.deserialize(state["card_sets"][card_set.key])
+
+def parse_card_text(text):
+  attributes = [CardAttributes(a) for a in re.findall(r"\@(\S+)", text)]
+  text = re.sub(r"\@\S+", "", text).strip()
+  return text, attributes
 
 def load_card_set_file(path):
   card_set = None
@@ -91,7 +88,9 @@ def load_card_set_file(path):
       raise KeyError(name)
 
   with open(path, "r", encoding="utf8") as f:
+    line_number = 0
     for line in f:
+      line_number += 1
       line = line.strip()
       if line.startswith("@"):
         command = line.split()[0][1:]
@@ -114,15 +113,26 @@ def load_card_set_file(path):
           raise KeyError(command)
       elif line.startswith("#"):
         pass  # ignore comments
+      elif len(line) == 0:
+        pass  # ignore whitespace
       else:
-        if "-" in line:
+        tokens = []
+        if "--" in line:
+          tokens = [t.strip() for t in line.split("--")]
+        elif "-" in line:
           tokens = [t.strip() for t in line.split("-")]
-          if len(tokens) == 2:
-            card = Card()
-            card.text[left_side] = tokens[0]
-            card.text[1 - left_side] = tokens[1]
-            card_set.cards.append(card)
-            card_set.card_count = len(card_set.cards)
+        if len(tokens) == 2:
+          card = Card()
+          text, attributes = parse_card_text(tokens[0])
+          card.text[left_side] = text
+          card.attributes[left_side] = attributes
+          text, attributes = parse_card_text(tokens[1])
+          card.text[1 - left_side] = text
+          card.attributes[1 - left_side] = attributes
+          card_set.cards.append(card)
+          card_set.card_count = len(card_set.cards)
+        else:
+          raise Exception("{}-{}: {}".format(path, line_number, line))
   return sorted(card_sets, key=lambda x: x.name)
 
 def load_card_package_directory(path, name):

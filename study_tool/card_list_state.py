@@ -88,10 +88,10 @@ class CardListState(State):
     center_y = rect.y + (rect.height / 2)
 
     g.draw_text(column_1_x, center_y,
-                text=card.russian, font=self.card_font,
+                text=card.get_display_text(CardSide.Russian), font=self.card_font,
                 color=text_color, align=Align.MiddleLeft)
     g.draw_text(column_2_x, center_y,
-                text=card.english, font=self.card_font,
+                text=card.get_display_text(CardSide.English), font=self.card_font,
                 color=text_color, align=Align.MiddleLeft)
 
   def draw(self, g):

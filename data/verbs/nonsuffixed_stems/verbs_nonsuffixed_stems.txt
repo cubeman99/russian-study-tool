@@ -1,0 +1,114 @@
+#==============================================================================
+@name Resonant Stems (в, й, м, н, р)
+@key verbs_nonsuffixed_stems_resonants
+#==============================================================================
+
+# (1) Stems in В
+жи´ть - to live
+плы´ть - to swim @uni
+слы´ть - to be, be reputed
+
+# (2) Stems in H
+вста´ть - to stand up
+де´ть - to put, do with
+наде´ть - to put on
+оде´ться - to get dressed
+разде´ться - to get undressed
+ста´ть - to become; to begin
+
+# (3) Stems in ОЙ
+откры´ть - to open
+закры´ть - to close
+мы´ть - to wash
+ны´ть - to ache
+ры´ть - to dig
+
+# (4) Stems in ИЙ
+би´ть - to beat
+ви´ть - to twist
+ли´ть - to pour
+пи´ть - to drink @impf
+ш´ить - to sew
+
+# Miscellaneous Stems in Й
+ду´ть - to blow
+гни´ть - to rot
+
+пе´ть - to sing
+бри´ть - to shave
+
+# (5) Stems in M or H
+взя´ть - to take
+жа´ть - to press, squeeze
+жа´ть - to reap
+мя´ть - to crumple
+нача´ть - to begin
+распя´ть - to crucify
+
+заня´ть - to borrow
+наня´ть - to hire
+поня´ть - to understand
+обня´ть - to embrace
+отня´ть - to take away
+подня´ть - to raise, lift
+сня´ть - to take off
+приня´ть - to accept
+
+# (6) Stems in P
+тере´ть - to rub, grate
+вы´тереть - to rub (dry)
+стере´ть - to erase
+запере´ть - to lock
+отпере´ть - to unlock
+умере´ть - to die
+
+
+#==============================================================================
+@name Obstruent Stems (б, п, д, т, з, с, г, к, х)
+@key verbs_nonsuffixed_stems_obstruent
+#==============================================================================
+
+# (7) Stems in З and С
+везти´ - to transport @uni
+ле´зть - to climb
+ползти´ - to crawl
+нести´ - to carry @uni
+спасти´ - to save, rescue
+трясти´ - to shake
+
+# (8) Stems in Д and T
+брести´ - to wander
+вести´ - to lead @uni
+кла´сть - to put
+кра´сть - to steal
+упа´сть - to fall
+
+се´сть - to sit down
+
+мести´ - to sweep
+плести´ - to weave
+приобрести´ - to acquire
+цвести´ - to bloom
+
+проче´сть - to read
+
+# (9) Stems in Б
+грести´ - to rake; to row
+скрести´ - to scrape
+
+# (10) Stems in Г and К
+бере´чь - to guard
+стри´чь - to cut (hair)
+мо´чь - to be able
+помо´чь - to help
+
+ле´чь - to lie down
+
+же´чь - to burn
+
+пе´чь - to bake
+отвле´чь - to distract
+привле´чь - to attract
+те´чь - to flow
+
+

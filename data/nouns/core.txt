@@ -1,37 +1,33 @@
 @name Core
 @key nouns_core
 
-клю´ч - key
 каранда´ш - pencil
-бума'га - paper
-портфе´ль - briefcase
 ру´чка - pen
-слова´рь - dictionary
-газе´та - newspaper
+бума'га - paper
 кни´га - book
 тетра´дь - notebook
-сло´во - word
 письмо´ - letter
-и´мя - name
+газе´та - newspaper
+слова´рь - dictionary
+сло´во - word
 журна´л - magazine
 фотогра´фия - photo
+портфе´ль - briefcase
+клю´ч - key
 
-оши'бка - mistake
-шу'тка - joke
 
 кусо'к (кусочки) - a piece (pieces)
-
+и´мя - name
 страна´ - country
-
 вре´мя - time
-пла´мя - flame
 
+
+пла´мя - flame
+оши'бка - mistake
+шу'тка - joke
 кра´й - edge
 ро´ль - role
-бельё - linen
 ружьё - gun
-зна´мя - banner
-бре´мя - burden
 се´мя - seed
 ло´жь - lie
 шаг - step
