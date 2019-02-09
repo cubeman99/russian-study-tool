@@ -1,66 +1,68 @@
+@type verb
+
 #==============================================================================
 @name Resonant Stems (в, й, м, н, р)
 @key verbs_nonsuffixed_stems_resonants
 #==============================================================================
 
 # (1) Stems in В
-жи´ть - to live
-плы´ть - to swim @uni
-слы´ть - to be, be reputed
+жи´ть - to live @impf
+плы´ть - to swim @impf @uni
+слы´ть - to be, be reputed @impf
 
 # (2) Stems in H
-вста´ть - to stand up
-де´ть - to put, do with
-наде´ть - to put on
-оде´ться - to get dressed
-разде´ться - to get undressed
-ста´ть - to become; to begin
+ста´ть - to become; to begin @pf
+вста´ть - to stand up @pf
+де´ть - to put, do with @pf
+наде´ть - to put on @pf
+оде´ться - to get dressed @pf
+разде´ться - to get undressed @pf
 
 # (3) Stems in ОЙ
-откры´ть - to open
-закры´ть - to close
-мы´ть - to wash
-ны´ть - to ache
-ры´ть - to dig
+откры´ть - to open @pf
+закры´ть - to close @pf
+мы´ть - to wash @impf
+ны´ть - to ache @impf
+ры´ть - to dig @impf
 
 # (4) Stems in ИЙ
-би´ть - to beat
-ви´ть - to twist
-ли´ть - to pour
+би´ть - to beat @impf
+ви´ть - to twist @impf
+ли´ть - to pour @impf
 пи´ть - to drink @impf
-ш´ить - to sew
+ш´ить - to sew @impf
 
 # Miscellaneous Stems in Й
-ду´ть - to blow
-гни´ть - to rot
+ду´ть - to blow @impf
+гни´ть - to rot @impf
 
-пе´ть - to sing
-бри´ть - to shave
+пе´ть - to sing @impf
+бри´ть - to shave @impf
 
 # (5) Stems in M or H
-взя´ть - to take
-жа´ть - to press, squeeze
-жа´ть - to reap
-мя´ть - to crumple
-нача´ть - to begin
-распя´ть - to crucify
+взя´ть - to take @pf
+жа´ть (жму´, жмёшь, … жму´т) - to press, squeeze @impf
+жа´ть (жну´, жнёшь, … жну´т) - to reap @impf
+мя´ть - to crumple @impf
+нача´ть - to begin @pf
+распя´ть - to crucify @pf
 
-заня´ть - to borrow
-наня´ть - to hire
-поня´ть - to understand
-обня´ть - to embrace
-отня´ть - to take away
-подня´ть - to raise, lift
-сня´ть - to take off
-приня´ть - to accept
+заня´ть - to borrow @pf
+наня´ть - to hire @pf
+поня´ть - to understand @pf
+обня´ть - to embrace, hug @pf
+отня´ть - to take away @pf
+подня´ть - to raise, lift @pf
+сня´ть - to take off @pf
+приня´ть - to accept @pf
 
 # (6) Stems in P
-тере´ть - to rub, grate
-вы´тереть - to rub (dry)
-стере´ть - to erase
-запере´ть - to lock
-отпере´ть - to unlock
-умере´ть - to die
+тере´ть - to rub, grate @impf
+вы´тереть - to rub (dry) @pf
+стере´ть - to erase @pf
+запере´ть - to lock @pf
+отпере´ть - to unlock @pf
+умере´ть - to die @pf
 
 
 #==============================================================================
@@ -112,3 +114,17 @@
 те´чь - to flow
 
 
+
+#==============================================================================
+@name Irregular Verbs
+@key verbs_irregular
+#==============================================================================
+
+# Suffixed
+хоте´ть - to want @impf
+бежа´ть - to run @uni# Nonsuffixedбы´ть - to be
+да´ть - to give @pf
+е´сть - to eat @impf
+е´хать - to go by vehicle @uni
+идти´ - to go on foot @uni
+расти´ - to grow

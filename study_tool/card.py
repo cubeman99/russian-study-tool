@@ -2,6 +2,7 @@ from enum import Enum, IntEnum
 import os
 import time
 from study_tool.config import Config
+from study_tool.russian.word import *
 
 class CardSide(IntEnum):
   Russian = 0
@@ -41,8 +42,11 @@ class Card:
     self.last_encounter_time = None
     self.proficiency_level = 0  # new/unseen
     self.history = []  # History of True or False markings
+    self.word_type = None
+    self.word = None
 
-    self.rep = None  # used by Scheduler
+    # used by Scheduler
+    self.rep = None
     self.age = 0
 
   def get_display_text(self, side):
@@ -82,16 +86,16 @@ class Card:
 
   def serialize(self):
     history_str = "".join("T" if h else "F" for h in self.history)
-    return dict(russian=self.text[CardSide.Russian],
-                english=self.text[CardSide.English],
+    return dict(russian=repr(self.text[CardSide.Russian]),
+                english=repr(self.text[CardSide.English]),
                 marked=self.marked,
                 proficiency_level=self.proficiency_level,
                 last_encounter_time=self.last_encounter_time,
                 history=history_str)
 
   def deserialize(self, state):
-    self.text[CardSide.Russian] = state["russian"]
-    self.text[CardSide.English] = state["english"]
+    self.text[CardSide.Russian] = AccentedText(state["russian"])
+    self.text[CardSide.English] = AccentedText(state["english"])
     self.proficiency_level = state["proficiency_level"]
     self.marked = state["marked"]
     self.last_encounter_time = state["last_encounter_time"]

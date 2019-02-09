@@ -1,0 +1,142 @@
+#==============================================================================
+@name Adjectives: Hard Consonant
+@key adjectives_hard_consonant
+#==============================================================================
+
+бы´стрый - fast
+ме´дленный - slow
+аккура´тный - neat
+неопря´тный - sloppy
+разгово´рчивый - talkative
+молчали´вый - taciturn, untalkative
+ве´жливый - polite
+гру´бый - rude
+весёлый - cheerful
+гру´стный - sad
+у´мный - smart
+глу´пый - stupid
+смешно´й - funny
+серьёзный - serious
+интере´сный - interesting
+ску´чный - boring
+до´брый - kind
+зло´бный - mean
+но´вый - new
+ста´рый - old
+молодо´й - young
+све´тлый - light
+тёмный - dark
+трудолюби´вый - industrious
+лени´вый - lazy
+краси´вый - pretty
+некраси´вый - ugly
+чи´стый - clean
+гря´зный - dirty
+бе´лый - white
+чёрный - black
+
+#==============================================================================
+@name Adjectives: Soft -н
+@key adjectives_soft_n
+#==============================================================================
+
+# Time
+весе´нний - spring
+зи´мний - winter
+ле´тний - summer
+осе´нний - autumn
+вчера´шний - yesterday’s
+за´втрашний - tomorrow’s
+сего´дняшний - today’s
+ра´нний - early
+по´здний - late
+вече´рний - evening
+у´тренний - morning
+ны´нешний -- present-day
+тепе´решний -- present-day (nowadays)
+тогда´шний - of that time
+неда´вний - recent
+да´вний -- old, long-standing
+дре´вний - ancient
+пре´жний - former
+
+# Place
+ве´рхний - upper, top
+ни´жний - lower, bottom
+пере´дний - front
+сре´дний - middle
+за´дний - back, rear
+зде´шний - local
+бли´жний - near
+да´льний - far
+вну´тренний - internal
+вне´шний - external
+дома´шний - home, domestic
+сосе´дний - neighboring
+
+# Miscellaneous
+и´скренний - sincere
+си´ний - blue
+после´дний - last
+ли´шний - spare, unnecessary
+посторо´нний - outside, extraneous
+
+
+
+#==============================================================================
+@name Adjectives: -г, -к, or -x
+@key adjectives_g_k_x
+#==============================================================================
+
+# Stem-stressed
+бли´зкий - close
+лёгкий - easy
+высо´кий - tall
+мя´гкий - soft
+вели´кий - great
+сла´дкий - sweet
+ги´бкий - flexible
+стро´гий - severe
+гро´мкий - loud
+ти´хий - quiet
+жа´ркий - hot
+то´нкий - thin
+далёкий - distant
+у´зкий - narrow
+до´лгий - long
+широ´кий - wide
+я´ркий - bright
+мале´нький - small
+
+# End-stressed
+дорого´й - dear, expensive
+плохо´й - bad
+городско´й - city
+глухо´й - deaf
+мужско´й - masculine, male
+сухо´й - dry
+
+
+#==============================================================================
+@name Adjectives: -ж, -ч, -ш, or -щ
+@key adjectives_zh_ch_sh_shch
+#==============================================================================
+
+хоро´ший - good
+большо´й - big
+о´бщий - common
+бу´дущий - future
+бы´вший - former
+ры´жий -- red-haired
+везу´чий - lucky
+рабо´чий - working
+горя´чий - hot
+све´жий - fresh
+мла´дший - younger
+ста´рший - older
+неуклю´жий - clumsy
+настоя´щий - real, genuine
+чужо´й - someone else’s
+
+
+

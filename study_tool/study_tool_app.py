@@ -18,6 +18,8 @@ from study_tool.study_state import StudyState
 from study_tool.card_list_state import CardListState
 from study_tool.scheduler import ScheduleMode
 from study_tool.keyboard_state import KeyboardState
+from study_tool.russian import conjugation
+from study_tool.word_database import WordDatabase
 
 DEAD_ZONE = 0.01
 
@@ -44,16 +46,25 @@ class StudyCardsApp(Application):
       Input(index=2, name="Middle", reversed=True, max=1, min=-1),
       Input(index=1, name="Left", reversed=True, max=1, min=-1),
       Input(index=3, name="Right", reversed=True, max=1, min=-1)]
-    
+
     # Load all card data
-    self.save_file_name = ".study_data.sav"
-    self.root = load_card_package_directory(path="data", name="words")
+    root_path = "data"
+    print("Loading card data from: " + root_path)
+    self.root = load_card_package_directory(path=root_path, name="words")
     
+    # Load word data
+    self.word_data_file_name = "word_data.json"
+    self.word_database = WordDatabase()
+    self.load_word_database()
+    
+    # Load study data
+    self.save_file_name = ".study_data.sav"
     self.load()
 
     self.states = []
     self.push_state(MenuState(self.root))
     #self.push_study_state(self.root.card_sets[1], CardSide.Russian)
+    self.push_study_state(self.root["verbs"]["nonsuffixed_stems"].card_sets[0], CardSide.Russian)
     #self.push_card_list_state(self.root.card_sets[1])
     #self.push_state(KeyboardState())
 
@@ -129,16 +140,33 @@ class StudyCardsApp(Application):
     state = self.root.serialize()
     temp_path = path + ".temp"
     with open(temp_path, "w", encoding="utf8") as f:
-      json.dump(state, f, indent=2, sort_keys=True)
+      json.dump(state, f, indent=2, sort_keys=True, ensure_ascii=False)
     shutil.move(temp_path, path)
 
   def load(self):
     path = os.path.join(self.root.path, self.save_file_name)
-    Config.logger.info("Loading study data from: " + path)
     if os.path.isfile(path):
+      Config.logger.info("Loading study data from: " + path)
       with open(path, "r", encoding="utf8") as f:
         state = json.load(f)
         self.root.deserialize(state)
+        
+  def save_word_database(self):
+    path = os.path.join(self.root.path, self.word_data_file_name)
+    Config.logger.debug("Saving word data to: " + path)
+    word_data = self.word_database.serialize()
+    temp_path = path + ".temp"
+    with open(temp_path, "w", encoding="utf8") as f:
+      json.dump(word_data, f, indent=2, sort_keys=True, ensure_ascii=False)
+    shutil.move(temp_path, path)
+
+  def load_word_database(self):
+    path = os.path.join(self.root.path, self.word_data_file_name)
+    if os.path.isfile(path):
+      Config.logger.info("Loading word data from: " + path)
+      with open(path, "r", encoding="utf8") as f:
+        word_data = json.load(f)
+        self.word_database.deserialize(word_data)
 
   def update(self, dt):
     if not self.joystick_ready:

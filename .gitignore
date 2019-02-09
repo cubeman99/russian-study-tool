@@ -1,3 +1,18 @@
+###############################################################################
+# Custom
+###############################################################################
+
+# Google Docs API credentials
+credentials.json
+token.pickle
+
+# Study tool save file
+*.sav
+
+###############################################################################
+# Defaults
+###############################################################################
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -108,6 +123,3 @@ venv.bak/
 *.pyproj
 *.pyproj.user
 *.sln
-
-# Study tool save file
-*.sav

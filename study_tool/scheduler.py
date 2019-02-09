@@ -23,9 +23,6 @@ def choose_weighted(cards, key=lambda card: 1):
   choices = []
   for index, card in enumerate(cards):
     odds = key(card)
-    #odds *= odds
-    #if card.marked:
-    #  odds *= odds
     total_odds += odds
     choices.append((total_odds, index))
   odds_index = random.randint(0, total_odds - 1)
@@ -45,7 +42,7 @@ def choose_weighted_by_age(values, rep):
     return choose([x for x in values if x.rep is None])
   else:
     return choose_weighted(values,
-                           key=lambda x: (rep - x.rep) * (rep - x.rep))
+                           key=lambda x: max(1, (rep - x.rep) * (rep - x.rep)))
 
 class ScheduleMode(IntEnum):
   Learning = 1
@@ -72,6 +69,7 @@ class ProficiencySet:
 
 class Scheduler:
   def __init__(self, cards, mode=ScheduleMode.Learning):
+    cards = list(cards)
     self.mode = mode
     self.proficiency_levels = Config.proficiency_levels
     self.proficiency_level_intervals = Config.proficiency_level_intervals
@@ -133,14 +131,14 @@ class Scheduler:
           if len(cards) > 0:
             available_sets[proficiency_set] = cards
 
-    if len(available_sets) > 0:
-      next_set = choose_weighted_by_age(list(available_sets.keys()), rep=self.rep)
-      card = choose_weighted_by_age(available_sets[next_set], rep=self.rep)
-      return card
+      if len(available_sets) > 0:
+        next_set = choose_weighted_by_age(list(available_sets.keys()), rep=self.rep)
+        card = choose_weighted_by_age(available_sets[next_set], rep=self.rep)
+        return card
     
-    card = self._get_new_card()
-    if card is not None:
-      return card
+      card = self._get_new_card()
+      if card is not None:
+        return card
 
     return None
 

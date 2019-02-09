@@ -1,0 +1,2209 @@
+{
+  "words": [
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "поехать"
+        ],
+        "imperative": {
+          "Plural": "поезжа'йте",
+          "Singular": "поезжа'й"
+        },
+        "infinitive": "е'хать",
+        "info": "This verb can also mean the following: travel, come, visit.",
+        "non_past": {
+          "Plural": {
+            "First": "е'дем",
+            "Second": "е'дете",
+            "Third": "е'дут"
+          },
+          "Singular": {
+            "First": "е'ду",
+            "Second": "е'дешь",
+            "Third": "е'дет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "е'хавший",
+            "Present": "е'дущий"
+          },
+          "Adverbial": {
+            "Past": "е'хав",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "е'хала",
+          "Masculine": "е'хал",
+          "Neuter": "е'хало",
+          "Plural": "е'хали"
+        },
+        "translation": "to go by car"
+      },
+      "examples": [],
+      "name": "е'хать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "захотеть"
+        ],
+        "imperative": {
+          "Plural": "хоти'те",
+          "Singular": "хоти'"
+        },
+        "infinitive": "хоте'ть",
+        "info": "This verb can also mean the following: desire.",
+        "non_past": {
+          "Plural": {
+            "First": "хоти'м",
+            "Second": "хоти'те",
+            "Third": "хотя'т"
+          },
+          "Singular": {
+            "First": "хочу'",
+            "Second": "хо'чешь",
+            "Third": "хо'чет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "хоте'вший",
+            "Present": "хотя'щий"
+          },
+          "Adverbial": {
+            "Past": "хоте'в",
+            "Present": "хотя'"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "хоте'ла",
+          "Masculine": "хоте'л",
+          "Neuter": "хоте'ло",
+          "Plural": "хоте'ли"
+        },
+        "translation": "to want"
+      },
+      "examples": [],
+      "name": "хоте'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "пойти"
+        ],
+        "imperative": {
+          "Plural": "иди'те",
+          "Singular": "иди'"
+        },
+        "infinitive": "идти'",
+        "info": "This verb can also mean the following: function, suit, become, work, fall, walk.",
+        "non_past": {
+          "Plural": {
+            "First": "идём",
+            "Second": "идёте",
+            "Third": "иду'т"
+          },
+          "Singular": {
+            "First": "иду'",
+            "Second": "идёшь",
+            "Third": "идёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "ше'дший",
+            "Present": "иду'щий"
+          },
+          "Adverbial": {
+            "Past": "ше'дши",
+            "Present": "идя'"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "шла'",
+          "Masculine": "шёл",
+          "Neuter": "шло'",
+          "Plural": "шли'"
+        },
+        "translation": "to go"
+      },
+      "examples": [],
+      "name": "идти'",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "побежать"
+        ],
+        "imperative": {
+          "Plural": "беги'те",
+          "Singular": "беги'"
+        },
+        "infinitive": "бежа'ть",
+        "info": "This verb can also mean the following: be avoiding, avoid, be shunning, flee, be fleeing, shun.",
+        "non_past": {
+          "Plural": {
+            "First": "бежи'м",
+            "Second": "бежи'те",
+            "Third": "бегу'т"
+          },
+          "Singular": {
+            "First": "бегу'",
+            "Second": "бежи'шь",
+            "Third": "бежи'т"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "бежа'вший",
+            "Present": "бегу'щий"
+          },
+          "Adverbial": {
+            "Past": "бежа'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "бежа'ла",
+          "Masculine": "бежа'л",
+          "Neuter": "бежа'ло",
+          "Plural": "бежа'ли"
+        },
+        "translation": "to run"
+      },
+      "examples": [],
+      "name": "бежа'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "бу'дьте",
+          "Singular": "бу'дь"
+        },
+        "infinitive": "бы'ть",
+        "info": "All present tense forms are archaic, except for \"есть\" - but it is also often omitted in modern language..",
+        "non_past": {
+          "Plural": {
+            "First": "есмы'",
+            "Second": "е'сте",
+            "Third": "суть"
+          },
+          "Singular": {
+            "First": "есмь",
+            "Second": "еси'",
+            "Third": "есть"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "бы'вший",
+            "Present": "су'щий"
+          },
+          "Adverbial": {
+            "Past": "бы'в",
+            "Present": "бу'дучи"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "была'",
+          "Masculine": "бы'л",
+          "Neuter": "бы'ло",
+          "Plural": "бы'ли"
+        },
+        "translation": "to be"
+      },
+      "examples": [],
+      "name": "бы'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "съесть",
+          "поесть"
+        ],
+        "imperative": {
+          "Plural": "е'шьте",
+          "Singular": "е'шь"
+        },
+        "infinitive": "е'сть",
+        "info": "This verb can also mean the following: have, do.",
+        "non_past": {
+          "Plural": {
+            "First": "еди'м",
+            "Second": "еди'те",
+            "Third": "едя'т"
+          },
+          "Singular": {
+            "First": "е'м",
+            "Second": "е'шь",
+            "Third": "е'ст"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "е'вший",
+            "Present": "едя'щий"
+          },
+          "Adverbial": {
+            "Past": "е'в",
+            "Present": "едя'"
+          },
+          "Passive": {
+            "Past": "е'денный",
+            "Present": "едо'мый"
+          }
+        },
+        "past": {
+          "Femanine": "е'ла",
+          "Masculine": "е'л",
+          "Neuter": "е'ло",
+          "Plural": "е'ли"
+        },
+        "translation": "to eat"
+      },
+      "examples": [],
+      "name": "е'сть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "давать"
+        ],
+        "imperative": {
+          "Plural": "да'йте",
+          "Singular": "да'й"
+        },
+        "infinitive": "да'ть",
+        "info": "This verb can also mean the following: hit, let, allow, consent to sex, create, clip, consent, organize, strike.",
+        "non_past": {
+          "Plural": {
+            "First": "дади'м",
+            "Second": "дади'те",
+            "Third": "даду'т"
+          },
+          "Singular": {
+            "First": "да'м",
+            "Second": "да'шь",
+            "Third": "да'ст"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "да'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "да'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "да'нный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "дала'",
+          "Masculine": "да'л",
+          "Neuter": "да'ло",
+          "Plural": "да'ли"
+        },
+        "translation": "to give"
+      },
+      "examples": [],
+      "name": "да'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "вырасти"
+        ],
+        "imperative": {
+          "Plural": "расти'те",
+          "Singular": "расти'"
+        },
+        "infinitive": "расти'",
+        "info": "This verb can also mean the following: increase, do.",
+        "non_past": {
+          "Plural": {
+            "First": "растём",
+            "Second": "растёте",
+            "Third": "расту'т"
+          },
+          "Singular": {
+            "First": "расту'",
+            "Second": "растёшь",
+            "Third": "растёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "ро'сший",
+            "Present": "расту'щий"
+          },
+          "Adverbial": {
+            "Past": "ро'сши",
+            "Present": "растя'"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "росла'",
+          "Masculine": "ро'с",
+          "Neuter": "росло'",
+          "Plural": "росли'"
+        },
+        "translation": "to grow"
+      },
+      "examples": [],
+      "name": "расти'",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "отнимать",
+          "отымать"
+        ],
+        "imperative": {
+          "Plural": "отними'те",
+          "Singular": "отними'"
+        },
+        "infinitive": "отня'ть",
+        "info": "This verb can also mean the following: amputate, withdraw, subtract, remove, rob, abstract, bereave, deduct.",
+        "non_past": {
+          "Plural": {
+            "First": "отни'мем",
+            "Second": "отни'мете",
+            "Third": "отни'мут"
+          },
+          "Singular": {
+            "First": "отниму'",
+            "Second": "отни'мешь",
+            "Third": "отни'мет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "отня'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "отня'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "о'тнятый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "отняла'",
+          "Masculine": "о'тнял",
+          "Neuter": "о'тняло",
+          "Plural": "о'тняли"
+        },
+        "translation": "to take"
+      },
+      "examples": [],
+      "name": "отня'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "понимать"
+        ],
+        "imperative": {
+          "Plural": "пойми'те",
+          "Singular": "пойми'"
+        },
+        "infinitive": "поня'ть",
+        "info": "This verb can also mean the following: realize, appreciate, see, comprehend.",
+        "non_past": {
+          "Plural": {
+            "First": "поймём",
+            "Second": "поймёте",
+            "Third": "пойму'т"
+          },
+          "Singular": {
+            "First": "пойму'",
+            "Second": "поймёшь",
+            "Third": "поймёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "поня'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "поня'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "по'нятый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "поняла'",
+          "Masculine": "по'нял",
+          "Neuter": "по'няло",
+          "Plural": "по'няли"
+        },
+        "translation": "to understand"
+      },
+      "examples": [],
+      "name": "поня'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "снимать"
+        ],
+        "imperative": {
+          "Plural": "сними'те",
+          "Singular": "сними'"
+        },
+        "infinitive": "сня'ть",
+        "info": "This verb can also mean the following: take away, film, take down, rent, make, photograph.",
+        "non_past": {
+          "Plural": {
+            "First": "сни'мем",
+            "Second": "сни'мете",
+            "Third": "сни'мут"
+          },
+          "Singular": {
+            "First": "сниму'",
+            "Second": "сни'мешь",
+            "Third": "сни'мет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "сня'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "сня'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "сня'тый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "сняла'",
+          "Masculine": "сня'л",
+          "Neuter": "сня'ло",
+          "Plural": "сня'ли"
+        },
+        "translation": "to take off"
+      },
+      "examples": [],
+      "name": "сня'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "надевать"
+        ],
+        "imperative": {
+          "Plural": "наде'ньте",
+          "Singular": "наде'нь"
+        },
+        "infinitive": "наде'ть",
+        "info": "This verb can also mean the following: get on.",
+        "non_past": {
+          "Plural": {
+            "First": "наде'нем",
+            "Second": "наде'нете",
+            "Third": "наде'нут"
+          },
+          "Singular": {
+            "First": "наде'ну",
+            "Second": "наде'нешь",
+            "Third": "наде'нет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "наде'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "наде'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "наде'тый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "наде'ла",
+          "Masculine": "наде'л",
+          "Neuter": "наде'ло",
+          "Plural": "наде'ли"
+        },
+        "translation": "to put on"
+      },
+      "examples": [],
+      "name": "наде'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "сгнить"
+        ],
+        "imperative": {
+          "Plural": "—",
+          "Singular": "—"
+        },
+        "infinitive": "гни'ть",
+        "info": "This verb can also mean the following: water to stagnate, decay, stagnate, decompose, putrefy, become, go bad.",
+        "non_past": {
+          "Plural": {
+            "First": "гниём",
+            "Second": "гниёте",
+            "Third": "гнию'т"
+          },
+          "Singular": {
+            "First": "гнию'",
+            "Second": "гниёшь",
+            "Third": "гниёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "гни'вший",
+            "Present": "гнию'щий"
+          },
+          "Adverbial": {
+            "Past": "гни'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "гнила'",
+          "Masculine": "гни'л",
+          "Neuter": "гни'ло",
+          "Plural": "гни'ли"
+        },
+        "translation": "to rot"
+      },
+      "examples": [],
+      "name": "гни'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "брать"
+        ],
+        "imperative": {
+          "Plural": "возьми'те",
+          "Singular": "возьми'"
+        },
+        "infinitive": "взя'ть",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "возьмём",
+            "Second": "возьмёте",
+            "Third": "возьму'т"
+          },
+          "Singular": {
+            "First": "возьму'",
+            "Second": "возьмёшь",
+            "Third": "возьмёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "взя'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "взя'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "взя'тый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "взяла'",
+          "Masculine": "взя'л",
+          "Neuter": "взя'ло",
+          "Plural": "взя'ли"
+        },
+        "translation": "to take"
+      },
+      "examples": [],
+      "name": "взя'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "начинать"
+        ],
+        "imperative": {
+          "Plural": "начни'те",
+          "Singular": "начни'"
+        },
+        "infinitive": "нача'ть",
+        "info": "This verb can also mean the following: commence, start.",
+        "non_past": {
+          "Plural": {
+            "First": "начнём",
+            "Second": "начнёте",
+            "Third": "начну'т"
+          },
+          "Singular": {
+            "First": "начну'",
+            "Second": "начнёшь",
+            "Third": "начнёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "нача'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "нача'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "на'чатый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "начала'",
+          "Masculine": "на'чал",
+          "Neuter": "на'чало",
+          "Plural": "на'чали"
+        },
+        "translation": "to begin"
+      },
+      "examples": [],
+      "name": "нача'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "обнимать"
+        ],
+        "imperative": {
+          "Plural": "обними'те",
+          "Singular": "обними'"
+        },
+        "infinitive": "обня'ть",
+        "info": "This verb can also mean the following: engulf, embrace, envelop.",
+        "non_past": {
+          "Plural": {
+            "First": "обни'мем",
+            "Second": "обни'мете",
+            "Third": "обни'мут"
+          },
+          "Singular": {
+            "First": "обниму'",
+            "Second": "обни'мешь",
+            "Third": "обни'мет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "обня'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "обня'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "о'бнятый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "обняла'",
+          "Masculine": "о'бнял",
+          "Neuter": "о'бняло",
+          "Plural": "о'бняли"
+        },
+        "translation": "to hug"
+      },
+      "examples": [],
+      "name": "обня'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "вытирать"
+        ],
+        "imperative": {
+          "Plural": "вы'трите",
+          "Singular": "вы'три"
+        },
+        "infinitive": "вы'тереть",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "вы'трем",
+            "Second": "вы'трете",
+            "Third": "вы'трут"
+          },
+          "Singular": {
+            "First": "вы'тру",
+            "Second": "вы'трешь",
+            "Third": "вы'трет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "вы'терший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "вы'терев",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "вы'тертый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "вы'терла",
+          "Masculine": "вы'тер",
+          "Neuter": "вы'терло",
+          "Plural": "вы'терли"
+        },
+        "translation": "to wipe"
+      },
+      "examples": [],
+      "name": "вы'тереть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "закрывать"
+        ],
+        "imperative": {
+          "Plural": "закро'йте",
+          "Singular": "закро'й"
+        },
+        "infinitive": "закры'ть",
+        "info": "This verb can also mean the following: hide, close, shut.",
+        "non_past": {
+          "Plural": {
+            "First": "закро'ем",
+            "Second": "закро'ете",
+            "Third": "закро'ют"
+          },
+          "Singular": {
+            "First": "закро'ю",
+            "Second": "закро'ешь",
+            "Third": "закро'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "закры'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "закры'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "закры'тый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "закры'ла",
+          "Masculine": "закры'л",
+          "Neuter": "закры'ло",
+          "Plural": "закры'ли"
+        },
+        "translation": "to cover"
+      },
+      "examples": [],
+      "name": "закры'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "замолкать"
+        ],
+        "imperative": {
+          "Plural": "замо'лкните",
+          "Singular": "замо'лкни"
+        },
+        "infinitive": "замо'лкнуть",
+        "info": "This verb can also mean the following: stop cease.",
+        "non_past": {
+          "Plural": {
+            "First": "замо'лкнем",
+            "Second": "замо'лкнете",
+            "Third": "замо'лкнут"
+          },
+          "Singular": {
+            "First": "замо'лкну",
+            "Second": "замо'лкнешь",
+            "Third": "замо'лкнет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "замо'лкший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "замо'лкнув",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "замо'лкла",
+          "Masculine": "замо'лк",
+          "Neuter": "замо'лкло",
+          "Plural": "замо'лкли"
+        },
+        "translation": "to become fall silent"
+      },
+      "examples": [],
+      "name": "замо'лкнуть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "высохнуть",
+          "засохнуть"
+        ],
+        "imperative": {
+          "Plural": "со'хните",
+          "Singular": "со'хни"
+        },
+        "infinitive": "со'хнуть",
+        "info": "This verb can also mean the following: have a crush on, fade, wither, have.",
+        "non_past": {
+          "Plural": {
+            "First": "со'хнем",
+            "Second": "со'хнете",
+            "Third": "со'хнут"
+          },
+          "Singular": {
+            "First": "со'хну",
+            "Second": "со'хнешь",
+            "Third": "со'хнет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "со'хший",
+            "Present": "со'хнущий"
+          },
+          "Adverbial": {
+            "Past": "со'хнув",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "со'хла",
+          "Masculine": "со'х",
+          "Neuter": "со'хло",
+          "Plural": "со'хли"
+        },
+        "translation": "to dry"
+      },
+      "examples": [],
+      "name": "со'хнуть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "отдыхать"
+        ],
+        "imperative": {
+          "Plural": "отдохни'те",
+          "Singular": "отдохни'"
+        },
+        "infinitive": "отдохну'ть",
+        "info": "This verb can also mean the following: relax, be, take a vacation, be on holiday.",
+        "non_past": {
+          "Plural": {
+            "First": "отдохнём",
+            "Second": "отдохнёте",
+            "Third": "отдохну'т"
+          },
+          "Singular": {
+            "First": "отдохну'",
+            "Second": "отдохнёшь",
+            "Third": "отдохнёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "отдохну'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "отдохну'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "отдохну'ла",
+          "Masculine": "отдохну'л",
+          "Neuter": "отдохну'ло",
+          "Plural": "отдохну'ли"
+        },
+        "translation": "to relax"
+      },
+      "examples": [],
+      "name": "отдохну'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "постоять"
+        ],
+        "imperative": {
+          "Plural": "сто'йте",
+          "Singular": "сто'й"
+        },
+        "infinitive": "стоя'ть",
+        "info": "This verb can also mean the following: be situated, stop.",
+        "non_past": {
+          "Plural": {
+            "First": "стои'м",
+            "Second": "стои'те",
+            "Third": "стоя'т"
+          },
+          "Singular": {
+            "First": "стою'",
+            "Second": "стои'шь",
+            "Third": "стои'т"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "стоя'вший",
+            "Present": "стоя'щий"
+          },
+          "Adverbial": {
+            "Past": "стоя'в",
+            "Present": "сто'я"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "стоя'ла",
+          "Masculine": "стоя'л",
+          "Neuter": "стоя'ло",
+          "Plural": "стоя'ли"
+        },
+        "translation": "to stand"
+      },
+      "examples": [],
+      "name": "стоя'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "кончить"
+        ],
+        "imperative": {
+          "Plural": "конча'йте",
+          "Singular": "конча'й"
+        },
+        "infinitive": "конча'ть",
+        "info": "This verb can also mean the following: cum, end, graduate from, ejaculate, graduate.",
+        "non_past": {
+          "Plural": {
+            "First": "конча'ем",
+            "Second": "конча'ете",
+            "Third": "конча'ют"
+          },
+          "Singular": {
+            "First": "конча'ю",
+            "Second": "конча'ешь",
+            "Third": "конча'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "конча'вший",
+            "Present": "конча'ющий"
+          },
+          "Adverbial": {
+            "Past": "конча'в",
+            "Present": "конча'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "конча'емый"
+          }
+        },
+        "past": {
+          "Femanine": "конча'ла",
+          "Masculine": "конча'л",
+          "Neuter": "конча'ло",
+          "Plural": "конча'ли"
+        },
+        "translation": "to finish"
+      },
+      "examples": [],
+      "name": "конча'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "сделать"
+        ],
+        "imperative": {
+          "Plural": "де'лайте",
+          "Singular": "де'лай"
+        },
+        "infinitive": "де'лать",
+        "info": "This verb can also mean the following: do.",
+        "non_past": {
+          "Plural": {
+            "First": "де'лаем",
+            "Second": "де'лаете",
+            "Third": "де'лают"
+          },
+          "Singular": {
+            "First": "де'лаю",
+            "Second": "де'лаешь",
+            "Third": "де'лает"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "де'лавший",
+            "Present": "де'лающий"
+          },
+          "Adverbial": {
+            "Past": "де'лав",
+            "Present": "де'лая"
+          },
+          "Passive": {
+            "Past": "де'ланный",
+            "Present": "де'лаемый"
+          }
+        },
+        "past": {
+          "Femanine": "де'лала",
+          "Masculine": "де'лал",
+          "Neuter": "де'лало",
+          "Plural": "де'лали"
+        },
+        "translation": "to do"
+      },
+      "examples": [],
+      "name": "де'лать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "погулять"
+        ],
+        "imperative": {
+          "Plural": "гуля'йте",
+          "Singular": "гуля'й"
+        },
+        "infinitive": "гуля'ть",
+        "info": "This verb can also mean the following: make merry, stroll, carouse, go, have a free time, go with, enjoy, have a timeoff, go out with someone, have, make.",
+        "non_past": {
+          "Plural": {
+            "First": "гуля'ем",
+            "Second": "гуля'ете",
+            "Third": "гуля'ют"
+          },
+          "Singular": {
+            "First": "гуля'ю",
+            "Second": "гуля'ешь",
+            "Third": "гуля'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "гуля'вший",
+            "Present": "гуля'ющий"
+          },
+          "Adverbial": {
+            "Past": "гуля'в",
+            "Present": "гуля'я"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "гуля'ла",
+          "Masculine": "гуля'л",
+          "Neuter": "гуля'ло",
+          "Plural": "гуля'ли"
+        },
+        "translation": "to walk"
+      },
+      "examples": [],
+      "name": "гуля'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "опоздать"
+        ],
+        "imperative": {
+          "Plural": "опа'здывайте",
+          "Singular": "опа'здывай"
+        },
+        "infinitive": "опа'здывать",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "опа'здываем",
+            "Second": "опа'здываете",
+            "Third": "опа'здывают"
+          },
+          "Singular": {
+            "First": "опа'здываю",
+            "Second": "опа'здываешь",
+            "Third": "опа'здывает"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "опа'здывавший",
+            "Present": "опа'здывающий"
+          },
+          "Adverbial": {
+            "Past": "опа'здывав",
+            "Present": "опа'здывая"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "опа'здывала",
+          "Masculine": "опа'здывал",
+          "Neuter": "опа'здывало",
+          "Plural": "опа'здывали"
+        },
+        "translation": "to be late"
+      },
+      "examples": [],
+      "name": "опа'здывать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "послать"
+        ],
+        "imperative": {
+          "Plural": "посыла'йте",
+          "Singular": "посыла'й"
+        },
+        "infinitive": "посыла'ть",
+        "info": "This verb can also mean the following: dispatch, swear.",
+        "non_past": {
+          "Plural": {
+            "First": "посыла'ем",
+            "Second": "посыла'ете",
+            "Third": "посыла'ют"
+          },
+          "Singular": {
+            "First": "посыла'ю",
+            "Second": "посыла'ешь",
+            "Third": "посыла'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "посыла'вший",
+            "Present": "посыла'ющий"
+          },
+          "Adverbial": {
+            "Past": "посыла'в",
+            "Present": "посыла'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "посыла'емый"
+          }
+        },
+        "past": {
+          "Femanine": "посыла'ла",
+          "Masculine": "посыла'л",
+          "Neuter": "посыла'ло",
+          "Plural": "посыла'ли"
+        },
+        "translation": "to send"
+      },
+      "examples": [],
+      "name": "посыла'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "решить"
+        ],
+        "imperative": {
+          "Plural": "реша'йте",
+          "Singular": "реша'й"
+        },
+        "infinitive": "реша'ть",
+        "info": "This verb can also mean the following: decide, make up mind, settle, determine.",
+        "non_past": {
+          "Plural": {
+            "First": "реша'ем",
+            "Second": "реша'ете",
+            "Third": "реша'ют"
+          },
+          "Singular": {
+            "First": "реша'ю",
+            "Second": "реша'ешь",
+            "Third": "реша'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "реша'вший",
+            "Present": "реша'ющий"
+          },
+          "Adverbial": {
+            "Past": "реша'в",
+            "Present": "реша'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "реша'емый"
+          }
+        },
+        "past": {
+          "Femanine": "реша'ла",
+          "Masculine": "реша'л",
+          "Neuter": "реша'ло",
+          "Plural": "реша'ли"
+        },
+        "translation": "to solve"
+      },
+      "examples": [],
+      "name": "реша'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "помочь"
+        ],
+        "imperative": {
+          "Plural": "помога'йте",
+          "Singular": "помога'й"
+        },
+        "infinitive": "помога'ть",
+        "info": "This verb can also mean the following: aid, avail, assist.",
+        "non_past": {
+          "Plural": {
+            "First": "помога'ем",
+            "Second": "помога'ете",
+            "Third": "помога'ют"
+          },
+          "Singular": {
+            "First": "помога'ю",
+            "Second": "помога'ешь",
+            "Third": "помога'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "помога'вший",
+            "Present": "помога'ющий"
+          },
+          "Adverbial": {
+            "Past": "помога'в",
+            "Present": "помога'я"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "помога'ла",
+          "Masculine": "помога'л",
+          "Neuter": "помога'ло",
+          "Plural": "помога'ли"
+        },
+        "translation": "to help"
+      },
+      "examples": [],
+      "name": "помога'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "спросить"
+        ],
+        "imperative": {
+          "Plural": "спра'шивайте",
+          "Singular": "спра'шивай"
+        },
+        "infinitive": "спра'шивать",
+        "info": "This verb can also mean the following: demand, inquire.",
+        "non_past": {
+          "Plural": {
+            "First": "спра'шиваем",
+            "Second": "спра'шиваете",
+            "Third": "спра'шивают"
+          },
+          "Singular": {
+            "First": "спра'шиваю",
+            "Second": "спра'шиваешь",
+            "Third": "спра'шивает"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "спра'шивавший",
+            "Present": "спра'шивающий"
+          },
+          "Adverbial": {
+            "Past": "спра'шивав",
+            "Present": "спра'шивая"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "спра'шиваемый"
+          }
+        },
+        "past": {
+          "Femanine": "спра'шивала",
+          "Masculine": "спра'шивал",
+          "Neuter": "спра'шивало",
+          "Plural": "спра'шивали"
+        },
+        "translation": "to ask"
+      },
+      "examples": [],
+      "name": "спра'шивать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "послушать"
+        ],
+        "imperative": {
+          "Plural": "слу'шайте",
+          "Singular": "слу'шай"
+        },
+        "infinitive": "слу'шать",
+        "info": "This verb can also mean the following: attend, auscultate.",
+        "non_past": {
+          "Plural": {
+            "First": "слу'шаем",
+            "Second": "слу'шаете",
+            "Third": "слу'шают"
+          },
+          "Singular": {
+            "First": "слу'шаю",
+            "Second": "слу'шаешь",
+            "Third": "слу'шает"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "слу'шавший",
+            "Present": "слу'шающий"
+          },
+          "Adverbial": {
+            "Past": "слу'шав",
+            "Present": "слу'шая"
+          },
+          "Passive": {
+            "Past": "слу'шанный",
+            "Present": "слу'шаемый"
+          }
+        },
+        "past": {
+          "Femanine": "слу'шала",
+          "Masculine": "слу'шал",
+          "Neuter": "слу'шало",
+          "Plural": "слу'шали"
+        },
+        "translation": "to listen"
+      },
+      "examples": [],
+      "name": "слу'шать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "поужинать"
+        ],
+        "imperative": {
+          "Plural": "у'жинайте",
+          "Singular": "у'жинай"
+        },
+        "infinitive": "у'жинать",
+        "info": "This verb can also mean the following: have supper, have dinner.",
+        "non_past": {
+          "Plural": {
+            "First": "у'жинаем",
+            "Second": "у'жинаете",
+            "Third": "у'жинают"
+          },
+          "Singular": {
+            "First": "у'жинаю",
+            "Second": "у'жинаешь",
+            "Third": "у'жинает"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "у'жинавший",
+            "Present": "у'жинающий"
+          },
+          "Adverbial": {
+            "Past": "у'жинав",
+            "Present": "у'жиная"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "у'жинала",
+          "Masculine": "у'жинал",
+          "Neuter": "у'жинало",
+          "Plural": "у'жинали"
+        },
+        "translation": "to dine"
+      },
+      "examples": [],
+      "name": "у'жинать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "выступить"
+        ],
+        "imperative": {
+          "Plural": "выступа'йте",
+          "Singular": "выступа'й"
+        },
+        "infinitive": "выступа'ть",
+        "info": "This verb can also mean the following: set, stand out, march off, protrude, step forward, appear, step forth, strut, come out, jut, set out, step, jut out.",
+        "non_past": {
+          "Plural": {
+            "First": "выступа'ем",
+            "Second": "выступа'ете",
+            "Third": "выступа'ют"
+          },
+          "Singular": {
+            "First": "выступа'ю",
+            "Second": "выступа'ешь",
+            "Third": "выступа'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "выступа'вший",
+            "Present": "выступа'ющий"
+          },
+          "Adverbial": {
+            "Past": "выступа'в",
+            "Present": "выступа'я"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "выступа'ла",
+          "Masculine": "выступа'л",
+          "Neuter": "выступа'ло",
+          "Plural": "выступа'ли"
+        },
+        "translation": "to project"
+      },
+      "examples": [],
+      "name": "выступа'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "мечта'йте",
+          "Singular": "мечта'й"
+        },
+        "infinitive": "мечта'ть",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "мечта'ем",
+            "Second": "мечта'ете",
+            "Third": "мечта'ют"
+          },
+          "Singular": {
+            "First": "мечта'ю",
+            "Second": "мечта'ешь",
+            "Third": "мечта'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "мечта'вший",
+            "Present": "мечта'ющий"
+          },
+          "Adverbial": {
+            "Past": "мечта'в",
+            "Present": "мечта'я"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "мечта'ла",
+          "Masculine": "мечта'л",
+          "Neuter": "мечта'ло",
+          "Plural": "мечта'ли"
+        },
+        "translation": "to dream"
+      },
+      "examples": [],
+      "name": "мечта'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "вставать"
+        ],
+        "imperative": {
+          "Plural": "вста'ньте",
+          "Singular": "вста'нь"
+        },
+        "infinitive": "вста'ть",
+        "info": "This verb can also mean the following: rise, get up, come up, arise.",
+        "non_past": {
+          "Plural": {
+            "First": "вста'нем",
+            "Second": "вста'нете",
+            "Third": "вста'нут"
+          },
+          "Singular": {
+            "First": "вста'ну",
+            "Second": "вста'нешь",
+            "Third": "вста'нет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "вста'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "вста'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "вста'ла",
+          "Masculine": "вста'л",
+          "Neuter": "вста'ло",
+          "Plural": "вста'ли"
+        },
+        "translation": "to stand up"
+      },
+      "examples": [],
+      "name": "вста'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "спеть",
+          "пропеть"
+        ],
+        "imperative": {
+          "Plural": "по'йте",
+          "Singular": "по'й"
+        },
+        "infinitive": "пе'ть",
+        "info": "This verb can also mean the following: crow.",
+        "non_past": {
+          "Plural": {
+            "First": "поём",
+            "Second": "поёте",
+            "Third": "пою'т"
+          },
+          "Singular": {
+            "First": "пою'",
+            "Second": "поёшь",
+            "Third": "поёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "пе'вший",
+            "Present": "пою'щий"
+          },
+          "Adverbial": {
+            "Past": "пе'в",
+            "Present": "поя'"
+          },
+          "Passive": {
+            "Past": "пе'тый",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "пе'ла",
+          "Masculine": "пе'л",
+          "Neuter": "пе'ло",
+          "Plural": "пе'ли"
+        },
+        "translation": "to sing"
+      },
+      "examples": [],
+      "name": "пе'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "умирать"
+        ],
+        "imperative": {
+          "Plural": "умри'те",
+          "Singular": "умри'"
+        },
+        "infinitive": "умере'ть",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "умрём",
+            "Second": "умрёте",
+            "Third": "умру'т"
+          },
+          "Singular": {
+            "First": "умру'",
+            "Second": "умрёшь",
+            "Third": "умрёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "уме'рший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "умере'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "умерла'",
+          "Masculine": "у'мер",
+          "Neuter": "у'мерло",
+          "Plural": "у'мерли"
+        },
+        "translation": "to die"
+      },
+      "examples": [],
+      "name": "умере'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "стирать"
+        ],
+        "imperative": {
+          "Plural": "сотри'те",
+          "Singular": "сотри'"
+        },
+        "infinitive": "стере'ть",
+        "info": "This verb can also mean the following: erase, rub raw, efface, rub.",
+        "non_past": {
+          "Plural": {
+            "First": "сотрём",
+            "Second": "сотрёте",
+            "Third": "сотру'т"
+          },
+          "Singular": {
+            "First": "сотру'",
+            "Second": "сотрёшь",
+            "Third": "сотрёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "стёрший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "стере'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "стёртый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "стёрла",
+          "Masculine": "стёр",
+          "Neuter": "стёрло",
+          "Plural": "стёрли"
+        },
+        "translation": "to wipe off"
+      },
+      "examples": [],
+      "name": "стере'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "становиться"
+        ],
+        "imperative": {
+          "Plural": "ста'ньте",
+          "Singular": "ста'нь"
+        },
+        "infinitive": "ста'ть",
+        "info": "This verb can also mean the following: take, come to pass, take to, be not going to, pass away, get, become, grow, be, pass, come.",
+        "non_past": {
+          "Plural": {
+            "First": "ста'нем",
+            "Second": "ста'нете",
+            "Third": "ста'нут"
+          },
+          "Singular": {
+            "First": "ста'ну",
+            "Second": "ста'нешь",
+            "Third": "ста'нет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "ста'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "ста'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "ста'ла",
+          "Masculine": "ста'л",
+          "Neuter": "ста'ло",
+          "Plural": "ста'ли"
+        },
+        "translation": "to become"
+      },
+      "examples": [],
+      "name": "ста'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "выпить",
+          "попить"
+        ],
+        "imperative": {
+          "Plural": "пе'йте",
+          "Singular": "пе'й"
+        },
+        "infinitive": "пи'ть",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "пьём",
+            "Second": "пьёте",
+            "Third": "пью'т"
+          },
+          "Singular": {
+            "First": "пью'",
+            "Second": "пьёшь",
+            "Third": "пьёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "пи'вший",
+            "Present": "пью'щий"
+          },
+          "Adverbial": {
+            "Past": "пи'в",
+            "Present": "пья'"
+          },
+          "Passive": {
+            "Past": "пи'тый",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "пила'",
+          "Masculine": "пи'л",
+          "Neuter": "пи'ло",
+          "Plural": "пи'ли"
+        },
+        "translation": "to drink"
+      },
+      "examples": [],
+      "name": "пи'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "потереть"
+        ],
+        "imperative": {
+          "Plural": "три'те",
+          "Singular": "три'"
+        },
+        "infinitive": "тере'ть",
+        "info": "This verb can also mean the following: grind, grate, abrade, chafe, polish.",
+        "non_past": {
+          "Plural": {
+            "First": "трём",
+            "Second": "трёте",
+            "Third": "тру'т"
+          },
+          "Singular": {
+            "First": "тру'",
+            "Second": "трёшь",
+            "Third": "трёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "тёрший",
+            "Present": "тру'щий"
+          },
+          "Adverbial": {
+            "Past": "тёрши",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "тёртый",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "тёрла",
+          "Masculine": "тёр",
+          "Neuter": "тёрло",
+          "Plural": "тёрли"
+        },
+        "translation": "to rub"
+      },
+      "examples": [],
+      "name": "тере'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "одеваться"
+        ],
+        "imperative": {
+          "Plural": "оде'ньтесь",
+          "Singular": "оде'нься"
+        },
+        "infinitive": "оде'ться",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "оде'немся",
+            "Second": "оде'нетесь",
+            "Third": "оде'нутся"
+          },
+          "Singular": {
+            "First": "оде'нусь",
+            "Second": "оде'нешься",
+            "Third": "оде'нется"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "оде'вшийся",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "оде'вшись",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "оде'лась",
+          "Masculine": "оде'лся",
+          "Neuter": "оде'лось",
+          "Plural": "оде'лись"
+        },
+        "translation": "to dress"
+      },
+      "examples": [],
+      "name": "оде'ться",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "но'йте",
+          "Singular": "но'й"
+        },
+        "infinitive": "ны'ть",
+        "info": "This verb can also mean the following: yammer, cry, bellyache, snivel, ache, whine.",
+        "non_past": {
+          "Plural": {
+            "First": "но'ем",
+            "Second": "но'ете",
+            "Third": "но'ют"
+          },
+          "Singular": {
+            "First": "но'ю",
+            "Second": "но'ешь",
+            "Third": "но'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "ны'вший",
+            "Present": "но'ющий"
+          },
+          "Adverbial": {
+            "Past": "ны'в",
+            "Present": "но'я"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "ны'ла",
+          "Masculine": "ны'л",
+          "Neuter": "ны'ло",
+          "Plural": "ны'ли"
+        },
+        "translation": "to whimper"
+      },
+      "examples": [],
+      "name": "ны'ть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "пожить"
+        ],
+        "imperative": {
+          "Plural": "живи'те",
+          "Singular": "живи'"
+        },
+        "infinitive": "жи'ть",
+        "info": "This verb can also mean the following: reside.",
+        "non_past": {
+          "Plural": {
+            "First": "живём",
+            "Second": "живёте",
+            "Third": "живу'т"
+          },
+          "Singular": {
+            "First": "живу'",
+            "Second": "живёшь",
+            "Third": "живёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "жи'вший",
+            "Present": "живу'щий"
+          },
+          "Adverbial": {
+            "Past": "жи'в",
+            "Present": "живя'"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "жила'",
+          "Masculine": "жи'л",
+          "Neuter": "жи'ло",
+          "Plural": "жи'ли"
+        },
+        "translation": "to live"
+      },
+      "examples": [],
+      "name": "жи'ть",
+      "type": "Verb"
+    }
+  ]
+}

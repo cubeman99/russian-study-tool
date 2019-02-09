@@ -1,5 +1,9 @@
 import sys
 
+#from study_tool import conjugator
+#conjugator.main()
+#exit(0)
+
 if len(sys.argv) > 1:
   which = sys.argv[1]
 else:

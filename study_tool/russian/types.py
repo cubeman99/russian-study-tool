@@ -23,6 +23,7 @@ class WordType(IntEnum):
   Verb = 1
   Adjective = 2
   Preposition = 3
+  Adverb = 4
 
 class Case(IntEnum):
   Nominative = 0
@@ -40,3 +41,7 @@ class Tense(IntEnum):
   Present = 0
   Past = 1
   Future = 2
+
+class Animacy(IntEnum):
+  Animate = 0
+  Inanimate = 1
