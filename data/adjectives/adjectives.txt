@@ -1,0 +1,166 @@
+@type adjective
+
+#==============================================================================
+@name Colors
+@key adjectives_colors
+#==============================================================================
+
+бе'лый - white
+чёрный - black
+кра'сный - red
+зелёный - green
+жёлтый - yellow
+си'ний - blue (dark)
+голубо'й - blue
+ора'нжевый - orange (color)
+кори'чневый - brown
+се'рый - grey
+ро'зовый - pink
+пу'рпурный - purple
+
+
+#==============================================================================
+@name General Adjectives
+@key adjectives_general
+#==============================================================================
+
+хоро'ший - good, nice
+плохо'й - bad
+вели'кий - great
+большо'й - big
+мале'нький - small
+бы'стрый - fast
+ме'дленный - slow
+скорый - rapid, quick
+но'вый - new
+ста'рый - old
+молодо'й - young
+интере'сный - interesting
+ску'чный - boring
+прекра'сный - beautiful
+краси'вый - pretty
+некраси'вый - ugly
+ми'лой - cute
+лёгкий - easy
+простой - simple
+трудный - difficult
+ва'жный - important
+ну'жный - necessary
+жела'тельный - desirable
+высо'кий - tall, high
+коро'ткий - short
+частый - frequent, close together, dense
+бли'зкий - near, close
+похо'жий - similar
+ка'ждый - each
+це'лый  - whole
+ни'зкий - low
+пе'рвый - first
+после'дний - last
+оче'редной - next
+гла'вный - main
+частный - private
+гро'мкий - loud
+дорого'й - dear, expensive
+дешёвый - cheap
+стро'гий - severe, strict
+кла'ссный - cool
+
+
+бе'дный - poor
+иностра'нный - foreign
+заба'вный - amusing
+
+поле'зный - useful, helpful
+живо'й @long - lively
+жи'в @short - alive
+ужа'сный @long - horrible
+ужа'сен @short - horrifying
+чуде'сный - wonderful
+опа'сный - dangerous
+великоле'пный - great, gorgeous, magnificent
+
+
+голо'дный - hungry
+больно'й - sick
+здоро'вый - healthy
+
+
+ра'вный - equal
+ло'жный - false
+пра'вый @long - right (just)
+пра'в @short - right (correct)
+
+
+то'нкий - thin
+далёкий - distant
+у'зкий - narrow
+до'лгий - long (time)
+дли'нный - long (distance)
+широ'кий - wide
+све'тлый - light
+городско'й - city
+мужско'й - masculine, male
+
+#==============================================================================
+@name Emotions/Personality
+@key adjectives_emotions
+#==============================================================================
+
+счастли'вый - happy
+гру'стный, печа'льный - sad
+зло'й - angry
+си'льный - strong, powerful
+споко'йный - calm, peaceful
+прия'тный - pleasant
+до'брый - kind
+и'скренний - sincere
+аккура'тный - neat
+неопря'тный - sloppy
+разгово'рчивый - talkative
+молчали'вый - taciturn, untalkative
+ти'хий - quiet
+ве'жливый - polite
+гру'бый - rude
+весёлый - cheerful
+у'мный - smart
+у'мной - clever
+глу'пый - stupid
+смешно'й - funny
+серьёзный - serious
+зло'бный - mean
+трудолюби'вый - industrious
+лени'вый - lazy
+глухо'й - deaf
+занято'й - busy
+мо'дный - fashionable, stylish
+
+
+дру'жный - amicable
+
+
+#==============================================================================
+@name Texture
+@key adjectives_texture
+#==============================================================================
+
+густой - dense, thick
+кре'пкий - strong, tough
+сухо'й - dry
+мо'крый - wet
+то'лстый - fat, thick
+твёрдый - hard, firm
+ги'бкий - flexible
+мя'гкий - soft
+острый - sharp
+удобный - comfortable
+чи'стый - clean
+гря'зный - dirty
+я'сный - clear
+я'ркий - bright
+тёмный - dark
+холодный - cold
+тёплый - warm
+жа'ркий - hot
+сла'дкий - sweet
+вкусне'йший - delicious

@@ -1,3 +1,5 @@
+@type noun
+
 #==============================================================================
 @name People (Age/Geneder)
 @key people_general

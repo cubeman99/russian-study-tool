@@ -89,10 +89,10 @@
 
 мести´ - to sweep
 плести´ - to weave
-приобрести´ - to acquire
+приобрести´ - to purchase, acquire
 цвести´ - to bloom
 
-проче´сть - to read
+проче´сть - to finish reading, to read through
 
 # (9) Stems in Б
 грести´ - to rake; to row
@@ -121,10 +121,10 @@
 #==============================================================================
 
 # Suffixed
-хоте´ть - to want @impf
-бежа´ть - to run @uni# Nonsuffixedбы´ть - to be
-да´ть - to give @pf
-е´сть - to eat @impf
-е´хать - to go by vehicle @uni
-идти´ - to go on foot @uni
-расти´ - to grow
+хоте´ть - to want @impf @irreg
+бежа´ть - to run @impf @uni @irreg# Nonsuffixedбы´ть - to be @impf @irreg
+да´ть - to give @pf @irreg 
+е´сть - to eat @impf @irreg
+е´хать - to go by vehicle @impf @uni @irreg
+идти´ - to go on foot @impf @uni @irreg
+расти´ - to grow @impf @irreg

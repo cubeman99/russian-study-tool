@@ -3,36 +3,27 @@ import os
 import time
 from study_tool.config import Config
 from study_tool.russian.word import *
+from study_tool.card_attributes import CardAttributes
+from cmg.graphics import color
 
 class CardSide(IntEnum):
   Russian = 0
   English = 1
-  
-class CardAttributes(Enum):
-  Masculine = "m"
-  Femanine = "f"
-  Neuter = "n"
-  Singular = "sing"
-  Plural = "pl"
-  NoPural = "nopl"
-  FirstPerson = "1st"
-  SecondPerson = "2nd"
-  ThirdPerson = "3rd"
-  Perfective = "pf"
-  Imperfective = "impf"
-  Informal = "infl"
-  Formal = "frml"
-  Unidirectional = "uni"
-  Multidirectional = "multi"
-  Nominative =  "nom"
-  Accusative = "acc"
-  Genetive = "gen"
-  Dative = "dat"
-  Prepositional = "prep"
-  Instrumental = "instr"
-  Indeclinable = "indec"
-  Animate = "anim"
-  Inanimate = "inanim"
+
+class SourceLocation:
+  def __init__(self, filename="", line_number=0, line_text=""):
+    self.filename = filename
+    self.line_number = line_number
+    self.line_text = line_text
+  def __str__(self):
+    return "{}-{}".format(self.filename, self.line_number)
+
+def get_history_score(history):
+  score = 1
+  for index, good in enumerate(history):
+    if not good:
+      score -= 1.0 / (index + 2)
+  return score
 
 class Card:
   def __init__(self, front="", back=""):
@@ -44,10 +35,30 @@ class Card:
     self.history = []  # History of True or False markings
     self.word_type = None
     self.word = None
+    self.source = None
 
     # used by Scheduler
     self.rep = None
     self.age = 0
+
+  def get_key(self):
+    return (self.word_type, self.russian.text, self.english.text)
+
+  def get_history_score(self):
+    return get_history_score(self.history)
+
+  def get_next_history_score(self, knew_it):
+    history = [knew_it] + self.history
+    return get_history_score(history[:Config.max_card_history_size])
+  
+  def add_attributes(self, attrs: list, side: CardSide):
+    for attr in attrs:
+      self.add_attribute(attr=attr, side=side)
+
+  def add_attribute(self, attr: CardAttributes, side: CardSide):
+    if attr not in self.attributes[side]:
+      self.attributes[side].append(attr)
+      self.attributes[side].sort(key=lambda x: x.name)
 
   def get_display_text(self, side):
     text = self.text[side]

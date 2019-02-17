@@ -48,7 +48,7 @@
 бедне´ть - to grow poor 
 неме´ть - to grow numb
 беле´ть - to become/show white 
-полне´ть - to become stout
+полне´ть - to become stout  @verb.suffix.ei
 бледне´ть - to grow pale 
 пусте´ть - to become empty
 богате´ть - to get rich 
@@ -64,15 +64,15 @@
 гре´ть - to warm 
 старе´ть - to grow old, age
 жале´ть - to be sorry, regret
-тепле´ть - to become warm
+тепле´ть - to become warm  @verb.suffix.ei
 желте´ть - to turn yellow
 уме´ть - to know how
-здорове´ть - to become healthy 
+здорове´ть - to become healthy  @verb.suffix.ei
 успе´ть - to have time (to do …)
 име´ть - to have
 худе´ть - to become thin, lose weight
 красне´ть - to turn red, blush 
-ясне´ть - to clear up
+ясне´ть - to clear up  @verb.suffix.ei
 лысе´ть - to grow bald
 
 #==============================================================================
@@ -84,7 +84,7 @@
 анализи´ровать - to analyze 
 копи´ровать - to copy
 арестова´ть - to arrest
-легализова´ть - to legalize
+легализова´ть - to legalize  @verb.suffix.ova
 волнова´ться - to be nervous 
 организова´ть - to organize
 гаранти´ровать - to guarantee 
@@ -179,7 +179,7 @@
 шепта´ть - to whisper		
 щекота´ть - to tickle		
 иска´ть - to look for
-сы´пать - to strew		
+сы´пать - to pour
 колеба´ть - to shake		
 дрема´ть - to doze		
 
@@ -195,14 +195,14 @@
 вра´ть - to tell lies (colloquial)
 жда´ть - to wait		
 жра´ть - to guzzle	
-лга´ть - to lie (to tell lies)
+лга´ть - to lie (to tell lies)  @verb.suffix.a2
 рва´ть - to tear		
 ржа´ть - to neigh		
 
 # Three verbs in this group have an inserted root vowel in the non-past
-бра´ть - to take
-дра´ть - to tear up
-зва´ть - to call
+бра´ть - to take     @verb.suffix.a3
+дра´ть - to tear up  @verb.suffix.a3
+зва´ть - to call     @verb.suffix.a3
 
 #==============================================================================
 @name 6. Verbs with Stem - А-ВАЙ
@@ -211,6 +211,7 @@
 # All verbs in this group are imperfective
 
 # (a) Verbs with the root -да
+дава´ть - to give @impf
 отдава´ть - to give back, return; to give (up), devote @impf
 преподава´ть - to teach @impf
 передава´ть - to pass; to convey; to broadcast @impf
@@ -274,14 +275,14 @@
 ви´деть - to see
 висе´ть - to hang (intr.) 
 зави´сеть - to depend
-лете´ть - to fly
+лете´ть - to fly @uni
 свисте´ть - to whistle
 терпе´ть - to tolerate 
 храпе´ть - to snore
 шуме´ть - to make noise
 
 # No consonant mutation
-боле´ть -- to ache (third-person only)
+боле´ть -- to ache (third-person only)  @verb.suffix.e
 горе´ть - to burn
 смотре´ть - to look, watch
 

@@ -2,6 +2,7 @@ from enum import IntEnum
 import os
 import time
 import cmg
+import cmg.logging
 from cmg import color
 
 class Config:
@@ -56,3 +57,7 @@ class Config:
                             2: color.rgb(255, 128, 0),
                             3: color.YELLOW,
                             4: color.GREEN}
+  
+Config.logger = cmg.logging.create_logger("study_tool",
+                                          stdout=True,
+                                          level=cmg.logging.LogLevel.Info)

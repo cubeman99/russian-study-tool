@@ -1,3 +1,5 @@
+@type noun
+
 #==============================================================================
 @name Animals
 @key animals_general
@@ -10,7 +12,6 @@
 кролик - rabbit
 заяц - hare
 обезьяна - monkey
-белка - squirrel
 волк - wolf
 лиса - fox
 крот - mole
@@ -21,7 +22,7 @@
 лось - elk, moose
 олень - deer
 дикобраз - porcupine
-белка - squirrel
+бе'лка - squirrel
 
 #==============================================================================
 @name Exotic Animals
@@ -60,7 +61,6 @@
 петух - cock
 корова - cow
 бык - bull
-буйвол - buffalo
 овца - sheep
 баран - ram
 коза, козёл - goat

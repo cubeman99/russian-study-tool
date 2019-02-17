@@ -1,0 +1,197 @@
+@type noun
+
+#==============================================================================
+@name Fruit
+@key food_fruit
+#==============================================================================
+
+фрукты - fruit
+яблоко (яблоки) - apple
+груша (груши) - pear
+апельсин (апельсины) - orange (fruit)
+виноград - grapes
+грейпфрут (грейпфруты) - grapefruit
+киви (киви) - kiwi fruit
+мандарин (мандарины) - mandarine
+манго - mango
+банан (бананы) - banana
+ананас - pineapple
+персик (персики) - peach
+абрикос (абрикосы) - apricot
+слива (сливы) - plum
+клубника - strawberry
+малина - raspberry
+лимон (лимоны) - lemon
+ежевика - blackberry
+вишня, черешня - cherry
+дыня - melon
+арбуз - watermelon
+смородина красная - red currant
+смородина чёрная - black currant
+крыжовник - gooseberry
+
+#==============================================================================
+@name Vegetables
+@key food_vegetables
+#==============================================================================
+
+овощи - vegtables
+огурец (огурцы) - cucumber
+помидор (помидоры) - tomato
+кабачок (кабачки) - vegtable marrow
+картофель @nopl - potato
+баклажан (баклажаны) -- aubergine, egg-plant
+капуста @nopl - cabbage
+цветная капуста @nopl - cauliflower
+брокколи @nopl - broccoli
+патисон (патисоны) - squash
+тыква (тыквы) - pumpkin
+морковь @nopl - carrot
+лук @nopl - onion
+перец (перцы) - pepper, capsicum
+фасоль @nopl - bean
+горох @nopl - pea
+сельдерей - celery
+пюре картофельное - mashed potatoes
+свекла - beetroot, beet
+салат - lettuce, salad
+гриб (грибы) - mushroom
+
+#==============================================================================
+@name Meat
+@key food_meat
+#==============================================================================
+
+мясо - meat
+говядина - beef
+баранина - mutton
+свинина - pork
+телятина - veal
+ягнятина - lamb
+крольчатина (кролик) - rabbit
+ветчина - ham
+бекон - bacon
+колбаса' - sausage
+
+#==============================================================================
+@name Seafood
+@key food_seafood
+#==============================================================================
+
+морепродукты - seafood
+окунь - bass
+семга - salmon
+осетр - sturgeon
+горбуша - humpback salmon
+форель - trout
+судак - pike perch
+щука - pike
+камбала - flatfish
+сом - sheatfish, catfish
+треска - codfish
+сардина - sardine
+ставрида -- horse-mackerel
+скумбрия - mackerel
+карась - crucian
+карп - carp
+палтус - fluke
+тунец - tuna
+белуга - huso
+хек - hake
+сельдь - herring
+устрица (устрицы) - oyster
+мидия (мидии) - mussel
+креветка (креветки) - shrimp
+краб (крабы) - crab
+кальмар (кальмары) - squid
+
+#==============================================================================
+@name Nuts
+@key food_nuts
+#==============================================================================
+
+орехи - nuts
+лесной орех - hazelnut
+грецкий орех - walnut
+кешью - cashew
+миндаль - almond
+кокосовый орех - cocoanut
+фисташки - pistachio
+арахис - peanut
+мускатный орех - nutmeg
+
+#==============================================================================
+@name Spices
+@key food_spices
+#==============================================================================
+
+специи - spice
+соль - salt
+сахар - sugar
+тимьян - thyme
+черный перец - pepper
+маслина?, оливка - olive
+каперсы - caper
+шафран - saffron
+ваниль - vanilla
+имбирь - ginger
+розмарин - rosemary
+горчица - mustard
+корица - cinnamon
+базилик - basil
+
+#==============================================================================
+@name Sweets/Deserts
+@key food_sweets
+#==============================================================================
+
+булочка - sweet roll
+печенье - cookie
+ке'кс - cupcake
+то'рт - cake
+пирожное - brownie, biscuit, pastry
+мороженое - ice cream
+конфета - candy
+батончик - candy bar
+жевательная резинка, жевачка - (chewing) gum
+пирожок - stuffed roll
+
+#==============================================================================
+@name Misc Food
+@key food_misc
+#==============================================================================
+
+мука - flour
+хлеб - bread
+блин - pancake
+белый хлеб - white bread
+чёрный хлеб - black bread (dark rye bread)
+
+
+крупа - grain
+овес - oatmeal
+гречка - buckwheat
+ячмень - barley
+пшено - millet
+рис - rice
+
+сыр - cheese
+яйцо - egg
+масло - butter
+картофель фри - french fries
+варенье - jam
+пицца - pizza
+сосиска - hotdog
+гамбургер - hamburger
+томатный соус - ketchup
+соус - sauce
+бутерброд - sandwich
+суп - soup
+сметана - sour cream
+
+пища - meals
+завтрак - breakfast
+обед - lunch
+ужин - dinner
+полдник - supper
+

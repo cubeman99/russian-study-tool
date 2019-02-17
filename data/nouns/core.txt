@@ -1,3 +1,5 @@
+@type noun
+
 @name Core
 @key nouns_core
 
@@ -6,6 +8,8 @@
 бума'га - paper
 кни´га - book
 тетра´дь - notebook
+шко'ла - school
+уро'к - lesson
 письмо´ - letter
 газе´та - newspaper
 слова´рь - dictionary
@@ -15,20 +19,19 @@
 портфе´ль - briefcase
 клю´ч - key
 
-
-кусо'к (кусочки) - a piece (pieces)
-и´мя - name
+кусо'к (кусо'чки) - a piece (pieces)
+и´мя @n - name
 страна´ - country
-вре´мя - time
+вре´мя @n - time
 
 
-пла´мя - flame
-оши'бка - mistake
+пла´мя @n - flame
+оши'бка - mistake, error
 шу'тка - joke
 кра´й - edge
 ро´ль - role
 ружьё - gun
-се´мя - seed
+се´мя @n - seed
 ло´жь - lie
-шаг - step
+ша'г - step
 

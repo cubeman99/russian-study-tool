@@ -57,6 +57,8 @@ class MenuState(State):
     options += [("Quiz New Cards", lambda: self.app.push_study_state(card_set,
                                                                       side=CardSide.English,
                                                                       mode=ScheduleMode.NewOnly))]
+    options += [("Quiz Problem Cards", lambda: self.app.push_study_state(
+      card_set=card_set.get_problem_cards(), side=CardSide.English))]
     options += [("List", lambda: self.app.push_card_list_state(card_set)),
                 ("Cancel", None)]
     self.app.push_state(SubMenuState(card_set.name, options))

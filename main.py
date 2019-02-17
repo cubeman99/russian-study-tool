@@ -1,7 +1,8 @@
 import sys
 
-#from study_tool import conjugator
-#conjugator.main()
+#from cmg.test.unit_test_framework import run_all_tests
+#from study_tool.tests import test_word_database
+#run_all_tests([test_word_database])
 #exit(0)
 
 if len(sys.argv) > 1:

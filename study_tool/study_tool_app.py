@@ -26,10 +26,6 @@ DEAD_ZONE = 0.01
 class StudyCardsApp(Application):
 
   def __init__(self):
-    Config.logger = cmg.logging.create_logger("study_tool",
-                                              stdout=True,
-                                              level=cmg.logging.LogLevel.Info)
-
     self.title = "Russian"
     Application.__init__(self, title=self.title, width=1100, height=900)
     
@@ -51,7 +47,7 @@ class StudyCardsApp(Application):
     root_path = "data"
     print("Loading card data from: " + root_path)
     self.root = load_card_package_directory(path=root_path, name="words")
-    
+
     # Load word data
     self.word_data_file_name = "word_data.json"
     self.word_database = WordDatabase()
@@ -61,10 +57,51 @@ class StudyCardsApp(Application):
     self.save_file_name = ".study_data.sav"
     self.load()
 
+    # Check for duplicates
+    english = {}
+    russian = {}
+    keys = {}
+    for card in self.root.cards:
+      key = card.get_key()
+      if key not in keys:
+        keys[key] = []
+      keys[key].append(card)
+      #if card.text[CardSide.Russian].text not in russian:
+      #  russian[card.text[CardSide.Russian].text] = []
+      #russian[card.text[CardSide.Russian].text].append(card)
+      #if card.text[CardSide.English].text not in english:
+      #  english[card.text[CardSide.English].text]= []
+      #english[card.text[CardSide.English].text].append(card)
+    for key, cards in keys.items():
+      if len(cards) > 1:
+        #same =  if any(c.word_type == WordType.Adjective for c in cards)
+        if any(c.word_type == WordType.Verb for c in cards):
+          print(key)
+          for card in cards:
+            print("  [{}] {} - {}: {}".format(
+              len(card.history),
+              card.text[CardSide.Russian],
+              card.text[CardSide.English],
+              str(card.source)))
+    #for ru, cards in russian.items():
+    #  if len(cards) > 1:
+    #    #same =  if any(c.word_type == WordType.Adjective for c in cards)
+    #    if any(c.word_type == WordType.Verb for c in cards):
+    #      print(ru)
+    #      for card in cards:
+    #        print("  {} - {}: {}".format(card.text[CardSide.Russian],
+    #                                     card.text[CardSide.English],
+    #                                     str(card.source)))
+
     self.states = []
     self.push_state(MenuState(self.root))
     #self.push_study_state(self.root.card_sets[1], CardSide.Russian)
-    self.push_study_state(self.root["verbs"]["nonsuffixed_stems"].card_sets[0], CardSide.Russian)
+    #self.push_study_state(self.root["verbs"]["nonsuffixed_stems"].card_sets[1], CardSide.English)
+    #self.push_study_state(self.root["verbs"]["suffixed_stems"]["verbs_stem_ai"], CardSide.English)
+    #self.push_study_state(self.root["verbs"]["suffixed_stems"]["verbs_stem_a"], CardSide.English)
+    #self.push_study_state(self.root["google"]["google_doc_verbs"], CardSide.English)
+    #self.push_study_state(self.root["nouns"]["nouns_arts"], CardSide.English)
+    #self.push_study_state(self.root["adjectives"]["adjectives_colors"], CardSide.English)
     #self.push_card_list_state(self.root.card_sets[1])
     #self.push_state(KeyboardState())
 
@@ -81,11 +118,17 @@ class StudyCardsApp(Application):
     self.states.append(state)
     state.begin()
 
-  def push_study_state(self, card_set, side, mode=ScheduleMode.Learning):
-    self.push_state(StudyState(card_set, side=side, mode=mode))
+  def push_study_state(self, card_set, side, mode=ScheduleMode.Learning, **kwargs):
+    self.push_state(StudyState(card_set, side=side, mode=mode, **kwargs))
 
   def push_card_list_state(self, card_set):
     self.push_state(CardListState(card_set))
+
+  def get_card_word_details(self, card):
+    updated = self.word_database.populate_card_details(card)
+    if updated:
+      self.save_word_database()
+    return card.word
 
   def draw_completion_bar(self, g, center_y, left, right, card_set):
     cards = []
@@ -114,7 +157,7 @@ class StudyCardsApp(Application):
         g.fill_rect(x, top, level_width, bar_height,
                     color=Config.proficiency_level_colors[level])
         x += level_width
-    score /= float((Config.proficiency_levels - 1) * len(cards))
+    score /= max(1.0, float((Config.proficiency_levels - 1) * len(cards)))
     score = int(round(score * 100))
     g.draw_text(left + left_margin - 4, center_y, text="{}%".format(score),
                 color=color.BLACK, align=Align.MiddleRight, font=font)
@@ -154,19 +197,13 @@ class StudyCardsApp(Application):
   def save_word_database(self):
     path = os.path.join(self.root.path, self.word_data_file_name)
     Config.logger.debug("Saving word data to: " + path)
-    word_data = self.word_database.serialize()
-    temp_path = path + ".temp"
-    with open(temp_path, "w", encoding="utf8") as f:
-      json.dump(word_data, f, indent=2, sort_keys=True, ensure_ascii=False)
-    shutil.move(temp_path, path)
+    self.word_database.save(path)
 
   def load_word_database(self):
     path = os.path.join(self.root.path, self.word_data_file_name)
     if os.path.isfile(path):
       Config.logger.info("Loading word data from: " + path)
-      with open(path, "r", encoding="utf8") as f:
-        word_data = json.load(f)
-        self.word_database.deserialize(word_data)
+      self.word_database.load(path)
 
   def update(self, dt):
     if not self.joystick_ready:

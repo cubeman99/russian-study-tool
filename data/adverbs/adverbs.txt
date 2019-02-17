@@ -1,3 +1,5 @@
+@type adverb
+
 #==============================================================================
 @name Adverbs of Time
 @key adverbs_of_time

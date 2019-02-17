@@ -45,3 +45,18 @@ class Tense(IntEnum):
 class Animacy(IntEnum):
   Animate = 0
   Inanimate = 1
+
+class VerbSuffix(IntEnum):
+  Ai = 0
+  Ei = 1
+  Ova = 2
+  Nu = 3
+  Nu2 = 4
+  A1 = 5
+  A2 = 5
+  A3 = 5
+  Avai = 6
+  O = 7
+  I = 8
+  E = 9
+  Zha = 10
