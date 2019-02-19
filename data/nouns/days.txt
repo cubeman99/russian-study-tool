@@ -46,3 +46,5 @@
 сего'дня - today
 за'втра - tomorrow
 вчера' - yesterday
+послеза'втра - day after tomorrow
+позавчера' - day before yesterday

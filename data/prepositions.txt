@@ -1,3 +1,4 @@
+@type preposition
 @name Prepositions
 @side ru
 

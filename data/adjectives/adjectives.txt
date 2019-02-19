@@ -10,8 +10,8 @@
 кра'сный - red
 зелёный - green
 жёлтый - yellow
-си'ний - blue (dark)
-голубо'й - blue
+си'ний - dark blue
+голубо'й - light blue
 ора'нжевый - orange (color)
 кори'чневый - brown
 се'рый - grey
@@ -31,7 +31,7 @@
 мале'нький - small
 бы'стрый - fast
 ме'дленный - slow
-скорый - rapid, quick
+ско'рый - rapid, quick
 но'вый - new
 ста'рый - old
 молодо'й - young
@@ -42,14 +42,14 @@
 некраси'вый - ugly
 ми'лой - cute
 лёгкий - easy
-простой - simple
-трудный - difficult
+просто'й - simple
+тру'дный - difficult
 ва'жный - important
 ну'жный - necessary
 жела'тельный - desirable
 высо'кий - tall, high
 коро'ткий - short
-частый - frequent, close together, dense
+ча'стый - frequent, close together, dense
 бли'зкий - near, close
 похо'жий - similar
 ка'ждый - each
@@ -57,9 +57,9 @@
 ни'зкий - low
 пе'рвый - first
 после'дний - last
-оче'редной - next
+очередно'й - next
 гла'вный - main
-частный - private
+ча'стный - private
 гро'мкий - loud
 дорого'й - dear, expensive
 дешёвый - cheap
@@ -144,22 +144,22 @@
 @key adjectives_texture
 #==============================================================================
 
-густой - dense, thick
+густо'й - dense, thick
+то'лстый - fat, thick
+твёрдый - hard, firm
 кре'пкий - strong, tough
 сухо'й - dry
 мо'крый - wet
-то'лстый - fat, thick
-твёрдый - hard, firm
 ги'бкий - flexible
 мя'гкий - soft
-острый - sharp
-удобный - comfortable
+о'стрый - sharp
+удо'бный - comfortable
 чи'стый - clean
 гря'зный - dirty
 я'сный - clear
 я'ркий - bright
 тёмный - dark
-холодный - cold
+холо'дный - cold
 тёплый - warm
 жа'ркий - hot
 сла'дкий - sweet

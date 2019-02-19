@@ -22,14 +22,13 @@ def get_history_score(history):
   score = 1
   for index, good in enumerate(history):
     if not good:
-      score -= 1.0 / (index + 2)
+      score -= 0.5 / (index + 2)
   return score
 
 class Card:
   def __init__(self, front="", back=""):
     self.text = [front, back]
     self.attributes = [[], []]
-    self.marked = False
     self.last_encounter_time = None
     self.proficiency_level = 0  # new/unseen
     self.history = []  # History of True or False markings
@@ -97,18 +96,15 @@ class Card:
 
   def serialize(self):
     history_str = "".join("T" if h else "F" for h in self.history)
-    return dict(russian=repr(self.text[CardSide.Russian]),
+    return dict(type=None if self.word_type is None else self.word_type.name,
+                russian=repr(self.text[CardSide.Russian]),
                 english=repr(self.text[CardSide.English]),
-                marked=self.marked,
                 proficiency_level=self.proficiency_level,
                 last_encounter_time=self.last_encounter_time,
                 history=history_str)
 
   def deserialize(self, state):
-    self.text[CardSide.Russian] = AccentedText(state["russian"])
-    self.text[CardSide.English] = AccentedText(state["english"])
     self.proficiency_level = state["proficiency_level"]
-    self.marked = state["marked"]
     self.last_encounter_time = state["last_encounter_time"]
     history_str = state["history"]
     self.history = [c == "T" for c in history_str]

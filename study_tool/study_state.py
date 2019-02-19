@@ -9,6 +9,7 @@ from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
 from study_tool.card import *
+from study_tool.card_attributes import *
 from study_tool.card_set import CardSet, CardSetPackage
 from study_tool.config import Config
 from study_tool.russian.types import *

@@ -24,6 +24,8 @@ class WordType(IntEnum):
   Adjective = 2
   Preposition = 3
   Adverb = 4
+  Conjunction = 5
+  Pronoun = 7
 
 class Case(IntEnum):
   Nominative = 0
@@ -60,3 +62,5 @@ class VerbSuffix(IntEnum):
   I = 8
   E = 9
   Zha = 10
+  Resonant = 11
+  Obstruent = 12

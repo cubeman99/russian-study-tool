@@ -36,8 +36,6 @@ class Config:
 
   card_front_text_color = color.BLACK
   card_back_text_color = color.BLACK
-  card_unmarked_background_color = color.rgb(200, 255, 200)
-  card_marked_background_color = color.rgb(255, 200, 200)
 
   max_card_history_size = 100
 

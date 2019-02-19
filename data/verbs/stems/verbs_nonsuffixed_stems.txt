@@ -1,0 +1,130 @@
+@type verb
+
+#==============================================================================
+@name Resonant Stems (в, й, м, н, р)
+@key verbs_nonsuffixed_stems_resonants
+#==============================================================================
+
+# (1) Stems in В
+жи'ть - to live @impf @stem.resonant
+плы'ть - to swim @impf @uni @stem.resonant
+слы'ть - to be, be reputed @impf @stem.resonant
+
+# (2) Stems in H
+ста'ть - to become; to begin @pf @stem.resonant
+вста'ть - to stand up @pf @stem.resonant
+де'ть - to put, do with @pf @stem.resonant
+наде'ть - to put on @pf @stem.resonant
+оде'ться - to get dressed @pf @stem.resonant
+разде'ться - to get undressed @pf @stem.resonant
+
+# (3) Stems in ОЙ
+откры'ть - to open @pf @stem.resonant
+закры'ть - to close @pf @stem.resonant
+мы'ть - to wash @impf @stem.resonant
+ны'ть - to ache @impf @stem.resonant
+ры'ть - to dig @impf @stem.resonant
+
+# (4) Stems in ИЙ
+би'ть - to beat @impf @stem.resonant
+ви'ть - to twist @impf @stem.resonant
+ли'ть - to pour @impf @stem.resonant
+пи'ть - to drink @impf @stem.resonant
+ш'ить - to sew @impf @stem.resonant
+
+# Miscellaneous Stems in Й
+ду'ть - to blow @impf @stem.resonant
+гни'ть - to rot @impf @stem.resonant
+
+пе'ть - to sing @impf @stem.resonant
+бри'ть - to shave @impf @stem.resonant
+
+# (5) Stems in M or H
+взя'ть - to take @pf @stem.resonant
+жа'ть (жму', жмёшь, … жму'т) - to press, squeeze @impf @stem.resonant
+жа'ть (жну', жнёшь, … жну'т) - to reap @impf @stem.resonant
+мя'ть - to crumple @impf @stem.resonant
+нача'ть - to begin @pf @stem.resonant
+распя'ть - to crucify @pf @stem.resonant
+
+заня'ть - to borrow @pf @stem.resonant
+наня'ть - to hire @pf @stem.resonant
+поня'ть - to understand @pf @stem.resonant
+обня'ть - to embrace, hug @pf @stem.resonant
+отня'ть - to take away @pf @stem.resonant
+подня'ть - to raise, lift @pf @stem.resonant
+сня'ть - to take off @pf @stem.resonant
+приня'ть - to accept @pf @stem.resonant
+
+# (6) Stems in P
+тере'ть - to rub, grate @impf @stem.resonant 
+вы'тереть - to rub (dry) @pf @stem.resonant
+стере'ть - to erase @pf @stem.resonant
+запере'ть - to lock @pf @stem.resonant
+отпере'ть - to unlock @pf @stem.resonant
+умере'ть - to die @pf @stem.resonant
+
+
+#==============================================================================
+@name Obstruent Stems (б, п, д, т, з, с, г, к, х)
+@key verbs_nonsuffixed_stems_obstruent
+#==============================================================================
+
+# (7) Stems in З and С
+везти' - to transport @uni @stem.obstruent
+ле'зть - to climb @stem.obstruent
+ползти' - to crawl @stem.obstruent
+нести' - to carry @uni @stem.obstruent
+спасти' - to save, rescue @stem.obstruent
+трясти' - to shake @stem.obstruent
+
+# (8) Stems in Д and T
+брести' - to wander @stem.obstruent
+вести' - to lead @uni @stem.obstruent
+кла'сть - to put @stem.obstruent
+кра'сть - to steal @stem.obstruent
+упа'сть - to fall @pf @stem.obstruent
+
+се'сть - to sit down @stem.obstruent
+
+мести' - to sweep @stem.obstruent
+плести' - to weave @stem.obstruent
+приобрести' - to purchase, acquire @stem.obstruent
+цвести' - to bloom @stem.obstruent
+
+проче'сть - to finish reading, to read through @stem.obstruent
+
+# (9) Stems in Б
+грести' - to rake; to row @stem.obstruent
+скрести' - to scrape @stem.obstruent
+
+# (10) Stems in Г and К
+бере'чь - to guard @stem.obstruent
+стри'чь - to cut (hair) @stem.obstruent
+мо'чь - to be able @stem.obstruent
+помо'чь - to help @stem.obstruent
+
+ле'чь - to lie down @stem.obstruent
+
+же'чь - to burn @stem.obstruent
+
+пе'чь - to bake @stem.obstruent
+отвле'чь - to distract @stem.obstruent
+привле'чь - to attract @stem.obstruent
+те'чь - to flow @stem.obstruent
+
+
+
+#==============================================================================
+@name Irregular Verbs
+@key verbs_irregular
+#==============================================================================
+
+# Suffixed
+хоте'ть - to want @impf @irreg
+бежа'ть - to run @impf @uni @irreg# Nonsuffixedбы'ть - to be @impf @irreg
+да'ть - to give @pf @irreg 
+е'сть - to eat @impf @irreg
+е'хать - to go by vehicle @impf @uni @irreg
+идти' - to go on foot @impf @uni @irreg
+расти' - to grow @impf @irreg

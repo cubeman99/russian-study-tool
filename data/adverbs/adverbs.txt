@@ -6,56 +6,56 @@
 #==============================================================================
 
 # Adverbs of Time
-# Adverbs of time answer questions such as когда´? when?, ско´лько вре´мени? / на ско´лько вре´мени?
-# how long?, and как ча´сто? how often? Some of the most common adverbs of time are listed below.
+# Adverbs of time answer questions such as когда'? when?, ско'лько вре'мени? / на ско'лько вре'мени?
+# how long?, and как ча'сто? how often? Some of the most common adverbs of time are listed below.
 
 # Adverbs Answering the Question когда?
-сего´дня - today
-за´втра - tomorrow
-послеза´втра - day after tomorrow
-вчера´ - yesterday
-позавчера´ - day before yesterday
-снача´ла - (at) first
-пото´м - then (afterwards)
-тогда´ - then (at that time)
-давно´ - a long time ago
-неда´вно - recently
-ско´ро - soon
-наконе´ц - finally
-сра´зу - immediately
-сейча´с - now, at the moment
-тепе´рь - now, nowadays
-ра´но - early
-по´здно -late
-во´время - on time
+##сего'дня - today
+##за'втра - tomorrow
+##послеза'втра - day after tomorrow
+##вчера' - yesterday
+##позавчера' - day before yesterday
+снача'ла - (at) first
+пото'м - then (afterwards)
+тогда' - then (at that time)
+давно' - a long time ago
+неда'вно - recently
+ско'ро - soon
+наконе'ц - finally
+сра'зу - immediately
+сейча'с - now, at the moment
+тепе'рь - now, nowadays
+ра'но - early
+по'здно -late
+во'время - on time
 
-# The following adverbs referring to periods of the day, and the seasons, are all formed from the instrumental case of a noun, e.g., у´тро morning  у´тром- in the morning, весна´ spring  весно´й- in the spring.
-у´тром- in the morning
+# The following adverbs referring to periods of the day, and the seasons, are all formed from the instrumental case of a noun, e.g., у'тро morning  у'тром- in the morning, весна' spring  весно'й- in the spring.
+у'тром- in the morning
 днём - during the day
-ве´чером- in the evening
-но´чью- in the night
-весно´й- in the spring
-ле´том- in the summer
-о´сенью- in the fall
-зимо´й- in the winter
+ве'чером- in the evening
+но'чью- in the night
+весно'й- in the spring
+ле'том- in the summer
+о'сенью- in the fall
+зимо'й- in the winter
 
-# Adverbs Answering the Question ско´лько вре´мени?
-до´лго - (for) a long time
-давно´ - for a long time (and continuing up to a defined point)
+# Adverbs Answering the Question ско'лько вре'мени?
+до'лго - (for) a long time
+давно' - for a long time (and continuing up to a defined point)
 
-# Adverbs Answering the Question на ско´лько вре´мени?
-надо´лго - for a long time (following the completion of an action)
-навсегда´ - forever
+# Adverbs Answering the Question на ско'лько вре'мени?
+надо'лго - for a long time (following the completion of an action)
+навсегда' - forever
 
-# Adverbs Answering the Question ка´к ча´сто?
-всегда´ - always
-иногда´ - sometimes
-обы´чно - usually
-ре´дко - rarely
+# Adverbs Answering the Question ка'к ча'сто?
+всегда' - always
+иногда' - sometimes
+обы'чно - usually
+ре'дко - rarely
 
 # Other Important Temporal Adverbs
-уже´ - already, as early as
-уже´ не, бо´льше не - no longer
+уже' - already, as early as
+уже' не, бо'льше не - no longer
 ещё (всё ещё) - still
 ещё не - not yet
 
@@ -66,44 +66,44 @@
 #==============================================================================
 
 # Adverbs of Place
-# Adverbs of place are divided into those that indicate location and answer the question где´? where? and
-# those that indicate direction and answer the question куда´? where to? or отку´да? from where? The 
+# Adverbs of place are divided into those that indicate location and answer the question где'? where? and
+# those that indicate direction and answer the question куда'? where to? or отку'да? from where? The 
 # choice of adverb, therefore, normally depends on whether a sentence contains a verb of location or a
 # verb of motion/direction.
 # The following list contains many of the most commonly used adverbs of place expressing either location or direction.
-где´ - where
-куда´ - where to
-отку´да - from where
-зде´сь - here
-сюда´ - to here
-отсю´да - from here
-та´м - there
-туда´ - to there
-отту´да - from there
-везде´, всю´ду - everywhere
-отовсю´ду - from everywhere
-до´ма - at home
-домо´й - to home
-сле´ва - on the left
-нале´во - to the left
-спра´ва - on the right
-напра´во - to the right
-впереди´ - in front, ahead
+где' - where
+куда' - where to
+отку'да - from where
+зде'сь - here
+сюда' - to here
+отсю'да - from here
+та'м - there
+туда' - to there
+отту'да - from there
+везде', всю'ду - everywhere
+отовсю'ду - from everywhere
+до'ма - at home
+домо'й - to home
+сле'ва - on the left
+нале'во - to the left
+спра'ва - on the right
+напра'во - to the right
+впереди' - in front, ahead
 вперёд - forward, ahead
-позади´, сза´ди - behind
-наза´д - back(ward)
-наверху´ - above
-наве´рх - up(ward)
-све´рху - from above
-внизу´ - below
-вни´з - down(ward)
-сни´зу - from below
-внутри´ - inside
-вну´трь - to inside
-изнутри´ - from inside
-снару´жи - outside
-нару´жу - to outside
-снару´жи - from outside
+позади', сза'ди - behind
+наза'д - back(ward)
+наверху' - above
+наве'рх - up(ward)
+све'рху - from above
+внизу' - below
+вни'з - down(ward)
+сни'зу - from below
+внутри' - inside
+вну'трь - to inside
+изнутри' - from inside
+снару'жи - outside
+нару'жу - to outside
+снару'жи - from outside
 
 
 #==============================================================================
@@ -112,20 +112,20 @@
 #==============================================================================
 
 # Adverbs of Measure or Degree
-# Adverbs of measure or degree answer questions such as ско´лько? how much/many? and в како´й
-# сте´пени? to what degree? Some of the most common of these adverbs are listed below.
-о´чень - very, very much
-та´к - so
-мно´го - many, a lot, very much
-ма´ло - little
-немно´го - a little
-чу´ть (чуть-чу´ть) -- a tiny bit
-слегка´ - slightly
-достато´чно - sufficiently
-совсе´м - quite
-соверше´нно - absolutely
-сли´шком - too
-почти´ - almost, nearly
+# Adverbs of measure or degree answer questions such as ско'лько? how much/many? and в како'й
+# сте'пени? to what degree? Some of the most common of these adverbs are listed below.
+о'чень - very, very much
+та'к - so
+мно'го - many, a lot, very much
+ма'ло - little
+немно'го - a little
+чу'ть (чуть-чу'ть) -- a tiny bit
+слегка' - slightly
+достато'чно - sufficiently
+совсе'м - quite
+соверше'нно - absolutely
+сли'шком - too
+почти' - almost, nearly
 
 
 #==============================================================================
@@ -133,15 +133,15 @@
 @key adverbs_negative
 #==============================================================================
 
-нигде´     - nowhere
-никуда´    - (to) nowhere
-никогда´   - never
-ника´к     - in no way
-ниско´лько - not at all
-не´где     - there is no place
-не´куда    - there is no place (to go)
-не´когда   - there is no time
-не´зачем   - there is no point
+нигде'     - nowhere
+никуда'    - (to) nowhere
+никогда'   - never
+ника'к     - in no way
+ниско'лько - not at all
+не'где     - there is no place
+не'куда    - there is no place (to go)
+не'когда   - there is no time
+не'зачем   - there is no point
 
 
 #==============================================================================
@@ -149,14 +149,14 @@
 @key adverbs_indefinite
 #==============================================================================
 
-где´-то -- somewhere
-где´-нибудь -- somewhere (anywhere)
-куда´-то -- to somewhere
-куда´-нибудь -- to somewhere (anywhere)
-когда´-то -- once, at one time
-когда´-нибудь -- ever, at any time
-ка´к-то -- somehow
-ка´к-нибудь -- somehow (or other)
-почему´-то -- for some reason
-почему´-нибудь -- for any reason
+где'-то -- somewhere
+где'-нибудь -- somewhere (anywhere)
+куда'-то -- to somewhere
+куда'-нибудь -- to somewhere (anywhere)
+когда'-то -- once, at one time
+когда'-нибудь -- ever, at any time
+ка'к-то -- somehow
+ка'к-нибудь -- somehow (or other)
+почему'-то -- for some reason
+почему'-нибудь -- for any reason
 

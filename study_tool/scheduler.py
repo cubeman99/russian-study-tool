@@ -100,7 +100,6 @@ class Scheduler:
       card.proficiency_level = max(1, card.proficiency_level - 1)
     self.sets[card.proficiency_level].add(card)
     card.rep = self.rep
-    card.marked = not knew_it
     card.last_encounter_time = time.time()
     card.history.insert(0, knew_it)
     if len(card.history) > Config.max_card_history_size:

@@ -5,26 +5,14 @@ from study_tool.russian.word import *
 from study_tool.russian.adjective import Adjective
 from study_tool.russian.noun import Noun
 from study_tool.russian.verb import Verb
-from study_tool.card import Card
-from study_tool.card_attributes import CardAttributes
+from study_tool.card import *
+from study_tool.card_attributes import *
 from study_tool.config import Config
 
 
 class WordDatabase:
   def __init__(self):
     self.words = {}
-
-  def save(self, path):
-    word_data = self.serialize()
-    temp_path = path + ".temp"
-    with open(temp_path, "w", encoding="utf8") as f:
-      json.dump(word_data, f, indent=2, sort_keys=True, ensure_ascii=False)
-    shutil.move(temp_path, path)
-
-  def load(self, path):
-    with open(path, "r", encoding="utf8") as f:
-      word_data = json.load(f)
-    self.deserialize(word_data)
 
   def get_word(self, name, word_type):
     key = name.text
@@ -110,6 +98,18 @@ class WordDatabase:
       raise Exception("Duplicate word: " + word.name.text)
     self.words[key] = word
     return word
+
+  def save(self, path):
+    word_data = self.serialize()
+    temp_path = path + ".temp"
+    with open(temp_path, "w", encoding="utf8") as f:
+      json.dump(word_data, f, indent=2, sort_keys=True, ensure_ascii=False)
+    shutil.move(temp_path, path)
+
+  def load(self, path):
+    with open(path, "r", encoding="utf8") as f:
+      word_data = json.load(f)
+    self.deserialize(word_data)
 
   def serialize(self):
     data = {"words": []}

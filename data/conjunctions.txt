@@ -1,3 +1,4 @@
+@type conjunction
 @name Conjuctions
 
 и - and

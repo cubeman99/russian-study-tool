@@ -16,6 +16,7 @@ from study_tool.config import Config
 from study_tool.menu_state import MenuState
 from study_tool.study_state import StudyState
 from study_tool.card_list_state import CardListState
+from study_tool.card_database import CardDatabase
 from study_tool.scheduler import ScheduleMode
 from study_tool.keyboard_state import KeyboardState
 from study_tool.russian import conjugation
@@ -44,9 +45,11 @@ class StudyCardsApp(Application):
       Input(index=3, name="Right", reversed=True, max=1, min=-1)]
 
     # Load all card data
+    self.card_database = CardDatabase()
     root_path = "data"
     print("Loading card data from: " + root_path)
-    self.root = load_card_package_directory(path=root_path, name="words")
+    self.root = self.card_database.load_card_package_directory(
+      path=root_path, name="words")
 
     # Load word data
     self.word_data_file_name = "word_data.json"
@@ -56,42 +59,7 @@ class StudyCardsApp(Application):
     # Load study data
     self.save_file_name = ".study_data.sav"
     self.load()
-
-    # Check for duplicates
-    english = {}
-    russian = {}
-    keys = {}
-    for card in self.root.cards:
-      key = card.get_key()
-      if key not in keys:
-        keys[key] = []
-      keys[key].append(card)
-      #if card.text[CardSide.Russian].text not in russian:
-      #  russian[card.text[CardSide.Russian].text] = []
-      #russian[card.text[CardSide.Russian].text].append(card)
-      #if card.text[CardSide.English].text not in english:
-      #  english[card.text[CardSide.English].text]= []
-      #english[card.text[CardSide.English].text].append(card)
-    for key, cards in keys.items():
-      if len(cards) > 1:
-        #same =  if any(c.word_type == WordType.Adjective for c in cards)
-        if any(c.word_type == WordType.Verb for c in cards):
-          print(key)
-          for card in cards:
-            print("  [{}] {} - {}: {}".format(
-              len(card.history),
-              card.text[CardSide.Russian],
-              card.text[CardSide.English],
-              str(card.source)))
-    #for ru, cards in russian.items():
-    #  if len(cards) > 1:
-    #    #same =  if any(c.word_type == WordType.Adjective for c in cards)
-    #    if any(c.word_type == WordType.Verb for c in cards):
-    #      print(ru)
-    #      for card in cards:
-    #        print("  {} - {}: {}".format(card.text[CardSide.Russian],
-    #                                     card.text[CardSide.English],
-    #                                     str(card.source)))
+    self.save()
 
     self.states = []
     self.push_state(MenuState(self.root))
@@ -102,6 +70,7 @@ class StudyCardsApp(Application):
     #self.push_study_state(self.root["google"]["google_doc_verbs"], CardSide.English)
     #self.push_study_state(self.root["nouns"]["nouns_arts"], CardSide.English)
     #self.push_study_state(self.root["adjectives"]["adjectives_colors"], CardSide.English)
+    #self.root["verbs"]["stems"].get_problem_cards()
     #self.push_card_list_state(self.root.card_sets[1])
     #self.push_state(KeyboardState())
 
@@ -180,7 +149,8 @@ class StudyCardsApp(Application):
   def save(self):
     path = os.path.join(self.root.path, self.save_file_name)
     Config.logger.debug("Saving study data to: " + path)
-    state = self.root.serialize()
+    state = self.card_database.serialize_study_data()
+    self.card_database.deserialize_study_data(state)
     temp_path = path + ".temp"
     with open(temp_path, "w", encoding="utf8") as f:
       json.dump(state, f, indent=2, sort_keys=True, ensure_ascii=False)
@@ -192,7 +162,7 @@ class StudyCardsApp(Application):
       Config.logger.info("Loading study data from: " + path)
       with open(path, "r", encoding="utf8") as f:
         state = json.load(f)
-        self.root.deserialize(state)
+        self.card_database.deserialize_study_data(state)
         
   def save_word_database(self):
     path = os.path.join(self.root.path, self.word_data_file_name)

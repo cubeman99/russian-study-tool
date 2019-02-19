@@ -50,6 +50,8 @@ class CardAttributes(Enum):
   VerbSuffixI = "verb.suffix.i"
   VerbSuffixE = "verb.suffix.e"
   VerbSuffixZha = "verb.suffix.zha"
+  ResonantStem = "stem.resonant"
+  ObstruentStem = "stem.obstruent"
 
 GENDER_TO_ATTRIBUTE = {
   Gender.Masculine: CardAttributes.Masculine,
@@ -82,8 +84,11 @@ VERB_SUFFIX_TO_ATTRIBUTE = {
   VerbSuffix.Avai: CardAttributes.VerbSuffixAvai,
   VerbSuffix.O   : CardAttributes.VerbSuffixO,   
   VerbSuffix.I   : CardAttributes.VerbSuffixI,   
-  VerbSuffix.E   : CardAttributes.VerbSuffixE,   
-  VerbSuffix.Zha : CardAttributes.VerbSuffixZha} 
+  VerbSuffix.E   : CardAttributes.VerbSuffixE,
+  VerbSuffix.Zha : CardAttributes.VerbSuffixZha,   
+  VerbSuffix.Resonant  : CardAttributes.ResonantStem,
+  VerbSuffix.Obstruent : CardAttributes.ObstruentStem,
+  } 
 
 ATTRIBUTE_NAMES = {
   CardAttributes.VerbSuffixAi:   "Suffix -ай",
@@ -99,6 +104,8 @@ ATTRIBUTE_NAMES = {
   CardAttributes.VerbSuffixI:    "Suffix -и",
   CardAttributes.VerbSuffixE:    "Suffix -е",
   CardAttributes.VerbSuffixZha:  "Suffix -жа",
+  CardAttributes.ObstruentStem:  "Obstruent Stem",
+  CardAttributes.ResonantStem:   "Resonant Stem",
   }
 
 ATTRIBUTE_COLORS = {
