@@ -118,10 +118,18 @@ class MenuState(State):
                 color=Config.title_color,
                 align=Align.MiddleLeft)
 
+    metrics = self.package.get_study_metrics()
+    g.draw_text(screen_center_x, self.margin_top / 2,
+                text="{:.0f} / {:.0f}".format(metrics.get_proficiency_count(),
+                                              metrics.history_score),
+                font=self.title_font,
+                color=Config.title_color,
+                align=Align.Centered)
+
     # Draw completion progress
     self.app.draw_completion_bar(
       g, self.margin_top / 2,
-      max(screen_center_x, title_right + 32),
+      max(screen_width * 0.6, title_right + 32),
       screen_width - 32,
       self.package)
     

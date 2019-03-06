@@ -59,7 +59,6 @@ class StudyCardsApp(Application):
     # Load study data
     self.save_file_name = ".study_data.sav"
     self.load()
-    self.save()
 
     self.states = []
     self.push_state(MenuState(self.root))

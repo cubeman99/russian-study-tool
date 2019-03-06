@@ -6,45 +6,46 @@
 #==============================================================================
 
 # Days of the Week
-понедельник - Monday
-вторник - Tuesday
-среда - Wednesday
-четверг - Thursday
-пятница - Friday
-суббота - Saturday
-воскресенье - Sunday
+понеде'льник - Monday
+вто'рник - Tuesday
+среда' - Wednesday
+четве'рг - Thursday
+пя'тница - Friday
+суббо'та - Saturday
+воскресе'нье - Sunday
 
 # Months
-январь - January
-февраль - February
-март - March
-апрель - April
-май - May
-июнь - June
-июль - July
-август - August
-сентябрь - September
-октябрь - October
-ноябрь - November
-декабрь - December
+янва'рь - January
+февра'ль - February
+ма'рт - March
+апре'ль - April
+ма'й - May
+ию'нь - June
+ию'ль - July
+а'вгуст - August
+сентя'брь - September
+октя'брь - October
+ноя'брь - November
+дека'брь - December
 
 # Seasons
-весна´ - spring
-ле´то - summer
-о´сень - fall
-зима´ - winter
+весна' - spring
+ле'то - summer
+о'сень - fall
+зима' - winter
 
  # Other
 го'д - year
-месяц - month
-неделя - week
+ме'сяц - month
+неде'ля - week
 де'нь @m - day
-ча´с - hour
-мину´та - minute
-секу´нда - second (1/60 minute)
+ча'с - hour
+мину'та - minute
+секу'нда - second (1/60 minute)
 
 сего'дня - today
 за'втра - tomorrow
 вчера' - yesterday
 послеза'втра - day after tomorrow
+# по̀слеза́втра ` ' <-- sub-accent
 позавчера' - day before yesterday

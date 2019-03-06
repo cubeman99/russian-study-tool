@@ -3,35 +3,51 @@
 @name Core
 @key nouns_core
 
-каранда´ш - pencil
-ру´чка - pen
+каранда'ш - pencil
+ру'чка - pen
 бума'га - paper
-кни´га - book
-тетра´дь - notebook
+кни'га - book
+тетра'дь - notebook
 шко'ла - school
 уро'к - lesson
-письмо´ - letter
-газе´та - newspaper
-слова´рь - dictionary
-сло´во - word
-журна´л - magazine
-фотогра´фия - photo
-портфе´ль - briefcase
-клю´ч - key
+письмо' - letter
+газе'та - newspaper
+слова'рь - dictionary
+сло'во - word
+журна'л - magazine
+фотогра'фия - photo
+портфе'ль - briefcase
+клю'ч - key
 
 кусо'к (кусо'чки) - a piece (pieces)
-и´мя @n - name
-страна´ - country
-вре´мя @n - time
+и'мя @n - name
+страна' - country
+вре'мя @n - time
 
-
-пла´мя @n - flame
+зна'к - sign
+пла'мя @n - flame
 оши'бка - mistake, error
 шу'тка - joke
-кра´й - edge
-ро´ль - role
+кра'й - edge
+ро'ль - role
 ружьё - gun
-се´мя @n - seed
-ло´жь - lie
+се'мя @n - seed
+ло'жь - lie
 ша'г - step
-
+биле'т – ticket
+вечери'нка – party
+встре'ча – meeting
+де'ньги – money
+ка'рта – map, card
+кино' – movie
+но'вость(-и) -- news
+пробле'ма – problem
+прое'кт – project
+систе'ма – system
+су'мка – bag
+статья' – article
+у'ровень - level
+объе'кт - object
+кошма'р - nightmare
+со'н - sleep, dream
+чу'вство - feeling

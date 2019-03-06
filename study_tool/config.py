@@ -43,18 +43,23 @@ class Config:
   proficiency_levels = 4  # 0 = new, 1 = hardest, 4 = easiest
   new_card_interval = 4
   proficiency_level_intervals = {1: 4,
-                               2: 8,
-                               3: 12,
-                               4: 16}
+                                 2: 8,
+                                 3: 12,
+                                 4: 16}
+  proficiency_level_score_multiplier = {0: 0.0,
+                                        1: 0.0,
+                                        2: 0.25,
+                                        3: 0.5,
+                                        4: 1.0}
   proficiency_level_names = {1: "Hard",
-                           2: "Medium",
-                           3: "Easy",
-                           4: "Learned"}
+                             2: "Medium",
+                             3: "Easy",
+                             4: "Learned"}
   proficiency_level_colors = {0: color.GRAY,
-                            1: color.RED,
-                            2: color.rgb(255, 128, 0),
-                            3: color.YELLOW,
-                            4: color.GREEN}
+                              1: color.RED,
+                              2: color.rgb(255, 128, 0),
+                              3: color.YELLOW,
+                              4: color.GREEN}
   
 Config.logger = cmg.logging.create_logger("study_tool",
                                           stdout=True,

@@ -148,7 +148,7 @@ class Verb(Word):
           self.has_form("гать", non_past=["гу", "жёшь", "жёт", "жём", "жёте", "гут"])):
       return VerbSuffix.A3
     elif self.has_form("ить",
-                       non_past=["у", "ишь", "ит", "им", "ите", ("ат", "ят")],
+                       non_past=[("у", "ю"), "ишь", "ит", "им", "ите", ("ат", "ят")],
                        past=["ил", "ила", "ило", "или"],
                        mutate=0):
       return VerbSuffix.I

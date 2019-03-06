@@ -1,5 +1,17 @@
 from enum import IntEnum
 
+class WordType(IntEnum):
+  Noun = 0
+  Verb = 1
+  Adjective = 2
+  Preposition = 3
+  Adverb = 4
+  Conjunction = 5
+  Pronoun = 7
+  Other = 8
+  Phrase = 9
+  Interjection = 10
+
 class Language(IntEnum):
   English = 0
   Russian = 1
@@ -17,15 +29,6 @@ class Person(IntEnum):
   First = 0
   Second = 1
   Third = 2
-
-class WordType(IntEnum):
-  Noun = 0
-  Verb = 1
-  Adjective = 2
-  Preposition = 3
-  Adverb = 4
-  Conjunction = 5
-  Pronoun = 7
 
 class Case(IntEnum):
   Nominative = 0

@@ -2,8 +2,9 @@ import os
 import random
 import re
 import time
+from datetime import datetime
 from study_tool.card import Card, CardSide, SourceLocation
-from study_tool.card_set import CardSet, CardSetPackage
+from study_tool.card_set import CardSet, CardSetPackage, CardGroupMetrics, StudySet
 from study_tool.card_attributes import CardAttributes
 from study_tool.external import googledocs
 from study_tool.russian.types import *
@@ -12,19 +13,55 @@ from study_tool.config import Config
 
 
 TOKEN_DELIMETERS = ["--", "–", "-"]
-WORD_TYPE_DICT = {"noun": WordType.Noun,
-                  "verb": WordType.Verb,
-                  "adjective": WordType.Adjective,
-                  "adverb": WordType.Adverb,
-                  "preposition": WordType.Preposition,
-                  "conjunction": WordType.Conjunction,
-                  "pronoun": WordType.Pronoun,
-                  "none": None,
-                  None: None}
+WORD_TYPE_DICT = {"none": WordType.Other,
+                  None: WordType.Other}
+for word_type in WordType:
+  WORD_TYPE_DICT[word_type.name.lower()] = word_type
 
-class CardDatabase():
+
+class StudyMetrics:
+  def __init__(self):
+    self.date = datetime.now()
+    self.all_metrics = CardGroupMetrics()
+    self.word_type_metrics = {}
+    for word_type in WordType:
+      self.word_type_metrics[word_type] = CardGroupMetrics()
+
+  def get_date_string(self) -> str:
+    return self.date.strftime("%Y/%m/%d")
+
+  def serialize(self):
+    state = {"date": self.get_date_string(),
+             "all_metrics": self.all_metrics.serialize(),
+             "card_type_metrics": {}}
+    for word_type, metrics in self.word_type_metrics.items():
+      if metrics.get_total_count() > 0:
+        state["card_type_metrics"][word_type.name] = metrics.serialize()
+    return state
+
+  def deserialize(self, state):
+    self.date = datetime.strptime(state["date"], "%Y/%m/%d")
+    self.all_metrics.deserialize(state["all_metrics"])
+    for word_type in WordType:
+      if word_type.name in state["card_type_metrics"]:
+        self.word_type_metrics[word_type].deserialize(
+          state["card_type_metrics"][word_type.name])
+
+
+class CardDatabase:
   def __init__(self):
     self.cards = {}
+    self.metrics_history = {}
+
+  def get_study_metrics(self) -> StudyMetrics:
+    metrics = StudyMetrics()
+    card_set = StudySet(cards=self.cards.values())
+    metrics.all_metrics = card_set.get_study_metrics()
+    for word_type in WordType:
+      card_set = StudySet(cards=(c for c in self.cards.values()
+                                 if c.word_type == word_type))
+      metrics.word_type_metrics[word_type] = card_set.get_study_metrics()
+    return metrics
 
   def add_card(self, card: Card):
     key = card.get_key()
@@ -34,7 +71,13 @@ class CardDatabase():
   
   def serialize_study_data(self):
     state = {"save_time": time.time(),
-             "cards": []}
+             "cards": [],
+             "metrics": []}
+    current_metrics = self.get_study_metrics()
+    self.metrics_history[current_metrics.get_date_string()] = current_metrics
+    for date_string, metrics in self.metrics_history.items():
+      state["metrics"].append(metrics.serialize())
+
     for _, card in self.cards.items():
       card_state = card.serialize()
       card_state["type"] = None if card.word_type is None else card.word_type.name
@@ -56,6 +99,14 @@ class CardDatabase():
         card.deserialize(card_state)
       else:
         Config.logger.warning("Card not found: " + repr(key))
+
+    self.metrics_history = {}
+    for metrics_state in state["metrics"]:
+      metrics = StudyMetrics()
+      metrics.deserialize(metrics_state)
+      self.metrics_history[metrics.get_date_string()] = metrics
+    current_metrics = self.get_study_metrics()
+    self.metrics_history[current_metrics.get_date_string()] = current_metrics
 
   def parse_card_text(self, text, split=False):
     attributes = []
@@ -104,7 +155,7 @@ class CardDatabase():
       filename = path
       line_number = -1
       line = ""
-      word_type = None
+      word_type = WordType.Other
       card_set = None
       split_attributes = None
       try:

@@ -1,0 +1,54 @@
+#==============================================================================
+@name New 4
+#==============================================================================
+
+@type adjective
+родно'й - native
+шика'рный - chic, posh, stylish @long
+шика'рен - gorgeous @short
+уда'чный - successful
+
+@type adverb
+вно'вь - again
+наве'рное - probably
+ненадо'лго - briefly, for a short time
+осо'бенно - especially
+
+@type noun
+се'рдце - heart
+взгля'д - sight, view
+при'зрак - ghost
+го'сть - guest
+жа'ль - pity
+жара' – heat
+побе'да – victory
+пода'рок – gift
+душа' - soul
+дика'рка - savage (person)
+слеза' - tear, teardrop
+исполне'ние - performance
+чесно'к - garlic
+а'втор - author
+чува'к - dude
+мультфи'льм - cartoon
+пе'сня - song
+шеде'вр - masterpiece
+
+@type verb
+охраня'ть - to gaurd @impf
+зако'нчить – to finish, be done with
+плани'ровать – to plan
+оста'вить - to leave (something)
+моли'ться - to pray @impf
+расти'ть - to raise
+запла'кать - to begin to cry
+
+@type phrase
+ка'к же' э'то ___! - how ___ is that!
+
+@type other
+
+
+
+
+

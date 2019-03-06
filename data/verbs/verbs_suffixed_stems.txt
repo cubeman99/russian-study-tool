@@ -18,7 +18,7 @@
 де'лать - to do, make  @impf
 покупа'ть - to buy @impf
 ду'мать - to think @impf
-помога'ть - to help @impf
+помога'ть @dat - to help @impf
 за'втракать - to have breakfast 
 понима'ть - to understand @impf
 занима'ться - to study
@@ -29,7 +29,7 @@
 реша'ть - to decide, solve
 конча'ть - to finish 
 слу'шать - to listen
-мечта'ть - to dream 
+мечта'ть - to dream (about a goal)
 собира'ть - to collect
 начина'ть - to begin
 спра'шивать - to ask @impf
@@ -113,7 +113,7 @@
 фотографи'ровать - to photograph
 сле'довать - to follow 
 экспорти'ровать - to export
-сове'товать - to advise
+сове'товать @dat - to advise
 
 #==============================================================================
 @name 4. Verbs with Stem - НУ
@@ -292,7 +292,7 @@
 @key verbs_stem_zha
 #==============================================================================
 
-боя'ться - to be afraid of 
+боя'ться @gen - to be afraid of 
 держа'ть - to hold, keep
 дрожа'ть - to tremble 
 дыша'ть - to breathe

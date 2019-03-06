@@ -1,22 +1,23 @@
+@type pronoun
 #==============================================================================
 @name Pronouns
 @key pronouns
 #==============================================================================
 
-кто´ - who
-како´й - what sort of
-что´ - what
-дру´г дру´га - each other (acc.)
-себя´ - self (acc./gen.)
-себе´ - self (prep./dat.)
-собо´й - self (instr.)
+кто' - who
+како'й - what sort of
+что' - what
+дру'г дру'га - each other @acc
+себя' - self @acc @gen
+себе' - self @prep @dat
+собо'й - self @instr
 
 # TODO: indefinite prefix, negative prefix не
 
-че´й - whose (nom.)
-э´тот - this, that
-то´т - that
-тако´й - such a, like that
-са´м - (them)self, used for emphasis
-са´мый - the very
-ве´сь - the whole, all
+че'й - whose @nom
+э'тот - this, that
+то'т - that
+тако'й - such a, like that
+са'м - (them)self, used for emphasis
+са'мый - the very
+ве'сь - the whole, all

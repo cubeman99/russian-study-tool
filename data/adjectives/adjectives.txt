@@ -26,9 +26,11 @@
 
 хоро'ший - good, nice
 плохо'й - bad
+са́мый – the most
 вели'кий - great
 большо'й - big
 мале'нький - small
+огро́мный – huge
 бы'стрый - fast
 ме'дленный - slow
 ско'рый - rapid, quick
@@ -37,11 +39,12 @@
 молодо'й - young
 интере'сный - interesting
 ску'чный - boring
-прекра'сный - beautiful
+прекра'сный - perfect, beautiful
 краси'вый - pretty
 некраси'вый - ugly
 ми'лой - cute
-лёгкий - easy
+лёгкий - light (of weight), easy
+тяжёлый – heavy
 просто'й - simple
 тру'дный - difficult
 ва'жный - important
@@ -94,13 +97,18 @@
 
 то'нкий - thin
 далёкий - distant
-у'зкий - narrow
+у'зкий - tight, narrow
 до'лгий - long (time)
 дли'нный - long (distance)
 широ'кий - wide
-све'тлый - light
+све'тлый - light (of color)
 городско'й - city
 мужско'й - masculine, male
+жу'ткий - creepy
+стра'шный - terrible
+стрёмный - dumb
+
+
 
 #==============================================================================
 @name Emotions/Personality
@@ -123,9 +131,8 @@
 ве'жливый - polite
 гру'бый - rude
 весёлый - cheerful
-у'мный - smart
-у'мной - clever
-глу'пый - stupid
+у'мный - clever, smart, intelligent
+глу'пый - silly, dumb stupid
 смешно'й - funny
 серьёзный - serious
 зло'бный - mean
@@ -161,6 +168,6 @@
 тёмный - dark
 холо'дный - cold
 тёплый - warm
-жа'ркий - hot
+горя'чий, жа'ркий - hot
 сла'дкий - sweet
 вкусне'йший - delicious

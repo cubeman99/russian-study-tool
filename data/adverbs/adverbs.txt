@@ -30,18 +30,18 @@
 во'время - on time
 
 # The following adverbs referring to periods of the day, and the seasons, are all formed from the instrumental case of a noun, e.g., у'тро morning  у'тром- in the morning, весна' spring  весно'й- in the spring.
-у'тром- in the morning
+у'тром - in the morning
 днём - during the day
-ве'чером- in the evening
-но'чью- in the night
-весно'й- in the spring
-ле'том- in the summer
-о'сенью- in the fall
-зимо'й- in the winter
+ве'чером - in the evening
+но'чью - in the night
+весно'й - in the spring
+ле'том - in the summer
+о'сенью - in the fall
+зимо'й - in the winter
 
 # Adverbs Answering the Question ско'лько вре'мени?
 до'лго - (for) a long time
-давно' - for a long time (and continuing up to a defined point)
+#давно' - for a long time (and continuing up to a defined point)
 
 # Adverbs Answering the Question на ско'лько вре'мени?
 надо'лго - for a long time (following the completion of an action)
@@ -124,7 +124,7 @@
 достато'чно - sufficiently
 совсе'м - quite
 соверше'нно - absolutely
-сли'шком - too
+сли'шком - too, overly
 почти' - almost, nearly
 
 
@@ -159,4 +159,3 @@
 ка'к-нибудь -- somehow (or other)
 почему'-то -- for some reason
 почему'-нибудь -- for any reason
-

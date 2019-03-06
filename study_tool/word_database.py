@@ -15,27 +15,20 @@ class WordDatabase:
     self.words = {}
 
   def get_word(self, name, word_type):
-    key = name.text
+    key = (word_type, name.text)
     if key in self.words:
       word = self.words[key]
     elif word_type == WordType.Verb:
       word = self.add_verb(name)
-      self.words[key] = word
     elif word_type == WordType.Noun:
       word = self.add_noun(name)
-      self.words[key] = word
     elif word_type == WordType.Adjective:
       word = self.add_adjective(name)
-      self.words[key] = word
     else:
       return None
     if word is not None and word.word_type != word_type:
       raise Exception(word.word_type)
     return word
-
-  def __getitem__(self, name):
-    name = AccentedText(name).text
-    return self.words[name]
 
   def populate_card_details(self, card) -> bool:
     if card.word is None and card.word_type is not None:
@@ -93,9 +86,9 @@ class WordDatabase:
     return adjective
 
   def add_word(self, word):
-    key = word.name.text
+    key = (word.word_type, word.name.text)
     if key in self.words:
-      raise Exception("Duplicate word: " + word.name.text)
+      raise Exception("Duplicate word: {} ({})".format(word.name.text, word.word_type.name))
     self.words[key] = word
     return word
 

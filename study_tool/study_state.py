@@ -48,6 +48,7 @@ class StudyState(State):
     self.card_font = pygame.font.Font(None, 72)
     self.card_attribute_font = pygame.font.Font(None, 30)
     self.card_status_font = pygame.font.Font(None, 30)
+    self.word_type_font = pygame.font.Font(None, 34)
     self.word_details_font = pygame.font.Font(None, 24)
     self.card_set = card_set
     self.shown_side = side
@@ -191,7 +192,15 @@ class StudyState(State):
                   align=Align.Centered,
                   color=marked_state_color * 0.7,
                   font=self.card_status_font)
-    
+        
+    # Draw word type
+    word_type_name = self.card.word_type.name
+    g.draw_text(screen_center_x, self.margin_top + 32 + 16,
+                text=word_type_name,
+                font=self.word_type_font,
+                color=cmg.color.GRAY,
+                align=Align.TopCenter)
+
     # Draw card text and attributes
     g.draw_text(screen_center_x, screen_center_y - 50,
                 text=self.card.text[self.shown_side],
@@ -326,7 +335,13 @@ class StudyState(State):
                 text=self.card_set.name,
                 color=cmg.color.GRAY,
                 align=Align.MiddleLeft)
+    metrics = self.card_set.get_study_metrics()
+    g.draw_text(screen_center_x, self.margin_top / 2,
+                text="{:.0f} / {:.0f}".format(metrics.get_proficiency_count(),
+                                              metrics.history_score),
+                color=cmg.color.GRAY,
+                align=Align.Centered)
     self.app.draw_completion_bar(g, self.margin_top / 2,
-                                 screen_center_x - 80,
+                                 screen_center_x + 80,
                                  screen_width - 32,
                                  [c for c in self.scheduler.get_all_cards()])

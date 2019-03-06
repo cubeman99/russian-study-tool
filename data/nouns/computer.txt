@@ -1,0 +1,23 @@
+@type noun
+
+@name Computer
+@key nouns_computer
+
+компью́тер – computer
+интерне́т – internet
+паро́ль – password
+сайт – (web)site
+кана́л – canal, channel
+сериа́л – tv series
+экра́н – screen
+телеви́зор – tv set
+при́нтер – printer
+ска́нер – scanner
+копи́р – copier
+факс – fax
+телефо́н – telephone
+ра́дио – radio
+дина́мик – speaker
+ноутбу́к – laptop
+
+

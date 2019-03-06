@@ -1,0 +1,52 @@
+#==============================================================================
+@name New 1
+#==============================================================================
+
+@type adjective
+бога́тый - rich
+вку́сный - tasty
+невку́сный – not tasty
+неприя́тный – not pleasant
+неудо́бный – not comfortable
+кури́ный – chicken (adj.)
+сти́льный – stylish, trendy
+изве'стный - famous
+люби'мый - favorite
+шти'ль - calm
+
+@type adverb
+конкре́тно – specifically
+отли́чно – perfect, excellent
+пра́вильно – correct
+
+@type noun
+стиль – style
+цена́ – price
+война́ - war
+зака́з – order
+зву'к – sound
+игра́ – game
+интелле́кт – intelligence
+ми'р – world
+па́мять – memory
+идио́т – idiot
+курье́р – delivery person
+озву'чка - voice acting
+кома'нда - team (sport team)
+приме'р - example
+во'лосы - hair
+
+@type verb
+забыва́ть – to forget
+спо́рить – to argue
+сто́ить – to cost
+сни'ться - to dream (during sleep)
+побежда'ть - to win
+зна'чить - to mean, signify
+учи'ть - to learn, memorize by rote; to teach, instruct, train
+учи'ться - to study at educational institution; to learn something by yourself
+обуча'ть - to learn something by yourself systimatically
+изуча'ть - to study something (with in depth approach)
+
+
+

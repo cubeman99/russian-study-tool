@@ -10,10 +10,48 @@ from study_tool.russian.word import *
 from study_tool.config import Config
 
 
+class CardGroupMetrics:
+  def __init__(self):
+    self.history_score = 0
+    self.proficiency_counts = []
+    for level in range(0, Config.proficiency_levels + 1):
+      self.proficiency_counts.append(0)
+  
+  def get_total_count(self):
+    return sum(self.proficiency_counts)
+
+  def get_proficiency_percent(self):
+    score = 0
+    potential_score = 0
+    for level, count in enumerate(self.proficiency_counts):
+      score += count * Config.proficiency_level_score_multiplier[level]
+      potential_score += count 
+    return score / potential_score
+
+  def get_proficiency_count(self):
+    return self.get_proficiency_percent() * self.get_total_count()
+    
+  def serialize(self):
+    return {"history_score": self.history_score,
+            "proficiency_counts": self.proficiency_counts}
+    
+  def deserialize(self, state):
+    self.history_score = state["history_score"]
+    self.proficiency_counts = list(state["proficiency_counts"])
+    
+
 class StudySet:
   def __init__(self, name="", cards=()):
     self.name = name
     self.cards = list(cards)
+
+  def get_study_metrics(self):
+    metrics = CardGroupMetrics()
+    metrics.history_score = sum(c.get_history_score() for c in self.cards)
+    for level in range(0, Config.proficiency_levels + 1):
+      metrics.proficiency_counts[level] = len(
+        [c for c in self.cards if c.proficiency_level == level])
+    return metrics
 
   def get_problem_cards(self):
     cs = sorted(self.cards, key=lambda c: c.get_history_score())
@@ -33,6 +71,7 @@ class StudySet:
                            if len(c.history) < 5
                            or c.get_history_score() < 0.9])
 
+
 class CardSet(StudySet):
   def __init__(self, cards=()):
     StudySet.__init__(self, name="Untitled", cards=cards)
@@ -48,22 +87,6 @@ class CardSet(StudySet):
     del unseen[index]
     return card
   
-  def serialize(self):
-    state = {"key": self.key,
-             "cards": []}
-    for card in self.cards:
-      state["cards"].append(card.serialize())
-    return state
-
-  def deserialize(self, state):
-    for card_state in state["cards"]:
-      for card in self.cards:
-        if (AccentedText(card.russian.text).text ==
-            AccentedText(card_state["russian"]).text and
-            AccentedText(card.english.text).text ==
-            AccentedText(card_state["english"]).text):
-          card.deserialize(card_state)
-          break
 
 class CardSetPackage(StudySet):
   def __init__(self, name, path, parent=None):
@@ -86,19 +109,6 @@ class CardSetPackage(StudySet):
     for card_set in self.all_card_sets():
       for card in card_set.cards:
         yield card
-
-  def serialize(self):
-    state = {"card_sets": {}}
-    for card_set in self.all_card_sets():
-      if card_set.key in state["card_sets"]:
-        raise Exception("Duplicate card set key '{}'".format(card_set.key))
-      state["card_sets"][card_set.key] = card_set.serialize()
-    return state
-  
-  def deserialize(self, state):
-    for card_set in self.all_card_sets():
-      if card_set.key in state["card_sets"]:
-        card_set.deserialize(state["card_sets"][card_set.key])
 
   def __getitem__(self, name):
     for package in self.packages:

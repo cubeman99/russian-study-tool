@@ -1,50 +1,52 @@
+@type pronoun
 #==============================================================================
 @name Personal Pronoun Cases
 @key personal_pronoun_cases
 #==============================================================================
 
 # Nominative
-я - I (nom.)
-ты - you (nom., informal)
-он - he, it (nom.)
-оно' - it (nom.)
-она' - she, it (nom.)
-мы - we (nom.)
-вы - you (nom., formal)
-они' - they (nom.)
+я - I          @nom @sing @1st
+ты - you       @nom @sing @2nd @informal
+он - he, it	   @nom @sing @3rd @m
+оно' - it      @nom @sing @3rd @n
+она' - she, it @nom @sing @3rd @f
+мы - we        @nom @pl @1st
+вы - you       @nom @pl @2nd @formal
+они' - they    @nom @pl @3rd
 
 # Accusative, Genetive
-меня' - me (acc.)
-тебя' - you (acc., informal)
-его', его' - him, it (acc.)
-её - her, it (acc.)
-на'с - us (acc.)
-ва'с - you (acc., formal)
-и'х - them (acc.)
-
+меня' - me             @gen @acc @sing @1st
+тебя' - you            @gen @acc @sing @2nd @informal 
+его', его' - him, it   @gen @acc @sing @3rd @m @n        
+её - her, it           @gen @acc @sing @3rd @f
+на'с - us              @gen @acc @prep @pl @1st
+ва'с - you             @gen @acc @prep @pl @2nd @formal
+и'х - them             @gen @acc @pl @3rd
+					   
 # Dative
-мне' - me (dat.)
-тебе' - you (dat., informal)
-ему' - him, it (dat.)
-е'й - her, it (dat.)
-на'м - us (dat.)
-ва'м - you (dat., formal)
-и'м - them (dat.)
-
+мне' - me        @dat @prep @sing @1st     
+тебе' - you      @dat @prep  @sing @2nd @informal       
+ему' - him, it   @dat @sing @3rd @m @n          
+е'й - her, it    @dat @instr @sing @3rd @f
+на'м - us        @dat @pl @1st      
+ва'м - you       @dat @pl @2nd @formal    
+и'м - them       @dat @pl @3rd  
+				 
 # Prepositional
-мне' - me (prep.)
-тебе' - you (prep., informal)
-нём - him, it (prep.)
-не'й - her, it (prep.)
-на'с - us (prep.)
-ва'с - you (prep., formal)
-ни'х - them (prep.)
-
+##мне' - me        @prep @sing @1st     
+##тебе' - you      @prep @sing @2nd @informal       
+нём - him, it    @prep @sing @3rd @m @n
+не'й - her, it   @prep @sing @3rd @f
+##на'с - us        @prep @pl @1st      
+##ва'с - you       @prep @pl @2nd @formal       
+ни'х - them      @prep @pl @3rd
+				 
 # Instrumental
-мно´й - me (ins.)
-тобо´й - you (ins., informal)
-и'м - him, it (ins.)
-е'й - her, it (ins.)
-на'ми - us (ins.)
-ва'ми - you (ins., formal)
-и'ми - them (ins.)
+мно´й - me       @instr @sing @1st      
+тобо´й - you     @instr @sing @2nd @informal        
+и'м - him, it    @instr @sing @3rd @m @n         
+##е'й - her, it    @instr @sing @3rd @f        
+на'ми - us       @instr @pl @1st       
+ва'ми - you      @instr @pl @2nd @formal       
+и'ми - them      @instr @pl @3rd
+				 

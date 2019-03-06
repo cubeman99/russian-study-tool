@@ -19,10 +19,15 @@ class SourceLocation:
     return "{}-{}".format(self.filename, self.line_number)
 
 def get_history_score(history):
-  score = 1
+  if len(history) == 0:
+    return 0.0
+  score = 1.0
   for index, good in enumerate(history):
     if not good:
       score -= 0.5 / (index + 2)
+  min_length = 6
+  if len(history) < min_length:
+    score /= (min_length - len(history) + 1.0)
   return score
 
 class Card:
@@ -42,6 +47,10 @@ class Card:
 
   def get_key(self):
     return (self.word_type, self.russian.text, self.english.text)
+
+  def get_proficiency_score(self):
+    return max(0.0, float(self.proficiency_level - 1) /
+               (Config.proficiency_levels - 1))
 
   def get_history_score(self):
     return get_history_score(self.history)

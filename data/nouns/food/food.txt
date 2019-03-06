@@ -6,28 +6,26 @@
 #==============================================================================
 
 фрукты - fruit
-яблоко (яблоки) - apple
-груша (груши) - pear
+я'блоко (яблоки) - apple
+гру'ша (гру'ши) - pear
 апельсин (апельсины) - orange (fruit)
 виноград - grapes
 грейпфрут (грейпфруты) - grapefruit
-киви (киви) - kiwi fruit
+киви - kiwi fruit
 мандарин (мандарины) - mandarine
-манго - mango
+ма'нго - mango
 банан (бананы) - banana
-ананас - pineapple
+анана'с - pineapple
 персик (персики) - peach
 абрикос (абрикосы) - apricot
 слива (сливы) - plum
-клубника - strawberry
-малина - raspberry
+клубни'ка - strawberry
+мали'на - raspberry
 лимон (лимоны) - lemon
-ежевика - blackberry
+ежеви'ка - blackberry
 вишня, черешня - cherry
-дыня - melon
-арбуз - watermelon
-смородина красная - red currant
-смородина чёрная - black currant
+ды'ня - melon
+арбу'з - watermelon
 крыжовник - gooseberry
 
 #==============================================================================
@@ -62,15 +60,15 @@
 @key food_meat
 #==============================================================================
 
-мясо - meat
-говядина - beef
-баранина - mutton
-свинина - pork
-телятина - veal
-ягнятина - lamb
-крольчатина (кролик) - rabbit
-ветчина - ham
-бекон - bacon
+мя'со - meat
+говя'дина - beef
+бара'нина - mutton
+свини'на - pork
+теля'тина - veal
+ягня'тина - lamb
+крольча'тина (кро'лик) - rabbit
+ветчина' - ham
+беко'н - bacon
 колбаса' - sausage
 
 #==============================================================================
@@ -78,32 +76,22 @@
 @key food_seafood
 #==============================================================================
 
-морепродукты - seafood
-окунь - bass
-семга - salmon
-осетр - sturgeon
-горбуша - humpback salmon
-форель - trout
-судак - pike perch
-щука - pike
-камбала - flatfish
-сом - sheatfish, catfish
-треска - codfish
-сардина - sardine
-ставрида -- horse-mackerel
-скумбрия - mackerel
-карась - crucian
-карп - carp
-палтус - fluke
-тунец - tuna
-белуга - huso
-хек - hake
-сельдь - herring
-устрица (устрицы) - oyster
-мидия (мидии) - mussel
-креветка (креветки) - shrimp
-краб (крабы) - crab
-кальмар (кальмары) - squid
+морепродукты @nopl - seafood
+о'кунь @nopl - bass
+семга @nopl - salmon
+форе'ль @nopl - trout
+ка'мбала @nopl - flatfish
+со'м @nopl - sheatfish, catfish
+треска' @nopl - codfish
+сарди'на @nopl - sardine
+ску'мбрия @nopl - mackerel
+ка'рп @nopl - carp
+туне'ц @nopl - tuna
+устри'ца (устрицы) - oyster
+ми'дия (мидии) - mussel
+креве'тка (креве'тки) - shrimp
+кра'б (крабы) - crab
+кальма'р (кальма'ры) - squid
 
 #==============================================================================
 @name Nuts
@@ -155,6 +143,7 @@
 батончик - candy bar
 жевательная резинка, жевачка - (chewing) gum
 пирожок - stuffed roll
+шокола'д - chocolate
 
 #==============================================================================
 @name Misc Food
