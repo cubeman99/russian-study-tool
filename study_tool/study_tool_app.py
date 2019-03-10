@@ -21,6 +21,7 @@ from study_tool.scheduler import ScheduleMode
 from study_tool.keyboard_state import KeyboardState
 from study_tool.russian import conjugation
 from study_tool.word_database import WordDatabase
+from study_tool.example_database import ExampleDatabase
 
 DEAD_ZONE = 0.01
 
@@ -56,6 +57,13 @@ class StudyCardsApp(Application):
     self.word_database = WordDatabase()
     self.load_word_database()
     
+    # Load example data
+    self.example_data_file_name = "examples.json"
+    self.example_database = ExampleDatabase()
+    self.load_example_database()
+    #self.example_database.download_ponyfiction_story(874)
+    #self.save_example_database()
+
     # Load study data
     self.save_file_name = ".study_data.sav"
     self.load()
@@ -69,6 +77,7 @@ class StudyCardsApp(Application):
     #self.push_study_state(self.root["google"]["google_doc_verbs"], CardSide.English)
     #self.push_study_state(self.root["nouns"]["nouns_arts"], CardSide.English)
     #self.push_study_state(self.root["adjectives"]["adjectives_colors"], CardSide.English)
+    self.push_study_state(self.root["new"]["new_7"], CardSide.English)
     #self.root["verbs"]["stems"].get_problem_cards()
     #self.push_card_list_state(self.root.card_sets[1])
     #self.push_state(KeyboardState())
@@ -173,6 +182,21 @@ class StudyCardsApp(Application):
     if os.path.isfile(path):
       Config.logger.info("Loading word data from: " + path)
       self.word_database.load(path)
+        
+  def save_example_database(self):
+    path = os.path.join(self.root.path, self.example_data_file_name)
+    Config.logger.debug("Saving example data to: " + path)
+    self.example_database.save(path)
+
+  def load_example_database(self):
+    #path = os.path.join(self.root.path, self.example_data_file_name)
+    #if os.path.isfile(path):
+    #  Config.logger.info("Loading example data from: " + path)
+    #  self.example_database.load(path)
+    for story_filename in os.listdir(self.root.path + "/examples/stories"):
+      Config.logger.info("Loading example story " + story_filename)
+      story_path = self.root.path + "/examples/stories/" + story_filename
+      self.example_database.load_story_text_file(story_path)
 
   def update(self, dt):
     if not self.joystick_ready:

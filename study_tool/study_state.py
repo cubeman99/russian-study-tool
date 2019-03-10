@@ -57,6 +57,7 @@ class StudyState(State):
     self.revealed = False
     self.scheduler = None
     self.mode = mode
+    self.examples = []
 
   def begin(self):
     self.buttons[0] = Button("Reveal", self.reveal)
@@ -106,7 +107,12 @@ class StudyState(State):
       Config.logger.info("No cards left to study!")
     else:
       Config.logger.info("Showing card: " + self.card.text[self.shown_side])
-      self.app.get_card_word_details(self.card)
+      word = self.app.get_card_word_details(self.card)
+      if word is not None:
+        forms = word.get_all_forms()
+      else:
+        forms = self.card.russian.text
+      self.examples = self.app.example_database.get_example_sentences(forms, count=7)
 
   def reveal(self):
     self.revealed = True
@@ -165,33 +171,70 @@ class StudyState(State):
                   align=Align.BottomLeft)
       ax += w + attr_spacing
 
+  def draw_top_proficiency_bar(self, g: Graphics, top_y, bar_height, bar_color):
+    screen_width, screen_height = self.app.screen.get_size()
+    screen_center_x = screen_width / 2
+    screen_center_y = screen_height / 2
+    marked_overlay_color = bar_color * 0.7
+
+    # Draw recent history (left)
+    max_history_display_count = 10
+    history_display_count = min(max_history_display_count,
+                                len(self.card.history))
+    history_box_size = 20
+    padding = (self.proficiency_margin_height - history_box_size) // 2
+    spacing = 3
+    for index in range(0, history_display_count):
+      marked = not self.card.history[index]
+      t = index / (max_history_display_count * 1.2)
+      c = cmg.math.lerp(marked_overlay_color, bar_color, t)
+      x = padding + ((history_display_count - index - 1) *
+                     (spacing + history_box_size))
+      if marked:
+        g.fill_rect(x, top_y + padding,
+                    history_box_size, history_box_size,
+                    color=c)
+      else:
+        g.draw_rect(x, top_y + padding,
+                    history_box_size, history_box_size,
+                    color=c)
+
+    # Draw time since last encounter (right)
+    g.draw_text(screen_width - 16, top_y + (bar_height // 2),
+                text=self.card.elapsed_time_string(),
+                align=Align.MiddleRight,
+                color=marked_overlay_color,
+                font=self.card_status_font)
+
+    # Draw current and predicted history score (middle)
+    score_fail = self.card.get_next_history_score(False)
+    score = self.card.get_history_score()
+    score_pass = self.card.get_next_history_score(True)
+    g.draw_text(screen_center_x, top_y + (bar_height // 2),
+                text="{:.4f} < {:.4f} > {:.4f}".format(score_fail, score, score_pass),
+                align=Align.Centered,
+                color=marked_overlay_color,
+                font=self.card_status_font)
 
   def draw(self, g: Graphics):
     screen_width, screen_height = self.app.screen.get_size()
     screen_center_x = screen_width / 2
     screen_center_y = screen_height / 2
+    self.proficiency_margin_height = 32
 
+    # Draw top/bottom proficiency bars
     if self.card.proficiency_level > 0:
       marked_state_color = math.lerp(Config.proficiency_level_colors[
         self.card.proficiency_level], color.WHITE, 0.7)
-      g.fill_rect(0, self.margin_top, screen_width, 32,
+      g.fill_rect(0, self.margin_top, screen_width,
+                  self.proficiency_margin_height,
                   color=marked_state_color)
-      g.fill_rect(0, screen_height - self.margin_bottom - 32,
-                  screen_width, 32,
+      g.fill_rect(0, screen_height - self.margin_bottom - self.proficiency_margin_height,
+                  screen_width, self.proficiency_margin_height,
                   color=marked_state_color)
-      g.draw_text(screen_width - 16, self.margin_top + (32 / 2),
-                  text=self.card.elapsed_time_string(),
-                  align=Align.MiddleRight,
-                  color=marked_state_color * 0.7,
-                  font=self.card_status_font)
-      score_fail = self.card.get_next_history_score(False)
-      score = self.card.get_history_score()
-      score_pass = self.card.get_next_history_score(True)
-      g.draw_text(screen_center_x, self.margin_top + (32 / 2),
-                  text="{:.4f} -- {:.4f} -- {:.4f}".format(score_fail, score, score_pass),
-                  align=Align.Centered,
-                  color=marked_state_color * 0.7,
-                  font=self.card_status_font)
+      self.draw_top_proficiency_bar(g, self.margin_top,
+                                    self.proficiency_margin_height,
+                                    bar_color=marked_state_color)
         
     # Draw word type
     word_type_name = self.card.word_type.name
@@ -217,6 +260,24 @@ class StudyState(State):
                   align=Align.Centered)
       self.draw_attributes(g, y=screen_center_y + 50 + 60,
                            attributes=self.card.attributes[self.hidden_side])
+
+    # Draw example sentences
+    if self.revealed and len(self.examples) > 0:
+      for index, (sentence, occurences) in enumerate(self.examples):
+        g.draw_text(20, self.margin_top + self.proficiency_margin_height + 60 + index*20,
+                    text=sentence,
+                    font=self.word_details_font,
+                    color=Config.card_back_text_color,
+                    align=Align.TopLeft)
+        for start, word in occurences:
+          w, h = g.measure_text(sentence[:start-1], font=self.word_details_font)
+          g.draw_text(20 + w, self.margin_top + self.proficiency_margin_height + 60 + index*20,
+                      text=word,
+                      font=self.word_details_font,
+                      color=color.RED,
+                      align=Align.TopLeft)
+
+
 
     # Draw word details
     if self.revealed and self.card.word is not None:

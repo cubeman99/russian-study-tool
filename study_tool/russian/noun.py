@@ -44,6 +44,9 @@ class Noun(Word):
       return Gender.Masculine
     return None
 
+  def get_all_forms(self):
+    return [x for x in self.declension.values()]
+
   def get_declension(self,
                      plurality=Plurality.Singular,
                      case=Case.Nominative):

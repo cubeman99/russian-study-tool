@@ -2,6 +2,7 @@ from study_tool.russian.types import *
 
 CONSONANTS = "бвгджзклмнпрстфхцчшщй"
 VOWELS = "аэыуояеёюи"
+LETTERS = CONSONANTS + VOWELS + "ьъ"
 ACCENT_CHAR = "´"
 ACCENT_CHARS = "'´`"
 HARD_VOWELS = "аоуыэ"
@@ -99,6 +100,9 @@ class Word:
     self.word_type = WordType.Noun
     self.name = AccentedText()
     self.examples = []
+
+  def get_all_forms(self):
+    return [x for x in self.declension.values()]
 
   def serialize(self):
     data = {"type": self.word_type.name,

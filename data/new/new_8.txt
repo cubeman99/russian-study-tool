@@ -1,0 +1,26 @@
+#==============================================================================
+@name New 7
+#==============================================================================
+
+@type adjective
+че'стный - honest
+лоя'льный - loyal
+нейтра'льный - neutral
+
+@type adverb
+
+@type noun
+доброта' - kindness
+гармо'ния - harmony
+прави'тель - ruler
+
+@type verb
+голо'совать - to vote
+останови'ть - to stop
+
+@type phrase
+
+@type preposition
+
+@type other
+

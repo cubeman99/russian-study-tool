@@ -1,0 +1,50 @@
+#==============================================================================
+@name New 6
+#==============================================================================
+
+@type adjective
+лу'чший - best
+солёный – salty
+уве'ренный - sure, certain, confident
+со'нный - sleepy
+
+@type adverb
+ина'че - differently, otherwise
+да'льше - farther, further
+да'же - even
+наверняка' - for sure
+ро'вно - exactly, smooth
+
+@type noun
+сове'т – advice, recommendation
+глава' - chapter
+посы'лка – parcel, package
+кора'бль – ship
+колье' – necklace
+сро'к – date, term, time, period 
+украше'ние – decoration, adornment
+
+@type verb
+счита'ть - to count, consider
+полу'чить - to receive, get, obtain
+ока'заться - find oneself, turn out
+стано'виться - to become, begin, come
+заме'тить - to notice, observe
+доста'вить - to deliver
+##спра'виться - to cope
+приглаша'ть - to invite
+положи'ть – to put, to lay
+скрыва'ть - to hide, keep secret, cover from sight
+случи'ться - to happen
+отступи'ть - to retreat, step back
+
+@type phrase
+и вот так, ... - and so, ...
+не за что - it's nothing, don't mention it
+ровно неделю назад - exactly one week ago
+
+@type preposition
+
+@type other
+ве'дь - after all
+

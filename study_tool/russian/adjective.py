@@ -11,6 +11,10 @@ class Adjective(Word):
       for case in Case:
         self.declension[(gender, case)] = AccentedText("")
 
+  def get_all_forms(self):
+    return ([x for x in self.declension.values()] + 
+            [x for x in self.short_form.values()])
+
   def get_declension(self,
                      gender=Gender.Masculine,
                      plurality=Plurality.Singular,

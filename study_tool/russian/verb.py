@@ -57,6 +57,15 @@ class Verb(Word):
     self.adverbial_participles = {Tense.Present: "",
                                  Tense.Past: ""}
 
+  def get_all_forms(self):
+    return ([self.infinitive] +
+            [x for x in self.past.values()] +
+            [x for x in self.non_past.values()] +
+            [x for x in self.imperative.values()] +
+            [x for x in self.active_participles.values()] +
+            [x for x in self.passive_participles.values()] +
+            [x for x in self.adverbial_participles.values()])
+
   def remove_reflexive_suffix(self, word) -> AccentedText:
     if word.text.endswith("ся") or word.text.endswith("сь"):
      return AccentedText(word.text[:-2], word.accents)

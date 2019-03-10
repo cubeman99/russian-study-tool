@@ -116,4 +116,10 @@ ATTRIBUTE_COLORS = {
   CardAttributes.Imperfective: color.rgb(0, 160, 180),
   CardAttributes.Unidirectional: color.rgb(0, 180, 0),
   CardAttributes.Multidirectional: color.rgb(180, 180, 0),
+  CardAttributes.Nominative: color.gray(50),
+  CardAttributes.Accusative: color.rgb(160, 0, 0),
+  CardAttributes.Dative: color.rgb(100, 0, 0),
+  CardAttributes.Genetive: color.rgb(80, 15, 0),
+  CardAttributes.Prepositional: color.rgb(0, 100, 0),
+  CardAttributes.Instrumental: color.rgb(100, 100, 0),
   }
