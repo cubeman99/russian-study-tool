@@ -49,9 +49,10 @@ class StudyMetrics:
 
 
 class CardDatabase:
-  def __init__(self):
+  def __init__(self, word_database):
     self.cards = {}
     self.metrics_history = {}
+    self.word_database = word_database
 
   def get_study_metrics(self) -> StudyMetrics:
     metrics = StudyMetrics()
@@ -68,7 +69,16 @@ class CardDatabase:
     if key in self.cards:
       raise Exception("Duplicate card: " + repr(key))
     self.cards[key] = card
+    word = self.word_database.download_word(
+      name=card.word_name,
+      word_type=card.word_type)
+    if word is not None and word.complete:
+      self.word_database.populate_card_details(card=card)
   
+  def iter_cards(self):
+    for _, card in self.cards.items():
+      yield card
+
   def serialize_study_data(self):
     state = {"save_time": time.time(),
              "cards": [],
@@ -225,6 +235,7 @@ class CardDatabase:
                   card.add_attributes(attrs=split_attributes[split_index],
                                       side=1 - left_side)
                 card_set.cards.append(card)
+                card.generate_word_name()
                 self.add_card(card)
             else:
               raise Exception("unable to tokenize line")

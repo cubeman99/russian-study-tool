@@ -12,8 +12,8 @@ from study_tool.config import Config
 from study_tool.card import CardSide
 from study_tool.card_set import CardSet, CardSetPackage
 from study_tool.menu import Menu
-from study_tool.state import *
-from study_tool.sub_menu_state import SubMenuState
+from study_tool.states.state import *
+from study_tool.states.sub_menu_state import SubMenuState
 from study_tool.scheduler import ScheduleMode
 
 class MenuState(State):

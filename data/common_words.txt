@@ -1,0 +1,23 @@
+#==============================================================================
+@name Common Words
+#==============================================================================
+
+@type adjective
+
+@type adverb
+
+@type noun
+
+@type pronoun
+э'то - this, it is
+
+
+@type verb
+
+@type preposition
+
+@type other
+
+@type conjunction
+
+@type interjection

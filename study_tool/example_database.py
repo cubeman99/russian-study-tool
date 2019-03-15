@@ -56,6 +56,7 @@ class ExampleDatabase:
     for story in self.stories:
       for chapter in story.chapters:
         for paragraph in chapter.paragraphs:
+          paragraph = paragraph.text
           for sentence in split_sentences(paragraph):
             instances = []
             found = False
@@ -106,6 +107,7 @@ class ExampleDatabase:
   def load_story_text_file(self, path: str):
     story = Story()
     chapter = None
+    english = False
 
     with open(path, "r", encoding="utf8") as f:
       for line in f:
@@ -115,18 +117,28 @@ class ExampleDatabase:
           command = tokens[0][1:].lower()
           parameters = tokens[1:]
           if command == "title":
-            story.title = " ".join(parameters)
+            story.title = AccentedText(" ".join(parameters))
+            english = False
           elif command == "url":
             story.url = parameters[0]
           elif command == "chapter":
             chapter = Chapter()
             chapter.number = int(parameters[0])
-            chapter.title = " ".join(parameters[1:])
+            chapter.title = AccentedText(" ".join(parameters[1:]))
             story.chapters.append(chapter)
+            english = False
+          elif command == "english":
+            english = True
           else:
             raise KeyError(command)
         elif len(line) > 0:
-          chapter.paragraphs.append(line)
+          if chapter is None:
+            chapter = Chapter()
+            chapter.number = 1
+            chapter.title = AccentedText(story.title)
+            story.chapters.append(chapter)
+          if not english:
+            chapter.paragraphs.append(AccentedText(line))
 
     if len(story.chapters) == 0:
       raise Exception("No chapters")

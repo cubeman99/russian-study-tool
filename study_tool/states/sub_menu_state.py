@@ -9,7 +9,7 @@ from cmg.graphics import *
 from cmg.input import *
 from study_tool.config import Config
 from study_tool.menu import Menu
-from study_tool.state import *
+from study_tool.states.state import *
 
 class SubMenuState(State):
   def __init__(self, title, options=()):

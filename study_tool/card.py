@@ -40,10 +40,17 @@ class Card:
     self.word_type = None
     self.word = None
     self.source = None
+    self.word_name = AccentedText(self.russian)
 
     # used by Scheduler
     self.rep = None
     self.age = 0
+
+  def generate_word_name(self):
+    self.word_name = AccentedText(self.russian)
+    word_tokens = list(split_words(self.russian.text))
+    if len(word_tokens) > 0:
+      self.word_name = AccentedText(word_tokens[0][0])
 
   def get_key(self):
     return (self.word_type, self.russian.text, self.english.text)

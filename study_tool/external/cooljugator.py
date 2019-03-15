@@ -73,6 +73,7 @@ def get_noun_info(dictionary_form):
     else:
       noun.gender = None
       noun.indeclinable = True
+    noun.complete = True
     return noun
   except:
     Config.logger.error("Error downloading noun data for: " + dictionary_form.text)
@@ -102,6 +103,7 @@ def get_adjective_info(dictionary_form):
         adj.short_form[gender] = get_conjugation(root, "short_" + letter)
       except:
         adj.short_form[gender] = AccentedText("-")
+    adj.complete = True
     return adj
   except:
     Config.logger.error("Error downloading adjective data for: " + dictionary_form.text)
@@ -179,6 +181,7 @@ def get_verb_info(infinitive):
     #    russian = russian.replace(a, b)
     #  verb.examples.append((russian, english))
 
+    verb.complete = True
     return verb
   except:
     Config.logger.error("Error downloading verb data for: " + infinitive.text)

@@ -1,26 +1,58 @@
 #==============================================================================
-@name New 7
+@name New 8
 #==============================================================================
 
 @type adjective
 че'стный - honest
 лоя'льный - loyal
 нейтра'льный - neutral
+медли'тельный - slow functioning, slow moving
+тро'гательный - touching, moving
 
 @type adverb
+одна'жды - once, one day
 
 @type noun
 доброта' - kindness
 гармо'ния - harmony
 прави'тель - ruler
+полтора' - one and a half
+встре'ча - meeting, encounter
+мёд - honey
+я'года - berry
+гра'дус - degree (temperature)
+боло'то (боло'та) - swamp (swamps)
+ко'сть - bone
+бассе'йн - pool
+ра'зница - difference
+маскиро'вка - disguise
+кро'вь - blood
+за'мок - castle
 
 @type verb
 голо'совать - to vote
 останови'ть - to stop
+погляде'ть - to have a look
+напа'сть (на) - to attack (someone) @pf
+называ'ть - to call, name @impf
+броди'ть - to wander, roam
+дли'ться - to last
+охлади'ться - to cool down
+пры'гать - to jump @impf
 
 @type phrase
+в при'нципе - basically
+с осторо'жностью - carefully, with care
+до[verb] + до + gen. @gen - to reach, get as far as
+Ва́ше Вели́чество - Your Highness
 
 @type preposition
+о'коло @gen - around, near
+бли'з @gen - near
+по'сле @gen - after
+до @gen - before, until
 
 @type other
 
+@type conjunction
+хотя' бы - at least, just, if only

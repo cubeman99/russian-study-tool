@@ -13,15 +13,16 @@ from cmg.application import *
 from enum import IntEnum
 from study_tool.card_set import *
 from study_tool.config import Config
-from study_tool.menu_state import MenuState
-from study_tool.study_state import StudyState
-from study_tool.card_list_state import CardListState
+from study_tool.states.menu_state import MenuState
+from study_tool.states.study_state import StudyState
+from study_tool.states.card_list_state import CardListState
 from study_tool.card_database import CardDatabase
 from study_tool.scheduler import ScheduleMode
-from study_tool.keyboard_state import KeyboardState
+from study_tool.states.keyboard_state import KeyboardState
 from study_tool.russian import conjugation
 from study_tool.word_database import WordDatabase
 from study_tool.example_database import ExampleDatabase
+from study_tool.states.read_text_state import ReadTextState
 
 DEAD_ZONE = 0.01
 
@@ -45,17 +46,20 @@ class StudyCardsApp(Application):
       Input(index=1, name="Left", reversed=True, max=1, min=-1),
       Input(index=3, name="Right", reversed=True, max=1, min=-1)]
 
-    # Load all card data
-    self.card_database = CardDatabase()
-    root_path = "data"
-    print("Loading card data from: " + root_path)
-    self.root = self.card_database.load_card_package_directory(
-      path=root_path, name="words")
+    self.root_path = "data"
 
     # Load word data
     self.word_data_file_name = "word_data.json"
     self.word_database = WordDatabase()
     self.load_word_database()
+    print(self.word_database.get_word(word_type=WordType.Adjective, name=AccentedText("чёрный")))
+
+    # Load all card data
+    self.card_database = CardDatabase(word_database=self.word_database)
+    print("Loading card data from: " + self.root_path)
+    self.root = self.card_database.load_card_package_directory(
+      path=self.root_path, name="words")
+    self.save_word_database()
     
     # Load example data
     self.example_data_file_name = "examples.json"
@@ -77,10 +81,11 @@ class StudyCardsApp(Application):
     #self.push_study_state(self.root["google"]["google_doc_verbs"], CardSide.English)
     #self.push_study_state(self.root["nouns"]["nouns_arts"], CardSide.English)
     #self.push_study_state(self.root["adjectives"]["adjectives_colors"], CardSide.English)
-    self.push_study_state(self.root["new"]["new_7"], CardSide.English)
+    #self.push_study_state(self.root["new"]["new_7"], CardSide.English)
     #self.root["verbs"]["stems"].get_problem_cards()
     #self.push_card_list_state(self.root.card_sets[1])
     #self.push_state(KeyboardState())
+    self.push_state(ReadTextState())
 
     self.input.bind(pygame.K_ESCAPE, pressed=self.quit)
 
@@ -102,7 +107,7 @@ class StudyCardsApp(Application):
     self.push_state(CardListState(card_set))
 
   def get_card_word_details(self, card):
-    updated = self.word_database.populate_card_details(card)
+    updated = self.word_database.populate_card_details(card, download=True)
     if updated:
       self.save_word_database()
     return card.word
@@ -155,7 +160,7 @@ class StudyCardsApp(Application):
     return self.states[-1]
 
   def save(self):
-    path = os.path.join(self.root.path, self.save_file_name)
+    path = os.path.join(self.root_path, self.save_file_name)
     Config.logger.debug("Saving study data to: " + path)
     state = self.card_database.serialize_study_data()
     self.card_database.deserialize_study_data(state)
@@ -165,7 +170,7 @@ class StudyCardsApp(Application):
     shutil.move(temp_path, path)
 
   def load(self):
-    path = os.path.join(self.root.path, self.save_file_name)
+    path = os.path.join(self.root_path, self.save_file_name)
     if os.path.isfile(path):
       Config.logger.info("Loading study data from: " + path)
       with open(path, "r", encoding="utf8") as f:
@@ -173,29 +178,29 @@ class StudyCardsApp(Application):
         self.card_database.deserialize_study_data(state)
         
   def save_word_database(self):
-    path = os.path.join(self.root.path, self.word_data_file_name)
+    path = os.path.join(self.root_path, self.word_data_file_name)
     Config.logger.debug("Saving word data to: " + path)
     self.word_database.save(path)
 
   def load_word_database(self):
-    path = os.path.join(self.root.path, self.word_data_file_name)
+    path = os.path.join(self.root_path, self.word_data_file_name)
     if os.path.isfile(path):
       Config.logger.info("Loading word data from: " + path)
       self.word_database.load(path)
         
   def save_example_database(self):
-    path = os.path.join(self.root.path, self.example_data_file_name)
+    path = os.path.join(self.root_path, self.example_data_file_name)
     Config.logger.debug("Saving example data to: " + path)
     self.example_database.save(path)
 
   def load_example_database(self):
-    #path = os.path.join(self.root.path, self.example_data_file_name)
+    #path = os.path.join(self.root_path, self.example_data_file_name)
     #if os.path.isfile(path):
     #  Config.logger.info("Loading example data from: " + path)
     #  self.example_database.load(path)
-    for story_filename in os.listdir(self.root.path + "/examples/stories"):
+    for story_filename in os.listdir(self.root_path + "/examples/stories"):
       Config.logger.info("Loading example story " + story_filename)
-      story_path = self.root.path + "/examples/stories/" + story_filename
+      story_path = self.root_path + "/examples/stories/" + story_filename
       self.example_database.load_story_text_file(story_path)
 
   def update(self, dt):

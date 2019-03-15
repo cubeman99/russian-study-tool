@@ -17,8 +17,8 @@ from study_tool.russian.adjective import Adjective
 from study_tool.russian.noun import Noun
 from study_tool.russian.verb import Verb
 from study_tool.scheduler import Scheduler, ScheduleMode
-from study_tool.state import State, Button
-from study_tool.sub_menu_state import SubMenuState
+from study_tool.states.state import State, Button
+from study_tool.states.sub_menu_state import SubMenuState
 
 
 class Row:

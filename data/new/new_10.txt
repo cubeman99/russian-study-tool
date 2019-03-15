@@ -1,0 +1,26 @@
+#==============================================================================
+@name New 10
+#==============================================================================
+
+@type adjective
+бана'льный - banal, commonplace, trite
+
+@type adverb
+
+@type noun
+вступле'ние - introduction, entry
+жи'знь - life
+
+@type verb
+разви'ть - to develop, expand
+
+@type phrase
+
+@type preposition
+
+@type other
+
+@type conjunction
+ита'к - and so
+
+@type interjection

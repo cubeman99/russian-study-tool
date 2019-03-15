@@ -1,3 +1,4 @@
+import re
 from study_tool.russian.types import *
 
 CONSONANTS = "бвгджзклмнпрстфхцчшщй"
@@ -15,6 +16,15 @@ TO_SOFT = {"а": "я",
 
 ACCENT_CHARS = "'’´`\u0301"  # \u0301 is special and rendered on prev char
 STANDARD_ACCENT_CHAR = "'"
+
+SPLIT_WORD_REGEX = re.compile(r"[абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ]+")
+
+def split_sentences(paragraph: str):
+  return re.findall(r"\s*(.*?[\.\?\!]+)\s+", paragraph + " ")
+
+def split_words(text: str):
+  for match in SPLIT_WORD_REGEX.finditer(" " + text + " "):
+    yield (match.group(0), match.start())
 
 
 def get_word_text(word):
@@ -99,10 +109,16 @@ class Word:
   def __init__(self):
     self.word_type = WordType.Noun
     self.name = AccentedText()
+    self.meaning = None
     self.examples = []
+    self.complete = False
+    self.card = None
+
+  def add_card(self, card):
+    self.card = card
 
   def get_all_forms(self):
-    return [x for x in self.declension.values()]
+    return [self.name]
 
   def serialize(self):
     data = {"type": self.word_type.name,
@@ -120,6 +136,7 @@ class Word:
     self.name = AccentedText(data["name"])
     self.word_type = getattr(WordType, data["type"])
     self.examples = []
+    self.complete = True
     for example in data["examples"]:
       self.examples.append((AccentedText(example["Russian"]),
                             AccentedText(example["English"])))
