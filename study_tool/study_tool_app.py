@@ -85,7 +85,7 @@ class StudyCardsApp(Application):
     #self.root["verbs"]["stems"].get_problem_cards()
     #self.push_card_list_state(self.root.card_sets[1])
     #self.push_state(KeyboardState())
-    self.push_state(ReadTextState())
+    #self.push_state(ReadTextState())
 
     self.input.bind(pygame.K_ESCAPE, pressed=self.quit)
 

@@ -112,10 +112,6 @@ class Word:
     self.meaning = None
     self.examples = []
     self.complete = False
-    self.card = None
-
-  def add_card(self, card):
-    self.card = card
 
   def get_all_forms(self):
     return [self.name]
@@ -140,3 +136,10 @@ class Word:
     for example in data["examples"]:
       self.examples.append((AccentedText(example["Russian"]),
                             AccentedText(example["English"])))
+
+  #--------------------------------------------------------------------------
+  # Private methods
+  #--------------------------------------------------------------------------
+
+  def __hash__(self):
+    return hash((self.word_type, self.name.text))

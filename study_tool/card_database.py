@@ -10,6 +10,7 @@ from study_tool.external import googledocs
 from study_tool.russian.types import *
 from study_tool.russian.word import *
 from study_tool.config import Config
+from study_tool.word_database import WordDatabase
 
 
 TOKEN_DELIMETERS = ["--", "–", "-"]
@@ -49,10 +50,18 @@ class StudyMetrics:
 
 
 class CardDatabase:
-  def __init__(self, word_database):
+  def __init__(self, word_database: WordDatabase):
     self.cards = {}
     self.metrics_history = {}
     self.word_database = word_database
+    self.word_to_cards_dict = {}
+
+  def find_cards_by_word(self, word: str):
+    """Find a card by the name of a word."""
+    for word_obj in self.word_database.lookup_word(word):
+      if word_obj in self.word_to_cards_dict:
+        for card in self.word_to_cards_dict[word_obj]:
+          yield card
 
   def get_study_metrics(self) -> StudyMetrics:
     metrics = StudyMetrics()
@@ -69,11 +78,20 @@ class CardDatabase:
     if key in self.cards:
       raise Exception("Duplicate card: " + repr(key))
     self.cards[key] = card
-    word = self.word_database.download_word(
-      name=card.word_name,
-      word_type=card.word_type)
+
+    # Get the Word info associated with this card
+    word = None
+    for card_word_name in card.get_word_names():
+      word = self.word_database.download_word(
+        name=card_word_name,
+        word_type=card.word_type)
     if word is not None and word.complete:
       self.word_database.populate_card_details(card=card)
+    if word is not None:
+      if word not in self.word_to_cards_dict:
+        self.word_to_cards_dict[word] = [card]
+      else:
+        self.word_to_cards_dict[word].append(card)
   
   def iter_cards(self):
     for _, card in self.cards.items():

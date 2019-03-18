@@ -38,9 +38,9 @@ class Card:
     self.proficiency_level = 0  # new/unseen
     self.history = []  # History of True or False markings
     self.word_type = None
-    self.word = None
     self.source = None
     self.word_name = AccentedText(self.russian)
+    self.word = None
 
     # used by Scheduler
     self.rep = None
@@ -51,6 +51,10 @@ class Card:
     word_tokens = list(split_words(self.russian.text))
     if len(word_tokens) > 0:
       self.word_name = AccentedText(word_tokens[0][0])
+  
+  def get_word_names(self):
+    for name, index in split_words(self.russian.text):
+      yield AccentedText(name)
 
   def get_key(self):
     return (self.word_type, self.russian.text, self.english.text)

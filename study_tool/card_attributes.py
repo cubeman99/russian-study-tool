@@ -12,6 +12,8 @@ class CardAttributes(Enum):
   Singular = "sing"
   Plural = "pl"
   NoPural = "nopl"
+  PluralOnly = "pluronly"
+  SingularOnly = "singonly"
   FirstPerson = "1st"
   SecondPerson = "2nd"
   ThirdPerson = "3rd"

@@ -5,10 +5,34 @@
 @key body_parts
 #==============================================================================
 
-лицо' - face
-рука' - hand/arm
-нога' - leg
+те'ло - body
+
 голова' - head
-бёдра - hips
+во'лосы @pluronly - hair
+лицо' - face
+гла'з - eye
+у'хо - ear
+но'с - nose
+ро'т - mouth
+губа' - lip
+зу'б - tooth
+щека' - cheek
+ше'я - neck
+голо'с - voice
+
+плечо' - shoulder
+спина' - back
+гру'дь - chest, breast
 си'ська - boob, tit
 
+рука' - hand/arm
+ло'кот - elbow
+па'лец - finger
+
+живо'т - belly, stomach (exterior)
+та'лия - waist
+бёдра - hips
+
+нога' - leg
+коле'на - knee
+стопа' - foot

@@ -138,6 +138,7 @@
 никогда'   - never
 ника'к     - in no way
 ниско'лько - not at all
+не'сколько - several
 не'где     - there is no place
 не'куда    - there is no place (to go)
 не'когда   - there is no time

@@ -11,6 +11,7 @@ class WordType(IntEnum):
   Other = 8
   Phrase = 9
   Interjection = 10
+  Particle = 11
 
 class Language(IntEnum):
   English = 0

@@ -3,21 +3,35 @@
 #==============================================================================
 
 @type adjective
+то'лько - only
+како'й - what kind of
+тако'й - such a
+э'тот - this
+то'т - that
 
 @type adverb
 
 @type noun
 
 @type pronoun
-э'то - this, it is
-
+э'то - it, this, it is
 
 @type verb
 
 @type preposition
 
 @type other
+во'т - here is
+
+@type particle
+же' - and, but, whereas, as for, as to, after all, this very, this same, then, surely, just, on earth
+бы - would
+то - some 
+нибудь - some, any
 
 @type conjunction
 
 @type interjection
+д'а - yes
+не'т - no
+ну - well

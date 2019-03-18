@@ -1,5 +1,6 @@
 from study_tool.russian.types import *
 from study_tool.russian.word import *
+from study_tool.russian import conjugation
 
 class Adjective(Word):
   def __init__(self):
@@ -8,8 +9,25 @@ class Adjective(Word):
     self.declension = {}
     self.short_form = {}
     for gender in list(Gender) + [None]:
+      self.short_form[gender] = AccentedText("")
       for case in Case:
         self.declension[(gender, case)] = AccentedText("")
+  
+  def auto_generate_forms(self):
+    for gender in list(Gender) + [None]:
+      plurality = Plurality.Plural if gender is None else Plurality.Singular
+      self.short_form[gender] = conjugation.decline_adjective(
+        self.name.text,
+        gender=gender,
+        plurality=plurality,
+        short=True)
+      for case in Case:
+        self.declension[(gender, case)] = conjugation.decline_adjective(
+          self.name.text,
+          case=case,
+          gender=gender,
+          plurality=plurality,
+          short=False)
 
   def get_all_forms(self):
     return ([x for x in self.declension.values()] + 

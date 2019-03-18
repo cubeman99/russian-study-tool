@@ -4,23 +4,73 @@
 
 @type adjective
 бана'льный - banal, commonplace, trite
+ру'сый - light brown (hair color)
+клёво - cool
+ско'льзкий - slippery
+ди'кий - wild
+то'щий - skinny
+реа'льный - real
 
 @type adverb
+раньше - earlier
+бурно - violently
+позже - later
+также - also (one subject, different thing)
 
 @type noun
 вступле'ние - introduction, entry
 жи'знь - life
+удивле'ние - suprise
+ме'сть - revenge
+тропа' - trail
+мело'к - chalk
+столо'вая (ко'мната) - dining (room)
+подва'л - basement
+ле'стница - stairs
+убе'жище - shelter, refuge, asylum
+ра'дость - joy
+шу'м - noise
+сара'й - barn
+рису'нок - drawing
+табуре'тка - stool
+я'щик - crate, box, chest
+молото'к - hammer
+а'рфа - harp
+мя'ч - ball (sport)
+ша'р - orb, sphere, globe, ball
+доска' - board
+спо'соб - way, method
+улы'бка - smile
 
 @type verb
 разви'ть - to develop, expand
+воскли'кнуть - to exclaim
+воня'ть - to stink
+прове'рить - to check
+ора'ть - to yell @impf
+хвати'ть - to suffice
+вклю'чить - to turn on
+вы'ключить - to turn off
+проигра'ть - to lose
+продолжа'ть - to continue
+согласи'ть - to agree
+отве'тить - to answer, reply
+спроси'ть - to ask (about something)
+спа'ть - to sleep
+вскри'кнуть - to shout out loudly
 
 @type phrase
+слава богу - Thank God
+хва'тит ____! - enough ____!
+так же как и -- like, similar too, as usual
 
 @type preposition
+ми'мо @gen -- past (typical with про- motion verb)
 
 @type other
 
 @type conjunction
 ита'к - and so
+по'сле тово' - after that
 
 @type interjection

@@ -1,8 +1,9 @@
-@type pronoun
 #==============================================================================
 @name Pronouns
 @key pronouns
 #==============================================================================
+
+@type pronoun
 
 кто' - who
 како'й - what sort of
@@ -11,6 +12,9 @@
 себя' - self @acc @gen
 себе' - self @prep @dat
 собо'й - self @instr
+ве'сь - the whole, all the
+все' - all
+всё - everything
 
 # TODO: indefinite prefix, negative prefix не
 
@@ -21,3 +25,8 @@
 са'м - (them)self, used for emphasis
 са'мый - the very
 ве'сь - the whole, all
+
+# Negative pronouns
+ничто' - nothing
+никто' - noone
+

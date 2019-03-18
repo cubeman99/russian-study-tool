@@ -1,4 +1,5 @@
 from study_tool.russian.types import *
+from study_tool.russian.word import AccentedText
 
 CONSONANTS = "б,в,г,д,ж,з,к,л,м,н,п,р,с,т,ф,х,ц,ч,ш,щ,й"
 VOWELS = "а,э,ы,у,о,я,е,ё,ю,и".split(",")
@@ -21,14 +22,16 @@ def simplify(word):
       word = word.replace(c, "")
   return word, stress
 
-def decline_adjective(adj,
+def decline_adjective(adj: AccentedText,
                       case=Case.Nominative,
                       gender=Gender.Masculine,
                       plurality=Plurality.Singular,
                       animacy=Animacy.Inanimate,
                       short=False):
-  adj, stress = simplify(adj)
+  adj, stress = simplify(repr(adj))
   end_stressed = stress == len(adj) - 2
+  if not (adj.endswith("ый") or adj.endswith("ой") or adj.endswith("ий")):
+    return AccentedText(adj)
   stem = adj[:-2]
   a = "а"
   y = "у"
@@ -122,9 +125,10 @@ def decline_adjective(adj,
         result = stem + s1 + "й"
       else:
         result = stem + s2 + "м"
-
-  result = result[:stress + 1] + ACCENT_CHAR + result[stress + 1:]
-  return result
+  if stress is not None:
+    return AccentedText(result[:stress + 1] + ACCENT_CHAR + result[stress + 1:])
+  else:
+    return AccentedText(result)
 
 
 #column_width = 20

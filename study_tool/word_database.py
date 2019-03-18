@@ -34,15 +34,14 @@ class WordDatabase:
     return None
 
   def lookup_word(self, word: str) -> Word:
-    """
-    Looks up a Word object by text, in any form.
-    """
+    """Looks up a Word object by text, in any form."""
     key = word.lower()
+    word_objs = []
     if key in self.word_dictionary:
-      return self.word_dictionary[key]
-    if key in self.word_dictionary_lax:
-      return self.word_dictionary_lax[key]
-    return None
+      word_objs += self.word_dictionary[key]
+    if "ё" not in key and key in self.word_dictionary_lax:
+      word_objs += self.word_dictionary_lax[key]
+    return word_objs
 
   def download_word(self, name: AccentedText, word_type: WordType) -> Word:
     """
@@ -52,22 +51,26 @@ class WordDatabase:
     key = (word_type, name.text)
     if key in self.words and self.words[key].complete:
       return self.words[key]
+
     if self.__is_word_404_on_cooljugator(word_type=word_type, name=name.text):
       if key not in self.words:
         self.words[key] = self.__create_default_word(
           name=name, word_type=word_type)
-      return None
+      return self.words[key]
+
     if key in self.words:
       del self.words[key]
-    if word_type in WORD_TYPE_TYPES:
-      if word_type == WordType.Verb:
-        word = self.__add_verb(name)
-      elif word_type == WordType.Noun:
-        word = self.__add_noun(name)
-      elif word_type == WordType.Adjective:
-        word = self.__add_adjective(name)
+    if word_type == WordType.Verb:
+      word = self.__add_verb(name)
+    elif word_type == WordType.Noun:
+      word = self.__add_noun(name)
+    elif word_type == WordType.Adjective:
+      word = self.__add_adjective(name)
     else:
-      return None
+      self.words[key] = self.__create_default_word(
+        name=name, word_type=word_type)
+      return self.words[key]
+
     if word is not None and word.word_type != word_type:
       raise Exception(word.word_type)
     return word
@@ -77,7 +80,7 @@ class WordDatabase:
                            word_type=card.word_type)
 
   def populate_card_details(self, card, download=False) -> bool:
-    if card.word is None and card.word_type is not None:
+    if card.word_type is not None:
       word = self.get_word(name=card.word_name,
                            word_type=card.word_type)
       if download and (word is None or not word.complete):
@@ -88,7 +91,6 @@ class WordDatabase:
                                         word_type=card.word_type,
                                         meaning=card.english)
       if word is not None:
-        card.word = word
         if isinstance(word, Verb):
           if word.aspect == Aspect.Imperfective:
             card.add_attribute(CardAttributes.Imperfective, side=CardSide.English)
@@ -111,7 +113,7 @@ class WordDatabase:
             word.indeclinable = True
             card.add_attribute(CardAttributes.Indeclinable,
                                 side=CardSide.Russian)
-        word.add_card(card)
+        card.word = word
         return True
     return False
 
@@ -121,10 +123,7 @@ class WordDatabase:
     if key in self.words:
       raise Exception("Duplicate word: {} ({})".format(word.name.text, word.word_type.name))
     for form in word.get_all_forms():
-      self.word_dictionary[form.text] = word
-      if "ё" in form.text:
-        new_key = form.text.replace("ё", "е")
-        self.word_dictionary_lax[new_key] = word
+      self.__add_to_dictionary(form=form, word=word)
     self.words[key] = word
     return word
 
@@ -181,11 +180,30 @@ class WordDatabase:
   #--------------------------------------------------------------------------
   # Private methods
   #--------------------------------------------------------------------------
+  
+  def __add_to_dictionary(self, form: AccentedText, word: Word):
+    """Add a word form to the lookup dictionary."""
+    form = form.text
+    if form not in self.word_dictionary:
+      self.word_dictionary[form] = [word]
+    else:
+      self.word_dictionary[form].append(word)
+    if "ё" in form:
+      form = form.replace("ё", "е")
+      if form not in self.word_dictionary_lax:
+        self.word_dictionary_lax[form] = [word]
+      else:
+        self.word_dictionary_lax[form].append(word)
    
   def __create_default_word(self, name: str, word_type: WordType, meaning=""):
-    word = Word()
-    word.word_type = word_type
-    word.name = name
+    if word_type == WordType.Adjective:
+      word = Adjective()
+      word.name = AccentedText(name)
+      word.auto_generate_forms()
+    else:
+      word = Word()
+      word.word_type = word_type
+      word.name = AccentedText(name)
     word.meaning = AccentedText(meaning)
     self.add_word(word)
     return word
@@ -224,7 +242,6 @@ class WordDatabase:
     return adjective
 
   def __note_cooljugator_404_word(self, word_type: WordType, name: str):
-    #print("Marking " + name + " as 404")
     self.cooljugator_404_words.append((word_type, name))
       
   def is_word_404_on_cooljugator(self, name: str, word_type: WordType) -> bool:

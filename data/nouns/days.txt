@@ -49,3 +49,8 @@
 послеза'втра - day after tomorrow
 # по̀слеза́втра ` ' <-- sub-accent
 позавчера' - day before yesterday
+
+у'тро - morning
+ве'чер - evening
+но'чь - night
+

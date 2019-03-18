@@ -34,7 +34,6 @@
 озву'чка - voice acting
 кома'нда - team (sport team)
 приме'р - example
-во'лосы - hair
 
 @type verb
 забыва́ть – to forget
