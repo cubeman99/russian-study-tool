@@ -54,6 +54,31 @@ class CardAttributes(Enum):
   VerbSuffixZha = "verb.suffix.zha"
   ResonantStem = "stem.resonant"
   ObstruentStem = "stem.obstruent"
+  Past = "past"
+  NonPast = "nonpast"
+  AdjectiveAsNoun = "adjasnoun"
+  VerbOfMotion = "verb_of_motion"
+
+CASE_TO_ATTRIBUTE = {
+  Case.Nominative: CardAttributes.Nominative,
+  Case.Accusative: CardAttributes.Accusative,
+  Case.Genetive: CardAttributes.Genetive,
+  Case.Prepositional: CardAttributes.Prepositional,
+  Case.Dative: CardAttributes.Dative,
+  Case.Instrumental: CardAttributes.Instrumental}
+
+PLURALITY_TO_ATTRIBUTE = {
+  Plurality.Singular: CardAttributes.Singular,
+  Plurality.Plural: CardAttributes.Plural}
+
+ASPECT_TO_ATTRIBUTE = {
+  Aspect.Imperfective: CardAttributes.Imperfective,
+  Aspect.Perfective: CardAttributes.Perfective}
+
+PERSON_TO_ATTRIBUTE = {
+  Person.First: CardAttributes.FirstPerson,
+  Person.Second: CardAttributes.SecondPerson,
+  Person.Third: CardAttributes.ThirdPerson}
 
 GENDER_TO_ATTRIBUTE = {
   Gender.Masculine: CardAttributes.Masculine,
@@ -108,6 +133,8 @@ ATTRIBUTE_NAMES = {
   CardAttributes.VerbSuffixZha:  "Suffix -жа",
   CardAttributes.ObstruentStem:  "Obstruent Stem",
   CardAttributes.ResonantStem:   "Resonant Stem",
+  CardAttributes.VerbOfMotion:   "Verb of Motion",
+  CardAttributes.AdjectiveAsNoun: "Adj. Used as Noun"
   }
 
 ATTRIBUTE_COLORS = {

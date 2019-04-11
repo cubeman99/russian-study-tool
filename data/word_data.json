@@ -28,7 +28,11 @@
         "какой",
         "такой",
         "этот",
-        "тот"
+        "тот",
+        "действительно",
+        "животное",
+        "положитеэльный",
+        "срочно"
       ],
       "Noun": [
         "волосы",
@@ -222,7 +226,13 @@
         "одно",
         "одна",
         "одни",
-        "две"
+        "две",
+        "кукла",
+        "лень",
+        "Чихать",
+        "чихнуть",
+        "чихать",
+        "слуэх"
       ],
       "Verb": [
         "охладиться",
@@ -51317,6 +51327,6974 @@
       "examples": [],
       "name": "лестница",
       "type": "Noun"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "подзе'мную",
+            "Dative": "подзе'мной",
+            "Genetive": "подзе'мной",
+            "Instrumental": "подзе'мной",
+            "Nominative": "подзе'мная",
+            "Prepositional": "подзе'мной"
+          },
+          "Masculine": {
+            "Accusative": "подзе'много",
+            "Dative": "подзе'мному",
+            "Genetive": "подзе'много",
+            "Instrumental": "подзе'мным",
+            "Nominative": "подзе'мный",
+            "Prepositional": "подзе'мном"
+          },
+          "Neuter": {
+            "Accusative": "подзе'мное",
+            "Dative": "подзе'мному",
+            "Genetive": "подзе'много",
+            "Instrumental": "подзе'мным",
+            "Nominative": "подзе'мное",
+            "Prepositional": "подзе'мном"
+          },
+          "Plural": {
+            "Accusative": "подзе'мных",
+            "Dative": "подзе'мным",
+            "Genetive": "подзе'мных",
+            "Instrumental": "подзе'мными",
+            "Nominative": "подзе'мные",
+            "Prepositional": "подзе'мных"
+          }
+        },
+        "short_form": {
+          "Femanine": "-",
+          "Masculine": "-",
+          "Neuter": "-",
+          "Plural": "-"
+        }
+      },
+      "examples": [],
+      "name": "подземный",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "подво'дную",
+            "Dative": "подво'дной",
+            "Genetive": "подво'дной",
+            "Instrumental": "подво'дной",
+            "Nominative": "подво'дная",
+            "Prepositional": "подво'дной"
+          },
+          "Masculine": {
+            "Accusative": "подво'дного",
+            "Dative": "подво'дному",
+            "Genetive": "подво'дного",
+            "Instrumental": "подво'дным",
+            "Nominative": "подво'дный",
+            "Prepositional": "подво'дном"
+          },
+          "Neuter": {
+            "Accusative": "подво'дное",
+            "Dative": "подво'дному",
+            "Genetive": "подво'дного",
+            "Instrumental": "подво'дным",
+            "Nominative": "подво'дное",
+            "Prepositional": "подво'дном"
+          },
+          "Plural": {
+            "Accusative": "подво'дных",
+            "Dative": "подво'дным",
+            "Genetive": "подво'дных",
+            "Instrumental": "подво'дными",
+            "Nominative": "подво'дные",
+            "Prepositional": "подво'дных"
+          }
+        },
+        "short_form": {
+          "Femanine": "-",
+          "Masculine": "-",
+          "Neuter": "-",
+          "Plural": "-"
+        }
+      },
+      "examples": [],
+      "name": "подводный",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "ядови'тую",
+            "Dative": "ядови'той",
+            "Genetive": "ядови'той",
+            "Instrumental": "ядови'той",
+            "Nominative": "ядови'тая",
+            "Prepositional": "ядови'той"
+          },
+          "Masculine": {
+            "Accusative": "ядови'того",
+            "Dative": "ядови'тому",
+            "Genetive": "ядови'того",
+            "Instrumental": "ядови'тым",
+            "Nominative": "ядови'тый",
+            "Prepositional": "ядови'том"
+          },
+          "Neuter": {
+            "Accusative": "ядови'тое",
+            "Dative": "ядови'тому",
+            "Genetive": "ядови'того",
+            "Instrumental": "ядови'тым",
+            "Nominative": "ядови'тое",
+            "Prepositional": "ядови'том"
+          },
+          "Plural": {
+            "Accusative": "ядови'тых",
+            "Dative": "ядови'тым",
+            "Genetive": "ядови'тых",
+            "Instrumental": "ядови'тыми",
+            "Nominative": "ядови'тые",
+            "Prepositional": "ядови'тых"
+          }
+        },
+        "short_form": {
+          "Femanine": "ядови'та",
+          "Masculine": "ядови'т",
+          "Neuter": "ядови'то",
+          "Plural": "ядови'ты"
+        }
+      },
+      "examples": [],
+      "name": "ядовитый",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "наре'чия",
+            "Dative": "наре'чиям",
+            "Genetive": "наре'чий",
+            "Instrumental": "наре'чиями",
+            "Nominative": "наре'чия",
+            "Prepositional": "наре'чиях"
+          },
+          "Singular": {
+            "Accusative": "наре'чие",
+            "Dative": "наре'чию",
+            "Genetive": "наре'чия",
+            "Instrumental": "наре'чием",
+            "Nominative": "наре'чие",
+            "Prepositional": "наре'чии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "наречие",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "а'рмии",
+            "Dative": "а'рмиям",
+            "Genetive": "а'рмий",
+            "Instrumental": "а'рмиями",
+            "Nominative": "а'рмии",
+            "Prepositional": "а'рмиях"
+          },
+          "Singular": {
+            "Accusative": "а'рмию",
+            "Dative": "а'рмии",
+            "Genetive": "а'рмии",
+            "Instrumental": "а'рмией",
+            "Nominative": "а'рмия",
+            "Prepositional": "а'рмии"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "армия",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "би'твы",
+            "Dative": "би'твам",
+            "Genetive": "би'тв",
+            "Instrumental": "би'твами",
+            "Nominative": "би'твы",
+            "Prepositional": "би'твах"
+          },
+          "Singular": {
+            "Accusative": "би'тву",
+            "Dative": "би'тве",
+            "Genetive": "би'твы",
+            "Instrumental": "би'твой",
+            "Nominative": "би'тва",
+            "Prepositional": "би'тве"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "битва",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "бо'чки",
+            "Dative": "бо'чкам",
+            "Genetive": "бо'чек",
+            "Instrumental": "бо'чками",
+            "Nominative": "бо'чки",
+            "Prepositional": "бо'чках"
+          },
+          "Singular": {
+            "Accusative": "бо'чку",
+            "Dative": "бо'чке",
+            "Genetive": "бо'чки",
+            "Instrumental": "бо'чкой",
+            "Nominative": "бо'чка",
+            "Prepositional": "бо'чке"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "бочка",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "горизо'нты",
+            "Dative": "горизо'нтам",
+            "Genetive": "горизо'нтов",
+            "Instrumental": "горизо'нтами",
+            "Nominative": "горизо'нты",
+            "Prepositional": "горизо'нтах"
+          },
+          "Singular": {
+            "Accusative": "горизо'нт",
+            "Dative": "горизо'нту",
+            "Genetive": "горизо'нта",
+            "Instrumental": "горизо'нтом",
+            "Nominative": "горизо'нт",
+            "Prepositional": "горизо'нте"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "горизонт",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "ками'ны",
+            "Dative": "ками'нам",
+            "Genetive": "ками'нов",
+            "Instrumental": "ками'нами",
+            "Nominative": "ками'ны",
+            "Prepositional": "ками'нах"
+          },
+          "Singular": {
+            "Accusative": "ками'н",
+            "Dative": "ками'ну",
+            "Genetive": "ками'на",
+            "Instrumental": "ками'ном",
+            "Nominative": "ками'н",
+            "Prepositional": "ками'не"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "камин",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "дымохо'ды",
+            "Dative": "дымохо'дам",
+            "Genetive": "дымохо'дов",
+            "Instrumental": "дымохо'дами",
+            "Nominative": "дымохо'ды",
+            "Prepositional": "дымохо'дах"
+          },
+          "Singular": {
+            "Accusative": "дымохо'д",
+            "Dative": "дымохо'ду",
+            "Genetive": "дымохо'да",
+            "Instrumental": "дымохо'дом",
+            "Nominative": "дымохо'д",
+            "Prepositional": "дымохо'де"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "дымоход",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "лу'жи",
+            "Dative": "лу'жам",
+            "Genetive": "лу'ж",
+            "Instrumental": "лу'жами",
+            "Nominative": "лу'жи",
+            "Prepositional": "лу'жах"
+          },
+          "Singular": {
+            "Accusative": "лу'жу",
+            "Dative": "лу'же",
+            "Genetive": "лу'жи",
+            "Instrumental": "лу'жей",
+            "Nominative": "лу'жа",
+            "Prepositional": "лу'же"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "лужа",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "о'череди",
+            "Dative": "очередя'м",
+            "Genetive": "очереде'й",
+            "Instrumental": "очередя'ми",
+            "Nominative": "о'череди",
+            "Prepositional": "очередя'х"
+          },
+          "Singular": {
+            "Accusative": "о'чередь",
+            "Dative": "о'череди",
+            "Genetive": "о'череди",
+            "Instrumental": "о'чередью",
+            "Nominative": "о'чередь",
+            "Prepositional": "о'череди"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "очередь",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "я'ды",
+            "Dative": "я'дам",
+            "Genetive": "я'дов",
+            "Instrumental": "я'дами",
+            "Nominative": "я'ды",
+            "Prepositional": "я'дах"
+          },
+          "Singular": {
+            "Accusative": "я'д",
+            "Dative": "я'ду",
+            "Genetive": "я'да",
+            "Instrumental": "я'дом",
+            "Nominative": "я'д",
+            "Prepositional": "я'де"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "яд",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "янтари'",
+            "Dative": "янтаря'м",
+            "Genetive": "янтаре'й",
+            "Instrumental": "янтаря'ми",
+            "Nominative": "янтари'",
+            "Prepositional": "янтаря'х"
+          },
+          "Singular": {
+            "Accusative": "янта'рь",
+            "Dative": "янтарю'",
+            "Genetive": "янтаря'",
+            "Instrumental": "янтарём",
+            "Nominative": "янта'рь",
+            "Prepositional": "янтаре'"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "янтарь",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "ширины'",
+            "Dative": "ширина'м",
+            "Genetive": "шири'н",
+            "Instrumental": "ширина'ми",
+            "Nominative": "ширины'",
+            "Prepositional": "ширина'х"
+          },
+          "Singular": {
+            "Accusative": "ширину'",
+            "Dative": "ширине'",
+            "Genetive": "ширины'",
+            "Instrumental": "ширино'й",
+            "Nominative": "ширина'",
+            "Prepositional": "ширине'"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "ширина",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "огни'",
+            "Dative": "огня'м",
+            "Genetive": "огне'й",
+            "Instrumental": "огня'ми",
+            "Nominative": "огни'",
+            "Prepositional": "огня'х"
+          },
+          "Singular": {
+            "Accusative": "ого'нь",
+            "Dative": "огню'",
+            "Genetive": "огня'",
+            "Instrumental": "огнём",
+            "Nominative": "ого'нь",
+            "Prepositional": "огне'"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "огонь",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "пожа'ры",
+            "Dative": "пожа'рам",
+            "Genetive": "пожа'ров",
+            "Instrumental": "пожа'рами",
+            "Nominative": "пожа'ры",
+            "Prepositional": "пожа'рах"
+          },
+          "Singular": {
+            "Accusative": "пожа'р",
+            "Dative": "пожа'ру",
+            "Genetive": "пожа'ра",
+            "Instrumental": "пожа'ром",
+            "Nominative": "пожа'р",
+            "Prepositional": "пожа'ре"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "пожар",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "ска'зки",
+            "Dative": "ска'зкам",
+            "Genetive": "ска'зок",
+            "Instrumental": "ска'зками",
+            "Nominative": "ска'зки",
+            "Prepositional": "ска'зках"
+          },
+          "Singular": {
+            "Accusative": "ска'зку",
+            "Dative": "ска'зке",
+            "Genetive": "ска'зки",
+            "Instrumental": "ска'зкой",
+            "Nominative": "ска'зка",
+            "Prepositional": "ска'зке"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "сказка",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "стихи'",
+            "Dative": "стиха'м",
+            "Genetive": "стихо'в",
+            "Instrumental": "стиха'ми",
+            "Nominative": "стихи'",
+            "Prepositional": "стиха'х"
+          },
+          "Singular": {
+            "Accusative": "сти'х",
+            "Dative": "стиху'",
+            "Genetive": "стиха'",
+            "Instrumental": "стихо'м",
+            "Nominative": "сти'х",
+            "Prepositional": "стихе'"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "стих",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "успокаивать"
+        ],
+        "imperative": {
+          "Plural": "успоко'йте",
+          "Singular": "успоко'й"
+        },
+        "infinitive": "успокоить",
+        "info": "This verb can also mean the following: quiet, assuage, soothe, reassure, appease.",
+        "non_past": {
+          "Plural": {
+            "First": "успоко'им",
+            "Second": "успоко'ите",
+            "Third": "успоко'ят"
+          },
+          "Singular": {
+            "First": "успоко'ю",
+            "Second": "успоко'ишь",
+            "Third": "успоко'ит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "успоко'ивший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "успоко'ив",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "успоко'енный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "успоко'ила",
+          "Masculine": "успоко'ил",
+          "Neuter": "успоко'ило",
+          "Plural": "успоко'или"
+        },
+        "translation": "to calm"
+      },
+      "examples": [],
+      "name": "успокоить",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "проголода'йтесь",
+          "Singular": "проголода'йся"
+        },
+        "infinitive": "проголодаться",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "проголода'емся",
+            "Second": "проголода'етесь",
+            "Third": "проголода'ются"
+          },
+          "Singular": {
+            "First": "проголода'юсь",
+            "Second": "проголода'ешься",
+            "Third": "проголода'ется"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "проголода'вшийся",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "проголода'вшись",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "проголода'лась",
+          "Masculine": "проголода'лся",
+          "Neuter": "проголода'лось",
+          "Plural": "проголода'лись"
+        },
+        "translation": "to get hungry"
+      },
+      "examples": [],
+      "name": "проголодаться",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "зааплодировать",
+          "поаплодировать"
+        ],
+        "imperative": {
+          "Plural": "аплоди'руйте",
+          "Singular": "аплоди'руй"
+        },
+        "infinitive": "аплодировать",
+        "info": "This verb can also mean the following: cheer, clap.",
+        "non_past": {
+          "Plural": {
+            "First": "аплоди'руем",
+            "Second": "аплоди'руете",
+            "Third": "аплоди'руют"
+          },
+          "Singular": {
+            "First": "аплоди'рую",
+            "Second": "аплоди'руешь",
+            "Third": "аплоди'рует"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "аплоди'ровавший",
+            "Present": "аплоди'рующий"
+          },
+          "Adverbial": {
+            "Past": "аплоди'ровав",
+            "Present": "аплоди'руя"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "аплоди'ровала",
+          "Masculine": "аплоди'ровал",
+          "Neuter": "аплоди'ровало",
+          "Plural": "аплоди'ровали"
+        },
+        "translation": "to applaud"
+      },
+      "examples": [],
+      "name": "аплодировать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "перебить"
+        ],
+        "imperative": {
+          "Plural": "перебива'йте",
+          "Singular": "перебива'й"
+        },
+        "infinitive": "перебивать",
+        "info": "This verb can also mean the following: slay, slaughter, kill, break.",
+        "non_past": {
+          "Plural": {
+            "First": "перебива'ем",
+            "Second": "перебива'ете",
+            "Third": "перебива'ют"
+          },
+          "Singular": {
+            "First": "перебива'ю",
+            "Second": "перебива'ешь",
+            "Third": "перебива'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "перебива'вший",
+            "Present": "перебива'ющий"
+          },
+          "Adverbial": {
+            "Past": "перебива'в",
+            "Present": "перебива'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "перебива'емый"
+          }
+        },
+        "past": {
+          "Femanine": "перебива'ла",
+          "Masculine": "перебива'л",
+          "Neuter": "перебива'ло",
+          "Plural": "перебива'ли"
+        },
+        "translation": "to interrupt"
+      },
+      "examples": [],
+      "name": "перебивать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "истратить",
+          "потратить"
+        ],
+        "imperative": {
+          "Plural": "тра'тьте",
+          "Singular": "тра'ть"
+        },
+        "infinitive": "тратить",
+        "info": "This verb can also mean the following: waste, diddle, expend, diddle time.",
+        "non_past": {
+          "Plural": {
+            "First": "тра'тим",
+            "Second": "тра'тите",
+            "Third": "тра'тят"
+          },
+          "Singular": {
+            "First": "тра'чу",
+            "Second": "тра'тишь",
+            "Third": "тра'тит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "тра'тивший",
+            "Present": "тра'тящий"
+          },
+          "Adverbial": {
+            "Past": "тра'тив",
+            "Present": "тра'тя"
+          },
+          "Passive": {
+            "Past": "тра'ченный",
+            "Present": "тра'тимый"
+          }
+        },
+        "past": {
+          "Femanine": "тра'тила",
+          "Masculine": "тра'тил",
+          "Neuter": "тра'тило",
+          "Plural": "тра'тили"
+        },
+        "translation": "to spend"
+      },
+      "examples": [],
+      "name": "тратить",
+      "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "коле'ни",
+            "Dative": "коле'ням",
+            "Genetive": "коле'ней",
+            "Instrumental": "коле'нями",
+            "Nominative": "коле'ни",
+            "Prepositional": "коле'нях"
+          },
+          "Singular": {
+            "Accusative": "коле'но",
+            "Dative": "коле'ну",
+            "Genetive": "коле'на",
+            "Instrumental": "коле'ном",
+            "Nominative": "коле'но",
+            "Prepositional": "коле'не"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "колено",
+      "type": "Noun"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "непохо'жую",
+            "Dative": "непохо'жей",
+            "Genetive": "непохо'жей",
+            "Instrumental": "непохо'жей",
+            "Nominative": "непохо'жая",
+            "Prepositional": "непохо'жей"
+          },
+          "Masculine": {
+            "Accusative": "непохо'жего",
+            "Dative": "непохо'жему",
+            "Genetive": "непохо'жего",
+            "Instrumental": "непохо'жим",
+            "Nominative": "непохо'жий",
+            "Prepositional": "непохо'жем"
+          },
+          "Neuter": {
+            "Accusative": "непохо'жее",
+            "Dative": "непохо'жему",
+            "Genetive": "непохо'жего",
+            "Instrumental": "непохо'жим",
+            "Nominative": "непохо'жее",
+            "Prepositional": "непохо'жем"
+          },
+          "Plural": {
+            "Accusative": "непохо'жих",
+            "Dative": "непохо'жим",
+            "Genetive": "непохо'жих",
+            "Instrumental": "непохо'жими",
+            "Nominative": "непохо'жие",
+            "Prepositional": "непохо'жих"
+          }
+        },
+        "short_form": {
+          "Femanine": "непохо'жа",
+          "Masculine": "непохо'ж",
+          "Neuter": "непохо'же",
+          "Plural": "непохо'жи"
+        }
+      },
+      "examples": [],
+      "name": "непохожий",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "преде'лы",
+            "Dative": "преде'лам",
+            "Genetive": "преде'лов",
+            "Instrumental": "преде'лами",
+            "Nominative": "преде'лы",
+            "Prepositional": "преде'лах"
+          },
+          "Singular": {
+            "Accusative": "преде'л",
+            "Dative": "преде'лу",
+            "Genetive": "преде'ла",
+            "Instrumental": "преде'лом",
+            "Nominative": "преде'л",
+            "Prepositional": "преде'ле"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "предел",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "салфе'тки",
+            "Dative": "салфе'ткам",
+            "Genetive": "салфе'ток",
+            "Instrumental": "салфе'тками",
+            "Nominative": "салфе'тки",
+            "Prepositional": "салфе'тках"
+          },
+          "Singular": {
+            "Accusative": "салфе'тку",
+            "Dative": "салфе'тке",
+            "Genetive": "салфе'тки",
+            "Instrumental": "салфе'ткой",
+            "Nominative": "салфе'тка",
+            "Prepositional": "салфе'тке"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "салфетка",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "шмыгать"
+        ],
+        "imperative": {
+          "Plural": "шмыгни'те",
+          "Singular": "шмыгни'"
+        },
+        "infinitive": "шмыгнуть",
+        "info": "This verb can also mean the following: run quickly, dash.",
+        "non_past": {
+          "Plural": {
+            "First": "шмыгнём",
+            "Second": "шмыгнёте",
+            "Third": "шмыгну'т"
+          },
+          "Singular": {
+            "First": "шмыгну'",
+            "Second": "шмыгнёшь",
+            "Third": "шмыгнёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "шмыгну'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "шмыгну'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "шмыгну'ла",
+          "Masculine": "шмыгну'л",
+          "Neuter": "шмыгну'ло",
+          "Plural": "шмыгну'ли"
+        },
+        "translation": "to dart"
+      },
+      "examples": [],
+      "name": "шмыгнуть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "покататься"
+        ],
+        "imperative": {
+          "Plural": "ката'йтесь",
+          "Singular": "ката'йся"
+        },
+        "infinitive": "кататься",
+        "info": "This verb can also mean the following: roll, ride on skis, bicycle, snowboard.",
+        "non_past": {
+          "Plural": {
+            "First": "ката'емся",
+            "Second": "ката'етесь",
+            "Third": "ката'ются"
+          },
+          "Singular": {
+            "First": "ката'юсь",
+            "Second": "ката'ешься",
+            "Third": "ката'ется"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "ката'вшийся",
+            "Present": "ката'ющийся"
+          },
+          "Adverbial": {
+            "Past": "ката'вшись",
+            "Present": "ката'ясь"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "ката'лась",
+          "Masculine": "ката'лся",
+          "Neuter": "ката'лось",
+          "Plural": "ката'лись"
+        },
+        "translation": "to ride in a vehicle"
+      },
+      "examples": [],
+      "name": "кататься",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "доставать"
+        ],
+        "imperative": {
+          "Plural": "доста'ньте",
+          "Singular": "доста'нь"
+        },
+        "infinitive": "достать",
+        "info": "This verb can also mean the following: take, suffice, annoy, procure, obtain, touch, take out, go fetch, get, annoy someone badly.",
+        "non_past": {
+          "Plural": {
+            "First": "доста'нем",
+            "Second": "доста'нете",
+            "Third": "доста'нут"
+          },
+          "Singular": {
+            "First": "доста'ну",
+            "Second": "доста'нешь",
+            "Third": "доста'нет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "доста'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "доста'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "доста'ла",
+          "Masculine": "доста'л",
+          "Neuter": "доста'ло",
+          "Plural": "доста'ли"
+        },
+        "translation": "to reach"
+      },
+      "examples": [],
+      "name": "достать",
+      "type": "Verb"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "ую'тную",
+            "Dative": "ую'тной",
+            "Genetive": "ую'тной",
+            "Instrumental": "ую'тной",
+            "Nominative": "ую'тная",
+            "Prepositional": "ую'тной"
+          },
+          "Masculine": {
+            "Accusative": "ую'тного",
+            "Dative": "ую'тному",
+            "Genetive": "ую'тного",
+            "Instrumental": "ую'тным",
+            "Nominative": "ую'тный",
+            "Prepositional": "ую'тном"
+          },
+          "Neuter": {
+            "Accusative": "ую'тное",
+            "Dative": "ую'тному",
+            "Genetive": "ую'тного",
+            "Instrumental": "ую'тным",
+            "Nominative": "ую'тное",
+            "Prepositional": "ую'тном"
+          },
+          "Plural": {
+            "Accusative": "ую'тных",
+            "Dative": "ую'тным",
+            "Genetive": "ую'тных",
+            "Instrumental": "ую'тными",
+            "Nominative": "ую'тные",
+            "Prepositional": "ую'тных"
+          }
+        },
+        "short_form": {
+          "Femanine": "ую'тна",
+          "Masculine": "ую'тен",
+          "Neuter": "ую'тно",
+          "Plural": "ую'тны"
+        }
+      },
+      "examples": [],
+      "name": "уютный",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "боле'зни",
+            "Dative": "боле'зням",
+            "Genetive": "боле'зней",
+            "Instrumental": "боле'знями",
+            "Nominative": "боле'зни",
+            "Prepositional": "боле'знях"
+          },
+          "Singular": {
+            "Accusative": "боле'знь",
+            "Dative": "боле'зни",
+            "Genetive": "боле'зни",
+            "Instrumental": "боле'знью",
+            "Nominative": "боле'знь",
+            "Prepositional": "боле'зни"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "болезнь",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "забронировать"
+        ],
+        "imperative": {
+          "Plural": "брони'руйте",
+          "Singular": "брони'руй"
+        },
+        "infinitive": "бронировать",
+        "info": "This verb can also mean the following: armour, reserve.",
+        "non_past": {
+          "Plural": {
+            "First": "брони'руем",
+            "Second": "брони'руете",
+            "Third": "брони'руют"
+          },
+          "Singular": {
+            "First": "брони'рую",
+            "Second": "брони'руешь",
+            "Third": "брони'рует"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "брони'ровавший",
+            "Present": "брони'рующий"
+          },
+          "Adverbial": {
+            "Past": "брони'ровав",
+            "Present": "брони'руя"
+          },
+          "Passive": {
+            "Past": "брони'рованный",
+            "Present": "брони'руемый"
+          }
+        },
+        "past": {
+          "Femanine": "брони'ровала",
+          "Masculine": "брони'ровал",
+          "Neuter": "брони'ровало",
+          "Plural": "брони'ровали"
+        },
+        "translation": "to book"
+      },
+      "examples": [],
+      "name": "бронировать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "зарабатывать"
+        ],
+        "imperative": {
+          "Plural": "зарабо'тайте",
+          "Singular": "зарабо'тай"
+        },
+        "infinitive": "заработать",
+        "info": "This verb can also mean the following: start to work, start.",
+        "non_past": {
+          "Plural": {
+            "First": "зарабо'таем",
+            "Second": "зарабо'таете",
+            "Third": "зарабо'тают"
+          },
+          "Singular": {
+            "First": "зарабо'таю",
+            "Second": "зарабо'таешь",
+            "Third": "зарабо'тает"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "зарабо'тавший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "зарабо'тав",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "зарабо'танный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "зарабо'тала",
+          "Masculine": "зарабо'тал",
+          "Neuter": "зарабо'тало",
+          "Plural": "зарабо'тали"
+        },
+        "translation": "to earn"
+      },
+      "examples": [],
+      "name": "заработать",
+      "type": "Verb"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "холосту'ю",
+            "Dative": "холосто'й",
+            "Genetive": "холосто'й",
+            "Instrumental": "холосто'й",
+            "Nominative": "холоста'я",
+            "Prepositional": "холосто'й"
+          },
+          "Masculine": {
+            "Accusative": "холосто'го",
+            "Dative": "холосто'му",
+            "Genetive": "холосто'го",
+            "Instrumental": "холосты'м",
+            "Nominative": "холосто'й",
+            "Prepositional": "холосто'м"
+          },
+          "Neuter": {
+            "Accusative": "холосто'е",
+            "Dative": "холосто'му",
+            "Genetive": "холосто'го",
+            "Instrumental": "холосты'м",
+            "Nominative": "холосто'е",
+            "Prepositional": "холосто'м"
+          },
+          "Plural": {
+            "Accusative": "холосты'х",
+            "Dative": "холосты'м",
+            "Genetive": "холосты'х",
+            "Instrumental": "холосты'ми",
+            "Nominative": "холосты'е",
+            "Prepositional": "холосты'х"
+          }
+        },
+        "short_form": {
+          "Femanine": "холоста'",
+          "Masculine": "хо'лост",
+          "Neuter": "хо'лосто",
+          "Plural": "хо'лосты"
+        }
+      },
+      "examples": [],
+      "name": "холостой",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "персона'жей",
+            "Dative": "персона'жам",
+            "Genetive": "персона'жей",
+            "Instrumental": "персона'жами",
+            "Nominative": "персона'жи",
+            "Prepositional": "персона'жах"
+          },
+          "Singular": {
+            "Accusative": "персона'жа",
+            "Dative": "персона'жу",
+            "Genetive": "персона'жа",
+            "Instrumental": "персона'жем",
+            "Nominative": "персона'ж",
+            "Prepositional": "персона'же"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "персонаж",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "обзо'ры",
+            "Dative": "обзо'рам",
+            "Genetive": "обзо'ров",
+            "Instrumental": "обзо'рами",
+            "Nominative": "обзо'ры",
+            "Prepositional": "обзо'рах"
+          },
+          "Singular": {
+            "Accusative": "обзо'р",
+            "Dative": "обзо'ру",
+            "Genetive": "обзо'ра",
+            "Instrumental": "обзо'ром",
+            "Nominative": "обзо'р",
+            "Prepositional": "обзо'ре"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "обзор",
+      "type": "Noun"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "и'стинную",
+            "Dative": "и'стинной",
+            "Genetive": "и'стинной",
+            "Instrumental": "и'стинной",
+            "Nominative": "и'стинная",
+            "Prepositional": "и'стинной"
+          },
+          "Masculine": {
+            "Accusative": "и'стинного",
+            "Dative": "и'стинному",
+            "Genetive": "и'стинного",
+            "Instrumental": "и'стинным",
+            "Nominative": "и'стинный",
+            "Prepositional": "и'стинном"
+          },
+          "Neuter": {
+            "Accusative": "и'стинное",
+            "Dative": "и'стинному",
+            "Genetive": "и'стинного",
+            "Instrumental": "и'стинным",
+            "Nominative": "и'стинное",
+            "Prepositional": "и'стинном"
+          },
+          "Plural": {
+            "Accusative": "и'стинных",
+            "Dative": "и'стинным",
+            "Genetive": "и'стинных",
+            "Instrumental": "и'стинными",
+            "Nominative": "и'стинные",
+            "Prepositional": "и'стинных"
+          }
+        },
+        "short_form": {
+          "Femanine": "и'стинна",
+          "Masculine": "и'стинен",
+          "Neuter": "и'стинно",
+          "Plural": "и'стинны"
+        }
+      },
+      "examples": [],
+      "name": "истинный",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "кру'глую",
+            "Dative": "кру'глой",
+            "Genetive": "кру'глой",
+            "Instrumental": "кру'глой",
+            "Nominative": "кру'глая",
+            "Prepositional": "кру'глой"
+          },
+          "Masculine": {
+            "Accusative": "кру'глого",
+            "Dative": "кру'глому",
+            "Genetive": "кру'глого",
+            "Instrumental": "кру'глым",
+            "Nominative": "кру'глый",
+            "Prepositional": "кру'глом"
+          },
+          "Neuter": {
+            "Accusative": "кру'глое",
+            "Dative": "кру'глому",
+            "Genetive": "кру'глого",
+            "Instrumental": "кру'глым",
+            "Nominative": "кру'глое",
+            "Prepositional": "кру'глом"
+          },
+          "Plural": {
+            "Accusative": "кру'глых",
+            "Dative": "кру'глым",
+            "Genetive": "кру'глых",
+            "Instrumental": "кру'глыми",
+            "Nominative": "кру'глые",
+            "Prepositional": "кру'глых"
+          }
+        },
+        "short_form": {
+          "Femanine": "кругла'",
+          "Masculine": "кругл",
+          "Neuter": "кру'гло",
+          "Plural": "круглы'"
+        }
+      },
+      "examples": [],
+      "name": "круглый",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "реа'кции",
+            "Dative": "реа'кциям",
+            "Genetive": "реа'кций",
+            "Instrumental": "реа'кциями",
+            "Nominative": "реа'кции",
+            "Prepositional": "реа'кциях"
+          },
+          "Singular": {
+            "Accusative": "реа'кцию",
+            "Dative": "реа'кции",
+            "Genetive": "реа'кции",
+            "Instrumental": "реа'кцией",
+            "Nominative": "реа'кция",
+            "Prepositional": "реа'кции"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "реакция",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "су'ти",
+            "Dative": "су'тям",
+            "Genetive": "су'тей",
+            "Instrumental": "су'тями",
+            "Nominative": "су'ти",
+            "Prepositional": "су'тях"
+          },
+          "Singular": {
+            "Accusative": "су'ть",
+            "Dative": "су'ти",
+            "Genetive": "су'ти",
+            "Instrumental": "су'тью",
+            "Nominative": "су'ть",
+            "Prepositional": "су'ти"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "суть",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "культу'ры",
+            "Dative": "культу'рам",
+            "Genetive": "культу'р",
+            "Instrumental": "культу'рами",
+            "Nominative": "культу'ры",
+            "Prepositional": "культу'рах"
+          },
+          "Singular": {
+            "Accusative": "культу'ру",
+            "Dative": "культу'ре",
+            "Genetive": "культу'ры",
+            "Instrumental": "культу'рой",
+            "Nominative": "культу'ра",
+            "Prepositional": "культу'ре"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "культура",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "поколе'ния",
+            "Dative": "поколе'ниям",
+            "Genetive": "поколе'ний",
+            "Instrumental": "поколе'ниями",
+            "Nominative": "поколе'ния",
+            "Prepositional": "поколе'ниях"
+          },
+          "Singular": {
+            "Accusative": "поколе'ние",
+            "Dative": "поколе'нию",
+            "Genetive": "поколе'ния",
+            "Instrumental": "поколе'нием",
+            "Nominative": "поколе'ние",
+            "Prepositional": "поколе'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "поколение",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "свя'зи",
+            "Dative": "свя'зям",
+            "Genetive": "свя'зей",
+            "Instrumental": "свя'зями",
+            "Nominative": "свя'зи",
+            "Prepositional": "свя'зях"
+          },
+          "Singular": {
+            "Accusative": "свя'зь",
+            "Dative": "свя'зи",
+            "Genetive": "свя'зи",
+            "Instrumental": "свя'зью",
+            "Nominative": "свя'зь",
+            "Prepositional": "свя'зи"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "связь",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "сла'бости",
+            "Dative": "сла'бостям",
+            "Genetive": "сла'бостей",
+            "Instrumental": "сла'бостями",
+            "Nominative": "сла'бости",
+            "Prepositional": "сла'бостях"
+          },
+          "Singular": {
+            "Accusative": "сла'бость",
+            "Dative": "сла'бости",
+            "Genetive": "сла'бости",
+            "Instrumental": "сла'бостью",
+            "Nominative": "сла'бость",
+            "Prepositional": "сла'бости"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "слабость",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "снять"
+        ],
+        "imperative": {
+          "Plural": "снима'йте",
+          "Singular": "снима'й"
+        },
+        "infinitive": "снимать",
+        "info": "This verb can also mean the following: take away, film, take down, rent, make, photograph.",
+        "non_past": {
+          "Plural": {
+            "First": "снима'ем",
+            "Second": "снима'ете",
+            "Third": "снима'ют"
+          },
+          "Singular": {
+            "First": "снима'ю",
+            "Second": "снима'ешь",
+            "Third": "снима'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "снима'вший",
+            "Present": "снима'ющий"
+          },
+          "Adverbial": {
+            "Past": "снима'в",
+            "Present": "снима'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "снима'емый"
+          }
+        },
+        "past": {
+          "Femanine": "снима'ла",
+          "Masculine": "снима'л",
+          "Neuter": "снима'ло",
+          "Plural": "снима'ли"
+        },
+        "translation": "to take off"
+      },
+      "examples": [],
+      "name": "снимать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "затра'гивайтесь",
+          "Singular": "затра'гивайся"
+        },
+        "infinitive": "затрагиваться",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "затра'гиваемся",
+            "Second": "затра'гиваетесь",
+            "Third": "затра'гиваются"
+          },
+          "Singular": {
+            "First": "затра'гиваюсь",
+            "Second": "затра'гиваешься",
+            "Third": "затра'гивается"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "затра'гивавшийся",
+            "Present": "затра'гивающийся"
+          },
+          "Adverbial": {
+            "Past": "затра'гивавшись",
+            "Present": "затра'гиваясь"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "затра'гивалась",
+          "Masculine": "затра'гивался",
+          "Neuter": "затра'гивалось",
+          "Plural": "затра'гивались"
+        },
+        "translation": "to touch upon"
+      },
+      "examples": [],
+      "name": "затрагиваться",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "затапливать",
+          "затоплять",
+          "затапливать"
+        ],
+        "imperative": {
+          "Plural": "затопи'те",
+          "Singular": "затопи'"
+        },
+        "infinitive": "затопить",
+        "info": "This verb can also mean the following: sink, light, begin, begin to heat, inundate, submerge.",
+        "non_past": {
+          "Plural": {
+            "First": "зато'пим",
+            "Second": "зато'пите",
+            "Third": "зато'пят"
+          },
+          "Singular": {
+            "First": "затоплю'",
+            "Second": "зато'пишь",
+            "Third": "зато'пит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "затопи'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "затопи'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "зато'пленный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "затопи'ла",
+          "Masculine": "затопи'л",
+          "Neuter": "затопи'ло",
+          "Plural": "затопи'ли"
+        },
+        "translation": "to flood"
+      },
+      "examples": [],
+      "name": "затопить",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "облада'йте",
+          "Singular": "облада'й"
+        },
+        "infinitive": "обладать",
+        "info": "This verb can also mean the following: have, own.",
+        "non_past": {
+          "Plural": {
+            "First": "облада'ем",
+            "Second": "облада'ете",
+            "Third": "облада'ют"
+          },
+          "Singular": {
+            "First": "облада'ю",
+            "Second": "облада'ешь",
+            "Third": "облада'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "облада'вший",
+            "Present": "облада'ющий"
+          },
+          "Adverbial": {
+            "Past": "облада'в",
+            "Present": "облада'я"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "облада'ла",
+          "Masculine": "облада'л",
+          "Neuter": "облада'ло",
+          "Plural": "облада'ли"
+        },
+        "translation": "to possess"
+      },
+      "examples": [],
+      "name": "обладать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "разбирать"
+        ],
+        "imperative": {
+          "Plural": "разбери'те",
+          "Singular": "разбери'"
+        },
+        "infinitive": "разобрать",
+        "info": "This verb can also mean the following: analyse, take apart, parse, disassemble, deconstruct.",
+        "non_past": {
+          "Plural": {
+            "First": "разберём",
+            "Second": "разберёте",
+            "Third": "разберу'т"
+          },
+          "Singular": {
+            "First": "разберу'",
+            "Second": "разберёшь",
+            "Third": "разберёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "разобра'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "разобра'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "разо'бранный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "разобрала'",
+          "Masculine": "разобра'л",
+          "Neuter": "разобра'ло",
+          "Plural": "разобра'ли"
+        },
+        "translation": "to dismantle"
+      },
+      "examples": [],
+      "name": "разобрать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "выжить"
+        ],
+        "imperative": {
+          "Plural": "выжива'йте",
+          "Singular": "выжива'й"
+        },
+        "infinitive": "выживать",
+        "info": "This verb can also mean the following: squeeze.",
+        "non_past": {
+          "Plural": {
+            "First": "выжива'ем",
+            "Second": "выжива'ете",
+            "Third": "выжива'ют"
+          },
+          "Singular": {
+            "First": "выжива'ю",
+            "Second": "выжива'ешь",
+            "Third": "выжива'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "выжива'вший",
+            "Present": "выжива'ющий"
+          },
+          "Adverbial": {
+            "Past": "выжива'в",
+            "Present": "выжива'я"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "выжива'ла",
+          "Masculine": "выжива'л",
+          "Neuter": "выжива'ло",
+          "Plural": "выжива'ли"
+        },
+        "translation": "to survive"
+      },
+      "examples": [],
+      "name": "выживать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "загрустить"
+        ],
+        "imperative": {
+          "Plural": "грусти'те",
+          "Singular": "грусти'"
+        },
+        "infinitive": "грустить",
+        "info": "This verb can also mean the following: grieve.",
+        "non_past": {
+          "Plural": {
+            "First": "грусти'м",
+            "Second": "грусти'те",
+            "Third": "грустя'т"
+          },
+          "Singular": {
+            "First": "грущу'",
+            "Second": "грусти'шь",
+            "Third": "грусти'т"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "грусти'вший",
+            "Present": "грустя'щий"
+          },
+          "Adverbial": {
+            "Past": "грусти'в",
+            "Present": "грустя'"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "грусти'ла",
+          "Masculine": "грусти'л",
+          "Neuter": "грусти'ло",
+          "Plural": "грусти'ли"
+        },
+        "translation": "to be sad"
+      },
+      "examples": [],
+      "name": "грустить",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "тронуть"
+        ],
+        "imperative": {
+          "Plural": "тро'гайте",
+          "Singular": "тро'гай"
+        },
+        "infinitive": "трогать",
+        "info": "This verb can also mean the following: annoy, disturb, move, bother, start moving, start.",
+        "non_past": {
+          "Plural": {
+            "First": "тро'гаем",
+            "Second": "тро'гаете",
+            "Third": "тро'гают"
+          },
+          "Singular": {
+            "First": "тро'гаю",
+            "Second": "тро'гаешь",
+            "Third": "тро'гает"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "тро'гавший",
+            "Present": "тро'гающий"
+          },
+          "Adverbial": {
+            "Past": "тро'гав",
+            "Present": "тро'гая"
+          },
+          "Passive": {
+            "Past": "тро'ганный",
+            "Present": "тро'гаемый"
+          }
+        },
+        "past": {
+          "Femanine": "тро'гала",
+          "Masculine": "тро'гал",
+          "Neuter": "тро'гало",
+          "Plural": "тро'гали"
+        },
+        "translation": "to touch"
+      },
+      "examples": [],
+      "name": "трогать",
+      "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "живо'тных",
+            "Dative": "живо'тным",
+            "Genetive": "живо'тных",
+            "Instrumental": "живо'тными",
+            "Nominative": "живо'тные",
+            "Prepositional": "живо'тных"
+          },
+          "Singular": {
+            "Accusative": "живо'тное",
+            "Dative": "живо'тному",
+            "Genetive": "живо'тного",
+            "Instrumental": "живо'тным",
+            "Nominative": "живо'тное",
+            "Prepositional": "живо'тном"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "животное",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "ёжиков",
+            "Dative": "ёжикам",
+            "Genetive": "ёжиков",
+            "Instrumental": "ёжиками",
+            "Nominative": "ёжики",
+            "Prepositional": "ёжиках"
+          },
+          "Singular": {
+            "Accusative": "ёжика",
+            "Dative": "ёжику",
+            "Genetive": "ёжика",
+            "Instrumental": "ёжиком",
+            "Nominative": "ёжик",
+            "Prepositional": "ёжике"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "ёжик",
+      "type": "Noun"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "годову'ю",
+            "Dative": "годово'й",
+            "Genetive": "годово'й",
+            "Instrumental": "годово'й",
+            "Nominative": "годова'я",
+            "Prepositional": "годово'й"
+          },
+          "Masculine": {
+            "Accusative": "годово'го",
+            "Dative": "годово'му",
+            "Genetive": "годово'го",
+            "Instrumental": "годовы'м",
+            "Nominative": "годово'й",
+            "Prepositional": "годово'м"
+          },
+          "Neuter": {
+            "Accusative": "годово'е",
+            "Dative": "годово'му",
+            "Genetive": "годово'го",
+            "Instrumental": "годовы'м",
+            "Nominative": "годово'е",
+            "Prepositional": "годово'м"
+          },
+          "Plural": {
+            "Accusative": "годовы'х",
+            "Dative": "годовы'м",
+            "Genetive": "годовы'х",
+            "Instrumental": "годовы'ми",
+            "Nominative": "годовы'е",
+            "Prepositional": "годовы'х"
+          }
+        },
+        "short_form": {
+          "Femanine": "-",
+          "Masculine": "-",
+          "Neuter": "-",
+          "Plural": "-"
+        }
+      },
+      "examples": [],
+      "name": "годовой",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "варёную",
+            "Dative": "варёной",
+            "Genetive": "варёной",
+            "Instrumental": "варёной",
+            "Nominative": "варёная",
+            "Prepositional": "варёной"
+          },
+          "Masculine": {
+            "Accusative": "варёного",
+            "Dative": "варёному",
+            "Genetive": "варёного",
+            "Instrumental": "варёным",
+            "Nominative": "варёный",
+            "Prepositional": "варёном"
+          },
+          "Neuter": {
+            "Accusative": "варёное",
+            "Dative": "варёному",
+            "Genetive": "варёного",
+            "Instrumental": "варёным",
+            "Nominative": "варёное",
+            "Prepositional": "варёном"
+          },
+          "Plural": {
+            "Accusative": "варёных",
+            "Dative": "варёным",
+            "Genetive": "варёных",
+            "Instrumental": "варёными",
+            "Nominative": "варёные",
+            "Prepositional": "варёных"
+          }
+        },
+        "short_form": {
+          "Femanine": "-",
+          "Masculine": "-",
+          "Neuter": "-",
+          "Plural": "-"
+        }
+      },
+      "examples": [],
+      "name": "варёный",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "вла'жную",
+            "Dative": "вла'жной",
+            "Genetive": "вла'жной",
+            "Instrumental": "вла'жной",
+            "Nominative": "вла'жная",
+            "Prepositional": "вла'жной"
+          },
+          "Masculine": {
+            "Accusative": "вла'жного",
+            "Dative": "вла'жному",
+            "Genetive": "вла'жного",
+            "Instrumental": "вла'жным",
+            "Nominative": "вла'жный",
+            "Prepositional": "вла'жном"
+          },
+          "Neuter": {
+            "Accusative": "вла'жное",
+            "Dative": "вла'жному",
+            "Genetive": "вла'жного",
+            "Instrumental": "вла'жным",
+            "Nominative": "вла'жное",
+            "Prepositional": "вла'жном"
+          },
+          "Plural": {
+            "Accusative": "вла'жных",
+            "Dative": "вла'жным",
+            "Genetive": "вла'жных",
+            "Instrumental": "вла'жными",
+            "Nominative": "вла'жные",
+            "Prepositional": "вла'жных"
+          }
+        },
+        "short_form": {
+          "Femanine": "влажна'",
+          "Masculine": "вла'жен",
+          "Neuter": "вла'жно",
+          "Plural": "вла'жны"
+        }
+      },
+      "examples": [],
+      "name": "влажный",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "гениа'льную",
+            "Dative": "гениа'льной",
+            "Genetive": "гениа'льной",
+            "Instrumental": "гениа'льной",
+            "Nominative": "гениа'льная",
+            "Prepositional": "гениа'льной"
+          },
+          "Masculine": {
+            "Accusative": "гениа'льного",
+            "Dative": "гениа'льному",
+            "Genetive": "гениа'льного",
+            "Instrumental": "гениа'льным",
+            "Nominative": "гениа'льный",
+            "Prepositional": "гениа'льном"
+          },
+          "Neuter": {
+            "Accusative": "гениа'льное",
+            "Dative": "гениа'льному",
+            "Genetive": "гениа'льного",
+            "Instrumental": "гениа'льным",
+            "Nominative": "гениа'льное",
+            "Prepositional": "гениа'льном"
+          },
+          "Plural": {
+            "Accusative": "гениа'льных",
+            "Dative": "гениа'льным",
+            "Genetive": "гениа'льных",
+            "Instrumental": "гениа'льными",
+            "Nominative": "гениа'льные",
+            "Prepositional": "гениа'льных"
+          }
+        },
+        "short_form": {
+          "Femanine": "гениа'льна",
+          "Masculine": "гениа'лен",
+          "Neuter": "гениа'льно",
+          "Plural": "гениа'льны"
+        }
+      },
+      "examples": [],
+      "name": "гениальный",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "враго'в",
+            "Dative": "врага'м",
+            "Genetive": "враго'в",
+            "Instrumental": "врага'ми",
+            "Nominative": "враги'",
+            "Prepositional": "врага'х"
+          },
+          "Singular": {
+            "Accusative": "врага'",
+            "Dative": "врагу'",
+            "Genetive": "врага'",
+            "Instrumental": "враго'м",
+            "Nominative": "вра'г",
+            "Prepositional": "враге'"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "враг",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "дли'ны",
+            "Dative": "дли'нам",
+            "Genetive": "дли'н",
+            "Instrumental": "дли'нами",
+            "Nominative": "дли'ны",
+            "Prepositional": "дли'нах"
+          },
+          "Singular": {
+            "Accusative": "длину'",
+            "Dative": "длине'",
+            "Genetive": "длины'",
+            "Instrumental": "длино'й",
+            "Nominative": "длина'",
+            "Prepositional": "длине'"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "длина",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "бросать"
+        ],
+        "imperative": {
+          "Plural": "бро'сьте",
+          "Singular": "бро'сь"
+        },
+        "infinitive": "бросить",
+        "info": "This verb can also mean the following: send urgently, jilt, quit, give, abandon, send, leave off, give up, forsake.",
+        "non_past": {
+          "Plural": {
+            "First": "бро'сим",
+            "Second": "бро'сите",
+            "Third": "бро'сят"
+          },
+          "Singular": {
+            "First": "бро'шу",
+            "Second": "бро'сишь",
+            "Third": "бро'сит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "бро'сивший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "бро'сив",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "бро'шенный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "бро'сила",
+          "Masculine": "бро'сил",
+          "Neuter": "бро'сило",
+          "Plural": "бро'сили"
+        },
+        "translation": "to throw"
+      },
+      "examples": [],
+      "name": "бросить",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "двинуться"
+        ],
+        "imperative": {
+          "Plural": "дви'гайтесь",
+          "Singular": "дви'гайся"
+        },
+        "infinitive": "двигаться",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "дви'гаемся",
+            "Second": "дви'гаетесь",
+            "Third": "дви'гаются"
+          },
+          "Singular": {
+            "First": "дви'гаюсь",
+            "Second": "дви'гаешься",
+            "Third": "дви'гается"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "дви'гавшийся",
+            "Present": "дви'гающийся"
+          },
+          "Adverbial": {
+            "Past": "дви'гавшись",
+            "Present": "дви'гаясь"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "дви'галась",
+          "Masculine": "дви'гался",
+          "Neuter": "дви'галось",
+          "Plural": "дви'гались"
+        },
+        "translation": "to move"
+      },
+      "examples": [],
+      "name": "двигаться",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "закусить"
+        ],
+        "imperative": {
+          "Plural": "заку'сывайте",
+          "Singular": "заку'сывай"
+        },
+        "infinitive": "закусывать",
+        "info": "This verb can also mean the following: take, have, have a snack, eat.",
+        "non_past": {
+          "Plural": {
+            "First": "заку'сываем",
+            "Second": "заку'сываете",
+            "Third": "заку'сывают"
+          },
+          "Singular": {
+            "First": "заку'сываю",
+            "Second": "заку'сываешь",
+            "Third": "заку'сывает"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "заку'сывавший",
+            "Present": "заку'сывающий"
+          },
+          "Adverbial": {
+            "Past": "заку'сывав",
+            "Present": "заку'сывая"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "заку'сываемый"
+          }
+        },
+        "past": {
+          "Femanine": "заку'сывала",
+          "Masculine": "заку'сывал",
+          "Neuter": "заку'сывало",
+          "Plural": "заку'сывали"
+        },
+        "translation": "to bite"
+      },
+      "examples": [],
+      "name": "закусывать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "закусывать"
+        ],
+        "imperative": {
+          "Plural": "закуси'те",
+          "Singular": "закуси'"
+        },
+        "infinitive": "закусить",
+        "info": "This verb can also mean the following: take, have, have a snack, eat.",
+        "non_past": {
+          "Plural": {
+            "First": "заку'сим",
+            "Second": "заку'сите",
+            "Third": "заку'сят"
+          },
+          "Singular": {
+            "First": "закушу'",
+            "Second": "заку'сишь",
+            "Third": "заку'сит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "закуси'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "закуси'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "заку'шенный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "закуси'ла",
+          "Masculine": "закуси'л",
+          "Neuter": "закуси'ло",
+          "Plural": "закуси'ли"
+        },
+        "translation": "to bite"
+      },
+      "examples": [],
+      "name": "закусить",
+      "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "хозя'ев",
+            "Dative": "хозя'евам",
+            "Genetive": "хозя'ев",
+            "Instrumental": "хозя'евами",
+            "Nominative": "хозя'ева",
+            "Prepositional": "хозя'евах"
+          },
+          "Singular": {
+            "Accusative": "хозя'ина",
+            "Dative": "хозя'ину",
+            "Genetive": "хозя'ина",
+            "Instrumental": "хозя'ином",
+            "Nominative": "хозя'ин",
+            "Prepositional": "хозя'ине"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "хозяин",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "това'ры",
+            "Dative": "това'рам",
+            "Genetive": "това'ров",
+            "Instrumental": "това'рами",
+            "Nominative": "това'ры",
+            "Prepositional": "това'рах"
+          },
+          "Singular": {
+            "Accusative": "това'р",
+            "Dative": "това'ру",
+            "Genetive": "това'ра",
+            "Instrumental": "това'ром",
+            "Nominative": "това'р",
+            "Prepositional": "това'ре"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "товар",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "ге'ниев",
+            "Dative": "ге'ниям",
+            "Genetive": "ге'ниев",
+            "Instrumental": "ге'ниями",
+            "Nominative": "ге'нии",
+            "Prepositional": "ге'ниях"
+          },
+          "Singular": {
+            "Accusative": "ге'ния",
+            "Dative": "ге'нию",
+            "Genetive": "ге'ния",
+            "Instrumental": "ге'нием",
+            "Nominative": "ге'ний",
+            "Prepositional": "ге'нии"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "гений",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "о'бразы",
+            "Dative": "о'бразам",
+            "Genetive": "о'бразов",
+            "Instrumental": "о'бразами",
+            "Nominative": "о'бразы",
+            "Prepositional": "о'бразах"
+          },
+          "Singular": {
+            "Accusative": "о'браз",
+            "Dative": "о'бразу",
+            "Genetive": "о'браза",
+            "Instrumental": "о'бразом",
+            "Nominative": "о'браз",
+            "Prepositional": "о'бразе"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "образ",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "дела'",
+            "Dative": "дела'м",
+            "Genetive": "де'л",
+            "Instrumental": "дела'ми",
+            "Nominative": "дела'",
+            "Prepositional": "дела'х"
+          },
+          "Singular": {
+            "Accusative": "де'ло",
+            "Dative": "де'лу",
+            "Genetive": "де'ла",
+            "Instrumental": "де'лом",
+            "Nominative": "де'ло",
+            "Prepositional": "де'ле"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "дело",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "сто'роны",
+            "Dative": "сторона'м",
+            "Genetive": "сторо'н",
+            "Instrumental": "сторона'ми",
+            "Nominative": "сто'роны",
+            "Prepositional": "сторона'х"
+          },
+          "Singular": {
+            "Accusative": "сто'рону",
+            "Dative": "стороне'",
+            "Genetive": "стороны'",
+            "Instrumental": "стороно'й",
+            "Nominative": "сторона'",
+            "Prepositional": "стороне'"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "сторона",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "мы'сли",
+            "Dative": "мы'слям",
+            "Genetive": "мы'слей",
+            "Instrumental": "мы'слями",
+            "Nominative": "мы'сли",
+            "Prepositional": "мы'слях"
+          },
+          "Singular": {
+            "Accusative": "мы'сль",
+            "Dative": "мы'сли",
+            "Genetive": "мы'сли",
+            "Instrumental": "мы'слью",
+            "Nominative": "мы'сль",
+            "Prepositional": "мы'сли"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "мысль",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "пообещать"
+        ],
+        "imperative": {
+          "Plural": "обеща'йте",
+          "Singular": "обеща'й"
+        },
+        "infinitive": "обещать",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "обеща'ем",
+            "Second": "обеща'ете",
+            "Third": "обеща'ют"
+          },
+          "Singular": {
+            "First": "обеща'ю",
+            "Second": "обеща'ешь",
+            "Third": "обеща'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "обеща'вший",
+            "Present": "обеща'ющий"
+          },
+          "Adverbial": {
+            "Past": "обеща'в",
+            "Present": "обеща'я"
+          },
+          "Passive": {
+            "Past": "обе'щанный",
+            "Present": "обеща'емый"
+          }
+        },
+        "past": {
+          "Femanine": "обеща'ла",
+          "Masculine": "обеща'л",
+          "Neuter": "обеща'ло",
+          "Plural": "обеща'ли"
+        },
+        "translation": "to promise"
+      },
+      "examples": [],
+      "name": "обещать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "ввести"
+        ],
+        "imperative": {
+          "Plural": "вводи'те",
+          "Singular": "вводи'"
+        },
+        "infinitive": "вводить",
+        "info": "This verb can also mean the following: bring in, usher in, input, bring.",
+        "non_past": {
+          "Plural": {
+            "First": "вво'дим",
+            "Second": "вво'дите",
+            "Third": "вво'дят"
+          },
+          "Singular": {
+            "First": "ввожу'",
+            "Second": "вво'дишь",
+            "Third": "вво'дит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "вводи'вший",
+            "Present": "вводя'щий"
+          },
+          "Adverbial": {
+            "Past": "вводи'в",
+            "Present": "вводя'"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "вводи'мый"
+          }
+        },
+        "past": {
+          "Femanine": "вводи'ла",
+          "Masculine": "вводи'л",
+          "Neuter": "вводи'ло",
+          "Plural": "вводи'ли"
+        },
+        "translation": "to introduce"
+      },
+      "examples": [],
+      "name": "вводить",
+      "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "ено'тов",
+            "Dative": "ено'там",
+            "Genetive": "ено'тов",
+            "Instrumental": "ено'тами",
+            "Nominative": "ено'ты",
+            "Prepositional": "ено'тах"
+          },
+          "Singular": {
+            "Accusative": "ено'та",
+            "Dative": "ено'ту",
+            "Genetive": "ено'та",
+            "Instrumental": "ено'том",
+            "Nominative": "ено'т",
+            "Prepositional": "ено'те"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "енот",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "бурундуко'в",
+            "Dative": "бурундука'м",
+            "Genetive": "бурундуко'в",
+            "Instrumental": "бурундука'ми",
+            "Nominative": "бурундуки'",
+            "Prepositional": "бурундука'х"
+          },
+          "Singular": {
+            "Accusative": "бурундука'",
+            "Dative": "бурундуку'",
+            "Genetive": "бурундука'",
+            "Instrumental": "бурундуко'м",
+            "Nominative": "бурунду'к",
+            "Prepositional": "бурундуке'"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "бурундук",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "разобраться"
+        ],
+        "imperative": {
+          "Plural": "разбира'йтесь",
+          "Singular": "разбира'йся"
+        },
+        "infinitive": "разбираться",
+        "info": "This verb can also mean the following: see, sort out, work with, figure, comprehend, do, see into, sort, work out, figure out.",
+        "non_past": {
+          "Plural": {
+            "First": "разбира'емся",
+            "Second": "разбира'етесь",
+            "Third": "разбира'ются"
+          },
+          "Singular": {
+            "First": "разбира'юсь",
+            "Second": "разбира'ешься",
+            "Third": "разбира'ется"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "разбира'вшийся",
+            "Present": "разбира'ющийся"
+          },
+          "Adverbial": {
+            "Past": "разбира'вшись",
+            "Present": "разбира'ясь"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "разбира'лась",
+          "Masculine": "разбира'лся",
+          "Neuter": "разбира'лось",
+          "Plural": "разбира'лись"
+        },
+        "translation": "to deal with"
+      },
+      "examples": [],
+      "name": "разбираться",
+      "type": "Verb"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "свобо'дную",
+            "Dative": "свобо'дной",
+            "Genetive": "свобо'дной",
+            "Instrumental": "свобо'дной",
+            "Nominative": "свобо'дная",
+            "Prepositional": "свобо'дной"
+          },
+          "Masculine": {
+            "Accusative": "свобо'дного",
+            "Dative": "свобо'дному",
+            "Genetive": "свобо'дного",
+            "Instrumental": "свобо'дным",
+            "Nominative": "свобо'дный",
+            "Prepositional": "свобо'дном"
+          },
+          "Neuter": {
+            "Accusative": "свобо'дное",
+            "Dative": "свобо'дному",
+            "Genetive": "свобо'дного",
+            "Instrumental": "свобо'дным",
+            "Nominative": "свобо'дное",
+            "Prepositional": "свобо'дном"
+          },
+          "Plural": {
+            "Accusative": "свобо'дных",
+            "Dative": "свобо'дным",
+            "Genetive": "свобо'дных",
+            "Instrumental": "свобо'дными",
+            "Nominative": "свобо'дные",
+            "Prepositional": "свобо'дных"
+          }
+        },
+        "short_form": {
+          "Femanine": "свобо'дна",
+          "Masculine": "свобо'ден",
+          "Neuter": "свобо'дно",
+          "Plural": "свобо'дны"
+        }
+      },
+      "examples": [],
+      "name": "свободный",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "исправле'ния",
+            "Dative": "исправле'ниям",
+            "Genetive": "исправле'ний",
+            "Instrumental": "исправле'ниями",
+            "Nominative": "исправле'ния",
+            "Prepositional": "исправле'ниях"
+          },
+          "Singular": {
+            "Accusative": "исправле'ние",
+            "Dative": "исправле'нию",
+            "Genetive": "исправле'ния",
+            "Instrumental": "исправле'нием",
+            "Nominative": "исправле'ние",
+            "Prepositional": "исправле'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "исправление",
+      "type": "Noun"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "прохла'дную",
+            "Dative": "прохла'дной",
+            "Genetive": "прохла'дной",
+            "Instrumental": "прохла'дной",
+            "Nominative": "прохла'дная",
+            "Prepositional": "прохла'дной"
+          },
+          "Masculine": {
+            "Accusative": "прохла'дного",
+            "Dative": "прохла'дному",
+            "Genetive": "прохла'дного",
+            "Instrumental": "прохла'дным",
+            "Nominative": "прохла'дный",
+            "Prepositional": "прохла'дном"
+          },
+          "Neuter": {
+            "Accusative": "прохла'дное",
+            "Dative": "прохла'дному",
+            "Genetive": "прохла'дного",
+            "Instrumental": "прохла'дным",
+            "Nominative": "прохла'дное",
+            "Prepositional": "прохла'дном"
+          },
+          "Plural": {
+            "Accusative": "прохла'дных",
+            "Dative": "прохла'дным",
+            "Genetive": "прохла'дных",
+            "Instrumental": "прохла'дными",
+            "Nominative": "прохла'дные",
+            "Prepositional": "прохла'дных"
+          }
+        },
+        "short_form": {
+          "Femanine": "прохла'дна",
+          "Masculine": "прохла'ден",
+          "Neuter": "прохла'дно",
+          "Plural": "прохла'дны"
+        }
+      },
+      "examples": [],
+      "name": "прохладный",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "опа'сности",
+            "Dative": "опа'сностям",
+            "Genetive": "опа'сностей",
+            "Instrumental": "опа'сностями",
+            "Nominative": "опа'сности",
+            "Prepositional": "опа'сностях"
+          },
+          "Singular": {
+            "Accusative": "опа'сность",
+            "Dative": "опа'сности",
+            "Genetive": "опа'сности",
+            "Instrumental": "опа'сностью",
+            "Nominative": "опа'сность",
+            "Prepositional": "опа'сности"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "опасность",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "полуго'ды",
+            "Dative": "полугода'м",
+            "Genetive": "полугодо'в",
+            "Instrumental": "полугода'ми",
+            "Nominative": "полуго'ды",
+            "Prepositional": "полугода'х"
+          },
+          "Singular": {
+            "Accusative": "полго'да",
+            "Dative": "полуго'ду",
+            "Genetive": "полуго'да",
+            "Instrumental": "полуго'дом",
+            "Nominative": "полго'да",
+            "Prepositional": "полуго'де"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "полгода",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "полови'ны",
+            "Dative": "полови'нам",
+            "Genetive": "полови'н",
+            "Instrumental": "полови'нами",
+            "Nominative": "полови'ны",
+            "Prepositional": "полови'нах"
+          },
+          "Singular": {
+            "Accusative": "полови'ну",
+            "Dative": "полови'не",
+            "Genetive": "полови'ны",
+            "Instrumental": "полови'ной",
+            "Nominative": "полови'на",
+            "Prepositional": "полови'не"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "половина",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "та'йны",
+            "Dative": "та'йнам",
+            "Genetive": "та'йн",
+            "Instrumental": "та'йнами",
+            "Nominative": "та'йны",
+            "Prepositional": "та'йнах"
+          },
+          "Singular": {
+            "Accusative": "та'йну",
+            "Dative": "та'йне",
+            "Genetive": "та'йны",
+            "Instrumental": "та'йной",
+            "Nominative": "та'йна",
+            "Prepositional": "та'йне"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "тайна",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "обеща'ния",
+            "Dative": "обеща'ниям",
+            "Genetive": "обеща'ний",
+            "Instrumental": "обеща'ниями",
+            "Nominative": "обеща'ния",
+            "Prepositional": "обеща'ниях"
+          },
+          "Singular": {
+            "Accusative": "обеща'ние",
+            "Dative": "обеща'нию",
+            "Genetive": "обеща'ния",
+            "Instrumental": "обеща'нием",
+            "Nominative": "обеща'ние",
+            "Prepositional": "обеща'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "обещание",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "запустить",
+          "запустить"
+        ],
+        "imperative": {
+          "Plural": "запуска'йте",
+          "Singular": "запуска'й"
+        },
+        "infinitive": "запускать",
+        "info": "This verb can also mean the following: let, decay, let in, let something decline, fail to take care of, abandon, neglect, start.",
+        "non_past": {
+          "Plural": {
+            "First": "запуска'ем",
+            "Second": "запуска'ете",
+            "Third": "запуска'ют"
+          },
+          "Singular": {
+            "First": "запуска'ю",
+            "Second": "запуска'ешь",
+            "Third": "запуска'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "запуска'вший",
+            "Present": "запуска'ющий"
+          },
+          "Adverbial": {
+            "Past": "запуска'в",
+            "Present": "запуска'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "запуска'емый"
+          }
+        },
+        "past": {
+          "Femanine": "запуска'ла",
+          "Masculine": "запуска'л",
+          "Neuter": "запуска'ло",
+          "Plural": "запуска'ли"
+        },
+        "translation": "to launch"
+      },
+      "examples": [],
+      "name": "запускать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "держать",
+          "сдерживать"
+        ],
+        "imperative": {
+          "Plural": "сдержи'те",
+          "Singular": "сдержи'"
+        },
+        "infinitive": "сдержать",
+        "info": "This verb can also mean the following: keep back, deter, restrain, contain, keep, hold back.",
+        "non_past": {
+          "Plural": {
+            "First": "сде'ржим",
+            "Second": "сде'ржите",
+            "Third": "сде'ржат"
+          },
+          "Singular": {
+            "First": "сдержу'",
+            "Second": "сде'ржишь",
+            "Third": "сде'ржит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "сдержа'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "сдержа'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "сде'ржанный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "сдержа'ла",
+          "Masculine": "сдержа'л",
+          "Neuter": "сдержа'ло",
+          "Plural": "сдержа'ли"
+        },
+        "translation": "to hold in"
+      },
+      "examples": [],
+      "name": "сдержать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "размыслить",
+          "поразмышлять"
+        ],
+        "imperative": {
+          "Plural": "размышля'йте",
+          "Singular": "размышля'й"
+        },
+        "infinitive": "размышлять",
+        "info": "This verb can also mean the following: muse, meditate, think.",
+        "non_past": {
+          "Plural": {
+            "First": "размышля'ем",
+            "Second": "размышля'ете",
+            "Third": "размышля'ют"
+          },
+          "Singular": {
+            "First": "размышля'ю",
+            "Second": "размышля'ешь",
+            "Third": "размышля'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "размышля'вший",
+            "Present": "размышля'ющий"
+          },
+          "Adverbial": {
+            "Past": "размышля'в",
+            "Present": "размышля'я"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "размышля'ла",
+          "Masculine": "размышля'л",
+          "Neuter": "размышля'ло",
+          "Plural": "размышля'ли"
+        },
+        "translation": "to ponder"
+      },
+      "examples": [],
+      "name": "размышлять",
+      "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "молча'ния",
+            "Dative": "молча'ниям",
+            "Genetive": "молча'ний",
+            "Instrumental": "молча'ниями",
+            "Nominative": "молча'ния",
+            "Prepositional": "молча'ниях"
+          },
+          "Singular": {
+            "Accusative": "молча'ние",
+            "Dative": "молча'нию",
+            "Genetive": "молча'ния",
+            "Instrumental": "молча'нием",
+            "Nominative": "молча'ние",
+            "Prepositional": "молча'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "молчание",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "зло'сти",
+            "Dative": "зло'стям",
+            "Genetive": "зло'стей",
+            "Instrumental": "зло'стями",
+            "Nominative": "зло'сти",
+            "Prepositional": "зло'стях"
+          },
+          "Singular": {
+            "Accusative": "зло'сть",
+            "Dative": "зло'сти",
+            "Genetive": "зло'сти",
+            "Instrumental": "зло'стью",
+            "Nominative": "зло'сть",
+            "Prepositional": "зло'сти"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "злость",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "потемнеть",
+          "стемнеть"
+        ],
+        "imperative": {
+          "Plural": "темне'йте",
+          "Singular": "темне'й"
+        },
+        "infinitive": "темнеть",
+        "info": "This verb can also mean the following: get, become dark, get dark.",
+        "non_past": {
+          "Plural": {
+            "First": "темне'ем",
+            "Second": "темне'ете",
+            "Third": "темне'ют"
+          },
+          "Singular": {
+            "First": "темне'ю",
+            "Second": "темне'ешь",
+            "Third": "темне'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "темне'вший",
+            "Present": "темне'ющий"
+          },
+          "Adverbial": {
+            "Past": "темне'в",
+            "Present": "темне'я"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "темне'ла",
+          "Masculine": "темне'л",
+          "Neuter": "темне'ло",
+          "Plural": "темне'ли"
+        },
+        "translation": "to darken"
+      },
+      "examples": [],
+      "name": "темнеть",
+      "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "ше'рсти",
+            "Dative": "шерстя'м",
+            "Genetive": "шерсте'й",
+            "Instrumental": "шерстя'ми",
+            "Nominative": "ше'рсти",
+            "Prepositional": "шерстя'х"
+          },
+          "Singular": {
+            "Accusative": "ше'рсть",
+            "Dative": "ше'рсти",
+            "Genetive": "ше'рсти",
+            "Instrumental": "ше'рстью",
+            "Nominative": "ше'рсть",
+            "Prepositional": "ше'рсти"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "шерсть",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "рехни'тесь",
+          "Singular": "рехни'сь"
+        },
+        "infinitive": "рехнуться",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "рехнёмся",
+            "Second": "рехнётесь",
+            "Third": "рехну'тся"
+          },
+          "Singular": {
+            "First": "рехну'сь",
+            "Second": "рехнёшься",
+            "Third": "рехнётся"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "рехну'вшийся",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "рехну'вшись",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "рехну'лась",
+          "Masculine": "рехну'лся",
+          "Neuter": "рехну'лось",
+          "Plural": "рехну'лись"
+        },
+        "translation": "to go crazy"
+      },
+      "examples": [],
+      "name": "рехнуться",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "пресле'дуйте",
+          "Singular": "пресле'дуй"
+        },
+        "infinitive": "преследовать",
+        "info": "This verb can also mean the following: prosecute, torment, chase, persecute, strive, victimize.",
+        "non_past": {
+          "Plural": {
+            "First": "пресле'дуем",
+            "Second": "пресле'дуете",
+            "Third": "пресле'дуют"
+          },
+          "Singular": {
+            "First": "пресле'дую",
+            "Second": "пресле'дуешь",
+            "Third": "пресле'дует"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "пресле'довавший",
+            "Present": "пресле'дующий"
+          },
+          "Adverbial": {
+            "Past": "пресле'довав",
+            "Present": "пресле'дуя"
+          },
+          "Passive": {
+            "Past": "пресле'дованный",
+            "Present": "пресле'дуемый"
+          }
+        },
+        "past": {
+          "Femanine": "пресле'довала",
+          "Masculine": "пресле'довал",
+          "Neuter": "пресле'довало",
+          "Plural": "пресле'довали"
+        },
+        "translation": "to pursue"
+      },
+      "examples": [],
+      "name": "преследовать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "разбрасывать"
+        ],
+        "imperative": {
+          "Plural": "разброса'йте",
+          "Singular": "разброса'й"
+        },
+        "infinitive": "разбросать",
+        "info": "This verb can also mean the following: throw about, strew.",
+        "non_past": {
+          "Plural": {
+            "First": "разброса'ем",
+            "Second": "разброса'ете",
+            "Third": "разброса'ют"
+          },
+          "Singular": {
+            "First": "разброса'ю",
+            "Second": "разброса'ешь",
+            "Third": "разброса'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "разброса'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "разброса'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "разбро'санный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "разброса'ла",
+          "Masculine": "разброса'л",
+          "Neuter": "разброса'ло",
+          "Plural": "разброса'ли"
+        },
+        "translation": "to scatter"
+      },
+      "examples": [],
+      "name": "разбросать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "исчезнуть"
+        ],
+        "imperative": {
+          "Plural": "исчеза'йте",
+          "Singular": "исчеза'й"
+        },
+        "infinitive": "исчезать",
+        "info": "This verb can also mean the following: vanish, wear off, wear.",
+        "non_past": {
+          "Plural": {
+            "First": "исчеза'ем",
+            "Second": "исчеза'ете",
+            "Third": "исчеза'ют"
+          },
+          "Singular": {
+            "First": "исчеза'ю",
+            "Second": "исчеза'ешь",
+            "Third": "исчеза'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "исчеза'вший",
+            "Present": "исчеза'ющий"
+          },
+          "Adverbial": {
+            "Past": "исчеза'в",
+            "Present": "исчеза'я"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "исчеза'ла",
+          "Masculine": "исчеза'л",
+          "Neuter": "исчеза'ло",
+          "Plural": "исчеза'ли"
+        },
+        "translation": "to disappear"
+      },
+      "examples": [],
+      "name": "исчезать",
+      "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "тротуа'ры",
+            "Dative": "тротуа'рам",
+            "Genetive": "тротуа'ров",
+            "Instrumental": "тротуа'рами",
+            "Nominative": "тротуа'ры",
+            "Prepositional": "тротуа'рах"
+          },
+          "Singular": {
+            "Accusative": "тротуа'р",
+            "Dative": "тротуа'ру",
+            "Genetive": "тротуа'ра",
+            "Instrumental": "тротуа'ром",
+            "Nominative": "тротуа'р",
+            "Prepositional": "тротуа'ре"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "тротуар",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "кри'тики",
+            "Dative": "кри'тикам",
+            "Genetive": "кри'тик",
+            "Instrumental": "кри'тиками",
+            "Nominative": "кри'тики",
+            "Prepositional": "кри'тиках"
+          },
+          "Singular": {
+            "Accusative": "кри'тику",
+            "Dative": "кри'тике",
+            "Genetive": "кри'тики",
+            "Instrumental": "кри'тикой",
+            "Nominative": "кри'тика",
+            "Prepositional": "кри'тике"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "критика",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "попытаться"
+        ],
+        "imperative": {
+          "Plural": "пыта'йтесь",
+          "Singular": "пыта'йся"
+        },
+        "infinitive": "пытаться",
+        "info": "This verb can also mean the following: seek, endeavour, assay, try, do.",
+        "non_past": {
+          "Plural": {
+            "First": "пыта'емся",
+            "Second": "пыта'етесь",
+            "Third": "пыта'ются"
+          },
+          "Singular": {
+            "First": "пыта'юсь",
+            "Second": "пыта'ешься",
+            "Third": "пыта'ется"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "пыта'вшийся",
+            "Present": "пыта'ющийся"
+          },
+          "Adverbial": {
+            "Past": "пыта'вшись",
+            "Present": "пыта'ясь"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "пыта'лась",
+          "Masculine": "пыта'лся",
+          "Neuter": "пыта'лось",
+          "Plural": "пыта'лись"
+        },
+        "translation": "to attempt"
+      },
+      "examples": [],
+      "name": "пытаться",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "высказывать"
+        ],
+        "imperative": {
+          "Plural": "вы'скажите",
+          "Singular": "вы'скажи"
+        },
+        "infinitive": "высказать",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "вы'скажем",
+            "Second": "вы'скажете",
+            "Third": "вы'скажут"
+          },
+          "Singular": {
+            "First": "вы'скажу",
+            "Second": "вы'скажешь",
+            "Third": "вы'скажет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "вы'сказавший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "вы'сказав",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "вы'сказанный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "вы'сказала",
+          "Masculine": "вы'сказал",
+          "Neuter": "вы'сказало",
+          "Plural": "вы'сказали"
+        },
+        "translation": "to express"
+      },
+      "examples": [],
+      "name": "высказать",
+      "type": "Verb"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "не'рвную",
+            "Dative": "не'рвной",
+            "Genetive": "не'рвной",
+            "Instrumental": "не'рвной",
+            "Nominative": "не'рвная",
+            "Prepositional": "не'рвной"
+          },
+          "Masculine": {
+            "Accusative": "не'рвного",
+            "Dative": "не'рвному",
+            "Genetive": "не'рвного",
+            "Instrumental": "не'рвным",
+            "Nominative": "не'рвный",
+            "Prepositional": "не'рвном"
+          },
+          "Neuter": {
+            "Accusative": "не'рвное",
+            "Dative": "не'рвному",
+            "Genetive": "не'рвного",
+            "Instrumental": "не'рвным",
+            "Nominative": "не'рвное",
+            "Prepositional": "не'рвном"
+          },
+          "Plural": {
+            "Accusative": "не'рвных",
+            "Dative": "не'рвным",
+            "Genetive": "не'рвных",
+            "Instrumental": "не'рвными",
+            "Nominative": "не'рвные",
+            "Prepositional": "не'рвных"
+          }
+        },
+        "short_form": {
+          "Femanine": "нервна'",
+          "Masculine": "не'рвен",
+          "Neuter": "не'рвно",
+          "Plural": "не'рвны"
+        }
+      },
+      "examples": [],
+      "name": "нервный",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "наро'ды",
+            "Dative": "наро'дам",
+            "Genetive": "наро'дов",
+            "Instrumental": "наро'дами",
+            "Nominative": "наро'ды",
+            "Prepositional": "наро'дах"
+          },
+          "Singular": {
+            "Accusative": "наро'д",
+            "Dative": "наро'ду",
+            "Genetive": "наро'да",
+            "Instrumental": "наро'дом",
+            "Nominative": "наро'д",
+            "Prepositional": "наро'де"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "народ",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "—",
+          "Singular": "—"
+        },
+        "infinitive": "тошнить",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "—",
+            "Second": "—",
+            "Third": "—"
+          },
+          "Singular": {
+            "First": "—",
+            "Second": "—",
+            "Third": "тошни'т"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "—",
+          "Masculine": "—",
+          "Neuter": "тошни'ло",
+          "Plural": "—"
+        },
+        "translation": "to cause nausea"
+      },
+      "examples": [],
+      "name": "тошнить",
+      "type": "Verb"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "положи'тельную",
+            "Dative": "положи'тельной",
+            "Genetive": "положи'тельной",
+            "Instrumental": "положи'тельной",
+            "Nominative": "положи'тельная",
+            "Prepositional": "положи'тельной"
+          },
+          "Masculine": {
+            "Accusative": "положи'тельного",
+            "Dative": "положи'тельному",
+            "Genetive": "положи'тельного",
+            "Instrumental": "положи'тельным",
+            "Nominative": "положи'тельный",
+            "Prepositional": "положи'тельном"
+          },
+          "Neuter": {
+            "Accusative": "положи'тельное",
+            "Dative": "положи'тельному",
+            "Genetive": "положи'тельного",
+            "Instrumental": "положи'тельным",
+            "Nominative": "положи'тельное",
+            "Prepositional": "положи'тельном"
+          },
+          "Plural": {
+            "Accusative": "положи'тельных",
+            "Dative": "положи'тельным",
+            "Genetive": "положи'тельных",
+            "Instrumental": "положи'тельными",
+            "Nominative": "положи'тельные",
+            "Prepositional": "положи'тельных"
+          }
+        },
+        "short_form": {
+          "Femanine": "положи'тельна",
+          "Masculine": "положи'телен",
+          "Neuter": "положи'тельно",
+          "Plural": "положи'тельны"
+        }
+      },
+      "examples": [],
+      "name": "положительный",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "буты'лки",
+            "Dative": "буты'лкам",
+            "Genetive": "буты'лок",
+            "Instrumental": "буты'лками",
+            "Nominative": "буты'лки",
+            "Prepositional": "буты'лках"
+          },
+          "Singular": {
+            "Accusative": "буты'лку",
+            "Dative": "буты'лке",
+            "Genetive": "буты'лки",
+            "Instrumental": "буты'лкой",
+            "Nominative": "буты'лка",
+            "Prepositional": "буты'лке"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "бутылка",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "зонты'",
+            "Dative": "зонта'м",
+            "Genetive": "зонто'в",
+            "Instrumental": "зонта'ми",
+            "Nominative": "зонты'",
+            "Prepositional": "зонта'х"
+          },
+          "Singular": {
+            "Accusative": "зо'нт",
+            "Dative": "зонту'",
+            "Genetive": "зонта'",
+            "Instrumental": "зонто'м",
+            "Nominative": "зо'нт",
+            "Prepositional": "зонте'"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "зонт",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "ава'рии",
+            "Dative": "ава'риям",
+            "Genetive": "ава'рий",
+            "Instrumental": "ава'риями",
+            "Nominative": "ава'рии",
+            "Prepositional": "ава'риях"
+          },
+          "Singular": {
+            "Accusative": "ава'рию",
+            "Dative": "ава'рии",
+            "Genetive": "ава'рии",
+            "Instrumental": "ава'рией",
+            "Nominative": "ава'рия",
+            "Prepositional": "ава'рии"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "авария",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "рома'ны",
+            "Dative": "рома'нам",
+            "Genetive": "рома'нов",
+            "Instrumental": "рома'нами",
+            "Nominative": "рома'ны",
+            "Prepositional": "рома'нах"
+          },
+          "Singular": {
+            "Accusative": "рома'н",
+            "Dative": "рома'ну",
+            "Genetive": "рома'на",
+            "Instrumental": "рома'ном",
+            "Nominative": "рома'н",
+            "Prepositional": "рома'не"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "роман",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "табле'тки",
+            "Dative": "табле'ткам",
+            "Genetive": "табле'ток",
+            "Instrumental": "табле'тками",
+            "Nominative": "табле'тки",
+            "Prepositional": "табле'тках"
+          },
+          "Singular": {
+            "Accusative": "табле'тку",
+            "Dative": "табле'тке",
+            "Genetive": "табле'тки",
+            "Instrumental": "табле'ткой",
+            "Nominative": "табле'тка",
+            "Prepositional": "табле'тке"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "таблетка",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "пу'нкты",
+            "Dative": "пу'нктам",
+            "Genetive": "пу'нктов",
+            "Instrumental": "пу'нктами",
+            "Nominative": "пу'нкты",
+            "Prepositional": "пу'нктах"
+          },
+          "Singular": {
+            "Accusative": "пу'нкт",
+            "Dative": "пу'нкту",
+            "Genetive": "пу'нкта",
+            "Instrumental": "пу'нктом",
+            "Nominative": "пу'нкт",
+            "Prepositional": "пу'нкте"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "пункт",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "прика'зы",
+            "Dative": "прика'зам",
+            "Genetive": "прика'зов",
+            "Instrumental": "прика'зами",
+            "Nominative": "прика'зы",
+            "Prepositional": "прика'зах"
+          },
+          "Singular": {
+            "Accusative": "прика'з",
+            "Dative": "прика'зу",
+            "Genetive": "прика'за",
+            "Instrumental": "прика'зом",
+            "Nominative": "прика'з",
+            "Prepositional": "прика'зе"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "приказ",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "ломать"
+        ],
+        "imperative": {
+          "Plural": "слома'йте",
+          "Singular": "слома'й"
+        },
+        "infinitive": "сломать",
+        "info": "This verb can also mean the following: ruin, demolish, pull down, fracture, destroy.",
+        "non_past": {
+          "Plural": {
+            "First": "слома'ем",
+            "Second": "слома'ете",
+            "Third": "слома'ют"
+          },
+          "Singular": {
+            "First": "слома'ю",
+            "Second": "слома'ешь",
+            "Third": "слома'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "слома'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "слома'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "сло'манный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "слома'ла",
+          "Masculine": "слома'л",
+          "Neuter": "слома'ло",
+          "Plural": "слома'ли"
+        },
+        "translation": "to break"
+      },
+      "examples": [],
+      "name": "сломать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "записаться"
+        ],
+        "imperative": {
+          "Plural": "запи'сывайтесь",
+          "Singular": "запи'сывайся"
+        },
+        "infinitive": "записываться",
+        "info": "This verb can also mean the following: sign, sign up for, enroll.",
+        "non_past": {
+          "Plural": {
+            "First": "запи'сываемся",
+            "Second": "запи'сываетесь",
+            "Third": "запи'сываются"
+          },
+          "Singular": {
+            "First": "запи'сываюсь",
+            "Second": "запи'сываешься",
+            "Third": "запи'сывается"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "запи'сывавшийся",
+            "Present": "запи'сывающийся"
+          },
+          "Adverbial": {
+            "Past": "запи'сывавшись",
+            "Present": "запи'сываясь"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "запи'сывалась",
+          "Masculine": "запи'сывался",
+          "Neuter": "запи'сывалось",
+          "Plural": "запи'сывались"
+        },
+        "translation": "to register for"
+      },
+      "examples": [],
+      "name": "записываться",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "руга'йтесь",
+          "Singular": "руга'йся"
+        },
+        "infinitive": "ругаться",
+        "info": "This verb can also mean the following: abuse, swear, use bad language pf vyrugtsja, abuse one another, do, swear at each other pf porugtsja.",
+        "non_past": {
+          "Plural": {
+            "First": "руга'емся",
+            "Second": "руга'етесь",
+            "Third": "руга'ются"
+          },
+          "Singular": {
+            "First": "руга'юсь",
+            "Second": "руга'ешься",
+            "Third": "руга'ется"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "руга'вшийся",
+            "Present": "руга'ющийся"
+          },
+          "Adverbial": {
+            "Past": "руга'вшись",
+            "Present": "руга'ясь"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "руга'лась",
+          "Masculine": "руга'лся",
+          "Neuter": "руга'лось",
+          "Plural": "руга'лись"
+        },
+        "translation": "to curse"
+      },
+      "examples": [],
+      "name": "ругаться",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "создать"
+        ],
+        "imperative": {
+          "Plural": "создава'йте",
+          "Singular": "создава'й"
+        },
+        "infinitive": "создавать",
+        "info": "This verb can also mean the following: set, establish, set up, found, originate.",
+        "non_past": {
+          "Plural": {
+            "First": "создаём",
+            "Second": "создаёте",
+            "Third": "создаю'т"
+          },
+          "Singular": {
+            "First": "создаю'",
+            "Second": "создаёшь",
+            "Third": "создаёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "создава'вший",
+            "Present": "создаю'щий"
+          },
+          "Adverbial": {
+            "Past": "создава'в",
+            "Present": "создава'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "создава'емый"
+          }
+        },
+        "past": {
+          "Femanine": "создава'ла",
+          "Masculine": "создава'л",
+          "Neuter": "создава'ло",
+          "Plural": "создава'ли"
+        },
+        "translation": "to create"
+      },
+      "examples": [],
+      "name": "создавать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "потерять"
+        ],
+        "imperative": {
+          "Plural": "теря'йте",
+          "Singular": "теря'й"
+        },
+        "infinitive": "терять",
+        "info": "This verb can also mean the following: waste, shed.",
+        "non_past": {
+          "Plural": {
+            "First": "теря'ем",
+            "Second": "теря'ете",
+            "Third": "теря'ют"
+          },
+          "Singular": {
+            "First": "теря'ю",
+            "Second": "теря'ешь",
+            "Third": "теря'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "теря'вший",
+            "Present": "теря'ющий"
+          },
+          "Adverbial": {
+            "Past": "теря'в",
+            "Present": "теря'я"
+          },
+          "Passive": {
+            "Past": "те'рянный",
+            "Present": "теря'емый"
+          }
+        },
+        "past": {
+          "Femanine": "теря'ла",
+          "Masculine": "теря'л",
+          "Neuter": "теря'ло",
+          "Plural": "теря'ли"
+        },
+        "translation": "to lose"
+      },
+      "examples": [],
+      "name": "терять",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "сломать",
+          "поломать"
+        ],
+        "imperative": {
+          "Plural": "лома'йте",
+          "Singular": "лома'й"
+        },
+        "infinitive": "ломать",
+        "info": "This verb can also mean the following: cause to ache, quarry stone, fracture, quarry, rack.",
+        "non_past": {
+          "Plural": {
+            "First": "лома'ем",
+            "Second": "лома'ете",
+            "Third": "лома'ют"
+          },
+          "Singular": {
+            "First": "лома'ю",
+            "Second": "лома'ешь",
+            "Third": "лома'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "лома'вший",
+            "Present": "лома'ющий"
+          },
+          "Adverbial": {
+            "Past": "лома'в",
+            "Present": "лома'я"
+          },
+          "Passive": {
+            "Past": "ло'манный",
+            "Present": "лома'емый"
+          }
+        },
+        "past": {
+          "Femanine": "лома'ла",
+          "Masculine": "лома'л",
+          "Neuter": "лома'ло",
+          "Plural": "лома'ли"
+        },
+        "translation": "to break"
+      },
+      "examples": [],
+      "name": "ломать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "создавать"
+        ],
+        "imperative": {
+          "Plural": "созда'йте",
+          "Singular": "созда'й"
+        },
+        "infinitive": "создать",
+        "info": "This verb can also mean the following: set, establish, set up, found, originate.",
+        "non_past": {
+          "Plural": {
+            "First": "создади'м",
+            "Second": "создади'те",
+            "Third": "создаду'т"
+          },
+          "Singular": {
+            "First": "созда'м",
+            "Second": "созда'шь",
+            "Third": "созда'ст"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "созда'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "созда'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "со'зданный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "создала'",
+          "Masculine": "со'здал",
+          "Neuter": "со'здало",
+          "Plural": "со'здали"
+        },
+        "translation": "to create"
+      },
+      "examples": [],
+      "name": "создать",
+      "type": "Verb"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "забо'тливую",
+            "Dative": "забо'тливой",
+            "Genetive": "забо'тливой",
+            "Instrumental": "забо'тливой",
+            "Nominative": "забо'тливая",
+            "Prepositional": "забо'тливой"
+          },
+          "Masculine": {
+            "Accusative": "забо'тливого",
+            "Dative": "забо'тливому",
+            "Genetive": "забо'тливого",
+            "Instrumental": "забо'тливым",
+            "Nominative": "забо'тливый",
+            "Prepositional": "забо'тливом"
+          },
+          "Neuter": {
+            "Accusative": "забо'тливое",
+            "Dative": "забо'тливому",
+            "Genetive": "забо'тливого",
+            "Instrumental": "забо'тливым",
+            "Nominative": "забо'тливое",
+            "Prepositional": "забо'тливом"
+          },
+          "Plural": {
+            "Accusative": "забо'тливых",
+            "Dative": "забо'тливым",
+            "Genetive": "забо'тливых",
+            "Instrumental": "забо'тливыми",
+            "Nominative": "забо'тливые",
+            "Prepositional": "забо'тливых"
+          }
+        },
+        "short_form": {
+          "Femanine": "забо'тлива",
+          "Masculine": "забо'тлив",
+          "Neuter": "забо'тливо",
+          "Plural": "забо'тливы"
+        }
+      },
+      "examples": [],
+      "name": "заботливый",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "мозги'",
+            "Dative": "мозга'м",
+            "Genetive": "мозго'в",
+            "Instrumental": "мозга'ми",
+            "Nominative": "мозги'",
+            "Prepositional": "мозга'х"
+          },
+          "Singular": {
+            "Accusative": "мо'зг",
+            "Dative": "мо'згу",
+            "Genetive": "мо'зга",
+            "Instrumental": "мо'згом",
+            "Nominative": "мо'зг",
+            "Prepositional": "мо'зге"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "мозг",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "злоде'ев",
+            "Dative": "злоде'ям",
+            "Genetive": "злоде'ев",
+            "Instrumental": "злоде'ями",
+            "Nominative": "злоде'и",
+            "Prepositional": "злоде'ях"
+          },
+          "Singular": {
+            "Accusative": "злоде'я",
+            "Dative": "злоде'ю",
+            "Genetive": "злоде'я",
+            "Instrumental": "злоде'ем",
+            "Nominative": "злоде'й",
+            "Prepositional": "злоде'е"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "злодей",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "по'льзователей",
+            "Dative": "по'льзователям",
+            "Genetive": "по'льзователей",
+            "Instrumental": "по'льзователями",
+            "Nominative": "по'льзователи",
+            "Prepositional": "по'льзователях"
+          },
+          "Singular": {
+            "Accusative": "по'льзователя",
+            "Dative": "по'льзователю",
+            "Genetive": "по'льзователя",
+            "Instrumental": "по'льзователем",
+            "Nominative": "по'льзователь",
+            "Prepositional": "по'льзователе"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "пользователь",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "просту'ды",
+            "Dative": "просту'дам",
+            "Genetive": "просту'д",
+            "Instrumental": "просту'дами",
+            "Nominative": "просту'ды",
+            "Prepositional": "просту'дах"
+          },
+          "Singular": {
+            "Accusative": "просту'ду",
+            "Dative": "просту'де",
+            "Genetive": "просту'ды",
+            "Instrumental": "просту'дой",
+            "Nominative": "просту'да",
+            "Prepositional": "просту'де"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "простуда",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "ра'зумы",
+            "Dative": "ра'зумам",
+            "Genetive": "ра'зумов",
+            "Instrumental": "ра'зумами",
+            "Nominative": "ра'зумы",
+            "Prepositional": "ра'зумах"
+          },
+          "Singular": {
+            "Accusative": "ра'зум",
+            "Dative": "ра'зуму",
+            "Genetive": "ра'зума",
+            "Instrumental": "ра'зумом",
+            "Nominative": "ра'зум",
+            "Prepositional": "ра'зуме"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "разум",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "сцена'рии",
+            "Dative": "сцена'риям",
+            "Genetive": "сцена'риев",
+            "Instrumental": "сцена'риями",
+            "Nominative": "сцена'рии",
+            "Prepositional": "сцена'риях"
+          },
+          "Singular": {
+            "Accusative": "сцена'рий",
+            "Dative": "сцена'рию",
+            "Genetive": "сцена'рия",
+            "Instrumental": "сцена'рием",
+            "Nominative": "сцена'рий",
+            "Prepositional": "сцена'рии"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "сценарий",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "удово'льствия",
+            "Dative": "удово'льствиям",
+            "Genetive": "удово'льствий",
+            "Instrumental": "удово'льствиями",
+            "Nominative": "удово'льствия",
+            "Prepositional": "удово'льствиях"
+          },
+          "Singular": {
+            "Accusative": "удово'льствие",
+            "Dative": "удово'льствию",
+            "Genetive": "удово'льствия",
+            "Instrumental": "удово'льствием",
+            "Nominative": "удово'льствие",
+            "Prepositional": "удово'льствии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "удовольствие",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "привлечь"
+        ],
+        "imperative": {
+          "Plural": "привлека'йте",
+          "Singular": "привлека'й"
+        },
+        "infinitive": "привлекать",
+        "info": "This verb can also mean the following: draw.",
+        "non_past": {
+          "Plural": {
+            "First": "привлека'ем",
+            "Second": "привлека'ете",
+            "Third": "привлека'ют"
+          },
+          "Singular": {
+            "First": "привлека'ю",
+            "Second": "привлека'ешь",
+            "Third": "привлека'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "привлека'вший",
+            "Present": "привлека'ющий"
+          },
+          "Adverbial": {
+            "Past": "привлека'в",
+            "Present": "привлека'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "привлека'емый"
+          }
+        },
+        "past": {
+          "Femanine": "привлека'ла",
+          "Masculine": "привлека'л",
+          "Neuter": "привлека'ло",
+          "Plural": "привлека'ли"
+        },
+        "translation": "to attract"
+      },
+      "examples": [],
+      "name": "привлекать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "выдать"
+        ],
+        "imperative": {
+          "Plural": "выдава'йте",
+          "Singular": "выдава'й"
+        },
+        "infinitive": "выдавать",
+        "info": "This verb can also mean the following: pass off as, produce, distribute, deliver up, extradite, betray, give away, issue, pay out, deliver, pose as, hand, give up, pass.",
+        "non_past": {
+          "Plural": {
+            "First": "выдаём",
+            "Second": "выдаёте",
+            "Third": "выдаю'т"
+          },
+          "Singular": {
+            "First": "выдаю'",
+            "Second": "выдаёшь",
+            "Third": "выдаёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "выдава'вший",
+            "Present": "выдаю'щий"
+          },
+          "Adverbial": {
+            "Past": "выдава'в",
+            "Present": "выдава'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "выдава'емый"
+          }
+        },
+        "past": {
+          "Femanine": "выдава'ла",
+          "Masculine": "выдава'л",
+          "Neuter": "выдава'ло",
+          "Plural": "выдава'ли"
+        },
+        "translation": "to give out"
+      },
+      "examples": [],
+      "name": "выдавать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "выдавать"
+        ],
+        "imperative": {
+          "Plural": "вы'дайте",
+          "Singular": "вы'дай"
+        },
+        "infinitive": "выдать",
+        "info": "This verb can also mean the following: pass off as, produce, distribute, deliver up, extradite, betray, give away, issue, pay out, deliver, pose as, hand, give up, pass.",
+        "non_past": {
+          "Plural": {
+            "First": "вы'дадим",
+            "Second": "вы'дадите",
+            "Third": "вы'дадут"
+          },
+          "Singular": {
+            "First": "вы'дам",
+            "Second": "вы'дашь",
+            "Third": "вы'даст"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "вы'давший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "вы'дав",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "вы'данный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "вы'дала",
+          "Masculine": "вы'дал",
+          "Neuter": "вы'дало",
+          "Plural": "вы'дали"
+        },
+        "translation": "to give out"
+      },
+      "examples": [],
+      "name": "выдать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "позаботиться"
+        ],
+        "imperative": {
+          "Plural": "забо'тьтесь",
+          "Singular": "забо'ться"
+        },
+        "infinitive": "заботиться",
+        "info": "This verb can also mean the following: look after, worry, be anxious, trouble, do.",
+        "non_past": {
+          "Plural": {
+            "First": "забо'тимся",
+            "Second": "забо'титесь",
+            "Third": "забо'тятся"
+          },
+          "Singular": {
+            "First": "забо'чусь",
+            "Second": "забо'тишься",
+            "Third": "забо'тится"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "забо'тившийся",
+            "Present": "забо'тящийся"
+          },
+          "Adverbial": {
+            "Past": "забо'тившись",
+            "Present": "забо'тясь"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "забо'тилась",
+          "Masculine": "забо'тился",
+          "Neuter": "забо'тилось",
+          "Plural": "забо'тились"
+        },
+        "translation": "to care"
+      },
+      "examples": [],
+      "name": "заботиться",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "управля'йте",
+          "Singular": "управля'й"
+        },
+        "infinitive": "управлять",
+        "info": "This verb can also mean the following: manage, drive, rule, operate, run, conduct, control, steer.",
+        "non_past": {
+          "Plural": {
+            "First": "управля'ем",
+            "Second": "управля'ете",
+            "Third": "управля'ют"
+          },
+          "Singular": {
+            "First": "управля'ю",
+            "Second": "управля'ешь",
+            "Third": "управля'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "управля'вший",
+            "Present": "управля'ющий"
+          },
+          "Adverbial": {
+            "Past": "управля'в",
+            "Present": "управля'я"
+          },
+          "Passive": {
+            "Past": "упра'влянный",
+            "Present": "управля'емый"
+          }
+        },
+        "past": {
+          "Femanine": "управля'ла",
+          "Masculine": "управля'л",
+          "Neuter": "управля'ло",
+          "Plural": "управля'ли"
+        },
+        "translation": "to govern"
+      },
+      "examples": [],
+      "name": "управлять",
+      "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "слу'хи",
+            "Dative": "слу'хам",
+            "Genetive": "слу'хов",
+            "Instrumental": "слу'хами",
+            "Nominative": "слу'хи",
+            "Prepositional": "слу'хах"
+          },
+          "Singular": {
+            "Accusative": "слу'х",
+            "Dative": "слу'ху",
+            "Genetive": "слу'ха",
+            "Instrumental": "слу'хом",
+            "Nominative": "слу'х",
+            "Prepositional": "слу'хе"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "слух",
+      "type": "Noun"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "про'шлую",
+            "Dative": "про'шлой",
+            "Genetive": "про'шлой",
+            "Instrumental": "про'шлой",
+            "Nominative": "про'шлая",
+            "Prepositional": "про'шлой"
+          },
+          "Masculine": {
+            "Accusative": "про'шлого",
+            "Dative": "про'шлому",
+            "Genetive": "про'шлого",
+            "Instrumental": "про'шлым",
+            "Nominative": "про'шлый",
+            "Prepositional": "про'шлом"
+          },
+          "Neuter": {
+            "Accusative": "про'шлое",
+            "Dative": "про'шлому",
+            "Genetive": "про'шлого",
+            "Instrumental": "про'шлым",
+            "Nominative": "про'шлое",
+            "Prepositional": "про'шлом"
+          },
+          "Plural": {
+            "Accusative": "про'шлых",
+            "Dative": "про'шлым",
+            "Genetive": "про'шлых",
+            "Instrumental": "про'шлыми",
+            "Nominative": "про'шлые",
+            "Prepositional": "про'шлых"
+          }
+        },
+        "short_form": {
+          "Femanine": "-",
+          "Masculine": "-",
+          "Neuter": "-",
+          "Plural": "-"
+        }
+      },
+      "examples": [],
+      "name": "прошлый",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "суды'",
+            "Dative": "суда'м",
+            "Genetive": "судо'в",
+            "Instrumental": "суда'ми",
+            "Nominative": "суды'",
+            "Prepositional": "суда'х"
+          },
+          "Singular": {
+            "Accusative": "су'д",
+            "Dative": "суду'",
+            "Genetive": "суда'",
+            "Instrumental": "судо'м",
+            "Nominative": "су'д",
+            "Prepositional": "суде'"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "суд",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "велосипе'ды",
+            "Dative": "велосипе'дам",
+            "Genetive": "велосипе'дов",
+            "Instrumental": "велосипе'дами",
+            "Nominative": "велосипе'ды",
+            "Prepositional": "велосипе'дах"
+          },
+          "Singular": {
+            "Accusative": "велосипе'д",
+            "Dative": "велосипе'ду",
+            "Genetive": "велосипе'да",
+            "Instrumental": "велосипе'дом",
+            "Nominative": "велосипе'д",
+            "Prepositional": "велосипе'де"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "велосипед",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "рюкзаки'",
+            "Dative": "рюкзака'м",
+            "Genetive": "рюкзако'в",
+            "Instrumental": "рюкзака'ми",
+            "Nominative": "рюкзаки'",
+            "Prepositional": "рюкзака'х"
+          },
+          "Singular": {
+            "Accusative": "рюкза'к",
+            "Dative": "рюкзаку'",
+            "Genetive": "рюкзака'",
+            "Instrumental": "рюкзако'м",
+            "Nominative": "рюкза'к",
+            "Prepositional": "рюкзаке'"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "рюкзак",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "багажи'",
+            "Dative": "багажа'м",
+            "Genetive": "багаже'й",
+            "Instrumental": "багажа'ми",
+            "Nominative": "багажи'",
+            "Prepositional": "багажа'х"
+          },
+          "Singular": {
+            "Accusative": "бага'ж",
+            "Dative": "багажу'",
+            "Genetive": "багажа'",
+            "Instrumental": "багажо'м",
+            "Nominative": "бага'ж",
+            "Prepositional": "багаже'"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "багаж",
+      "type": "Noun"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "ро'бкую",
+            "Dative": "ро'бкой",
+            "Genetive": "ро'бкой",
+            "Instrumental": "ро'бкой",
+            "Nominative": "ро'бкая",
+            "Prepositional": "ро'бкой"
+          },
+          "Masculine": {
+            "Accusative": "ро'бкого",
+            "Dative": "ро'бкому",
+            "Genetive": "ро'бкого",
+            "Instrumental": "ро'бким",
+            "Nominative": "ро'бкий",
+            "Prepositional": "ро'бком"
+          },
+          "Neuter": {
+            "Accusative": "ро'бкое",
+            "Dative": "ро'бкому",
+            "Genetive": "ро'бкого",
+            "Instrumental": "ро'бким",
+            "Nominative": "ро'бкое",
+            "Prepositional": "ро'бком"
+          },
+          "Plural": {
+            "Accusative": "ро'бких",
+            "Dative": "ро'бким",
+            "Genetive": "ро'бких",
+            "Instrumental": "ро'бкими",
+            "Nominative": "ро'бкие",
+            "Prepositional": "ро'бких"
+          }
+        },
+        "short_form": {
+          "Femanine": "робка'",
+          "Masculine": "ро'бок",
+          "Neuter": "ро'бко",
+          "Plural": "ро'бки"
+        }
+      },
+      "examples": [],
+      "name": "робкий",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "ра'зную",
+            "Dative": "ра'зной",
+            "Genetive": "ра'зной",
+            "Instrumental": "ра'зной",
+            "Nominative": "ра'зная",
+            "Prepositional": "ра'зной"
+          },
+          "Masculine": {
+            "Accusative": "ра'зного",
+            "Dative": "ра'зному",
+            "Genetive": "ра'зного",
+            "Instrumental": "ра'зным",
+            "Nominative": "ра'зный",
+            "Prepositional": "ра'зном"
+          },
+          "Neuter": {
+            "Accusative": "ра'зное",
+            "Dative": "ра'зному",
+            "Genetive": "ра'зного",
+            "Instrumental": "ра'зным",
+            "Nominative": "ра'зное",
+            "Prepositional": "ра'зном"
+          },
+          "Plural": {
+            "Accusative": "ра'зных",
+            "Dative": "ра'зным",
+            "Genetive": "ра'зных",
+            "Instrumental": "ра'зными",
+            "Nominative": "ра'зные",
+            "Prepositional": "ра'зных"
+          }
+        },
+        "short_form": {
+          "Femanine": "ра'зна",
+          "Masculine": "ра'зен",
+          "Neuter": "ра'зно",
+          "Plural": "ра'зны"
+        }
+      },
+      "examples": [],
+      "name": "разный",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "неме'цкую",
+            "Dative": "неме'цкой",
+            "Genetive": "неме'цкой",
+            "Instrumental": "неме'цкой",
+            "Nominative": "неме'цкая",
+            "Prepositional": "неме'цкой"
+          },
+          "Masculine": {
+            "Accusative": "неме'цкого",
+            "Dative": "неме'цкому",
+            "Genetive": "неме'цкого",
+            "Instrumental": "неме'цким",
+            "Nominative": "неме'цкий",
+            "Prepositional": "неме'цком"
+          },
+          "Neuter": {
+            "Accusative": "неме'цкое",
+            "Dative": "неме'цкому",
+            "Genetive": "неме'цкого",
+            "Instrumental": "неме'цким",
+            "Nominative": "неме'цкое",
+            "Prepositional": "неме'цком"
+          },
+          "Plural": {
+            "Accusative": "неме'цких",
+            "Dative": "неме'цким",
+            "Genetive": "неме'цких",
+            "Instrumental": "неме'цкими",
+            "Nominative": "неме'цкие",
+            "Prepositional": "неме'цких"
+          }
+        },
+        "short_form": {
+          "Femanine": "-",
+          "Masculine": "-",
+          "Neuter": "-",
+          "Plural": "-"
+        }
+      },
+      "examples": [],
+      "name": "немецкий",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "взро'слую",
+            "Dative": "взро'слой",
+            "Genetive": "взро'слой",
+            "Instrumental": "взро'слой",
+            "Nominative": "взро'слая",
+            "Prepositional": "взро'слой"
+          },
+          "Masculine": {
+            "Accusative": "взро'слого",
+            "Dative": "взро'слому",
+            "Genetive": "взро'слого",
+            "Instrumental": "взро'слым",
+            "Nominative": "взро'слый",
+            "Prepositional": "взро'слом"
+          },
+          "Neuter": {
+            "Accusative": "взро'слое",
+            "Dative": "взро'слому",
+            "Genetive": "взро'слого",
+            "Instrumental": "взро'слым",
+            "Nominative": "взро'слое",
+            "Prepositional": "взро'слом"
+          },
+          "Plural": {
+            "Accusative": "взро'слых",
+            "Dative": "взро'слым",
+            "Genetive": "взро'слых",
+            "Instrumental": "взро'слыми",
+            "Nominative": "взро'слые",
+            "Prepositional": "взро'слых"
+          }
+        },
+        "short_form": {
+          "Femanine": "взро'сла",
+          "Masculine": "—",
+          "Neuter": "взро'сло",
+          "Plural": "взро'слы"
+        }
+      },
+      "examples": [],
+      "name": "взрослый",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "еди'нственную",
+            "Dative": "еди'нственной",
+            "Genetive": "еди'нственной",
+            "Instrumental": "еди'нственной",
+            "Nominative": "еди'нственная",
+            "Prepositional": "еди'нственной"
+          },
+          "Masculine": {
+            "Accusative": "еди'нственного",
+            "Dative": "еди'нственному",
+            "Genetive": "еди'нственного",
+            "Instrumental": "еди'нственным",
+            "Nominative": "еди'нственный",
+            "Prepositional": "еди'нственном"
+          },
+          "Neuter": {
+            "Accusative": "еди'нственное",
+            "Dative": "еди'нственному",
+            "Genetive": "еди'нственного",
+            "Instrumental": "еди'нственным",
+            "Nominative": "еди'нственное",
+            "Prepositional": "еди'нственном"
+          },
+          "Plural": {
+            "Accusative": "еди'нственных",
+            "Dative": "еди'нственным",
+            "Genetive": "еди'нственных",
+            "Instrumental": "еди'нственными",
+            "Nominative": "еди'нственные",
+            "Prepositional": "еди'нственных"
+          }
+        },
+        "short_form": {
+          "Femanine": "еди'нственна",
+          "Masculine": "еди'нственен",
+          "Neuter": "еди'нственно",
+          "Plural": "еди'нственны"
+        }
+      },
+      "examples": [],
+      "name": "единственный",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "тошно'ты",
+            "Dative": "тошно'там",
+            "Genetive": "тошно'т",
+            "Instrumental": "тошно'тами",
+            "Nominative": "тошно'ты",
+            "Prepositional": "тошно'тах"
+          },
+          "Singular": {
+            "Accusative": "тошноту'",
+            "Dative": "тошноте'",
+            "Genetive": "тошноты'",
+            "Instrumental": "тошното'й",
+            "Nominative": "тошнота'",
+            "Prepositional": "тошноте'"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "тошнота",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "пути'",
+            "Dative": "путя'м",
+            "Genetive": "путе'й",
+            "Instrumental": "путя'ми",
+            "Nominative": "пути'",
+            "Prepositional": "путя'х"
+          },
+          "Singular": {
+            "Accusative": "пу'ть",
+            "Dative": "пути'",
+            "Genetive": "пути'",
+            "Instrumental": "путём",
+            "Nominative": "пу'ть",
+            "Prepositional": "путе'"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "путь",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "пра'вила",
+            "Dative": "пра'вилам",
+            "Genetive": "пра'вил",
+            "Instrumental": "пра'вилами",
+            "Nominative": "пра'вила",
+            "Prepositional": "пра'вилах"
+          },
+          "Singular": {
+            "Accusative": "пра'вило",
+            "Dative": "пра'вилу",
+            "Genetive": "пра'вила",
+            "Instrumental": "пра'вилом",
+            "Nominative": "пра'вило",
+            "Prepositional": "пра'виле"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "правило",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "разме'ры",
+            "Dative": "разме'рам",
+            "Genetive": "разме'ров",
+            "Instrumental": "разме'рами",
+            "Nominative": "разме'ры",
+            "Prepositional": "разме'рах"
+          },
+          "Singular": {
+            "Accusative": "разме'р",
+            "Dative": "разме'ру",
+            "Genetive": "разме'ра",
+            "Instrumental": "разме'ром",
+            "Nominative": "разме'р",
+            "Prepositional": "разме'ре"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "размер",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "пропуска'",
+            "Dative": "пропуска'м",
+            "Genetive": "пропуско'в",
+            "Instrumental": "пропуска'ми",
+            "Nominative": "пропуска'",
+            "Prepositional": "пропуска'х"
+          },
+          "Singular": {
+            "Accusative": "про'пуск",
+            "Dative": "про'пуску",
+            "Genetive": "про'пуска",
+            "Instrumental": "про'пуском",
+            "Nominative": "про'пуск",
+            "Prepositional": "про'пуске"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "пропуск",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "сообще'ния",
+            "Dative": "сообще'ниям",
+            "Genetive": "сообще'ний",
+            "Instrumental": "сообще'ниями",
+            "Nominative": "сообще'ния",
+            "Prepositional": "сообще'ниях"
+          },
+          "Singular": {
+            "Accusative": "сообще'ние",
+            "Dative": "сообще'нию",
+            "Genetive": "сообще'ния",
+            "Instrumental": "сообще'нием",
+            "Nominative": "сообще'ние",
+            "Prepositional": "сообще'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "сообщение",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "лека'рства",
+            "Dative": "лека'рствам",
+            "Genetive": "лека'рств",
+            "Instrumental": "лека'рствами",
+            "Nominative": "лека'рства",
+            "Prepositional": "лека'рствах"
+          },
+          "Singular": {
+            "Accusative": "лека'рство",
+            "Dative": "лека'рству",
+            "Genetive": "лека'рства",
+            "Instrumental": "лека'рством",
+            "Nominative": "лека'рство",
+            "Prepositional": "лека'рстве"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "лекарство",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "старико'в",
+            "Dative": "старика'м",
+            "Genetive": "старико'в",
+            "Instrumental": "старика'ми",
+            "Nominative": "старики'",
+            "Prepositional": "старика'х"
+          },
+          "Singular": {
+            "Accusative": "старика'",
+            "Dative": "старику'",
+            "Genetive": "старика'",
+            "Instrumental": "старико'м",
+            "Nominative": "стари'к",
+            "Prepositional": "старике'"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "старик",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "нача'ла",
+            "Dative": "нача'лам",
+            "Genetive": "нача'л",
+            "Instrumental": "нача'лами",
+            "Nominative": "нача'ла",
+            "Prepositional": "нача'лах"
+          },
+          "Singular": {
+            "Accusative": "нача'ло",
+            "Dative": "нача'лу",
+            "Genetive": "нача'ла",
+            "Instrumental": "нача'лом",
+            "Nominative": "нача'ло",
+            "Prepositional": "нача'ле"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "начало",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "пацие'нтов",
+            "Dative": "пацие'нтам",
+            "Genetive": "пацие'нтов",
+            "Instrumental": "пацие'нтами",
+            "Nominative": "пацие'нты",
+            "Prepositional": "пацие'нтах"
+          },
+          "Singular": {
+            "Accusative": "пацие'нта",
+            "Dative": "пацие'нту",
+            "Genetive": "пацие'нта",
+            "Instrumental": "пацие'нтом",
+            "Nominative": "пацие'нт",
+            "Prepositional": "пацие'нте"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "пациент",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "полоте'нца",
+            "Dative": "полоте'нцам",
+            "Genetive": "полоте'нец",
+            "Instrumental": "полоте'нцами",
+            "Nominative": "полоте'нца",
+            "Prepositional": "полоте'нцах"
+          },
+          "Singular": {
+            "Accusative": "полоте'нце",
+            "Dative": "полоте'нцу",
+            "Genetive": "полоте'нца",
+            "Instrumental": "полоте'нцем",
+            "Nominative": "полоте'нце",
+            "Prepositional": "полоте'нце"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "полотенце",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "коро'бки",
+            "Dative": "коро'бкам",
+            "Genetive": "коро'бок",
+            "Instrumental": "коро'бками",
+            "Nominative": "коро'бки",
+            "Prepositional": "коро'бках"
+          },
+          "Singular": {
+            "Accusative": "коро'бку",
+            "Dative": "коро'бке",
+            "Genetive": "коро'бки",
+            "Instrumental": "коро'бкой",
+            "Nominative": "коро'бка",
+            "Prepositional": "коро'бке"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "коробка",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "роды'",
+            "Dative": "рода'м",
+            "Genetive": "родо'в",
+            "Instrumental": "рода'ми",
+            "Nominative": "роды'",
+            "Prepositional": "рода'х"
+          },
+          "Singular": {
+            "Accusative": "ро'д",
+            "Dative": "ро'ду",
+            "Genetive": "ро'да",
+            "Instrumental": "ро'дом",
+            "Nominative": "ро'д",
+            "Prepositional": "ро'де"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "род",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "аренду'йте",
+          "Singular": "аренду'й"
+        },
+        "infinitive": "арендовать",
+        "info": "This verb can also mean the following: rent.",
+        "non_past": {
+          "Plural": {
+            "First": "аренду'ем",
+            "Second": "аренду'ете",
+            "Third": "аренду'ют"
+          },
+          "Singular": {
+            "First": "аренду'ю",
+            "Second": "аренду'ешь",
+            "Third": "аренду'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "арендова'вший",
+            "Present": "аренду'ющий"
+          },
+          "Adverbial": {
+            "Past": "арендова'в",
+            "Present": "аренду'я"
+          },
+          "Passive": {
+            "Past": "арендо'ванный",
+            "Present": "аренду'емый"
+          }
+        },
+        "past": {
+          "Femanine": "арендова'ла",
+          "Masculine": "арендова'л",
+          "Neuter": "арендова'ло",
+          "Plural": "арендова'ли"
+        },
+        "translation": "to lease"
+      },
+      "examples": [],
+      "name": "арендовать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "основать"
+        ],
+        "imperative": {
+          "Plural": "осно'вывайте",
+          "Singular": "осно'вывай"
+        },
+        "infinitive": "основывать",
+        "info": "This verb can also mean the following: base, base upon, establish, build upon.",
+        "non_past": {
+          "Plural": {
+            "First": "осно'вываем",
+            "Second": "осно'вываете",
+            "Third": "осно'вывают"
+          },
+          "Singular": {
+            "First": "осно'вываю",
+            "Second": "осно'вываешь",
+            "Third": "осно'вывает"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "осно'вывавший",
+            "Present": "осно'вывающий"
+          },
+          "Adverbial": {
+            "Past": "осно'вывав",
+            "Present": "осно'вывая"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "осно'вываемый"
+          }
+        },
+        "past": {
+          "Femanine": "осно'вывала",
+          "Masculine": "осно'вывал",
+          "Neuter": "осно'вывало",
+          "Plural": "осно'вывали"
+        },
+        "translation": "to found"
+      },
+      "examples": [],
+      "name": "основывать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "обсуждать"
+        ],
+        "imperative": {
+          "Plural": "обсуди'те",
+          "Singular": "обсуди'"
+        },
+        "infinitive": "обсудить",
+        "info": "This verb can also mean the following: consider, talk over.",
+        "non_past": {
+          "Plural": {
+            "First": "обсу'дим",
+            "Second": "обсу'дите",
+            "Third": "обсу'дят"
+          },
+          "Singular": {
+            "First": "обсужу'",
+            "Second": "обсу'дишь",
+            "Third": "обсу'дит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "обсуди'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "обсуди'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "обсуждённый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "обсуди'ла",
+          "Masculine": "обсуди'л",
+          "Neuter": "обсуди'ло",
+          "Plural": "обсуди'ли"
+        },
+        "translation": "to discuss"
+      },
+      "examples": [],
+      "name": "обсудить",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "осмотреть"
+        ],
+        "imperative": {
+          "Plural": "осма'тривайте",
+          "Singular": "осма'тривай"
+        },
+        "infinitive": "осматривать",
+        "info": "This verb can also mean the following: look round, see, inspect, survey, see round.",
+        "non_past": {
+          "Plural": {
+            "First": "осма'триваем",
+            "Second": "осма'триваете",
+            "Third": "осма'тривают"
+          },
+          "Singular": {
+            "First": "осма'триваю",
+            "Second": "осма'триваешь",
+            "Third": "осма'тривает"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "осма'тривавший",
+            "Present": "осма'тривающий"
+          },
+          "Adverbial": {
+            "Past": "осма'тривав",
+            "Present": "осма'тривая"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "осма'триваемый"
+          }
+        },
+        "past": {
+          "Femanine": "осма'тривала",
+          "Masculine": "осма'тривал",
+          "Neuter": "осма'тривало",
+          "Plural": "осма'тривали"
+        },
+        "translation": "to examine"
+      },
+      "examples": [],
+      "name": "осматривать",
+      "type": "Verb"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "начина'ющую",
+            "Dative": "начина'ющей",
+            "Genetive": "начина'ющей",
+            "Instrumental": "начина'ющей",
+            "Nominative": "начина'ющая",
+            "Prepositional": "начина'ющей"
+          },
+          "Masculine": {
+            "Accusative": "начина'ющего",
+            "Dative": "начина'ющему",
+            "Genetive": "начина'ющего",
+            "Instrumental": "начина'ющим",
+            "Nominative": "начина'ющий",
+            "Prepositional": "начина'ющем"
+          },
+          "Neuter": {
+            "Accusative": "начина'ющее",
+            "Dative": "начина'ющему",
+            "Genetive": "начина'ющего",
+            "Instrumental": "начина'ющим",
+            "Nominative": "начина'ющее",
+            "Prepositional": "начина'ющем"
+          },
+          "Plural": {
+            "Accusative": "начина'ющих",
+            "Dative": "начина'ющим",
+            "Genetive": "начина'ющих",
+            "Instrumental": "начина'ющими",
+            "Nominative": "начина'ющие",
+            "Prepositional": "начина'ющих"
+          }
+        },
+        "short_form": {
+          "Femanine": "-",
+          "Masculine": "-",
+          "Neuter": "-",
+          "Plural": "-"
+        }
+      },
+      "examples": [],
+      "name": "начинающий",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "предложе'ния",
+            "Dative": "предложе'ниям",
+            "Genetive": "предложе'ний",
+            "Instrumental": "предложе'ниями",
+            "Nominative": "предложе'ния",
+            "Prepositional": "предложе'ниях"
+          },
+          "Singular": {
+            "Accusative": "предложе'ние",
+            "Dative": "предложе'нию",
+            "Genetive": "предложе'ния",
+            "Instrumental": "предложе'нием",
+            "Nominative": "предложе'ние",
+            "Prepositional": "предложе'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "предложение",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "конъю'нкции",
+            "Dative": "конъю'нкциям",
+            "Genetive": "конъю'нкций",
+            "Instrumental": "конъю'нкциями",
+            "Nominative": "конъю'нкции",
+            "Prepositional": "конъю'нкциях"
+          },
+          "Singular": {
+            "Accusative": "конъю'нкцию",
+            "Dative": "конъю'нкции",
+            "Genetive": "конъю'нкции",
+            "Instrumental": "конъю'нкцией",
+            "Nominative": "конъю'нкция",
+            "Prepositional": "конъю'нкции"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "конъюнкция",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "предло'ги",
+            "Dative": "предло'гам",
+            "Genetive": "предло'гов",
+            "Instrumental": "предло'гами",
+            "Nominative": "предло'ги",
+            "Prepositional": "предло'гах"
+          },
+          "Singular": {
+            "Accusative": "предло'г",
+            "Dative": "предло'гу",
+            "Genetive": "предло'га",
+            "Instrumental": "предло'гом",
+            "Nominative": "предло'г",
+            "Prepositional": "предло'ге"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "предлог",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "фра'зы",
+            "Dative": "фра'зам",
+            "Genetive": "фра'з",
+            "Instrumental": "фра'зами",
+            "Nominative": "фра'зы",
+            "Prepositional": "фра'зах"
+          },
+          "Singular": {
+            "Accusative": "фра'зу",
+            "Dative": "фра'зе",
+            "Genetive": "фра'зы",
+            "Instrumental": "фра'зой",
+            "Nominative": "фра'за",
+            "Prepositional": "фра'зе"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "фраза",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "замеча'ния",
+            "Dative": "замеча'ниям",
+            "Genetive": "замеча'ний",
+            "Instrumental": "замеча'ниями",
+            "Nominative": "замеча'ния",
+            "Prepositional": "замеча'ниях"
+          },
+          "Singular": {
+            "Accusative": "замеча'ние",
+            "Dative": "замеча'нию",
+            "Genetive": "замеча'ния",
+            "Instrumental": "замеча'нием",
+            "Nominative": "замеча'ние",
+            "Prepositional": "замеча'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "замечание",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "запоминать",
+          "помнить"
+        ],
+        "imperative": {
+          "Plural": "запо'мните",
+          "Singular": "запо'мни"
+        },
+        "infinitive": "запомнить",
+        "info": "This verb can also mean the following: memorize, keep in mind.",
+        "non_past": {
+          "Plural": {
+            "First": "запо'мним",
+            "Second": "запо'мните",
+            "Third": "запо'мнят"
+          },
+          "Singular": {
+            "First": "запо'мню",
+            "Second": "запо'мнишь",
+            "Third": "запо'мнит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "запо'мнивший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "запо'мнив",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "запо'мненный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "запо'мнила",
+          "Masculine": "запо'мнил",
+          "Neuter": "запо'мнило",
+          "Plural": "запо'мнили"
+        },
+        "translation": "to remember"
+      },
+      "examples": [],
+      "name": "запомнить",
+      "type": "Verb"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "мра'чную",
+            "Dative": "мра'чной",
+            "Genetive": "мра'чной",
+            "Instrumental": "мра'чной",
+            "Nominative": "мра'чная",
+            "Prepositional": "мра'чной"
+          },
+          "Masculine": {
+            "Accusative": "мра'чного",
+            "Dative": "мра'чному",
+            "Genetive": "мра'чного",
+            "Instrumental": "мра'чным",
+            "Nominative": "мра'чный",
+            "Prepositional": "мра'чном"
+          },
+          "Neuter": {
+            "Accusative": "мра'чное",
+            "Dative": "мра'чному",
+            "Genetive": "мра'чного",
+            "Instrumental": "мра'чным",
+            "Nominative": "мра'чное",
+            "Prepositional": "мра'чном"
+          },
+          "Plural": {
+            "Accusative": "мра'чных",
+            "Dative": "мра'чным",
+            "Genetive": "мра'чных",
+            "Instrumental": "мра'чными",
+            "Nominative": "мра'чные",
+            "Prepositional": "мра'чных"
+          }
+        },
+        "short_form": {
+          "Femanine": "мрачна'",
+          "Masculine": "мра'чен",
+          "Neuter": "мра'чно",
+          "Plural": "мрачны'"
+        }
+      },
+      "examples": [],
+      "name": "мрачный",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "слепу'ю",
+            "Dative": "слепо'й",
+            "Genetive": "слепо'й",
+            "Instrumental": "слепо'й",
+            "Nominative": "слепа'я",
+            "Prepositional": "слепо'й"
+          },
+          "Masculine": {
+            "Accusative": "слепо'го",
+            "Dative": "слепо'му",
+            "Genetive": "слепо'го",
+            "Instrumental": "слепы'м",
+            "Nominative": "слепо'й",
+            "Prepositional": "слепо'м"
+          },
+          "Neuter": {
+            "Accusative": "слепо'е",
+            "Dative": "слепо'му",
+            "Genetive": "слепо'го",
+            "Instrumental": "слепы'м",
+            "Nominative": "слепо'е",
+            "Prepositional": "слепо'м"
+          },
+          "Plural": {
+            "Accusative": "слепы'х",
+            "Dative": "слепы'м",
+            "Genetive": "слепы'х",
+            "Instrumental": "слепы'ми",
+            "Nominative": "слепы'е",
+            "Prepositional": "слепы'х"
+          }
+        },
+        "short_form": {
+          "Femanine": "слепа'",
+          "Masculine": "слеп",
+          "Neuter": "сле'по",
+          "Plural": "сле'пы"
+        }
+      },
+      "examples": [],
+      "name": "слепой",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "глубо'кую",
+            "Dative": "глубо'кой",
+            "Genetive": "глубо'кой",
+            "Instrumental": "глубо'кой",
+            "Nominative": "глубо'кая",
+            "Prepositional": "глубо'кой"
+          },
+          "Masculine": {
+            "Accusative": "глубо'кого",
+            "Dative": "глубо'кому",
+            "Genetive": "глубо'кого",
+            "Instrumental": "глубо'ким",
+            "Nominative": "глубо'кий",
+            "Prepositional": "глубо'ком"
+          },
+          "Neuter": {
+            "Accusative": "глубо'кое",
+            "Dative": "глубо'кому",
+            "Genetive": "глубо'кого",
+            "Instrumental": "глубо'ким",
+            "Nominative": "глубо'кое",
+            "Prepositional": "глубо'ком"
+          },
+          "Plural": {
+            "Accusative": "глубо'ких",
+            "Dative": "глубо'ким",
+            "Genetive": "глубо'ких",
+            "Instrumental": "глубо'кими",
+            "Nominative": "глубо'кие",
+            "Prepositional": "глубо'ких"
+          }
+        },
+        "short_form": {
+          "Femanine": "глубока'",
+          "Masculine": "глубо'к",
+          "Neuter": "глубоко'",
+          "Plural": "глубоки'"
+        }
+      },
+      "examples": [],
+      "name": "глубокий",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "поко'и",
+            "Dative": "поко'ям",
+            "Genetive": "поко'ев",
+            "Instrumental": "поко'ями",
+            "Nominative": "поко'и",
+            "Prepositional": "поко'ях"
+          },
+          "Singular": {
+            "Accusative": "поко'й",
+            "Dative": "поко'ю",
+            "Genetive": "поко'я",
+            "Instrumental": "поко'ем",
+            "Nominative": "поко'й",
+            "Prepositional": "поко'е"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "покой",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "те'ни",
+            "Dative": "теня'м",
+            "Genetive": "тене'й",
+            "Instrumental": "теня'ми",
+            "Nominative": "те'ни",
+            "Prepositional": "теня'х"
+          },
+          "Singular": {
+            "Accusative": "те'нь",
+            "Dative": "те'ни",
+            "Genetive": "те'ни",
+            "Instrumental": "те'нью",
+            "Nominative": "те'нь",
+            "Prepositional": "те'ни"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "тень",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "продолже'ния",
+            "Dative": "продолже'ниям",
+            "Genetive": "продолже'ний",
+            "Instrumental": "продолже'ниями",
+            "Nominative": "продолже'ния",
+            "Prepositional": "продолже'ниях"
+          },
+          "Singular": {
+            "Accusative": "продолже'ние",
+            "Dative": "продолже'нию",
+            "Genetive": "продолже'ния",
+            "Instrumental": "продолже'нием",
+            "Nominative": "продолже'ние",
+            "Prepositional": "продолже'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "продолжение",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "вдо'хи",
+            "Dative": "вдо'хам",
+            "Genetive": "вдо'хов",
+            "Instrumental": "вдо'хами",
+            "Nominative": "вдо'хи",
+            "Prepositional": "вдо'хах"
+          },
+          "Singular": {
+            "Accusative": "вдо'х",
+            "Dative": "вдо'ху",
+            "Genetive": "вдо'ха",
+            "Instrumental": "вдо'хом",
+            "Nominative": "вдо'х",
+            "Prepositional": "вдо'хе"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "вдох",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "заметить"
+        ],
+        "imperative": {
+          "Plural": "замеча'йте",
+          "Singular": "замеча'й"
+        },
+        "infinitive": "замечать",
+        "info": "This verb can also mean the following: note, observe, remark.",
+        "non_past": {
+          "Plural": {
+            "First": "замеча'ем",
+            "Second": "замеча'ете",
+            "Third": "замеча'ют"
+          },
+          "Singular": {
+            "First": "замеча'ю",
+            "Second": "замеча'ешь",
+            "Third": "замеча'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "замеча'вший",
+            "Present": "замеча'ющий"
+          },
+          "Adverbial": {
+            "Past": "замеча'в",
+            "Present": "замеча'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "замеча'емый"
+          }
+        },
+        "past": {
+          "Femanine": "замеча'ла",
+          "Masculine": "замеча'л",
+          "Neuter": "замеча'ло",
+          "Plural": "замеча'ли"
+        },
+        "translation": "to notice"
+      },
+      "examples": [],
+      "name": "замечать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "влюбляться"
+        ],
+        "imperative": {
+          "Plural": "влюби'тесь",
+          "Singular": "влюби'сь"
+        },
+        "infinitive": "влюбиться",
+        "info": "This verb can also mean the following: do.",
+        "non_past": {
+          "Plural": {
+            "First": "влю'бимся",
+            "Second": "влю'битесь",
+            "Third": "влю'бятся"
+          },
+          "Singular": {
+            "First": "влюблю'сь",
+            "Second": "влю'бишься",
+            "Third": "влю'бится"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "влюби'вшийся",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "влюби'вшись",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "влюби'лась",
+          "Masculine": "влюби'лся",
+          "Neuter": "влюби'лось",
+          "Plural": "влюби'лись"
+        },
+        "translation": "to fall in love"
+      },
+      "examples": [],
+      "name": "влюбиться",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "уступать"
+        ],
+        "imperative": {
+          "Plural": "уступи'те",
+          "Singular": "уступи'"
+        },
+        "infinitive": "уступить",
+        "info": "This verb can also mean the following: let, be inferior to, let have, abate, yield, discount, sell, be.",
+        "non_past": {
+          "Plural": {
+            "First": "усту'пим",
+            "Second": "усту'пите",
+            "Third": "усту'пят"
+          },
+          "Singular": {
+            "First": "уступлю'",
+            "Second": "усту'пишь",
+            "Third": "усту'пит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "уступи'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "уступи'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "усту'пленный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "уступи'ла",
+          "Masculine": "уступи'л",
+          "Neuter": "уступи'ло",
+          "Plural": "уступи'ли"
+        },
+        "translation": "to cede"
+      },
+      "examples": [],
+      "name": "уступить",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "выкрасить",
+          "покрасить"
+        ],
+        "imperative": {
+          "Plural": "кра'сьте",
+          "Singular": "кра'сь"
+        },
+        "infinitive": "красить",
+        "info": "This verb can also mean the following: dye, paint, embellish, adorn, beautify, decorate.",
+        "non_past": {
+          "Plural": {
+            "First": "кра'сим",
+            "Second": "кра'сите",
+            "Third": "кра'сят"
+          },
+          "Singular": {
+            "First": "кра'шу",
+            "Second": "кра'сишь",
+            "Third": "кра'сит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "кра'сивший",
+            "Present": "кра'сящий"
+          },
+          "Adverbial": {
+            "Past": "кра'сив",
+            "Present": "кра'ся"
+          },
+          "Passive": {
+            "Past": "кра'шенный",
+            "Present": "кра'симый"
+          }
+        },
+        "past": {
+          "Femanine": "кра'сила",
+          "Masculine": "кра'сил",
+          "Neuter": "кра'сило",
+          "Plural": "кра'сили"
+        },
+        "translation": "to paint"
+      },
+      "examples": [],
+      "name": "красить",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "пустить"
+        ],
+        "imperative": {
+          "Plural": "пуска'йте",
+          "Singular": "пуска'й"
+        },
+        "infinitive": "пускать",
+        "info": "This verb can also mean the following: put out, set, put forth, set working, sprout, set in motion, let in, set in operation, relinquish, throw, launch, set going, start.",
+        "non_past": {
+          "Plural": {
+            "First": "пуска'ем",
+            "Second": "пуска'ете",
+            "Third": "пуска'ют"
+          },
+          "Singular": {
+            "First": "пуска'ю",
+            "Second": "пуска'ешь",
+            "Third": "пуска'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "пуска'вший",
+            "Present": "пуска'ющий"
+          },
+          "Adverbial": {
+            "Past": "пуска'в",
+            "Present": "пуска'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "пуска'емый"
+          }
+        },
+        "past": {
+          "Femanine": "пуска'ла",
+          "Masculine": "пуска'л",
+          "Neuter": "пуска'ло",
+          "Plural": "пуска'ли"
+        },
+        "translation": "to let go"
+      },
+      "examples": [],
+      "name": "пускать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "подарить"
+        ],
+        "imperative": {
+          "Plural": "дари'те",
+          "Singular": "дари'"
+        },
+        "infinitive": "дарить",
+        "info": "This verb can also mean the following: bestow, donate, award, favour, make a present, present.",
+        "non_past": {
+          "Plural": {
+            "First": "да'рим",
+            "Second": "да'рите",
+            "Third": "да'рят"
+          },
+          "Singular": {
+            "First": "дарю'",
+            "Second": "да'ришь",
+            "Third": "да'рит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "дари'вший",
+            "Present": "даря'щий"
+          },
+          "Adverbial": {
+            "Past": "дари'в",
+            "Present": "даря'"
+          },
+          "Passive": {
+            "Past": "да'ренный",
+            "Present": "дари'мый"
+          }
+        },
+        "past": {
+          "Femanine": "дари'ла",
+          "Masculine": "дари'л",
+          "Neuter": "дари'ло",
+          "Plural": "дари'ли"
+        },
+        "translation": "to gift"
+      },
+      "examples": [],
+      "name": "дарить",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "выдыхать"
+        ],
+        "imperative": {
+          "Plural": "вы'дохните",
+          "Singular": "вы'дохни"
+        },
+        "infinitive": "выдохнуть",
+        "info": "This verb can also mean the following: exhale.",
+        "non_past": {
+          "Plural": {
+            "First": "вы'дохнем",
+            "Second": "вы'дохнете",
+            "Third": "вы'дохнут"
+          },
+          "Singular": {
+            "First": "вы'дохну",
+            "Second": "вы'дохнешь",
+            "Third": "вы'дохнет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "вы'дохнувший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "вы'дохнув",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "вы'дохнутый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "вы'дохнула",
+          "Masculine": "вы'дохнул",
+          "Neuter": "вы'дохнуло",
+          "Plural": "вы'дохнули"
+        },
+        "translation": "to breathe out"
+      },
+      "examples": [],
+      "name": "выдохнуть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "вдыхать"
+        ],
+        "imperative": {
+          "Plural": "вдохни'те",
+          "Singular": "вдохни'"
+        },
+        "infinitive": "вдохнуть",
+        "info": "This verb can also mean the following: breathe in.",
+        "non_past": {
+          "Plural": {
+            "First": "вдохнём",
+            "Second": "вдохнёте",
+            "Third": "вдохну'т"
+          },
+          "Singular": {
+            "First": "вдохну'",
+            "Second": "вдохнёшь",
+            "Third": "вдохнёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "вдохну'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "вдохну'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "вдохну'ла",
+          "Masculine": "вдохну'л",
+          "Neuter": "вдохну'ло",
+          "Plural": "вдохну'ли"
+        },
+        "translation": "to inhale"
+      },
+      "examples": [],
+      "name": "вдохнуть",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "оставить"
+        ],
+        "imperative": {
+          "Plural": "оставля'йте",
+          "Singular": "оставля'й"
+        },
+        "infinitive": "оставлять",
+        "info": "This verb can also mean the following: drop, give, abandon, keep, give up, stop, reserve.",
+        "non_past": {
+          "Plural": {
+            "First": "оставля'ем",
+            "Second": "оставля'ете",
+            "Third": "оставля'ют"
+          },
+          "Singular": {
+            "First": "оставля'ю",
+            "Second": "оставля'ешь",
+            "Third": "оставля'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "оставля'вший",
+            "Present": "оставля'ющий"
+          },
+          "Adverbial": {
+            "Past": "оставля'в",
+            "Present": "оставля'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "оставля'емый"
+          }
+        },
+        "past": {
+          "Femanine": "оставля'ла",
+          "Masculine": "оставля'л",
+          "Neuter": "оставля'ло",
+          "Plural": "оставля'ли"
+        },
+        "translation": "to leave"
+      },
+      "examples": [],
+      "name": "оставлять",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "обращать"
+        ],
+        "imperative": {
+          "Plural": "обрати'те",
+          "Singular": "обрати'"
+        },
+        "infinitive": "обратить",
+        "info": "This verb can also mean the following: direct, convert.",
+        "non_past": {
+          "Plural": {
+            "First": "обрати'м",
+            "Second": "обрати'те",
+            "Third": "обратя'т"
+          },
+          "Singular": {
+            "First": "обращу'",
+            "Second": "обрати'шь",
+            "Third": "обрати'т"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "обрати'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "обрати'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "обращённый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "обрати'ла",
+          "Masculine": "обрати'л",
+          "Neuter": "обрати'ло",
+          "Plural": "обрати'ли"
+        },
+        "translation": "to turn"
+      },
+      "examples": [],
+      "name": "обратить",
+      "type": "Verb"
     }
   ]
 }

@@ -17,31 +17,10 @@ TO_SOFT = {"а": "я",
 ACCENT_CHARS = "'’´`\u0301"  # \u0301 is special and rendered on prev char
 STANDARD_ACCENT_CHAR = "'"
 
-SPLIT_WORD_REGEX = re.compile(r"[абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ]+")
+RUSSIAN_LETTERS_STRING = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
 
-def split_sentences(paragraph: str):
-  return re.findall(r"\s*(.*?[\.\?\!]+)\s+", paragraph + " ")
-
-def split_words(text: str):
-  for match in SPLIT_WORD_REGEX.finditer(" " + text + " "):
-    yield (match.group(0), match.start())
-
-
-def get_word_text(word):
-  word = word.lower()
-  for c in ACCENT_CHARS:
-    word = word.replace(c, "")
-  return word
-
-
-def get_stress_index(word):
-  word = word.lower().strip()
-  stress = None
-  for c in ACCENT_CHARS:
-    if c in word:
-      stress = word.index(c) - 1
-      break
-  return stress
+SPLIT_WORD_REGEX = re.compile("[{}]+".format(RUSSIAN_LETTERS_STRING))
+RUSSIAN_LETTERS_REGEX = re.compile("[{}]".format(RUSSIAN_LETTERS_STRING))
 
 class AccentedText:
   def __init__(self, text="", accents=None):
@@ -103,6 +82,41 @@ class AccentedText:
       if accented:
         result += STANDARD_ACCENT_CHAR
     return result
+  
+  def __eq__(self, other):
+    return self.text == AccentedText(other).text
+  
+  def __ne__(self, other):
+    return self.text != AccentedText(other).text
+
+  
+def has_russian_letters(text: AccentedText) -> bool:
+  """Returns True if the given text has any russian letters in it."""
+  return RUSSIAN_LETTERS_REGEX.search(text.text) is not None
+
+def split_sentences(paragraph: str):
+  return re.findall(r"\s*(.*?[\.\?\!]+)\s+", paragraph + " ")
+
+def split_words(text: str):
+  for match in SPLIT_WORD_REGEX.finditer(" " + text + " "):
+    yield (match.group(0), match.start())
+
+
+def get_word_text(word):
+  word = word.lower()
+  for c in ACCENT_CHARS:
+    word = word.replace(c, "")
+  return word
+
+
+def get_stress_index(word):
+  word = word.lower().strip()
+  stress = None
+  for c in ACCENT_CHARS:
+    if c in word:
+      stress = word.index(c) - 1
+      break
+  return stress
 
 
 class Word:

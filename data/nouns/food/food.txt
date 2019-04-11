@@ -6,24 +6,24 @@
 #==============================================================================
 
 фрукты - fruit
-я'блоко (яблоки) - apple
-гру'ша (гру'ши) - pear
-апельсин (апельсины) - orange (fruit)
+я'блоко - apple
+гру'ша - pear
+апельси'н - orange (fruit)
 виноград - grapes
-грейпфрут (грейпфруты) - grapefruit
+грейпфру'т - grapefruit
 киви - kiwi fruit
-мандарин (мандарины) - mandarine
+мандарин - mandarine
 ма'нго - mango
-банан (бананы) - banana
+бана'н - banana
 анана'с - pineapple
-персик (персики) - peach
-абрикос (абрикосы) - apricot
-слива (сливы) - plum
+пе'рсик - peach
+абрико'с - apricot
+сли'ва - plum
 клубни'ка - strawberry
 мали'на - raspberry
-лимон (лимоны) - lemon
+лимо'н - lemon
 ежеви'ка - blackberry
-вишня, черешня - cherry
+ви'шня, чере'шня - cherry
 ды'ня - melon
 арбу'з - watermelon
 крыжовник - gooseberry

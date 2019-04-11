@@ -1,0 +1,67 @@
+#==============================================================================
+@name New 12
+#==============================================================================
+
+@type adjective
+и'стинный - true, genuine, veritable
+кру'глый – round
+годово'й – annual
+варёный – boiled
+вла'жный – damp, wet, humid
+гениа'льный – ingenious, brilliant
+
+@type adverb
+да'ром - for nothing, free, in vain
+одновре'менно – at the same time
+
+@type noun
+персона'ж - character
+обзо'р - overview, review, survey
+реа'кция - reaction
+су'ть  - essense, point, core
+культу'ра - culture
+поколе'ние - generation
+ле'нь – laziness
+свя'зь – connection
+сла'бость – weakness
+чиха'ть – to sneeze @impf
+чихну'ть – to sneeze @pf
+вра'г – enemy
+длина' – length
+това'р - goods
+ге'ний - genius
+о'браз - form, image
+де'ло - business, affair, matter
+сторона' - side, party
+мы'сль - thought, idea
+
+@type verb
+обеща'ть - to promise
+зарабо'тать - to earn @pf
+снима'ть - to take off @impf
+затра'гиваться - to touch upon @impf
+затопи'ть - to flood @pf
+обла'дать - to possess @impf
+разобра'ть - to dismantle, deconstruct, analyze @pf
+выжива'ть – to survive @impf
+грусти'ть – to be sad, grieve
+тро'гать - to touch @impf
+бро'сить – to leave, abandon (person, family, work)
+дви'гаться – to be in motion, to move
+заку'сывать – to have a bite to eat, snack @impf
+закуси'ть – to have a bite to eat, snack @pf
+вводи'ть - to enter, input
+
+@type phrase
+давны'м-давно' – long ago and far away, once upon a time
+
+@type preposition
+вокру'г @gen - around (physical location)
+
+@type other
+
+@type conjunction
+
+@type interjection
+
+

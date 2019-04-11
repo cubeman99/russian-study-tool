@@ -39,14 +39,20 @@ class Adjective(Word):
                      animate=True,
                      case=Case.Nominative,
                      short=False):
+    """Get a declension of the adjective."""
     if plurality == Plurality.Plural:
       gender = None
     if short:
       return self.short_form[gender]
     else:
-      if case == Case.Accusative and not animate:
+      if (case == Case.Accusative and not animate and
+          gender != Gender.Femanine):
         case = Case.Nominative
       return self.declension[(gender, case)]
+
+  def has_short_form(self) -> bool:
+    """Returns True if the adjective has a short form."""
+    return has_russian_letters(self.short_form[Gender.Masculine])
 
   def serialize(self):
     data = {"declension": {},

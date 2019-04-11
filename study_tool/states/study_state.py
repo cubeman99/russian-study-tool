@@ -10,7 +10,7 @@ from cmg.graphics import *
 from cmg.application import *
 from study_tool.card import *
 from study_tool.card_attributes import *
-from study_tool.card_set import CardSet, CardSetPackage
+from study_tool.card_set import CardSet, CardSetPackage, StudySet
 from study_tool.config import Config
 from study_tool.russian.types import *
 from study_tool.russian.adjective import Adjective
@@ -22,57 +22,80 @@ from study_tool.states.sub_menu_state import SubMenuState
 
 
 class Row:
+
   def __init__(self, columns):
     self.columns = list(columns)
+
   def __getitem__(self, column_index):
     return self.columns[column_index]
 
+
 class Table:
+
   def __init__(self, column_widths=None, row_height=20):
     self.rows = []
     self.column_widths = list(column_widths)
     self.row_height = row_height
+
   def add_row(self, columns):
     row = Row(columns)
     self.rows.append(row)
+
   def __getitem__(self, row_index):
     return self.rows[row_index]
 
 
+class StudyParams:
+  def __init__(self,
+               random_side=False,
+               random_form=False,
+               shown_side=CardSide.English,
+               mode=ScheduleMode.Learning):
+    self.random_side = random_side
+    self.random_form = random_form
+    self.shown_side = shown_side
+    self.mode = mode
 
 class StudyState(State):
-  def __init__(self, card_set,
-               side=CardSide.English,
-               mode=ScheduleMode.Learning):
+  def __init__(self,
+               card_set: StudySet,
+               params=StudyParams()):
     super().__init__()
-    self.card_font = pygame.font.Font(None, 72)
+    self.card_fonts = [pygame.font.Font(None, x) for x in range(16, 73, 4)]
     self.card_attribute_font = pygame.font.Font(None, 30)
     self.card_status_font = pygame.font.Font(None, 30)
     self.word_type_font = pygame.font.Font(None, 34)
     self.word_details_font = pygame.font.Font(None, 24)
+
+    # Setudy settings
     self.card_set = card_set
-    self.shown_side = side
-    self.hidden_side = CardSide(1 - side)
+    self.shown_side = CardSide.English
+    self.params = params
+
     self.card = None
     self.revealed = False
+    self.prompt_text = AccentedText()
+    self.prompt_attributes = []
+    self.reveal_attributes = []
     self.scheduler = None
-    self.mode = mode
     self.examples = []
 
   def begin(self):
+    """Begin the state."""
     self.buttons[0] = Button("Reveal", self.reveal)
     self.buttons[1] = Button("Exit", self.pause)
     self.buttons[2] = Button("Next", self.next)
 
-    self.scheduler = Scheduler(cards=self.card_set.cards, mode=self.mode)
+    self.scheduler = Scheduler(cards=self.card_set.cards,
+                               mode=self.params.mode)
     self.seen_cards = []
     self.card = None
     self.revealed = False
     self.next_card()
 
   def switch_sides(self):
+    self.params.shown_side = CardSide(1 - self.params.shown_side)
     self.shown_side = CardSide(1 - self.shown_side)
-    self.hidden_side = CardSide(1 - self.shown_side)
     
   def pause(self):
     other_side = CardSide(1 - self.shown_side)
@@ -94,38 +117,139 @@ class StudyState(State):
     self.next_card()
   
   def mark(self):
+    """
+    Mark the current card as "didn't know" then move to the next card.
+    """
     self.scheduler.mark(self.card, knew_it=False)
     self.app.save()
     self.next_card()
 
+  def get_random_russian_form(self, card: Card, word: Word):
+    """Get a random form of a russian word."""
+    if isinstance(word, Verb):
+      odds = random.randint(1, 10)
+      if odds <= 3:
+        plurality = random.choice([pl for pl in Plurality])
+        person = random.choice([p for p in Person])
+        conjugation = word.get_non_past(plurality=plurality, person=person)
+        attributes = [CardAttributes.NonPast,
+                      PLURALITY_TO_ATTRIBUTE[plurality],
+                      PERSON_TO_ATTRIBUTE[person]]
+      elif odds <= 6:
+        gender = random.choice([gender for gender in Gender] + [None])
+        attributes = [CardAttributes.Past]
+        if gender is not None:
+          plurality = Plurality.Singular
+          attributes.append(GENDER_TO_ATTRIBUTE[gender])
+        else:
+          plurality = Plurality.Plural
+          attributes.append(CardAttributes.Plural)
+        conjugation = word.get_past(plurality=plurality, gender=gender)
+      else:
+        conjugation = card.get_text(CardSide.Russian)
+        attributes = [CardAttributes.Infinitive]
+      return (conjugation, attributes)
+
+    elif isinstance(word, Adjective):
+      attributes = []
+      gender = random.choice([gender for gender in Gender] + [None])
+      if gender is not None:
+        attributes.append(GENDER_TO_ATTRIBUTE[gender])
+        plurality = Plurality.Singular
+      else:
+        plurality = Plurality.Plural
+        attributes.append(CardAttributes.Plural)
+      short = (word.has_short_form() and random.random() < 0.2)
+      if short:
+        attributes.append(CardAttributes.Short)
+        declension = word.get_declension(
+          gender=gender,
+          plurality=plurality,
+          short=True)
+      else:
+        case = random.choice([case for case in Case])
+        attributes.append(CASE_TO_ATTRIBUTE[case])
+        declension = word.get_declension(
+          gender=gender,
+          plurality=plurality,
+          animate=True,
+          case=case,
+          short=False)
+      return (declension, attributes)
+
+    elif isinstance(word, Noun):
+      case = random.choice([case for case in Case])
+      plurality = random.choice([pl for pl in Plurality])
+      attributes = [PLURALITY_TO_ATTRIBUTE[plurality],
+                    CASE_TO_ATTRIBUTE[case]]
+      return (word.get_declension(plurality=plurality, case=case), attributes)
+
+    else:
+      return (card.get_text(CardSide.Russian), [])
+
   def next_card(self):
+    """
+    Show the next card.
+    """
+
     self.revealed = False
     self.buttons[0] = Button("Reveal", self.reveal)
+
+    # Get the next card to show
     self.card = self.scheduler.next()
     if self.card is None:
       self.app.pop_state()
       Config.logger.info("No cards left to study!")
+      return
+    
+    if self.params.random_side:
+      self.shown_side = random.choice([CardSide.English, CardSide.Russian])
     else:
-      Config.logger.info("Showing card: " + self.card.text[self.shown_side])
-      word = self.app.get_card_word_details(self.card)
-      if word is not None:
-        forms = word.get_all_forms()
-      else:
-        forms = self.card.russian.text
-      self.examples = self.app.example_database.get_example_sentences(forms, count=7)
+      self.shown_side = self.params.shown_side
+    reveal_side = 1 - self.shown_side
+
+    # Get word info associated with this card
+    word = self.app.get_card_word_details(self.card)
+    if word is not None:
+      forms = word.get_all_forms()
+    else:
+      forms = self.card.russian.text
+
+    if (self.params.random_form and self.shown_side == CardSide.Russian and
+        word is not None):
+      # Get a random form of the card's word
+      self.prompt_attributes = []
+      self.prompt_text, self.reveal_attributes = (
+        self.get_random_russian_form(card=self.card, word=word))
+      self.reveal_attributes += self.card.get_attributes(self.shown_side)
+      self.reveal_text = self.card.get_text(reveal_side)
+      self.reveal_attributes += self.card.get_attributes(reveal_side)
+    else:
+      self.prompt_text = self.card.get_text(self.shown_side)
+      self.prompt_attributes = self.card.get_attributes(self.shown_side)
+      self.reveal_text = self.card.get_text(reveal_side)
+      self.reveal_attributes = self.card.get_attributes(reveal_side)
+
+    self.examples = self.app.example_database.get_example_sentences(forms, count=7)
+
+    Config.logger.info("Showing card: " + repr(self.prompt_text))
 
   def reveal(self):
     self.revealed = True
     self.buttons[0] = Button("Mark", self.mark)
 
-  def draw_table(self, g: Graphics, x, y, table: Table, font, text_color=color.BLACK):
+  def draw_table(self, g: Graphics, x, y, table: Table,
+                 font, text_color=color.BLACK):
     cy = y
     for row_index, row in enumerate(table):
       cx = x
       h = table.row_height
       for column_index, text in enumerate(row):
         w = table.column_widths[column_index]
-        g.fill_rect(cx, cy, w + 1, h + 1, color.WHITE)
+        back_color = color.WHITE
+        if text == self.prompt_text:
+          back_color = color.YELLOW
+        g.fill_rect(cx, cy, w + 1, h + 1, back_color)
         g.draw_rect(cx, cy, w + 1, h + 1, color.BLACK, 1)
         g.draw_text(cx + 6, cy + (h / 2),
                     text=AccentedText(text),
@@ -245,21 +369,25 @@ class StudyState(State):
                 align=Align.TopCenter)
 
     # Draw card text and attributes
+    card_font = g.get_font_to_fit(
+      text=self.prompt_text, width=screen_width, fonts=self.card_fonts)
     g.draw_text(screen_center_x, screen_center_y - 50,
-                text=self.card.text[self.shown_side],
-                font=self.card_font,
+                text=self.prompt_text,
+                font=card_font,
                 color=Config.card_front_text_color,
                 align=Align.Centered)
     self.draw_attributes(g, y=screen_center_y - 50 - 60,
-                         attributes=self.card.attributes[self.shown_side])
+                         attributes=self.prompt_attributes)
     if self.revealed:
+      card_font = g.get_font_to_fit(
+        text=self.reveal_text, width=screen_width, fonts=self.card_fonts)
       g.draw_text(screen_center_x, screen_center_y + 50,
-                  text=self.card.text[self.hidden_side],
-                  font=self.card_font,
+                  text=self.reveal_text,
+                  font=card_font,
                   color=Config.card_back_text_color,
                   align=Align.Centered)
       self.draw_attributes(g, y=screen_center_y + 50 + 60,
-                           attributes=self.card.attributes[self.hidden_side])
+                           attributes=self.reveal_attributes)
 
     # Draw example sentences
     if self.revealed and len(self.examples) > 0:

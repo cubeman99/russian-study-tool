@@ -1,0 +1,77 @@
+#==============================================================================
+@name New 15
+#==============================================================================
+
+@type adjective
+ро'бкий - timid
+ра'зный - different, various
+неме'цкий - German
+взро'слый - adult
+еди'нственный - only, sole
+начина'ющий - beginner
+мра'чный - gloomy
+слепо'й - blind
+глубо'кий - deep
+
+@type adverb
+доро'же - more expensive
+сполна' - in full
+
+@type noun
+тошнота' - nausea
+пу'ть - path, way, route
+пра'вило - rule
+разме'р - size
+про'пуск - pass, permit
+сообще'ние - message, report
+лека'рство - medicine, drug
+стари'к - old man
+нача'ло - beginning
+учени'ца - student, pupil @f
+пацие'нт - patient
+полоте'нце - towel
+коро'бка - box, case
+ро'д - gender, kin
+предложе'ние - offer, proposal, suggestion; sentence
+конъю'нкция - conjunction 
+предло'г - preposition
+фра'за - phrase
+замеча'ние - comment, remark, note, observation
+поко'й - peace, rest
+те'нь - shadow
+продолже'ние - continuation
+вдо'х - breath, inhalation
+
+@type verb
+арендова'ть - to rent
+осно'вывать - to found, base, base upon @impf
+обсуди'ть - to discuss @pf
+осма'тривать - to inspect, examine
+запо'мнить - to keep in mind, remember, memorize
+замеча'ть - to notice @impf
+влюби'ться - to fall in love
+уступи'ть - to concede, yield, give way @pf
+кра'сить - to paint @impf
+пуска'ть - to let go
+дари'ть - to gift @impf
+вы'дохнуть - to exhale @pf
+вдохну'ть - to inhale @pf
+оставля'ть - to leave, drop, abandon @impf
+оста'вить - to leave, drop, abandon @pf
+обрати'ть - to turn, convert @pf
+
+@type phrase
+
+@type preposition
+над @instr - over
+пе'ред @instr - in front of
+ра'дом с @instr - next to
+
+@type other
+
+@type conjunction
+
+@type interjection
+молоде'ц - well done
+
+

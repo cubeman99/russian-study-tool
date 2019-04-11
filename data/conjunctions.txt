@@ -2,46 +2,51 @@
 @name Conjuctions
 
 и - and
-и´ли - or
+а - and, but (rather), whereas
 но - but
-одна´ ко - but, however
-a - and, but (rather), whereas
-одна´ко - but, however
+и'ли - or
+одна'ко - but, however
+
 и … и … - both … and …
 ни … ни … - neither … nor …
-и´ли … и´ли … - either … or …
-как … так и … - not only … but also …
-не то´лько … но и … - not only … but also …
+и'ли … и'ли … - either … or …
+как … так и …, не то'лько … но и … - not only … but also …
+
 то … то … - now … now …
+
 когда' - when
 пока' - while
-пока´ … не - until
-как то´лько - as soon as
-в то вре´мя как - while
-до того´ как - before
-пре´жде чем - before
-пе´ред тем как - (right) before
-потому´ что - because
-та´ к как - since, because
-что´бы - in order to, so that, or untranslated
-для того´, что´бы - for the purpose of, so that 
+пока' … не - until
+как то'лько - as soon as
+
+потому' что - because
+та'к как - since, because
+что'бы - in order to, so that, or untranslated
+для того', что'бы - for the purpose of, so that 
 что - that
-та´ к что - so, so that
-е´сли - if
-е´сли … не - unless
-хотя´ (хоть) - although 
+та'к что - so, so that
+е'сли - if
+е'сли … не - unless
+хотя' - although 
 чем - than
 
-по´сле того´ как - after
+
+
+@name Conjuction Phrases
+
+до того' как, пре'жде чем - before
+пе'ред тем как - (right) before
+по'сле того' как - after
+в то вре'мя как - while
 с тех пор как - since
-до тех пор, пока´ … не - until
-несмотря´ на то, что - despite the fact that
-как бу´дто, бу´дто бы, как бу´дто бы, сло´вно - as though, as if
-с тем, что´бы - with the purpose of, so that
-за тем, что´бы - for the purpose of, so that
-благодаря´ тому´ что - because, thanks to the fact that
-из-за того´, что -- because, on account of
-поско´льку - as long as, in so far as, since
-ввиду´ того´, что - in view of (the fact that)
-всле´дствие того´, что - in consequence of (the fact that)
-в си´ лу того´, что - because of, on the strength of (the fact that)
+до тех пор, пока' … не - until
+несмотря' на то, что - despite the fact that
+как бу'дто, бу'дто бы, как бу'дто бы, сло'вно - as though, as if
+с тем, что'бы - with the purpose of, so that
+за тем, что'бы - for the purpose of, so that
+благодаря' тому' что - because, thanks to the fact that
+из-за того', что -- because, on account of
+поско'льку - as long as, in so far as, since
+ввиду' того', что - in view of (the fact that)
+всле'дствие того', что - in consequence of (the fact that)
+в си'лу того', что - because of, on the strength of (the fact that)

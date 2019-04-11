@@ -12,12 +12,14 @@ from study_tool.config import Config
 from study_tool.card import CardSide
 from study_tool.card_set import CardSet, CardSetPackage
 from study_tool.menu import Menu
+from study_tool.states.read_text_state import ReadTextState
 from study_tool.states.state import *
+from study_tool.states.study_state import StudyParams
 from study_tool.states.sub_menu_state import SubMenuState
 from study_tool.scheduler import ScheduleMode
 
 class MenuState(State):
-  def __init__(self, package):
+  def __init__(self, package: CardSetPackage):
     super().__init__()
     self.package = package
     self.buttons[0] = Button("Up")
@@ -43,24 +45,51 @@ class MenuState(State):
     # Create menu options
     self.menu = Menu(options=[], viewport=viewport)
     self.menu.draw_menu_option_text = self.draw_menu_option_text
-    back_option = "Quit" if self.top_level else "Back"
-    self.menu.options = [(back_option, self.app.pop_state)]
+    self.menu.options = []
+    if self.top_level:
+      self.menu.options.append(("Quit", self.app.pop_state))
+      self.menu.options.append(("Story Mode", self.open_study_mode))
+    else:
+      self.menu.options.append(("Back", self.app.pop_state))
     for package in self.package.packages:
       self.menu.options.append(("[...] {}".format(package.name), package))
     for card_set in self.package.card_sets:
       self.menu.options.append((card_set.name, card_set))
     self.menu.options.append(("Study all " + self.package.name, self.package))
+
+  def open_study_mode(self):
+    self.app.push_state(ReadTextState())
       
   def open_set(self, card_set):
-    options = [("Quiz English", lambda: self.app.push_study_state(card_set, CardSide.English)),
-               ("Quiz Russian", lambda: self.app.push_study_state(card_set, CardSide.Russian))]
-    options += [("Quiz New Cards", lambda: self.app.push_study_state(card_set,
-                                                                      side=CardSide.English,
-                                                                      mode=ScheduleMode.NewOnly))]
-    options += [("Quiz Problem Cards", lambda: self.app.push_study_state(
-      card_set=card_set.get_problem_cards(), side=CardSide.English))]
-    options += [("List", lambda: self.app.push_card_list_state(card_set)),
-                ("Cancel", None)]
+    options = [
+      ("Quiz Random Sides",
+       lambda: self.app.push_study_state(
+         card_set=card_set,
+         params=StudyParams(random_side=True))),
+      ("Quiz Random Forms",
+       lambda: self.app.push_study_state(
+         card_set=card_set,
+         params=StudyParams(random_side=True,
+                            random_form=True))),
+      ("Quiz English",
+       lambda: self.app.push_study_state(
+         card_set=card_set,
+         params=StudyParams(shown_side=CardSide.English))),
+      ("Quiz Russian",
+       lambda: self.app.push_study_state(
+         card_set=card_set,
+         params=StudyParams(shown_side=CardSide.Russian))),
+      ("Quiz New Cards",
+       lambda: self.app.push_study_state(
+         card_set=card_set,
+         params=StudyParams(random_side=True,
+                            mode=ScheduleMode.NewOnly))),
+      ("Quiz Problem Cards",
+       lambda: self.app.push_study_state(
+         card_set=card_set.get_problem_cards(),
+         params=StudyParams(random_side=True))),
+      ("List", lambda: self.app.push_card_list_state(card_set)),
+      ("Cancel", None)]
     self.app.push_state(SubMenuState(card_set.name, options))
 
   def select(self):

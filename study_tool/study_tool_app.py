@@ -52,7 +52,6 @@ class StudyCardsApp(Application):
     self.word_data_file_name = "word_data.json"
     self.word_database = WordDatabase()
     self.load_word_database()
-    print(self.word_database.get_word(word_type=WordType.Adjective, name=AccentedText("чёрный")))
 
     # Load all card data
     self.card_database = CardDatabase(word_database=self.word_database)
@@ -73,7 +72,8 @@ class StudyCardsApp(Application):
     self.load()
 
     self.states = []
-    self.push_state(MenuState(self.root))
+    self.main_menu = MenuState(package=self.root)
+    self.push_state(self.main_menu)
     #self.push_study_state(self.root.card_sets[1], CardSide.Russian)
     #self.push_study_state(self.root["verbs"]["nonsuffixed_stems"].card_sets[1], CardSide.English)
     #self.push_study_state(self.root["verbs"]["suffixed_stems"]["verbs_stem_ai"], CardSide.English)
@@ -81,7 +81,7 @@ class StudyCardsApp(Application):
     #self.push_study_state(self.root["google"]["google_doc_verbs"], CardSide.English)
     #self.push_study_state(self.root["nouns"]["nouns_arts"], CardSide.English)
     #self.push_study_state(self.root["adjectives"]["adjectives_colors"], CardSide.English)
-    #self.push_study_state(self.root["new"]["new_7"], CardSide.English)
+    #self.push_study_state(self.root["new"]["new_11"], CardSide.English)
     #self.root["verbs"]["stems"].get_problem_cards()
     #self.push_card_list_state(self.root.card_sets[1])
     #self.push_state(KeyboardState())
@@ -100,8 +100,8 @@ class StudyCardsApp(Application):
     self.states.append(state)
     state.begin()
 
-  def push_study_state(self, card_set, side, mode=ScheduleMode.Learning, **kwargs):
-    self.push_state(StudyState(card_set, side=side, mode=mode, **kwargs))
+  def push_study_state(self, card_set, params):
+    self.push_state(StudyState(card_set=card_set, params=params))
 
   def push_card_list_state(self, card_set):
     self.push_state(CardListState(card_set))

@@ -38,24 +38,33 @@ class Verb(Word):
     self.aspect = Aspect.Imperfective
     self.info = AccentedText()
     self.counterparts = []
-    self.past = {(Plurality.Singular, Gender.Masculine): "",
-                 (Plurality.Singular, Gender.Femanine): "",
-                 (Plurality.Singular, Gender.Neuter): "",
-                 (Plurality.Plural, None): ""}
-    self.non_past = {(Plurality.Singular, Person.First): "",
-                     (Plurality.Singular, Person.Second): "",
-                     (Plurality.Singular, Person.Third): "",
-                     (Plurality.Plural, Person.First): "",
-                     (Plurality.Plural, Person.Second): "",
-                     (Plurality.Plural, Person.Third): ""}
-    self.imperative = {Plurality.Singular: "",
-                       Plurality.Plural: ""}
-    self.active_participles = {Tense.Present: "",
-                               Tense.Past: ""}
-    self.passive_participles = {Tense.Present: "",
-                                Tense.Past: ""}
-    self.adverbial_participles = {Tense.Present: "",
-                                 Tense.Past: ""}
+    self.past = {
+      (Plurality.Singular, Gender.Masculine): AccentedText(),
+      (Plurality.Singular, Gender.Femanine): AccentedText(),
+      (Plurality.Singular, Gender.Neuter): AccentedText(),
+      (Plurality.Plural, None): AccentedText()}
+    self.non_past = {
+      (Plurality.Singular, Person.First): AccentedText(),
+      (Plurality.Singular, Person.Second): AccentedText(),
+      (Plurality.Singular, Person.Third): AccentedText(),
+      (Plurality.Plural, Person.First): AccentedText(),
+      (Plurality.Plural, Person.Second): AccentedText(),
+      (Plurality.Plural, Person.Third): AccentedText()}
+    self.imperative = {
+      Plurality.Singular: AccentedText(),
+      Plurality.Plural: AccentedText()}
+    self.active_participles = {
+      Tense.Present: AccentedText(),
+      Tense.Past: AccentedText()}
+    self.passive_participles = {
+      Tense.Present: AccentedText(),
+      Tense.Past: AccentedText()}
+    self.adverbial_participles = {
+      Tense.Present: AccentedText(),
+      Tense.Past: AccentedText()}
+
+  def get_aspect(self) -> Aspect:
+    return self.aspect
 
   def get_all_forms(self):
     return ([self.infinitive] +
@@ -72,13 +81,26 @@ class Verb(Word):
     else:
       return word
 
-  def get_non_past(self, index, exclude_reflexive=False) -> AccentedText:
+  def get_non_past(self, plurality: Plurality, person: Person) -> AccentedText:
+    """Get a non-past conjugation of the verb."""
+    return self.non_past[(plurality, person)]
+
+  def get_past(self, plurality=None, gender=None) -> AccentedText:
+    """Get a past conjugation of the verb."""
+    if plurality is None:
+      plurality = Plurality.Singular
+    if plurality == Plurality.Plural:
+      gender = None
+    return self.past[(plurality, gender)]
+
+
+  def get_non_past_by_index(self, index: int, exclude_reflexive=False) -> AccentedText:
     conjugation = self.non_past[NON_PAST_ORDER[index]]
     if exclude_reflexive:
       conjugation = self.remove_reflexive_suffix(conjugation)
     return conjugation
 
-  def get_past(self, index, exclude_reflexive=False) -> AccentedText:
+  def get_past_by_index(self, index, exclude_reflexive=False) -> AccentedText:
     conjugation = self.past[PAST_ORDER[index]]
     if exclude_reflexive:
       conjugation = self.remove_reflexive_suffix(conjugation)
@@ -96,7 +118,7 @@ class Verb(Word):
       return False
     if past is not None:
       for index, ending in enumerate(past):
-        if self.get_past(index, exclude_reflexive=True).text != stem + ending:
+        if self.get_past_by_index(index, exclude_reflexive=True).text != stem + ending:
           return False
     if non_past is not None:
       for index, endings in enumerate(non_past):
@@ -104,7 +126,7 @@ class Verb(Word):
           endings = [endings]
         matches = False
         for ending in endings:
-          conjugation = self.get_non_past(index, exclude_reflexive=True).text
+          conjugation = self.get_non_past_by_index(index, exclude_reflexive=True).text
           matches = (conjugation == stem + ending)
           if not matches and (mutate is True or mutate is index):
             matches = (conjugation == self.mutate(stem) + ending)

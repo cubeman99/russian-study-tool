@@ -10,6 +10,8 @@
 то'т - that
 
 @type adverb
+ра'з - time, once, since
+про'сто - simply
 
 @type noun
 
@@ -30,8 +32,9 @@
 нибудь - some, any
 
 @type conjunction
+ли' - whether, if
 
 @type interjection
-д'а - yes
+да' - yes
 не'т - no
 ну - well

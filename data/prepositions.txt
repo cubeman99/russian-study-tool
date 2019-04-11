@@ -11,7 +11,7 @@
 за @instr - behind, beyond (location)
 под @instr - under (location)
 ####без @gen - without
-дла @gen - for the benefit of
+для @gen - for the benefit of
 с, со @gen - from a place
 у @gen - by, at a place
 из @gen - from, out of
