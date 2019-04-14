@@ -20,10 +20,40 @@ def split_sentences(paragraph: str):
   return re.findall(r"\s*(.*?[\.\?\!]+)\s+", paragraph + " ")
 
 
-def split_words(text: str):
-  for match in SPLIT_WORD_REGEX.finditer(" " + text + " "):
-    yield (match.group(0), match.start())
+def get_word_occurances(word, text):
+  sentence = text
+  text = word
+  if not isinstance(text, list):
+    text_list0 = [text]
+  else:
+    text_list0 = list(text)
 
+  text_list = []
+  for text in text_list0:
+    if isinstance(text, AccentedText):
+      text = text.text
+    text = text.lower().replace("...", "").strip()
+    if any(letter in text for letter in LETTERS):
+      text_list.append(text)
+  whole_word = True
+  if len(text_list) == 1 and " " in text_list[0]:
+    whole_word = False
+
+  instances = []
+  found = False
+  if whole_word:
+    for word, start in split_words(sentence):
+      if word.lower() in text_list:
+        found = True
+        instances.append((start, word))
+        break
+  else:
+    for text in text_list:
+      if text in sentence.lower():
+        found = True
+        break
+  if found:
+    return instances
 
 class ExampleDatabase:
   def __init__(self):

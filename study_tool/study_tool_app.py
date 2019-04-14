@@ -64,7 +64,6 @@ class StudyCardsApp(Application):
     self.example_data_file_name = "examples.json"
     self.example_database = ExampleDatabase()
     self.load_example_database()
-    #self.example_database.download_ponyfiction_story(874)
     #self.save_example_database()
 
     # Load study data

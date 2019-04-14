@@ -186,11 +186,13 @@ class CardDatabase:
       word_type = WordType.Other
       card_set = None
       split_attributes = None
+      card = None
       try:
         for filename, line_number, line in self.preprocess_lines(path, f):
           line = line.strip()
           if line.startswith("@"):
             command = line.split()[0][1:]
+            command_text = (line.split(None, 1)[1:] or [""])[0].strip()
             value = line[len(command) + 1:].strip()
             if command == "name":
               card_set = CardSet()
@@ -218,6 +220,10 @@ class CardDatabase:
                                          for x in attr_list.split()])
             elif command == "type":
               word_type = WORD_TYPE_DICT[value.lower()]
+            elif command == "ex" or command == "example":
+              if card is None:
+                raise Exception()
+              card.examples.append(AccentedText(command_text))
             else:
               raise Exception("uknown @ command: '{}'".format(command))
           elif line.startswith("#"):

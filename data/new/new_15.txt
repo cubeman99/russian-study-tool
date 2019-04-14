@@ -12,10 +12,13 @@
 мра'чный - gloomy
 слепо'й - blind
 глубо'кий - deep
+сты'дный - ashamed
+ту'пой - dull
 
 @type adverb
 доро'же - more expensive
 сполна' - in full
+именно' - namely, precisely, exactly
 
 @type noun
 тошнота' - nausea
@@ -41,6 +44,8 @@
 те'нь - shadow
 продолже'ние - continuation
 вдо'х - breath, inhalation
+сомне'ние - doubt
+коли'чество - amount, quantity
 
 @type verb
 арендова'ть - to rent
@@ -59,8 +64,19 @@
 оставля'ть - to leave, drop, abandon @impf
 оста'вить - to leave, drop, abandon @pf
 обрати'ть - to turn, convert @pf
+получи'ться - to turn out, work @pf
+получа'ться - to turn out, work @impf
+пригласи'ть - to invite
 
 @type phrase
+всё в поря'дке -- all is well
+вообще'-то -- to be honest, in actuality, by the way
+я' счита'ю, что'... -- I think that, I believe that...
+ка'к оказа'лось, ... -- as it turned out, ...
+на са'мом де'ле, ... -- in actuality, in reality, ...
+к сложоле'нию -- unfortunately
+в лю'бом слу'чае, ... -- in any case, ...
+что' каса'ется ____, то' ____ -- when it comes to ____, ____
 
 @type preposition
 над @instr - over

@@ -19,6 +19,7 @@ from study_tool.russian.verb import Verb
 from study_tool.scheduler import Scheduler, ScheduleMode
 from study_tool.states.state import State, Button
 from study_tool.states.sub_menu_state import SubMenuState
+from study_tool import example_database
 
 
 class Row:
@@ -230,7 +231,15 @@ class StudyState(State):
       self.reveal_text = self.card.get_text(reveal_side)
       self.reveal_attributes = self.card.get_attributes(reveal_side)
 
-    self.examples = self.app.example_database.get_example_sentences(forms, count=7)
+    # Get examples and word occurences in the example
+    max_examples = 7
+    self.examples = []
+    for example in self.card.examples:
+        self.examples.append((example, example_database.get_word_occurances(
+          word=forms, text=example.text)))
+    if len(self.examples) < max_examples:
+      self.examples += self.app.example_database.get_example_sentences(
+        forms, count=max_examples - len(self.examples))
 
     Config.logger.info("Showing card: " + repr(self.prompt_text))
 
@@ -390,8 +399,10 @@ class StudyState(State):
                            attributes=self.reveal_attributes)
 
     # Draw example sentences
+    # TODO: draw accented text
     if self.revealed and len(self.examples) > 0:
       for index, (sentence, occurences) in enumerate(self.examples):
+        sentence = AccentedText(sentence).text
         g.draw_text(20, self.margin_top + self.proficiency_margin_height + 60 + index*20,
                     text=sentence,
                     font=self.word_details_font,

@@ -58295,6 +58295,385 @@
       "examples": [],
       "name": "обратить",
       "type": "Verb"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "сты'дную",
+            "Dative": "сты'дной",
+            "Genetive": "сты'дной",
+            "Instrumental": "сты'дной",
+            "Nominative": "сты'дная",
+            "Prepositional": "сты'дной"
+          },
+          "Masculine": {
+            "Accusative": "сты'дного",
+            "Dative": "сты'дному",
+            "Genetive": "сты'дного",
+            "Instrumental": "сты'дным",
+            "Nominative": "сты'дный",
+            "Prepositional": "сты'дном"
+          },
+          "Neuter": {
+            "Accusative": "сты'дное",
+            "Dative": "сты'дному",
+            "Genetive": "сты'дного",
+            "Instrumental": "сты'дным",
+            "Nominative": "сты'дное",
+            "Prepositional": "сты'дном"
+          },
+          "Plural": {
+            "Accusative": "сты'дных",
+            "Dative": "сты'дным",
+            "Genetive": "сты'дных",
+            "Instrumental": "сты'дными",
+            "Nominative": "сты'дные",
+            "Prepositional": "сты'дных"
+          }
+        },
+        "short_form": {
+          "Femanine": "стыдна'",
+          "Masculine": "сты'ден",
+          "Neuter": "сты'дно",
+          "Plural": "сты'дны"
+        }
+      },
+      "examples": [],
+      "name": "стыдный",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "сомне'ния",
+            "Dative": "сомне'ниям",
+            "Genetive": "сомне'ний",
+            "Instrumental": "сомне'ниями",
+            "Nominative": "сомне'ния",
+            "Prepositional": "сомне'ниях"
+          },
+          "Singular": {
+            "Accusative": "сомне'ние",
+            "Dative": "сомне'нию",
+            "Genetive": "сомне'ния",
+            "Instrumental": "сомне'нием",
+            "Nominative": "сомне'ние",
+            "Prepositional": "сомне'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "сомнение",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "получаться"
+        ],
+        "imperative": {
+          "Plural": "получи'тесь",
+          "Singular": "получи'сь"
+        },
+        "infinitive": "получиться",
+        "info": "This verb can also mean the following: manage, arrive, prove, turn out, do, work, work out well, result.",
+        "non_past": {
+          "Plural": {
+            "First": "полу'чимся",
+            "Second": "полу'читесь",
+            "Third": "полу'чатся"
+          },
+          "Singular": {
+            "First": "получу'сь",
+            "Second": "полу'чишься",
+            "Third": "полу'чится"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "получи'вшийся",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "получи'вшись",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "получи'лась",
+          "Masculine": "получи'лся",
+          "Neuter": "получи'лось",
+          "Plural": "получи'лись"
+        },
+        "translation": "to come in"
+      },
+      "examples": [],
+      "name": "получиться",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "получиться"
+        ],
+        "imperative": {
+          "Plural": "получа'йтесь",
+          "Singular": "получа'йся"
+        },
+        "infinitive": "получаться",
+        "info": "This verb can also mean the following: manage, arrive, prove, turn out, do, work, work out well, result.",
+        "non_past": {
+          "Plural": {
+            "First": "получа'емся",
+            "Second": "получа'етесь",
+            "Third": "получа'ются"
+          },
+          "Singular": {
+            "First": "получа'юсь",
+            "Second": "получа'ешься",
+            "Third": "получа'ется"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "получа'вшийся",
+            "Present": "получа'ющийся"
+          },
+          "Adverbial": {
+            "Past": "получа'вшись",
+            "Present": "получа'ясь"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "получа'лась",
+          "Masculine": "получа'лся",
+          "Neuter": "получа'лось",
+          "Plural": "получа'лись"
+        },
+        "translation": "to come out"
+      },
+      "examples": [],
+      "name": "получаться",
+      "type": "Verb"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "тупу'ю",
+            "Dative": "тупо'й",
+            "Genetive": "тупо'й",
+            "Instrumental": "тупо'й",
+            "Nominative": "тупа'я",
+            "Prepositional": "тупо'й"
+          },
+          "Masculine": {
+            "Accusative": "тупо'го",
+            "Dative": "тупо'му",
+            "Genetive": "тупо'го",
+            "Instrumental": "тупы'м",
+            "Nominative": "тупо'й",
+            "Prepositional": "тупо'м"
+          },
+          "Neuter": {
+            "Accusative": "тупо'е",
+            "Dative": "тупо'му",
+            "Genetive": "тупо'го",
+            "Instrumental": "тупы'м",
+            "Nominative": "тупо'е",
+            "Prepositional": "тупо'м"
+          },
+          "Plural": {
+            "Accusative": "тупы'х",
+            "Dative": "тупы'м",
+            "Genetive": "тупы'х",
+            "Instrumental": "тупы'ми",
+            "Nominative": "тупы'е",
+            "Prepositional": "тупы'х"
+          }
+        },
+        "short_form": {
+          "Femanine": "тупа'",
+          "Masculine": "туп",
+          "Neuter": "ту'по",
+          "Plural": "тупы'"
+        }
+      },
+      "examples": [],
+      "name": "тупой",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "коли'чества",
+            "Dative": "коли'чествам",
+            "Genetive": "коли'честв",
+            "Instrumental": "коли'чествами",
+            "Nominative": "коли'чества",
+            "Prepositional": "коли'чествах"
+          },
+          "Singular": {
+            "Accusative": "коли'чество",
+            "Dative": "коли'честву",
+            "Genetive": "коли'чества",
+            "Instrumental": "коли'чеством",
+            "Nominative": "коли'чество",
+            "Prepositional": "коли'честве"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "количество",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "приглашать"
+        ],
+        "imperative": {
+          "Plural": "пригласи'те",
+          "Singular": "пригласи'"
+        },
+        "infinitive": "пригласить",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "пригласи'м",
+            "Second": "пригласи'те",
+            "Third": "приглася'т"
+          },
+          "Singular": {
+            "First": "приглашу'",
+            "Second": "пригласи'шь",
+            "Third": "пригласи'т"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "пригласи'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "пригласи'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "приглашённый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "пригласи'ла",
+          "Masculine": "пригласи'л",
+          "Neuter": "пригласи'ло",
+          "Plural": "пригласи'ли"
+        },
+        "translation": "to invite"
+      },
+      "examples": [],
+      "name": "пригласить",
+      "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "впечатле'ния",
+            "Dative": "впечатле'ниям",
+            "Genetive": "впечатле'ний",
+            "Instrumental": "впечатле'ниями",
+            "Nominative": "впечатле'ния",
+            "Prepositional": "впечатле'ниях"
+          },
+          "Singular": {
+            "Accusative": "впечатле'ние",
+            "Dative": "впечатле'нию",
+            "Genetive": "впечатле'ния",
+            "Instrumental": "впечатле'нием",
+            "Nominative": "впечатле'ние",
+            "Prepositional": "впечатле'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "впечатление",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "эмо'ции",
+            "Dative": "эмо'циям",
+            "Genetive": "эмо'ций",
+            "Instrumental": "эмо'циями",
+            "Nominative": "эмо'ции",
+            "Prepositional": "эмо'циях"
+          },
+          "Singular": {
+            "Accusative": "эмо'цию",
+            "Dative": "эмо'ции",
+            "Genetive": "эмо'ции",
+            "Instrumental": "эмо'цией",
+            "Nominative": "эмо'ция",
+            "Prepositional": "эмо'ции"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "эмоция",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "те'мы",
+            "Dative": "те'мам",
+            "Genetive": "те'м",
+            "Instrumental": "те'мами",
+            "Nominative": "те'мы",
+            "Prepositional": "те'мах"
+          },
+          "Singular": {
+            "Accusative": "те'му",
+            "Dative": "те'ме",
+            "Genetive": "те'мы",
+            "Instrumental": "те'мой",
+            "Nominative": "те'ма",
+            "Prepositional": "те'ме"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "тема",
+      "type": "Noun"
     }
   ]
 }

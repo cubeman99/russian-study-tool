@@ -54,6 +54,7 @@ class Card:
     self.source = None
     self.word_name = AccentedText(self.russian)
     self.word = None
+    self.examples = []
 
     # used by Scheduler
     self.rep = None
