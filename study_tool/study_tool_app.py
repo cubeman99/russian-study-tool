@@ -7,6 +7,7 @@ import shutil
 import cmg
 from cmg import color
 import cmg.logging
+from cmg import math
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
@@ -121,29 +122,40 @@ class StudyCardsApp(Application):
 
     font = self.font_bar_text
     left_margin = g.measure_text("100%", font=font)[0] + 4
-    right_margin = g.measure_text(str(total_cards), font=font)[0] + 4
+    right_margin = g.measure_text(str(9999), font=font)[0] + 4
     bar_height = g.measure_text("1", font=font)[1]
     bar_width = right - left - left_margin - right_margin
     top = center_y - (bar_height / 2)
 
-    x = left + left_margin
+    if False:
+      cards = sorted(cards, key=lambda x: x.get_history_score(), reverse=True)
+      for index, card in enumerate(cards):
+        score = card.get_history_score()
+        x = left + left_margin + bar_width * (float(index) / len(cards))
+        w = max(1, math.ceil(float(bar_width) / len(cards)))
+        c = math.lerp(color.RED, color.GREEN, score)
+        h = math.ceil(score * bar_height)
+        g.fill_rect(x, top + bar_height - h, w, h, color=c)
+    else:
+      x = left + left_margin
+      score = 0
+      for level in range(Config.proficiency_levels, -1, -1):
+        count = len([c for c in cards if c.proficiency_level == level])
+        if count > 0:
+          score += count * max(0, level - 1)
+          level_width = int(round(bar_width * (float(count) / total_cards)))
+          if x + level_width > left + left_margin + bar_width:
+            level_width = (left + left_margin + bar_width) - x
+          g.fill_rect(x, top, level_width, bar_height,
+                      color=Config.proficiency_level_colors[level])
+          x += level_width
+      score /= max(1.0, float((Config.proficiency_levels - 1) * len(cards)))
+      score = int(round(score * 100))
     score = 0
-    for level in range(Config.proficiency_levels, -1, -1):
-      count = len([c for c in cards if c.proficiency_level == level])
-      if count > 0:
-        score += count * max(0, level - 1)
-        level_width = int(round(bar_width * (float(count) / total_cards)))
-        if x + level_width > left + left_margin + bar_width:
-          level_width = (left + left_margin + bar_width) - x
-        g.fill_rect(x, top, level_width, bar_height,
-                    color=Config.proficiency_level_colors[level])
-        x += level_width
-    score /= max(1.0, float((Config.proficiency_levels - 1) * len(cards)))
-    score = int(round(score * 100))
     g.draw_text(left + left_margin - 4, center_y, text="{}%".format(score),
                 color=color.BLACK, align=Align.MiddleRight, font=font)
-    g.draw_text(right, center_y, text=str(total_cards),
-                color=color.BLACK, align=Align.MiddleRight, font=font)
+    g.draw_text(right - right_margin + 4, center_y, text=str(total_cards),
+                color=color.BLACK, align=Align.MiddleLeft, font=font)
   
   def draw_text_box(self, text, x, y, width, height,
                     border_color=color.BLACK, border_width=2,

@@ -3,23 +3,82 @@
 #==============================================================================
 
 @type adjective
+постоя'нный - constant, continuous, permanent
+креати́вный – creative
+кримина́льный – criminal
+моби́льный – mobile
+прозра́чный - transparent, clear
+солне'чный - sunny, solar, sun
+обрече'нный - doomed
+глоба'льный - global
+полити'ческий - political
+ли'чный - personal, private
 
 @type adverb
+потихо'ньку - little by little, silently
 
 @type noun
 впечатле'ние - impression
 	@ex Моё впечатле'ние, что' лю'ди - бо'лее "норма'льные" в Росси'и, бо'лее че'стным (в эмо'цией).
 эмо'ция - emotion
 те'ма - topic
+спе'шка - rush, hurry, haste
+эне'ргия - energy
+забо'р - fence
+свобо'да - freedom
+борода́ – beard
+колесо́ – wheel
+ко́смос – outer space, cosmos
+не'фть – oil (petroleum)
+поведе́ние – behavior, conduct
+ши́на – tire
+разгово'р - conversation, talk
+шра'м - scar
+солда'т - soldier
+дворе'ц - palace, castle
+дневни'к - diary
+воображе'ние - imagination
+у'м - mind, wit, intelligence
+короле'вство - kingdom
+похище'ние - abduction
+ба'шня - tower
+о'бщество - society
+вы'бор - choice, selection
+ито'г - summary
 
 @type verb
+переста'ть - to stop, quit something in progress
+уста'ть от - to get tired of @pf
+захва'тывать - to grab, grip, capture, captivate
+ограни'чить - to limit, restrict @pf
+ограни'чивать - to limit, restrict @impf
+заблуди́ться – to get lost, go astray
+отменя́ться – to call off, cancel @impf
+отмени́ться – to call off, cancel @pf
+подключи́ть – to connect @pf
+тащи́ть – to bring, carry, drag @impf
+горди'ться - to be proud
+укра'сть - to steal @pf
+спра'виться - to cope, deal, manage
+раздража'ть - to annoy, irritate, provoke
+окупа'ться - to pay off @impf
+дожда'ться - to wait for a long time
 
 @type phrase
+в о'бщем - overall, in general
+вести́ себя́ – to behave, conduct oneself
+Мне везёт! – I’m in luck!
+что бы не случи'лось - whatever happens
+ве'ская причи'на - good reason
+так да'лее - etc.
+вот это да﻿! - Woah!
 
 @type preposition
 
 @type other
+пошли' - let's go
 
 @type conjunction
 
 @type interjection
+у'вы - alas

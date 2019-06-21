@@ -1,6 +1,9 @@
 
 import math
 
+floor = math.floor
+ceil = math.ceil
+
 def lerp(a, b, t):
   return (a * (1.0 - t)) + (b * t)
 

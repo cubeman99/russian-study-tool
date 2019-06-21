@@ -1,8 +1,11 @@
 #==============================================================================
-@name New 8
+@name New 04
 #==============================================================================
 
 @type adjective
+гро'зный - fearsome, terrible
+раздра'жающий - annoying
+невероя'тный - unbelievable
 че'стный - honest
 лоя'льный - loyal
 нейтра'льный - neutral
@@ -10,9 +13,24 @@
 тро'гательный - touching, moving
 
 @type adverb
+сно'ва, опя'ть, вно'вь, ещё ра'з - again
+вдру'г - suddenly
+ту'т - here (conversational)
 одна'жды - once, one day
 
 @type noun
+рожде'ние - birth
+шо'к - shock
+уго'л - corner, angle
+кру'г - circle
+восто'к - east
+за'пад - west
+се'вер - north
+ю'г - south
+му'льтик - cartoon
+исключе'ние - exception
+дво'р - yard
+карти'на - picture, painting
 доброта' - kindness
 гармо'ния - harmony
 прави'тель - ruler
@@ -30,6 +48,12 @@
 за'мок - castle
 
 @type verb
+отвлека'ться - to digress, be distracted
+рассма'тривать - to consider, view, regard, review
+ошиба'ться - to be wrong, mistaken, to err
+визжа'ть - to scream, squeal
+вы'брать - to choose, select
+до'хнуть - to breath
 голо'совать - to vote
 останови'ть - to stop
 погляде'ть - to have a look
@@ -41,18 +65,24 @@
 пры'гать - to jump @impf
 
 @type phrase
+чего' тебе' на'до? -- What do you want/need?
 в при'нципе - basically
 с осторо'жностью - carefully, with care
 до[verb] + до + gen. @gen - to reach, get as far as
 Ва́ше Вели́чество - Your Highness
 
 @type preposition
+про'тив @gen - against, opposed to
+напро'тив @gen - opposite of, across from
+вме'сто @gen - instead of
+бе'з @gen - without
 о'коло @gen - around, near
 бли'з @gen - near
 по'сле @gen - after
 до @gen - before, until
 
-@type other
-
 @type conjunction
 хотя' бы - at least, just, if only
+
+@type other
+

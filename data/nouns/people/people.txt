@@ -16,7 +16,7 @@
 молодёжь - young people
 взрослый - adult
 ю´ноша - youth
-детство - childhood
+### детство - childhood
 ребенок - child
 дети - children
 малыш, грудной ребенок - baby

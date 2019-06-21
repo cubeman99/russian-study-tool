@@ -1,0 +1,87 @@
+#==============================================================================
+@name New 17
+#==============================================================================
+
+@type adjective
+тупе'нький - dumb, stupid
+притяжа'тельный - possessive
+
+@type adverb
+немно'жко - a little bit
+весьма' - quite, highly, greatly
+ли'шь - only (literary style)
+
+@type noun
+измене'ние - change, variation
+разво'д - divorce
+сюже'т - plot, story
+проро'чество - prophecy
+проро'к - prophet
+ка'чество - quality
+му'дрость - wisdom
+испыта'ние - test, trial
+со'тня - a hundred
+ра'й - paradise
+уте'чка - leak, leakage
+со'бственность - property
+сою'з - union
+ли'фчик - brassiere
+ре'чь - speech
+спосо'бность - ability
+броня' - armor
+спа' - spa
+терапи'я - therapy
+о'тдых - rest, relaxation, recreation
+сла'ва - fame, glory, honor
+ве'с - weight
+ве'к - century
+ро'лик - video, roll
+ла'стик - eraser
+преступле'ние - crime, offense
+
+и'мя существи'тельное - noun
+и'мя прилага'тельное - adjective
+бу'ква - letter, character
+грамма'тика - grammer
+имени'тельный паде'ж - nominative case
+вините'льный паде'ж - accusative case
+роди'тельный паде'ж - genetive case
+да'тельный паде'ж - dative case
+твори'тельный паде'ж - instrumental case
+предло'жный паде'ж - prepositional case
+сре'дный ро'д - neuter gender
+ли'чное местоиме'ние - personal pronouns
+настоя'щее вре'мя - present tense
+проше'дшее вре'мя - past tense
+
+
+@type verb
+связа'ть - to tie, connect, join @pf
+дои'ть - to milk
+испуга'ться - to be frightened
+удаля'ть - to delete, remove @impf
+удали'ть - to delete, remove @pf
+остерега'ться - to beware
+меня'ть - to change, swap, replace
+
+@type phrase
+А вы уве'рены об этом? - Are you sure of this?
+позво'ль мне' - let me
+в конце' концо'в - eventually
+вре'мя от вре'мени - from time to time
+че'стно говоря' - honestly
+то'лько что - just now
+@type preposition
+ка'к ирони'чно - how ironic
+ка'к прошёл ____? - how did the ____ go?
+Э'то мно'го для' меня' зна'чит. - It means a lot to me.
+пове'рь - believe me
+во'т та'к - there you go
+Пове'рь в себя' - Believe in yourself
+
+@type other
+
+@type conjunction
+
+@type interjection
+мину'точку - just a minute

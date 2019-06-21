@@ -1,14 +1,21 @@
 #==============================================================================
-@name New 6
+@name New 03
 #==============================================================================
 
 @type adjective
+худо'й – slim, skinny, thin
+золото'й – golden, made of gold
+стра'нный – strange
+удиви'тельный – amazing
+му'дрый - wise
 лу'чший - best
 солёный – salty
 уве'ренный - sure, certain, confident
 со'нный - sleepy
 
 @type adverb
+заче'м – what for
+абсолю'тно – absolutely, totally
 ина'че - differently, otherwise
 да'льше - farther, further
 да'же - even
@@ -16,6 +23,22 @@
 ро'вно - exactly, smooth
 
 @type noun
+ги'д – guide
+дура'к – fool
+касси'р – cashier
+компа'ния (друзья') – a group of friends
+кру'жка – mug
+медици'на – medicine
+пра'здник – holiday (one day)
+та'нец – dance
+услу'га – service
+проце'нт – percent
+результа'т – result
+сто'пка – shot glass
+га'лстук – tie
+игру'шка – toy
+ору'жие – weapon, weapons
+се'рия – episode, series
 сове'т – advice, recommendation
 глава' - chapter
 посы'лка – parcel, package
@@ -25,6 +48,15 @@
 украше'ние – decoration, adornment
 
 @type verb
+болта'ть – to chat, gossip; to propel, shake @impf
+встрети'ться - to meet @pf
+ненави'деть – to hate @impf
+целова'ться – to kiss @impf
+подписа'ть – to sign
+роди'ться – to be born
+нахо'диться - to be situated, found, located
+лепи'ть - to sculpt
+по'мнить - to remember
 счита'ть - to count, consider
 полу'чить - to receive, get, obtain
 ока'заться - find oneself, turn out
@@ -44,7 +76,8 @@
 ровно неделю назад - exactly one week ago
 
 @type preposition
+кро'ме + gen. @gen - besides, except
 
 @type other
+то'чно – exactly
 ве'дь - after all
-

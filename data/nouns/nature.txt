@@ -30,3 +30,4 @@
 сне'г - snow
 ле'с – forest, woods
 не'бо - sky
+## о'блако - cloud

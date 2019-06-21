@@ -408,6 +408,8 @@ class StudyState(State):
                     font=self.word_details_font,
                     color=Config.card_back_text_color,
                     align=Align.TopLeft)
+        if occurences is None:
+          occurences = []
         for start, word in occurences:
           w, h = g.measure_text(sentence[:start-1], font=self.word_details_font)
           g.draw_text(20 + w, self.margin_top + self.proficiency_margin_height + 60 + index*20,

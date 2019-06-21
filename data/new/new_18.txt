@@ -1,0 +1,93 @@
+#==============================================================================
+@name New 18
+#==============================================================================
+
+@type adjective
+физиче'ский - physical
+по'шлый - vulgar
+боже'ственный - divine, heavenly, godlike
+умори'тельный - hilarious
+обалде'нный - astounding
+знако'мый - familiar, acquainted
+ви'дный - visible, noticable, prominent
+тро'гательный - touching, moving (emotion)
+
+@type adverb
+приме'рно - roughly speaking, about
+случа'йно - by chance, accidentally
+кра'тко - briefly
+ра'зве - really, perhaps, unless
+	@ex Ра́зве ты ещё не защити́л диссерта́цию? Ра́зве тако́е быва́ет? -- Have you really not yet defended your thesis? Is this really the case?
+	@ex — Он там был. — Ра́зве? -- "He was there." "Really?"
+	@ex Ра́зве кто́-либо даст взаймы́? -- Perhaps someone will give me a loan?
+	@ex Ра́зве ты не зна́ешь? -- Don't you know?
+	@ex Ра́зве ну́жно ему́ счита́ть с конца́? -- Do you think he should count from the end?
+
+@type noun
+прохо'д - passageway, aisle
+заклина'ние - spell, invocation
+глу'пость - stupidity
+чепуха' - poppycock, malarkey, nonsense
+челове'чество - mankind
+мне'ние - opinion
+ожида'ние - expectation
+зо'в - call
+толпа' - crowd
+тюрьма' - jail
+по'нчик - donut
+ро'г - horn
+во'нь - stench
+о'блако - cloud
+сва'дьба - wedding
+	@ex Действия сериала происходят до свадьбы.﻿
+соглаше'ние - agreement
+ша'нс - chance, opportunity
+	@ex Он наш единственный шанс. -- It's our only chance.
+бо'ль - pain
+
+@type verb
+плева'ть - to spit @impf
+плю'нуть - to spit @pf
+вы'ручить - to help out
+саса'ть - to suck
+ра'нить - to wound, injure, hurt
+разве'ять - to scatter, dispell @pf
+дружи'ть - to be friends
+разойти'сь - to break up, to part
+обща'ться - to communicate, socialize
+испра'вить - to fix, correct
+
+наговори'ть - to talk on, tell lies about
+научи'ть    - to teach something in its entirety
+нагото'вить - to prepare/cook extra or well ahead of time
+находи'ть   - to find @impf
+написа'ть   - to write down
+вы'говорить - to annunciate
+вы'учить    - to learn the entire concept of something
+вы'писать   - to take out and write down
+заговори'ть - to talk someone's head off
+заучи'ть    - to learn but not understand
+загото'вить - to prepare ahead of time
+записа'ть   - to take a note
+приговори'ть - to sentence someone to something (in court)
+приучи'ть    - to get someone accustomed to something, to train
+приписа'ть, подписа'ть - to add in, insert writing
+подговори'ть - to talk someone into something, to pursue someone
+подучи'ть    - to learn a bit more of something
+подгото'вить - to prepare, get something ready for someone
+
+
+@type phrase
+покажи' мне' - show me
+что' э'то за ме'сто - What kind of place is this?
+про'шлом году' - last year
+в ближа'йшее вре'мя - soon, in the near future
+идёт до'ждь - it is raining
+шёл сне'г - it was snowing
+
+@type other
+
+@type conjunction
+
+@type interjection
+Сто'й! - Stop! Halt!

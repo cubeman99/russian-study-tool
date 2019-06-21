@@ -1,0 +1,79 @@
+#==============================================================================
+@name New 21
+#==============================================================================
+
+@type adjective
+отврати'тельный - disgusting
+хруста'льный - crystal
+шу'мный - noisy
+неизве'стный - unknown
+поля'рный - polar
+не'жный - gentle, tender, affectionate
+привы'чный - habitual, accustomed
+сла'вный - glorious, nice
+
+@type adverb
+соотве'тственно - respectively, accordingly
+
+@type noun
+су'дба - fate
+шпио'н - spy
+воспомина'ние - a memory, recollection
+сбо'р - gathering, collection
+призна'ние - confession
+воро'та - gate
+лю'стра - chandelier
+волне'ние - excitement
+расте'ние - plant, herb
+возвраще'ние - return
+дра'ка - fight, tussle
+бо'к - side of torso
+остано'вка - stop, layover
+присмо'тра - supervision
+ме'ч - sword
+поку'пка - purchase
+мо'рда - muzzle, snout
+поса'дка - landing
+разреше'ние - permission, resolution
+сфе'ра - sphere, area, field, scope
+значе'ние - meaning, value
+о'ыт - experience
+
+@type verb
+подвести' - to let down
+распахну'ть - to open wide, throw open
+блесте'ть - to glisten, shine
+начи'стить - to polish
+уня'ть - to quiet, calm @pf
+унима'ть - to quiet, calm @impf
+устро'ить - to arrange @pf
+устра'ивать - to arrange @impf
+зали'ть - to fill, overflow, flood @pf
+залива'ть - to fill, overflow, flood @impf
+признава'ться - to confess @impf
+призна'ться - to confess @pf
+весели'ться - to have fun
+купа'ться - to bathe
+убива'ть - to kill @impf
+уби'ть - to kill @pf
+оце'нивать - to evaluate
+наказа'ть - to punish
+кива'ть - to nod
+прокати'ться - to go for a ride @pf
+переключа'ться - to switch
+сближа'ть - to bring together
+обра'доваться - to rejoice
+
+@type phrase
+угощайся - treat/help yourself
+с мин'уты на мину'ту - at any moment
+из го'да в го'д - year after year
+по по'лной - to the fullest
+ка'к пожела'ешь - as you wish
+к сожале'нию - unfortunitely
+
+@type other
+
+@type conjunction
+
+@type interjection
