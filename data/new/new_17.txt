@@ -3,85 +3,77 @@
 #==============================================================================
 
 @type adjective
-тупе'нький - dumb, stupid
-притяжа'тельный - possessive
+отврати'тельный - disgusting
+хруста'льный - crystal
+шу'мный - noisy
+неизве'стный - unknown
+поля'рный - polar
+не'жный - gentle, tender, affectionate
+привы'чный - habitual, accustomed
+сла'вный - glorious, nice
 
 @type adverb
-немно'жко - a little bit
-весьма' - quite, highly, greatly
-ли'шь - only (literary style)
+соотве'тственно - respectively, accordingly
 
 @type noun
-измене'ние - change, variation
-разво'д - divorce
-сюже'т - plot, story
-проро'чество - prophecy
-проро'к - prophet
-ка'чество - quality
-му'дрость - wisdom
-испыта'ние - test, trial
-со'тня - a hundred
-ра'й - paradise
-уте'чка - leak, leakage
-со'бственность - property
-сою'з - union
-ли'фчик - brassiere
-ре'чь - speech
-спосо'бность - ability
-броня' - armor
-спа' - spa
-терапи'я - therapy
-о'тдых - rest, relaxation, recreation
-сла'ва - fame, glory, honor
-ве'с - weight
-ве'к - century
-ро'лик - video, roll
-ла'стик - eraser
-преступле'ние - crime, offense
-
-и'мя существи'тельное - noun
-и'мя прилага'тельное - adjective
-бу'ква - letter, character
-грамма'тика - grammer
-имени'тельный паде'ж - nominative case
-вините'льный паде'ж - accusative case
-роди'тельный паде'ж - genetive case
-да'тельный паде'ж - dative case
-твори'тельный паде'ж - instrumental case
-предло'жный паде'ж - prepositional case
-сре'дный ро'д - neuter gender
-ли'чное местоиме'ние - personal pronouns
-настоя'щее вре'мя - present tense
-проше'дшее вре'мя - past tense
-
+су'дба - fate
+шпио'н - spy
+воспомина'ние - a memory, recollection
+сбо'р - gathering, collection
+призна'ние - confession
+воро'та - gate
+лю'стра - chandelier
+волне'ние - excitement
+расте'ние - plant, herb
+возвраще'ние - return
+дра'ка - fight, tussle
+бо'к - side of torso
+остано'вка - stop, layover
+присмо'тра - supervision
+ме'ч - sword
+поку'пка - purchase
+мо'рда - muzzle, snout
+поса'дка - landing
+разреше'ние - permission, resolution
+сфе'ра - sphere, area, field, scope
+значе'ние - meaning, value
+о'ыт - experience
 
 @type verb
-связа'ть - to tie, connect, join @pf
-дои'ть - to milk
-испуга'ться - to be frightened
-удаля'ть - to delete, remove @impf
-удали'ть - to delete, remove @pf
-остерега'ться - to beware
-меня'ть - to change, swap, replace
+подвести' - to let down
+распахну'ть - to open wide, throw open
+блесте'ть - to glisten, shine
+начи'стить - to polish
+уня'ть - to quiet, calm @pf
+унима'ть - to quiet, calm @impf
+устро'ить - to arrange @pf
+устра'ивать - to arrange @impf
+зали'ть - to fill, overflow, flood @pf
+залива'ть - to fill, overflow, flood @impf
+признава'ться - to confess @impf
+призна'ться - to confess @pf
+весели'ться - to have fun
+купа'ться - to bathe
+убива'ть - to kill @impf
+уби'ть - to kill @pf
+оце'нивать - to evaluate
+наказа'ть - to punish
+кива'ть - to nod
+прокати'ться - to go for a ride @pf
+переключа'ться - to switch
+сближа'ть - to bring together
+обра'доваться - to rejoice
 
 @type phrase
-А вы уве'рены об этом? - Are you sure of this?
-позво'ль мне' - let me
-в конце' концо'в - eventually
-вре'мя от вре'мени - from time to time
-че'стно говоря' - honestly
-то'лько что - just now
-@type preposition
-ка'к ирони'чно - how ironic
-ка'к прошёл ____? - how did the ____ go?
-Э'то мно'го для' меня' зна'чит. - It means a lot to me.
-пове'рь - believe me
-во'т та'к - there you go
-Пове'рь в себя' - Believe in yourself
+угощайся - treat/help yourself
+с мин'уты на мину'ту - at any moment
+из го'да в го'д - year after year
+по по'лной - to the fullest
+ка'к пожела'ешь - as you wish
+к сожале'нию - unfortunitely
 
 @type other
 
 @type conjunction
 
 @type interjection
-мину'точку - just a minute

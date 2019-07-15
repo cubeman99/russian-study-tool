@@ -3,91 +3,90 @@
 #==============================================================================
 
 @type adjective
-физиче'ский - physical
-по'шлый - vulgar
-боже'ственный - divine, heavenly, godlike
-умори'тельный - hilarious
-обалде'нный - astounding
-знако'мый - familiar, acquainted
-ви'дный - visible, noticable, prominent
-тро'гательный - touching, moving (emotion)
+бездо'мный - homeless
+досто'йный - worthy
+засте'нчивый - shy
+вслу'х - aloud
+я'вный - obvious
+токси'чный - toxic
 
 @type adverb
-приме'рно - roughly speaking, about
-случа'йно - by chance, accidentally
-кра'тко - briefly
-ра'зве - really, perhaps, unless
-	@ex Ра́зве ты ещё не защити́л диссерта́цию? Ра́зве тако́е быва́ет? -- Have you really not yet defended your thesis? Is this really the case?
-	@ex — Он там был. — Ра́зве? -- "He was there." "Really?"
-	@ex Ра́зве кто́-либо даст взаймы́? -- Perhaps someone will give me a loan?
-	@ex Ра́зве ты не зна́ешь? -- Don't you know?
-	@ex Ра́зве ну́жно ему́ счита́ть с конца́? -- Do you think he should count from the end?
+здо'рово - very good, perfect
+обра'тно - back, return, inverse, opposite
 
 @type noun
-прохо'д - passageway, aisle
-заклина'ние - spell, invocation
-глу'пость - stupidity
-чепуха' - poppycock, malarkey, nonsense
-челове'чество - mankind
-мне'ние - opinion
-ожида'ние - expectation
-зо'в - call
-толпа' - crowd
-тюрьма' - jail
-по'нчик - donut
-ро'г - horn
-во'нь - stench
-о'блако - cloud
-сва'дьба - wedding
-	@ex Действия сериала происходят до свадьбы.﻿
-соглаше'ние - agreement
-ша'нс - chance, opportunity
-	@ex Он наш единственный шанс. -- It's our only chance.
-бо'ль - pain
+прода'жа - sale (purchase)
+приме'рочная - fitting room
+ка'сса - register
+ве'ер - fan (hand fan)
+сда'ча - change (money)
+нали'чные (ден'ьги) - cash
+зна'ния - knowledge
+образова'ние - education, formation
+гла'сность - publicity
+перестро'йка - reconstruction
+во'р - theif
+за'мка из песка' - sand castle
+положе'ние - position, location, situation
+влече'ние - attraction
+вселе'нная - universe
+ребя'та - guys, children
+же'мчуг - pearl
+ме'х - fur
+пробужде'ние - awakening
+бро'вь - eyebrow
+ры'нок - market, mart
+сце'на - scene
+назначе'ние - purpose, assignment, function
+противостоя'ние - standoff
+беспоко'йство - anxiety, concern
+сковорода' - frying pan
+ки'сть - brush
 
 @type verb
-плева'ть - to spit @impf
-плю'нуть - to spit @pf
-вы'ручить - to help out
-саса'ть - to suck
-ра'нить - to wound, injure, hurt
-разве'ять - to scatter, dispell @pf
-дружи'ть - to be friends
-разойти'сь - to break up, to part
-обща'ться - to communicate, socialize
-испра'вить - to fix, correct
-
-наговори'ть - to talk on, tell lies about
-научи'ть    - to teach something in its entirety
-нагото'вить - to prepare/cook extra or well ahead of time
-находи'ть   - to find @impf
-написа'ть   - to write down
-вы'говорить - to annunciate
-вы'учить    - to learn the entire concept of something
-вы'писать   - to take out and write down
-заговори'ть - to talk someone's head off
-заучи'ть    - to learn but not understand
-загото'вить - to prepare ahead of time
-записа'ть   - to take a note
-приговори'ть - to sentence someone to something (in court)
-приучи'ть    - to get someone accustomed to something, to train
-приписа'ть, подписа'ть - to add in, insert writing
-подговори'ть - to talk someone into something, to pursue someone
-подучи'ть    - to learn a bit more of something
-подгото'вить - to prepare, get something ready for someone
-
+поме'рить - to measure
+проста'ивать -  to stand idle
+положи'ть - to put @pf
+вложи'ть - to invest @pf
+вы'ложить - to take something out and put it @pf
+приложи'ть - to put and hold in place @pf
+переложи'ть - to move something from one place to another @pf
+стреми'ться - to aspire, aim, seek
+предава'ть - to betray @impf
+оби'деть - to offend @pf
+обижать - to offend @impf
+пережива'ть - to worry, relive
+сомнева'ться - to doubt
+прильну'ть - to snuggle, nestle
+хихи'кать - to giggle @impf
+хихи'кнуть - to giggle @pf
+расслабля'ться - to relax, loosen up
+сража'ться - to battle
 
 @type phrase
-покажи' мне' - show me
-что' э'то за ме'сто - What kind of place is this?
-про'шлом году' - last year
-в ближа'йшее вре'мя - soon, in the near future
-идёт до'ждь - it is raining
-шёл сне'г - it was snowing
+у + gen. + получилось + verb -- to manage to do something
+	@ex У меня получилось водить машину
+ви'димо, ...; похо'же, ... -- it seems like ...
+	@ex Видимо, я её обидел -- It seems like I offended her
+	@ex Похоже, он не придёт -- It seems like he won't come
+собира'ться + verb -- to get ready, to plan, to intend to do soemthing
+почему ты мне раньше это не рассказывал? -- Why haven't you told me this before?
+чево мы стоим -- what we're made of
+вы'летело из головы' - flew out of my head, it was at the tip of my tongue
+снима'ть ви'део - to shoot a video
+ух ты! - wow, woah!
+где бы ты не был - wherever you are
 
 @type other
+
+@type particle
+ра'зве - really, (suprise, doubt, concern)
+неуже'ли - really!, emotional (suprise, doubt, concern)
 
 @type conjunction
 
 @type interjection
-Сто'й! - Stop! Halt!
+
+@type preposition
+насчёт - concerning, about
+

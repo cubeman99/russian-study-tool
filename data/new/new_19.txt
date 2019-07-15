@@ -3,57 +3,26 @@
 #==============================================================================
 
 @type adjective
-обяза'тельный - requried, mandatory
-у'мственный - mental
+неприли'чный - indecent
+прили'чный - decent
 
 @type adverb
-по-мо'ему -- in my opinion, to my thinking
 
 @type noun
-ра'б - slave
-гро'м - thunder
-стра'х - fear
-жела'ние - wish, desire
-кана'ва - ditch
-се'но - hay
-переры'в - break, pause, interruption
-де'тство - childhood
-во'дное по'ло - water polo
-боевы'е иску'сства -- martial arts
-самооборо'на -- self defense
-физкульту'ра - physical culture
-се'кция - section
-спо'ртзал - gym
-самочу'вствие - state of health
+призва'ние - calling, vocation
 
 @type verb
-вы'ть - to howl
-происходи'ть - to happen, occur, take place
-урони'ть - to drop @pf
-роня'ть - to drop @impf
-помести'ться - to fit, find room @impf
-развива'ться - to develop, evolve
-страда'ть - to suffer
-броса'ть - to throw, toss
-ожида'ть - to expect
-вообража'ть - to imagine @impf
-вообрази'ть - to imagine @pf
 
 @type phrase
-возьми' - take it
-Прошу' проше'ния! -- I beg your pardon! Pardon me!
-В чём дело? -- What's the matter?
-Како'го черта'! -- what the heck!
-Моя' жи'знь не име'ет смы'сла! -- My life has no meaning!
-по кра'йней ме'ре - at least
-посмо'трим - we'll see
-С ра'ннего де'тства -- since early childhood
-мно'гими ви'дами спо'рта - many types of sports
-в са'мые по'здние года' - in your later years
+никогда' ещё не' было ничего' и никого' подо'бного - there has never been anything or anyone like this
 
 @type other
+
+@type particle
 
 @type conjunction
 
 @type interjection
-забу'дь - forget it
+
+@type preposition
+

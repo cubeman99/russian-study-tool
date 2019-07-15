@@ -1,0 +1,93 @@
+#==============================================================================
+@name 2.a Обязательная сцена погони
+#==============================================================================
+
+@type adverb
+наеди'не - in private, alone
+исключи'тельно - exclusively, only
+буква'льно - literally
+гора'здо - much, much more
+позади' - behind
+снару'жи - on the outside
+части'чно - partly, partially
+
+@type adjective
+незаме'чанный - unnoticed
+непреодоли'мый - insurmountable
+ю'ный - young
+суро'вый - severe, harsh
+наме'ренный - intentional
+злю'щий - furious, very angry
+зло'бный - wicked, spiteful
+многоцве'тный - multicolored
+
+@type noun
+преиму'щество - advantage
+техни'чески - technically
+собы'тие - event, development
+зако'н - law
+чу'точка - a little bit
+заверше'ние - completion
+заседа'ние - sitting, meeting
+счёт - account, score
+замеча'ние - remark
+состоя'ние - state, condition
+наказа'ние - punishment
+го'нка - race
+совеща'ние - meeting for discussion of smth
+па'ра - a couple
+вспы'шка - flash
+направле'ние - direction
+я'рость - fury, rage
+то'пот - tramp, trot
+фы'рканье - snort
+единоро'г - unicorn
+во'пль - scream, yell
+отме'тка - mark, grade
+гла'с, го'лос - voice
+
+@type verb
+проекти'ровать - to design @impf
+спроекти'ровать - to design @pf
+прикры'ть - to cover up
+передвига'ться - to get around, move around
+прида'ть - to add to, give extra
+скользну'ть - to move quickly, quietly, to slip
+вноси'ть - to bring in
+укроща'ть - to tame @impf
+укроти'ть - to tame @pf
+расши'рить - to expand @pf
+расширя'ть - to expand @impf
+приде'рживаться - to stick to, adhere, abide
+суме'ть - to be skillful enough to do smth @pf
+уворачиваться от + gen. @gen - to avoid
+уверну'ться от + gen. @gen - to evade, dodge
+сопровожда'ть - to accompany
+обману'ть - to cheat, deceive @pf
+обма'нывать - to cheat, deceive @impf
+ула'вливать - to detect, pick up, locate
+ры'скать - to scour, prowl
+высле'живать - to track, hunt down
+пона'добиться - to become necessary, will need
+поморщи'ться - to wince, make a wry, wrinkled face @pf
+морщи'ться - to wince, make a wry, wrinkled face @impf
+натвори'ть - to do in a bad or wrong way
+
+@type phrase
+су'дя по всему' - judging by the situation
+... на всю мощь - to its full extent
+прикры'ть глаза' - to close your eyes
+
+@type other
+
+@type particle
+
+@type conjunction
+
+@type interjection
+
+@type preposition
+извне' @gen - from outside
+вне' @gen - outside
+
+

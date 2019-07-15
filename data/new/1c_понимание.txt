@@ -1,0 +1,88 @@
+#==============================================================================
+@name 1.c Понимание
+#==============================================================================
+
+@type adverb
+че'рез мгнове'нье - in a moment
+да'вненько - quite a while, it's been a long time
+про'ще - simpler, easier
+наиме'нее - least
+
+@type adjective
+ту'склый - dim
+оку'танный - shrouded
+освещённый - lit, illuminated
+испещрённый - mottled, speckled
+разъярённый - furious, enraged
+охва'ченный + instr. -- covered with
+разда'вленный - crushed, squashed
+же'ртвенный - sacrificial
+смущённый - embarrassed
+гне'вный - angry, wrathy
+
+@type noun
+пря'дь - a strand
+###duplicate### длина' - length
+ступе'нь, ступе'нька - step, stair
+###duplicate### о'пыт - experience, practice, attempt
+щи'т - shield
+основа'ние - the base, bottom
+наста'вник - tutor @m
+наста'вница - tutor @f
+достиже'ние - achievement
+ве'рх - the top
+сме'х - laughter
+зави'симость - dependancy, addiction
+столкнове'ние - collision
+противоре'чие - contradiction
+обстано'вка - situation, furnashings
+же'ртва - victim
+зыбу'чие пески' -- quicksand (unstable-sand)
+пери'на - feather bead
+ра'ма - frame
+
+@type verb
+прорыча'ть - to growl, snarl
+прижа'ть -  to press against
+разобра'ться - to figure it out
+разобра'ть - to dissassemble
+сорва'ться - to break, jerk off
+обру'шить - to bring down with force
+прогну'ть - to bend over (from gravity)
+тре'снуть - to crack
+тре'скать - to crack
+поме'ркнуть - to fade away
+осе'сть - to settle down
+пари'ть - to soar, hover over
+преврати'ть - to turn smth into smth else
+прищу'риться - to squint
+моргну'ть - to blink
+появи'ться - to appear, reveal, come into sight
+вы'ратья - to rip out
+разва'ливаться - to fall apart
+простона'ть - to say with a groan
+па'дать - to fall, drop
+рыда'ть, всхли'пывать - to sob
+прерва'ть - to interrupt
+перывать - to interrupt
+сверка'ть - to sparkle, shine brightly
+отта'лкиваться - to push off
+трясти' - to shake, jiggle
+закати'ть глаза' - to roll your eyes
+рассмея'ться - to burst out laughing
+изобрази'ть - to portray, picture
+успе'ть - to be in time, have time
+отругать - to scold
+
+@type phrase
+
+@type other
+
+@type particle
+
+@type conjunction
+
+@type interjection
+дерьмо'! - crap!
+
+@type preposition

@@ -1,0 +1,92 @@
+#==============================================================================
+@name 1.b Понимание
+#==============================================================================
+
+@type adverb
+очеви'дно - obviously, apparently
+практи'чески - practically
+сбо'ку - at the side of
+
+@type adjective
+уны'лый - mopey
+жизнера'достный -- cheerful (life-happy)
+разби'тый - broken, beaten to peaces
+скепти'ческий - skeptical
+добросерде'нный -- kind-hearted
+короле'вский - royal
+бе'глый - runaway
+упря'мый - stubborn
+сжа'тый - compressed
+завстрённый - pointed
+
+@type noun
+ко'нчик - tip
+ха'ос - chaos
+по'дданный - subject (person)
+безуте'шность - inconsolableness
+уси'лие - effort
+э'пос - epic (story)
+че'сть - honor
+кручи'на - grief
+вы'пуск  - release, issue
+глубина' - depth, intensity
+попы'тка - an attempt
+нехва'тка - insuffency, lack of
+отноше'ние - relationship
+обрете'ние - the gaining of
+гва'рдия - guard (such as the royal guard)
+наде'жда - hope
+мо'льба - prayer, plea
+###duplicate### возвраще'ние - return
+подъе'м - the rise, rising
+опуска'ние - the lowering
+суме'рки - dusk, twilight
+тро'нный за'л - throne room
+
+@type verb
+поки'нуть - to leave
+###duplicate### отвле'чь - to distract
+ободри'ть - to cheer up
+увенча'ться успе'хом - to be crowned with success
+исполня'ть - to carry out, execute
+развесели'ть - to liven up
+вы'пустить - to let out
+услу'жить - to serve
+твори'ть - to create (creatively)
+помыс'лить - to think, be in thought
+сосла'ть - to banish
+потеша'ться (+ над) - to make fun of
+###duplicate### страда'ть - to suffer
+преда'ть - to betray
+изба'вится - to get rid of
+спеши'ть - to hurry @impf
+поспеши'ть - to hurry @pf
+раскры'ть - to uncover
+обнару'жить - to discover, find out
+обезу'меть - to go crazy
+оставля'ть - to leave behind
+отверга'ть - to reject
+сорва'ть - to rip off
+метну'ть - to chunk, throw
+###duplicate### кивну'ть - to nod
+###duplicate### распахну'ть - to open wide, throw open
+несо'мать - to bear, carry
+отка'зывать - to refuse
+отрица'ть - to deny, negate
+оскали'ться - to grin
+спуска'ться - to go down, descend
+засты'ть - to harden, freeze
+вы'ступить - to stand out
+
+@type phrase
+
+@type other
+
+@type particle
+
+@type conjunction
+до тех пор -  until, as long as
+
+@type interjection
+
+@type preposition

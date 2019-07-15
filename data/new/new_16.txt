@@ -3,82 +3,82 @@
 #==============================================================================
 
 @type adjective
-постоя'нный - constant, continuous, permanent
-креати́вный – creative
-кримина́льный – criminal
-моби́льный – mobile
-прозра́чный - transparent, clear
-солне'чный - sunny, solar, sun
-обрече'нный - doomed
-глоба'льный - global
-полити'ческий - political
-ли'чный - personal, private
+безмо'лвный - silent, speechless
+тще'тный - vain, futile
+внима'тельный - attentive
+юго-западный -- southwest
+восхи'тительный - delicious, delightful
+бессме'ртный - immortal
+го'лый - naked
+оста'льный - the rest
+гавно' - shit, very bad
 
 @type adverb
-потихо'ньку - little by little, silently
+вперёд - forward
+охо'та - feel like, it is desired (modal)
+	@ex Мне охота идти домой
 
 @type noun
-впечатле'ние - impression
-	@ex Моё впечатле'ние, что' лю'ди - бо'лее "норма'льные" в Росси'и, бо'лее че'стным (в эмо'цией).
-эмо'ция - emotion
-те'ма - topic
-спе'шка - rush, hurry, haste
-эне'ргия - energy
-забо'р - fence
-свобо'да - freedom
-борода́ – beard
-колесо́ – wheel
-ко́смос – outer space, cosmos
-не'фть – oil (petroleum)
-поведе́ние – behavior, conduct
-ши́на – tire
-разгово'р - conversation, talk
-шра'м - scar
-солда'т - soldier
-дворе'ц - palace, castle
-дневни'к - diary
-воображе'ние - imagination
-у'м - mind, wit, intelligence
-короле'вство - kingdom
-похище'ние - abduction
-ба'шня - tower
-о'бщество - society
-вы'бор - choice, selection
-ито'г - summary
+снегови'к - snowman
+наря'д - outfit, attire
+мете'ль - blizzard, snowstorm
+урага'н - hurricane
+внима'ние - attention
+отве'тственность - responsibility
+прогу'лка - walk, stroll
+существо' - being, living thing
+песо'к - sand
+пы'ль - dust
+чистота' - cleanliness, purity
+сча'стье - happiness
+люби'мец - favorite; pet
+управле'ние - management, control
+пи'р - feast, banquet
+возмо'жность - opportunity, possibility
+больши'нство - most
+посте'ль - bed with two sides
+ю'ношество - youth
+пито'мец - pet
+ко'реш - close friend (slang)
+кно'пка - button
 
 @type verb
-переста'ть - to stop, quit something in progress
-уста'ть от - to get tired of @pf
-захва'тывать - to grab, grip, capture, captivate
-ограни'чить - to limit, restrict @pf
-ограни'чивать - to limit, restrict @impf
-заблуди́ться – to get lost, go astray
-отменя́ться – to call off, cancel @impf
-отмени́ться – to call off, cancel @pf
-подключи́ть – to connect @pf
-тащи́ть – to bring, carry, drag @impf
-горди'ться - to be proud
-укра'сть - to steal @pf
-спра'виться - to cope, deal, manage
-раздража'ть - to annoy, irritate, provoke
-окупа'ться - to pay off @impf
-дожда'ться - to wait for a long time
+скача'ть - to download
+ска'чивать - to download
+пропусти'ть - to skip, miss @pf
+укрыва'ть - to shelter, cover
+стона'ть - to moan, groan
+храни'ть - to keep, guard @impf
+отпусти'ть - to let go @pf
+бушева'ть - to rage, storm @impf
+уха'живать за - to look after, care for
+соверша'ть - to accomplish @impf
+соверши'ть - to accomplish @pf
+следи'ть - to track, watch, follow
+убира'ть - remove, tidy up, clear
+пылесо'с - vacuum cleaner
+обрати'ть - to direct, turn, draw @pf
+обраща'ть - to direct, turn, draw @impf
+взве'сить - to weigh; to think through @pf
+взве'шивать - to weigh; to think through @impf
+влия'ть - to influence @impf
+явля'ться - to appear @impf
+туси'ть - to party, hang out, chill
 
 @type phrase
-в о'бщем - overall, in general
-вести́ себя́ – to behave, conduct oneself
-Мне везёт! – I’m in luck!
-что бы не случи'лось - whatever happens
-ве'ская причи'на - good reason
-так да'лее - etc.
-вот это да﻿! - Woah!
-
-@type preposition
+несмотря' на э'то - in spite of this
+Заткнись! - Shut up!
+ещё разо'к - one more time (dimminutive)
+во'т и всё - that is all
+ничего' стра'шного - nothing's wrong, that's all right
 
 @type other
-пошли' - let's go
 
 @type conjunction
+ли'бо - or (exclusive or, either or)
+вдоба'вок - in addition
+кро'ме того' - besides
+допусти'м - let's say, supposably
+из-за того' -- because of
 
 @type interjection
-у'вы - alas
