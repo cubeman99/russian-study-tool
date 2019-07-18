@@ -1,6 +1,10 @@
 import pygame
 import time
 import operator
+from cmg.event import Event
+
+Keys = pygame
+
 
 class Input:
   def __init__(self, index, name, reversed=False, min=0, max=1):
@@ -182,6 +186,8 @@ class InputManager:
     self.binds = []
     self.bind_dict = {}
     self.down_keys = set()
+    self.key_pressed = Event(int, str)
+    self.key_released = Event(int, str)
 
   def bind(self, key, pressed=None, released=None, down=None):
     bind = KeyBind(key, pressed=pressed, released=released, down=down)
@@ -198,15 +204,17 @@ class InputManager:
           if bind.down_callback is not None:
             bind.down_callback()
 
-  def on_key_down(self, key):
+  def on_key_down(self, key, unicode):
     if key in self.bind_dict:
       for bind in self.bind_dict[key]:
         bind.down()
     self.down_keys.add(key)
+    self.key_pressed.emit(key, unicode)
         
   def on_key_up(self, key):
     if key in self.bind_dict:
       for bind in self.bind_dict[key]:
         bind.up()
     self.down_keys.remove(key)
+    self.key_released.emit(key)
 

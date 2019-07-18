@@ -24,6 +24,7 @@ from study_tool.russian import conjugation
 from study_tool.word_database import WordDatabase
 from study_tool.example_database import ExampleDatabase
 from study_tool.states.read_text_state import ReadTextState
+from study_tool.states.card_edit_state import CardEditState
 
 DEAD_ZONE = 0.01
 
@@ -85,7 +86,7 @@ class StudyCardsApp(Application):
     #self.root["verbs"]["stems"].get_problem_cards()
     #self.push_card_list_state(self.root.card_sets[1])
     #self.push_state(KeyboardState())
-    #self.push_state(ReadTextState())
+    self.push_state(CardEditState(card_database=self.card_database))
 
     self.input.bind(pygame.K_ESCAPE, pressed=self.quit)
 

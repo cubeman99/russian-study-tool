@@ -45,6 +45,9 @@ class Graphics:
   # Shapes
   #----------------------------------------------------------------------------
 
+  def draw_image(self, source, x, y):
+    self.screen.blit(source=source, dest=(x, y))
+
   def draw_rect(self, x, y=None, width=None, height=None, color=color.BLACK, thickness=1):
     if isinstance(x, pygame.Rect):
       rect = x
@@ -90,7 +93,28 @@ class Graphics:
         return font
     return font
 
-  def draw_text(self, x, y, text, color=color.BLACK, font=None, align=Align.TopLeft):
+  def draw_text(self, x, y, text, color=color.BLACK, font=None, align=Align.TopLeft, accented=True):
+    """
+    Draw accented text.
+    """
+    if accented:
+      self.draw_accented_text(x, y, text, color, font=font, align=align)
+    else:
+      w, h = font.size(text)
+      if Align.Center in align:
+        x -= w / 2
+      if Align.Middle in align:
+        y -= h / 2
+      if Align.Right in align:
+        x -= w
+      if Align.Bottom in align:
+        y -= h
+
+      # Draw text
+      text_bitmap = font.render(text, True, tuple(color))
+      self.screen.blit(text_bitmap, [x, y])
+
+  def draw_accented_text(self, x, y, text, color=color.BLACK, font=None, align=Align.TopLeft):
     """
     Draw accented text.
     """
@@ -99,7 +123,7 @@ class Graphics:
     if font not in self.accent_bitmap:
       self.accent_bitmap[font] = font.render(self.accent_render_char, True, tuple(color))
     self.accent_half_width = self.font.size(self.accent_render_char)[0] / 2
-
+  
     text = AccentedText(text)
     w, h = font.size(text.text)
     if Align.Center in align:

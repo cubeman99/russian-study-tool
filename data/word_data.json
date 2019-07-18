@@ -77783,6 +77783,413 @@
       "examples": [],
       "name": "призвание",
       "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "собы'тия",
+            "Dative": "собы'тиям",
+            "Genetive": "собы'тий",
+            "Instrumental": "собы'тиями",
+            "Nominative": "собы'тия",
+            "Prepositional": "собы'тиях"
+          },
+          "Singular": {
+            "Accusative": "собы'тие",
+            "Dative": "собы'тию",
+            "Genetive": "собы'тия",
+            "Instrumental": "собы'тием",
+            "Nominative": "собы'тие",
+            "Prepositional": "собы'тии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "событие",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "спроектировать"
+        ],
+        "imperative": {
+          "Plural": "проекти'руйте",
+          "Singular": "проекти'руй"
+        },
+        "infinitive": "проектировать",
+        "info": "This verb can also mean the following: plan, project.",
+        "non_past": {
+          "Plural": {
+            "First": "проекти'руем",
+            "Second": "проекти'руете",
+            "Third": "проекти'руют"
+          },
+          "Singular": {
+            "First": "проекти'рую",
+            "Second": "проекти'руешь",
+            "Third": "проекти'рует"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "проекти'ровавший",
+            "Present": "проекти'рующий"
+          },
+          "Adverbial": {
+            "Past": "проекти'ровав",
+            "Present": "проекти'руя"
+          },
+          "Passive": {
+            "Past": "проекти'рованный",
+            "Present": "проекти'руемый"
+          }
+        },
+        "past": {
+          "Femanine": "проекти'ровала",
+          "Masculine": "проекти'ровал",
+          "Neuter": "проекти'ровало",
+          "Plural": "проекти'ровали"
+        },
+        "translation": "to design"
+      },
+      "examples": [],
+      "name": "проектировать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "укрощать"
+        ],
+        "imperative": {
+          "Plural": "укроти'те",
+          "Singular": "укроти'"
+        },
+        "infinitive": "укротить",
+        "info": "This verb can also mean the following: curb, control, subdue.",
+        "non_past": {
+          "Plural": {
+            "First": "укроти'м",
+            "Second": "укроти'те",
+            "Third": "укротя'т"
+          },
+          "Singular": {
+            "First": "укрощу'",
+            "Second": "укроти'шь",
+            "Third": "укроти'т"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "укроти'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "укроти'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "укрощённый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "укроти'ла",
+          "Masculine": "укроти'л",
+          "Neuter": "укроти'ло",
+          "Plural": "укроти'ли"
+        },
+        "translation": "to tame"
+      },
+      "examples": [],
+      "name": "укротить",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "обмануть"
+        ],
+        "imperative": {
+          "Plural": "обма'нывайте",
+          "Singular": "обма'нывай"
+        },
+        "infinitive": "обманывать",
+        "info": "This verb can also mean the following: swindle, let down, disappoint, trick, cheat.",
+        "non_past": {
+          "Plural": {
+            "First": "обма'нываем",
+            "Second": "обма'нываете",
+            "Third": "обма'нывают"
+          },
+          "Singular": {
+            "First": "обма'нываю",
+            "Second": "обма'нываешь",
+            "Third": "обма'нывает"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "обма'нывавший",
+            "Present": "обма'нывающий"
+          },
+          "Adverbial": {
+            "Past": "обма'нывав",
+            "Present": "обма'нывая"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "обма'нываемый"
+          }
+        },
+        "past": {
+          "Femanine": "обма'нывала",
+          "Masculine": "обма'нывал",
+          "Neuter": "обма'нывало",
+          "Plural": "обма'нывали"
+        },
+        "translation": "to deceive"
+      },
+      "examples": [],
+      "name": "обманывать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "сморщиться",
+          "наморщиться",
+          "поморщиться"
+        ],
+        "imperative": {
+          "Plural": "мо'рщьтесь",
+          "Singular": "мо'рщись"
+        },
+        "infinitive": "морщиться",
+        "info": "This verb can also mean the following: crease, knit brows, make a wry face, wince, make, knit.",
+        "non_past": {
+          "Plural": {
+            "First": "мо'рщимся",
+            "Second": "мо'рщитесь",
+            "Third": "мо'рщатся"
+          },
+          "Singular": {
+            "First": "мо'рщусь",
+            "Second": "мо'рщишься",
+            "Third": "мо'рщится"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "мо'рщившийся",
+            "Present": "мо'рщащийся"
+          },
+          "Adverbial": {
+            "Past": "мо'рщившись",
+            "Present": "мо'рщась"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "мо'рщилась",
+          "Masculine": "мо'рщился",
+          "Neuter": "мо'рщилось",
+          "Plural": "мо'рщились"
+        },
+        "translation": "to wrinkle"
+      },
+      "examples": [],
+      "name": "морщиться",
+      "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "изумру'ды",
+            "Dative": "изумру'дам",
+            "Genetive": "изумру'дов",
+            "Instrumental": "изумру'дами",
+            "Nominative": "изумру'ды",
+            "Prepositional": "изумру'дах"
+          },
+          "Singular": {
+            "Accusative": "изумру'д",
+            "Dative": "изумру'ду",
+            "Genetive": "изумру'да",
+            "Instrumental": "изумру'дом",
+            "Nominative": "изумру'д",
+            "Prepositional": "изумру'де"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "изумруд",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "вырывать"
+        ],
+        "imperative": {
+          "Plural": "вы'рвите",
+          "Singular": "вы'рви"
+        },
+        "infinitive": "вырвать",
+        "info": "This verb can also mean the following: vomit, snatch, tear out, eradicate, extirpate, tear, snatch out, root out, pull up.",
+        "non_past": {
+          "Plural": {
+            "First": "вы'рвем",
+            "Second": "вы'рвете",
+            "Third": "вы'рвут"
+          },
+          "Singular": {
+            "First": "вы'рву",
+            "Second": "вы'рвешь",
+            "Third": "вы'рвет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "вы'рвавший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "вы'рвав",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "вы'рванный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "вы'рвала",
+          "Masculine": "вы'рвал",
+          "Neuter": "вы'рвало",
+          "Plural": "вы'рвали"
+        },
+        "translation": "to pull out"
+      },
+      "examples": [],
+      "name": "вырвать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "прервать"
+        ],
+        "imperative": {
+          "Plural": "прерыва'йте",
+          "Singular": "прерыва'й"
+        },
+        "infinitive": "прерывать",
+        "info": "This verb can also mean the following: break off, sever, discontinue.",
+        "non_past": {
+          "Plural": {
+            "First": "прерыва'ем",
+            "Second": "прерыва'ете",
+            "Third": "прерыва'ют"
+          },
+          "Singular": {
+            "First": "прерыва'ю",
+            "Second": "прерыва'ешь",
+            "Third": "прерыва'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "прерыва'вший",
+            "Present": "прерыва'ющий"
+          },
+          "Adverbial": {
+            "Past": "прерыва'в",
+            "Present": "прерыва'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "прерыва'емый"
+          }
+        },
+        "past": {
+          "Femanine": "прерыва'ла",
+          "Masculine": "прерыва'л",
+          "Neuter": "прерыва'ло",
+          "Plural": "прерыва'ли"
+        },
+        "translation": "to interrupt"
+      },
+      "examples": [],
+      "name": "прерывать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "потрескаться",
+          "треснуть"
+        ],
+        "imperative": {
+          "Plural": "тре'скайтесь",
+          "Singular": "тре'скайся"
+        },
+        "infinitive": "трескаться",
+        "info": "This verb can also mean the following: chap.",
+        "non_past": {
+          "Plural": {
+            "First": "тре'скаемся",
+            "Second": "тре'скаетесь",
+            "Third": "тре'скаются"
+          },
+          "Singular": {
+            "First": "тре'скаюсь",
+            "Second": "тре'скаешься",
+            "Third": "тре'скается"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "тре'скавшийся",
+            "Present": "тре'скающийся"
+          },
+          "Adverbial": {
+            "Past": "тре'скавшись",
+            "Present": "тре'скаясь"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "тре'скалась",
+          "Masculine": "тре'скался",
+          "Neuter": "тре'скалось",
+          "Plural": "тре'скались"
+        },
+        "translation": "to crack"
+      },
+      "examples": [],
+      "name": "трескаться",
+      "type": "Verb"
     }
   ]
 }

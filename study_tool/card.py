@@ -45,16 +45,19 @@ class Card:
   A card with English and Russian sides that can be studied.
   """
   def __init__(self, front="", back=""):
+    self.word_type = None
     self.text = [front, back]
     self.attributes = [[], []]
-    self.last_encounter_time = None
-    self.proficiency_level = 0  # new/unseen
-    self.history = []  # History of True or False markings
-    self.word_type = None
-    self.source = None
     self.word_name = AccentedText(self.russian)
-    self.word = None
     self.examples = []
+    self.source = None
+
+    # CardStudyData
+    self.proficiency_level = 0  # 0 = new/unseen
+    self.history = []  # History of True or False markings
+    self.last_encounter_time = None
+
+    self.word = None
 
     # used by Scheduler
     self.rep = None

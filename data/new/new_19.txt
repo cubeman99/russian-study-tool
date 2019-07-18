@@ -10,6 +10,7 @@
 
 @type noun
 призва'ние - calling, vocation
+изу'мруд - emerald
 
 @type verb
 

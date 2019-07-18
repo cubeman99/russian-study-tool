@@ -46,25 +46,24 @@
 прижа'ть -  to press against
 разобра'ться - to figure it out
 разобра'ть - to dissassemble
-сорва'ться - to break, jerk off
 обру'шить - to bring down with force
 прогну'ть - to bend over (from gravity)
 тре'снуть - to crack
-тре'скать - to crack
+тре'скаться - to crack
 поме'ркнуть - to fade away
 осе'сть - to settle down
-пари'ть - to soar, hover over
+пари'ть - to soar, steam, vape
 преврати'ть - to turn smth into smth else
 прищу'риться - to squint
 моргну'ть - to blink
 появи'ться - to appear, reveal, come into sight
-вы'ратья - to rip out
+вы'рвать - to rip out
 разва'ливаться - to fall apart
 простона'ть - to say with a groan
 па'дать - to fall, drop
 рыда'ть, всхли'пывать - to sob
-прерва'ть - to interrupt
-перывать - to interrupt
+прерва'ть - to interrupt @pf
+прерыва'ть - to interrupt @impf
 сверка'ть - to sparkle, shine brightly
 отта'лкиваться - to push off
 трясти' - to shake, jiggle

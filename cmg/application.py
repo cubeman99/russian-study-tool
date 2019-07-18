@@ -3,8 +3,10 @@ from cmg.input import *
 from cmg.graphics import *
 
 class Application:
+  instance = None
 
   def __init__(self, title="New CMG Application", width=800, height=600):
+    Application.instance = self
     pygame.init()
 
     # Create the window
@@ -35,7 +37,7 @@ class Application:
         if event.type == pygame.QUIT:
           self.quit()
         elif event.type == pygame.KEYDOWN:
-          self.input.on_key_down(event.key)
+          self.input.on_key_down(event.key, event.unicode)
         elif event.type == pygame.KEYUP:
           self.input.on_key_up(event.key)
 
