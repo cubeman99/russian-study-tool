@@ -1,0 +1,80 @@
+#==============================================================================
+@name 2.b Обязательная сцена погони
+#==============================================================================
+
+@type adverb
+неожи'данно - unexpectedly
+подозри'тельно - suspiciously
+
+@type adjective
+е'жемесячный, ме'сячный - monthly
+сере'брянный - silver
+противополо'жный - opposite
+мра'морный - marble
+случа'йный - random
+определённый - determined, definite, certain
+
+@type noun
+###duplicate### расте'ние - plant
+горшо'к - clay pot
+расте'ние в горшке' - potted plant
+###duplicate### украше'ние - decoration
+ще'ль - horizontal gap, slit
+серебро' - silver
+зо'лото - gold
+просве'т - band of light in unlit space
+исчезнове'ние - dissapearance
+середи'на - the middle
+полёт - flight
+и'скра - spark
+поворо'т - turn
+тупи'к - dead end
+габари'т - size, dimension
+жёлоб - chute, gutter
+кры'шка - cover
+ще'пка - splinter
+опи'лки - sawdust
+лю'к - hatch, manhole
+пада'ние - fall, drop
+окруже'ние - encirclement, surroundings
+сме'на - change, shift, working shift
+пустота' - emptiness
+потоло'чный - ceiling (adj.)
+пресле'дование - pursuit, chase, persecution
+дыха'ние - breath
+
+@type verb
+проклина'ть - to curse
+прокля'сть - to curse
+рассла'биться - to relax
+###duplicate### пойма'ть - to catch
+расста'вить - to arrange, place in the right places
+затормази'ть - to brake
+приземли'ться - to land
+ныря'ть - to dive
+пы'хтеть - to puff, breath hard
+ляга'ть - to kick hind legs
+провали'ться - to fall due to gravity
+освети'ть - to light up
+сы'паться - to pour in
+взорва'ть - to blow up
+заме'длить - to slow down smth
+замора'чиваться - to bother
+реаги'ровать - to react
+убеди'ть - to convince, urge @pf
+убежда'ть - to convince, urge @impf
+
+@type phrase
+
+@type other
+
+@type particle
+
+@type conjunction
+
+@type interjection
+
+@type preposition
+
+
+

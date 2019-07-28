@@ -1,0 +1,67 @@
+#==============================================================================
+@name 2.c Обязательная сцена погони
+#==============================================================================
+
+@type adverb
+
+@type adjective
+одержи'мый - obsessed
+пода'вленный - depressed
+удивлённый - suprised
+необходи'мый - required, that which you can't do without
+жи'зненный - vital, important for life
+побежённый - defeated
+остальны'е + gen.  - the rest (of some group)
+
+@type noun
+обсужде'ние - discussion
+тра'та - expense, that which is spent
+бубне'ние - mumbling
+прогно'з - prediction, forecast, prognosis
+кукуру'за - corn
+зево'к - yawn
+дремо'та - drowsiness
+дрёма -- doze, half-sleep
+ухмы'лка - smirk, smug grin
+на'вык - skill acquired from habit
+сохране'ние - preservation, conservation
+зло' - evil
+набо'р - set, suite, selection
+теле'жка - cart
+сле'дствие - consequence
+после'дствие - consequence of something
+повседне'вность -- slice-of-life
+поро'г - threshold
+
+@type verb
+учи'тывать - to take into account
+избежа'ть - to avoid, get away from
+вы'держать - to withstand, endure, hold out
+зева'ть - to yawn @impf
+зевну'ть - to give a yawn @pf
+нести'сь - to move forward at high speed
+клева'ть но'сом -- to fall asleep, peck with your nose
+огляну'ться - to look back
+оберну'ться - to turn around
+де'ться - to get away, hide
+заточи'ть - to subject to imprisonment, to sharpen
+лиза'ть - to lick
+обли'зывать - to lick your lips
+торжествова'ть - to triumph
+посма'тривать - to gaze, look at from time to time
+уси'лить - to strengthen
+
+@type phrase
+
+@type other
+
+@type particle
+
+@type conjunction
+не'жели - than (same as чем)
+
+@type interjection
+
+@type preposition
+
+

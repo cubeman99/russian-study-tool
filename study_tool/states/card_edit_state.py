@@ -105,21 +105,25 @@ class CardEditState(State):
         screen_center_x = screen_width / 2
         screen_center_y = screen_height / 2
 
-        # Draw the list of menu options
-        # self.menu.draw_menu(g)
-        y = 80
+        g.draw_image(self.text_edit.surface, 100, 80)
+
+        y = 140
         for card in self.cards:
             g.draw_accented_text(10, y,
                                  text=card.russian,
                                  font=self.card_font,
                                  color=color.BLACK,
                                  align=Align.TopLeft)
-            y += 20
+            g.draw_text(screen_center_x, y,
+                        text=repr(card.english),
+                        font=self.card_font,
+                        color=color.BLACK,
+                        align=Align.TopLeft,
+                        accented=False)
+            y += 25
 
         # Draw state
         State.draw(self, g)
-
-        g.draw_image(self.text_edit.surface, 100, 100)
 
         # Draw title
         g.draw_text(32, self.margin_top / 2,

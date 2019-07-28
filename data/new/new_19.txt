@@ -11,8 +11,15 @@
 @type noun
 призва'ние - calling, vocation
 изу'мруд - emerald
+опеча'тка - typo
+зарпла'та - salery
+образе'ц - samplt
 
 @type verb
+повы'сить - to increase, raise @pf
+повыша'ть - to increase, raise @impf
+выполня'ть - to accomplish, execute, perform @impf
+выполни'ть - to accomplish, execute, perform @pf
 
 @type phrase
 никогда' ещё не' было ничего' и никого' подо'бного - there has never been anything or anyone like this
