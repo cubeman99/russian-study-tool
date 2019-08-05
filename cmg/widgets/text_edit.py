@@ -18,6 +18,10 @@ class TextEdit(Widget):
                  repeat_keys_initial_ms=400,
                  repeat_keys_interval_ms=35):
         super().__init__()
+        self.set_focusable(True)
+        height = font_size + 4
+        self.set_minimum_height(height)
+        self.set_maximum_height(height)
 
         self.text_edited = Event()
 
@@ -49,40 +53,61 @@ class TextEdit(Widget):
             (int(self.font_size / 20 + 1), self.font_size))
         self.cursor_surface.fill(cursor_color)
         self.cursor_position = len(text)  # Inside text
-        self.cursor_visible = True  # Switches every self.cursor_switch_ms ms
+        self.cursor_visible = False
         self.cursor_switch_ms = 500  # /|\
         self.cursor_ms_counter = 0
         self.clock = pygame.time.Clock()
 
+    def on_gain_focus(self):
         Application.instance.input.key_pressed.connect(
             self.on_key_press)
         Application.instance.input.key_released.connect(
             self.on_key_release)
+        self.cursor_position = len(self.input_string)
+
+    def on_lose_focus(self):
+        Application.instance.input.key_pressed.disconnect(
+            self.on_key_press)
+        Application.instance.input.key_released.disconnect(
+            self.on_key_release)
+
+    def get_text(self) -> str:
+        return self.input_string
+
+    def set_text(self, text: str) -> str:
+        assert isinstance(text, str)
+        self.input_string = text
+        self.cursor_position = len(self.input_string)
 
     def text(self) -> str:
         return self.input_string
 
     def update(self):
-        # Update key counters:
-        for key in self.keyrepeat_counters:
-            # Update clock
-            self.keyrepeat_counters[key][0] += self.clock.get_time()
+        if self.is_focused():
 
-            # Generate new key events if enough time has passed:
-            if self.keyrepeat_counters[key][0] >= self.keyrepeat_intial_interval_ms:
-                self.keyrepeat_counters[key][0] = (
-                    self.keyrepeat_intial_interval_ms
-                    - self.keyrepeat_interval_ms
-                )
+            # Update key counters:
+            for key in self.keyrepeat_counters:
+                # Update clock
+                self.keyrepeat_counters[key][0] += self.clock.get_time()
 
-                event_key, event_unicode = key, self.keyrepeat_counters[key][1]
-                self.on_key_press(event_key, event_unicode)
+                # Generate new key events if enough time has passed:
+                if self.keyrepeat_counters[key][0] >= self.keyrepeat_intial_interval_ms:
+                    self.keyrepeat_counters[key][0] = (
+                        self.keyrepeat_intial_interval_ms
+                        - self.keyrepeat_interval_ms
+                    )
 
-        # Update cursor visibility
-        self.cursor_ms_counter += self.clock.get_time()
-        if self.cursor_ms_counter >= self.cursor_switch_ms:
-            self.cursor_ms_counter %= self.cursor_switch_ms
-            self.cursor_visible = not self.cursor_visible
+                    event_key, event_unicode = key, self.keyrepeat_counters[key][1]
+                    self.on_key_press(event_key, event_unicode)
+
+            # Update cursor visibility
+            self.cursor_ms_counter += self.clock.get_time()
+            if self.cursor_ms_counter >= self.cursor_switch_ms:
+                self.cursor_ms_counter %= self.cursor_switch_ms
+                self.cursor_visible = not self.cursor_visible
+        else:
+            self.keyrepeat_counters = {}
+            self.cursor_visible = False
 
         # Re-render text surface
         state = (self.input_string, self.cursor_position, self.cursor_visible)
@@ -90,7 +115,7 @@ class TextEdit(Widget):
             self.text_edited.emit()
         if state[:2] != self.__prev_state[:2]:
             self.cursor_ms_counter = 0
-            self.cursor_visible = True
+            self.cursor_visible = self.is_focused()
         if state != self.__prev_state:
             self.__prev_state = state
             self.surface = self.font_object.render(
@@ -99,8 +124,6 @@ class TextEdit(Widget):
             if self.cursor_visible:
                 cursor_y_pos = self.font_object.size(
                     self.input_string[:self.cursor_position])[0]
-                # Without this, the cursor is invisible when
-                # self.cursor_position > 0:
                 if self.cursor_position > 0:
                     cursor_y_pos -= self.cursor_surface.get_width()
                 self.surface.blit(self.cursor_surface, (cursor_y_pos, 0))
@@ -108,6 +131,9 @@ class TextEdit(Widget):
         self.clock.tick()
 
     def on_key_press(self, key, text):
+        if key in [Keys.K_ESCAPE, Keys.K_TAB, Keys.K_RETURN]:
+            return
+
         # If none exist, create counter for that key:
         if key not in self.keyrepeat_counters:
             self.keyrepeat_counters[key] = [0, text]
@@ -143,6 +169,11 @@ class TextEdit(Widget):
         # If none exist, create counter for that key:
         if key in self.keyrepeat_counters:
             del self.keyrepeat_counters[key]
+
+    def on_draw(self, g):
+        y = self.rect.top + \
+            int((self.get_height() - self.surface.get_height()) / 2)
+        g.draw_image(self.surface, self.rect.left + 4, y)
 
     def __get_ctrl_boundary(self, step=1):
         pos = self.cursor_position

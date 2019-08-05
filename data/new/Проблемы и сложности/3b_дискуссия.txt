@@ -56,7 +56,8 @@
 искорени'ть - to eradicate
 воспринима'ть - to perceive
 ###duplicate###оста'ться - to stay
-очаро'вывать - to charm, enchant, fascinate
+очарова'ть - to charm, enchant, fascinate @pf
+очаро'вывать - to charm, enchant, fascinate @impf
 претендова'ть - to claim, pretend
 запреща'ть - to forbid
 убра'ть - to remove, place somewhere
@@ -67,6 +68,7 @@
 отправля'ться - to set off
 уха'живать - to court, woo, look after
 разнести' - to spread, carry to different places
+возрази'ть - to object @pf
 
 @type phrase
 

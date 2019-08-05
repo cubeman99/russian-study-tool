@@ -51,6 +51,7 @@ class Card:
         self.attributes = [[], []]
         self.word_name = AccentedText(self.russian)
         self.examples = []
+        self.related_cards = []
         self.source = None
 
         # CardStudyData

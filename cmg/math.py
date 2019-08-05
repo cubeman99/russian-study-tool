@@ -31,9 +31,8 @@ def vec2_oper(op, self, other):
 class Vec2:
     def __init__(self, x, y=None):
         if y is None:
-            if isinstance(x, Vec2):
-                self.x = x.x
-                self.y = x.y
+            self.x = x[0]
+            self.y = x[1]
         else:
             self.x = x
             self.y = y
@@ -71,3 +70,6 @@ class Vec2:
 
     def length(self):
         return math.sqrt(self.dot(self))
+
+    def totuple(self) -> tuple:
+        return (self.x, self.y)

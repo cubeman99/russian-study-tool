@@ -1,7 +1,9 @@
 import pygame
+from pygame import Rect
 from enum import IntFlag
 from cmg import color
 from study_tool.russian.word import AccentedText
+from cmg.math import Vec2
 
 
 class Align(IntFlag):
@@ -36,29 +38,54 @@ class Graphics:
         self.accent_input_chars = "'´`"
         self.accent_render_char = "´"
         self.accent_bitmap = {}
+        self.__translation = Vec2(0, 0)
+
+    def get_viewport(self) -> pygame.Rect:
+        return self.screen.get_rect()
+
+    def is_rect_in_viewport(self, rect) -> bool:
+        viewport = pygame.Rect(self.screen.get_rect())
+        viewport.left -= self.__translation.x
+        viewport.top -= self.__translation.y
+        return viewport.colliderect(rect)
 
     def clear(self, color):
         self.screen.fill(tuple(color))
+
+    def set_translation(self, x, y):
+        self.__translation = Vec2(x, y)
 
     #-------------------------------------------------------------------------
     # Shapes
     #-------------------------------------------------------------------------
 
-    def draw_image(self, source, x, y):
-        self.screen.blit(source=source, dest=(x, y))
+    def draw_image(self, image, x, y=None):
+        if y is None:
+            self.blit(image, x)
+        else:
+            self.blit(image, (x, y))
+
+    def draw_image_part(self, image, dest: tuple, source: Rect):
+        self.screen.blit(source=image,
+                         dest=(Vec2(dest) + self.__translation).totuple(),
+                         area=source)
 
     def draw_rect(self, x, y=None, width=None, height=None, color=color.BLACK, thickness=1):
         if isinstance(x, pygame.Rect):
-            rect = x
+            rect = pygame.Rect(x)
         else:
             rect = pygame.Rect(x, y, width, height)
+        rect.left += self.__translation.x
+        rect.top += self.__translation.y
         pygame.draw.rect(self.screen, tuple(color), rect, thickness)
 
     def fill_rect(self, x, y=None, width=None, height=None, color=color.BLACK):
         if isinstance(x, pygame.Rect):
-            rect = x
+            rect = pygame.Rect(x)
         else:
             rect = pygame.Rect(x, y, width, height)
+        rect.left += self.__translation.x
+        rect.top += self.__translation.y
         pygame.draw.rect(self.screen, tuple(color), rect, 0)
 
     #-------------------------------------------------------------------------
@@ -111,7 +138,7 @@ class Graphics:
 
             # Draw text
             text_bitmap = font.render(text, True, tuple(color))
-            self.screen.blit(text_bitmap, [x, y])
+            self.blit(text_bitmap, (x, y))
 
     def draw_accented_text(self, x, y, text, color=color.BLACK, font=None, align=Align.TopLeft):
         """
@@ -137,15 +164,18 @@ class Graphics:
 
         # Draw text
         text_bitmap = font.render(text.text, True, tuple(color))
-        self.screen.blit(text_bitmap, [x, y])
+        self.blit(text_bitmap, Vec2(x, y))
 
         # Draw accent marks
         for accent_index in text.accents:
             w1, _ = font.size(text.text[:accent_index])
             w2, _ = font.size(text.text[:accent_index + 1])
             center_x = (w2 + w1) / 2
-            self.screen.blit(self.accent_bitmap[font],
-                             [x + center_x - self.accent_half_width, y])
+            self.blit(self.accent_bitmap[font],
+                      Vec2(x + center_x - self.accent_half_width, y))
+
+    def blit(self, image, dest):
+        self.screen.blit(image, (Vec2(dest) + self.__translation).totuple())
 
 
 # This is a simple class that will help us print to the self.screen

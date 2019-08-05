@@ -13,7 +13,7 @@
 унизи'тельный - humiliating
 обма'нутый - cheated, deceived
 теку'щий - current
-задет'ый - hurt, affected
+заде'тый - hurt, affected
 незри'мый - imperceptable, invisible
 изя'щный - graceful
 разделённый - divided
@@ -43,7 +43,8 @@
 удовлетворя'ть - to satisfy @impf
 откуси'ть - to take a bite
 прекраща'ть - to cease, discontinue, stop
-восхища'ться - to admire
+восхища'ться - to admire @impf
+восхити'ться - to admire @pf
 причини'ть - to produce, cause smth
 втащи'ть - to drag in
 мурлы'кать - to purr

@@ -5,24 +5,41 @@
 @type adjective
 неприли'чный - indecent
 прили'чный - decent
+изря'дный - fair, hefty, significant in quantity
 
 @type adverb
+Вкра'тце, ... -- In short, ...
 
 @type noun
 призва'ние - calling, vocation
-изу'мруд - emerald
+изумру'д - emerald
 опеча'тка - typo
 зарпла'та - salery
 образе'ц - samplt
+прива'л - a stop along the way 
+распоряже'ние - order, command
+барда'к - a complete mess
+завоева'ние - conquest
 
 @type verb
 повы'сить - to increase, raise @pf
 повыша'ть - to increase, raise @impf
 выполня'ть - to accomplish, execute, perform @impf
 выполни'ть - to accomplish, execute, perform @pf
+любова'ться - to look at in pleasure 
+пя'литься - to stare
+наблюда'ть - to observe (empirically) 
+вы'глядеть - to look (appearance)
+###duplicate###ле'чь - to lie down
+распакова'ть - to unpack
+хорони'ть - to bury, tomb, lay to rest
+слива'ться - to merge, fuse
+защища'ть - to protect
 
 @type phrase
 никогда' ещё не' было ничего' и никого' подо'бного - there has never been anything or anyone like this
+та'к нельзя' - you can't do it in this way
+Что' ты хо'чешь, что'бы я сказа'л? -- What do you want me to say?
 
 @type other
 

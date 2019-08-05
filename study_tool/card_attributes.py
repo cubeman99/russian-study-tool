@@ -61,6 +61,29 @@ class CardAttributes(Enum):
     VerbOfMotion = "verb_of_motion"
 
 
+# Attributes that must be shown in order to translate from english to russian
+RUSSIAN_SIDE_ATTRIBUTES = [
+    # For word choice
+    CardAttributes.Perfective,
+    CardAttributes.Imperfective,
+    CardAttributes.Unidirectional,
+    CardAttributes.Multidirectional,
+
+    # For word conjugations
+    CardAttributes.Short,
+    CardAttributes.Long,
+    CardAttributes.Infinitive,
+    CardAttributes.Past,
+    CardAttributes.NonPast,
+    CardAttributes.FirstPerson,
+    CardAttributes.SecondPerson,
+    CardAttributes.ThirdPerson,
+    CardAttributes.Animate,
+    CardAttributes.Inanimate,
+    CardAttributes.Formal,
+    CardAttributes.Informal,
+]
+
 CASE_TO_ATTRIBUTE = {
     Case.Nominative: CardAttributes.Nominative,
     Case.Accusative: CardAttributes.Accusative,
@@ -91,15 +114,6 @@ ATTRIBUTE_TO_GENDER = {
     CardAttributes.Masculine: Gender.Masculine,
     CardAttributes.Femanine: Gender.Femanine,
     CardAttributes.Neuter: Gender.Neuter}
-
-RUSSIAN_SIDE_ATTRIBUTES = [
-    CardAttributes.Short,
-    CardAttributes.Long,
-    CardAttributes.Transative,
-    CardAttributes.Intransative,
-    CardAttributes.Animate,
-    CardAttributes.Inanimate,
-]
 
 VERB_SUFFIX_TO_ATTRIBUTE = {
     VerbSuffix.Ai: CardAttributes.VerbSuffixAi,
