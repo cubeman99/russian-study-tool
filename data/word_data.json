@@ -86690,6 +86690,106 @@
       "examples": [],
       "name": "колебаться",
       "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "суди'те",
+          "Singular": "суди'"
+        },
+        "infinitive": "судить",
+        "info": "This verb can also mean the following: destine, adjudicate, try, predetermine.",
+        "non_past": {
+          "Plural": {
+            "First": "су'дим",
+            "Second": "су'дите",
+            "Third": "су'дят"
+          },
+          "Singular": {
+            "First": "сужу'",
+            "Second": "су'дишь",
+            "Third": "су'дит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "суди'вший",
+            "Present": "судя'щий"
+          },
+          "Adverbial": {
+            "Past": "суди'в",
+            "Present": "судя'"
+          },
+          "Passive": {
+            "Past": "суждённый",
+            "Present": "суди'мый"
+          }
+        },
+        "past": {
+          "Femanine": "суди'ла",
+          "Masculine": "суди'л",
+          "Neuter": "суди'ло",
+          "Plural": "суди'ли"
+        },
+        "translation": "to judge"
+      },
+      "examples": [],
+      "name": "судить",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "жаловать"
+        ],
+        "imperative": {
+          "Plural": "пожа'луйте",
+          "Singular": "пожа'луй"
+        },
+        "infinitive": "пожаловать",
+        "info": "This verb can also mean the following: favour, come to see, like, regard with favour, visit.",
+        "non_past": {
+          "Plural": {
+            "First": "пожа'луем",
+            "Second": "пожа'луете",
+            "Third": "пожа'луют"
+          },
+          "Singular": {
+            "First": "пожа'лую",
+            "Second": "пожа'луешь",
+            "Third": "пожа'лует"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "пожа'ловавший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "пожа'ловав",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "пожа'ловала",
+          "Masculine": "пожа'ловал",
+          "Neuter": "пожа'ловало",
+          "Plural": "пожа'ловали"
+        },
+        "translation": "to grant"
+      },
+      "examples": [],
+      "name": "пожаловать",
+      "type": "Verb"
     }
   ]
 }

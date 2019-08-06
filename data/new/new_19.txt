@@ -35,6 +35,8 @@
 хорони'ть - to bury, tomb, lay to rest
 слива'ться - to merge, fuse
 защища'ть - to protect
+суди'ть - to judge
+пожа'ловать - to welcome
 
 @type phrase
 никогда' ещё не' было ничего' и никого' подо'бного - there has never been anything or anyone like this

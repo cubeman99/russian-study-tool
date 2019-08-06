@@ -2,6 +2,7 @@ import os
 import random
 import re
 import time
+import yaml
 from datetime import datetime
 from study_tool.card import Card, CardSide, SourceLocation
 from study_tool.card_set import CardSet, CardSetPackage, CardGroupMetrics, StudySet
@@ -65,6 +66,18 @@ class CardDatabase:
         self.word_to_cards_dict = {}
         self.russian_key_to_card_dict = {}
         self.english_key_to_card_dict = {}
+
+    def get_card(self, word_type: WordType, english=None, russian=None):
+        if english is not None and russian is not None:
+            key = (word_type, AccentedText(english).text, AccentedText(russian).text)
+            return self.cards.get(key, None)
+        if english is not None:
+            key = (word_type, AccentedText(english).text)
+            return self.english_key_to_card_dict.get(key, None)
+        if russian is not None:
+            key = (word_type, AccentedText(russian).text)
+            return self.russian_key_to_card_dict.get(key, None)
+        raise Exception("Missing english or russian argument")
 
     def find_cards_by_word(self, word: str):
         """Find a card by the name of a word."""
@@ -183,6 +196,29 @@ class CardDatabase:
         current_metrics = self.get_study_metrics()
         self.metrics_history[current_metrics.get_date_string()
                              ] = current_metrics
+
+    def deserialize_card_set(self, state: dict) -> CardSet:
+        state = state["card_set"]
+        card_set = CardSet()
+        card_set.set_name(state["name"])
+        for card_state in state["cards"]:
+            assert 2 <= len(card_state[0]) <= 3
+            word_type = parse_word_type(card_state[0])
+            if len(card_state[0]) == 3:
+                english = card_state[1]
+                russian = card_state[2]
+                card = self.get_card(word_type=word_type, russian=russian, english=russian)
+                if not card:
+                    raise Exception()
+            elif len(card_state[0]) == 2:
+                text = card_state[1]
+                card = self.get_card(word_type=word_type, russian=text, english=None)
+                if not card:
+                    card = self.get_card(word_type=word_type, russian=None, english=text)
+                if not card:
+                    raise Exception()
+            card_set.add_card(card)
+        return card_set
 
     def parse_card_text(self, text, split=False):
         attributes = []
@@ -325,19 +361,34 @@ class CardDatabase:
                 exit(1)
         return sorted(card_sets, key=lambda x: x.name)
 
-    def load_card_package_directory(self, path, name) -> CardSetPackage:
+    def load_card_package_directory(self, path: str, name: str) -> CardSetPackage:
         package = CardSetPackage(name=name, path=path)
 
         for filename in os.listdir(path):
             file_path = os.path.join(path, filename)
+
             if os.path.isdir(file_path):
+                # Load a new sub-package
                 sub_package = self.load_card_package_directory(
                     path=file_path, name=str(filename))
                 if sub_package is not None:
                     sub_package.parent = package
                     package.packages.append(sub_package)
-            elif os.path.isfile(file_path) and file_path.endswith(".txt"):
-                package.card_sets += self.load_card_set_file(file_path)
+
+            elif os.path.isfile(file_path):
+
+                if file_path.endswith(".txt"):
+                    # Load legacy card set file
+                    package.card_sets += self.load_card_set_file(file_path)
+
+                elif file_path.endswith(".yaml"):
+                    # Load new card set file
+                    with open(file_path, "r", encoding="utf8") as f:
+                        state = yaml.load(f)
+                        if "card_set" in state:
+                            card_set = self.deserialize_card_set(state)
+                            if card_set:
+                                package.add_card_set(card_set)
 
         if len(package.packages) == 0 and len(package.card_sets) == 0:
             return None

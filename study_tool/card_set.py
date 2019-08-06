@@ -45,6 +45,18 @@ class StudySet:
         self.name = name
         self.cards = list(cards)
 
+    def get_name(self) -> str:
+        return self.name
+
+    def set_name(self, name: str):
+        self.name = name
+
+    def add_card(self, card: Card):
+        self.cards.append(card)
+
+    def clear(self):
+        self.cards = []
+
     def get_study_metrics(self):
         metrics = CardGroupMetrics()
         metrics.history_score = sum(c.get_history_score() for c in self.cards)
@@ -88,6 +100,30 @@ class CardSet(StudySet):
         del unseen[index]
         return card
 
+    def serialize(self, state) -> dict:
+        state = {
+            "name": repr(self.name),
+            "version": 1,
+            "cards": []
+        }
+        for card in self.cards:
+            state["cards"].append(
+                [card.type.name.lower(), card.english.text, card.russian.text])
+        return {"card_set": state}
+
+    def deserialize(self, state: dict):
+        self.name = state["name"]
+        for card_state in state["cards"]:
+            assert 2 <= len(card_state[0]) <= 3
+            word_type = parse_word_type(card_state[0])
+            if len(card_state[0]) == 3:
+                russian = card_state[2]
+                english = card_state[1]
+            elif len(card_state[0]) == 2:
+                russian = card_state[2]
+                english = card_state[1]
+            
+
 
 class CardSetPackage(StudySet):
     def __init__(self, name, path, parent=None):
@@ -110,6 +146,9 @@ class CardSetPackage(StudySet):
         for card_set in self.all_card_sets():
             for card in card_set.cards:
                 yield card
+
+    def add_card_set(self, card_set: CardSet):
+        self.card_sets.append(card_set)
 
     def __getitem__(self, name):
         for package in self.packages:

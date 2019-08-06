@@ -1,0 +1,7 @@
+card_set:
+  version: 1
+  name: "Test Set"
+  cards:
+    - ["noun", "стол", "table"]
+    - ["verb", "курить", "to smoke"]
+	- ["preposition", "до"]

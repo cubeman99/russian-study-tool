@@ -76,7 +76,7 @@ class StudyCardsApp(Application):
         # Load study data
         self.load_study_data()
 
-        self.save_card_data()
+        #self.save_card_data()
 
         self.states = []
         self.main_menu = MenuState(package=self.root)
@@ -95,6 +95,8 @@ class StudyCardsApp(Application):
         #self.push_state(CardEditState(card_database=self.card_database))
 
         self.input.bind(pygame.K_ESCAPE, pressed=self.quit)
+
+        Config.logger.info("Initialization complete!")
 
     def pop_state(self):
         if len(self.states) == 1:
@@ -191,7 +193,7 @@ class StudyCardsApp(Application):
         state = self.card_database.serialize_card_data()
 
         # Verify the serialized data can be deserialized
-        self.card_database.deserialize_card_data({"cards": state})
+        #self.card_database.deserialize_card_data({"cards": state})
 
         # Save to temp file first
         temp_path = path + ".temp"

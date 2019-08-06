@@ -26,3 +26,7 @@
 бли'з @gen - near
 по'сле @gen - after
 до @gen - before, until
+
+по @dat - by, in the way of
+по @acc - against, striking
+

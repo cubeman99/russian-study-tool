@@ -1415,6 +1415,8 @@ cards:
 - {attrs: [impf, verb.suffix.i], en: 'to bury, tomb, lay to rest', ru: хорони'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: 'to merge, fuse', ru: слива'ться, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to protect, ru: защища'ть, type: verb}
+- {attrs: [impf, verb.suffix.i], en: to judge, ru: суди'ть, type: verb}
+- {attrs: [pf, verb.suffix.ova], en: to welcome, ru: пожа'ловать, type: verb}
 - {en: there has never been anything or anyone like this, ru: никогда' ещё не' было
     ничего' и никого' подо'бного, type: phrase}
 - {en: you can't do it in this way, ru: та'к нельзя', type: phrase}
@@ -2649,6 +2651,8 @@ cards:
 - {attrs: [gen], en: near, ru: бли'з, type: preposition}
 - {attrs: [gen], en: after, ru: по'сле, type: preposition}
 - {attrs: [gen], en: 'before, until', ru: до, type: preposition}
+- {attrs: [dat], en: 'by, in the way of', ru: по, type: preposition}
+- {attrs: [acc], en: 'against, striking', ru: по, type: preposition}
 - {attrs: [1st, nom, sing], en: I, ru: я, type: pronoun}
 - {attrs: [informal, nom, 2nd, sing], en: you, ru: ты, type: pronoun}
 - {attrs: [m, nom, sing, 3rd], en: 'he, it', ru: он, type: pronoun}
@@ -2986,7 +2990,7 @@ cards:
 - {attrs: [impf, verb.suffix.e], en: to snore, ru: храпе'ть, type: verb}
 - {attrs: [impf, verb.suffix.e], en: to make noise, ru: шуме'ть, type: verb}
 - {attrs: [impf, verb.suffix.e, verb.suffix.ei], en: to ache (third-person only), ru: боле'ть,
-  type: verb}
+type: verb}
 - {attrs: [impf, verb.suffix.e], en: to burn, ru: горе'ть, type: verb}
 - {attrs: [impf, verb.suffix.e], en: 'to look, watch', ru: смотре'ть, type: verb}
 - {attrs: [gen, impf, verb.suffix.zha], en: to be afraid of, ru: боя'ться, type: verb}

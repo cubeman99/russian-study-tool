@@ -14,6 +14,13 @@ class WordType(IntEnum):
     Interjection = 10
     Particle = 11
 
+__STRING_TO_WORD_TYPE_DICT = {"none": WordType.Other,
+                  None: WordType.Other}
+for word_type in WordType:
+    __STRING_TO_WORD_TYPE_DICT[word_type.name.lower()] = word_type
+
+def parse_word_type(text) -> WordType:
+    return __STRING_TO_WORD_TYPE_DICT.get(text.lower(), WordType.Other)
 
 class Language(IntEnum):
     English = 0
