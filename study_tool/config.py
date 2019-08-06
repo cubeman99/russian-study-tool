@@ -63,6 +63,7 @@ class Config:
                                 4: color.GREEN}
 
 
-Config.logger = cmg.logging.create_logger("study_tool",
-                                          stdout=True,
-                                          level=cmg.logging.LogLevel.Info)
+if Config.logger is None:
+    Config.logger = cmg.logging.create_logger("study_tool",
+                                              stdout=True,
+                                              level=cmg.logging.LogLevel.Info)

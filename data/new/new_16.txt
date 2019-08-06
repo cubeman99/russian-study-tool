@@ -14,7 +14,6 @@
 гавно' - shit, very bad
 
 @type adverb
-вперёд - forward
 охо'та - feel like, it is desired (modal)
 	@ex Мне охота идти домой
 
@@ -37,7 +36,6 @@
 возмо'жность - opportunity, possibility
 больши'нство - most
 посте'ль - bed with two sides
-ю'ношество - youth
 пито'мец - pet
 ко'реш - close friend (slang)
 кно'пка - button

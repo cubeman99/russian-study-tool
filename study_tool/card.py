@@ -3,7 +3,8 @@ import os
 import time
 from study_tool.config import Config
 from study_tool.russian.word import *
-from study_tool.card_attributes import CardAttributes
+from study_tool.russian.word import WordType
+from study_tool.card_attributes import CardAttributes, ENGLISH_SIDE_CARD_ATTRIBUTES
 from cmg.graphics import color
 
 
@@ -38,6 +39,12 @@ def get_history_score(history):
     if len(history) < min_length:
         score /= (min_length - len(history) + 1.0)
     return score
+
+
+STRING_TO_WORD_TYPE_DICT = {"none": WordType.Other,
+                            None: WordType.Other}
+for word_type in WordType:
+    STRING_TO_WORD_TYPE_DICT[word_type.name.lower()] = word_type
 
 
 class Card:
@@ -81,6 +88,12 @@ class Card:
         """Get the key that identifies this card."""
         return (self.word_type, self.russian.text, self.english.text)
 
+    def get_english_key(self) -> tuple:
+        return (self.word_type, self.english.text, ",".join(sorted([x.value for x in self.get_attributes() if x in ENGLISH_SIDE_CARD_ATTRIBUTES])))
+
+    def get_russian_key(self) -> tuple:
+        return (self.word_type, self.russian.text, ",".join(sorted([x.value for x in self.get_attributes()])))
+
     def get_proficiency_score(self) -> float:
         """Get the key proficiency score."""
         return max(0.0, float(self.proficiency_level - 1) /
@@ -100,7 +113,7 @@ class Card:
         for attr in attrs:
             self.add_attribute(attr=attr, side=side)
 
-    def add_attribute(self, attr: CardAttributes, side: CardSide):
+    def add_attribute(self, attr: CardAttributes, side=CardSide.Russian):
         """Add an attribute to the card."""
         if attr not in self.attributes[side]:
             self.attributes[side].append(attr)
@@ -117,12 +130,20 @@ class Card:
     def get_word_type(self) -> WordType:
         return self.word_type
 
+    def get_russian(self) -> AccentedText:
+        return self.russian
+
+    def get_english(self) -> AccentedText:
+        return self.english
+
     def get_text(self, side: CardSide):
         """Get the text for a given side."""
         return self.text[side]
 
-    def get_attributes(self, side: CardSide):
+    def get_attributes(self, side=None) -> list:
         """Get the card attributes for a given side."""
+        if side is None:
+            return list(set(self.attributes[0] + self.attributes[1]))
         return self.attributes[side]
 
     @property
@@ -160,8 +181,36 @@ class Card:
         return "{} {}{} ago".format(elapsed_time, units,
                                     "s" if elapsed_time != 1 else "")
 
-    def serialize(self):
-        """Serialize the card study data."""
+    def serialize_card_data(self):
+        """Serialize the card data."""
+        state = {}
+        state["type"] = self.word_type.name.lower()
+        state["en"] = repr(self.english)
+        state["ru"] = repr(self.russian)
+        all_attributes = self.attributes[0] + self.attributes[1]
+        if all_attributes:
+            state["attrs"] = [x.value for x in all_attributes]
+        if self.examples:
+            state["ex"] = [(repr(e), "") for e in self.examples]
+        return state
+
+    def deserialize_card_data(self, state):
+        """Deserialize the card data."""
+        self.text[CardSide.Russian] = AccentedText(state["ru"])
+        self.text[CardSide.English] = AccentedText(state["en"])
+        self.word_type = STRING_TO_WORD_TYPE_DICT[state["type"].lower()]
+        self.examples = []
+        if "ex" in state:
+            for en, ru in state["ex"]:
+                self.examples.append(AccentedText(en))
+        self.attributes = [[], []]
+        if "attrs" in state:
+            for attr_short in state["attrs"]:
+                attr = CardAttributes(attr_short)
+                self.add_attribute(attr)
+
+    def serialize_study_data(self):
+        """Serialize the study data."""
         history_str = "".join("T" if h else "F" for h in self.history)
         return dict(type=None if self.word_type is None else self.word_type.name,
                     russian=repr(self.text[CardSide.Russian]),
@@ -170,9 +219,14 @@ class Card:
                     last_encounter_time=self.last_encounter_time,
                     history=history_str)
 
-    def deserialize(self, state):
-        """Deserialize the card study data."""
+    def deserialize_study_data(self, state):
+        """Deserialize the study data."""
         self.proficiency_level = state["proficiency_level"]
         self.last_encounter_time = state["last_encounter_time"]
         history_str = state["history"]
         self.history = [c == "T" for c in history_str]
+
+    def __repr__(self):
+        attrs = "|".join(sorted([x.value for x in self.get_attributes()]))
+        return "Card({}, '{}', '{}', '{}')".format(
+            self.word_type.name, repr(self.english), repr(self.russian), attrs)

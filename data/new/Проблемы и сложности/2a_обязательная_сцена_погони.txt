@@ -7,8 +7,7 @@
 исключи'тельно - exclusively, only
 буква'льно - literally
 гора'здо - much, much more
-позади' - behind
-снару'жи - on the outside
+###duplicate### позади' - behind
 части'чно - partly, partially
 
 @type adjective
@@ -18,7 +17,7 @@
 суро'вый - severe, harsh
 наме'ренный - intentional
 злю'щий - furious, very angry
-зло'бный - wicked, spiteful
+###duplicate### зло'бный - wicked, spiteful
 многоцве'тный - multicolored
 
 @type noun
@@ -30,7 +29,7 @@
 заверше'ние - completion
 заседа'ние - sitting, meeting
 счёт - account, score
-замеча'ние - remark
+###duplicate### замеча'ние - remark
 состоя'ние - state, condition
 наказа'ние - punishment
 го'нка - race

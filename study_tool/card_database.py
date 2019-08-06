@@ -55,6 +55,16 @@ class CardDatabase:
         self.metrics_history = {}
         self.word_database = word_database
         self.word_to_cards_dict = {}
+        self.russian_key_to_card_dict = {}
+        self.english_key_to_card_dict = {}
+
+    def clear(self):
+        """Clear all cards."""
+        self.cards = {}
+        self.metrics_history = {}
+        self.word_to_cards_dict = {}
+        self.russian_key_to_card_dict = {}
+        self.english_key_to_card_dict = {}
 
     def find_cards_by_word(self, word: str):
         """Find a card by the name of a word."""
@@ -74,10 +84,7 @@ class CardDatabase:
         return metrics
 
     def add_card(self, card: Card):
-        key = card.get_key()
-        if key in self.cards:
-            raise Exception("Duplicate card: " + repr(key))
-        self.cards[key] = card
+        word_type = card.get_word_type()
 
         # Get the Word info associated with this card
         word = None
@@ -93,11 +100,50 @@ class CardDatabase:
             else:
                 self.word_to_cards_dict[word].append(card)
 
+        # Register the card's english and russian identifiers
+        ru_key = card.get_russian_key()
+        en_key = card.get_english_key()
+        key = card.get_key()
+        if ru_key in self.russian_key_to_card_dict:
+            print(ru_key)
+            print(self.russian_key_to_card_dict[ru_key],
+                  self.russian_key_to_card_dict[ru_key].source)
+            print(card)
+            raise Exception("Duplicate card russian: {} '{}'".format(
+                word_type.name, card.get_russian().text))
+        if en_key in self.english_key_to_card_dict:
+            print(en_key)
+            print(self.english_key_to_card_dict[en_key],
+                  self.english_key_to_card_dict[en_key].source)
+            print(card)
+            raise Exception("Duplicate card english: {} '{}'".format(
+                word_type.name, card.get_english().text))
+        if key in self.cards:
+            print(card)
+            print(self.cards[key])
+            raise Exception("Duplicate card: " + repr(key))
+        self.russian_key_to_card_dict[ru_key] = card
+        self.english_key_to_card_dict[en_key] = card
+        self.cards[key] = card
+
     def iter_cards(self):
         for _, card in self.cards.items():
             yield card
 
-    def serialize_study_data(self):
+    def serialize_card_data(self) -> dict:
+        state = []
+        for card in self.iter_cards():
+            state.append(card.serialize_card_data())
+        return state
+
+    def deserialize_card_data(self, state: dict):
+        self.clear()
+        for card_state in state["cards"]:
+            card = Card()
+            card.deserialize_card_data(card_state)
+            self.add_card(card)
+
+    def serialize_study_data(self) -> dict:
         state = {"save_time": time.time(),
                  "cards": [],
                  "metrics": []}
@@ -108,14 +154,14 @@ class CardDatabase:
             state["metrics"].append(metrics.serialize())
 
         for _, card in self.cards.items():
-            card_state = card.serialize()
+            card_state = card.serialize_study_data()
             card_state["type"] = None if card.word_type is None else card.word_type.name
             card_state["russian"] = card.russian.text
             card_state["english"] = card.english.text
             state["cards"].append(card_state)
         return state
 
-    def deserialize_study_data(self, state):
+    def deserialize_study_data(self, state: dict):
         for card_state in state["cards"]:
             word_type = card_state["type"]
             if word_type is not None:
@@ -125,7 +171,7 @@ class CardDatabase:
                    AccentedText(card_state["english"]).text)
             if key in self.cards:
                 card = self.cards[key]
-                card.deserialize(card_state)
+                card.deserialize_study_data(card_state)
             else:
                 Config.logger.warning("Card not found: " + repr(key))
 

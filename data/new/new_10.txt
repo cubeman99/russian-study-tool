@@ -63,7 +63,6 @@
 вдохну'ть - to inhale @pf
 оставля'ть - to leave, drop, abandon @impf
 оста'вить - to leave, drop, abandon @pf
-обрати'ть - to turn, convert @pf
 получи'ться - to turn out, work @pf
 получа'ться - to turn out, work @impf
 пригласи'ть - to invite

@@ -68,7 +68,7 @@
 желте'ть - to turn yellow
 уме'ть - to know how
 здорове'ть - to become healthy  @verb.suffix.ei
-успе'ть - to have time (to do …)
+###duplicate#### успе'ть - to have time (to do …)
 име'ть - to have
 худе'ть - to become thin, lose weight
 красне'ть - to turn red, blush 
@@ -179,8 +179,8 @@
 шепта'ть - to whisper		
 щекота'ть - to tickle		
 иска'ть - to look for
-сы'пать - to pour
-колеба'ть - to shake		
+сы'пать - to sprinkle
+колеба'ться - to sway, wobble; hesitate, waver
 дрема'ть - to doze		
 
 # (b) those with a vocalic root ending in й, and so the suffix is spelled
@@ -254,7 +254,7 @@
 люби'ть - to like, love 
 гото'вить - to prepare 
 лови'ть - to catch 
-ста'вить - to put (upright) 
+ста'вить - to put, set (upright) 
 корми'ть - to feed 
 купи'ть - to buy 
 

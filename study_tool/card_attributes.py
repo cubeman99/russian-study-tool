@@ -62,7 +62,7 @@ class CardAttributes(Enum):
 
 
 # Attributes that must be shown in order to translate from english to russian
-RUSSIAN_SIDE_ATTRIBUTES = [
+ENGLISH_SIDE_CARD_ATTRIBUTES = [
     # For word choice
     CardAttributes.Perfective,
     CardAttributes.Imperfective,

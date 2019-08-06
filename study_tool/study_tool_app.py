@@ -25,6 +25,7 @@ from study_tool.word_database import WordDatabase
 from study_tool.example_database import ExampleDatabase
 from study_tool.states.read_text_state import ReadTextState
 from study_tool.states.card_edit_state import CardEditState
+import yaml
 
 DEAD_ZONE = 0.01
 
@@ -49,29 +50,33 @@ class StudyCardsApp(Application):
             Input(index=1, name="Left", reversed=True, max=1, min=-1),
             Input(index=3, name="Right", reversed=True, max=1, min=-1)]
 
+        # Filenames
         self.root_path = "data"
+        self.card_data_file_name = "card_data.yaml"
+        self.save_file_name = "study_data.json"
+        self.word_data_file_name = "word_data.json"
+        self.example_data_file_name = "examples.json"
 
         # Load word data
-        self.word_data_file_name = "word_data.json"
         self.word_database = WordDatabase()
         self.load_word_database()
 
         # Load all card data
         self.card_database = CardDatabase(word_database=self.word_database)
-        print("Loading card data from: " + self.root_path)
+        print("Loading card sets from: " + self.root_path)
         self.root = self.card_database.load_card_package_directory(
             path=self.root_path, name="words")
         self.save_word_database()
 
         # Load example data
-        self.example_data_file_name = "examples.json"
         self.example_database = ExampleDatabase()
         self.load_example_database()
         # self.save_example_database()
 
         # Load study data
-        self.save_file_name = ".study_data.sav"
-        self.load()
+        self.load_study_data()
+
+        self.save_card_data()
 
         self.states = []
         self.main_menu = MenuState(package=self.root)
@@ -87,7 +92,7 @@ class StudyCardsApp(Application):
         # self.root["verbs"]["stems"].get_problem_cards()
         # self.push_card_list_state(self.root.card_sets[1])
         # self.push_state(KeyboardState())
-        self.push_state(CardEditState(card_database=self.card_database))
+        #self.push_state(CardEditState(card_database=self.card_database))
 
         self.input.bind(pygame.K_ESCAPE, pressed=self.quit)
 
@@ -178,7 +183,34 @@ class StudyCardsApp(Application):
     def state(self):
         return self.states[-1]
 
-    def save(self):
+    def save_card_data(self):
+        path = os.path.join(self.root_path, self.card_data_file_name)
+        Config.logger.debug("Saving card data to: " + path)
+
+        # Serialize the card data
+        state = self.card_database.serialize_card_data()
+
+        # Verify the serialized data can be deserialized
+        self.card_database.deserialize_card_data({"cards": state})
+
+        # Save to temp file first
+        temp_path = path + ".temp"
+        with open(temp_path, "wb") as f:
+            f.write(b"cards:\n")
+            for card in state:
+                f.write(b"- ")
+                yaml.dump(card, f, encoding="utf8",
+                          allow_unicode=True, default_flow_style=True)
+        shutil.move(temp_path, path)
+
+    def load_card_data(self):
+        path = os.path.join(self.root_path, self.card_data_file_name)
+        Config.logger.debug("Loading card data from: " + path)
+        with open(path, "r", encoding="utf8") as f:
+            state = yaml.load(f)
+            self.card_database.deserialize_card_data(state)
+
+    def save_study_data(self):
         path = os.path.join(self.root_path, self.save_file_name)
         Config.logger.debug("Saving study data to: " + path)
         state = self.card_database.serialize_study_data()
@@ -188,7 +220,7 @@ class StudyCardsApp(Application):
             json.dump(state, f, indent=2, sort_keys=True, ensure_ascii=False)
         shutil.move(temp_path, path)
 
-    def load(self):
+    def load_study_data(self):
         path = os.path.join(self.root_path, self.save_file_name)
         if os.path.isfile(path):
             Config.logger.info("Loading study data from: " + path)

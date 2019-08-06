@@ -10,7 +10,6 @@
 
 @type adverb
 вме'сте - together
-вно'вь - again
 наве'рное - probably
 ненадо'лго - briefly, for a short time
 осо'бенно - especially
@@ -26,11 +25,11 @@
 ма'рка - stamp
 зада'ча - problem, task
 красота' - beauty
-карикату'ра - cartoon
+карикату'ра - cartoon, comic 
 любо'вь - love
 ви'д - view, look
 успе'х - success
-сериа'л - TV series
+###duplicate### сериа'л - TV series
 се'рдце - heart
 взгля'д - sight, view
 при'зрак - ghost
@@ -58,7 +57,7 @@
 пока'зать - to show @pf
 стара'ться - to try @impf
 постара'ться - to try @pf
-успе'ть - to have time @pf
+###duplicate### успе'ть - to have time @pf
 стыди'ться - to be ashamed @impf
 заду'мать - to conceive, plan @pf
 отлича'ться - to differ @impf
@@ -71,7 +70,6 @@
 охраня'ть - to gaurd @impf
 зако'нчить – to finish, be done with
 плани'ровать – to plan
-оста'вить - to leave (something)
 моли'ться - to pray @impf
 расти'ть - to raise
 запла'кать - to begin to cry

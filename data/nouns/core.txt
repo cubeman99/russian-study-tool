@@ -36,11 +36,10 @@
 ша'г - step
 биле'т – ticket
 вечери'нка – party
-встре'ча – meeting
+###duplicate### встре'ча – meeting
 де'ньги – money
 ка'рта – map, card
-кино' – movie
-но'вость(-и) -- news
+###duplicate### кино' – cinema
 пробле'ма – problem
 прое'кт – project
 систе'ма – system

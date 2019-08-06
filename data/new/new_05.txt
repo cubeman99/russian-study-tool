@@ -4,7 +4,6 @@
 
 @type adjective
 безу'мный - crazy, insane
-по'лный - full, filled with something
 уника'льный - unique
 осторо'жный – careful
 незабыва'емо – unforgettable
@@ -30,7 +29,6 @@
 што'рм – storm
 забо'та - concerns, worries
 бога'дство - wealth
-приключе'ние - adventure
 
 @type verb
 души'ть - to strangle @impf

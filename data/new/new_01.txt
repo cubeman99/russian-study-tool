@@ -60,7 +60,6 @@
 сни'ться - to dream (during sleep)
 побежда'ть - to win
 зна'чить - to mean, signify
-учи'ть - to learn, memorize by rote; to teach, instruct, train
 учи'ться - to study at educational institution; to learn something by yourself
 обуча'ть - to learn something by yourself systimatically
 изуча'ть - to study something (with in depth approach)
@@ -77,7 +76,7 @@
 предположи'ть - to assume, suppose, guess @pf
 предлага'ть - to offer, propose, suggest @impf
 предложи'ть - to offer, propose, suggest @pf
-ста'вить - to put, set
+###duplicate### ста'вить - to put, set
 поднима'ться - to rise, get up @impf
 подня'ться   - to rise, get up @pf
 вдохновля'ть - to inspire @impf

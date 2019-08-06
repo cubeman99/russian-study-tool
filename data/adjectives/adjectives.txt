@@ -36,7 +36,7 @@
 ско'рый - rapid, quick
 но'вый - new
 ста'рый - old
-молодо'й - young
+молодо'й - young, not yet reached adulthood
 интере'сный - interesting
 ску'чный - boring
 прекра'сный - perfect, beautiful
@@ -58,7 +58,7 @@
 ка'ждый - each
 це'лый  - whole
 ни'зкий - low
-пе'рвый - first
+###duplicate### пе'рвый - first
 после'дний - last
 очередно'й - next
 гла'вный - main
@@ -67,7 +67,7 @@
 дорого'й - dear, expensive
 дешёвый - cheap
 стро'гий - severe, strict
-кла'ссный - cool
+кла'ссный - cool, awesome
 
 
 бе'дный - poor
@@ -135,7 +135,7 @@
 глу'пый - silly, dumb stupid
 смешно'й - funny
 серьёзный - serious
-зло'бный - mean
+зло'бный - mean, wicked, spiteful
 трудолюби'вый - industrious
 лени'вый - lazy
 глухо'й - deaf

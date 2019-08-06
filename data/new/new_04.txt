@@ -10,7 +10,6 @@
 лоя'льный - loyal
 нейтра'льный - neutral
 медли'тельный - slow functioning, slow moving
-тро'гательный - touching, moving
 
 @type adverb
 сно'ва, опя'ть, вно'вь, ещё ра'з - again
@@ -27,7 +26,7 @@
 за'пад - west
 се'вер - north
 ю'г - south
-му'льтик - cartoon
+му'льтик - cartoon show
 исключе'ние - exception
 дво'р - yard
 карти'на - picture, painting
@@ -72,14 +71,14 @@
 Ва́ше Вели́чество - Your Highness
 
 @type preposition
-про'тив @gen - against, opposed to
-напро'тив @gen - opposite of, across from
-вме'сто @gen - instead of
-бе'з @gen - without
-о'коло @gen - around, near
-бли'з @gen - near
-по'сле @gen - after
-до @gen - before, until
+###duplicate### про'тив @gen - against, opposed to
+###duplicate### напро'тив @gen - opposite of, across from
+###duplicate### вме'сто @gen - instead of
+###duplicate### бе'з @gen - without
+###duplicate### о'коло @gen - around, near
+###duplicate### бли'з @gen - near
+###duplicate### по'сле @gen - after
+###duplicate### до @gen - before, until
 
 @type conjunction
 хотя' бы - at least, just, if only

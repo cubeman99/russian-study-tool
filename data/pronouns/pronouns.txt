@@ -10,8 +10,8 @@
 что' - what
 дру'г дру'га - each other @acc
 себя' - self @acc @gen
-себе' - self @prep @dat
-собо'й - self @instr
+####себе' - self @prep @dat
+####собо'й - self @instr
 ве'сь - the whole, all the
 все' - all
 всё - everything
@@ -24,7 +24,6 @@
 тако'й - such a, like that
 са'м - (them)self, used for emphasis
 са'мый - the very
-ве'сь - the whole, all
 
 # Negative pronouns
 ничто' - nothing

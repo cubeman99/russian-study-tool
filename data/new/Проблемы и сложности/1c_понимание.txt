@@ -27,8 +27,8 @@
 ###duplicate### о'пыт - experience, practice, attempt
 щи'т - shield
 основа'ние - the base, bottom
-наста'вник - tutor @m
-наста'вница - tutor @f
+наста'вник - tutor (male)
+наста'вница - tutor (female)
 достиже'ние - achievement
 ве'рх - the top
 сме'х - laughter
@@ -45,7 +45,7 @@
 прорыча'ть - to growl, snarl
 прижа'ть -  to press against
 разобра'ться - to figure it out
-разобра'ть - to dissassemble
+###duplicate### разобра'ть - to dissassemble
 обру'шить - to bring down with force
 прогну'ть - to bend over (from gravity)
 тре'снуть - to crack
@@ -70,7 +70,7 @@
 закати'ть глаза' - to roll your eyes
 рассмея'ться - to burst out laughing
 изобрази'ть - to portray, picture
-успе'ть - to be in time, have time
+успе'ть - to be in time, have time (to do …)
 отругать - to scold
 
 @type phrase

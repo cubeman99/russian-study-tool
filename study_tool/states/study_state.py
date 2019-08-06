@@ -115,7 +115,7 @@ class StudyState(State):
 
     def next(self):
         self.scheduler.mark(self.card, knew_it=True)
-        self.app.save()
+        self.app.save_study_data()
         self.next_card()
 
     def mark(self):
@@ -123,7 +123,7 @@ class StudyState(State):
         Mark the current card as "didn't know" then move to the next card.
         """
         self.scheduler.mark(self.card, knew_it=False)
-        self.app.save()
+        self.app.save_study_data()
         self.next_card()
 
     def get_random_russian_form(self, card: Card, word: Word):

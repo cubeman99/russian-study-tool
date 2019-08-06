@@ -13,7 +13,6 @@
 
 @type adverb
 пло'тно - tightly, thickly
-све'рху - from above, on top of
 вовсе' - at all (old style word)
 по'лностью - fully, completely
 сро'чно – urgent
@@ -38,7 +37,6 @@
 табле́тка – tablet, pill
 пу'нкт – point, item, article
 прика́з – order, command
-слу'х - hearing
 мо'зг - brain
 злоде'й - villian, fiend
 пользова́тель – user
@@ -50,7 +48,6 @@
 велосипе'д - bicycle
 рюкза'к - backpack
 бага'ж - luggage
-пюре' - mashed potatoes
 
 @type verb
 разбира'ться - to deal with
@@ -58,7 +55,7 @@
 сдержа'ть - to hold back, restrain @pf
 размышля'ть - to ponder, reflect, speculate
 темне'ть - to darken
-рехну'ться - to go crazy
+рехну'ться - to lose your mind, go crazy
 пресле'довать - to chase, persue
 разброса'ть - to scatter
 исчеза'ть - to dissapear, vanish, pass away

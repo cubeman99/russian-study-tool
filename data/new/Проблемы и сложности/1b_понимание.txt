@@ -64,7 +64,7 @@
 раскры'ть - to uncover
 обнару'жить - to discover, find out
 обезу'меть - to go crazy
-оставля'ть - to leave behind
+###duplicate### оставля'ть - to leave behind
 отверга'ть - to reject
 сорва'ть - to rip off
 метну'ть - to chunk, throw

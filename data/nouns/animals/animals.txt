@@ -6,9 +6,9 @@
 #==============================================================================
 
 живо'тное @adjasnoun - animal
-ко'т - cat @m
-ко'шка - cat @f
-соба'ка - dog @f
+ко'т - cat (male)
+ко'шка - cat (female)
+соба'ка - dog (female)
 медве'дь - bear
 кро'лик - rabbit
 за'яц - hare
@@ -66,8 +66,8 @@
 бы'к - bull
 овца' - sheep
 бара'н - ram
-коза' - goat @f
-козёл - goat @m
+коза' - goat (female)
+козёл - goat (male)
 осе'л - donkey
 ло'шадь - horse
 гу'сь - goose

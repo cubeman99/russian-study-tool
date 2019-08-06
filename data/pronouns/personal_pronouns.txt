@@ -14,39 +14,39 @@
 вы - you       @nom @pl @2nd @formal
 они' - they    @nom @pl @3rd
 
-# Accusative, Genetive
-меня' - me             @gen @acc @sing @1st
-тебя' - you            @gen @acc @sing @2nd @informal 
-его', его' - him, it   @gen @acc @sing @3rd @m @n        
-её - her, it           @gen @acc @sing @3rd @f
-на'с - us              @gen @acc @prep @pl @1st
-ва'с - you             @gen @acc @prep @pl @2nd @formal
-и'х - them             @gen @acc @pl @3rd
-					   
-# Dative
-мне' - me        @dat @prep @sing @1st     
-тебе' - you      @dat @prep  @sing @2nd @informal       
-ему' - him, it   @dat @sing @3rd @m @n          
-е'й - her, it    @dat @instr @sing @3rd @f
-на'м - us        @dat @pl @1st      
-ва'м - you       @dat @pl @2nd @formal    
-и'м - them       @dat @pl @3rd  
-				 
-# Prepositional
-##мне' - me        @prep @sing @1st     
-##тебе' - you      @prep @sing @2nd @informal       
-нём - him, it    @prep @sing @3rd @m @n
-не'й - her, it   @prep @sing @3rd @f
-##на'с - us        @prep @pl @1st      
-##ва'с - you       @prep @pl @2nd @formal       
-ни'х - them      @prep @pl @3rd
-				 
-# Instrumental
-мно´й - me       @instr @sing @1st      
-тобо´й - you     @instr @sing @2nd @informal        
-и'м - him, it    @instr @sing @3rd @m @n         
-##е'й - her, it    @instr @sing @3rd @f        
-на'ми - us       @instr @pl @1st       
-ва'ми - you      @instr @pl @2nd @formal       
-и'ми - them      @instr @pl @3rd
+##### # Accusative, Genetive
+##### меня' - me             @gen @acc @sing @1st
+##### тебя' - you            @gen @acc @sing @2nd @informal 
+##### его', его' - him, it   @gen @acc @sing @3rd @m @n        
+##### её - her, it           @gen @acc @sing @3rd @f
+##### на'с - us              @gen @acc @prep @pl @1st
+##### ва'с - you             @gen @acc @prep @pl @2nd @formal
+##### и'х - them             @gen @acc @pl @3rd
+##### 					   
+##### # Dative
+##### мне' - me        @dat @prep @sing @1st     
+##### тебе' - you      @dat @prep  @sing @2nd @informal       
+##### ему' - him, it   @dat @sing @3rd @m @n          
+##### е'й - her, it    @dat @instr @sing @3rd @f
+##### на'м - us        @dat @pl @1st      
+##### ва'м - you       @dat @pl @2nd @formal    
+##### и'м - them       @dat @pl @3rd  
+##### 				 
+##### # Prepositional
+##### ##мне' - me        @prep @sing @1st     
+##### ##тебе' - you      @prep @sing @2nd @informal       
+##### нём - him, it    @prep @sing @3rd @m @n
+##### не'й - her, it   @prep @sing @3rd @f
+##### ##на'с - us        @prep @pl @1st      
+##### ##ва'с - you       @prep @pl @2nd @formal       
+##### ни'х - them      @prep @pl @3rd
+##### 				 
+##### # Instrumental
+##### мно´й - me       @instr @sing @1st      
+##### тобо´й - you     @instr @sing @2nd @informal        
+##### и'м - him, it    @instr @sing @3rd @m @n         
+##### ##е'й - her, it    @instr @sing @3rd @f        
+##### на'ми - us       @instr @pl @1st       
+##### ва'ми - you      @instr @pl @2nd @formal       
+##### и'ми - them      @instr @pl @3rd
 				 

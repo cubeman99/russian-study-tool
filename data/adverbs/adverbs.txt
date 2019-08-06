@@ -94,16 +94,15 @@
 наза'д - back(ward)
 наверху' - above
 наве'рх - up(ward)
-све'рху - from above
+све'рху - from above, on top of
 внизу' - below
 вни'з - down(ward)
 сни'зу - from below
 внутри' - inside
 вну'трь - to inside
 изнутри' - from inside
-снару'жи - outside
+снару'жи - on the outside
 нару'жу - to outside
-снару'жи - from outside
 
 
 #==============================================================================

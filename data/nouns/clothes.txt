@@ -17,20 +17,20 @@
 юбка - skirt
 пла´тье - dress
 водолазка - poloneck
-жакет - jacket
+жакет - light jacket
+куртка - heavy jacket
 жилет - waistcoat
-пиджак - coat
+пиджак - suit jacket
 пла´щ - raincoat
 шарф - scarf
-куртка - jacket
 пальто - coat
 шуба - fur coat
 шапка - cap, hat
-ботинки - shoes
-кроссовки - sneakers, sport shoes
 спортивный костюм - sport suit
-кеды - gumshoes
-туфли - shoes
+туфли - fancy shoes
+кроссовки - sneakers, sport shoes
+кеды - gumshoes, canvas shoes
+ботинки - boot shoes
 босоножки - sandals
 тапочки - slippers
 бюстгалтер - bra
@@ -40,6 +40,7 @@
 цепочка - chain
 браслет - bracelet
 ожерелье - necklace
+колье' – choker, necklace
 сережки - earrings
 кулон - pendant
 бро´шь - brooch

@@ -86613,6 +86613,83 @@
       "examples": [],
       "name": "защищать",
       "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "завоева'ния",
+            "Dative": "завоева'ниям",
+            "Genetive": "завоева'ний",
+            "Instrumental": "завоева'ниями",
+            "Nominative": "завоева'ния",
+            "Prepositional": "завоева'ниях"
+          },
+          "Singular": {
+            "Accusative": "завоева'ние",
+            "Dative": "завоева'нию",
+            "Genetive": "завоева'ния",
+            "Instrumental": "завоева'нием",
+            "Nominative": "завоева'ние",
+            "Prepositional": "завоева'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "завоевание",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "поколебаться"
+        ],
+        "imperative": {
+          "Plural": "коле'блитесь",
+          "Singular": "коле'блись"
+        },
+        "infinitive": "колебаться",
+        "info": "This verb can also mean the following: sway, vibrate, hesitate, vary, fluctuate, waver, vacillate.",
+        "non_past": {
+          "Plural": {
+            "First": "коле'блемся",
+            "Second": "коле'блетесь",
+            "Third": "коле'блются"
+          },
+          "Singular": {
+            "First": "коле'блюсь",
+            "Second": "коле'блешься",
+            "Third": "коле'блется"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "колеба'вшийся",
+            "Present": "коле'блющийся"
+          },
+          "Adverbial": {
+            "Past": "колеба'вшись",
+            "Present": "коле'блясь"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "колеба'лась",
+          "Masculine": "колеба'лся",
+          "Neuter": "колеба'лось",
+          "Plural": "колеба'лись"
+        },
+        "translation": "to oscillate"
+      },
+      "examples": [],
+      "name": "колебаться",
+      "type": "Verb"
     }
   ]
 }

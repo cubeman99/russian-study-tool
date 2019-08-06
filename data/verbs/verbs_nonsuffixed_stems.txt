@@ -106,7 +106,7 @@
 
 ле'чь - to lie down @stem.obstruent
 
-же'чь - to burn @stem.obstruent
+же'чь - to burn something @stem.obstruent
 
 пе'чь - to bake @stem.obstruent
 отвле'чь - to distract @stem.obstruent

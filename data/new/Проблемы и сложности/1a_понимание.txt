@@ -18,7 +18,6 @@
 сло'женный - folded
 покрыва'ющий - covering
 приглушённый - muted
-и'стинный - true, genuine
 
 @type noun
 эпитет - term, epithet, adjective
@@ -49,7 +48,7 @@
 наклони'ться - to bend over
 выгля'дывать - to look out, peek out
 подсчита'ть - to tally up, count
-чини'ть - to inflict, commit
+чини'ть - to fix, repair, mend
 учиня'ть - to inflict, commit
 осознава'ть - to be aware, recognize
 подозрева'ть - to suspect, surmise

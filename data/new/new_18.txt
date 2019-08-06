@@ -23,7 +23,7 @@
 нали'чные (ден'ьги) - cash
 зна'ния - knowledge
 образова'ние - education, formation
-гла'сность - publicity
+гла'сность - publicity, openness
 перестро'йка - reconstruction
 во'р - theif
 за'мка из песка' - sand castle
@@ -46,7 +46,6 @@
 @type verb
 поме'рить - to measure
 проста'ивать -  to stand idle
-положи'ть - to put @pf
 вложи'ть - to invest @pf
 вы'ложить - to take something out and put it @pf
 приложи'ть - to put and hold in place @pf
