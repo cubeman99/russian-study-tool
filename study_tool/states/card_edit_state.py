@@ -91,6 +91,7 @@ class CardEditState(State):
         layout.add_widget(self.label_results)
         layout.add_widget(self.text_edit)
         layout.add_widget(self.table)
+        layout.add_widget(widgets.Button("Add New Card"))
         layout.add_widget(widgets.Label("Label"))
 
         self.gui = widgets.Widget()

@@ -335,7 +335,8 @@
         "душевая",
         "спальная",
         "мышка",
-        "наушники"
+        "наушники",
+        ""
       ],
       "Verb": [
         "охладиться",
@@ -86790,6 +86791,195 @@
       "examples": [],
       "name": "пожаловать",
       "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "столы'",
+            "Dative": "стола'м",
+            "Genetive": "столо'в",
+            "Instrumental": "стола'ми",
+            "Nominative": "столы'",
+            "Prepositional": "стола'х"
+          },
+          "Singular": {
+            "Accusative": "сто'л",
+            "Dative": "столу'",
+            "Genetive": "стола'",
+            "Instrumental": "столо'м",
+            "Nominative": "сто'л",
+            "Prepositional": "столе'"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "стол",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "сту'лья",
+            "Dative": "сту'льям",
+            "Genetive": "сту'льев",
+            "Instrumental": "сту'льями",
+            "Nominative": "сту'лья",
+            "Prepositional": "сту'льях"
+          },
+          "Singular": {
+            "Accusative": "сту'л",
+            "Dative": "сту'лу",
+            "Genetive": "сту'ла",
+            "Instrumental": "сту'лом",
+            "Nominative": "сту'л",
+            "Prepositional": "сту'ле"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "стул",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "свида'ния",
+            "Dative": "свида'ниям",
+            "Genetive": "свида'ний",
+            "Instrumental": "свида'ниями",
+            "Nominative": "свида'ния",
+            "Prepositional": "свида'ниях"
+          },
+          "Singular": {
+            "Accusative": "свида'ние",
+            "Dative": "свида'нию",
+            "Genetive": "свида'ния",
+            "Instrumental": "свида'нием",
+            "Nominative": "свида'ние",
+            "Prepositional": "свида'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "свидание",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "награ'ды",
+            "Dative": "награ'дам",
+            "Genetive": "награ'д",
+            "Instrumental": "награ'дами",
+            "Nominative": "награ'ды",
+            "Prepositional": "награ'дах"
+          },
+          "Singular": {
+            "Accusative": "награ'ду",
+            "Dative": "награ'де",
+            "Genetive": "награ'ды",
+            "Instrumental": "награ'дой",
+            "Nominative": "награ'да",
+            "Prepositional": "награ'де"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "награда",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "уро'дов",
+            "Dative": "уро'дам",
+            "Genetive": "уро'дов",
+            "Instrumental": "уро'дами",
+            "Nominative": "уро'ды",
+            "Prepositional": "уро'дах"
+          },
+          "Singular": {
+            "Accusative": "уро'да",
+            "Dative": "уро'ду",
+            "Genetive": "уро'да",
+            "Instrumental": "уро'дом",
+            "Nominative": "уро'д",
+            "Prepositional": "уро'де"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "урод",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "деби'лов",
+            "Dative": "деби'лам",
+            "Genetive": "деби'лов",
+            "Instrumental": "деби'лами",
+            "Nominative": "деби'лы",
+            "Prepositional": "деби'лах"
+          },
+          "Singular": {
+            "Accusative": "деби'ла",
+            "Dative": "деби'лу",
+            "Genetive": "деби'ла",
+            "Instrumental": "деби'лом",
+            "Nominative": "деби'л",
+            "Prepositional": "деби'ле"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "дебил",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "ра'ковины",
+            "Dative": "ра'ковинам",
+            "Genetive": "ра'ковин",
+            "Instrumental": "ра'ковинами",
+            "Nominative": "ра'ковины",
+            "Prepositional": "ра'ковинах"
+          },
+          "Singular": {
+            "Accusative": "ра'ковину",
+            "Dative": "ра'ковине",
+            "Genetive": "ра'ковины",
+            "Instrumental": "ра'ковиной",
+            "Nominative": "ра'ковина",
+            "Prepositional": "ра'ковине"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "раковина",
+      "type": "Noun"
     }
   ]
 }

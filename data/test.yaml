@@ -3,5 +3,4 @@ card_set:
   name: "Test Set"
   cards:
     - ["noun", "стол", "table"]
-    - ["verb", "курить", "to smoke"]
-	- ["preposition", "до"]
+    - ["noun", "стул"]

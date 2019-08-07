@@ -100,13 +100,19 @@ class Widget(LayoutItem):
     def draw(self, g):
         if not g.is_rect_in_viewport(self.get_rect()):
             return
+        
+        c = color.WHITE
+        if self.is_focused():
+            c = color.rgb(235, 235, 255)
+        g.fill_rect(self.rect, color=c)
+
+        self.on_draw(g)
+        if self.layout:
+            self.layout.draw(g)
 
         c = color.BLACK
         if self.is_focused():
             c = color.BLUE
-        self.on_draw(g)
-        if self.layout:
-            self.layout.draw(g)
         g.draw_rect(self.rect, color=c)
 
     def _get_layout_item_children(self):

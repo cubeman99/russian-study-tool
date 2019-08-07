@@ -61,9 +61,12 @@ class StudyCardsApp(Application):
         self.word_database = WordDatabase()
         self.load_word_database()
 
-        # Load all card data
+        # Load card data
         self.card_database = CardDatabase(word_database=self.word_database)
-        print("Loading card sets from: " + self.root_path)
+        self.load_card_data()
+
+        # Load card sets
+        Config.logger.info("Loading card sets from: " + self.root_path)
         self.root = self.card_database.load_card_package_directory(
             path=self.root_path, name="words")
         self.save_word_database()
@@ -92,7 +95,7 @@ class StudyCardsApp(Application):
         # self.root["verbs"]["stems"].get_problem_cards()
         # self.push_card_list_state(self.root.card_sets[1])
         # self.push_state(KeyboardState())
-        #self.push_state(CardEditState(card_database=self.card_database))
+        self.push_state(CardEditState(card_database=self.card_database))
 
         self.input.bind(pygame.K_ESCAPE, pressed=self.quit)
 
@@ -209,7 +212,7 @@ class StudyCardsApp(Application):
         path = os.path.join(self.root_path, self.card_data_file_name)
         Config.logger.debug("Loading card data from: " + path)
         with open(path, "r", encoding="utf8") as f:
-            state = yaml.load(f)
+            state = yaml.safe_load(f)
             self.card_database.deserialize_card_data(state)
 
     def save_study_data(self):

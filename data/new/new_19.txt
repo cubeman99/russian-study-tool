@@ -20,6 +20,9 @@
 распоряже'ние - disposition, order, command
 барда'к - a complete mess
 завоева'ние - conquest
+награ'да - reward
+уро'д - freak
+деби'л - moron
 
 @type verb
 повы'сить - to increase, raise @pf
@@ -42,6 +45,10 @@
 никогда' ещё не' было ничего' и никого' подо'бного - there has never been anything or anyone like this
 та'к нельзя' - you can't do it in this way
 Что' ты хо'чешь, что'бы я сказа'л? -- What do you want me to say?
+де'ньги не па'хнуть - money doesn't smell (the ends justify the means)
+уда'рить в гря'зь лицо'м - to fall into the dirt face first
+у чёрта на кули'чиках - hell knows where
+утра' ве'чера мудрене'е - morning is wiser than the evening (lets sleep on it)
 
 @type other
 

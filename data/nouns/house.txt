@@ -6,6 +6,8 @@
 @key house
 #==============================================================================
 
+###duplicate### сто'л - table
+###duplicate### сту'л - chair
 две'рь - door
 окно' - window
 ко'мната - room
@@ -32,12 +34,12 @@
 #полоте'нце - towel
 зе'ркало - mirror
 кра'н - faucet
-ра'ковиа - sink
+ра'ковина - sink
 
 корзи'на для' белья' - laundry basket
 ду'ш - shower
 душева'я каби'на - standup shower
-туа'лет - toilet
+туале'т - toilet
 
 спа'льная ко'мната - bedroom
 крова'ть - bed

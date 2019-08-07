@@ -111,17 +111,6 @@ class CardSet(StudySet):
                 [card.type.name.lower(), card.english.text, card.russian.text])
         return {"card_set": state}
 
-    def deserialize(self, state: dict):
-        self.name = state["name"]
-        for card_state in state["cards"]:
-            assert 2 <= len(card_state[0]) <= 3
-            word_type = parse_word_type(card_state[0])
-            if len(card_state[0]) == 3:
-                russian = card_state[2]
-                english = card_state[1]
-            elif len(card_state[0]) == 2:
-                russian = card_state[2]
-                english = card_state[1]
             
 
 

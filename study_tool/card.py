@@ -93,7 +93,7 @@ class Card:
 
     def get_russian_key(self) -> tuple:
         return (self.word_type, self.russian.text, ",".join(sorted([x.value for x in self.get_attributes()])))
-
+    
     def get_proficiency_score(self) -> float:
         """Get the key proficiency score."""
         return max(0.0, float(self.proficiency_level - 1) /
@@ -191,7 +191,7 @@ class Card:
         if all_attributes:
             state["attrs"] = [x.value for x in all_attributes]
         if self.examples:
-            state["ex"] = [(repr(e), "") for e in self.examples]
+            state["ex"] = [[repr(e), ""] for e in self.examples]
         return state
 
     def deserialize_card_data(self, state):

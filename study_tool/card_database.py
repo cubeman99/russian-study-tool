@@ -69,7 +69,7 @@ class CardDatabase:
 
     def get_card(self, word_type: WordType, english=None, russian=None):
         if english is not None and russian is not None:
-            key = (word_type, AccentedText(english).text, AccentedText(russian).text)
+            key = (word_type, AccentedText(russian).text, AccentedText(english).text)
             return self.cards.get(key, None)
         if english is not None:
             key = (word_type, AccentedText(english).text)
@@ -78,6 +78,20 @@ class CardDatabase:
             key = (word_type, AccentedText(russian).text)
             return self.russian_key_to_card_dict.get(key, None)
         raise Exception("Missing english or russian argument")
+
+    def iter_cards(self, word_type=None, english=None, russian=None):
+        if english is not None:
+            english = AccentedText(english).text.lower()
+        if russian is not None:
+            russian = AccentedText(russian).text.lower()
+        for _, card in self.cards.items():
+            if word_type is not None and card.get_word_type() != word_type:
+                continue
+            if english is not None and card.english.text.lower() != english:
+                continue
+            if russian is not None and card.russian.text.lower() != russian:
+                continue
+            yield card
 
     def find_cards_by_word(self, word: str):
         """Find a card by the name of a word."""
@@ -138,11 +152,7 @@ class CardDatabase:
         self.russian_key_to_card_dict[ru_key] = card
         self.english_key_to_card_dict[en_key] = card
         self.cards[key] = card
-
-    def iter_cards(self):
-        for _, card in self.cards.items():
-            yield card
-
+        
     def serialize_card_data(self) -> dict:
         state = []
         for card in self.iter_cards():
@@ -150,7 +160,6 @@ class CardDatabase:
         return state
 
     def deserialize_card_data(self, state: dict):
-        self.clear()
         for card_state in state["cards"]:
             card = Card()
             card.deserialize_card_data(card_state)
@@ -200,24 +209,38 @@ class CardDatabase:
     def deserialize_card_set(self, state: dict) -> CardSet:
         state = state["card_set"]
         card_set = CardSet()
-        card_set.set_name(state["name"])
+        card_set.set_name(AccentedText(state["name"]))
         for card_state in state["cards"]:
-            assert 2 <= len(card_state[0]) <= 3
+            assert 1 <= len(card_state) <= 3
             word_type = parse_word_type(card_state[0])
-            if len(card_state[0]) == 3:
+            if len(card_state) == 3:
                 english = card_state[1]
                 russian = card_state[2]
-                card = self.get_card(word_type=word_type, russian=russian, english=russian)
-                if not card:
-                    raise Exception()
-            elif len(card_state[0]) == 2:
+                cards = list(self.iter_cards(word_type=word_type, russian=russian, english=english))
+                if not cards:
+                    cards = list(self.iter_cards(word_type=word_type, russian=english, english=russian))
+                if not cards:
+                    raise Exception("Cannot find card {} in database"
+                                    .format(card_state))
+            elif len(card_state) == 2:
                 text = card_state[1]
-                card = self.get_card(word_type=word_type, russian=text, english=None)
-                if not card:
-                    card = self.get_card(word_type=word_type, russian=None, english=text)
-                if not card:
-                    raise Exception()
-            card_set.add_card(card)
+                cards = list(self.iter_cards(word_type=word_type, russian=text))
+                if not cards:
+                    cards = list(self.iter_cards(word_type=word_type, english=text))
+                if not cards:
+                    raise Exception("Cannot find card {} in database"
+                                    .format(card_state))
+            elif len(card_state) == 1:
+                text = card_state[1]
+                cards = list(self.iter_cards(russian=text))
+                if not cards:
+                    cards = list(self.iter_cards(english=text))
+                if not cards:
+                    raise Exception("Cannot find card {} in database"
+                                    .format(card_state))
+            else:
+                raise Exception(card_state)
+            card_set.cards += cards
         return card_set
 
     def parse_card_text(self, text, split=False):
@@ -384,7 +407,7 @@ class CardDatabase:
                 elif file_path.endswith(".yaml"):
                     # Load new card set file
                     with open(file_path, "r", encoding="utf8") as f:
-                        state = yaml.load(f)
+                        state = yaml.safe_load(f)
                         if "card_set" in state:
                             card_set = self.deserialize_card_set(state)
                             if card_set:
