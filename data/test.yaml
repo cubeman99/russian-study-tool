@@ -2,5 +2,5 @@ card_set:
   version: 1
   name: "Test Set"
   cards:
-    - ["noun", "стол", "table"]
-    - ["noun", "стул"]
+    - ["noun", "стол",   "table"]
+    - ["noun",   "стул"]

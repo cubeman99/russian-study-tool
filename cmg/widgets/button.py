@@ -4,11 +4,15 @@ from pygame import Rect
 from cmg import gui
 from cmg import widgets
 from cmg import color
+from cmg.event import Event
+from cmg.input import Keys
 
 class Button(widgets.Widget):
     def __init__(self, text=""):
         super().__init__()
         self.set_focusable(True)
+
+        self.clicked = Event()
 
         self.__text = text
         self.__font = gui.Font(32)
@@ -27,6 +31,13 @@ class Button(widgets.Widget):
         if text != self.__text:
             self.__text = text
             self.__surface = None
+
+    def on_mouse_pressed(self):
+        pass
+
+    def on_key_pressed(self, key, text):
+        if key in [Keys.K_RETURN, Keys.K_SPACE]:
+            self.clicked.emit()
 
     def on_draw(self, g):
         if not self.__surface:

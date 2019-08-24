@@ -17,6 +17,9 @@ from study_tool.config import Config
 from study_tool.states.menu_state import MenuState
 from study_tool.states.study_state import StudyState
 from study_tool.states.card_list_state import CardListState
+from study_tool.states.gui_state import GUIState
+from study_tool.gui.card_edit_widget import CardEditWidget
+from study_tool.gui.card_set_edit_widget import CardSetEditWidget
 from study_tool.card_database import CardDatabase
 from study_tool.scheduler import ScheduleMode
 from study_tool.states.keyboard_state import KeyboardState
@@ -79,7 +82,7 @@ class StudyCardsApp(Application):
         # Load study data
         self.load_study_data()
 
-        #self.save_card_data()
+        self.save_card_data()
 
         self.states = []
         self.main_menu = MenuState(package=self.root)
@@ -95,11 +98,52 @@ class StudyCardsApp(Application):
         # self.root["verbs"]["stems"].get_problem_cards()
         # self.push_card_list_state(self.root.card_sets[1])
         # self.push_state(KeyboardState())
-        self.push_state(CardEditState(card_database=self.card_database))
+        # self.push_state(CardEditState(card_database=self.card_database))
+        cards = list(self.card_database.iter_cards())
+        #self.push_state(GUIState(widget=CardEditWidget(cards[0]), title="Edit Card"))
+        self.push_state(GUIState(widget=CardSetEditWidget(self.root["verbs"]["verbs_stem_ai"], self), title="Edit Card Set"))
+        #self.push_state(GUIState(widget=CardSetEditWidget(self.root["test_set"], self), title="Edit Card Set"))
 
-        self.input.bind(pygame.K_ESCAPE, pressed=self.quit)
+        self.input.bind(pygame.K_ESCAPE, pressed=self.pop_state)
+
+        self.input.key_pressed.connect(self.__on_key_press)
+        self.input.key_released.connect(self.__on_key_release)
 
         Config.logger.info("Initialization complete!")
+
+    def __on_key_press(self, key, text):
+        self.state.on_key_press(key, text)
+
+    def __on_key_release(self, key):
+        self.state.on_key_release(key)
+
+    def assimilate_card_set_to_yaml(self, card_set):
+        """
+        Convert a old-style text based card set file into YAML,
+        moving all its cards into the global card database.
+        """
+        assert card_set.is_fixed_card_set()
+        for card in card_set.cards:
+            if card.get_fixed_card_set() != card_set:
+                raise Exception(card_set, card)
+
+        # Save cards from card set into card data YAML
+        old_file_path = card_set.get_file_path()
+        card_sets_in_file = self.card_database.get_card_sets_from_path(old_file_path)
+        for file_card_set in card_sets_in_file:
+            card_set.set_fixed_card_set(False)
+        self.save_card_data()
+
+        # Replace card set text file with YAML
+        for file_card_set in card_sets_in_file:
+            state = file_card_set.serialize()
+            new_path = old_file_path
+            if len(card_sets_in_file) > 1:
+                new_path = os.path.dirname(old_file_path)
+                new_path = os.path.join(new_path, file_card_set.key + ".yaml")
+            with open(new_path, "wb") as opened_file:
+                yaml.dump(state, opened_file, encoding="utf8",
+                            allow_unicode=True, default_flow_style=True)
 
     def pop_state(self):
         if len(self.states) == 1:
@@ -117,6 +161,16 @@ class StudyCardsApp(Application):
 
     def push_card_list_state(self, card_set):
         self.push_state(CardListState(card_set))
+
+    def push_card_set_edit_state(self, card_set: CardSet):
+        self.push_state(GUIState(widget=CardSetEditWidget(card_set, self),
+                                 title="Edit Card Set"))
+
+    def push_card_edit_state(self, card: Card):
+        widget = CardEditWidget(card)
+        state = GUIState(widget=widget, title="Edit Card")
+        self.push_state(state)
+        return widget
 
     def get_card_word_details(self, card):
         updated = self.word_database.populate_card_details(card, download=True)
@@ -190,7 +244,7 @@ class StudyCardsApp(Application):
 
     def save_card_data(self):
         path = os.path.join(self.root_path, self.card_data_file_name)
-        Config.logger.debug("Saving card data to: " + path)
+        Config.logger.info("Saving card data to: " + path)
 
         # Serialize the card data
         state = self.card_database.serialize_card_data()

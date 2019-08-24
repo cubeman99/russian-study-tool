@@ -87,3 +87,10 @@ class LayoutItem:
 
     def set_size(self, size):
         self.rect.size = Vec2(size).totuple()
+
+    def get_parent(self):
+        return self.parent
+
+    def set_parent(self, parent):
+        if parent != self.parent:
+            self.parent = parent

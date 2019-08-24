@@ -6,6 +6,8 @@
 неприли'чный - indecent
 прили'чный - decent
 изря'дный - fair, hefty, significant in quantity
+престу'пный - criminal, felonious
+живопи'сный - scenic, picturesque
 
 @type adverb
 Вкра'тце, ... -- In short, ...
@@ -23,6 +25,9 @@
 награ'да - reward
 уро'д - freak
 деби'л - moron
+схо'дка - gathering
+маршру'т - route
+пре'данность - devotion, dedication
 
 @type verb
 повы'сить - to increase, raise @pf
@@ -36,10 +41,14 @@
 ###duplicate###ле'чь - to lie down
 распакова'ть - to unpack
 хорони'ть - to bury, tomb, lay to rest
-слива'ться - to merge, fuse
+слива'ться - to flow together, merge, fuse @impf
+сли'ться - to flow together, merge, fuse @pf
 защища'ть - to protect
 суди'ть - to judge
 пожа'ловать - to welcome
+скуча'ть - to miss due to absance; to feel bored
+шпио'нить - to spy
+задрема'ть - to doze off
 
 @type phrase
 никогда' ещё не' было ничего' и никого' подо'бного - there has never been anything or anyone like this
@@ -49,6 +58,8 @@
 уда'рить в гря'зь лицо'м - to fall into the dirt face first
 у чёрта на кули'чиках - hell knows where
 утра' ве'чера мудрене'е - morning is wiser than the evening (lets sleep on it)
+ни с ме'ста - Don't move!
+я име'ю в виду', ... -- I mean, ...
 
 @type other
 

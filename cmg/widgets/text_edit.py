@@ -24,11 +24,21 @@ class TextEdit(Widget):
         self.set_maximum_height(height)
 
         self.text_edited = Event()
+        self.return_pressed = Event()
+
+        self.__autocomplete_source = None
+        self.__background_text = None
+        self.__autocomplete_text = None
+        self.__background_text_color = (192, 192, 192)
+        self.__surface_background_text = pygame.Surface((1, 1))
+        self.__surface_text = pygame.Surface((1, 1))
+        self.__surface = pygame.Surface((1, 1))
+        self.__surface.set_alpha(0)
 
         self.antialias = antialias
         self.text_color = text_color
         self.font_size = font_size
-        self.input_string = text  # Inputted text
+        self.__text = text  # Inputted text
         self.__prev_state = (None, None, None)
 
         if not os.path.isfile(font_family):
@@ -39,8 +49,6 @@ class TextEdit(Widget):
 
         # Text-surface will be created during the first update call:
         self.font_object = pygame.font.Font(None, 30)
-        self.surface = pygame.Surface((1, 1))
-        self.surface.set_alpha(0)
 
         # Vars to make keydowns repeat after user pressed a key for some time:
         # {event.key: (counter_int, event.unicode)} (look for "***")
@@ -58,29 +66,22 @@ class TextEdit(Widget):
         self.cursor_ms_counter = 0
         self.clock = pygame.time.Clock()
 
-    def on_gain_focus(self):
-        Application.instance.input.key_pressed.connect(
-            self.on_key_press)
-        Application.instance.input.key_released.connect(
-            self.on_key_release)
-        self.cursor_position = len(self.input_string)
+    def set_autocomplete_source(self, autocomplete_source):
+        self.__autocomplete_source = autocomplete_source
 
     def on_lose_focus(self):
-        Application.instance.input.key_pressed.disconnect(
-            self.on_key_press)
-        Application.instance.input.key_released.disconnect(
-            self.on_key_release)
+        self.__apply_autocomplete()
 
     def get_text(self) -> str:
-        return self.input_string
+        return self.__text
 
     def set_text(self, text: str) -> str:
         assert isinstance(text, str)
-        self.input_string = text
-        self.cursor_position = len(self.input_string)
+        self.__text = text
+        self.cursor_position = len(self.__text)
 
     def text(self) -> str:
-        return self.input_string
+        return self.__text
 
     def update(self):
         if self.is_focused():
@@ -98,7 +99,7 @@ class TextEdit(Widget):
                     )
 
                     event_key, event_unicode = key, self.keyrepeat_counters[key][1]
-                    self.on_key_press(event_key, event_unicode)
+                    self.on_key_pressed(event_key, event_unicode)
 
             # Update cursor visibility
             self.cursor_ms_counter += self.clock.get_time()
@@ -109,8 +110,23 @@ class TextEdit(Widget):
             self.keyrepeat_counters = {}
             self.cursor_visible = False
 
+        # Update auto-complete
+        if self.__autocomplete_source:
+            self.__background_text = None
+            self.__autocomplete_text = None
+            if self.__text:
+                for item in self.__autocomplete_source:
+                    item = str(item)
+                    if item.lower().startswith(self.__text.lower()):
+                        self.__background_text = self.__text + item[len(self.__text):]
+                        self.__autocomplete_text = item
+                        if item.lower() == self.__text.lower():
+                            break
+
         # Re-render text surface
-        state = (self.input_string, self.cursor_position, self.cursor_visible)
+        state = (self.__text,
+                 self.cursor_position,
+                 self.__background_text)
         if state[0] != self.__prev_state[0]:
             self.text_edited.emit()
         if state[:2] != self.__prev_state[:2]:
@@ -118,20 +134,26 @@ class TextEdit(Widget):
             self.cursor_visible = self.is_focused()
         if state != self.__prev_state:
             self.__prev_state = state
-            self.surface = self.font_object.render(
-                self.input_string, self.antialias, self.text_color)
-
-            if self.cursor_visible:
-                cursor_y_pos = self.font_object.size(
-                    self.input_string[:self.cursor_position])[0]
-                if self.cursor_position > 0:
-                    cursor_y_pos -= self.cursor_surface.get_width()
-                self.surface.blit(self.cursor_surface, (cursor_y_pos, 0))
+            self.__surface_text = self.font_object.render(
+                self.__text,
+                self.antialias,
+                self.text_color)
+            if self.__background_text:
+                self.__surface_background_text = self.font_object.render(
+                    self.__background_text,
+                    self.antialias,
+                    self.__background_text_color)
 
         self.clock.tick()
 
-    def on_key_press(self, key, text):
-        if key in [Keys.K_ESCAPE, Keys.K_TAB, Keys.K_RETURN]:
+    def on_key_pressed(self, key, text):
+        if key in [Keys.K_ESCAPE, Keys.K_TAB]:
+            return
+        
+        # Enter applies autocompletion
+        if key == Keys.K_RETURN:
+            self.__apply_autocomplete()
+            self.return_pressed.emit()
             return
 
         # If none exist, create counter for that key:
@@ -139,46 +161,59 @@ class TextEdit(Widget):
             self.keyrepeat_counters[key] = [0, text]
 
         if key == Keys.K_BACKSPACE:
-            self.input_string = (
-                self.input_string[:max(self.cursor_position - 1, 0)] +
-                self.input_string[self.cursor_position:]
+            self.__text = (
+                self.__text[:max(self.cursor_position - 1, 0)] +
+                self.__text[self.cursor_position:]
             )
             self.cursor_position = max(self.cursor_position - 1, 0)
         elif key == Keys.K_DELETE:
-            self.input_string = (
-                self.input_string[:self.cursor_position] +
-                self.input_string[self.cursor_position + 1:]
+            self.__text = (
+                self.__text[:self.cursor_position] +
+                self.__text[self.cursor_position + 1:]
             )
         elif key == Keys.K_RIGHT:
             self.cursor_position = min(
-                self.cursor_position + 1, len(self.input_string))
+                self.cursor_position + 1, len(self.__text))
         elif key == Keys.K_LEFT:
             self.cursor_position = max(self.cursor_position - 1, 0)
         elif key == Keys.K_END:
-            self.cursor_position = len(self.input_string)
+            self.cursor_position = len(self.__text)
         elif key == Keys.K_HOME:
             self.cursor_position = 0
         else:
-            self.input_string = (
-                self.input_string[:self.cursor_position] + text +
-                self.input_string[self.cursor_position:]
+            self.__text = (
+                self.__text[:self.cursor_position] + text +
+                self.__text[self.cursor_position:]
             )
             self.cursor_position += len(text)
 
-    def on_key_release(self, key):
+    def on_key_released(self, key):
         # If none exist, create counter for that key:
         if key in self.keyrepeat_counters:
             del self.keyrepeat_counters[key]
 
     def on_draw(self, g):
         y = self.rect.top + \
-            int((self.get_height() - self.surface.get_height()) / 2)
-        g.draw_image(self.surface, self.rect.left + 4, y)
+            int((self.get_height() - self.__surface.get_height()) / 2)
+        if self.__background_text:
+            g.draw_image(self.__surface_background_text, self.rect.left + 4, y)
+        if self.__text:
+            g.draw_image(self.__surface_text, self.rect.left + 4, y)
+        if self.cursor_visible:
+            cursor_y_pos = self.font_object.size(
+                self.__text[:self.cursor_position])[0]
+            if self.cursor_position > 0:
+                cursor_y_pos -= self.cursor_surface.get_width()
+            g.draw_image(self.cursor_surface, (cursor_y_pos, 0))
 
     def __get_ctrl_boundary(self, step=1):
         pos = self.cursor_position
-        while pos > 0 and pos < len(self.input_string):
-            if not re.match(r"[A-Za-z0-9]", self.input_string[pos]):
+        while pos > 0 and pos < len(self.__text):
+            if not re.match(r"[A-Za-z0-9]", self.__text[pos]):
                 break
             pos += step
         return pos
+
+    def __apply_autocomplete(self):
+        if self.__autocomplete_source and self.__background_text:
+            self.set_text(self.__autocomplete_text)

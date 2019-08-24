@@ -168,3 +168,6 @@ ATTRIBUTE_COLORS = {
     CardAttributes.Prepositional: color.rgb(0, 100, 0),
     CardAttributes.Instrumental: color.rgb(100, 100, 0),
 }
+
+def get_card_attribute_display_name(attribute: CardAttributes):
+     return ATTRIBUTE_NAMES.get(attribute, attribute.name)

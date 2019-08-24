@@ -68,8 +68,8 @@ class BoxLayout(Layout):
         self.children = []
 
     def remove(self, widget):
+        widget.set_parent(None)
         self.children.remove(widget)
-        widget.parent = None
 
     def clear(self):
         while self.children:
@@ -77,13 +77,15 @@ class BoxLayout(Layout):
 
     def add_widget(self, widget):
         assert isinstance(widget, Widget)
-        self.children.append(widget)
-        widget.parent = self
+        self.add(widget)
 
     def add_layout(self, layout):
         assert isinstance(layout, Layout)
-        self.children.append(layout)
-        layout.parent = self
+        self.add(layout)
+
+    def add(self, item):
+        self.children.append(item)
+        item.set_parent(self)
 
     def get_children(self):
         return self.children
@@ -172,10 +174,14 @@ class BoxLayout(Layout):
 
 
 class HBoxLayout(BoxLayout):
-    def __init__(self):
+    def __init__(self, *items):
         super().__init__(axis=0)
+        for item in items:
+            self.add(item)
 
 
 class VBoxLayout(BoxLayout):
-    def __init__(self):
+    def __init__(self, *items):
         super().__init__(axis=1)
+        for item in items:
+            self.add(item)

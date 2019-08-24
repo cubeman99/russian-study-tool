@@ -192,7 +192,7 @@ class InputManager:
         self.bind_dict = {}
         self.down_keys = set()
         self.key_pressed = Event(int, str)
-        self.key_released = Event(int, str)
+        self.key_released = Event(int)
 
     def bind(self, key, pressed=None, released=None, down=None):
         bind = KeyBind(key, pressed=pressed, released=released, down=down)

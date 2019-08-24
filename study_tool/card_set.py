@@ -51,11 +51,17 @@ class StudySet:
     def set_name(self, name: str):
         self.name = name
 
+    def get_cards(self) -> list:
+        return self.cards
+
     def add_card(self, card: Card):
         self.cards.append(card)
 
     def clear(self):
         self.cards = []
+
+    def get_card_count(self) -> int:
+        return len(self.cards)
 
     def get_study_metrics(self):
         metrics = CardGroupMetrics()
@@ -86,13 +92,32 @@ class StudySet:
 
 
 class CardSet(StudySet):
-    def __init__(self, cards=()):
+    def __init__(self, cards=(), fixed_card_set=False):
         StudySet.__init__(self, name="Untitled", cards=cards)
         self.key = None
         self.path = ""
         self.info = ""
         self.side = CardSide.English
         self.source = None
+        self.__file_path = None
+        self.__is_fixed_card_set = fixed_card_set
+
+    def get_file_path(self) -> str:
+        return self.__file_path
+
+    def set_file_path(self, path: str):
+        self.__file_path = path
+
+    def set_fixed_card_set(self, fixed: bool):
+        self.__is_fixed_card_set = fixed
+        for card in self.cards:
+            if fixed:
+                card.set_fixed_card_set(self)
+            else:
+                card.set_fixed_card_set(None)
+
+    def is_fixed_card_set(self) -> bool:
+        return self.__is_fixed_card_set
 
     def next(self, seen, unseen):
         index = random.randint(0, len(unseen) - 1)
@@ -100,7 +125,7 @@ class CardSet(StudySet):
         del unseen[index]
         return card
 
-    def serialize(self, state) -> dict:
+    def serialize(self) -> dict:
         state = {
             "name": repr(self.name),
             "version": 1,
@@ -108,7 +133,9 @@ class CardSet(StudySet):
         }
         for card in self.cards:
             state["cards"].append(
-                [card.type.name.lower(), card.english.text, card.russian.text])
+                [card.type.name.lower(),
+                 card.get_russian().text,
+                 card.get_english().text])
         return {"card_set": state}
 
             

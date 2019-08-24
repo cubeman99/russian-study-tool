@@ -54,12 +54,13 @@ class Card:
 
     def __init__(self, front="", back=""):
         self.word_type = None
-        self.text = [front, back]
+        self.text = [AccentedText(front), AccentedText(back)]
         self.attributes = [[], []]
         self.word_name = AccentedText(self.russian)
         self.examples = []
         self.related_cards = []
         self.source = None
+        self.__fixed_card_set = None
 
         # CardStudyData
         self.proficiency_level = 0  # 0 = new/unseen
@@ -71,6 +72,12 @@ class Card:
         # used by Scheduler
         self.rep = None
         self.age = 0
+
+    def get_fixed_card_set(self):
+        return self.__fixed_card_set
+
+    def set_fixed_card_set(self, card_set):
+        self.__fixed_card_set = card_set
 
     def generate_word_name(self):
         """Generate the lits of word names from the card text."""

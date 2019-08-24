@@ -130,7 +130,7 @@ class ScrollBar(widgets.Widget):
 
 
 class AbstractScrollArea(widgets.Widget):
-    def __init__(self):
+    def __init__(self, widget=None):
         super().__init__()
         self.__widget = None
         self.__layout = SubRegionLayout()
@@ -140,6 +140,9 @@ class AbstractScrollArea(widgets.Widget):
         main_layout.add_layout(self.__layout)
         main_layout.add_widget(self.__scrollbar_h)
         self.set_layout(main_layout)
+
+        if widget:
+            self.set_widget(widget)
 
     def get_widget(self) -> widgets.Widget:
         return self.__widget

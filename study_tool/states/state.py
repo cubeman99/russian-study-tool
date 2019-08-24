@@ -57,6 +57,12 @@ class State:
 
     def update(self, dt):
         pass
+    
+    def on_key_press(self, key, text):
+        pass
+    
+    def on_key_release(self, key):
+        pass
 
     def draw(self, g):
         screen_width, screen_height = self.app.screen.get_size()

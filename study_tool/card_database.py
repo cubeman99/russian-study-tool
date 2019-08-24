@@ -58,6 +58,7 @@ class CardDatabase:
         self.word_to_cards_dict = {}
         self.russian_key_to_card_dict = {}
         self.english_key_to_card_dict = {}
+        self.__path_to_card_sets_dict = {}
 
     def clear(self):
         """Clear all cards."""
@@ -66,6 +67,10 @@ class CardDatabase:
         self.word_to_cards_dict = {}
         self.russian_key_to_card_dict = {}
         self.english_key_to_card_dict = {}
+        self.__path_to_card_sets_dict = {}
+
+    def get_card_sets_from_path(self, path: str) -> list:
+        return self.__path_to_card_sets_dict.get(path, [])
 
     def get_card(self, word_type: WordType, english=None, russian=None):
         if english is not None and russian is not None:
@@ -156,7 +161,8 @@ class CardDatabase:
     def serialize_card_data(self) -> dict:
         state = []
         for card in self.iter_cards():
-            state.append(card.serialize_card_data())
+            if card.get_fixed_card_set() is None:
+                state.append(card.serialize_card_data())
         return state
 
     def deserialize_card_data(self, state: dict):
@@ -210,6 +216,7 @@ class CardDatabase:
         state = state["card_set"]
         card_set = CardSet()
         card_set.set_name(AccentedText(state["name"]))
+        card_set.key = state["name"].lower().replace(" ", "_")
         for card_state in state["cards"]:
             assert 1 <= len(card_state) <= 3
             word_type = parse_word_type(card_state[0])
@@ -302,10 +309,11 @@ class CardDatabase:
                                         1:] or [""])[0].strip()
                         value = line[len(command) + 1:].strip()
                         if command == "name":
-                            card_set = CardSet()
+                            card_set = CardSet(fixed_card_set=True)
                             card_set.source = SourceLocation(filename=filename,
                                                              line_number=line_number,
                                                              line_text=line)
+                            self.__add_card_set(card_set, path=filename)
                             card_set.name = AccentedText(value)
                             card_set.key = card_set.name.text.lower().replace(" ", "_")
                             card_sets.append(card_set)
@@ -359,6 +367,7 @@ class CardDatabase:
                                                     .format(len(split_attributes)))
                             for split_index, text_l in enumerate(text_l_list):
                                 card = Card()
+                                card.set_fixed_card_set(card_set)
                                 card.source = SourceLocation(filename=filename,
                                                              line_number=line_number,
                                                              line_text=line)
@@ -412,9 +421,16 @@ class CardDatabase:
                             card_set = self.deserialize_card_set(state)
                             if card_set:
                                 package.add_card_set(card_set)
+                                self.__add_card_set(card_set, path=file_path)
 
         if len(package.packages) == 0 and len(package.card_sets) == 0:
             return None
         package.card_sets.sort(key=lambda x: x.name)
         package.packages.sort(key=lambda x: x.name)
         return package
+
+    def __add_card_set(self, card_set: CardSet, path: str):
+        if path not in self.__path_to_card_sets_dict:
+            self.__path_to_card_sets_dict[path] = []
+        self.__path_to_card_sets_dict[path].append(card_set)
+        card_set.set_file_path(path)

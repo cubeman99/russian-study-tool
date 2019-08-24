@@ -8,6 +8,7 @@ from cmg import math
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
+from study_tool import card_attributes
 from study_tool.card import *
 from study_tool.card_attributes import *
 from study_tool.card_set import CardSet, CardSetPackage, StudySet
@@ -279,9 +280,7 @@ class StudyState(State):
         attributes = sorted(attributes, key=lambda x: x.name)
         # Measure the width of each attribute text
         for index, attr in enumerate(attributes):
-            name = attr.name
-            if attr in ATTRIBUTE_NAMES:
-                name = ATTRIBUTE_NAMES[attr]
+            name = card_attributes.get_card_attribute_display_name(attr)
             w, h = g.measure_text(text=name, font=self.card_attribute_font)
             total_attr_width += w
             if index > 0:
@@ -290,9 +289,7 @@ class StudyState(State):
         ax = screen_center_x - (total_attr_width / 2)
         ay = y
         for attr in attributes:
-            name = attr.name
-            if attr in ATTRIBUTE_NAMES:
-                name = ATTRIBUTE_NAMES[attr]
+            name = card_attributes.get_card_attribute_display_name(attr)
             w, h = g.measure_text(text=name, font=self.card_attribute_font)
             rect = pygame.Rect(ax, ay - h, w, h)
             rect.inflate_ip(8, 6)

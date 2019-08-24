@@ -92,6 +92,7 @@ class MenuState(State):
                     card_set=card_set.get_problem_cards(),
                     params=StudyParams(random_side=True))),
             ("List", lambda: self.app.push_card_list_state(card_set)),
+            ("Edit", lambda: self.app.push_card_set_edit_state(card_set)),
             ("Cancel", None)]
         self.app.push_state(SubMenuState(card_set.name, options))
 

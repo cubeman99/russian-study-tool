@@ -3,7 +3,7 @@ from pygame.rect import Rect
 from cmg import color
 from cmg.widgets.layout_item import LayoutItem
 from cmg.math import Vec2
-
+from cmg.event import Event
 
 class Widget(LayoutItem):
     def __init__(self):
@@ -13,9 +13,30 @@ class Widget(LayoutItem):
         self.focused_widget = None
         self.focused = False
         self.focusable = False
+        self.closed = Event()
+        self.__visible = True
 
     def get_layout(self):
         return self.layout
+    
+    def is_visible(self) -> bool:
+        return self.__visible
+
+    def set_visible(self, visible: bool):
+        if not visible:
+            self.closed.emit()
+        self.__visible = visible
+
+    def close(self):
+        self.set_visible(False)
+
+    def set_parent(self, parent):
+        if parent != self.parent:
+            if self.focused:
+                self.get_root_parent().cycle_next_focus()
+            if self.focused:
+                self.get_root_parent().change_focus(None)
+            self.parent = parent
 
     def get_focusable(self) -> bool:
         return self.focusable
@@ -75,13 +96,22 @@ class Widget(LayoutItem):
 
     def on_lose_focus(self):
         pass
+    
+    def on_key_pressed(self, key, text):
+        pass
+    
+    def on_key_released(self, key):
+        pass
 
     def set_layout(self, layout):
         self.layout = layout
-        self.layout.parent = self
+        self.layout.set_parent(self)
 
     def focus(self) -> bool:
         self.get_root_parent().change_focus(self)
+
+    def get_focused_widget(self):
+        return self.focused_widget
 
     def is_focused(self) -> bool:
         return self.focused

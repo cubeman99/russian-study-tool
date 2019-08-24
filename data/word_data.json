@@ -86980,6 +86980,381 @@
       "examples": [],
       "name": "раковина",
       "type": "Noun"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "престу'пную",
+            "Dative": "престу'пной",
+            "Genetive": "престу'пной",
+            "Instrumental": "престу'пной",
+            "Nominative": "престу'пная",
+            "Prepositional": "престу'пной"
+          },
+          "Masculine": {
+            "Accusative": "престу'пного",
+            "Dative": "престу'пному",
+            "Genetive": "престу'пного",
+            "Instrumental": "престу'пным",
+            "Nominative": "престу'пный",
+            "Prepositional": "престу'пном"
+          },
+          "Neuter": {
+            "Accusative": "престу'пное",
+            "Dative": "престу'пному",
+            "Genetive": "престу'пного",
+            "Instrumental": "престу'пным",
+            "Nominative": "престу'пное",
+            "Prepositional": "престу'пном"
+          },
+          "Plural": {
+            "Accusative": "престу'пных",
+            "Dative": "престу'пным",
+            "Genetive": "престу'пных",
+            "Instrumental": "престу'пными",
+            "Nominative": "престу'пные",
+            "Prepositional": "престу'пных"
+          }
+        },
+        "short_form": {
+          "Femanine": "престу'пна",
+          "Masculine": "престу'пен",
+          "Neuter": "престу'пно",
+          "Plural": "престу'пны"
+        }
+      },
+      "examples": [],
+      "name": "преступный",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "живопи'сную",
+            "Dative": "живопи'сной",
+            "Genetive": "живопи'сной",
+            "Instrumental": "живопи'сной",
+            "Nominative": "живопи'сная",
+            "Prepositional": "живопи'сной"
+          },
+          "Masculine": {
+            "Accusative": "живопи'сного",
+            "Dative": "живопи'сному",
+            "Genetive": "живопи'сного",
+            "Instrumental": "живопи'сным",
+            "Nominative": "живопи'сный",
+            "Prepositional": "живопи'сном"
+          },
+          "Neuter": {
+            "Accusative": "живопи'сное",
+            "Dative": "живопи'сному",
+            "Genetive": "живопи'сного",
+            "Instrumental": "живопи'сным",
+            "Nominative": "живопи'сное",
+            "Prepositional": "живопи'сном"
+          },
+          "Plural": {
+            "Accusative": "живопи'сных",
+            "Dative": "живопи'сным",
+            "Genetive": "живопи'сных",
+            "Instrumental": "живопи'сными",
+            "Nominative": "живопи'сные",
+            "Prepositional": "живопи'сных"
+          }
+        },
+        "short_form": {
+          "Femanine": "-",
+          "Masculine": "-",
+          "Neuter": "-",
+          "Plural": "-"
+        }
+      },
+      "examples": [],
+      "name": "живописный",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "схо'дки",
+            "Dative": "схо'дкам",
+            "Genetive": "схо'док",
+            "Instrumental": "схо'дками",
+            "Nominative": "схо'дки",
+            "Prepositional": "схо'дках"
+          },
+          "Singular": {
+            "Accusative": "схо'дку",
+            "Dative": "схо'дке",
+            "Genetive": "схо'дки",
+            "Instrumental": "схо'дкой",
+            "Nominative": "схо'дка",
+            "Prepositional": "схо'дке"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "сходка",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "маршру'ты",
+            "Dative": "маршру'там",
+            "Genetive": "маршру'тов",
+            "Instrumental": "маршру'тами",
+            "Nominative": "маршру'ты",
+            "Prepositional": "маршру'тах"
+          },
+          "Singular": {
+            "Accusative": "маршру'т",
+            "Dative": "маршру'ту",
+            "Genetive": "маршру'та",
+            "Instrumental": "маршру'том",
+            "Nominative": "маршру'т",
+            "Prepositional": "маршру'те"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "маршрут",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "пре'данности",
+            "Dative": "пре'данностям",
+            "Genetive": "пре'данностей",
+            "Instrumental": "пре'данностями",
+            "Nominative": "пре'данности",
+            "Prepositional": "пре'данностях"
+          },
+          "Singular": {
+            "Accusative": "пре'данность",
+            "Dative": "пре'данности",
+            "Genetive": "пре'данности",
+            "Instrumental": "пре'данностью",
+            "Nominative": "пре'данность",
+            "Prepositional": "пре'данности"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "преданность",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "скуча'йте",
+          "Singular": "скуча'й"
+        },
+        "infinitive": "скучать",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "скуча'ем",
+            "Second": "скуча'ете",
+            "Third": "скуча'ют"
+          },
+          "Singular": {
+            "First": "скуча'ю",
+            "Second": "скуча'ешь",
+            "Third": "скуча'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "скуча'вший",
+            "Present": "скуча'ющий"
+          },
+          "Adverbial": {
+            "Past": "скуча'в",
+            "Present": "скуча'я"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "скуча'ла",
+          "Masculine": "скуча'л",
+          "Neuter": "скуча'ло",
+          "Plural": "скуча'ли"
+        },
+        "translation": "to be bored"
+      },
+      "examples": [],
+      "name": "скучать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          ""
+        ],
+        "imperative": {
+          "Plural": "шпио'ньте",
+          "Singular": "шпио'нь"
+        },
+        "infinitive": "шпионить",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "шпио'ним",
+            "Second": "шпио'ните",
+            "Third": "шпио'нят"
+          },
+          "Singular": {
+            "First": "шпио'ню",
+            "Second": "шпио'нишь",
+            "Third": "шпио'нит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "шпио'нивший",
+            "Present": "шпио'нящий"
+          },
+          "Adverbial": {
+            "Past": "шпио'нив",
+            "Present": "шпио'ня"
+          },
+          "Passive": {
+            "Past": "шпио'ненный",
+            "Present": "шпио'нимый"
+          }
+        },
+        "past": {
+          "Femanine": "шпио'нила",
+          "Masculine": "шпио'нил",
+          "Neuter": "шпио'нило",
+          "Plural": "шпио'нили"
+        },
+        "translation": "to spy"
+      },
+      "examples": [],
+      "name": "шпионить",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "задрёмывать"
+        ],
+        "imperative": {
+          "Plural": "задремли'те",
+          "Singular": "задремли'"
+        },
+        "infinitive": "задремать",
+        "info": "This verb can also mean the following: get drowsy.",
+        "non_past": {
+          "Plural": {
+            "First": "задре'млем",
+            "Second": "задре'млете",
+            "Third": "задре'млют"
+          },
+          "Singular": {
+            "First": "задремлю'",
+            "Second": "задре'млешь",
+            "Third": "задре'млет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "задрема'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "задрема'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "задрема'ла",
+          "Masculine": "задрема'л",
+          "Neuter": "задрема'ло",
+          "Plural": "задрема'ли"
+        },
+        "translation": "to doze off"
+      },
+      "examples": [],
+      "name": "задремать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "сливаться"
+        ],
+        "imperative": {
+          "Plural": "сле'йтесь",
+          "Singular": "сле'йся"
+        },
+        "infinitive": "слиться",
+        "info": "This verb can also mean the following: fuse, merge, blend, interflow, do.",
+        "non_past": {
+          "Plural": {
+            "First": "сольёмся",
+            "Second": "сольётесь",
+            "Third": "солью'тся"
+          },
+          "Singular": {
+            "First": "солью'сь",
+            "Second": "сольёшься",
+            "Third": "сольётся"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "сли'вшийся",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "сли'вшись",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "слила'сь",
+          "Masculine": "сли'лся",
+          "Neuter": "слило'сь",
+          "Plural": "слили'сь"
+        },
+        "translation": "to flow together"
+      },
+      "examples": [],
+      "name": "слиться",
+      "type": "Verb"
     }
   ]
 }
