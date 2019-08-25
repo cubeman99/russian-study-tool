@@ -1,0 +1,16 @@
+card_set:
+  name: Birds
+  version: 1
+  cards:
+    - [noun, птица, bird]
+    - [noun, дятел, woodpecker]
+    - [noun, воробей, sparrow]
+    - [noun, ворона, crow]
+    - [noun, сова, owl]
+    - [noun, пингвин, penguin]
+    - [noun, попугай, parrot]
+    - [noun, малиновка, robin]
+    - [noun, голубь, pigeon]
+    - [noun, павлин, peacock]
+    - [noun, фламинго, flamingo]
+    - [noun, страус, ostrich]

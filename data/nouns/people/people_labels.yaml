@@ -1,0 +1,19 @@
+card_set:
+  name: People Labels
+  version: 1
+  cards:
+    - [noun, князь, prince]
+    - [noun, парень, lad]
+    - [noun, король, king]
+    - [noun, царь, tsar]
+    - [noun, умница, clever person]
+    - [noun, плакса, crybaby]
+    - [noun, коллега, colleague]
+    - [noun, разиня, scatterbrain]
+    - [noun, сирота, orphan]
+    - [noun, неряха, 'slob, slovenly person']
+    - [noun, пьяница, drunkard]
+    - [noun, обжора, glutton]
+    - [noun, бродяга, tramp]
+    - [noun, невежда, ignoramus]
+    - [noun, одиночка, lone person]

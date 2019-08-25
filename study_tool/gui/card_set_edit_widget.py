@@ -39,7 +39,6 @@ class CardSetEditWidget(widgets.Widget):
         self.__button_convert = widgets.Button("Assimilate to YAML")
         self.__label_card_count = widgets.Label("Cards [{}]:".format(0))
         self.__label_path = widgets.Label("")
-        self.__button_convert = widgets.Button("Assimilate set to YAML")
         
         self.table = widgets.Widget()
         self.__layout_card_list = widgets.VBoxLayout()

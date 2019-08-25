@@ -1,0 +1,26 @@
+card_set:
+  name: Exotic Animals
+  version: 1
+  cards:
+    - [noun, антилопа, antelope]
+    - [noun, верблюд, camel]
+    - [noun, бизон, bison]
+    - [noun, буйвол, buffalo]
+    - [noun, слон, elephant]
+    - [noun, лев, lion]
+    - [noun, тигр, tiger]
+    - [noun, жираф, giraffe]
+    - [noun, зебра, zebra]
+    - [noun, носорог, rhino]
+    - [noun, гиппопотам, hippopotamus]
+    - [noun, горилла, gorilla]
+    - [noun, шимпанзе, chimpanzee]
+    - [noun, орангутанг, orangutan]
+    - [noun, леопард, leopard]
+    - [noun, гепард, cheetah]
+    - [noun, панда, panda]
+    - [noun, газель, gazelle]
+    - [noun, кенгуру, kangaroo]
+    - [noun, эму, emu]
+    - [noun, вомбат, wombat]
+    - [noun, коала, koala]

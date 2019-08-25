@@ -59,3 +59,586 @@ cards:
 - {attrs: [f], en: filly, ru: кобы'лка, type: noun}
 - {attrs: [impf], en: to put on, ru: надева'ть, type: verb}
 - {attrs: [m], en: a table, ru: сто'л, type: noun}
+- {attrs: [adjasnoun, n], en: animal, ru: живо'тное, type: noun}
+- {attrs: [m], en: cat (male), ru: ко'т, type: noun}
+- {attrs: [f], en: cat (female), ru: ко'шка, type: noun}
+- {attrs: [f], en: dog (female), ru: соба'ка, type: noun}
+- {attrs: [m], en: bear, ru: медве'дь, type: noun}
+- {attrs: [m], en: rabbit, ru: кро'лик, type: noun}
+- {attrs: [m], en: hare, ru: за'яц, type: noun}
+- {attrs: [f], en: monkey, ru: обезья'на, type: noun}
+- {attrs: [m], en: wolf, ru: во'лк, type: noun}
+- {attrs: [f], en: fox, ru: лиса', type: noun}
+- {attrs: [m], en: mole, ru: кро'т, type: noun}
+- {attrs: [f], en: mouse, ru: мы'шь, type: noun}
+- {attrs: [f], en: rat, ru: кры'са, type: noun}
+- {attrs: [m], en: hedge-hog, ru: ёжик, type: noun}
+- {attrs: [f], en: snake, ru: змея', type: noun}
+- {attrs: [m], en: 'elk, moose', ru: ло'сь, type: noun}
+- {attrs: [m], en: deer, ru: оле'нь, type: noun}
+- {attrs: [m], en: porcupine, ru: дикобра'з, type: noun}
+- {attrs: [f], en: squirrel, ru: бе'лка, type: noun}
+- {attrs: [m], en: raccoon, ru: ено'т, type: noun}
+- {attrs: [m], en: chipmunk, ru: бурунду'к, type: noun}
+- {attrs: [f], en: antelope, ru: антило'па, type: noun}
+- {attrs: [m], en: camel, ru: верблю'д, type: noun}
+- {attrs: [m], en: bison, ru: бизо'н, type: noun}
+- {attrs: [m], en: buffalo, ru: бу'йвол, type: noun}
+- {attrs: [m], en: elephant, ru: сло'н, type: noun}
+- {attrs: [m], en: lion, ru: ле'в, type: noun}
+- {attrs: [m], en: tiger, ru: ти'гр, type: noun}
+- {attrs: [m], en: giraffe, ru: жира'ф, type: noun}
+- {en: zebra, ru: зе'бра, type: noun}
+- {attrs: [m], en: rhino, ru: носоро'г, type: noun}
+- {attrs: [m], en: hippopotamus, ru: гиппопота'м, type: noun}
+- {attrs: [f], en: gorilla, ru: гори'лла, type: noun}
+- {attrs: [indec], en: chimpanzee, ru: шимпанзе', type: noun}
+- {attrs: [m], en: orangutan, ru: орангута'нг, type: noun}
+- {attrs: [m], en: leopard, ru: леопа'рд, type: noun}
+- {attrs: [m], en: cheetah, ru: гепа'рд, type: noun}
+- {attrs: [f], en: panda, ru: па'нда, type: noun}
+- {attrs: [f], en: gazelle, ru: газе'ль, type: noun}
+- {attrs: [indec], en: kangaroo, ru: кенгуру', type: noun}
+- {attrs: [indec], en: emu, ru: э'му, type: noun}
+- {attrs: [m], en: wombat, ru: во'мбат, type: noun}
+- {attrs: [f], en: koala, ru: коа'ла, type: noun}
+- {attrs: [f], en: chicken, ru: ку'рица, type: noun}
+- {attrs: [m], en: cock (chicken), ru: пету'х, type: noun}
+- {attrs: [f], en: cow, ru: коро'ва, type: noun}
+- {en: bull, ru: бы'к, type: noun}
+- {attrs: [f], en: sheep, ru: овца', type: noun}
+- {attrs: [m], en: ram, ru: бара'н, type: noun}
+- {attrs: [f], en: goat (female), ru: коза', type: noun}
+- {en: goat (male), ru: козёл, type: noun}
+- {en: donkey, ru: осе'л, type: noun}
+- {attrs: [f], en: horse, ru: ло'шадь, type: noun}
+- {attrs: [m], en: goose, ru: гу'сь, type: noun}
+- {attrs: [f], en: duck, ru: у'тка, type: noun}
+- {attrs: [m], en: spider, ru: пау'к, type: noun}
+- {en: ant, ru: мураве'й, type: noun}
+- {attrs: [f], en: bee, ru: пчела', type: noun}
+- {attrs: [f], en: wasp, ru: оса', type: noun}
+- {attrs: [m], en: worm, ru: червя'к, type: noun}
+- {en: butterfly, ru: ба'бочка, type: noun}
+- {attrs: [f], en: moth, ru: мо'ль, type: noun}
+- {en: fish, ru: ры'ба, type: noun}
+- {attrs: [m], en: dolphin, ru: дельфи'н, type: noun}
+- {en: crocodile, ru: крокоди'л, type: noun}
+- {attrs: [m], en: alligator, ru: аллига'тор, type: noun}
+- {attrs: [m], en: octopus, ru: осьмино'г, type: noun}
+- {attrs: [m], en: whale, ru: ки'т, type: noun}
+- {attrs: [f], en: shark, ru: аку'ла, type: noun}
+- {attrs: [f], en: turtle, ru: черепа'ха, type: noun}
+- {attrs: [f], en: frog, ru: лягу'шка, type: noun}
+- {attrs: [f], en: seal, ru: не'рпа, type: noun}
+- {en: toad, ru: жа'ба, type: noun}
+- {attrs: [m], en: squid, ru: кальма'р, type: noun}
+- {attrs: [f], en: bird, ru: пти'ца, type: noun}
+- {attrs: [m], en: woodpecker, ru: дя'тел, type: noun}
+- {attrs: [m], en: sparrow, ru: воробе'й, type: noun}
+- {attrs: [f], en: crow, ru: воро'на, type: noun}
+- {attrs: [f], en: owl, ru: сова', type: noun}
+- {attrs: [m], en: penguin, ru: пингви'н, type: noun}
+- {attrs: [m], en: parrot, ru: попуга'й, type: noun}
+- {attrs: [f], en: robin, ru: мали'новка, type: noun}
+- {attrs: [m], en: pigeon, ru: го'лубь, type: noun}
+- {attrs: [m], en: peacock, ru: павли'н, type: noun}
+- {attrs: [indec], en: flamingo, ru: флами'нго, type: noun}
+- {attrs: [m], en: ostrich, ru: стра'ус, type: noun}
+- {en: musical instrument, ru: музыка'льный инструме'нт, type: noun}
+- {attrs: [indec], en: piano, ru: пиани'но, type: noun}
+- {attrs: [f], en: violin, ru: скри'пка, type: noun}
+- {attrs: [f], en: guitar, ru: гитара, type: noun}
+- {attrs: [m], en: orchestra, ru: орке'стр, type: noun}
+- {attrs: [f], en: paint, ru: кра'ска, type: noun}
+- {attrs: [n], en: body, ru: те'ло, type: noun}
+- {attrs: [f], en: head, ru: голова', type: noun}
+- {attrs: [pluronly], en: hair, ru: во'лосы, type: noun}
+- {attrs: [n], en: face, ru: лицо', type: noun}
+- {attrs: [m], en: eye, ru: гла'з, type: noun}
+- {attrs: [n], en: ear, ru: у'хо, type: noun}
+- {attrs: [m], en: nose, ru: но'с, type: noun}
+- {attrs: [m], en: mouth, ru: ро'т, type: noun}
+- {attrs: [f], en: lip, ru: губа', type: noun}
+- {attrs: [m], en: tooth, ru: зу'б, type: noun}
+- {attrs: [f], en: cheek, ru: щека', type: noun}
+- {attrs: [f], en: neck, ru: ше'я, type: noun}
+- {en: shoulder, ru: плечо', type: noun}
+- {attrs: [f], en: back, ru: спина', type: noun}
+- {en: 'chest, breast', ru: гру'дь, type: noun}
+- {attrs: [f], en: 'boob, tit', ru: си'ська, type: noun}
+- {attrs: [f], en: hand/arm, ru: рука', type: noun}
+- {en: elbow, ru: ло'кот, type: noun}
+- {attrs: [m], en: finger, ru: па'лец, type: noun}
+- {attrs: [m], en: 'belly, stomach (exterior)', ru: живо'т, type: noun}
+- {attrs: [f], en: waist, ru: та'лия, type: noun}
+- {en: hips, ru: бёдра, type: noun}
+- {attrs: [f], en: leg, ru: нога', type: noun}
+- {attrs: [n], en: knee, ru: коле'но, type: noun}
+- {attrs: [f], en: foot, ru: стопа', type: noun}
+- {attrs: [f], en: street, ru: у'лица, type: noun}
+- {en: road, ru: доро'га, type: noun}
+- {attrs: [f], en: parking, ru: стоя'нка, type: noun}
+- {attrs: [m], en: locamotive, ru: парово'з, type: noun}
+- {attrs: [n], en: place, ru: ме'сто, type: noun}
+- {attrs: [m], en: store, ru: магази'н, type: noun}
+- {attrs: [f], en: hotel, ru: гости'ница, type: noun}
+- {attrs: [n], en: building, ru: зда'ние, type: noun}
+- {en: market, ru: ры'нке, type: noun}
+- {attrs: [m], en: institute, ru: институ'т, type: noun}
+- {attrs: [m], en: museum, ru: музе'й, type: noun}
+- {attrs: [f], en: square, ru: пло'щадь, type: noun}
+- {attrs: [m], en: train station, ru: вокза'л, type: noun}
+- {attrs: [m], en: movie theater, ru: кинотеа'тр, type: noun}
+- {attrs: [m], en: club, ru: клуб, type: noun}
+- {attrs: [indec], en: 'subway, underground, tube', ru: метро', type: noun}
+- {attrs: [m], en: office, ru: о'фис, type: noun}
+- {attrs: [f], en: postal service; mail, ru: по'чта, type: noun}
+- {attrs: [m], en: zoo, ru: зоопа'рк, type: noun}
+- {attrs: [f], en: clinic, ru: поликли'ника, type: noun}
+- {attrs: [f], en: police, ru: поли'ция, type: noun}
+- {attrs: [f], en: 'country side, village', ru: дере'вня, type: noun}
+- {attrs: [f], en: clothes, ru: одежда, type: noun}
+- {attrs: [f], en: shirt, ru: рубашка, type: noun}
+- {attrs: [m], en: suit, ru: костюм, type: noun}
+- {en: trousers, ru: брюки, type: noun}
+- {en: socks, ru: носки, type: noun}
+- {attrs: [m], en: sweater, ru: свитер, type: noun}
+- {attrs: [f], en: t-shirt, ru: футболка, type: noun}
+- {attrs: [f], en: 't-shirt, polo-shirt', ru: тенниска, type: noun}
+- {attrs: [f], en: 'singlet, tank-top', ru: майка, type: noun}
+- {attrs: [f], en: blouse, ru: кофта, type: noun}
+- {en: jeans, ru: джинсы, type: noun}
+- {attrs: [f], en: skirt, ru: юбка, type: noun}
+- {attrs: [n], en: dress, ru: пла'тье, type: noun}
+- {attrs: [f], en: poloneck, ru: водолазка, type: noun}
+- {attrs: [m], en: light jacket, ru: жакет, type: noun}
+- {attrs: [f], en: heavy jacket, ru: куртка, type: noun}
+- {attrs: [m], en: waistcoat, ru: жилет, type: noun}
+- {attrs: [m], en: suit jacket, ru: пиджак, type: noun}
+- {attrs: [m], en: raincoat, ru: пла'щ, type: noun}
+- {attrs: [m], en: scarf, ru: шарф, type: noun}
+- {attrs: [indec], en: coat, ru: пальто, type: noun}
+- {attrs: [f], en: fur coat, ru: шуба, type: noun}
+- {attrs: [f], en: 'cap, hat', ru: шапка, type: noun}
+- {en: sport suit, ru: спортивный костюм, type: noun}
+- {en: fancy shoes, ru: туфли, type: noun}
+- {en: 'sneakers, sport shoes', ru: кроссовки, type: noun}
+- {attrs: [m], en: 'gumshoes, canvas shoes', ru: кеды, type: noun}
+- {en: boot shoes, ru: ботинки, type: noun}
+- {en: sandals, ru: босоножки, type: noun}
+- {en: slippers, ru: тапочки, type: noun}
+- {en: bra, ru: бюстгалтер, type: noun}
+- {en: jewelry, ru: украшения, type: noun}
+- {attrs: [n], en: ring, ru: кольцо, type: noun}
+- {attrs: [f], en: chain, ru: цепочка, type: noun}
+- {attrs: [m], en: bracelet, ru: браслет, type: noun}
+- {attrs: [n], en: necklace, ru: ожерелье, type: noun}
+- {attrs: [indec], en: 'choker, necklace', ru: колье', type: noun}
+- {en: earrings, ru: сережки, type: noun}
+- {attrs: [m], en: pendant, ru: кулон, type: noun}
+- {attrs: [f], en: brooch, ru: бро'шь, type: noun}
+- {en: glasses, ru: очки', type: noun}
+- {en: 'clock, watch', ru: часы', type: noun}
+- {attrs: [m], en: computer, ru: компью'тер, type: noun}
+- {en: internet, ru: интерне'т, type: noun}
+- {attrs: [m], en: password, ru: паро'ль, type: noun}
+- {attrs: [m], en: (web)site, ru: сайт, type: noun}
+- {attrs: [m], en: 'canal, channel', ru: кана'л, type: noun}
+- {attrs: [m], en: TV series, ru: сериа'л, type: noun}
+- {attrs: [m], en: screen, ru: экра'н, type: noun}
+- {attrs: [m], en: printer, ru: при'нтер, type: noun}
+- {attrs: [m], en: scanner, ru: ска'нер, type: noun}
+- {attrs: [m], en: copier, ru: копи'р, type: noun}
+- {attrs: [m], en: fax, ru: факс, type: noun}
+- {attrs: [m], en: telephone, ru: телефо'н, type: noun}
+- {attrs: [indec], en: radio, ru: ра'дио, type: noun}
+- {attrs: [m], en: speaker, ru: дина'мик, type: noun}
+- {attrs: [m], en: laptop, ru: ноутбу'к, type: noun}
+- {attrs: [m], en: pencil, ru: каранда'ш, type: noun}
+- {attrs: [f], en: pen, ru: ру'чка, type: noun}
+- {attrs: [f], en: paper, ru: бума'га, type: noun}
+- {attrs: [f], en: book, ru: кни'га, type: noun}
+- {attrs: [f], en: notebook, ru: тетра'дь, type: noun}
+- {attrs: [f], en: school, ru: шко'ла, type: noun}
+- {attrs: [m], en: lesson, ru: уро'к, type: noun}
+- {attrs: [n], en: letter, ru: письмо', type: noun}
+- {attrs: [f], en: newspaper, ru: газе'та, type: noun}
+- {attrs: [m], en: dictionary, ru: слова'рь, type: noun}
+- {attrs: [n], en: word, ru: сло'во, type: noun}
+- {attrs: [m], en: magazine, ru: журна'л, type: noun}
+- {attrs: [f], en: photo, ru: фотогра'фия, type: noun}
+- {attrs: [m], en: briefcase, ru: портфе'ль, type: noun}
+- {attrs: [m], en: key, ru: клю'ч, type: noun}
+- {en: a piece (pieces), ru: кусо'к (кусо'чки), type: noun}
+- {attrs: [n], en: name, ru: и'мя, type: noun}
+- {attrs: [f], en: country, ru: страна', type: noun}
+- {attrs: [n], en: time, ru: вре'мя, type: noun}
+- {attrs: [m], en: sign, ru: зна'к, type: noun}
+- {attrs: [n], en: flame, ru: пла'мя, type: noun}
+- {attrs: [f], en: 'mistake, error', ru: оши'бка, type: noun}
+- {attrs: [f], en: joke, ru: шу'тка, type: noun}
+- {attrs: [m], en: edge, ru: кра'й, type: noun}
+- {attrs: [f], en: role, ru: ро'ль, type: noun}
+- {attrs: [n], en: gun, ru: ружьё, type: noun}
+- {attrs: [n], en: seed, ru: се'мя, type: noun}
+- {attrs: [f], en: lie, ru: ло'жь, type: noun}
+- {attrs: [m], en: step, ru: ша'г, type: noun}
+- {attrs: [m], en: ticket, ru: биле'т, type: noun}
+- {attrs: [f], en: party, ru: вечери'нка, type: noun}
+- {en: money, ru: де'ньги, type: noun}
+- {attrs: [f], en: 'map, card', ru: ка'рта, type: noun}
+- {attrs: [f], en: problem, ru: пробле'ма, type: noun}
+- {attrs: [m], en: project, ru: прое'кт, type: noun}
+- {attrs: [f], en: system, ru: систе'ма, type: noun}
+- {attrs: [f], en: bag, ru: су'мка, type: noun}
+- {attrs: [f], en: article, ru: статья', type: noun}
+- {attrs: [m], en: level, ru: у'ровень, type: noun}
+- {attrs: [m], en: object, ru: объе'кт, type: noun}
+- {attrs: [m], en: nightmare, ru: кошма'р, type: noun}
+- {attrs: [m], en: 'sleep, dream', ru: со'н, type: noun}
+- {attrs: [f], en: dream (aspiration), ru: мечта', type: noun}
+- {attrs: [n], en: feeling, ru: чу'вство, type: noun}
+- {attrs: [f], en: truth, ru: пра'вда, type: noun}
+- {attrs: [m], en: Monday, ru: понеде'льник, type: noun}
+- {attrs: [m], en: Tuesday, ru: вто'рник, type: noun}
+- {attrs: [f], en: Wednesday, ru: среда', type: noun}
+- {attrs: [m], en: Thursday, ru: четве'рг, type: noun}
+- {attrs: [f], en: Friday, ru: пя'тница, type: noun}
+- {attrs: [f], en: Saturday, ru: суббо'та, type: noun}
+- {attrs: [n], en: Sunday, ru: воскресе'нье, type: noun}
+- {attrs: [m], en: January, ru: янва'рь, type: noun}
+- {attrs: [m], en: February, ru: февра'ль, type: noun}
+- {attrs: [m], en: March, ru: ма'рт, type: noun}
+- {attrs: [m], en: April, ru: апре'ль, type: noun}
+- {attrs: [m], en: May, ru: ма'й, type: noun}
+- {attrs: [m], en: June, ru: ию'нь, type: noun}
+- {attrs: [m], en: July, ru: ию'ль, type: noun}
+- {attrs: [m], en: August, ru: а'вгуст, type: noun}
+- {attrs: [m], en: September, ru: сентя'брь, type: noun}
+- {attrs: [m], en: October, ru: октя'брь, type: noun}
+- {attrs: [m], en: November, ru: ноя'брь, type: noun}
+- {attrs: [m], en: December, ru: дека'брь, type: noun}
+- {attrs: [f], en: spring, ru: весна', type: noun}
+- {attrs: [n], en: summer, ru: ле'то, type: noun}
+- {attrs: [f], en: fall, ru: о'сень, type: noun}
+- {attrs: [f], en: winter, ru: зима', type: noun}
+- {attrs: [m], en: year, ru: го'д, type: noun}
+- {attrs: [m], en: month, ru: ме'сяц, type: noun}
+- {attrs: [f], en: week, ru: неде'ля, type: noun}
+- {attrs: [m], en: day, ru: де'нь, type: noun}
+- {attrs: [m], en: hour, ru: ча'с, type: noun}
+- {attrs: [f], en: minute, ru: мину'та, type: noun}
+- {attrs: [f], en: second (1/60 minute), ru: секу'нда, type: noun}
+- {en: today, ru: сего'дня, type: noun}
+- {attrs: [indec], en: tomorrow, ru: за'втра, type: noun}
+- {attrs: [indec], en: yesterday, ru: вчера', type: noun}
+- {attrs: [indec], en: day after tomorrow, ru: послеза'втра, type: noun}
+- {en: day before yesterday, ru: позавчера', type: noun}
+- {attrs: [n], en: morning, ru: у'тро, type: noun}
+- {attrs: [m], en: evening, ru: ве'чер, type: noun}
+- {attrs: [f], en: night, ru: но'чь, type: noun}
+- {en: drinks, ru: напитки, type: noun}
+- {attrs: [m], en: tea, ru: чай, type: noun}
+- {attrs: [m], en: coffee, ru: ко'фе, type: noun}
+- {attrs: [m], en: juice, ru: сок, type: noun}
+- {en: orange juice, ru: апельсиновый, type: noun}
+- {en: apple juice, ru: яблочный, type: noun}
+- {en: pear juice, ru: грушевый, type: noun}
+- {en: peach juice, ru: персиковый, type: noun}
+- {en: apricot juice, ru: абрикосовый, type: noun}
+- {en: cherry juice, ru: вишневый, type: noun}
+- {en: mixed juice, ru: смешанный, type: noun}
+- {en: gapefruit juice, ru: грейпфрутовый, type: noun}
+- {en: milkshake, ru: молочный коктейль, type: noun}
+- {attrs: [f], en: water, ru: вода, type: noun}
+- {attrs: [n], en: milk, ru: молоко', type: noun}
+- {attrs: [m], en: kefir, ru: кефир, type: noun}
+- {en: cream, ru: сли'вки, type: noun}
+- {attrs: [m], en: lemonade, ru: лимонад, type: noun}
+- {attrs: [f], en: coke, ru: кока-кола, type: noun}
+- {attrs: [indec], en: hot chocolate, ru: какао, type: noun}
+- {en: fruit, ru: фрукты, type: noun}
+- {attrs: [n], en: apple, ru: я'блоко, type: noun}
+- {attrs: [f], en: pear, ru: гру'ша, type: noun}
+- {attrs: [m], en: orange (fruit), ru: апельси'н, type: noun}
+- {en: grapes, ru: виноград, type: noun}
+- {attrs: [m], en: grapefruit, ru: грейпфру'т, type: noun}
+- {en: kiwi fruit, ru: киви, type: noun}
+- {en: mandarine, ru: мандарин, type: noun}
+- {attrs: [indec], en: mango, ru: ма'нго, type: noun}
+- {attrs: [m], en: banana, ru: бана'н, type: noun}
+- {attrs: [m], en: pineapple, ru: анана'с, type: noun}
+- {attrs: [m], en: peach, ru: пе'рсик, type: noun}
+- {attrs: [m], en: apricot, ru: абрико'с, type: noun}
+- {attrs: [f], en: plum, ru: сли'ва, type: noun}
+- {attrs: [f], en: strawberry, ru: клубни'ка, type: noun}
+- {attrs: [f], en: raspberry, ru: мали'на, type: noun}
+- {attrs: [m], en: lemon, ru: лимо'н, type: noun}
+- {attrs: [f], en: blackberry, ru: ежеви'ка, type: noun}
+- {attrs: [f], en: cherry, ru: 'ви''шня, чере''шня', type: noun}
+- {attrs: [f], en: melon, ru: ды'ня, type: noun}
+- {attrs: [m], en: watermelon, ru: арбу'з, type: noun}
+- {en: gooseberry, ru: крыжовник, type: noun}
+- {en: vegtables, ru: овощи, type: noun}
+- {en: cucumber, ru: огурец (огурцы), type: noun}
+- {en: tomato, ru: помидор (помидоры), type: noun}
+- {en: vegtable marrow, ru: кабачок (кабачки), type: noun}
+- {attrs: [nopl], en: potato, ru: картофель, type: noun}
+- {en: 'aubergine, egg-plant', ru: баклажан (баклажаны), type: noun}
+- {attrs: [f, nopl], en: cabbage, ru: капуста, type: noun}
+- {attrs: [nopl], en: cauliflower, ru: цветная капуста, type: noun}
+- {attrs: [indec, nopl], en: broccoli, ru: брокколи, type: noun}
+- {en: squash, ru: патисон (патисоны), type: noun}
+- {en: pumpkin, ru: тыква (тыквы), type: noun}
+- {attrs: [f, nopl], en: carrot, ru: морковь, type: noun}
+- {attrs: [m, nopl], en: onion, ru: лук, type: noun}
+- {en: 'pepper, capsicum', ru: перец (перцы), type: noun}
+- {attrs: [f, nopl], en: bean, ru: фасоль, type: noun}
+- {attrs: [m, nopl], en: pea, ru: горох, type: noun}
+- {attrs: [m], en: celery, ru: сельдерей, type: noun}
+- {en: mashed potatoes, ru: пюре картофельное, type: noun}
+- {attrs: [f], en: 'beetroot, beet', ru: свекла, type: noun}
+- {attrs: [m], en: 'lettuce, salad', ru: салат, type: noun}
+- {attrs: [m], en: mushroom, ru: гриб (грибы), type: noun}
+- {attrs: [n], en: meat, ru: мя'со, type: noun}
+- {attrs: [f], en: beef, ru: говя'дина, type: noun}
+- {en: mutton, ru: бара'нина, type: noun}
+- {en: pork, ru: свини'на, type: noun}
+- {attrs: [f], en: veal, ru: теля'тина, type: noun}
+- {attrs: [f], en: lamb, ru: ягня'тина, type: noun}
+- {attrs: [f], en: rabbit (food), ru: крольча'тина (кро'лик), type: noun}
+- {attrs: [f], en: ham, ru: ветчина', type: noun}
+- {attrs: [m], en: bacon, ru: беко'н, type: noun}
+- {attrs: [f], en: sausage, ru: колбаса', type: noun}
+- {attrs: [nopl], en: seafood, ru: морепродукты, type: noun}
+- {attrs: [m, nopl], en: bass, ru: о'кунь, type: noun}
+- {attrs: [nopl], en: salmon, ru: семга, type: noun}
+- {attrs: [f, nopl], en: trout, ru: форе'ль, type: noun}
+- {attrs: [f, nopl], en: flatfish, ru: ка'мбала, type: noun}
+- {attrs: [m, nopl], en: 'sheatfish, catfish', ru: со'м, type: noun}
+- {attrs: [f, nopl], en: codfish, ru: треска', type: noun}
+- {attrs: [f, nopl], en: sardine, ru: сарди'на, type: noun}
+- {attrs: [f, nopl], en: mackerel, ru: ску'мбрия, type: noun}
+- {attrs: [nopl], en: carp, ru: ка'рп, type: noun}
+- {attrs: [m, nopl], en: tuna, ru: туне'ц, type: noun}
+- {en: oyster, ru: устри'ца (устрицы), type: noun}
+- {en: mussel, ru: ми'дия (мидии), type: noun}
+- {en: shrimp, ru: креве'тка (креве'тки), type: noun}
+- {en: crab, ru: кра'б (крабы), type: noun}
+- {en: squid (food), ru: кальма'р (кальма'ры), type: noun}
+- {en: nuts, ru: орехи, type: noun}
+- {en: hazelnut, ru: лесной орех, type: noun}
+- {en: walnut, ru: грецкий орех, type: noun}
+- {attrs: [indec], en: cashew, ru: кешью, type: noun}
+- {attrs: [m], en: almond, ru: миндаль, type: noun}
+- {en: cocoanut, ru: кокосовый орех, type: noun}
+- {en: pistachio, ru: фисташки, type: noun}
+- {attrs: [m], en: peanut, ru: арахис, type: noun}
+- {en: nutmeg, ru: мускатный орех, type: noun}
+- {en: spice, ru: специи, type: noun}
+- {attrs: [f], en: salt, ru: соль, type: noun}
+- {attrs: [m], en: sugar, ru: сахар, type: noun}
+- {attrs: [m], en: thyme, ru: тимьян, type: noun}
+- {en: pepper, ru: черный перец, type: noun}
+- {attrs: [f], en: olive, ru: 'маслина?, оливка', type: noun}
+- {en: caper, ru: каперсы, type: noun}
+- {attrs: [m], en: saffron, ru: шафран, type: noun}
+- {attrs: [f], en: vanilla, ru: ваниль, type: noun}
+- {attrs: [m], en: ginger, ru: имбирь, type: noun}
+- {attrs: [m], en: rosemary, ru: розмарин, type: noun}
+- {en: mustard, ru: горчица, type: noun}
+- {attrs: [f], en: cinnamon, ru: корица, type: noun}
+- {attrs: [m], en: basil, ru: базилик, type: noun}
+- {attrs: [f], en: sweet roll, ru: булочка, type: noun}
+- {attrs: [n], en: cookie, ru: печенье, type: noun}
+- {attrs: [m], en: cupcake, ru: ке'кс, type: noun}
+- {attrs: [m], en: cake, ru: то'рт, type: noun}
+- {attrs: [n], en: 'brownie, biscuit, pastry', ru: пирожное, type: noun}
+- {attrs: [n], en: ice cream, ru: мороженое, type: noun}
+- {attrs: [f], en: candy, ru: конфета, type: noun}
+- {en: candy bar, ru: батончик, type: noun}
+- {en: (chewing) gum, ru: 'жевательная резинка, жевачка', type: noun}
+- {attrs: [m], en: stuffed roll, ru: пирожок, type: noun}
+- {attrs: [m], en: chocolate, ru: шокола'д, type: noun}
+- {en: flour, ru: мука, type: noun}
+- {attrs: [m], en: bread, ru: хлеб, type: noun}
+- {attrs: [m], en: pancake, ru: блин, type: noun}
+- {attrs: [m], en: white bread, ru: белый хлеб, type: noun}
+- {attrs: [m], en: black bread (dark rye bread), ru: чёрный хлеб, type: noun}
+- {attrs: [f], en: grain, ru: крупа, type: noun}
+- {en: oatmeal, ru: овес, type: noun}
+- {attrs: [f], en: buckwheat, ru: гречка, type: noun}
+- {attrs: [m], en: barley, ru: ячмень, type: noun}
+- {en: millet, ru: пшено, type: noun}
+- {attrs: [m], en: rice, ru: рис, type: noun}
+- {attrs: [m], en: cheese, ru: сыр, type: noun}
+- {attrs: [n], en: egg, ru: яйцо, type: noun}
+- {attrs: [n], en: butter, ru: масло, type: noun}
+- {en: french fries, ru: картофель фри, type: noun}
+- {attrs: [n], en: jam, ru: варенье, type: noun}
+- {attrs: [f], en: pizza, ru: пицца, type: noun}
+- {attrs: [f], en: hotdog, ru: сосиска, type: noun}
+- {attrs: [m], en: hamburger, ru: гамбургер, type: noun}
+- {en: ketchup, ru: томатный соус, type: noun}
+- {attrs: [m], en: sauce, ru: соус, type: noun}
+- {attrs: [m], en: sandwich, ru: бутерброд, type: noun}
+- {attrs: [m], en: soup, ru: суп, type: noun}
+- {attrs: [f], en: sour cream, ru: сметана, type: noun}
+- {attrs: [f], en: meals, ru: пища, type: noun}
+- {attrs: [m], en: breakfast, ru: завтрак, type: noun}
+- {attrs: [m], en: lunch, ru: обед, type: noun}
+- {attrs: [m], en: dinner, ru: ужин, type: noun}
+- {attrs: [m], en: supper, ru: полдник, type: noun}
+- {attrs: [m], en: wind, ru: ве'тер, type: noun}
+- {attrs: [f], en: wave, ru: волна', type: noun}
+- {attrs: [m], en: beach, ru: пля'ж, type: noun}
+- {attrs: [f], en: mountain, ru: гора', type: noun}
+- {attrs: [f], en: star, ru: звезда', type: noun}
+- {attrs: [f], en: earth, ru: земля', type: noun}
+- {attrs: [n], en: sea, ru: мо'ре, type: noun}
+- {attrs: [f], en: weather, ru: пого'да, type: noun}
+- {attrs: [m], en: shore, ru: бе'рег, type: noun}
+- {attrs: [m], en: meadow, ru: лу'г, type: noun}
+- {attrs: [n], en: lake, ru: о'зеро, type: noun}
+- {attrs: [m], en: ocean, ru: океа'н, type: noun}
+- {attrs: [m], en: island, ru: о'стров, type: noun}
+- {attrs: [n], en: coast, ru: побере'жье, type: noun}
+- {attrs: [m], en: peninsula, ru: полуо'стров, type: noun}
+- {attrs: [f], en: plain, ru: равни'на, type: noun}
+- {attrs: [f], en: river, ru: река', type: noun}
+- {attrs: [m], en: air, ru: во'здух, type: noun}
+- {en: sunrise, ru: восхо'д (со'лнца), type: noun}
+- {attrs: [m], en: sunset, ru: зака'т, type: noun}
+- {attrs: [m], en: 'frost, intense cold', ru: моро'з, type: noun}
+- {attrs: [m], en: dawn, ru: рассве'т, type: noun}
+- {attrs: [n], en: sun, ru: со'лнце, type: noun}
+- {attrs: [m], en: snow, ru: сне'г, type: noun}
+- {attrs: [m], en: 'forest, woods', ru: ле'с, type: noun}
+- {attrs: [n], en: sky, ru: не'бо, type: noun}
+- {attrs: [f], en: family, ru: семья, type: noun}
+- {attrs: [m], en: father, ru: отец, type: noun}
+- {attrs: [f], en: mother, ru: ма'ть, type: noun}
+- {en: dad, ru: па'па, type: noun}
+- {en: mom, ru: мама, type: noun}
+- {attrs: [m], en: brother, ru: брат, type: noun}
+- {attrs: [f], en: sister, ru: сестра', type: noun}
+- {attrs: [m], en: son, ru: сын, type: noun}
+- {attrs: [f], en: daughter, ru: до'чь, type: noun}
+- {attrs: [indec], en: parents, ru: родители, type: noun}
+- {attrs: [f], en: grandmother, ru: ба'бушка, type: noun}
+- {attrs: [f], en: grandfather, ru: де'душка, type: noun}
+- {attrs: [f], en: granddaughter, ru: внучка, type: noun}
+- {attrs: [m], en: grandson, ru: внук, type: noun}
+- {en: twins, ru: близнецы, type: noun}
+- {attrs: [f], en: wife, ru: жена', type: noun}
+- {attrs: [m], en: husband, ru: муж, type: noun}
+- {attrs: [f], en: bride, ru: невеста, type: noun}
+- {attrs: [m], en: groom, ru: жених, type: noun}
+- {en: honey moon, ru: медовый месяц, type: noun}
+- {attrs: [m], en: marriage, ru: брак, type: noun}
+- {en: married, ru: 'замужем, женатый', type: noun}
+- {en: marry, ru: 'жениться, выходить замуж', type: noun}
+- {en: single, ru: холостой, type: noun}
+- {attrs: [f], en: widow, ru: вдова, type: noun}
+- {attrs: [m], en: widower, ru: вдовец, type: noun}
+- {en: relatives, ru: родственники, type: noun}
+- {attrs: [f], en: uncle, ru: дя'дя, type: noun}
+- {attrs: [f], en: auntie, ru: тётя, type: noun}
+- {attrs: [m], en: nephew, ru: племянник, type: noun}
+- {attrs: [f], en: niece, ru: племянница, type: noun}
+- {en: cousin (male), ru: двоюродный брат, type: noun}
+- {en: cousin (female), ru: двоюродная сестра, type: noun}
+- {attrs: [m], en: 'son-in-law, brother-in-law', ru: зя'ть, type: noun}
+- {attrs: [m], en: father-in-law (wife's father), ru: те'сть, type: noun}
+- {attrs: [f], en: mother-in-law (husband's mother), ru: свекро'вь, type: noun}
+- {attrs: [m], en: person, ru: человек, type: noun}
+- {en: people, ru: лю'ди, type: noun}
+- {attrs: [f], en: man, ru: мужчи'на, type: noun}
+- {attrs: [f], en: woman, ru: женщина, type: noun}
+- {attrs: [m], en: young boy, ru: мальчик, type: noun}
+- {attrs: [f], en: young girl, ru: девочка, type: noun}
+- {attrs: [f], en: young woman, ru: девушка, type: noun}
+- {en: young man, ru: молодой человек, type: noun}
+- {en: young people, ru: молодёжь, type: noun}
+- {attrs: [m], en: adult, ru: взрослый, type: noun}
+- {attrs: [f], en: youth, ru: ю'ноша, type: noun}
+- {en: child, ru: ребенок, type: noun}
+- {en: children, ru: дети, type: noun}
+- {en: baby, ru: 'малыш, грудной ребенок', type: noun}
+- {attrs: [f], en: 'baby, little one', ru: малю'тка, type: noun}
+- {attrs: [m], en: prince, ru: кня'зь, type: noun}
+- {attrs: [m], en: lad, ru: па'рень, type: noun}
+- {attrs: [m], en: king, ru: коро'ль, type: noun}
+- {attrs: [m], en: tsar, ru: ца'рь, type: noun}
+- {attrs: [f], en: clever person, ru: у'мница, type: noun}
+- {attrs: [f], en: crybaby, ru: пла'кса, type: noun}
+- {attrs: [f], en: colleague, ru: колле'га, type: noun}
+- {attrs: [f], en: scatterbrain, ru: рази'ня, type: noun}
+- {attrs: [f], en: orphan, ru: сирота', type: noun}
+- {attrs: [f], en: 'slob, slovenly person', ru: неря'ха, type: noun}
+- {attrs: [f], en: drunkard, ru: пья'ница, type: noun}
+- {en: glutton, ru: обжо'ра, type: noun}
+- {attrs: [f], en: tramp, ru: бродя'га, type: noun}
+- {attrs: [f], en: ignoramus, ru: неве'жда, type: noun}
+- {attrs: [f], en: lone person, ru: одино'чка, type: noun}
+- {attrs: [m], en: reader, ru: чита'тель, type: noun}
+- {attrs: [m], en: shopper, ru: покупа'тель, type: noun}
+- {attrs: [m], en: driver, ru: води'тель, type: noun}
+- {attrs: [m], en: spectator, ru: зри'тель, type: noun}
+- {attrs: [m], en: librarian, ru: библиоте'карь, type: noun}
+- {attrs: [m], en: pharmacist, ru: апте'карь, type: noun}
+- {attrs: [m], en: baker, ru: пе'карь, type: noun}
+- {en: goalkeeper, ru: врата'рь, type: noun}
+- {attrs: [m], en: surgeon, ru: хиру'рг, type: noun}
+- {attrs: [m], en: geographer, ru: гео'граф, type: noun}
+- {attrs: [m], en: doctor, ru: вра'ч, type: noun}
+- {attrs: [m], en: cartographer, ru: карто'граф, type: noun}
+- {attrs: [m], en: veterinarian, ru: ветерина'р, type: noun}
+- {attrs: [m], en: architect, ru: архите'ктор, type: noun}
+- {attrs: [m], en: professor, ru: профе'ссор, type: noun}
+- {attrs: [m], en: cosmonaut, ru: космона'вт, type: noun}
+- {attrs: [m], en: university lecturer, ru: доце'нт, type: noun}
+- {attrs: [m], en: engineer, ru: инжене'р, type: noun}
+- {attrs: [m], en: lawyer, ru: адвока'т, type: noun}
+- {attrs: [m], en: hairdresser, ru: парикма'хер, type: noun}
+- {attrs: [m], en: teacher, ru: педаго'г, type: noun}
+- {attrs: [m], en: builder, ru: строи'тель, type: noun}
+- {attrs: [m], en: biologist, ru: био'лог, type: noun}
+- {attrs: [m], en: secretary, ru: секрета'рь, type: noun}
+- {attrs: [m], en: geologist, ru: гео'лог, type: noun}
+- {attrs: [m], en: journalist, ru: 'журнали''ст, журнали''стка', type: noun}
+- {attrs: [m], en: performing artist, ru: 'арти''ст, арти''стка', type: noun}
+- {attrs: [m], en: computer programmer, ru: 'программи''ст, программи''стка', type: noun}
+- {attrs: [m], en: waiter/waitress, ru: 'официа''нт, официа''нтка', type: noun}
+- {attrs: [m], en: actor/actress, ru: 'актёр, актри''са', type: noun}
+- {attrs: [m], en: poet/poetess, ru: 'поэ''т, поэте''сса', type: noun}
+- {attrs: [m], en: prince/princess, ru: 'при''нц, принце''сса', type: noun}
+- {attrs: [m], en: cook, ru: 'по''вар, повари''ха', type: noun}
+- {en: guard, ru: 'сто''рож, сторожи''ха', type: noun}
+- {attrs: [m], en: tailor/dressmaker, ru: 'портно''й, портни''ха', type: noun}
+- {attrs: [m], en: vegetarian, ru: 'вегетариа''нец, вегетариа''нка', type: noun}
+- {attrs: [m], en: American, ru: 'америка''нец, америка''нка', type: noun}
+- {attrs: [m], en: Canadian, ru: 'кана''дец, кана''дка', type: noun}
+- {attrs: [m], en: German, ru: 'не''мец, не''мка', type: noun}
+- {attrs: [m], en: Englishman/Englishwoman, ru: 'англича''нин, англича''нка', type: noun}
+- {attrs: [m], en: Christian, ru: 'христиани''н, христиа''нка', type: noun}
+- {attrs: [m], en: peasant, ru: 'крестья''нин, крестья''нка', type: noun}
+- {attrs: [m], en: Slav, ru: 'славяни''н, славя''нка', type: noun}
+- {attrs: [m], en: Russian (citizen), ru: 'россия''нин, россия''нка', type: noun}
+- {attrs: [m], en: salesperson, ru: 'продаве''ц, продавщи''ца', type: noun}
+- {attrs: [m], en: ballet dancer, ru: 'танцо''вщик, танцо''вщица', type: noun}
+- {attrs: [m], en: cloakroom attendant, ru: 'гардеро''бщик, гардеро''бщица', type: noun}
+- {attrs: [m], en: translator, ru: 'перево''дчик, перево''дчица', type: noun}
+- {attrs: [m], en: pilot, ru: 'лётчик, лётчица', type: noun}
+- {attrs: [m], en: snack bar attendant, ru: 'буфе''тчик, буфе''тчица', type: noun}
+- {attrs: [m], en: singer, ru: 'певе''ц, певи''ца', type: noun}
+- {attrs: [m], en: attractive person, ru: 'краса''вец, краса''вица', type: noun}
+- {en: lucky person, ru: 'счастли''вец, счастли''вица', type: noun}
+- {attrs: [m], en: artist, ru: 'худо''жник, худо''жница', type: noun}
+- {attrs: [m], en: helper, ru: 'рабо''тник, рабо''тница', type: noun}
+- {attrs: [m], en: pupil, ru: 'учени''к, учени''ца', type: noun}
+- {attrs: [m], en: (school) teacher, ru: 'уч''итель, учи''тельница', type: noun}
+- {attrs: [m], en: (university) instructor, ru: 'преподав''атель, преподава''тельница',
+  type: noun}
+- {attrs: [m], en: writer, ru: 'писа''тель, пис''ательница', type: noun}

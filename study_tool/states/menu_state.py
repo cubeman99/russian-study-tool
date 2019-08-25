@@ -56,7 +56,10 @@ class MenuState(State):
             self.menu.options.append(
                 ("[...] {}".format(package.name), package))
         for card_set in self.package.card_sets:
-            self.menu.options.append((card_set.name, card_set))
+            name = card_set.name
+            if card_set.is_fixed_card_set():
+                name += " [txt]"
+            self.menu.options.append((name, card_set))
         self.menu.options.append(
             ("Study all " + self.package.name, self.package))
 
@@ -92,8 +95,12 @@ class MenuState(State):
                     card_set=card_set.get_problem_cards(),
                     params=StudyParams(random_side=True))),
             ("List", lambda: self.app.push_card_list_state(card_set)),
-            ("Edit", lambda: self.app.push_card_set_edit_state(card_set)),
-            ("Cancel", None)]
+            ("Edit", lambda: self.app.push_card_set_edit_state(card_set))]
+        if card_set.is_fixed_card_set():
+            options.append(("Assimilate to YAML",
+                            lambda: self.__application.assimilate_card_set_to_yaml(card_set)))
+
+        options += [("Cancel", None)]
         self.app.push_state(SubMenuState(card_set.name, options))
 
     def select(self):

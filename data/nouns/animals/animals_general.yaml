@@ -1,0 +1,25 @@
+card_set:
+  name: Animals
+  version: 1
+  cards:
+    - [noun, животное, animal]
+    - [noun, кот, cat (male)]
+    - [noun, кошка, cat (female)]
+    - [noun, собака, dog (female)]
+    - [noun, медведь, bear]
+    - [noun, кролик, rabbit]
+    - [noun, заяц, hare]
+    - [noun, обезьяна, monkey]
+    - [noun, волк, wolf]
+    - [noun, лиса, fox]
+    - [noun, крот, mole]
+    - [noun, мышь, mouse]
+    - [noun, крыса, rat]
+    - [noun, ёжик, hedge-hog]
+    - [noun, змея, snake]
+    - [noun, лось, 'elk, moose']
+    - [noun, олень, deer]
+    - [noun, дикобраз, porcupine]
+    - [noun, белка, squirrel]
+    - [noun, енот, raccoon]
+    - [noun, бурундук, chipmunk]

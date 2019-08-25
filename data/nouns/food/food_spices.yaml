@@ -1,0 +1,18 @@
+card_set:
+  name: Spices
+  version: 1
+  cards:
+    - [noun, специи, spice]
+    - [noun, соль, salt]
+    - [noun, сахар, sugar]
+    - [noun, тимьян, thyme]
+    - [noun, черный перец, pepper]
+    - [noun, 'маслина?, оливка', olive]
+    - [noun, каперсы, caper]
+    - [noun, шафран, saffron]
+    - [noun, ваниль, vanilla]
+    - [noun, имбирь, ginger]
+    - [noun, розмарин, rosemary]
+    - [noun, горчица, mustard]
+    - [noun, корица, cinnamon]
+    - [noun, базилик, basil]

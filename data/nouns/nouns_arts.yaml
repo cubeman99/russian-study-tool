@@ -1,0 +1,10 @@
+card_set:
+  name: Art
+  version: 1
+  cards:
+    - [noun, музыкальный инструмент, musical instrument]
+    - [noun, пианино, piano]
+    - [noun, скрипка, violin]
+    - [noun, гитара, guitar]
+    - [noun, оркестр, orchestra]
+    - [noun, краска, paint]

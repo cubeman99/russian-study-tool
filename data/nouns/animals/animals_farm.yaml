@@ -1,0 +1,16 @@
+card_set:
+  name: Farm Animals
+  version: 1
+  cards:
+    - [noun, курица, chicken]
+    - [noun, петух, cock (chicken)]
+    - [noun, корова, cow]
+    - [noun, бык, bull]
+    - [noun, овца, sheep]
+    - [noun, баран, ram]
+    - [noun, коза, goat (female)]
+    - [noun, козёл, goat (male)]
+    - [noun, осел, donkey]
+    - [noun, лошадь, horse]
+    - [noun, гусь, goose]
+    - [noun, утка, duck]

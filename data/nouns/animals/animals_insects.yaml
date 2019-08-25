@@ -1,0 +1,11 @@
+card_set:
+  name: Insects
+  version: 1
+  cards:
+    - [noun, паук, spider]
+    - [noun, муравей, ant]
+    - [noun, пчела, bee]
+    - [noun, оса, wasp]
+    - [noun, червяк, worm]
+    - [noun, бабочка, butterfly]
+    - [noun, моль, moth]

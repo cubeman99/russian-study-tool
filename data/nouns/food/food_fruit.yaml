@@ -1,0 +1,26 @@
+card_set:
+  name: Fruit
+  version: 1
+  cards:
+    - [noun, фрукты, fruit]
+    - [noun, яблоко, apple]
+    - [noun, груша, pear]
+    - [noun, апельсин, orange (fruit)]
+    - [noun, виноград, grapes]
+    - [noun, грейпфрут, grapefruit]
+    - [noun, киви, kiwi fruit]
+    - [noun, мандарин, mandarine]
+    - [noun, манго, mango]
+    - [noun, банан, banana]
+    - [noun, ананас, pineapple]
+    - [noun, персик, peach]
+    - [noun, абрикос, apricot]
+    - [noun, слива, plum]
+    - [noun, клубника, strawberry]
+    - [noun, малина, raspberry]
+    - [noun, лимон, lemon]
+    - [noun, ежевика, blackberry]
+    - [noun, 'вишня, черешня', cherry]
+    - [noun, дыня, melon]
+    - [noun, арбуз, watermelon]
+    - [noun, крыжовник, gooseberry]

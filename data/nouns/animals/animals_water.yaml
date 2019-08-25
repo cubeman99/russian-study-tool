@@ -1,0 +1,16 @@
+card_set:
+  name: Sea Creatures
+  version: 1
+  cards:
+    - [noun, рыба, fish]
+    - [noun, дельфин, dolphin]
+    - [noun, крокодил, crocodile]
+    - [noun, аллигатор, alligator]
+    - [noun, осьминог, octopus]
+    - [noun, кит, whale]
+    - [noun, акула, shark]
+    - [noun, черепаха, turtle]
+    - [noun, лягушка, frog]
+    - [noun, нерпа, seal]
+    - [noun, жаба, toad]
+    - [noun, кальмар, squid]

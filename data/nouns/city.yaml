@@ -1,0 +1,26 @@
+card_set:
+  name: City
+  version: 1
+  cards:
+    - [noun, улица, street]
+    - [noun, дорога, road]
+    - [noun, стоянка, parking]
+    - [noun, паровоз, locamotive]
+    - [noun, место, place]
+    - [noun, магазин, store]
+    - [noun, гостиница, hotel]
+    - [noun, здание, building]
+    - [noun, рынке, market]
+    - [noun, институт, institute]
+    - [noun, музей, museum]
+    - [noun, площадь, square]
+    - [noun, вокзал, train station]
+    - [noun, кинотеатр, movie theater]
+    - [noun, клуб, club]
+    - [noun, метро, 'subway, underground, tube']
+    - [noun, офис, office]
+    - [noun, почта, postal service; mail]
+    - [noun, зоопарк, zoo]
+    - [noun, поликлиника, clinic]
+    - [noun, полиция, police]
+    - [noun, деревня, 'country side, village']

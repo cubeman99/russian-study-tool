@@ -1,0 +1,15 @@
+card_set:
+  name: Marraige
+  version: 1
+  cards:
+    - [noun, жена, wife]
+    - [noun, муж, husband]
+    - [noun, невеста, bride]
+    - [noun, жених, groom]
+    - [noun, медовый месяц, honey moon]
+    - [noun, брак, marriage]
+    - [noun, 'замужем, женатый', married]
+    - [noun, 'жениться, выходить замуж', marry]
+    - [noun, холостой, single]
+    - [noun, вдова, widow]
+    - [noun, вдовец, widower]

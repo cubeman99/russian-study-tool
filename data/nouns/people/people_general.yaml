@@ -1,0 +1,19 @@
+card_set:
+  name: People (Age/Geneder)
+  version: 1
+  cards:
+    - [noun, человек, person]
+    - [noun, люди, people]
+    - [noun, мужчина, man]
+    - [noun, женщина, woman]
+    - [noun, мальчик, young boy]
+    - [noun, девочка, young girl]
+    - [noun, девушка, young woman]
+    - [noun, молодой человек, young man]
+    - [noun, молодёжь, young people]
+    - [noun, взрослый, adult]
+    - [noun, юноша, youth]
+    - [noun, ребенок, child]
+    - [noun, дети, children]
+    - [noun, 'малыш, грудной ребенок', baby]
+    - [noun, малютка, 'baby, little one']
