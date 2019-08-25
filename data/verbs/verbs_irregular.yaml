@@ -1,0 +1,12 @@
+card_set:
+  name: Irregular Verbs
+  version: 1
+  cards:
+    - [verb, хотеть, to want]
+    - [verb, бежать, to run]
+    - [verb, быть, to be]
+    - [verb, дать, to give]
+    - [verb, есть, to eat]
+    - [verb, ехать, to go by vehicle]
+    - [verb, идти, to go on foot]
+    - [verb, расти, to grow]

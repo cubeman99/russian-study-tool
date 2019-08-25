@@ -1,0 +1,9 @@
+card_set:
+  name: 7. Verbs with Stem - О
+  version: 1
+  cards:
+    - [verb, бороться, 'to fight, struggle, combat']
+    - [verb, колоть, 'to chop, split; to prick']
+    - [verb, молоть, to grind]
+    - [verb, полоть, to weed]
+    - [verb, пороть, 'to undo, rip at the seams']

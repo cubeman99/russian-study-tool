@@ -1,0 +1,11 @@
+card_set:
+  name: Modal Words
+  version: 1
+  cards:
+    - [other, 'надо, нужно', 'it is necessary, one must']
+    - [other, должен, 'one should, one is supposed to']
+    - [other, можно, it is allowed]
+    - [other, нельзя, 'it is not possible (pf.), it is not allowed (imp.)']
+    - [other, обязательно, has to]
+    - [other, желательно, it is desireable]
+    - [other, важно, it is important]

@@ -1,0 +1,22 @@
+card_set:
+  name: Common Words
+  version: 1
+  cards:
+    - [adjective, только, only]
+    - [adjective, какой, what kind of]
+    - [adjective, такой, such a]
+    - [adjective, этот, this]
+    - [adjective, тот, that]
+    - [adverb, раз, 'time, once, since']
+    - [adverb, просто, simply]
+    - [pronoun, это, 'it, this, it is']
+    - [other, вот, here is]
+    - [particle, же, 'and, but, whereas, as for, as to, after all, this very, this same,
+    then, surely, just, on earth']
+    - [particle, бы, would]
+    - [particle, то, some]
+    - [particle, нибудь, 'some, any']
+    - [conjunction, ли, 'whether, if']
+    - [interjection, да, 'yes']
+    - [interjection, нет, 'no']
+    - [interjection, ну, well]

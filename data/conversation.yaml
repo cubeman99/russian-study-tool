@@ -1,0 +1,7 @@
+card_set:
+  name: Conversation
+  version: 1
+  cards:
+    - [other, извините, excuse me; Im sorry]
+    - [other, пока, bye! (informal)]
+    - [other, спасибо, thank you]

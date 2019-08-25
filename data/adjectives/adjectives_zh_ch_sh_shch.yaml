@@ -1,0 +1,16 @@
+card_set:
+  name: 'Adjectives: -ж, -ч, -ш, or -щ'
+  version: 1
+  cards:
+    - [adjective, общий, common]
+    - [adjective, будущий, future]
+    - [adjective, бывший, 'ex, former']
+    - [adjective, рыжий, red-haired]
+    - [adjective, везучий, lucky]
+    - [adjective, рабочий, working]
+    - [adjective, свежий, fresh]
+    - [adjective, младший, younger]
+    - [adjective, старший, older]
+    - [adjective, неуклюжий, clumsy]
+    - [adjective, настоящий, 'real, genuine']
+    - [adjective, чужой, someone elses]

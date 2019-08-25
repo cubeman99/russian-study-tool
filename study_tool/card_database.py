@@ -502,6 +502,7 @@ class CardDatabase:
 
                 elif file_path.endswith(".yaml"):
                     # Load new card set file
+                    print("Loading card set: " + file_path)
                     with open(file_path, "r", encoding="utf8") as f:
                         state = yaml.safe_load(f)
                         if "card_set" in state:

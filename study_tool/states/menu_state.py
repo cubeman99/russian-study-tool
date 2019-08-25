@@ -97,8 +97,13 @@ class MenuState(State):
             ("List", lambda: self.app.push_card_list_state(card_set)),
             ("Edit", lambda: self.app.push_card_set_edit_state(card_set))]
         if card_set.is_fixed_card_set():
-            options.append(("Assimilate to YAML",
-                            lambda: self.__application.assimilate_card_set_to_yaml(card_set)))
+            old_file_path = card_set.get_file_path()
+            card_sets_in_file = self.app.card_database.get_card_sets_from_path(old_file_path)
+            if len(card_sets_in_file) > 1:
+                text = "Assimilate {} sets to YAML".format(len(card_sets_in_file))
+            else:
+                text = "Assimilate to YAML"
+            options.append((text, lambda: self.app.assimilate_card_set_to_yaml(card_set)))
 
         options += [("Cancel", None)]
         self.app.push_state(SubMenuState(card_set.name, options))

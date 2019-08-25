@@ -1,0 +1,16 @@
+card_set:
+  name: Adverbs of Measure/Degree
+  version: 1
+  cards:
+    - [adverb, очень, 'very, very much']
+    - [adverb, так, so]
+    - [adverb, много, 'many, a lot, very much']
+    - [adverb, мало, little]
+    - [adverb, немного, a little]
+    - [adverb, чуть (чуть-чуть), a tiny bit]
+    - [adverb, слегка, slightly]
+    - [adverb, достаточно, sufficiently]
+    - [adverb, совсем, quite]
+    - [adverb, совершенно, absolutely]
+    - [adverb, слишком, 'too, overly']
+    - [adverb, почти, 'almost, nearly']

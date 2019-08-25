@@ -1,0 +1,12 @@
+card_set:
+  name: Misc Verbs
+  version: 1
+  cards:
+    - [verb, разговарывать, to converse]
+    - [verb, превратиться, to turn into]
+    - [verb, желать, to wish]
+    - [verb, добиваться, to strive for]
+    - [verb, достигать, to achieve]
+    - [verb, пугаться, to be frightened of]
+    - [verb, избегать, to avoid]
+    - [verb, нравиться, to appeal to]
