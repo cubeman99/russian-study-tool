@@ -55,6 +55,7 @@ class StudyCardsApp(Application):
 
         # Filenames
         self.root_path = "data"
+        self.cards_path = os.path.join(self.root_path, "cards")
         self.card_data_file_name = "card_data.yaml"
         self.save_file_name = "study_data.json"
         self.word_data_file_name = "word_data.json"
@@ -69,9 +70,9 @@ class StudyCardsApp(Application):
         self.load_card_data()
 
         # Load card sets
-        Config.logger.info("Loading card sets from: " + self.root_path)
+        Config.logger.info("Loading card sets from: " + self.cards_path)
         self.root = self.card_database.load_card_package_directory(
-            path=self.root_path, name="words")
+            path=self.cards_path, name="words")
         self.save_word_database()
 
         # Load example data
