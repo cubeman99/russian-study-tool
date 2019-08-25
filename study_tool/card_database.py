@@ -243,8 +243,6 @@ class CardDatabase:
                     break
         assert found_key
 
-
-
     def serialize_card_data(self) -> dict:
         state = []
         for card in self.iter_cards():
@@ -300,6 +298,7 @@ class CardDatabase:
                              ] = current_metrics
 
     def deserialize_card_set(self, state: dict) -> CardSet:
+        """Deserialize card set data."""
         state = state["card_set"]
         card_set = CardSet()
         card_set.set_name(AccentedText(state["name"]))
@@ -308,14 +307,14 @@ class CardDatabase:
             assert 1 <= len(card_state) <= 3
             word_type = parse_word_type(card_state[0])
             if len(card_state) == 3:
-                english = card_state[1]
-                russian = card_state[2]
-                cards = list(self.iter_cards(word_type=word_type, russian=russian, english=english))
-                if not cards:
-                    cards = list(self.iter_cards(word_type=word_type, russian=english, english=russian))
-                if not cards:
+                russian = card_state[1]
+                english = card_state[2]
+                key = (word_type, russian, english)
+                card = self.cards.get(key, None)
+                if card is None:
                     raise Exception("Cannot find card {} in database"
                                     .format(card_state))
+                card_set.add_card(card)
             elif len(card_state) == 2:
                 text = card_state[1]
                 cards = list(self.iter_cards(word_type=word_type, russian=text))
@@ -324,6 +323,7 @@ class CardDatabase:
                 if not cards:
                     raise Exception("Cannot find card {} in database"
                                     .format(card_state))
+                card_set.cards += cards
             elif len(card_state) == 1:
                 text = card_state[1]
                 cards = list(self.iter_cards(russian=text))
@@ -332,9 +332,9 @@ class CardDatabase:
                 if not cards:
                     raise Exception("Cannot find card {} in database"
                                     .format(card_state))
+                card_set.cards += cards
             else:
                 raise Exception(card_state)
-            card_set.cards += cards
         return card_set
 
     def parse_card_text(self, text, split=False):
@@ -502,7 +502,6 @@ class CardDatabase:
 
                 elif file_path.endswith(".yaml"):
                     # Load new card set file
-                    print("Loading card set: " + file_path)
                     with open(file_path, "r", encoding="utf8") as f:
                         state = yaml.safe_load(f)
                         if "card_set" in state:

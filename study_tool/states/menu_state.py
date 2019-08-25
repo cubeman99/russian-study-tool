@@ -96,7 +96,7 @@ class MenuState(State):
                     params=StudyParams(random_side=True))),
             ("List", lambda: self.app.push_card_list_state(card_set)),
             ("Edit", lambda: self.app.push_card_set_edit_state(card_set))]
-        if card_set.is_fixed_card_set():
+        if isinstance(card_set, CardSet) and card_set.is_fixed_card_set():
             old_file_path = card_set.get_file_path()
             card_sets_in_file = self.app.card_database.get_card_sets_from_path(old_file_path)
             if len(card_sets_in_file) > 1:

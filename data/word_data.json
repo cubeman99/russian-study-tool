@@ -392,7 +392,8 @@
         "испепелить",
         "проборматать",
         "люьоваться",
-        "распаковать"
+        "распаковать",
+        ""
       ]
     }
   },
@@ -87404,6 +87405,183 @@
       },
       "examples": [],
       "name": "надевать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "кивать"
+        ],
+        "imperative": {
+          "Plural": "кивни'те",
+          "Singular": "кивни'"
+        },
+        "infinitive": "кивнуть",
+        "info": "This verb can also mean the following: point, motion, beckon, allude.",
+        "non_past": {
+          "Plural": {
+            "First": "кивнём",
+            "Second": "кивнёте",
+            "Third": "кивну'т"
+          },
+          "Singular": {
+            "First": "кивну'",
+            "Second": "кивнёшь",
+            "Third": "кивнёт"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "кивну'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "кивну'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "кивну'ла",
+          "Masculine": "кивну'л",
+          "Neuter": "кивну'ло",
+          "Plural": "кивну'ли"
+        },
+        "translation": "to nod"
+      },
+      "examples": [],
+      "name": "кивнуть",
+      "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "о'пыты",
+            "Dative": "о'пытам",
+            "Genetive": "о'пытов",
+            "Instrumental": "о'пытами",
+            "Nominative": "о'пыты",
+            "Prepositional": "о'пытах"
+          },
+          "Singular": {
+            "Accusative": "о'пыт",
+            "Dative": "о'пыту",
+            "Genetive": "о'пыта",
+            "Instrumental": "о'пытом",
+            "Nominative": "о'пыт",
+            "Prepositional": "о'пыте"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "опыт",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "ловить"
+        ],
+        "imperative": {
+          "Plural": "пойма'йте",
+          "Singular": "пойма'й"
+        },
+        "infinitive": "поймать",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "пойма'ем",
+            "Second": "пойма'ете",
+            "Third": "пойма'ют"
+          },
+          "Singular": {
+            "First": "пойма'ю",
+            "Second": "пойма'ешь",
+            "Third": "пойма'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "пойма'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "пойма'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "по'йманный",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "пойма'ла",
+          "Masculine": "пойма'л",
+          "Neuter": "пойма'ло",
+          "Plural": "пойма'ли"
+        },
+        "translation": "to catch"
+      },
+      "examples": [],
+      "name": "поймать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "оставаться"
+        ],
+        "imperative": {
+          "Plural": "оста'ньтесь",
+          "Singular": "оста'нься"
+        },
+        "infinitive": "остаться",
+        "info": "This verb can also mean the following: be, be left, stay.",
+        "non_past": {
+          "Plural": {
+            "First": "оста'немся",
+            "Second": "оста'нетесь",
+            "Third": "оста'нутся"
+          },
+          "Singular": {
+            "First": "оста'нусь",
+            "Second": "оста'нешься",
+            "Third": "оста'нется"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "оста'вшийся",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "оста'вшись",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "оста'лась",
+          "Masculine": "оста'лся",
+          "Neuter": "оста'лось",
+          "Plural": "оста'лись"
+        },
+        "translation": "to remain"
+      },
+      "examples": [],
+      "name": "остаться",
       "type": "Verb"
     }
   ]

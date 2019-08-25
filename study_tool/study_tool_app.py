@@ -313,7 +313,7 @@ class StudyCardsApp(Application):
 
     def load_card_data(self):
         path = os.path.join(self.root_path, self.card_data_file_name)
-        Config.logger.debug("Loading card data from: " + path)
+        Config.logger.info("Loading card data from: " + path)
         with open(path, "r", encoding="utf8") as f:
             state = yaml.safe_load(f)
             self.card_database.deserialize_card_data(state)
