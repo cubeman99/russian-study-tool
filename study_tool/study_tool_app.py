@@ -101,8 +101,11 @@ class StudyCardsApp(Application):
         # self.push_state(CardEditState(card_database=self.card_database))
         cards = list(self.card_database.iter_cards())
         #self.push_state(GUIState(widget=CardEditWidget(cards[0]), title="Edit Card"))
-        self.push_state(GUIState(widget=CardSetEditWidget(self.root["verbs"]["verbs_stem_ai"], self), title="Edit Card Set"))
+        #self.push_state(GUIState(widget=CardSetEditWidget(self.root["verbs"]["verbs_stem_ai"], self), title="Edit Card Set"))
+        self.push_state(GUIState(widget=CardSetEditWidget(self.root["nouns"]["house"], self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["test_set"], self), title="Edit Card Set"))
+
+        #self.save_card_set(self.root["nouns"]["house"])
 
         self.input.bind(pygame.K_ESCAPE, pressed=self.pop_state)
 
@@ -111,39 +114,70 @@ class StudyCardsApp(Application):
 
         Config.logger.info("Initialization complete!")
 
-    def __on_key_press(self, key, text):
-        self.state.on_key_press(key, text)
-
-    def __on_key_release(self, key):
-        self.state.on_key_release(key)
-
     def assimilate_card_set_to_yaml(self, card_set):
         """
         Convert a old-style text based card set file into YAML,
         moving all its cards into the global card database.
         """
         assert card_set.is_fixed_card_set()
-        for card in card_set.cards:
+        for card in card_set.get_cards():
             if card.get_fixed_card_set() != card_set:
                 raise Exception(card_set, card)
-
-        # Save cards from card set into card data YAML
         old_file_path = card_set.get_file_path()
         card_sets_in_file = self.card_database.get_card_sets_from_path(old_file_path)
         for file_card_set in card_sets_in_file:
+            assert file_card_set.is_fixed_card_set()
+            for card in file_card_set.get_cards():
+                if card.get_fixed_card_set() != file_card_set:
+                    raise Exception(file_card_set, card)
+        assert card_set in card_sets_in_file
+
+        # Save cards from card set into card data YAML
+        card_count = 0
+        for file_card_set in card_sets_in_file:
+            Config.logger.info("Assimilating {} cards from card set '{}'"
+                              .format(file_card_set.get_card_count(),
+                                      file_card_set.get_name()))
+            card_count += file_card_set.get_card_count()
             card_set.set_fixed_card_set(False)
+        Config.logger.info("Saving new card data")
         self.save_card_data()
 
         # Replace card set text file with YAML
         for file_card_set in card_sets_in_file:
-            state = file_card_set.serialize()
-            new_path = old_file_path
-            if len(card_sets_in_file) > 1:
-                new_path = os.path.dirname(old_file_path)
-                new_path = os.path.join(new_path, file_card_set.key + ".yaml")
-            with open(new_path, "wb") as opened_file:
-                yaml.dump(state, opened_file, encoding="utf8",
-                            allow_unicode=True, default_flow_style=True)
+            new_path = os.path.join(os.path.dirname(old_file_path),
+                                    file_card_set.key + ".yaml")
+            Config.logger.info("Saving card set '{}' to: {}"
+                               .format(file_card_set.get_name(), new_path))
+            self.save_card_set(card_set=file_card_set, path=new_path)
+        
+        # Delete the old card set text file
+        Config.logger.info("Removing old file: {}".format(old_file_path))
+        os.remove(old_file_path)
+        Config.logger.info(
+            "Assimilated {} cards from {} card sets!".format(
+            card_count, len(card_sets_in_file)))
+
+    def save_card_set(self, card_set: CardSet, path=None):
+        """
+        Save a single card set file to YAML.
+        """
+        if path is None:
+            path = card_set.get_file_path()
+            assert path is not None
+        state = card_set.serialize()
+        cards_state = state["card_set"]["cards"]
+        del state["card_set"]["cards"]
+
+        with open(path, "wb") as opened_file:
+            yaml.dump(state, opened_file, encoding="utf8",
+                        allow_unicode=True, default_flow_style=False)
+            opened_file.write(b"  cards:\n")
+            for card_state in cards_state:
+                opened_file.write(b"    - ")
+                yaml.dump(
+                    card_state, opened_file, encoding="utf8",
+                    allow_unicode=True, default_flow_style=True)
 
     def pop_state(self):
         if len(self.states) == 1:
@@ -339,6 +373,12 @@ class StudyCardsApp(Application):
         for state in reversed(states_to_draw):
             # TODO: fade background
             state.draw(self.graphics)
+
+    def __on_key_press(self, key, text):
+        self.state.on_key_press(key, text)
+
+    def __on_key_release(self, key):
+        self.state.on_key_release(key)
 
 
 if __name__ == "__main__":

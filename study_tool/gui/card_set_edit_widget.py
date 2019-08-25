@@ -75,7 +75,8 @@ class CardSetEditWidget(widgets.Widget):
         # Connect signals
         self.__button_done.clicked.connect(self.close)
         self.__button_add_card.clicked.connect(self.add_new_card)
-        self.__button_convert.clicked.connect(self.convert)
+        if self.__button_convert:
+            self.__button_convert.clicked.connect(self.convert)
         
         self.__box_name.focus()
 
@@ -83,7 +84,7 @@ class CardSetEditWidget(widgets.Widget):
         widget = self.__application.push_card_edit_state(Card())
 
     def convert(self):
-        pass
+        self.__application.assimilate_card_set_to_yaml(self.__card_set)
 
     def add_card(self, card):
         button_edit = widgets.Button("Edit")

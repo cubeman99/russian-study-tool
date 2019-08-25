@@ -133,7 +133,7 @@ class CardSet(StudySet):
         }
         for card in self.cards:
             state["cards"].append(
-                [card.type.name.lower(),
+                [card.get_word_type().name.lower(),
                  card.get_russian().text,
                  card.get_english().text])
         return {"card_set": state}

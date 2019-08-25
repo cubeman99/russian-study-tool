@@ -1,3 +1,36 @@
 cards:
 - {attrs: [m], en: table, ru: сто'л, type: noun}
 - {en: chair, ru: сту'л, type: noun}
+- {attrs: [f], en: door, ru: две'рь, type: noun}
+- {attrs: [n], en: window, ru: окно', type: noun}
+- {attrs: [f], en: room, ru: ко'мната, type: noun}
+- {attrs: [m], en: couch, ru: дива'н, type: noun}
+- {attrs: [n], en: armchair, ru: кре'сло, type: noun}
+- {attrs: [f], en: lamp, ru: ла'мпа, type: noun}
+- {attrs: [m], en: shelves, ru: стелла'ж, type: noun}
+- {en: curtains, ru: што'ры, type: noun}
+- {attrs: [m], en: 'television, TV Set', ru: телеви'зор, type: noun}
+- {attrs: [f], en: drawers, ru: ту'мбочка, type: noun}
+- {attrs: [m], en: 'wardrobe, cabinets', ru: шка'ф, type: noun}
+- {attrs: [f], en: kitchen, ru: ку'хня, type: noun}
+- {attrs: [f], en: dishes, ru: посу'да, type: noun}
+- {en: kettle, ru: ча'йник, type: noun}
+- {attrs: [f], en: stove-top, ru: плита', type: noun}
+- {attrs: [f], en: oven, ru: духо'вка, type: noun}
+- {en: dishwasher, ru: посудомо'ечная маши'на, type: noun}
+- {attrs: [m], en: toaster, ru: то'стер, type: noun}
+- {attrs: [f], en: 'stove, furnace', ru: пе'чь, type: noun}
+- {attrs: [m], en: knife, ru: но'ж, type: noun}
+- {attrs: [f], en: 'battery, radiator', ru: батаре'я, type: noun}
+- {attrs: [n], en: mirror, ru: зе'ркало, type: noun}
+- {attrs: [m], en: faucet, ru: кра'н, type: noun}
+- {attrs: [f], en: sink, ru: ра'ковина, type: noun}
+- {en: laundry basket, ru: корзи'на для' белья', type: noun}
+- {attrs: [m], en: shower, ru: ду'ш, type: noun}
+- {en: standup shower, ru: душева'я каби'на, type: noun}
+- {attrs: [m], en: toilet, ru: туале'т, type: noun}
+- {en: bedroom, ru: спа'льная ко'мната, type: noun}
+- {attrs: [f], en: bed, ru: крова'ть, type: noun}
+- {attrs: [f], en: pillow, ru: поду'шка, type: noun}
+- {en: computer mouse, ru: мы'шка, type: noun}
+- {en: headphones, ru: нау'шники, type: noun}
