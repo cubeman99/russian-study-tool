@@ -139,7 +139,7 @@ class StudyCardsApp(Application):
                               .format(file_card_set.get_card_count(),
                                       file_card_set.get_name()))
             card_count += file_card_set.get_card_count()
-            card_set.set_fixed_card_set(False)
+            file_card_set.set_fixed_card_set(False)
         Config.logger.info("Saving new card data")
         self.save_card_data()
 

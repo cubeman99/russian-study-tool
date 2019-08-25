@@ -34,3 +34,27 @@ cards:
 - {attrs: [f], en: pillow, ru: поду'шка, type: noun}
 - {en: computer mouse, ru: мы'шка, type: noun}
 - {en: headphones, ru: нау'шники, type: noun}
+- {en: nonsense, ru: чушь, type: noun}
+- {attrs: [f], en: thing, ru: вещь, type: noun}
+- {en: 'power, might', ru: мощь, type: noun}
+- {attrs: [f], en: help, ru: по'мощь, type: noun}
+- {en: 'youth (25 - 30, usable with inanimate objs)', ru: мо'лодость, type: noun}
+- {attrs: [n], en: 'youth (14 - 17, only for animate objs)', ru: ю'ношество, type: noun}
+- {attrs: [f], en: maturity, ru: зре'лость, type: noun}
+- {attrs: [f], en: rudeness, ru: гру'бость, type: noun}
+- {en: politeness, ru: ве'жливость, type: noun}
+- {attrs: [f], en: freshness, ru: све'жесть, type: noun}
+- {en: news, ru: но'вость, type: noun}
+- {attrs: [f], en: gravity, ru: тя'жесть, type: noun}
+- {attrs: [f], en: clumsiness, ru: неуклю'жесть, type: noun}
+- {en: boldness, ru: сме'лость, type: noun}
+- {en: linen, ru: бельё, type: noun}
+- {attrs: [f], en: banner, ru: зна'мя, type: noun}
+- {attrs: [f], en: burden, ru: бре'мя, type: noun}
+- {attrs: [f], en: mane, ru: гри'ва, type: noun}
+- {attrs: [n], en: hoof, ru: копы'то, type: noun}
+- {attrs: [m], en: tail, ru: хво'ст, type: noun}
+- {attrs: [f], en: magic, ru: ма'гия, type: noun}
+- {attrs: [f], en: friendship, ru: дру'жба, type: noun}
+- {attrs: [f], en: mare, ru: кобыла', type: noun}
+- {attrs: [f], en: filly, ru: кобы'лка, type: noun}

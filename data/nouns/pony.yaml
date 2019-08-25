@@ -1,0 +1,11 @@
+card_set:
+  name: По'ни
+  version: 1
+  cards:
+    - [noun, грива, mane]
+    - [noun, копыто, hoof]
+    - [noun, хвост, tail]
+    - [noun, магия, magic]
+    - [noun, дружба, friendship]
+    - [noun, кобыла, mare]
+    - [noun, кобылка, filly]
