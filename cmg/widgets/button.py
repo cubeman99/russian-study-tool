@@ -5,7 +5,7 @@ from cmg import gui
 from cmg import widgets
 from cmg import color
 from cmg.event import Event
-from cmg.input import Keys
+from cmg.input import Keys, MouseButtons
 
 class Button(widgets.Widget):
     def __init__(self, text=""):
@@ -32,11 +32,12 @@ class Button(widgets.Widget):
             self.__text = text
             self.__surface = None
 
-    def on_mouse_pressed(self):
-        pass
-
     def on_key_pressed(self, key, text):
         if key in [Keys.K_RETURN, Keys.K_SPACE]:
+            self.clicked.emit()
+            
+    def on_mouse_pressed(self, pos, button):
+        if button == MouseButtons.LEFT:
             self.clicked.emit()
 
     def on_draw(self, g):

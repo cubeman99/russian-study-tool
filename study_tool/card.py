@@ -114,6 +114,10 @@ class Card:
         """Get the card's next history score, given whether it was known or not."""
         history = [knew_it] + self.history
         return get_history_score(history[:Config.max_card_history_size])
+    
+    def clear_attributes(self):
+        """Clear all card attributes."""
+        self.attributes = [[], []]
 
     def add_attributes(self, attrs: list, side: CardSide):
         """Add multiple attributes to the card."""
@@ -188,6 +192,18 @@ class Card:
         return "{} {}{} ago".format(elapsed_time, units,
                                     "s" if elapsed_time != 1 else "")
 
+    def set_english(self, english: AccentedText):
+        """Set the english text."""
+        self.text[CardSide.English] = AccentedText(english)
+        
+    def set_russian(self, russian: AccentedText):
+        """Set the russian text."""
+        self.text[CardSide.Russian] = AccentedText(russian)
+        
+    def set_word_type(self, word_type: WordType):
+        """Set the card type."""
+        self.word_type = word_type
+
     def serialize_card_data(self):
         """Serialize the card data."""
         state = {}
@@ -236,4 +252,7 @@ class Card:
     def __repr__(self):
         attrs = "|".join(sorted([x.value for x in self.get_attributes()]))
         return "Card({}, '{}', '{}', '{}')".format(
-            self.word_type.name, repr(self.english), repr(self.russian), attrs)
+            self.word_type.name if self.word_type is not None else "None",
+            repr(self.english),
+            repr(self.russian),
+            attrs)

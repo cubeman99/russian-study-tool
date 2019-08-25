@@ -87355,6 +87355,56 @@
       "examples": [],
       "name": "слиться",
       "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "надеть"
+        ],
+        "imperative": {
+          "Plural": "надева'йте",
+          "Singular": "надева'й"
+        },
+        "infinitive": "надевать",
+        "info": "This verb can also mean the following: get on.",
+        "non_past": {
+          "Plural": {
+            "First": "надева'ем",
+            "Second": "надева'ете",
+            "Third": "надева'ют"
+          },
+          "Singular": {
+            "First": "надева'ю",
+            "Second": "надева'ешь",
+            "Third": "надева'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "надева'вший",
+            "Present": "надева'ющий"
+          },
+          "Adverbial": {
+            "Past": "надева'в",
+            "Present": "надева'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "надева'емый"
+          }
+        },
+        "past": {
+          "Femanine": "надева'ла",
+          "Masculine": "надева'л",
+          "Neuter": "надева'ло",
+          "Plural": "надева'ли"
+        },
+        "translation": "to put on"
+      },
+      "examples": [],
+      "name": "надевать",
+      "type": "Verb"
     }
   ]
 }

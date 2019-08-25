@@ -1,6 +1,5 @@
 cards:
-- {attrs: [m], en: table, ru: сто'л, type: noun}
-- {en: chair, ru: сту'л, type: noun}
+- {attrs: [m], en: chair, ru: сту'л, type: noun}
 - {attrs: [f], en: door, ru: две'рь, type: noun}
 - {attrs: [n], en: window, ru: окно', type: noun}
 - {attrs: [f], en: room, ru: ко'мната, type: noun}
@@ -58,3 +57,5 @@ cards:
 - {attrs: [f], en: friendship, ru: дру'жба, type: noun}
 - {attrs: [f], en: mare, ru: кобыла', type: noun}
 - {attrs: [f], en: filly, ru: кобы'лка, type: noun}
+- {attrs: [impf], en: to put on, ru: надева'ть, type: verb}
+- {attrs: [m], en: a table, ru: сто'л, type: noun}

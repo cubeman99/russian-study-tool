@@ -1,10 +1,18 @@
+from enum import IntEnum
 import pygame
 import time
 import operator
 from cmg.event import Event
+from cmg.math import Vec2
 
 Keys = pygame
 
+class MouseButtons(IntEnum):
+    LEFT = 1
+    MIDDLE = 2
+    RIGHT = 3
+    WHEEL_UP = 4
+    WHEEL_DOWN = 5
 
 class Input:
     def __init__(self, index, name, reversed=False, min=0, max=1):
@@ -193,6 +201,8 @@ class InputManager:
         self.down_keys = set()
         self.key_pressed = Event(int, str)
         self.key_released = Event(int)
+        self.mouse_pressed = Event(Vec2, MouseButtons)
+        self.mouse_released = Event(Vec2, MouseButtons)
 
     def bind(self, key, pressed=None, released=None, down=None):
         bind = KeyBind(key, pressed=pressed, released=released, down=down)
@@ -222,3 +232,9 @@ class InputManager:
                 bind.up()
         self.down_keys.remove(key)
         self.key_released.emit(key)
+
+    def on_mouse_down(self, pos, button):
+        self.mouse_pressed.emit(pos, button)
+
+    def on_mouse_up(self, pos, button):
+        self.mouse_released.emit(pos, button)

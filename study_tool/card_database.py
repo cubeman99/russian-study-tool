@@ -69,10 +69,16 @@ class CardDatabase:
         self.english_key_to_card_dict = {}
         self.__path_to_card_sets_dict = {}
 
+    def has_card(self, card: Card) -> bool:
+        return card in self.cards.values()
+
     def get_card_sets_from_path(self, path: str) -> list:
         return self.__path_to_card_sets_dict.get(path, [])
 
-    def get_card(self, word_type: WordType, english=None, russian=None):
+    def get_card(self, word_type: WordType, english=None, russian=None) -> Card:
+        """
+        Retreive a card by word type and text.
+        """
         if english is not None and russian is not None:
             key = (word_type, AccentedText(russian).text, AccentedText(english).text)
             return self.cards.get(key, None)
@@ -85,6 +91,9 @@ class CardDatabase:
         raise Exception("Missing english or russian argument")
 
     def iter_cards(self, word_type=None, english=None, russian=None):
+        """
+        Iterate cards with the specified fields.
+        """
         if english is not None:
             english = AccentedText(english).text.lower()
         if russian is not None:
@@ -97,7 +106,7 @@ class CardDatabase:
             if russian is not None and card.russian.text.lower() != russian:
                 continue
             yield card
-
+            
     def find_cards_by_word(self, word: str):
         """Find a card by the name of a word."""
         for word_obj in self.word_database.lookup_word(word):
@@ -116,6 +125,7 @@ class CardDatabase:
         return metrics
 
     def add_card(self, card: Card):
+        """Add a new card to the database."""
         word_type = card.get_word_type()
 
         # Get the Word info associated with this card
@@ -157,7 +167,84 @@ class CardDatabase:
         self.russian_key_to_card_dict[ru_key] = card
         self.english_key_to_card_dict[en_key] = card
         self.cards[key] = card
-        
+       
+    def remove_card(self, card: Card):
+        """Remove a card from the card database."""
+        # Remove from russian key dict
+        found_ru_key = False
+        for key, old_card in self.russian_key_to_card_dict.items():
+            if old_card == card:
+                found_ru_key = True
+                del self.russian_key_to_card_dict[key]
+                break
+        assert found_ru_key
+
+        # Remove from english key dict
+        found_en_key = False
+        for key, old_card in self.english_key_to_card_dict.items():
+            if old_card == card:
+                found_en_key = True
+                del self.english_key_to_card_dict[key]
+                break
+        assert found_en_key
+
+        # Remove from key dict
+        found_key = False
+        for key, old_card in self.cards.items():
+            if old_card == card:
+                found_key = True
+                del self.cards[key]
+                break
+        assert found_key
+
+
+    def apply_card_key_change(self, card: Card):
+        """Called when a card's key has changed"""
+        new_ru_key = card.get_russian_key()
+        new_en_key = card.get_english_key()
+        new_key = card.get_key()
+
+        # Update russian key dict
+        found_ru_key = False
+        for old_ru_key, old_card in self.russian_key_to_card_dict.items():
+            if old_card == card:
+                found_ru_key = True
+                if old_ru_key != new_ru_key:
+                    Config.logger.info("Russian key change: {} -> {}"
+                                       .format(old_ru_key, new_ru_key))
+                    del self.russian_key_to_card_dict[old_ru_key]
+                    self.russian_key_to_card_dict[new_ru_key] = card
+                    break
+        assert found_ru_key
+
+        # Update english key dict
+        found_en_key = False
+        for old_en_key, old_card in self.english_key_to_card_dict.items():
+            if old_card == card:
+                found_en_key = True
+                if old_en_key != new_en_key:
+                    Config.logger.info("English key change: {} -> {}"
+                                       .format(old_en_key, new_en_key))
+                    del self.english_key_to_card_dict[old_en_key]
+                    self.english_key_to_card_dict[new_en_key] = card
+                    break
+        assert found_en_key
+
+        # Update key dict
+        found_key = False
+        for old_key, old_card in self.cards.items():
+            if old_card == card:
+                found_key = True
+                if old_key != new_key:
+                    Config.logger.info("Key change: {} -> {}"
+                                       .format(old_key, new_key))
+                    del self.cards[old_key]
+                    self.cards[new_key] = card
+                    break
+        assert found_key
+
+
+
     def serialize_card_data(self) -> dict:
         state = []
         for card in self.iter_cards():
@@ -313,7 +400,7 @@ class CardDatabase:
                             card_set.source = SourceLocation(filename=filename,
                                                              line_number=line_number,
                                                              line_text=line)
-                            self.__add_card_set(card_set, path=filename)
+                            self.__add_card_set_path(card_set, path=filename)
                             card_set.name = AccentedText(value)
                             card_set.key = card_set.name.text.lower().replace(" ", "_")
                             card_sets.append(card_set)
@@ -421,7 +508,7 @@ class CardDatabase:
                             card_set = self.deserialize_card_set(state)
                             if card_set:
                                 package.add_card_set(card_set)
-                                self.__add_card_set(card_set, path=file_path)
+                                self.__add_card_set_path(card_set, path=file_path)
 
         if len(package.packages) == 0 and len(package.card_sets) == 0:
             return None
@@ -429,7 +516,18 @@ class CardDatabase:
         package.packages.sort(key=lambda x: x.name)
         return package
 
-    def __add_card_set(self, card_set: CardSet, path: str):
+    def remove_card_set_path(self, path: str):
+        """
+        Remove a file path from the card set list. This is called when a card
+        set is assimilated to YAML, and the old text file is deleted.
+        """
+        assert path in self.__path_to_card_sets_dict
+        for card_set in self.__path_to_card_sets_dict[path]:
+            assert card_set.get_file_path() != path
+        del self.__path_to_card_sets_dict[path]
+
+    def __add_card_set_path(self, card_set: CardSet, path: str):
+        """Associates a card set with a file path."""
         if path not in self.__path_to_card_sets_dict:
             self.__path_to_card_sets_dict[path] = []
         self.__path_to_card_sets_dict[path].append(card_set)

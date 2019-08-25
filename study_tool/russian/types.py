@@ -14,6 +14,20 @@ class WordType(IntEnum):
     Interjection = 10
     Particle = 11
 
+__WORD_TYPE_TO_SHORT_NAME_DICT = {
+    WordType.Noun: "n",
+    WordType.Verb: "v",
+    WordType.Adjective: "adj",
+    WordType.Adverb: "adv",
+    WordType.Preposition: "prep",
+    WordType.Conjunction: "cj",
+    WordType.Pronoun: "pro",
+    WordType.Phrase: "ph",
+    WordType.Other: "oth",
+    WordType.Interjection: "int",
+    WordType.Particle: "part",
+    }
+
 __STRING_TO_WORD_TYPE_DICT = {"none": WordType.Other,
                   None: WordType.Other}
 for word_type in WordType:
@@ -21,6 +35,9 @@ for word_type in WordType:
 
 def parse_word_type(text) -> WordType:
     return __STRING_TO_WORD_TYPE_DICT.get(text.lower(), WordType.Other)
+
+def get_word_type_short_name(word_type: WordType) -> str:
+    return __WORD_TYPE_TO_SHORT_NAME_DICT[word_type]
 
 class Language(IntEnum):
     English = 0

@@ -86,7 +86,13 @@ class Graphics:
             rect = pygame.Rect(x, y, width, height)
         rect.left += self.__translation.x
         rect.top += self.__translation.y
-        pygame.draw.rect(self.screen, tuple(color), rect, 0)
+        if color.a < 255:
+            s = pygame.Surface((rect.width, rect.height))
+            s.set_alpha(color.a) 
+            s.fill((color.r, color.g, color.b))
+            self.screen.blit(s, (rect.left, rect.top))
+        else:
+            pygame.draw.rect(self.screen, tuple(color), rect, 0)
 
     #-------------------------------------------------------------------------
     # Text

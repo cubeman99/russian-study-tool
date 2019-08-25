@@ -84,6 +84,7 @@ class BoxLayout(Layout):
         self.add(layout)
 
     def add(self, item):
+        assert item is not None
         self.children.append(item)
         item.set_parent(self)
 

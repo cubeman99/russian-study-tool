@@ -1,6 +1,6 @@
 card_set:
+  name: Test Set
   version: 1
-  name: "Test Set"
   cards:
-    - ["noun", "стол",   "table"]
-    - ["noun",   "стул"]
+    - [noun, стол, a table]
+    - [noun, стул, chair]

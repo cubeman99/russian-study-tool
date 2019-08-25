@@ -58,10 +58,16 @@ class State:
     def update(self, dt):
         pass
     
-    def on_key_press(self, key, text):
+    def on_key_pressed(self, key, text):
         pass
     
-    def on_key_release(self, key):
+    def on_key_released(self, key):
+        pass
+    
+    def on_mouse_pressed(self, pos, button):
+        pass
+
+    def on_mouse_released(self, pos, button):
         pass
 
     def draw(self, g):

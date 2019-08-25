@@ -33,16 +33,46 @@ class GUIState(State):
     def set_widget(self, widget: widgets.Widget):
         self.__widget = widget
         
-    def on_key_press(self, key, text):
+    def on_key_pressed(self, key, text):
         if self.__widget:
             if key == Keys.K_TAB:
                 self.__widget.cycle_next_focus()
             if self.__widget.get_focused_widget():
                 self.__widget.get_focused_widget().on_key_pressed(key, text)
         
-    def on_key_release(self, key):
+    def on_key_released(self, key):
         if self.__widget and self.__widget.get_focused_widget():
             self.__widget.get_focused_widget().on_key_released(key)
+            
+    def on_mouse_pressed(self, pos, button):
+        if self.__widget:
+            widget = self.get_widget_at_point(self.__widget, pos)
+            if widget and widget.is_enabled():
+                if widget.is_focusable() and button in [MouseButtons.LEFT, MouseButtons.RIGHT]:
+                    widget.focus()
+                widget.on_mouse_pressed(pos, button)
+
+    def on_mouse_released(self, pos, button):
+        if self.__widget:
+            widget = self.get_widget_at_point(self.__widget, pos)
+            if widget and widget.is_enabled():
+               widget.on_mouse_released(pos, button)
+
+    def get_widget_at_point(self, item, pos):
+        layout = item
+        if isinstance(item, widgets.Widget):
+            layout = item.get_layout()
+        rect = item.get_rect()
+        if pos.x >= rect.left and pos.y >= rect.top and pos.x < rect.right and pos.y < rect.bottom:
+            if layout:
+                for child in layout.get_children():
+                    result = self.get_widget_at_point(child, pos)
+                    if result:
+                        return result
+            elif isinstance(item, widgets.Widget):
+                return item
+        return None
+
 
     def begin(self):
         self.buttons[0] = Button("Scroll Up")

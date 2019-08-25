@@ -14,6 +14,7 @@ class Widget(LayoutItem):
         self.focused = False
         self.focusable = False
         self.closed = Event()
+        self.__enabled = True
         self.__visible = True
 
     def get_layout(self):
@@ -38,11 +39,18 @@ class Widget(LayoutItem):
                 self.get_root_parent().change_focus(None)
             self.parent = parent
 
-    def get_focusable(self) -> bool:
+    def is_focusable(self) -> bool:
         return self.focusable
+    
+
+    def is_enabled(self) -> bool:
+        return self.__enabled
 
     def set_focusable(self, focusable: bool):
         self.focusable = focusable
+
+    def set_enabled(self, enabled: bool):
+        self.__enabled = enabled
 
     def change_focus(self, widget):
         if self.focused_widget:
@@ -59,7 +67,8 @@ class Widget(LayoutItem):
                 yield widget
 
     def cycle_next_focus(self, reverse=False):
-        widgets = list(x for x in self.iter_widgets() if x.focusable)
+        widgets = list(x for x in self.iter_widgets()
+                       if x.is_focusable() and x.is_enabled())
         if not widgets:
             self.change_focus(None)
         elif self.focused_widget is None:
@@ -102,6 +111,12 @@ class Widget(LayoutItem):
     
     def on_key_released(self, key):
         pass
+    
+    def on_mouse_pressed(self, pos, button):
+        pass
+
+    def on_mouse_released(self, pos, button):
+        pass
 
     def set_layout(self, layout):
         self.layout = layout
@@ -139,6 +154,9 @@ class Widget(LayoutItem):
         self.on_draw(g)
         if self.layout:
             self.layout.draw(g)
+
+        if not self.is_enabled():
+            g.fill_rect(self.rect, color=color.rgba(255, 255, 255, 128))
 
         c = color.BLACK
         if self.is_focused():

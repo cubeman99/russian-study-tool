@@ -48,20 +48,26 @@ class StudySet:
     def get_name(self) -> str:
         return self.name
 
-    def set_name(self, name: str):
-        self.name = name
-
     def get_cards(self) -> list:
         return self.cards
+
+    def get_card_count(self) -> int:
+        return len(self.cards)
+
+    def has_card(self, card: Card) -> bool:
+        return card in self.cards
+
+    def set_name(self, name: str):
+        self.name = name
 
     def add_card(self, card: Card):
         self.cards.append(card)
 
+    def remove_card(self, card: Card):
+        self.cards.remove(card)
+
     def clear(self):
         self.cards = []
-
-    def get_card_count(self) -> int:
-        return len(self.cards)
 
     def get_study_metrics(self):
         metrics = CardGroupMetrics()

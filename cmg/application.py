@@ -1,6 +1,8 @@
 import pygame
 from cmg import color
 from cmg.input import InputManager
+from cmg.input import MouseButtons
+from cmg.math import Vec2
 
 
 class Application:
@@ -40,6 +42,10 @@ class Application:
                     self.input.on_key_down(event.key, event.unicode)
                 elif event.type == pygame.KEYUP:
                     self.input.on_key_up(event.key)
+                elif event.type == pygame.MOUSEBUTTONDOWN:
+                    self.input.on_mouse_down(Vec2(event.pos), MouseButtons(event.button))
+                elif event.type == pygame.MOUSEBUTTONUP:
+                    self.input.on_mouse_up(Vec2(event.pos), MouseButtons(event.button))
 
             # Update
             self.input.update()

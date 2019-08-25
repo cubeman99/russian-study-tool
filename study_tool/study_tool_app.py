@@ -100,19 +100,28 @@ class StudyCardsApp(Application):
         # self.push_state(KeyboardState())
         # self.push_state(CardEditState(card_database=self.card_database))
         cards = list(self.card_database.iter_cards())
+        #self.push_card_edit_state(None)
+        #self.push_card_edit_state(cards[0])
         #self.push_state(GUIState(widget=CardEditWidget(cards[0]), title="Edit Card"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["verbs"]["verbs_stem_ai"], self), title="Edit Card Set"))
-        self.push_state(GUIState(widget=CardSetEditWidget(self.root["nouns"]["house"], self), title="Edit Card Set"))
-        #self.push_state(GUIState(widget=CardSetEditWidget(self.root["test_set"], self), title="Edit Card Set"))
+        #self.push_state(GUIState(widget=CardSetEditWidget(self.root["nouns"]["house"], self), title="Edit Card Set"))
+        self.push_state(GUIState(widget=CardSetEditWidget(self.root["test_set"], self), title="Edit Card Set"))
 
         #self.save_card_set(self.root["nouns"]["house"])
 
         self.input.bind(pygame.K_ESCAPE, pressed=self.pop_state)
 
-        self.input.key_pressed.connect(self.__on_key_press)
-        self.input.key_released.connect(self.__on_key_release)
+        self.input.key_pressed.connect(self.__on_key_pressed)
+        self.input.key_released.connect(self.__on_key_released)
+        self.input.mouse_pressed.connect(self.__on_mouse_pressed)
+        self.input.mouse_released.connect(self.__on_mouse_released)
 
         Config.logger.info("Initialization complete!")
+
+    def iter_card_sets(self):
+        """Iterate all card sets"""
+        for card_set in self.root.all_card_sets():
+            yield card_set
 
     def assimilate_card_set_to_yaml(self, card_set):
         """
@@ -153,6 +162,7 @@ class StudyCardsApp(Application):
         
         # Delete the old card set text file
         Config.logger.info("Removing old file: {}".format(old_file_path))
+        self.card_database.remove_card_set_path(old_file_path)
         os.remove(old_file_path)
         Config.logger.info(
             "Assimilated {} cards from {} card sets!".format(
@@ -165,10 +175,11 @@ class StudyCardsApp(Application):
         if path is None:
             path = card_set.get_file_path()
             assert path is not None
+        
         state = card_set.serialize()
+
         cards_state = state["card_set"]["cards"]
         del state["card_set"]["cards"]
-
         with open(path, "wb") as opened_file:
             yaml.dump(state, opened_file, encoding="utf8",
                         allow_unicode=True, default_flow_style=False)
@@ -178,6 +189,9 @@ class StudyCardsApp(Application):
                 yaml.dump(
                     card_state, opened_file, encoding="utf8",
                     allow_unicode=True, default_flow_style=True)
+                
+        card_set.set_fixed_card_set(False)
+        card_set.set_file_path(path)
 
     def pop_state(self):
         if len(self.states) == 1:
@@ -201,7 +215,7 @@ class StudyCardsApp(Application):
                                  title="Edit Card Set"))
 
     def push_card_edit_state(self, card: Card):
-        widget = CardEditWidget(card)
+        widget = CardEditWidget(card, self)
         state = GUIState(widget=widget, title="Edit Card")
         self.push_state(state)
         return widget
@@ -374,11 +388,17 @@ class StudyCardsApp(Application):
             # TODO: fade background
             state.draw(self.graphics)
 
-    def __on_key_press(self, key, text):
-        self.state.on_key_press(key, text)
+    def __on_key_pressed(self, key, text):
+        self.state.on_key_pressed(key, text)
 
-    def __on_key_release(self, key):
-        self.state.on_key_release(key)
+    def __on_key_released(self, key):
+        self.state.on_key_released(key)
+
+    def __on_mouse_pressed(self, pos, button):
+        self.state.on_mouse_pressed(pos, button)
+
+    def __on_mouse_released(self, pos, button):
+        self.state.on_mouse_released(pos, button)
 
 
 if __name__ == "__main__":
