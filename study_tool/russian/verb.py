@@ -64,6 +64,15 @@ class Verb(Word):
             Tense.Present: AccentedText(),
             Tense.Past: AccentedText()}
 
+    def get_info(self) -> AccentedText:
+        return self.info
+
+    def get_counterparts(self) -> list:
+        return self.counterparts
+
+    def get_translation(self) -> AccentedText:
+        return self.translation
+
     def get_aspect(self) -> Aspect:
         return self.aspect
 

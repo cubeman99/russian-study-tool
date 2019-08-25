@@ -118,6 +118,10 @@ class Card:
     def clear_attributes(self):
         """Clear all card attributes."""
         self.attributes = [[], []]
+    
+    def clear_related_cards(self):
+        """Clear all related cards."""
+        self.related_cards = []
 
     def add_attributes(self, attrs: list, side: CardSide):
         """Add multiple attributes to the card."""
@@ -156,6 +160,10 @@ class Card:
         if side is None:
             return list(set(self.attributes[0] + self.attributes[1]))
         return self.attributes[side]
+
+    def get_related_cards(self) -> list:
+        """Get the list of related cards."""
+        return self.related_cards
 
     @property
     def english(self):
@@ -204,6 +212,14 @@ class Card:
         """Set the card type."""
         self.word_type = word_type
 
+    def add_related_card(self, related_card):
+        if related_card not in self.related_cards:
+            self.related_cards.append(related_card)
+
+    def remove_related_card(self, related_card):
+        if related_card in self.related_cards:
+            self.related_cards.remove(related_card)
+
     def serialize_card_data(self):
         """Serialize the card data."""
         state = {}
@@ -215,6 +231,13 @@ class Card:
             state["attrs"] = [x.value for x in all_attributes]
         if self.examples:
             state["ex"] = [[repr(e), ""] for e in self.examples]
+        if self.related_cards:
+            state["rel"] = []
+            for related_card in self.related_cards:
+                state["rel"].append([
+                    related_card.get_word_type().name.lower(),
+                    related_card.get_russian().text.lower(),
+                    related_card.get_english().text.lower()])
         return state
 
     def deserialize_card_data(self, state):
@@ -231,7 +254,8 @@ class Card:
             for attr_short in state["attrs"]:
                 attr = CardAttributes(attr_short)
                 self.add_attribute(attr)
-
+        self.related_cards = []  # Card database deserializes these
+               
     def serialize_study_data(self):
         """Serialize the study data."""
         history_str = "".join("T" if h else "F" for h in self.history)

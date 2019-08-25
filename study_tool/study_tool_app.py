@@ -106,7 +106,9 @@ class StudyCardsApp(Application):
         #self.push_state(GUIState(widget=CardEditWidget(cards[0]), title="Edit Card"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["verbs"]["verbs_stem_ai"], self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["nouns"]["house"], self), title="Edit Card Set"))
-        self.push_state(GUIState(widget=CardSetEditWidget(self.root["test_set"], self), title="Edit Card Set"))
+        #self.push_state(GUIState(widget=CardSetEditWidget(self.root["test_set"], self), title="Edit Card Set"))
+        card = list(self.card_database.find_cards_by_word("слушать"))[0]
+        self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
 
         #self.save_card_set(self.root["nouns"]["house"])
 
@@ -211,12 +213,12 @@ class StudyCardsApp(Application):
     def push_card_list_state(self, card_set):
         self.push_state(CardListState(card_set))
 
-    def push_card_set_edit_state(self, card_set: CardSet):
-        self.push_state(GUIState(widget=CardSetEditWidget(card_set, self),
+    def push_card_set_edit_state(self, card_set: CardSet, **kwargs):
+        self.push_state(GUIState(widget=CardSetEditWidget(card_set, self, **kwargs),
                                  title="Edit Card Set"))
 
-    def push_card_edit_state(self, card: Card):
-        widget = CardEditWidget(card, self)
+    def push_card_edit_state(self, card: Card, **kwargs):
+        widget = CardEditWidget(card, self, **kwargs)
         state = GUIState(widget=widget, title="Edit Card")
         self.push_state(state)
         return widget

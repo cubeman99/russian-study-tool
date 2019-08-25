@@ -9,7 +9,7 @@ from cmg.application import *
 from cmg.graphics import *
 from cmg.input import *
 from study_tool.config import Config
-from study_tool.card import CardSide
+from study_tool.card import Card, CardSide
 from study_tool.card_set import CardSet, CardSetPackage
 from study_tool.menu import Menu
 from study_tool.states.read_text_state import ReadTextState
@@ -49,6 +49,7 @@ class MenuState(State):
         self.menu.options = []
         if self.top_level:
             self.menu.options.append(("Quit", self.app.pop_state))
+            self.menu.options.append(("Card Editor", self.__open_card_editor))
             self.menu.options.append(("Story Mode", self.open_study_mode))
         else:
             self.menu.options.append(("Back", self.app.pop_state))
@@ -65,6 +66,12 @@ class MenuState(State):
 
     def open_study_mode(self):
         self.app.push_state(ReadTextState())
+
+    def __open_card_editor(self):
+        self.app.push_card_edit_state(
+            Card(),
+            close_on_apply=False,
+            allow_card_change=True)
 
     def open_set(self, card_set):
         options = [

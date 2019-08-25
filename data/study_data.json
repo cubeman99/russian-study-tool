@@ -2,8 +2,8 @@
   "cards": [
     {
       "english": "chair",
-      "history": "TTTTTT",
-      "last_encounter_time": 1566752050.7618592,
+      "history": "TTTTTTTTTTTTTTT",
+      "last_encounter_time": 1566760319.333797,
       "proficiency_level": 4,
       "russian": "стул",
       "type": "Noun"
@@ -471,14 +471,6 @@
       "proficiency_level": 0,
       "russian": "надевать",
       "type": "Verb"
-    },
-    {
-      "english": "a table",
-      "history": "TTTTTT",
-      "last_encounter_time": 1566752047.4336097,
-      "proficiency_level": 4,
-      "russian": "стол",
-      "type": "Noun"
     },
     {
       "english": "animal",
@@ -10217,14 +10209,6 @@
       "type": "Other"
     },
     {
-      "english": "hells bells; darn",
-      "history": "TTTTTTTF",
-      "last_encounter_time": 1552527013.8116148,
-      "proficiency_level": 4,
-      "russian": "чёрт",
-      "type": "Interjection"
-    },
-    {
       "english": "banal, commonplace, trite",
       "history": "TTTTTT",
       "last_encounter_time": 1554164054.6763084,
@@ -17370,8 +17354,8 @@
     },
     {
       "english": "to have lunch",
-      "history": "TTTTTTTTTTTTTTTT",
-      "last_encounter_time": 1549842157.39025,
+      "history": "TTTTTTTTTTTTTTTTT",
+      "last_encounter_time": 1566761278.0081248,
       "proficiency_level": 4,
       "russian": "обедать",
       "type": "Verb"
@@ -22834,9 +22818,9 @@
     },
     {
       "english": "anxiety, concern",
-      "history": "T",
-      "last_encounter_time": 1563231798.2709296,
-      "proficiency_level": 3,
+      "history": "TT",
+      "last_encounter_time": 1566760219.091105,
+      "proficiency_level": 4,
       "russian": "беспокойство",
       "type": "Noun"
     },
@@ -22970,9 +22954,9 @@
     },
     {
       "english": "to giggle",
-      "history": "T",
-      "last_encounter_time": 1563231810.2568731,
-      "proficiency_level": 3,
+      "history": "TT",
+      "last_encounter_time": 1566760223.449089,
+      "proficiency_level": 4,
       "russian": "хихикнуть",
       "type": "Verb"
     },
@@ -23010,9 +22994,9 @@
     },
     {
       "english": "to get ready, to plan, to intend to do soemthing",
-      "history": "F",
-      "last_encounter_time": 1563231766.4471858,
-      "proficiency_level": 1,
+      "history": "TF",
+      "last_encounter_time": 1566760212.1670659,
+      "proficiency_level": 2,
       "russian": "собираться + verb",
       "type": "Phrase"
     },
@@ -23082,11 +23066,59 @@
     },
     {
       "english": "concerning, about",
-      "history": "TTTTF",
-      "last_encounter_time": 1561080762.8230546,
+      "history": "TTTTTF",
+      "last_encounter_time": 1566760214.791058,
       "proficiency_level": 4,
       "russian": "насчёт",
       "type": "Preposition"
+    },
+    {
+      "english": "table",
+      "history": "TTTTTTTTTTTTTT",
+      "last_encounter_time": 1566760315.6820428,
+      "proficiency_level": 4,
+      "russian": "стол",
+      "type": "Noun"
+    },
+    {
+      "english": "to call, beckon; to hand signal",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "манить",
+      "type": "Verb"
+    },
+    {
+      "english": "It would be great if ...",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "вот бы [было хорошо] ...",
+      "type": "Phrase"
+    },
+    {
+      "english": "wedding (adj.)",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "свадебный",
+      "type": "Adjective"
+    },
+    {
+      "english": "bell",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "колокол",
+      "type": "Noun"
+    },
+    {
+      "english": "hells balls; darn",
+      "history": "TTTTTTTF",
+      "last_encounter_time": 1552527013.8116148,
+      "proficiency_level": 4,
+      "russian": "чёрт",
+      "type": "Interjection"
     },
     {
       "english": "indecent",
@@ -32426,20 +32458,20 @@
     },
     {
       "all_metrics": {
-        "history_score": 2141.7905082439215,
+        "history_score": 2142.3690796724927,
         "proficiency_counts": [
-          1,
-          188,
-          12,
-          150,
-          2583
+          5,
+          187,
+          13,
+          148,
+          2585
         ]
       },
       "card_type_metrics": {
         "Adjective": {
           "history_score": 335.1904559820995,
           "proficiency_counts": [
-            0,
+            1,
             7,
             5,
             24,
@@ -32477,13 +32509,13 @@
           ]
         },
         "Noun": {
-          "history_score": 811.0909072028522,
+          "history_score": 811.1242405361854,
           "proficiency_counts": [
-            0,
+            1,
             146,
             5,
-            92,
-            1011
+            91,
+            1012
           ]
         },
         "Other": {
@@ -32507,17 +32539,17 @@
           ]
         },
         "Phrase": {
-          "history_score": 66.80681288740499,
+          "history_score": 66.84847955407164,
           "proficiency_counts": [
-            0,
-            4,
             1,
+            3,
+            2,
             5,
             83
           ]
         },
         "Preposition": {
-          "history_score": 34.15734126984127,
+          "history_score": 34.62757936507936,
           "proficiency_counts": [
             0,
             0,
@@ -32537,18 +32569,18 @@
           ]
         },
         "Verb": {
-          "history_score": 689.2665060705376,
+          "history_score": 689.299839403871,
           "proficiency_counts": [
-            1,
+            2,
             7,
             1,
-            24,
-            789
+            23,
+            790
           ]
         }
       },
       "date": "2019/08/25"
     }
   ],
-  "save_time": 1566753360.5329983
+  "save_time": 1566761278.0081248
 }

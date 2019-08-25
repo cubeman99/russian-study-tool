@@ -9,7 +9,7 @@ from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
 from study_tool import card_attributes
-from study_tool.card import *
+from study_tool.card import Card, CardSide
 from study_tool.card_attributes import *
 from study_tool.card_set import CardSet, CardSetPackage, StudySet
 from study_tool.config import Config
@@ -70,11 +70,12 @@ class StudyState(State):
         self.word_type_font = pygame.font.Font(None, 34)
         self.word_details_font = pygame.font.Font(None, 24)
 
-        # Setudy settings
+        # Study settings
         self.card_set = card_set
         self.shown_side = CardSide.English
         self.params = params
 
+        # Internal state
         self.card = None
         self.revealed = False
         self.prompt_text = AccentedText()
@@ -96,32 +97,51 @@ class StudyState(State):
         self.revealed = False
         self.next_card()
 
-    def switch_sides(self):
-        self.params.shown_side = CardSide(1 - self.params.shown_side)
-        self.shown_side = CardSide(1 - self.shown_side)
-
     def pause(self):
         other_side = CardSide(1 - self.shown_side)
-        self.app.push_state(SubMenuState(
-            "Pause",
-            [("Resume", None),
+        options =  [("Resume", None),
+                    ("Edit Card", self.__on_click_edit_card)]
+        if isinstance(self.card_set, CardSet):
+            options.append(("Edit Set", self.__on_click_edit_card_set))
+        options += [
              ("List", lambda: (self.app.pop_state(),
                                self.app.push_card_list_state(self.card_set))),
-                ("Quiz " + other_side.name, self.switch_sides),
-                ("Menu", self.app.pop_state),
-                ("Exit", self.app.quit)]))
+             ("Quiz " + other_side.name, self.switch_sides),
+             ("Menu", self.app.pop_state),
+             ("Exit", self.app.quit)]
+        self.app.push_state(SubMenuState("Pause", options))
+    
+    def __on_click_edit_card(self):
+        """Called to begin editing the current card."""
+        widget = self.app.push_card_edit_state(
+            self.card, allow_card_change=False)
+        widget.updated.connect(self.__on_card_updated)
+    
+    def __on_click_edit_card_set(self):
+        """Called to begin editing the card set."""
+        self.app.pop_state()
+        widget = self.app.push_card_set_edit_state(self.card_set)
 
-    def exit_to_menu(self):
-        self.app.quit()
+    def __on_card_updated(self, card: Card):
+        """Called after a card is edited."""
+        self.show_card(card)
 
+    def switch_sides(self):
+        """Switch which side is shown first."""
+        self.params.shown_side = CardSide(1 - self.params.shown_side)
+        self.shown_side = CardSide(1 - self.shown_side)
+        
     def next(self):
+        """
+        Mark the current card as "did know" then move to the next card.
+        """
         self.scheduler.mark(self.card, knew_it=True)
         self.app.save_study_data()
         self.next_card()
 
     def mark(self):
         """
-        Mark the current card as "didn't know" then move to the next card.
+        Mark the current card as "did NOT know" then move to the next card.
         """
         self.scheduler.mark(self.card, knew_it=False)
         self.app.save_study_data()
@@ -192,20 +212,22 @@ class StudyState(State):
             return (card.get_text(CardSide.Russian), [])
 
     def next_card(self):
-        """
-        Show the next card.
-        """
+        """Shows the next card."""
+        card = self.scheduler.next()
+        if card is None:
+            self.app.pop_state()
+            Config.logger.info("No cards left to study!")
+        else:
+            self.show_card(card)
+        
+    def show_card(self, card: Card):
+        """Shows a new card."""
 
+        self.card = card
         self.revealed = False
         self.buttons[0] = Button("Reveal", self.reveal)
 
-        # Get the next card to show
-        self.card = self.scheduler.next()
-        if self.card is None:
-            self.app.pop_state()
-            Config.logger.info("No cards left to study!")
-            return
-
+        # Pick the side to show
         if self.params.random_side:
             self.shown_side = random.choice(
                 [CardSide.English, CardSide.Russian])
@@ -220,6 +242,7 @@ class StudyState(State):
         else:
             forms = self.card.russian.text
 
+        # Get the card text and attributes
         if (self.params.random_form and self.shown_side == CardSide.Russian and
                 word is not None):
             # Get a random form of the card's word
@@ -236,7 +259,7 @@ class StudyState(State):
             self.reveal_attributes = self.card.get_attributes(reveal_side)
 
         # Get examples and word occurences in the example
-        max_examples = 7
+        max_examples = Config.max_examples_to_display
         self.examples = []
         for example in self.card.examples:
             self.examples.append((example, example_database.get_word_occurances(
@@ -248,6 +271,7 @@ class StudyState(State):
         Config.logger.info("Showing card: " + repr(self.prompt_text))
 
     def reveal(self):
+        """Reveal the other side of the card."""
         self.revealed = True
         self.buttons[0] = Button("Mark", self.mark)
 

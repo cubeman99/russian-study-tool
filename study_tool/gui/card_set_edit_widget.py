@@ -112,11 +112,13 @@ class CardSetEditWidget(widgets.Widget):
         self.select_card_set(self.__card_set)
 
     def __on_click_add_new_card(self):
-        widget = self.__application.push_card_edit_state(Card())
+        widget = self.__application.push_card_edit_state(
+            Card(), allow_card_change=True)
         widget.updated.connect(self.__on_card_updated)
 
     def __on_click_edit_card(self, card: Card):
-        widget = self.__application.push_card_edit_state(card)
+        widget = self.__application.push_card_edit_state(
+            card, allow_card_change=False)
         widget.updated.connect(self.__on_card_updated)
         
     def __on_click_remove_card(self, card: Card):

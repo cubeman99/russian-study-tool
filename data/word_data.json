@@ -87583,6 +87583,130 @@
       "examples": [],
       "name": "остаться",
       "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "поманить"
+        ],
+        "imperative": {
+          "Plural": "мани'те",
+          "Singular": "мани'"
+        },
+        "infinitive": "манить",
+        "info": "This verb can also mean the following: wave, allure, attract, lure, entice.",
+        "non_past": {
+          "Plural": {
+            "First": "ма'ним",
+            "Second": "ма'ните",
+            "Third": "ма'нят"
+          },
+          "Singular": {
+            "First": "маню'",
+            "Second": "ма'нишь",
+            "Third": "ма'нит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "мани'вший",
+            "Present": "маня'щий"
+          },
+          "Adverbial": {
+            "Past": "мани'в",
+            "Present": "маня'"
+          },
+          "Passive": {
+            "Past": "ма'ненный",
+            "Present": "мани'мый"
+          }
+        },
+        "past": {
+          "Femanine": "мани'ла",
+          "Masculine": "мани'л",
+          "Neuter": "мани'ло",
+          "Plural": "мани'ли"
+        },
+        "translation": "to beckon"
+      },
+      "examples": [],
+      "name": "манить",
+      "type": "Verb"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "сва'дебную",
+            "Dative": "сва'дебной",
+            "Genetive": "сва'дебной",
+            "Instrumental": "сва'дебной",
+            "Nominative": "сва'дебная",
+            "Prepositional": "сва'дебной"
+          },
+          "Masculine": {
+            "Accusative": "сва'дебного",
+            "Dative": "сва'дебному",
+            "Genetive": "сва'дебного",
+            "Instrumental": "сва'дебным",
+            "Nominative": "сва'дебный",
+            "Prepositional": "сва'дебном"
+          },
+          "Neuter": {
+            "Accusative": "сва'дебное",
+            "Dative": "сва'дебному",
+            "Genetive": "сва'дебного",
+            "Instrumental": "сва'дебным",
+            "Nominative": "сва'дебное",
+            "Prepositional": "сва'дебном"
+          },
+          "Plural": {
+            "Accusative": "сва'дебных",
+            "Dative": "сва'дебным",
+            "Genetive": "сва'дебных",
+            "Instrumental": "сва'дебными",
+            "Nominative": "сва'дебные",
+            "Prepositional": "сва'дебных"
+          }
+        },
+        "short_form": {
+          "Femanine": "-",
+          "Masculine": "-",
+          "Neuter": "-",
+          "Plural": "-"
+        }
+      },
+      "examples": [],
+      "name": "свадебный",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "колокола'",
+            "Dative": "колокола'м",
+            "Genetive": "колоколо'в",
+            "Instrumental": "колокола'ми",
+            "Nominative": "колокола'",
+            "Prepositional": "колокола'х"
+          },
+          "Singular": {
+            "Accusative": "ко'локол",
+            "Dative": "ко'локолу",
+            "Genetive": "ко'локола",
+            "Instrumental": "ко'локолом",
+            "Nominative": "ко'локол",
+            "Prepositional": "ко'локоле"
+          }
+        },
+        "gender": "Masculine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "колокол",
+      "type": "Noun"
     }
   ]
 }

@@ -59,6 +59,7 @@ class CardAttributes(Enum):
     NonPast = "nonpast"
     AdjectiveAsNoun = "adjasnoun"
     VerbOfMotion = "verb_of_motion"
+    Curse = "curse"
 
 
 # Attributes that must be shown in order to translate from english to russian

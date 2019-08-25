@@ -130,6 +130,12 @@ class Word:
         self.examples = []
         self.complete = False
 
+    def get_name(self) -> AccentedText:
+        return self.name
+
+    def get_meaning(self):
+        return self.meaning
+
     def get_all_forms(self):
         return [self.name]
 

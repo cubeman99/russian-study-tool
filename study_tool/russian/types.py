@@ -33,8 +33,11 @@ __STRING_TO_WORD_TYPE_DICT = {"none": WordType.Other,
 for word_type in WordType:
     __STRING_TO_WORD_TYPE_DICT[word_type.name.lower()] = word_type
 
-def parse_word_type(text) -> WordType:
-    return __STRING_TO_WORD_TYPE_DICT.get(text.lower(), WordType.Other)
+def parse_word_type(text, strict=False) -> WordType:
+    if strict:
+       return __STRING_TO_WORD_TYPE_DICT[text.lower()]
+    else:
+        return __STRING_TO_WORD_TYPE_DICT.get(text.lower(), WordType.Other)
 
 def get_word_type_short_name(word_type: WordType) -> str:
     return __WORD_TYPE_TO_SHORT_NAME_DICT[word_type]

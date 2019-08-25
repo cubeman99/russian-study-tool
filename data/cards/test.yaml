@@ -2,5 +2,5 @@ card_set:
   name: Test Set
   version: 1
   cards:
-    - [noun, стол, a table]
+    - [noun, стол, table]
     - [noun, стул, chair]

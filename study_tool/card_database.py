@@ -106,6 +106,11 @@ class CardDatabase:
             if russian is not None and card.russian.text.lower() != russian:
                 continue
             yield card
+
+    def find_card(self, word_type=None, english=None, russian=None) -> Card:
+        for card in self.iter_cards(word_type=word_type, english=english, russian=russian):
+            return card
+        return None
             
     def find_cards_by_word(self, word: str):
         """Find a card by the name of a word."""
@@ -251,10 +256,28 @@ class CardDatabase:
         return state
 
     def deserialize_card_data(self, state: dict):
+        card_list = []
         for card_state in state["cards"]:
             card = Card()
             card.deserialize_card_data(card_state)
+            card_list.append(card)
             self.add_card(card)
+            
+        # Deserialize and link related cards
+        for index, card_state in enumerate(state["cards"]):
+            card = card_list[index]
+            if "rel" in card_state:
+                for related_card_key in card_state["rel"]:
+                    related_type = parse_word_type(related_card_key[0].lower(), strict=True)
+                    related_russian = related_card_key[1]
+                    related_english = related_card_key[2]
+                    related_card = self.get_card(word_type=related_type,
+                                                 russian=related_russian,
+                                                 english=related_english)
+                    if not related_card:
+                        raise Exception("Unable to find related card: " +
+                                        str(related_card_key))
+                    card.add_related_card(related_card)
 
     def serialize_study_data(self) -> dict:
         state = {"save_time": time.time(),
@@ -314,6 +337,7 @@ class CardDatabase:
                 if card is None:
                     raise Exception("Cannot find card {} in database"
                                     .format(card_state))
+                card.generate_word_name()
                 card_set.add_card(card)
             elif len(card_state) == 2:
                 text = card_state[1]

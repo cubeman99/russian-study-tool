@@ -2,6 +2,7 @@ import os
 import pygame
 from cmg.graphics import Graphics
 from cmg import color
+from cmg.color import Color
 from cmg.widgets.layout_item import LayoutItem
 from cmg.math import Vec2
 
@@ -18,6 +19,9 @@ class Font:
         if not os.path.isfile(font_family):
             font_family = pygame.font.match_font(font_family)
         self.__font = pygame.font.Font(None, self.__font_size)
+
+    def get_text_color(self) -> Color:
+        return Color(self.__text_color)
 
     def get_size(self):
         return self.__font_size

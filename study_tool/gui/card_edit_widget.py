@@ -11,6 +11,8 @@ from cmg.graphics import *
 from cmg.application import *
 from study_tool import card_attributes
 from study_tool.russian.types import WordType, get_word_type_short_name
+from study_tool.russian.verb import Verb
+from study_tool.russian.word import Word
 from study_tool.card import Card
 from study_tool.card_attributes import CardAttributes
 from study_tool.card_set import *
@@ -23,8 +25,44 @@ from study_tool import card
 from study_tool.config import Config
 
 
+class WordInfoWidget(widgets.Widget):
+    def __init__(self):
+        super().__init__()
+        self.__word = None
+
+        self.__label_definition = widgets.Label("")
+        self.__label_other_meanings = widgets.Label("")
+        self.__label_counterparts = widgets.Label("")
+
+        layout = widgets.VBoxLayout()
+        layout.add(self.__label_definition)
+        layout.add(self.__label_other_meanings)
+        layout.add(widgets.HBoxLayout(widgets.Label("Counterparts:"), self.__label_counterparts))
+        self.set_layout(layout)
+
+    def set_word(self, word):
+        self.__word = word
+        self.__label_definition.set_text("")
+        self.__label_other_meanings.set_text("")
+        self.__label_counterparts.set_text("")
+
+        if word is not None:
+            self.__label_definition.set_text(
+                "{} - {}".format(repr(self.__word.get_name()),
+                                 repr(self.__word.get_meaning())))
+
+            if isinstance(self.__word, Verb):
+                self.__label_definition.set_text(
+                    "{} - {}".format(repr(self.__word.get_name()),
+                                     repr(self.__word.get_translation())))
+                self.__label_other_meanings.set_text(
+                    repr(self.__word.get_info()))
+                self.__label_counterparts.set_text(
+                    ", ".join(repr(x) for x in self.__word.get_counterparts()))
+
+
 class CardRow(widgets.Widget):
-    def __init__(self, card):
+    def __init__(self, card: Card):
         super().__init__()
         self.card = card
 
@@ -47,38 +85,46 @@ class CardRow(widgets.Widget):
 
 class CardEditWidget(widgets.Widget):
 
-    def __init__(self, card: Card, application):
+    def __init__(self, card: Card, application,
+                 allow_card_change=True, close_on_apply=True):
         super().__init__()
         if not card:
             card = Card()
         self.__card = card
         self.__application = application
         self.__card_database = application.card_database
+        self.__allow_card_change = allow_card_change
+        self.__close_on_apply = close_on_apply
 
         self.__attribute_to_widget_dict = {}
         self.__widget_to_attribute_dict = {}
+        self.__related_card_to_widget_dict = {}
+        self.__widget_to_related_card_dict = {}
 
         self.updated = Event(Card)
 
         # Create widgets
+        self.__word_info_widget = WordInfoWidget()
         self.__box_card_type = widgets.TextEdit()
         self.__box_english = widgets.TextEdit()
         self.__box_russian = widgets.TextEdit()
         self.__box_add_attribute = widgets.TextEdit()
+        self.__box_add_related_word = widgets.TextEdit()
         self.__label_sets = widgets.Label("")
+        self.__label_word_info = widgets.Label("None")
         self.__button_add_attribute = widgets.Button("Add Attribute")
+        self.__button_add_related_word = widgets.Button("Add")
         self.__layout_attributes = widgets.HBoxLayout()
+        self.__layout_related_words = widgets.HBoxLayout()
         self.__button_apply = widgets.Button("Apply")
         self.__button_delete = widgets.Button("Delete")
         self.__button_cancel = widgets.Button("Cancel")
         self.__button_new_card = widgets.Button("Create New Card")
-        
-        self.__table = widgets.Widget()
-        self.__layout_card_list = widgets.VBoxLayout()
-        self.__table.set_layout(self.__layout_card_list)
 
         self.__box_card_type.set_autocomplete_source([x.name for x in WordType])
         self.__box_add_attribute.set_autocomplete_source([x.value for x in CardAttributes])
+        self.__box_add_related_word.set_autocomplete_source(
+            [x.get_russian().text for x in self.__card_database.iter_cards()])
 
         # Create layouts
         layout = widgets.VBoxLayout()
@@ -87,15 +133,24 @@ class CardEditWidget(widgets.Widget):
         layout.add(widgets.HBoxLayout(widgets.Label("Type:"), self.__box_card_type))
         layout.add(widgets.HBoxLayout(widgets.Label("Attributes:"), self.__box_add_attribute, self.__button_add_attribute))
         layout.add(widgets.HBoxLayout(self.__layout_attributes))
+        layout.add(widgets.HBoxLayout(widgets.Label("Related Cards:"), self.__box_add_related_word, self.__button_add_related_word))
+        layout.add(widgets.HBoxLayout(self.__layout_related_words))
+        layout.add(self.__word_info_widget)
         layout.add(self.__label_sets)
         layout.add(widgets.HBoxLayout(self.__button_apply,
                                       self.__button_delete,
                                       self.__button_cancel))
-        self.set_layout(widgets.HBoxLayout(
-            layout,
-            widgets.VBoxLayout(self.__button_new_card,
-                               widgets.AbstractScrollArea(self.__table))))
-        
+        if self.__allow_card_change:
+            self.__table = widgets.Widget()
+            self.__layout_card_list = widgets.VBoxLayout()
+            self.__table.set_layout(self.__layout_card_list)
+            self.set_layout(widgets.HBoxLayout(
+                layout,
+                widgets.VBoxLayout(self.__button_new_card,
+                                   widgets.AbstractScrollArea(self.__table))))
+        else:
+            self.set_layout(layout)
+
         # Initialize with card data
         self.select_card(card)
         
@@ -103,14 +158,16 @@ class CardEditWidget(widgets.Widget):
         self.__box_russian.return_pressed.connect(self.__box_english.focus)
         self.__box_english.return_pressed.connect(self.__box_card_type.focus)
         self.__box_card_type.return_pressed.connect(self.__box_add_attribute.focus)
-        self.__box_add_attribute.return_pressed.connect(self.__on_click_add_attribute)
         self.__box_english.text_edited.connect(self.__on_english_changed)
         self.__box_russian.text_edited.connect(self.__on_russian_changed)
         self.__box_card_type.text_edited.connect(self.__on_card_type_changed)
+        self.__box_add_attribute.return_pressed.connect(self.__on_click_add_attribute)
         self.__button_add_attribute.clicked.connect(self.__on_click_add_attribute)
+        self.__box_add_related_word.return_pressed.connect(self.__on_click_add_related_card)
+        self.__button_add_related_word.clicked.connect(self.__on_click_add_related_card)
         self.__button_apply.clicked.connect(self.apply)
         self.__button_delete.clicked.connect(self.delete_card)
-        self.__button_cancel.clicked.connect(self.close)
+        self.__button_cancel.clicked.connect(self.__on_click_cancel)
         self.__button_new_card.clicked.connect(
             lambda: (self.select_card(None), self.__box_russian.focus()))
         
@@ -139,6 +196,11 @@ class CardEditWidget(widgets.Widget):
             [k for k, _ in self.__attribute_to_widget_dict.items()],
             key=lambda x: x.name))
 
+    def get_related_cards(self) -> list:
+        return tuple(sorted(
+            [k for k, _ in self.__related_card_to_widget_dict.items()],
+            key=lambda x: x.get_key()))
+
     def get_card_attributes(self) -> list:
         return tuple(sorted(self.__card.get_attributes(),
                             key=lambda x: x.name))
@@ -153,11 +215,15 @@ class CardEditWidget(widgets.Widget):
             self.__box_card_type.set_text(self.__card.get_word_type().name)
         else:
             self.__box_card_type.set_text("")
+        self.__label_word_info.set_text("")
         self.__box_russian.set_text(repr(self.__card.get_russian()))
         self.__box_english.set_text(repr(self.__card.get_english()))
         self.clear_attributes()
         for attribute in self.__card.get_attributes():
             self.add_attribute(attribute)
+        self.clear_related_cards()
+        for related_card in self.__card.get_related_cards():
+            self.add_related_card(related_card)
 
         card_sets = []
         for card_set in self.__application.iter_card_sets():
@@ -173,11 +239,15 @@ class CardEditWidget(widgets.Widget):
             self.__button_apply.set_text("Create")
             self.__button_delete.set_enabled(False)
 
+        self.__refresh_word_data()
+
     def apply(self):
         """Apply card changes or create a new card."""
         assert self.__is_valid_key()
 
-        if self.__card_database.has_card(self.__card):
+        created = not self.__card_database.has_card(self.__card)
+
+        if not created:
             Config.logger.info("Applying card updates for: " + repr(self.__card))
         
         # Update card key values
@@ -186,6 +256,7 @@ class CardEditWidget(widgets.Widget):
         self.__card.set_english(self.get_english())
         self.__card.set_word_type(self.get_card_type())
         new_key = self.__card.get_key()
+        self.__card.generate_word_name()
 
         # Update attributes
         old_attrs = self.get_card_attributes()
@@ -195,7 +266,12 @@ class CardEditWidget(widgets.Widget):
             for attr in new_attrs:
                 self.__card.add_attribute(attr)
 
-        if not self.__card_database.has_card(self.__card):
+        # Update related cards
+        self.__card.clear_related_cards()
+        for card in self.get_related_cards():
+            self.__card.add_related_card(card)
+
+        if created:
             # Create new card
             self.__card_database.add_card(self.__card)
             self.__application.save_card_data()
@@ -226,7 +302,17 @@ class CardEditWidget(widgets.Widget):
 
         self.updated.emit(self.__card)
         Config.logger.info("Success!")
-        self.close()
+        if self.__close_on_apply:
+            self.close()
+        elif created:
+            self.select_card(None)
+            self.__box_russian.focus()
+
+    def __on_click_cancel(self):
+        if self.__close_on_apply:
+            self.close()
+        else:
+            self.select_card(self.__card)
 
     def delete_card(self):
         assert self.__card_database.has_card(self.__card)
@@ -255,6 +341,11 @@ class CardEditWidget(widgets.Widget):
         self.__layout_attributes.clear()
         self.__on_attributes_changed()
 
+    def clear_related_cards(self):
+        self.__related_card_to_widget_dict = {}
+        self.__widget_to_related_card_dict = {}
+        self.__layout_related_words.clear()
+
     def add_attribute(self, attribute: CardAttributes):
         name = card_attributes.get_card_attribute_display_name(attribute)
         widget = widgets.Button(name)
@@ -271,6 +362,37 @@ class CardEditWidget(widgets.Widget):
         del self.__widget_to_attribute_dict[widget]
         self.__on_attributes_changed()
 
+    def add_related_card(self, related_card: Card):
+        name = related_card.get_russian().text
+        widget = widgets.Button(name)
+        widget.clicked.connect(lambda: self.remove_related_card(related_card))
+        self.__layout_related_words.add(widget)
+        self.__related_card_to_widget_dict[related_card] = widget
+        self.__widget_to_related_card_dict[widget] = related_card
+
+    def remove_related_card(self, related_card: Card):
+        widget = self.__related_card_to_widget_dict[related_card]
+        self.__layout_related_words.remove(widget)
+        del self.__related_card_to_widget_dict[related_card]
+        del self.__widget_to_related_card_dict[widget]
+
+    def __refresh_word_data(self):
+        """Look up or download word information for the card."""
+        word_type = self.get_card_type()
+        russian = self.get_russian()
+        word_name = russian
+        word_tokens = list(split_words(russian.text))
+        if len(word_tokens) > 0:
+            word_name = AccentedText(word_tokens[0][0])
+        
+        # Look up the word
+        word = None
+        if word_type is not None:
+            word = self.__application.word_database.get_word(
+                name=word_name, word_type=word_type)
+
+        self.__word_info_widget.set_word(word)
+
     def __on_click_add_attribute(self):
         text = self.__box_add_attribute.get_text()
         attribute = None
@@ -284,6 +406,15 @@ class CardEditWidget(widgets.Widget):
             self.__box_add_attribute.focus()
             self.__box_add_attribute.set_text("")
 
+    def __on_click_add_related_card(self):
+        text = AccentedText(self.__box_add_related_word.get_text())
+        related_card = self.__card_database.find_card(russian=text)
+        if related_card and related_card not in self.get_related_cards():
+            self.add_related_card(related_card)
+            self.__box_add_related_word.set_text("")
+            self.__box_add_related_word.focus()
+            self.__box_add_related_word.set_text("")
+
     def __on_english_changed(self):
         self.__on_key_changed()
 
@@ -294,9 +425,11 @@ class CardEditWidget(widgets.Widget):
             russian = re.sub("ээ", "'", repr(russian), flags=re.IGNORECASE)
             self.__box_russian.set_text(russian)
         self.__on_key_changed()
+        self.__refresh_word_data()
 
     def __on_card_type_changed(self):
         self.__on_key_changed()
+        self.__refresh_word_data()
 
     def __on_key_changed(self):
         self.__refresh_card_list()
@@ -313,6 +446,8 @@ class CardEditWidget(widgets.Widget):
         return card_type is not None and english and russian
 
     def __refresh_card_list(self):
+        if not self.__allow_card_change:
+            return
         self.cards = []
         self.__layout_card_list.clear()
         card_database = self.__application.card_database

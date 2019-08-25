@@ -58,7 +58,6 @@ cards:
 - {attrs: [f], en: mare, ru: кобыла', type: noun}
 - {attrs: [f], en: filly, ru: кобы'лка, type: noun}
 - {attrs: [impf], en: to put on, ru: надева'ть, type: verb}
-- {attrs: [m], en: a table, ru: сто'л, type: noun}
 - {attrs: [adjasnoun, n], en: animal, ru: живо'тное, type: noun}
 - {attrs: [m], en: cat (male), ru: ко'т, type: noun}
 - {attrs: [f], en: cat (female), ru: ко'шка, type: noun}
@@ -156,7 +155,7 @@ cards:
 - {attrs: [pluronly], en: hair, ru: во'лосы, type: noun}
 - {attrs: [n], en: face, ru: лицо', type: noun}
 - {attrs: [m], en: eye, ru: гла'з, type: noun}
-- {attrs: [n], en: ear, ru: у'хо, type: noun}
+- {attrs: [n], en: ear, rel: [[noun, слух, hearing (the sense)]], ru: у'хо, type: noun}
 - {attrs: [m], en: nose, ru: но'с, type: noun}
 - {attrs: [m], en: mouth, ru: ро'т, type: noun}
 - {attrs: [f], en: lip, ru: губа', type: noun}
@@ -1292,7 +1291,6 @@ cards:
 - {en: 'and then what? what next?', ru: "а да'льше\uFEFF?", type: phrase}
 - {en: that's exactly what I mean, ru: "и я о том же\uFEFF", type: phrase}
 - {en: let, ru: пу'сть, type: other}
-- {en: hell's bells; darn, ru: чёрт, type: interjection}
 - {en: 'banal, commonplace, trite', ru: бана'льный, type: adjective}
 - {en: light brown (hair color), ru: ру'сый, type: adjective}
 - {en: cool, ru: клёво, type: adjective}
@@ -2217,7 +2215,8 @@ cards:
 - {attrs: [impf, verb.suffix.ai], en: to play, ru: игра'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: 'to decide, solve', ru: реша'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to finish, ru: конча'ть, type: verb}
-- {attrs: [impf, verb.suffix.ai], en: to listen, ru: слу'шать, type: verb}
+- {attrs: [impf, verb.suffix.ai], en: to listen, rel: [[noun, слух, hearing (the sense)]],
+  ru: слу'шать, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to dream (about a goal), ru: мечта'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to collect, ru: собира'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to begin, ru: начина'ть, type: verb}
@@ -2903,3 +2902,80 @@ cards:
 - {en: experience, ru: о'пыт, type: noun}
 - {attrs: [pf], en: to catch, ru: пойма'ть, type: verb}
 - {attrs: [pf], en: 'to remain, stay, be left', ru: оста'ться, type: verb}
+- {en: homeless, ru: бездо'мный, type: adjective}
+- {en: worthy, ru: досто'йный, type: adjective}
+- {en: shy, ru: засте'нчивый, type: adjective}
+- {en: aloud, ru: вслу'х, type: adjective}
+- {en: obvious, ru: я'вный, type: adjective}
+- {en: toxic, ru: токси'чный, type: adjective}
+- {en: 'very good, perfect', ru: здо'рово, type: adverb}
+- {en: 'back, return, inverse, opposite', ru: обра'тно, type: adverb}
+- {attrs: [f], en: sale (purchase), ru: прода'жа, type: noun}
+- {en: fitting room, ru: приме'рочная, type: noun}
+- {attrs: [f], en: register, ru: ка'сса, type: noun}
+- {attrs: [m], en: fan (hand fan), ru: ве'ер, type: noun}
+- {attrs: [f], en: change (money), ru: сда'ча, type: noun}
+- {en: cash, ru: нали'чные (ден'ьги), type: noun}
+- {en: knowledge, ru: зна'ния, type: noun}
+- {attrs: [n], en: 'education, formation', ru: образова'ние, type: noun}
+- {attrs: [f], en: 'publicity, openness', ru: гла'сность, type: noun}
+- {attrs: [f], en: reconstruction, ru: перестро'йка, type: noun}
+- {attrs: [m], en: theif, ru: во'р, type: noun}
+- {en: sand castle, ru: за'мка из песка', type: noun}
+- {attrs: [n], en: 'position, location, situation', ru: положе'ние, type: noun}
+- {attrs: [n], en: attraction, ru: влече'ние, type: noun}
+- {attrs: [f], en: universe, ru: вселе'нная, type: noun}
+- {en: 'guys, children', ru: ребя'та, type: noun}
+- {attrs: [m], en: pearl, ru: же'мчуг, type: noun}
+- {attrs: [m], en: fur, ru: ме'х, type: noun}
+- {attrs: [n], en: awakening, ru: пробужде'ние, type: noun}
+- {attrs: [f], en: eyebrow, ru: бро'вь, type: noun}
+- {attrs: [m], en: 'market, mart', ru: ры'нок, type: noun}
+- {attrs: [f], en: scene, ru: сце'на, type: noun}
+- {attrs: [n], en: 'purpose, assignment, function', ru: назначе'ние, type: noun}
+- {attrs: [n], en: standoff, ru: противостоя'ние, type: noun}
+- {attrs: [n], en: 'anxiety, concern', ru: беспоко'йство, type: noun}
+- {attrs: [f], en: frying pan, ru: сковорода', type: noun}
+- {attrs: [f], en: brush, ru: ки'сть, type: noun}
+- {en: to measure, ru: поме'рить, type: verb}
+- {attrs: [impf, verb.suffix.ai], en: to stand idle, ru: проста'ивать, type: verb}
+- {attrs: [pf, verb.suffix.i], en: to invest, ru: вложи'ть, type: verb}
+- {attrs: [pf, verb.suffix.i], en: to take something out and put it, ru: вы'ложить,
+  type: verb}
+- {attrs: [pf, verb.suffix.i], en: to put and hold in place, ru: приложи'ть, type: verb}
+- {attrs: [pf, verb.suffix.i], en: to move something from one place to another, ru: переложи'ть,
+  type: verb}
+- {attrs: [impf, verb.suffix.i], en: 'to aspire, aim, seek', ru: стреми'ться, type: verb}
+- {attrs: [impf, verb.suffix.avai], en: to betray, ru: предава'ть, type: verb}
+- {attrs: [pf, verb.suffix.e], en: to offend, ru: оби'деть, type: verb}
+- {attrs: [impf, verb.suffix.ai], en: to offend, ru: обижа'ть, type: verb}
+- {attrs: [impf, verb.suffix.ai], en: 'to worry, relive', ru: пережива'ть, type: verb}
+- {attrs: [impf, verb.suffix.ai], en: to doubt, ru: сомнева'ться, type: verb}
+- {attrs: [pf, verb.suffix.nu], en: 'to snuggle, nestle', ru: прильну'ть, type: verb}
+- {attrs: [impf, verb.suffix.ai], en: to giggle, ru: хихи'кать, type: verb}
+- {attrs: [pf, verb.suffix.nu], en: to giggle, ru: хихи'кнуть, type: verb}
+- {attrs: [impf, verb.suffix.ai], en: 'to relax, loosen up', ru: расслабля'ться, type: verb}
+- {attrs: [impf, verb.suffix.ai], en: to battle, ru: сража'ться, type: verb}
+- {en: to manage to do something, ex: [[У меня получилось водить машину, '']], ru: у
+    + gen. + получилось + verb, type: phrase}
+- {en: it seems like ..., ex: [['Видимо, я её обидел -- It seems like I offended her',
+      ''], ['Похоже, он не придёт -- It seems like he won''t come', '']], ru: 'ви''димо,
+    ...; похо''же, ...', type: phrase}
+- {en: 'to get ready, to plan, to intend to do soemthing', ru: собира'ться + verb, type: phrase}
+- {en: 'Why haven''t you told me this before?', ru: 'почему ты мне раньше это не рассказывал?',
+  type: phrase}
+- {en: what we're made of, ru: чево мы стоим, type: phrase}
+- {en: 'flew out of my head, it was at the tip of my tongue', ru: вы'летело из головы',
+  type: phrase}
+- {en: to shoot a video, ru: снима'ть ви'део, type: phrase}
+- {en: 'wow, woah!', ru: ух ты!, type: phrase}
+- {en: wherever you are, ru: где бы ты не был, type: phrase}
+- {en: 'really, (suprise, doubt, concern)', ru: ра'зве, type: particle}
+- {en: 'really!, emotional (suprise, doubt, concern)', ru: неуже'ли, type: particle}
+- {en: 'concerning, about', ru: насчёт, type: preposition}
+- {attrs: [m], en: table, ru: сто'л, type: noun}
+- {attrs: [impf], en: 'to call, beckon; to hand signal', ru: мани'ть, type: verb}
+- {en: It would be great if ..., ru: 'во''т бы [бы''ло хорошо''] ...', type: phrase}
+- {en: wedding (adj.), ru: сва'дебный, type: adjective}
+- {attrs: [m], en: bell, ru: ко'локол, type: noun}
+- {en: hell's balls; darn, ru: чёрт, type: interjection}

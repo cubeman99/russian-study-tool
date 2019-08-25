@@ -1,6 +1,7 @@
 import pygame
 import re
 import os
+from cmg import gui
 from cmg.application import Application
 from cmg.input import Keys
 from cmg.event import Event
@@ -10,18 +11,10 @@ from cmg.widgets.widget import Widget
 class TextEdit(Widget):
     def __init__(self,
                  text="",
-                 font_family="",
-                 font_size=35,
-                 antialias=True,
-                 text_color=(0, 0, 0),
-                 cursor_color=(0, 0, 1),
                  repeat_keys_initial_ms=400,
                  repeat_keys_interval_ms=35):
         super().__init__()
         self.set_focusable(True)
-        height = font_size + 4
-        self.set_minimum_height(height)
-        self.set_maximum_height(height)
 
         self.text_edited = Event()
         self.return_pressed = Event()
@@ -35,20 +28,17 @@ class TextEdit(Widget):
         self.__surface = pygame.Surface((1, 1))
         self.__surface.set_alpha(0)
 
-        self.antialias = antialias
-        self.text_color = text_color
-        self.font_size = font_size
         self.__text = text  # Inputted text
         self.__prev_state = (None, None, None)
 
-        if not os.path.isfile(font_family):
-            font_family = pygame.font.match_font(font_family)
+        self.__font = gui.Font(32)
+        size = self.__font.measure(self.__text)
+        self.set_minimum_height(size.y + 4)
+        self.set_maximum_height(size.y + 4)
+        #self.set_minimum_width(size.x + 4)
 
         self.cursor_position = 0
         self.keyrepeat_counters = {}
-
-        # Text-surface will be created during the first update call:
-        self.font_object = pygame.font.Font(None, 30)
 
         # Vars to make keydowns repeat after user pressed a key for some time:
         # {event.key: (counter_int, event.unicode)} (look for "***")
@@ -57,9 +47,6 @@ class TextEdit(Widget):
         self.keyrepeat_interval_ms = repeat_keys_interval_ms
 
         # Things cursor:
-        self.cursor_surface = pygame.Surface(
-            (int(self.font_size / 20 + 1), self.font_size))
-        self.cursor_surface.fill(cursor_color)
         self.cursor_position = len(text)  # Inside text
         self.cursor_visible = False
         self.cursor_switch_ms = 500  # /|\
@@ -134,15 +121,11 @@ class TextEdit(Widget):
             self.cursor_visible = self.is_focused()
         if state != self.__prev_state:
             self.__prev_state = state
-            self.__surface_text = self.font_object.render(
-                self.__text,
-                self.antialias,
-                self.text_color)
+            self.__surface_text = self.__font.render(self.__text)
             if self.__background_text:
-                self.__surface_background_text = self.font_object.render(
+                self.__surface_background_text = self.__font.render(
                     self.__background_text,
-                    self.antialias,
-                    self.__background_text_color)
+                    color=self.__background_text_color)
 
         self.clock.tick()
 
@@ -193,18 +176,24 @@ class TextEdit(Widget):
             del self.keyrepeat_counters[key]
 
     def on_draw(self, g):
-        y = self.rect.top + \
-            int((self.get_height() - self.__surface.get_height()) / 2)
         if self.__background_text:
+            y = self.rect.top + \
+                int((self.get_height() - self.__surface_background_text.get_height()) / 2)
             g.draw_image(self.__surface_background_text, self.rect.left + 4, y)
         if self.__text:
+            y = self.rect.top + \
+                int((self.get_height() - self.__surface_text.get_height()) / 2)
             g.draw_image(self.__surface_text, self.rect.left + 4, y)
+
         if self.cursor_visible:
-            cursor_y_pos = self.font_object.size(
+            cursor_width = int(self.__font.get_size() / 20 + 1)
+            cursor_height = self.__font.get_size()
+            cursor_x_pos = self.__font.measure(
                 self.__text[:self.cursor_position])[0]
             if self.cursor_position > 0:
-                cursor_y_pos -= self.cursor_surface.get_width()
-            g.draw_image(self.cursor_surface, (cursor_y_pos, 0))
+                cursor_x_pos -= cursor_width
+            g.fill_rect(cursor_x_pos, 0, cursor_width, cursor_height,
+                        color=self.__font.get_text_color())
 
     def __get_ctrl_boundary(self, step=1):
         pos = self.cursor_position

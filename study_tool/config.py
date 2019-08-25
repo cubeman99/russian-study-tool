@@ -61,7 +61,7 @@ class Config:
                                 2: color.rgb(255, 128, 0),
                                 3: color.YELLOW,
                                 4: color.GREEN}
-
+    max_examples_to_display = 7
 
 if Config.logger is None:
     Config.logger = cmg.logging.create_logger("study_tool",
