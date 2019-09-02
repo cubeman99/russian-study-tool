@@ -21,6 +21,8 @@ class SubRegionLayout(widgets.Layout):
     def set_widget(self, widget: widgets.Widget):
         assert isinstance(widget, widgets.Widget)
         self.__widget = widget
+        if widget:
+            widget.set_parent(self)
 
     def get_children(self):
         return (self.__widget,)

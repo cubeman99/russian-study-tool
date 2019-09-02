@@ -106,9 +106,9 @@ class StudyCardsApp(Application):
         #self.push_state(GUIState(widget=CardEditWidget(cards[0]), title="Edit Card"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["verbs"]["verbs_stem_ai"], self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["nouns"]["house"], self), title="Edit Card Set"))
-        #self.push_state(GUIState(widget=CardSetEditWidget(self.root["test_set"], self), title="Edit Card Set"))
-        card = list(self.card_database.find_cards_by_word("слушать"))[0]
-        self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
+        self.push_state(GUIState(widget=CardSetEditWidget(self.root["test_set"], self), title="Edit Card Set"))
+        #card = list(self.card_database.find_cards_by_word("слушать"))[0]
+        #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
 
         #self.save_card_set(self.root["nouns"]["house"])
 
@@ -391,11 +391,11 @@ class StudyCardsApp(Application):
             # TODO: fade background
             state.draw(self.graphics)
 
-    def __on_key_pressed(self, key, text):
-        self.state.on_key_pressed(key, text)
+    def __on_key_pressed(self, key, mod, text):
+        self.state.on_key_pressed(key, mod, text)
 
-    def __on_key_released(self, key):
-        self.state.on_key_released(key)
+    def __on_key_released(self, key, mod):
+        self.state.on_key_released(key, mod)
 
     def __on_mouse_pressed(self, pos, button):
         self.state.on_mouse_pressed(pos, button)

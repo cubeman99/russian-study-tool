@@ -8,6 +8,7 @@
 изря'дный - fair, hefty, significant in quantity
 престу'пный - criminal, felonious
 живопи'сный - scenic, picturesque
+беспла'тный -- free (without pay)
 
 @type adverb
 Вкра'тце, ... -- In short, ...
@@ -28,6 +29,10 @@
 схо'дка - gathering
 маршру'т - route
 пре'данность - devotion, dedication
+америка'нский го'рки - roller coaster
+ощуще'ние - feeling, sensation
+нау'ка - science
+ссы'лка - link, reference
 
 @type verb
 повы'сить - to increase, raise @pf
@@ -49,6 +54,8 @@
 скуча'ть - to miss due to absance; to feel bored
 шпио'нить - to spy
 задрема'ть - to doze off
+дра'лить -- to tear up (teardrops)
+набра'ть - to dial
 
 @type phrase
 никогда' ещё не' было ничего' и никого' подо'бного - there has never been anything or anyone like this
@@ -60,6 +67,7 @@
 утра' ве'чера мудрене'е - morning is wiser than the evening (lets sleep on it)
 ни с ме'ста - Don't move!
 я име'ю в виду', ... -- I mean, ...
+как тебе' уго'дно - as you please
 
 @type other
 

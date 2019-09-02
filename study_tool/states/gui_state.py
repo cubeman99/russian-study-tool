@@ -33,16 +33,16 @@ class GUIState(State):
     def set_widget(self, widget: widgets.Widget):
         self.__widget = widget
         
-    def on_key_pressed(self, key, text):
+    def on_key_pressed(self, key, mod, text):
         if self.__widget:
             if key == Keys.K_TAB:
                 self.__widget.cycle_next_focus()
             if self.__widget.get_focused_widget():
-                self.__widget.get_focused_widget().on_key_pressed(key, text)
+                self.__widget.get_focused_widget().on_key_pressed(key, mod, text)
         
-    def on_key_released(self, key):
+    def on_key_released(self, key, mod):
         if self.__widget and self.__widget.get_focused_widget():
-            self.__widget.get_focused_widget().on_key_released(key)
+            self.__widget.get_focused_widget().on_key_released(key, mod)
             
     def on_mouse_pressed(self, pos, button):
         if self.__widget:

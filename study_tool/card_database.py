@@ -280,7 +280,7 @@ class CardDatabase:
                     card.add_related_card(related_card)
 
     def serialize_study_data(self) -> dict:
-        state = {"save_time": time.time(),
+        state = {"save_time": time.time(), 
                  "cards": [],
                  "metrics": []}
         current_metrics = self.get_study_metrics()

@@ -26,7 +26,10 @@ __WORD_TYPE_TO_SHORT_NAME_DICT = {
     WordType.Other: "oth",
     WordType.Interjection: "int",
     WordType.Particle: "part",
-    }
+}
+
+___SHORT_NAME_TO_WORD_TYPE_DICT = dict(
+    (v, k) for k, v in __WORD_TYPE_TO_SHORT_NAME_DICT.items())
 
 __STRING_TO_WORD_TYPE_DICT = {"none": WordType.Other,
                   None: WordType.Other}
@@ -38,6 +41,9 @@ def parse_word_type(text, strict=False) -> WordType:
        return __STRING_TO_WORD_TYPE_DICT[text.lower()]
     else:
         return __STRING_TO_WORD_TYPE_DICT.get(text.lower(), WordType.Other)
+
+def parse_short_word_type(text) -> WordType:
+    return ___SHORT_NAME_TO_WORD_TYPE_DICT.get(text.lower(), None)
 
 def get_word_type_short_name(word_type: WordType) -> str:
     return __WORD_TYPE_TO_SHORT_NAME_DICT[word_type]

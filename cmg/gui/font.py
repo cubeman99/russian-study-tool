@@ -35,5 +35,4 @@ class Font:
     def render(self, text: str, color=None):
         if not color:
             color = self.__text_color
-        return self.__font.render(
-                text, self.__antialias, color)
+        return self.__font.render(text, self.__antialias, tuple(color))

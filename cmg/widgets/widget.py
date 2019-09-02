@@ -106,10 +106,10 @@ class Widget(LayoutItem):
     def on_lose_focus(self):
         pass
     
-    def on_key_pressed(self, key, text):
+    def on_key_pressed(self, key, mod, text):
         pass
     
-    def on_key_released(self, key):
+    def on_key_released(self, key, mod):
         pass
     
     def on_mouse_pressed(self, pos, button):

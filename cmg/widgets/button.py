@@ -32,7 +32,7 @@ class Button(widgets.Widget):
             self.__text = text
             self.__surface = None
 
-    def on_key_pressed(self, key, text):
+    def on_key_pressed(self, key, mod, text):
         if key in [Keys.K_RETURN, Keys.K_SPACE]:
             self.clicked.emit()
             
