@@ -36,7 +36,10 @@ class GUIState(State):
     def on_key_pressed(self, key, mod, text):
         if self.__widget:
             if key == Keys.K_TAB:
-                self.__widget.cycle_next_focus()
+                if KeyMods.LSHIFT in mod:
+                    self.__widget.cycle_next_focus(reverse=True)
+                else:
+                    self.__widget.cycle_next_focus(reverse=False)
             if self.__widget.get_focused_widget():
                 self.__widget.get_focused_widget().on_key_pressed(key, mod, text)
         
@@ -50,6 +53,7 @@ class GUIState(State):
             if widget and widget.is_enabled():
                 if widget.is_focusable() and button in [MouseButtons.LEFT, MouseButtons.RIGHT]:
                     widget.focus()
+            for widget in self.iter_widgets_at_point(self.__widget, pos):
                 widget.on_mouse_pressed(pos, button)
 
     def on_mouse_released(self, pos, button):
@@ -63,7 +67,8 @@ class GUIState(State):
         if isinstance(item, widgets.Widget):
             layout = item.get_layout()
         rect = item.get_rect()
-        if pos.x >= rect.left and pos.y >= rect.top and pos.x < rect.right and pos.y < rect.bottom:
+        if (pos.x >= rect.left and pos.y >= rect.top and
+            pos.x < rect.right and pos.y < rect.bottom):
             if layout:
                 for child in layout.get_children():
                     result = self.get_widget_at_point(child, pos)
@@ -72,6 +77,19 @@ class GUIState(State):
             elif isinstance(item, widgets.Widget):
                 return item
         return None
+
+    def iter_widgets_at_point(self, item, pos):
+        layout = item
+        if isinstance(item, widgets.Widget):
+            layout = item.get_layout()
+        rect = item.get_rect()
+        if pos.x >= rect.left and pos.y >= rect.top and pos.x < rect.right and pos.y < rect.bottom:
+            if isinstance(item, widgets.Widget):
+                yield item
+            if layout:
+                for child in layout.get_children():
+                    for subitem in self.iter_widgets_at_point(child, pos):
+                        yield subitem
 
 
     def begin(self):

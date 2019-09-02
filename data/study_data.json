@@ -23113,14 +23113,6 @@
       "type": "Interjection"
     },
     {
-      "english": "chair",
-      "history": "TTTTTTTTTTTTTTT",
-      "last_encounter_time": 1566760319.333797,
-      "proficiency_level": 4,
-      "russian": "стул",
-      "type": "Noun"
-    },
-    {
       "english": "family (adj.)",
       "history": "TTTTTTTTT",
       "last_encounter_time": 1567121929.0167756,
@@ -24177,6 +24169,14 @@
       "type": "Adjective"
     },
     {
+      "english": "free (without pay)",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "бесплатный",
+      "type": "Adjective"
+    },
+    {
       "english": "In short, ...",
       "history": "F",
       "last_encounter_time": 1566673054.8156435,
@@ -24310,6 +24310,30 @@
       "last_encounter_time": null,
       "proficiency_level": 0,
       "russian": "американский горки",
+      "type": "Noun"
+    },
+    {
+      "english": "feeling, sensation",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "ощущение",
+      "type": "Noun"
+    },
+    {
+      "english": "science",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "наука",
+      "type": "Noun"
+    },
+    {
+      "english": "link, reference",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "ссылка",
       "type": "Noun"
     },
     {
@@ -24465,6 +24489,14 @@
       "type": "Verb"
     },
     {
+      "english": "to dial",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "набрать",
+      "type": "Verb"
+    },
+    {
       "english": "there has never been anything or anyone like this",
       "history": "TTTTTTTTTT",
       "last_encounter_time": 1566672754.917686,
@@ -24535,6 +24567,22 @@
       "proficiency_level": 4,
       "russian": "я имею в виду, ...",
       "type": "Phrase"
+    },
+    {
+      "english": "as you please",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "как тебе угодно",
+      "type": "Phrase"
+    },
+    {
+      "english": "chair",
+      "history": "TTTTTTTTTTTTTTT",
+      "last_encounter_time": 1566760319.333797,
+      "proficiency_level": 4,
+      "russian": "стул",
+      "type": "Noun"
     }
   ],
   "metrics": [
@@ -34112,7 +34160,132 @@
         }
       },
       "date": "2019/08/29"
+    },
+    {
+      "all_metrics": {
+        "history_score": 2249.6937738969427,
+        "proficiency_counts": [
+          13,
+          185,
+          14,
+          149,
+          2712
+        ]
+      },
+      "card_type_metrics": {
+        "Adjective": {
+          "history_score": 351.8936951040886,
+          "proficiency_counts": [
+            2,
+            7,
+            5,
+            25,
+            402
+          ]
+        },
+        "Adverb": {
+          "history_score": 124.29160365680896,
+          "proficiency_counts": [
+            0,
+            11,
+            0,
+            1,
+            164
+          ]
+        },
+        "Conjunction": {
+          "history_score": 20.22896825396825,
+          "proficiency_counts": [
+            0,
+            12,
+            0,
+            2,
+            37
+          ]
+        },
+        "Interjection": {
+          "history_score": 9.53968253968254,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            0,
+            11
+          ]
+        },
+        "Noun": {
+          "history_score": 846.8683256177704,
+          "proficiency_counts": [
+            5,
+            146,
+            5,
+            91,
+            1052
+          ]
+        },
+        "Other": {
+          "history_score": 28.064262126762124,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            1,
+            36
+          ]
+        },
+        "Particle": {
+          "history_score": 4.583333333333333,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            0,
+            6
+          ]
+        },
+        "Phrase": {
+          "history_score": 69.61413611972822,
+          "proficiency_counts": [
+            2,
+            3,
+            2,
+            5,
+            86
+          ]
+        },
+        "Preposition": {
+          "history_score": 34.62757936507936,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            2,
+            40
+          ]
+        },
+        "Pronoun": {
+          "history_score": 20.375,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            0,
+            25
+          ]
+        },
+        "Verb": {
+          "history_score": 739.6071877797242,
+          "proficiency_counts": [
+            4,
+            6,
+            2,
+            22,
+            853
+          ]
+        }
+      },
+      "date": "2019/09/02"
     }
   ],
-  "save_time": 1567126289.130482
+  "save_time": 1567446623.3709779
 }

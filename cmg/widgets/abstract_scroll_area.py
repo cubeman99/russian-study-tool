@@ -4,6 +4,7 @@ from cmg import widgets
 from cmg.graphics import Graphics
 from cmg.math import Vec2
 from cmg import color
+from cmg.input import MouseButtons, KeyMods, Keys
 from cmg.widgets import widget
 from cmg.widgets.layout import HBoxLayout
 
@@ -17,6 +18,9 @@ class SubRegionLayout(widgets.Layout):
 
     def get_widget(self) -> widgets.Widget:
         return self.__widget
+
+    def set_offset(self, offset: Vec2):
+        self.__offset = Vec2(offset)
 
     def set_widget(self, widget: widgets.Widget):
         assert isinstance(widget, widgets.Widget)
@@ -55,9 +59,7 @@ class SubRegionLayout(widgets.Layout):
             subg.set_translation(-(self.rect.left + self.__offset[0]),
                                  -(self.rect.top + self.__offset[1]))
             self.__widget.draw(subg)
-
-            source = pygame.Rect(self.__offset.totuple(), self.rect.size)
-            g.draw_image_part(self.__surface, self.rect.topleft, source)
+            g.draw_image(self.__surface, self.rect.topleft)
 
 
 class ScrollBar(widgets.Widget):
@@ -65,9 +67,9 @@ class ScrollBar(widgets.Widget):
         super().__init__()
 
         self.__value = 0
-        self.__length = 1
         self.__minimum = 0
         self.__maximum = 100
+        self.__page_step = 1
         self.__axis = axis
         self.__end_size = 20
 
@@ -79,21 +81,29 @@ class ScrollBar(widgets.Widget):
     def get_value(self):
         return self.__value
 
+    def get_page_step(self):
+        return self.__page_step
+
     def set_minimum(self, minimum):
         self.__minimum = minimum
 
     def set_maximum(self, maximum):
         self.__maximum = maximum
 
-    def set_value(self, value):
-        self.__value = value
+    def set_range(self, minimum, maximum):
+        self.__minimum = minimum
+        self.__maximum = maximum
 
-    def set_bar_length(self, length):
-        self.__length = length
+    def set_value(self, value):
+        self.__value = max(self.__minimum, min(self.__maximum, value))
+
+    def set_page_step(self, page_step):
+        self.__page_step = page_step
 
     def draw(self, g):
         axis = self.__axis
         end_size = Vec2(self.__end_size, self.__end_size)
+
 
         topleft = Vec2(self.get_rect().topleft)
         size = self.get_size()
@@ -107,7 +117,8 @@ class ScrollBar(widgets.Widget):
             percent = ((self.__value - self.__minimum) /
                        (self.__maximum - self.__minimum))
             bar_size[axis] = int(
-                (span_size * self.__length) / (self.__maximum - self.__minimum + self.__length))
+                (span_size * self.__page_step) /
+                (self.__maximum - self.__minimum + self.__page_step))
             bar_pos[axis] += int(round((span_size - bar_size[axis]) * percent))
 
         xy = Vec2(topleft)
@@ -155,8 +166,33 @@ class AbstractScrollArea(widgets.Widget):
         self.__widget = widget
 
     def on_update(self):
-        span = max(0, self.__widget.get_height() - self.__layout.get_height())
+        viewport_height = self.__layout.get_height()
+        area_height = self.__widget.get_height()
         self.__scrollbar_h.set_minimum(0)
-        self.__scrollbar_h.set_maximum(span)
-        self.__scrollbar_h.set_bar_length(self.__layout.get_height())
-        self.__scrollbar_h.set_value(0)
+        self.__scrollbar_h.set_maximum(
+            max(0, area_height - viewport_height))
+        self.__scrollbar_h.set_page_step(area_height)
+        self.__layout.set_offset(Vec2(
+            0, self.__scrollbar_h.get_value()))
+
+    def on_key_pressed(self, key, mod, text):
+        if mod == KeyMods.NONE:
+            if key == MouseButtons.PAGE_UP:
+                self.__scrollbar_h.set_value(self.__scrollbar_h.get_value() -
+                                             self.__scrollbar_h.get_page_step())
+            elif key == MouseButtons.PAGE_DOWN:
+                self.__scrollbar_h.set_value(self.__scrollbar_h.get_value() +
+                                             self.__scrollbar_h.get_page_step())
+            
+    def on_mouse_pressed(self, pos, button):
+        scroll = 0
+        if button == MouseButtons.WHEEL_UP:
+            scroll = -1
+        elif button == MouseButtons.WHEEL_DOWN:
+            scroll = 1
+        if scroll != 0:
+            self.__scrollbar_h.set_value(
+                self.__scrollbar_h.get_value() + (scroll * 40))
+
+    def on_mouse_released(self, pos, button):
+        pass

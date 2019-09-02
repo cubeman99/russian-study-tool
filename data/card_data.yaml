@@ -2978,7 +2978,6 @@ cards:
 - {en: wedding (adj.), ru: сва'дебный, type: adjective}
 - {attrs: [m], en: bell, ru: ко'локол, type: noun}
 - {en: hell's balls; darn, ru: чёрт, type: interjection}
-- {attrs: [m], en: chair, ru: сту'л, type: noun}
 - {en: family (adj.), ru: семе'йный, type: adjective}
 - {en: tense, ru: напряжённый, type: adjective}
 - {en: 'frightened, scared', ru: испу'ганный, type: adjective}
@@ -3115,3 +3114,4 @@ cards:
 - {en: 'will happen, take place', ru: произойдёт, type: phrase}
 - {en: '... tend to be ...', ru: '... скло''нны бы''ть ...', type: phrase}
 - {en: 'to enjoy, relish, delight', ru: наслажда'ть, type: verb}
+- {attrs: [m], en: chair, ru: сту'л, type: noun}

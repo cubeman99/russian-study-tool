@@ -92482,6 +92482,80 @@
       "examples": [],
       "name": "набрать",
       "type": "Verb"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "беспла'тную",
+            "Dative": "беспла'тной",
+            "Genetive": "беспла'тной",
+            "Instrumental": "беспла'тной",
+            "Nominative": "беспла'тная",
+            "Prepositional": "беспла'тной"
+          },
+          "Masculine": {
+            "Accusative": "беспла'тного",
+            "Dative": "беспла'тному",
+            "Genetive": "беспла'тного",
+            "Instrumental": "беспла'тным",
+            "Nominative": "беспла'тный",
+            "Prepositional": "беспла'тном"
+          },
+          "Neuter": {
+            "Accusative": "беспла'тное",
+            "Dative": "беспла'тному",
+            "Genetive": "беспла'тного",
+            "Instrumental": "беспла'тным",
+            "Nominative": "беспла'тное",
+            "Prepositional": "беспла'тном"
+          },
+          "Plural": {
+            "Accusative": "беспла'тных",
+            "Dative": "беспла'тным",
+            "Genetive": "беспла'тных",
+            "Instrumental": "беспла'тными",
+            "Nominative": "беспла'тные",
+            "Prepositional": "беспла'тных"
+          }
+        },
+        "short_form": {
+          "Femanine": "беспла'тна",
+          "Masculine": "беспла'тен",
+          "Neuter": "беспла'тно",
+          "Plural": "беспла'тны"
+        }
+      },
+      "examples": [],
+      "name": "бесплатный",
+      "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "ссы'лки",
+            "Dative": "ссы'лкам",
+            "Genetive": "ссы'лок",
+            "Instrumental": "ссы'лками",
+            "Nominative": "ссы'лки",
+            "Prepositional": "ссы'лках"
+          },
+          "Singular": {
+            "Accusative": "ссы'лку",
+            "Dative": "ссы'лке",
+            "Genetive": "ссы'лки",
+            "Instrumental": "ссы'лкой",
+            "Nominative": "ссы'лка",
+            "Prepositional": "ссы'лке"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "ссылка",
+      "type": "Noun"
     }
   ]
 }

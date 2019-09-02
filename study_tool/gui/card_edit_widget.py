@@ -26,7 +26,7 @@ from study_tool.config import Config
 
 
 class WordInfoWidget(widgets.Widget):
-    def __init__(self, card_set):
+    def __init__(self):
         super().__init__()
         self.__word = None
 

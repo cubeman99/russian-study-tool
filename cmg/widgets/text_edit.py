@@ -40,18 +40,16 @@ class TextEdit(Widget):
         self.set_minimum_height(size.y + 4)
         self.set_maximum_height(size.y + 4)
         #self.set_minimum_width(size.x + 4)
-
-        self.cursor_position = 0
-        self.keyrepeat_counters = {}
-
+        
         # Vars to make keydowns repeat after user pressed a key for some time:
         # {event.key: (counter_int, event.unicode)} (look for "***")
         self.keyrepeat_counters = {}
         self.keyrepeat_intial_interval_ms = repeat_keys_initial_ms
         self.keyrepeat_interval_ms = repeat_keys_interval_ms
 
-        # Things cursor:
-        self.cursor_position = len(text)  # Inside text
+        # cursor state
+        self.__select_position = None
+        self.__cursor_position = len(text)  # Inside text
         self.cursor_visible = False
         self.cursor_switch_ms = 500  # /|\
         self.cursor_ms_counter = 0
@@ -64,6 +62,7 @@ class TextEdit(Widget):
         self.__background_color = Color(color)
 
     def on_lose_focus(self):
+        self.stop_selecting()
         self.__apply_autocomplete()
 
     def get_text(self) -> str:
@@ -72,7 +71,7 @@ class TextEdit(Widget):
     def set_text(self, text: str) -> str:
         assert isinstance(text, str)
         self.__text = text
-        self.cursor_position = len(self.__text)
+        self.__cursor_position = len(self.__text)
 
     def text(self) -> str:
         return self.__text
@@ -81,19 +80,19 @@ class TextEdit(Widget):
         if self.is_focused():
 
             # Update key counters:
-            for key in self.keyrepeat_counters:
+            for key, mod in self.keyrepeat_counters:
                 # Update clock
-                self.keyrepeat_counters[key][0] += self.clock.get_time()
+                self.keyrepeat_counters[(key, mod)][0] += self.clock.get_time()
 
                 # Generate new key events if enough time has passed:
-                if self.keyrepeat_counters[key][0] >= self.keyrepeat_intial_interval_ms:
-                    self.keyrepeat_counters[key][0] = (
+                if self.keyrepeat_counters[(key, mod)][0] >= self.keyrepeat_intial_interval_ms:
+                    self.keyrepeat_counters[(key, mod)][0] = (
                         self.keyrepeat_intial_interval_ms
                         - self.keyrepeat_interval_ms
                     )
 
-                    event_key, event_unicode = key, self.keyrepeat_counters[key][1]
-                    self.on_key_pressed(event_key, KeyMods.NONE, event_unicode)
+                    event_key, event_unicode = key, self.keyrepeat_counters[(key, mod)][1]
+                    self.on_key_pressed(event_key, mod, event_unicode)
 
             # Update cursor visibility
             self.cursor_ms_counter += self.clock.get_time()
@@ -119,7 +118,7 @@ class TextEdit(Widget):
 
         # Re-render text surface
         state = (self.__text,
-                 self.cursor_position,
+                 self.__cursor_position,
                  self.__background_text)
         if state[0] != self.__prev_state[0]:
             self.text_edited.emit()
@@ -147,40 +146,124 @@ class TextEdit(Widget):
             return
 
         # If none exist, create counter for that key:
-        if not mod and key not in self.keyrepeat_counters:
-            self.keyrepeat_counters[key] = [0, text]
+        if (key, mod) not in self.keyrepeat_counters:
+            self.keyrepeat_counters[(key, mod)] = [0, text]
 
-        if key == Keys.K_BACKSPACE:
-            self.__text = (
-                self.__text[:max(self.cursor_position - 1, 0)] +
-                self.__text[self.cursor_position:]
-            )
-            self.cursor_position = max(self.cursor_position - 1, 0)
+        if KeyMods.LSHIFT in mod and KeyMods.LCTRL in mod:
+            if key == Keys.K_INSERT:
+                self.paste()
+
+        if KeyMods.LSHIFT in mod:
+            if key == Keys.K_RIGHT:
+                self.start_selection()
+                self.__cursor_position = min(
+                    self.__cursor_position + 1, len(self.__text))
+            elif key == Keys.K_LEFT:
+                self.start_selection()
+                self.__cursor_position = max(self.__cursor_position - 1, 0)
+            elif key == Keys.K_END:
+                self.start_selection()
+                self.__cursor_position = len(self.__text)
+            elif key == Keys.K_HOME:
+                self.start_selection()
+                self.__cursor_position = 0
+
+        elif KeyMods.LCTRL in mod:
+            if key == Keys.K_V:
+                self.paste()
+            if key == Keys.K_X:
+                self.cut()
+            if key == Keys.K_C:
+                self.copy()
+            if key == Keys.K_A:
+                self.select_all()
+            if key == Keys.K_INSERT:
+                self.copy()
+
+        elif key == Keys.K_BACKSPACE:
+            self.__text = (self.__text[:max(self.__cursor_position - 1, 0)] +
+                           self.__text[self.__cursor_position:])
+            self.__cursor_position = max(self.__cursor_position - 1, 0)
         elif key == Keys.K_DELETE:
-            self.__text = (
-                self.__text[:self.cursor_position] +
-                self.__text[self.cursor_position + 1:]
-            )
+            self.stop_selecting()
+            self.__text = (self.__text[:self.__cursor_position] +
+                           self.__text[self.__cursor_position + 1:])
         elif key == Keys.K_RIGHT:
-            self.cursor_position = min(
-                self.cursor_position + 1, len(self.__text))
+            self.stop_selecting()
+            self.__cursor_position = min(
+                self.__cursor_position + 1, len(self.__text))
         elif key == Keys.K_LEFT:
-            self.cursor_position = max(self.cursor_position - 1, 0)
+            self.stop_selecting()
+            self.__cursor_position = max(self.__cursor_position - 1, 0)
         elif key == Keys.K_END:
-            self.cursor_position = len(self.__text)
+            self.stop_selecting()
+            self.__cursor_position = len(self.__text)
         elif key == Keys.K_HOME:
-            self.cursor_position = 0
+            self.stop_selecting()
+            self.__cursor_position = 0
+        elif len(text) > 0:
+            self.delete_selection()
+            self.insert_text(text)
+
+    def insert_text(self, text: str):
+        self.__text = (
+            self.__text[:self.__cursor_position] + text +
+            self.__text[self.__cursor_position:]
+        )
+        self.__cursor_position += len(text)
+
+    def get_selection_text(self):
+        if self.__select_position is None:
+            return None
+        start = min(self.__select_position, self.__cursor_position)
+        end = max(self.__select_position, self.__cursor_position)
+        return self.__text[start:end]
+
+    def is_selecting(self) -> bool:
+        return (self.__select_position is not None and
+                self.__select_position != self.__cursor_position)
+
+    def start_selection(self):
+        if self.__select_position is None:
+            self.__select_position = self.__cursor_position
+
+    def delete_selection(self):
+        if self.is_selecting():
+            start = min(self.__select_position, self.__cursor_position)
+            end = max(self.__select_position, self.__cursor_position)
+            self.__text = self.__text[:start] + self.__text[end:]
+            self.__cursor_position = start
+        self.__select_position = None
+
+    def stop_selecting(self) -> bool:
+        self.__select_position = None
+
+    def select_all(self):
+        if self.__text:
+            self.__select_position = 0
+            self.__cursor_position = len(self.__text)
         else:
-            self.__text = (
-                self.__text[:self.cursor_position] + text +
-                self.__text[self.cursor_position:]
-            )
-            self.cursor_position += len(text)
+            self.__select_position = None
+    
+    def copy(self):
+        text = self.get_selection_text()
+        if text:
+            pygame.scrap.put(pygame.SCRAP_TEXT, text.encode() + b"\x00")
+    
+    def cut(self):
+        self.copy()
+        self.delete_selection()
+
+    def paste(self):
+        self.delete_selection()
+        text = pygame.scrap.get(pygame.SCRAP_TEXT)
+        if text:
+            self.insert_text(text[:-1].decode())
 
     def on_key_released(self, key, mod):
         # If none exist, create counter for that key:
-        if key in self.keyrepeat_counters:
-            del self.keyrepeat_counters[key]
+        if (key, mod) in self.keyrepeat_counters:
+            del self.keyrepeat_counters[(key, mod)]
 
     def on_draw(self, g):
         top_padding = int((self.get_height() - self.__surface_text.get_height()) / 2)
@@ -192,6 +275,17 @@ class TextEdit(Widget):
             g.draw_image(self.__surface_background_text,
                          self.rect.left + left_padding,
                          self.rect.top + top_padding)
+
+        if self.is_selecting():
+            cursor_height = self.__surface_text.get_height()
+            start = min(self.__select_position, self.__cursor_position)
+            end = max(self.__select_position, self.__cursor_position)
+            box_offset = self.__font.measure(self.__text[:start])[0]
+            box_offset += self.rect.left + left_padding
+            box_span = self.__font.measure(self.__text[start:end])[0]
+            g.fill_rect(box_offset, self.rect.top + top_padding,
+                        box_span, cursor_height,
+                        color=Colors.BLUE)
         if self.__text:
             g.draw_image(self.__surface_text,
                          self.rect.left + left_padding,
@@ -202,13 +296,13 @@ class TextEdit(Widget):
             cursor_height = self.__surface_text.get_height()
             cursor_width = int(cursor_height / 20 + 1)
             cursor_x_pos = self.rect.left + left_padding + self.__font.measure(
-                self.__text[:self.cursor_position])[0]
+                self.__text[:self.__cursor_position])[0]
             g.fill_rect(cursor_x_pos, self.rect.top + top_padding,
                         cursor_width, cursor_height,
                         color=self.__font.get_text_color())
 
     def __get_ctrl_boundary(self, step=1):
-        pos = self.cursor_position
+        pos = self.__cursor_position
         while pos > 0 and pos < len(self.__text):
             if not re.match(r"[A-Za-z0-9]", self.__text[pos]):
                 break

@@ -61,7 +61,7 @@ class Graphics:
 
     def draw_image(self, image, x, y=None):
         if y is None:
-            self.blit(image, x)
+            self.blit(image, tuple(x))
         else:
             self.blit(image, (x, y))
 

@@ -9,6 +9,7 @@ if len(sys.argv) > 1:
     which = sys.argv[1]
 else:
     which = "study_tool"
+    which = "gui_test"
 
 if which == "study_tool":
     from study_tool.study_tool_app import StudyCardsApp
@@ -16,6 +17,9 @@ if which == "study_tool":
 elif which == "pedal_control":
     from pedal_control.pedal_control_app import PedalControlApp
     app = PedalControlApp()
+elif which == "gui_test":
+    from study_tool.gui_test import GUITesterApp
+    app = GUITesterApp()
 else:
     raise KeyError(which)
 

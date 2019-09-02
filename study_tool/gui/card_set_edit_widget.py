@@ -74,16 +74,16 @@ class CardRow(widgets.Widget):
             self.box_type.set_text(get_word_type_short_name(card.get_word_type()))
         else:
             self.box_type.set_text("")
-        bg_color = Colors.WHITE
-        if not self.__card_set.has_card(self.card):
-            bg_color = Color(220, 255, 220)
-        self.box_type.set_background_color(bg_color)
-        self.box_russian.set_background_color(bg_color)
-        self.box_english.set_background_color(bg_color)
         self.box_russian.set_text(repr(self.card.get_russian()))
         self.box_english.set_text(repr(self.card.get_english()))
         self.button_edit.set_enabled(not fixed)
         self.button_delete.set_enabled(not fixed)
+        self.__on_modified()
+
+    def apply(self):
+        self.card.set_russian(self.get_russian())
+        self.card.set_english(self.get_english())
+        self.card.set_word_type(self.get_word_type())
     
     def auto_set_word_type(self) -> WordType:
         russian = self.get_russian().text.lower()
@@ -267,17 +267,15 @@ class CardSetEditWidget(widgets.Widget):
     def is_modified(self):
         name = AccentedText(self.__box_name.get_text())
         self.__card_set.set_name(name)
-        #if repr(name) != repr(self.__card_set.get_name()):
-        #    return True
+        if repr(name) != repr(self.__card_set.get_name()):
+            return True
         for card in self.__card_set.get_cards():
             if not self.__has_card(card):
-                print(card)
                 return True
         for row in self.rows:
             if (not row.is_null_card() and
                 (not self.__card_database.has_card(row.card) or
                 (row.is_new_in_set() or row.is_modified()))):
-                  print(row.card)
                   return True
         return False
 
@@ -292,30 +290,28 @@ class CardSetEditWidget(widgets.Widget):
             card = row.card
             if row.is_null_card():
                 continue
-            cards.append(cards)
+            cards.append(card)
+            old_key = card.get_key()
+            row.apply()
+            new_key = card.get_key()
             if not self.__card_database.has_card(card):
                 # Create new card
-                self.__card_database.add_card(self.__card)
-                self.__application.save_card_data()
+                Config.logger.info("Creating card: {}".format(card))
+                card.generate_word_name()
+                self.__card_database.add_card(card)
                 modified_cards = True
                 modified_set = True
             else:
                 if row.is_new_in_set():
+                    Config.logger.info("Adding card to set: {}".format(card))
                     modified_set = True
-                if row.is_modified():
-                    modified_cards = True
+                if new_key != old_key:
+                    Config.logger.info("Applying changes to card: {}".format(card))
                     # Check for a key change
-                    old_key = card.get_key()
-                    card.set_russian(row.get_russian())
-                    card.set_english(row.get_english())
-                    card.set_word_type(row.get_word_type())
-                    new_key = card.get_key()
+                    modified_cards = True
                     card.generate_word_name()
-                    if new_key != old_key:
-                        Config.logger.info("Applying key change: {} --> {}"
-                                           .format(old_key, new_key))
-                        self.__card_database.apply_card_key_change(self.__card)
-                        key_change_cards.append(card)
+                    self.__card_database.apply_card_key_change(card)
+                    key_change_cards.append(card)
 
         self.__card_set.cards = cards
         self.__card_set.name = AccentedText(self.__box_name.get_text())
@@ -338,7 +334,8 @@ class CardSetEditWidget(widgets.Widget):
         # Save the card set definition
         if modified_cards or modified_set:
             self.__application.save_card_set(self.__card_set)
-            
+           
+        # Refresh rows
         for row in self.rows:
             row.set_card(row.card)
 

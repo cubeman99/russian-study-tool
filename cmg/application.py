@@ -18,6 +18,9 @@ class Application:
         self.screen = pygame.display.set_mode([width, height])
         pygame.display.set_caption(title)
 
+        # Initialize clipboard
+        pygame.scrap.init()
+
         self.clock = pygame.time.Clock()
         self.running = False
         self.framerate = 60
