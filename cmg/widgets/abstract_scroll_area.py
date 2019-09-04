@@ -16,6 +16,9 @@ class SubRegionLayout(widgets.Layout):
         self.__surface = None
         self.__offset = Vec2(0, 0)
 
+    def get_offset(self) -> Vec2:
+        return self.__offset
+
     def get_widget(self) -> widgets.Widget:
         return self.__widget
 

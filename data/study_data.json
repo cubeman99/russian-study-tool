@@ -458,9 +458,9 @@
     },
     {
       "english": "to put on",
-      "history": "",
-      "last_encounter_time": null,
-      "proficiency_level": 0,
+      "history": "TTTTT",
+      "last_encounter_time": 1567562617.6383705,
+      "proficiency_level": 4,
       "russian": "надевать",
       "type": "Verb"
     },
@@ -5962,8 +5962,8 @@
     },
     {
       "english": "mean, wicked, spiteful",
-      "history": "TT",
-      "last_encounter_time": 1567125924.2305677,
+      "history": "TTT",
+      "last_encounter_time": 1567458973.4566567,
       "proficiency_level": 4,
       "russian": "злобный",
       "type": "Adjective"
@@ -6938,9 +6938,9 @@
     },
     {
       "english": "behind",
-      "history": "TTFFFFFF",
-      "last_encounter_time": 1567125952.6912405,
-      "proficiency_level": 3,
+      "history": "TTTFFFFFF",
+      "last_encounter_time": 1567458833.7230089,
+      "proficiency_level": 4,
       "russian": "позади, сзади",
       "type": "Adverb"
     },
@@ -7950,14 +7950,6 @@
       "last_encounter_time": 1551663992.50581,
       "proficiency_level": 4,
       "russian": "правильно",
-      "type": "Adverb"
-    },
-    {
-      "english": "definitely",
-      "history": "TTFFTFTFTTFFTFTFTTTTTTFFF",
-      "last_encounter_time": 1554948328.4614127,
-      "proficiency_level": 4,
-      "russian": "однозначно",
       "type": "Adverb"
     },
     {
@@ -11049,14 +11041,6 @@
       "type": "Noun"
     },
     {
-      "english": "essense, point, core",
-      "history": "TFTTFTTTTTTTTTTTTFT",
-      "last_encounter_time": 1554948716.9124165,
-      "proficiency_level": 4,
-      "russian": "суть",
-      "type": "Noun"
-    },
-    {
       "english": "culture",
       "history": "TTTTTTTT",
       "last_encounter_time": 1553983212.0234683,
@@ -12146,8 +12130,8 @@
     },
     {
       "english": "comment, remark, note, observation",
-      "history": "TTTTTTTFTTFFTTTF",
-      "last_encounter_time": 1555294175.5595682,
+      "history": "TTTTTTTTFTTFFTTTF",
+      "last_encounter_time": 1567459139.320897,
       "proficiency_level": 4,
       "russian": "замечание",
       "type": "Noun"
@@ -12306,8 +12290,8 @@
     },
     {
       "english": "to leave, drop, abandon",
-      "history": "TTTFTTFFTFTTTF",
-      "last_encounter_time": 1555294469.0147707,
+      "history": "TTTTFTTFFTFTTTF",
+      "last_encounter_time": 1567458843.0175729,
       "proficiency_level": 4,
       "russian": "оставлять",
       "type": "Verb"
@@ -12618,8 +12602,8 @@
     },
     {
       "english": "behavior, conduct",
-      "history": "TTTTFTFTFTTTFFF",
-      "last_encounter_time": 1555983301.9197338,
+      "history": "TTTTTTTTTTFTFTFTTTFFF",
+      "last_encounter_time": 1567562273.6686573,
       "proficiency_level": 4,
       "russian": "поведение",
       "type": "Noun"
@@ -14346,8 +14330,8 @@
     },
     {
       "english": "naked",
-      "history": "TTTTTF",
-      "last_encounter_time": 1558400691.876151,
+      "history": "TTTTTTTTTTTTTTTF",
+      "last_encounter_time": 1567562755.5679827,
       "proficiency_level": 4,
       "russian": "голый",
       "type": "Adjective"
@@ -16338,16 +16322,16 @@
     },
     {
       "english": "to strive for",
-      "history": "TTTTFFF",
-      "last_encounter_time": 1551401867.7575428,
+      "history": "TTFFTTTTFFF",
+      "last_encounter_time": 1567459878.8973453,
       "proficiency_level": 4,
       "russian": "добиваться",
       "type": "Verb"
     },
     {
       "english": "to achieve",
-      "history": "TTTTF",
-      "last_encounter_time": 1551401852.0544004,
+      "history": "TFTTTTF",
+      "last_encounter_time": 1567459525.7451777,
       "proficiency_level": 4,
       "russian": "достигать",
       "type": "Verb"
@@ -16362,9 +16346,9 @@
     },
     {
       "english": "to avoid",
-      "history": "TTTFFF",
-      "last_encounter_time": 1551401862.5122948,
-      "proficiency_level": 4,
+      "history": "FTTTFFF",
+      "last_encounter_time": 1567459993.058381,
+      "proficiency_level": 3,
       "russian": "избегать",
       "type": "Verb"
     },
@@ -16394,16 +16378,16 @@
     },
     {
       "english": "reaching motion, as far as",
-      "history": "TTTT",
-      "last_encounter_time": 1554044949.628563,
+      "history": "TTTTT",
+      "last_encounter_time": 1567459678.805848,
       "proficiency_level": 4,
       "russian": "до-",
       "type": "Other"
     },
     {
       "english": "withdrawal motion, away from",
-      "history": "TTT",
-      "last_encounter_time": 1554044952.2386034,
+      "history": "TTTT",
+      "last_encounter_time": 1567459421.5473278,
       "proficiency_level": 4,
       "russian": "от-",
       "type": "Other"
@@ -16418,16 +16402,16 @@
     },
     {
       "english": "coming out of motion, exiting motion",
-      "history": "TTT",
-      "last_encounter_time": 1554044963.9267292,
+      "history": "TTTT",
+      "last_encounter_time": 1567459590.8503613,
       "proficiency_level": 4,
       "russian": "вы-",
       "type": "Other"
     },
     {
       "english": "ascending motion, going up",
-      "history": "TTTTT",
-      "last_encounter_time": 1554044941.8654325,
+      "history": "TTTTTT",
+      "last_encounter_time": 1567459495.041695,
       "proficiency_level": 4,
       "russian": "вс-",
       "type": "Other"
@@ -16458,8 +16442,8 @@
     },
     {
       "english": "1) across motion; 2) moving motion",
-      "history": "TTTT",
-      "last_encounter_time": 1554044946.674214,
+      "history": "TTTTT",
+      "last_encounter_time": 1567459683.6715698,
       "proficiency_level": 4,
       "russian": "пере-",
       "type": "Other"
@@ -16474,8 +16458,8 @@
     },
     {
       "english": "going past motion, going by, going through",
-      "history": "TT",
-      "last_encounter_time": 1554044328.4897842,
+      "history": "TTT",
+      "last_encounter_time": 1567459704.386247,
       "proficiency_level": 4,
       "russian": "про-",
       "type": "Other"
@@ -16546,8 +16530,8 @@
     },
     {
       "english": "to get undressed",
-      "history": "TFTTTTTTTTFTTTTF",
-      "last_encounter_time": 1555465040.0892916,
+      "history": "TFTFTTTTTTTTFTTTTF",
+      "last_encounter_time": 1567459511.0447726,
       "proficiency_level": 4,
       "russian": "раздеться",
       "type": "Verb"
@@ -16578,8 +16562,8 @@
     },
     {
       "english": "to ache",
-      "history": "TFTTTTTTTTTTTFTTTTTTTFF",
-      "last_encounter_time": 1555465359.564776,
+      "history": "TTFTTTTTTTTTTTFTTTTTTTFF",
+      "last_encounter_time": 1567459731.4960375,
       "proficiency_level": 4,
       "russian": "ныть",
       "type": "Verb"
@@ -16610,8 +16594,8 @@
     },
     {
       "english": "to pour",
-      "history": "TFTTTTTTTFTTTFTTTTT",
-      "last_encounter_time": 1555464532.6277409,
+      "history": "TTFTTTTTTTFTTTFTTTTT",
+      "last_encounter_time": 1567459874.5403817,
       "proficiency_level": 4,
       "russian": "лить",
       "type": "Verb"
@@ -16626,8 +16610,8 @@
     },
     {
       "english": "to sew",
-      "history": "TTFTTTTTTFTFTTTTF",
-      "last_encounter_time": 1555465307.3630857,
+      "history": "TTFFTTFTTTTTTFTFTTTTF",
+      "last_encounter_time": 1567459900.0613644,
       "proficiency_level": 4,
       "russian": "шить",
       "type": "Verb"
@@ -16682,16 +16666,16 @@
     },
     {
       "english": "to reap",
-      "history": "TFTTTTTTTT",
-      "last_encounter_time": 1555465123.2819688,
+      "history": "TTFTTTTTTTT",
+      "last_encounter_time": 1567459587.94188,
       "proficiency_level": 4,
       "russian": "жать (жну, жнёшь, … жнут)",
       "type": "Verb"
     },
     {
       "english": "to crumple",
-      "history": "TFTFTTTTTTTTTTTTTFF",
-      "last_encounter_time": 1555465351.773567,
+      "history": "TFTFTFTTTTTTTTTTTTTFF",
+      "last_encounter_time": 1567459815.3543873,
       "proficiency_level": 4,
       "russian": "мять",
       "type": "Verb"
@@ -16706,8 +16690,8 @@
     },
     {
       "english": "to crucify",
-      "history": "TTFFTTTTTTTTTTTFTFTTTTFF",
-      "last_encounter_time": 1555465214.6016452,
+      "history": "TFTTFFTTTTTTTTTTTFTFTTTTFF",
+      "last_encounter_time": 1567459532.7781107,
       "proficiency_level": 4,
       "russian": "распять",
       "type": "Verb"
@@ -16762,8 +16746,8 @@
     },
     {
       "english": "to take off",
-      "history": "TTTTTTTTTTFFTFTTFFTTTTFFFFFF",
-      "last_encounter_time": 1555465178.8071446,
+      "history": "TTTTTTTTTTTFFTFTTFFTTTTFFFFFF",
+      "last_encounter_time": 1567459410.53808,
       "proficiency_level": 4,
       "russian": "снять",
       "type": "Verb"
@@ -16786,16 +16770,16 @@
     },
     {
       "english": "to rub (dry)",
-      "history": "TTTTTTTTTFTTTTTFF",
-      "last_encounter_time": 1555465092.563012,
+      "history": "TTTTTTTTTTFTTTTTFF",
+      "last_encounter_time": 1567459738.551293,
       "proficiency_level": 4,
       "russian": "вытереть",
       "type": "Verb"
     },
     {
       "english": "to erase",
-      "history": "TFTTTTTTTTTTTTTFTFTTTFFFFTF",
-      "last_encounter_time": 1555464714.409131,
+      "history": "TTFTTTTTTTTTTTTTFTFTTTFFFFTF",
+      "last_encounter_time": 1567459932.1439738,
       "proficiency_level": 4,
       "russian": "стереть",
       "type": "Verb"
@@ -16818,8 +16802,8 @@
     },
     {
       "english": "to die",
-      "history": "TFTTTTTTTTTTTTTT",
-      "last_encounter_time": 1555465277.8749933,
+      "history": "TTFTTTTTTTTTTTTTT",
+      "last_encounter_time": 1567459743.974678,
       "proficiency_level": 4,
       "russian": "умереть",
       "type": "Verb"
@@ -16842,8 +16826,8 @@
     },
     {
       "english": "to crawl",
-      "history": "TFTFTTTFTTTTTTTF",
-      "last_encounter_time": 1550533352.2068741,
+      "history": "TFTFTFTTTFTTTTTTTF",
+      "last_encounter_time": 1567459727.549243,
       "proficiency_level": 4,
       "russian": "ползти",
       "type": "Verb"
@@ -16874,8 +16858,8 @@
     },
     {
       "english": "to wander",
-      "history": "TTTTTFTTTTTFFF",
-      "last_encounter_time": 1550533712.889128,
+      "history": "TFTTTTTFTTTTTFFF",
+      "last_encounter_time": 1567459889.9422958,
       "proficiency_level": 4,
       "russian": "брести",
       "type": "Verb"
@@ -16898,8 +16882,8 @@
     },
     {
       "english": "to steal",
-      "history": "TTTTTTTFTTTTTTTFFF",
-      "last_encounter_time": 1550533620.4341557,
+      "history": "TFTTTTTTTFTTTTTTTFFF",
+      "last_encounter_time": 1567460005.884566,
       "proficiency_level": 4,
       "russian": "красть",
       "type": "Verb"
@@ -16938,8 +16922,8 @@
     },
     {
       "english": "to purchase, acquire",
-      "history": "TTTTTTFTTTTF",
-      "last_encounter_time": 1550533579.969301,
+      "history": "TTFFTTTTTTFTTTTF",
+      "last_encounter_time": 1567459665.4343638,
       "proficiency_level": 4,
       "russian": "приобрести",
       "type": "Verb"
@@ -16962,8 +16946,8 @@
     },
     {
       "english": "to rake; to row",
-      "history": "TTTTTFTTTTTTFF",
-      "last_encounter_time": 1550533485.2807844,
+      "history": "TFTTTTTFTTTTTTFF",
+      "last_encounter_time": 1567459824.611812,
       "proficiency_level": 4,
       "russian": "грести",
       "type": "Verb"
@@ -16978,9 +16962,9 @@
     },
     {
       "english": "to guard",
-      "history": "TTTFTTFTFTTTFFFFF",
-      "last_encounter_time": 1550533469.7850707,
-      "proficiency_level": 4,
+      "history": "FTTTFTTFTFTTTFFFFF",
+      "last_encounter_time": 1567460029.773366,
+      "proficiency_level": 3,
       "russian": "беречь",
       "type": "Verb"
     },
@@ -17018,9 +17002,9 @@
     },
     {
       "english": "to burn something",
-      "history": "T",
-      "last_encounter_time": 1565139166.4677777,
-      "proficiency_level": 3,
+      "history": "TT",
+      "last_encounter_time": 1567459425.094251,
+      "proficiency_level": 4,
       "russian": "жечь",
       "type": "Verb"
     },
@@ -17034,8 +17018,8 @@
     },
     {
       "english": "to distract",
-      "history": "TFTTTTTTTTTTTTTFFFFF",
-      "last_encounter_time": 1550533614.6044798,
+      "history": "TTFTTTTTTTTTTTTTFFFFF",
+      "last_encounter_time": 1567459457.955315,
       "proficiency_level": 4,
       "russian": "отвлечь",
       "type": "Verb"
@@ -17138,24 +17122,24 @@
     },
     {
       "english": "to recall",
-      "history": "TTTTFTTTTTTTTTFTFTTFFTTTFFFTFFFFFF",
-      "last_encounter_time": 1551401917.191995,
+      "history": "TTTTTFTTTTTTTTTFTFTTFFTTTFFFTFFFFFF",
+      "last_encounter_time": 1567459979.994596,
       "proficiency_level": 4,
       "russian": "вспоминать",
       "type": "Verb"
     },
     {
       "english": "to be late",
-      "history": "TTTTTTTTTTTTTFTTTTTFFFFFFFFF",
-      "last_encounter_time": 1551401886.628654,
+      "history": "TTTTTTTTTTTTTTFTTTTTFFFFFFFFF",
+      "last_encounter_time": 1567459821.4327083,
       "proficiency_level": 4,
       "russian": "опаздывать",
       "type": "Verb"
     },
     {
       "english": "to meet",
-      "history": "TTTTTTTTTTTTTTTTTTTTFTTTTTFFFFF",
-      "last_encounter_time": 1550453915.3791382,
+      "history": "TTTTTTTTTTTTTTTTTTTTTFTTTTTFFFFF",
+      "last_encounter_time": 1567459707.6863065,
       "proficiency_level": 4,
       "russian": "встречать",
       "type": "Verb"
@@ -17170,8 +17154,8 @@
     },
     {
       "english": "to perform",
-      "history": "TTTTTTTTTTTTTTTTTTTTTFTTTFFTFFFFFFFFF",
-      "last_encounter_time": 1551401913.377429,
+      "history": "TTTTTTTTTTTTTTTTTTTTTTFTTTFFTFFFFFFFFF",
+      "last_encounter_time": 1567459466.0942593,
       "proficiency_level": 4,
       "russian": "выступать",
       "type": "Verb"
@@ -17194,8 +17178,8 @@
     },
     {
       "english": "to repeat",
-      "history": "TTTTTTTTTTTTTTTTTTTTFFTTFFFFFFFF",
-      "last_encounter_time": 1551401889.198403,
+      "history": "TTTTTTTTTTTTTTTTTTTTTFFTTFFFFFFFF",
+      "last_encounter_time": 1567459530.0245101,
       "proficiency_level": 4,
       "russian": "повторять",
       "type": "Verb"
@@ -17250,9 +17234,9 @@
     },
     {
       "english": "to engage in, study",
-      "history": "T",
-      "last_encounter_time": 1553040662.4823442,
-      "proficiency_level": 3,
+      "history": "TT",
+      "last_encounter_time": 1567459405.3303027,
+      "proficiency_level": 4,
       "russian": "заниматься",
       "type": "Verb"
     },
@@ -17314,8 +17298,8 @@
     },
     {
       "english": "to dream (about a goal)",
-      "history": "TT",
-      "last_encounter_time": 1551401920.515887,
+      "history": "TTT",
+      "last_encounter_time": 1567459926.1123607,
       "proficiency_level": 4,
       "russian": "мечтать",
       "type": "Verb"
@@ -17410,8 +17394,8 @@
     },
     {
       "english": "to become/show white",
-      "history": "TTTTTTTTTTTTFTTTTFFFF",
-      "last_encounter_time": 1550453771.9613218,
+      "history": "TFTTTTTTTTTTTTFTTTTFFFF",
+      "last_encounter_time": 1567459734.5072482,
       "proficiency_level": 4,
       "russian": "белеть",
       "type": "Verb"
@@ -17522,8 +17506,8 @@
     },
     {
       "english": "to warm",
-      "history": "TTTFTTTTTTTTTTTTTFTTTTTFFF",
-      "last_encounter_time": 1550453925.9767575,
+      "history": "TFTTTFTTTTTTTTTTTTTFTTTTTFFF",
+      "last_encounter_time": 1567459645.9931438,
       "proficiency_level": 4,
       "russian": "греть",
       "type": "Verb"
@@ -17586,8 +17570,8 @@
     },
     {
       "english": "to become thin, lose weight",
-      "history": "TTTTTTTTTTTTTTTTFTTFFTTTTFFFFF",
-      "last_encounter_time": 1550453850.660871,
+      "history": "TTTTTTTTTTTTTTTTTFTTFFTTTTFFFFF",
+      "last_encounter_time": 1567459662.4909358,
       "proficiency_level": 4,
       "russian": "худеть",
       "type": "Verb"
@@ -17882,24 +17866,24 @@
     },
     {
       "english": "to advise",
-      "history": "TTTTTTTTFFTTTFFF",
-      "last_encounter_time": 1550453762.2120183,
+      "history": "TTTTTTTTTFFTTTFFF",
+      "last_encounter_time": 1567459987.2841642,
       "proficiency_level": 4,
       "russian": "советовать",
       "type": "Verb"
     },
     {
       "english": "to return",
-      "history": "TTTTTTTTTFTTFFTTTTTTFFFFF",
-      "last_encounter_time": 1550453713.82406,
+      "history": "TTTTTTTTTTFTTFFTTTTTTFFFFF",
+      "last_encounter_time": 1567459696.2097056,
       "proficiency_level": 4,
       "russian": "вернуться",
       "type": "Verb"
     },
     {
       "english": "to burst, split",
-      "history": "TTTTTTTTTTFFTTTTTFFF",
-      "last_encounter_time": 1550453721.1406417,
+      "history": "TTTTTTTTTTTTFFTTTTTFFF",
+      "last_encounter_time": 1567459652.9079752,
       "proficiency_level": 4,
       "russian": "лопнуть",
       "type": "Verb"
@@ -17978,8 +17962,8 @@
     },
     {
       "english": "to collapse",
-      "history": "TTTTTTTTTTTTFFTTTTTFFFF",
-      "last_encounter_time": 1550453966.2060854,
+      "history": "TTTTTTTTTTTTTFFTTTTTFFFF",
+      "last_encounter_time": 1567459631.466542,
       "proficiency_level": 4,
       "russian": "рухнуть",
       "type": "Verb"
@@ -18034,16 +18018,16 @@
     },
     {
       "english": "to mention",
-      "history": "TTTTTTFFTTTTTFFTTTTFTTFF",
-      "last_encounter_time": 1550453897.523825,
+      "history": "TTFFTTTTTTFFTTTTTFFTTTTFTTFF",
+      "last_encounter_time": 1567459643.2798848,
       "proficiency_level": 4,
       "russian": "помянуть",
       "type": "Verb"
     },
     {
       "english": "to fade; to wither",
-      "history": "TTTTTTTTTTTFTTTTFTFTTFFFTTTFFTTFFFFTTTFFFFFF",
-      "last_encounter_time": 1550453793.5142162,
+      "history": "TFTTTTTTTTTTTFTTTTFTFTTFFFTTTFFTTFFFFTTTFFFFFF",
+      "last_encounter_time": 1567459669.215297,
       "proficiency_level": 4,
       "russian": "блёкнуть",
       "type": "Verb"
@@ -18122,8 +18106,8 @@
     },
     {
       "english": "to fall silent",
-      "history": "TTTTTTTTTTTTTTTTTTFFFTFTTTTTTFF",
-      "last_encounter_time": 1550453913.4265118,
+      "history": "TFTTTTTTTTTTTTTTTTTTFFFTFTTTTTTFF",
+      "last_encounter_time": 1567459893.1613863,
       "proficiency_level": 4,
       "russian": "замолкнуть",
       "type": "Verb"
@@ -18162,8 +18146,8 @@
     },
     {
       "english": "to wave",
-      "history": "TFTTTTTTTTTTTTTTTTTTTTTTTTFFF",
-      "last_encounter_time": 1567126203.2025168,
+      "history": "TTFTTTTTTTTTTTTTTTTTTTTTTTTFFF",
+      "last_encounter_time": 1567460001.0454197,
       "proficiency_level": 4,
       "russian": "махать",
       "type": "Verb"
@@ -18202,8 +18186,8 @@
     },
     {
       "english": "to whisper",
-      "history": "TFTTTTTTTTTTTTTTTTTTTFTTTTFF",
-      "last_encounter_time": 1567126233.6825976,
+      "history": "TTFTTTTTTTTTTTTTTTTTTTFTTTTFF",
+      "last_encounter_time": 1567459997.128053,
       "proficiency_level": 4,
       "russian": "шептать",
       "type": "Verb"
@@ -18226,24 +18210,24 @@
     },
     {
       "english": "to sprinkle",
-      "history": "TTT",
-      "last_encounter_time": 1567126289.130482,
+      "history": "TTTT",
+      "last_encounter_time": 1567459965.755371,
       "proficiency_level": 4,
       "russian": "сыпать",
       "type": "Verb"
     },
     {
       "english": "to sway, wobble; hesitate, waver",
-      "history": "TTTF",
-      "last_encounter_time": 1567126120.9920995,
+      "history": "TTTTF",
+      "last_encounter_time": 1567459935.362342,
       "proficiency_level": 4,
       "russian": "колебаться",
       "type": "Verb"
     },
     {
       "english": "to doze",
-      "history": "TTTTTTTTTTTTTTTTTFTTTFFTTTFFFFTTTFFFFF",
-      "last_encounter_time": 1567126193.3087714,
+      "history": "TTTTTTTTTTTTTTTTTTFTTTFFTTTFFFFTTTFFFFF",
+      "last_encounter_time": 1567459723.2359457,
       "proficiency_level": 4,
       "russian": "дремать",
       "type": "Verb"
@@ -18410,24 +18394,24 @@
     },
     {
       "english": "to be heard, resound",
-      "history": "TTTTTTTTTTTTFTTFFTTTFFFTTTFTTFF",
-      "last_encounter_time": 1550453931.2165768,
+      "history": "TFTTTTTTTTTTTTFTTFFTTTFFFTTTFTTFF",
+      "last_encounter_time": 1567459947.0529635,
       "proficiency_level": 4,
       "russian": "раздаваться",
       "type": "Verb"
     },
     {
       "english": "to admit, acknowledge",
-      "history": "TTTTTFTTTTTTTTTFTFTTTFFFFTFTTTFFTFFF",
-      "last_encounter_time": 1550453774.6795502,
+      "history": "TTTTTTFTTTTTTTTTFTFTTTFFFFTFTTTFFTFFF",
+      "last_encounter_time": 1567459885.740582,
       "proficiency_level": 4,
       "russian": "признавать",
       "type": "Verb"
     },
     {
       "english": "to be conscious of, realize",
-      "history": "TTTTTTTTTTTFTFTTTTFF",
-      "last_encounter_time": 1550453483.5487614,
+      "history": "TTTTTTTTTTTTFTFTTTTFF",
+      "last_encounter_time": 1567459882.4591928,
       "proficiency_level": 4,
       "russian": "сознавать",
       "type": "Verb"
@@ -18450,9 +18434,9 @@
     },
     {
       "english": "to remain, stay, be left",
-      "history": "FTTTTTTTTTTTTT",
-      "last_encounter_time": 1553041013.869314,
-      "proficiency_level": 3,
+      "history": "TTFFTTTTTTTTTTTTT",
+      "last_encounter_time": 1567459501.9549599,
+      "proficiency_level": 4,
       "russian": "оставаться",
       "type": "Verb"
     },
@@ -18490,8 +18474,8 @@
     },
     {
       "english": "to chop, split; to prick",
-      "history": "TTTTTTTFTTTFFFF",
-      "last_encounter_time": 1550541703.2276783,
+      "history": "TFTTTTTTTFTTTFFFF",
+      "last_encounter_time": 1567459611.9955902,
       "proficiency_level": 4,
       "russian": "колоть",
       "type": "Verb"
@@ -18506,9 +18490,9 @@
     },
     {
       "english": "to weed",
-      "history": "TTTTFTFTTTTTTFTFF",
-      "last_encounter_time": 1550541707.1311336,
-      "proficiency_level": 4,
+      "history": "FTTTTFTFTTTTTTFTFF",
+      "last_encounter_time": 1567459972.3383784,
+      "proficiency_level": 3,
       "russian": "полоть",
       "type": "Verb"
     },
@@ -18554,8 +18538,8 @@
     },
     {
       "english": "to clean",
-      "history": "TTTTTTTTTTFTFTTTTTF",
-      "last_encounter_time": 1550453577.465323,
+      "history": "TTTTTTTTTTTFTFTTTTTF",
+      "last_encounter_time": 1567459431.5243473,
       "proficiency_level": 4,
       "russian": "чистить",
       "type": "Verb"
@@ -18586,9 +18570,9 @@
     },
     {
       "english": "to put, set (upright)",
-      "history": "T",
-      "last_encounter_time": 1565139160.0602572,
-      "proficiency_level": 3,
+      "history": "TT",
+      "last_encounter_time": 1567459439.1143148,
+      "proficiency_level": 4,
       "russian": "ставить",
       "type": "Verb"
     },
@@ -18650,8 +18634,8 @@
     },
     {
       "english": "to praise",
-      "history": "TTTTTTTTTTFTTFTTTFFFF",
-      "last_encounter_time": 1550453626.9729528,
+      "history": "TTTTTTTTTTTFTTFTTTFFFF",
+      "last_encounter_time": 1567459772.785378,
       "proficiency_level": 4,
       "russian": "хвалить",
       "type": "Verb"
@@ -18666,8 +18650,8 @@
     },
     {
       "english": "to hang (intr.)",
-      "history": "TTTTFTTFTTFFTTTTFF",
-      "last_encounter_time": 1550453767.6842296,
+      "history": "TFTTTTFTTFTTFFTTTTFF",
+      "last_encounter_time": 1567459955.2146797,
       "proficiency_level": 4,
       "russian": "висеть",
       "type": "Verb"
@@ -18714,8 +18698,8 @@
     },
     {
       "english": "to make noise",
-      "history": "TTTTFTTTTTTTTTTTFF",
-      "last_encounter_time": 1550453776.3726084,
+      "history": "TTTTTFTTTTTTTTTTTFF",
+      "last_encounter_time": 1567459462.624373,
       "proficiency_level": 4,
       "russian": "шуметь",
       "type": "Verb"
@@ -18770,16 +18754,16 @@
     },
     {
       "english": "to breathe",
-      "history": "TTTTTFTTTTTTTFTFTTTTTTFF",
-      "last_encounter_time": 1550453749.2983255,
+      "history": "TTTTTTFTTTTTTTFTFTTTTTTFF",
+      "last_encounter_time": 1567459897.1513844,
       "proficiency_level": 4,
       "russian": "дышать",
       "type": "Verb"
     },
     {
       "english": "to sound",
-      "history": "TTTTTTTTTTTTTTTFTFFFTTTTTTFF",
-      "last_encounter_time": 1550453909.7637014,
+      "history": "TTTTTTTTTTTTTTTTFTFFFTTTTTTFF",
+      "last_encounter_time": 1567459656.9835098,
       "proficiency_level": 4,
       "russian": "звучать",
       "type": "Verb"
@@ -18818,8 +18802,8 @@
     },
     {
       "english": "to knock",
-      "history": "TTTTTFTTTTTTTTFFTTTTTFF",
-      "last_encounter_time": 1550453884.9072747,
+      "history": "TTTTTTFTTTTTTTTFFTTTTTFF",
+      "last_encounter_time": 1567459674.347356,
       "proficiency_level": 4,
       "russian": "стучать",
       "type": "Verb"
@@ -18882,8 +18866,8 @@
     },
     {
       "english": "incoming, entering",
-      "history": "TTTTTTFTTFTT",
-      "last_encounter_time": 1567125979.701739,
+      "history": "TTTTTTTFTTFTT",
+      "last_encounter_time": 1567459087.4316995,
       "proficiency_level": 4,
       "russian": "входящый",
       "type": "Adjective"
@@ -18922,8 +18906,8 @@
     },
     {
       "english": "muted",
-      "history": "TTTTTTTFTTFTTTTFTF",
-      "last_encounter_time": 1565226702.0926847,
+      "history": "TTTTTTTTFTTFTTTTFTF",
+      "last_encounter_time": 1567459177.5325115,
       "proficiency_level": 4,
       "russian": "приглушённый",
       "type": "Adjective"
@@ -18986,16 +18970,16 @@
     },
     {
       "english": "coincidence",
-      "history": "TFTFTFTTTFTTFFTTFT",
-      "last_encounter_time": 1565227079.649127,
+      "history": "TFTFTFTFTTTFTTFFTTFT",
+      "last_encounter_time": 1567459302.454121,
       "proficiency_level": 4,
       "russian": "совпадение",
       "type": "Noun"
     },
     {
       "english": "chin",
-      "history": "TTTTTTTFTTTTFF",
-      "last_encounter_time": 1565226558.9475486,
+      "history": "TTTTTTTTFTTTTFF",
+      "last_encounter_time": 1567458934.5168252,
       "proficiency_level": 4,
       "russian": "подбородок",
       "type": "Noun"
@@ -19122,8 +19106,8 @@
     },
     {
       "english": "to bend over",
-      "history": "TTTFTFTTTTT",
-      "last_encounter_time": 1565227130.7513938,
+      "history": "TTTTFTFTTTTT",
+      "last_encounter_time": 1567459203.0223043,
       "proficiency_level": 4,
       "russian": "наклониться",
       "type": "Verb"
@@ -19146,8 +19130,8 @@
     },
     {
       "english": "to fix, repair, mend",
-      "history": "TT",
-      "last_encounter_time": 1565226292.7925992,
+      "history": "TTT",
+      "last_encounter_time": 1567459072.6692107,
       "proficiency_level": 4,
       "russian": "чинить",
       "type": "Verb"
@@ -19178,9 +19162,9 @@
     },
     {
       "english": "to excite, to raise thought, idea, feeling",
-      "history": "FTFTTTFTTTTFTTFFTTTF",
-      "last_encounter_time": 1567125932.1403134,
-      "proficiency_level": 3,
+      "history": "TFTFTTTFTTTTFTTFFTTTF",
+      "last_encounter_time": 1567458838.9280832,
+      "proficiency_level": 4,
       "russian": "зародить",
       "type": "Verb"
     },
@@ -19202,8 +19186,8 @@
     },
     {
       "english": "to pronounce, get out",
-      "history": "TTTTFTTFTTTTF",
-      "last_encounter_time": 1565227112.6545315,
+      "history": "TTTTTFTTFTTTTF",
+      "last_encounter_time": 1567459269.0353098,
       "proficiency_level": 4,
       "russian": "произнести",
       "type": "Verb"
@@ -19250,9 +19234,9 @@
     },
     {
       "english": "to hang",
-      "history": "TTTTTFTTTFFFFTTTTF",
-      "last_encounter_time": 1565226903.5987895,
-      "proficiency_level": 4,
+      "history": "FTTTTTFTTTFFFFTTTTF",
+      "last_encounter_time": 1567459299.8812788,
+      "proficiency_level": 3,
       "russian": "повиснуть",
       "type": "Verb"
     },
@@ -19298,8 +19282,8 @@
     },
     {
       "english": "to throw, cast",
-      "history": "TFTFTTTTFTFTTTTF",
-      "last_encounter_time": 1565226878.5916467,
+      "history": "TTFTFTTTTFTFTTTTF",
+      "last_encounter_time": 1567459291.1143317,
       "proficiency_level": 4,
       "russian": "кинуть",
       "type": "Verb"
@@ -19586,8 +19570,8 @@
     },
     {
       "english": "the rise, rising",
-      "history": "TTTTTTTFTFTTTTTTF",
-      "last_encounter_time": 1565227027.9649408,
+      "history": "TTTTTTTTFTFTTTTTTF",
+      "last_encounter_time": 1567459288.3314378,
       "proficiency_level": 4,
       "russian": "подъем",
       "type": "Noun"
@@ -19778,16 +19762,16 @@
     },
     {
       "english": "to chunk, throw",
-      "history": "TTTTTFTTFFTTTTTFF",
-      "last_encounter_time": 1565226828.6136334,
+      "history": "TTTTTTFTTFFTTTTTFF",
+      "last_encounter_time": 1567458994.6003227,
       "proficiency_level": 4,
       "russian": "метнуть",
       "type": "Verb"
     },
     {
       "english": "to bear, carry",
-      "history": "TTTTTTFTTTTTTFFTTFF",
-      "last_encounter_time": 1565226657.6840925,
+      "history": "TFTTTTTTFTTTTTTFFTTFF",
+      "last_encounter_time": 1567459008.5094416,
       "proficiency_level": 4,
       "russian": "несомать",
       "type": "Verb"
@@ -19802,8 +19786,8 @@
     },
     {
       "english": "to deny, negate",
-      "history": "TTTTTTTTTTTFTFFTTFFFFTTTF",
-      "last_encounter_time": 1565226767.3311706,
+      "history": "TFTTTTTTTTTTTFTFFTTFFFFTTTF",
+      "last_encounter_time": 1567459024.1451526,
       "proficiency_level": 4,
       "russian": "отрицать",
       "type": "Verb"
@@ -19834,8 +19818,8 @@
     },
     {
       "english": "to stand out",
-      "history": "TFTTTFTTFTTT",
-      "last_encounter_time": 1565226882.4829364,
+      "history": "TTFTTTFTTFTTT",
+      "last_encounter_time": 1567458929.8549294,
       "proficiency_level": 4,
       "russian": "выступить",
       "type": "Verb"
@@ -19890,16 +19874,16 @@
     },
     {
       "english": "shrouded",
-      "history": "TFTFTTFFTFTFTTFFTTTFF",
-      "last_encounter_time": 1565226758.3270907,
+      "history": "TTFTFTTFFTFTFTTFFTTTFF",
+      "last_encounter_time": 1567458902.2048867,
       "proficiency_level": 4,
       "russian": "окутанный",
       "type": "Adjective"
     },
     {
       "english": "lit, illuminated",
-      "history": "TFTTTFTTTTTFFFF",
-      "last_encounter_time": 1567125992.5648885,
+      "history": "TTFTTTFTTTTTFFFF",
+      "last_encounter_time": 1567459243.902444,
       "proficiency_level": 4,
       "russian": "освещённый",
       "type": "Adjective"
@@ -19922,9 +19906,9 @@
     },
     {
       "english": "covered with",
-      "history": "FTTTFTFTTTFTTTTTF",
-      "last_encounter_time": 1567125882.5870125,
-      "proficiency_level": 3,
+      "history": "TTTFFFTTTFTFTTTFTTTTTF",
+      "last_encounter_time": 1567459056.782962,
+      "proficiency_level": 4,
       "russian": "охваченный + instr.",
       "type": "Adjective"
     },
@@ -20098,8 +20082,8 @@
     },
     {
       "english": "to growl, snarl",
-      "history": "TTTFTFTFTTFTTTTFFFF",
-      "last_encounter_time": 1565226563.5274448,
+      "history": "TTTTFTFTFTTFTTTTFFFF",
+      "last_encounter_time": 1567458939.3099787,
       "proficiency_level": 4,
       "russian": "прорычать",
       "type": "Verb"
@@ -20122,8 +20106,8 @@
     },
     {
       "english": "to bring down with force",
-      "history": "TTTTTTTTTFFF",
-      "last_encounter_time": 1565227076.6703176,
+      "history": "TFTTTTTTTTTFFF",
+      "last_encounter_time": 1567459249.6986008,
       "proficiency_level": 4,
       "russian": "обрушить",
       "type": "Verb"
@@ -20138,9 +20122,9 @@
     },
     {
       "english": "to crack",
-      "history": "FTTTTTFTTTTF",
-      "last_encounter_time": 1567125970.5699246,
-      "proficiency_level": 3,
+      "history": "TFTTTTTFTTTTF",
+      "last_encounter_time": 1567458875.6982543,
+      "proficiency_level": 4,
       "russian": "треснуть",
       "type": "Verb"
     },
@@ -20178,8 +20162,8 @@
     },
     {
       "english": "to turn smth into smth else",
-      "history": "TFTTFFTTTFTFTTTTFFFF",
-      "last_encounter_time": 1565226545.122052,
+      "history": "TTFTTFFTTTFTFTTTTFFFF",
+      "last_encounter_time": 1567459260.0308337,
       "proficiency_level": 4,
       "russian": "превратить",
       "type": "Verb"
@@ -20218,9 +20202,9 @@
     },
     {
       "english": "to fall apart",
-      "history": "FTFTTTTFTFTTTTTTF",
-      "last_encounter_time": 1567125901.3940046,
-      "proficiency_level": 3,
+      "history": "TFTFTTTTFTFTTTTTTF",
+      "last_encounter_time": 1567458896.2100346,
+      "proficiency_level": 4,
       "russian": "разваливаться",
       "type": "Verb"
     },
@@ -20274,8 +20258,8 @@
     },
     {
       "english": "to push off",
-      "history": "TTTTTTFTTTTTTTFF",
-      "last_encounter_time": 1565226707.3936105,
+      "history": "TTTTTTTFTTTTTTTFF",
+      "last_encounter_time": 1567458887.4484324,
       "proficiency_level": 4,
       "russian": "отталкиваться",
       "type": "Verb"
@@ -20386,8 +20370,8 @@
     },
     {
       "english": "insurmountable",
-      "history": "TFTTTTFTTTTTFFTFTTTFF",
-      "last_encounter_time": 1565227008.5232003,
+      "history": "TFTFTTTTFTTTTTFFTFTTTFF",
+      "last_encounter_time": 1567458998.8536017,
       "proficiency_level": 4,
       "russian": "непреодолимый",
       "type": "Adjective"
@@ -20770,8 +20754,8 @@
     },
     {
       "english": "to track, hunt down",
-      "history": "TTTFTFTFTTFFTTTTF",
-      "last_encounter_time": 1565227153.9382837,
+      "history": "TTTTFTFTFTTFFTTTTF",
+      "last_encounter_time": 1567459015.6350825,
       "proficiency_level": 4,
       "russian": "выслеживать",
       "type": "Verb"
@@ -20786,8 +20770,8 @@
     },
     {
       "english": "to wince, make a wry, wrinkled face",
-      "history": "TTTTTTFTTTTTTTFF",
-      "last_encounter_time": 1565227135.331281,
+      "history": "TTTTTTTFTTTTTTTFF",
+      "last_encounter_time": 1567459122.3753767,
       "proficiency_level": 4,
       "russian": "поморщиться",
       "type": "Verb"
@@ -20930,8 +20914,8 @@
     },
     {
       "english": "horizontal gap, slit",
-      "history": "TTFTFTTTTTTTTF",
-      "last_encounter_time": 1565226724.572192,
+      "history": "TFTTFTFTTTTTTTTF",
+      "last_encounter_time": 1567459111.370161,
       "proficiency_level": 4,
       "russian": "щель",
       "type": "Noun"
@@ -21034,8 +21018,8 @@
     },
     {
       "english": "splinter",
-      "history": "TTFTTTTTTFTTFT",
-      "last_encounter_time": 1565227124.2783937,
+      "history": "TTTFTTTTTTFTTFT",
+      "last_encounter_time": 1567458960.7847035,
       "proficiency_level": 4,
       "russian": "щепка",
       "type": "Noun"
@@ -21122,8 +21106,8 @@
     },
     {
       "english": "to curse",
-      "history": "TTFTFTFTTTTFTTTF",
-      "last_encounter_time": 1565226970.7234309,
+      "history": "TFTTFTFTFTTTTFTTTF",
+      "last_encounter_time": 1567459035.894145,
       "proficiency_level": 4,
       "russian": "проклясть",
       "type": "Verb"
@@ -21186,8 +21170,8 @@
     },
     {
       "english": "to fall due to gravity",
-      "history": "TFTFTTFFTTTTTF",
-      "last_encounter_time": 1565226917.8482747,
+      "history": "TFTFTFTTFFTTTTTF",
+      "last_encounter_time": 1567459180.4828918,
       "proficiency_level": 4,
       "russian": "провалиться",
       "type": "Verb"
@@ -21226,8 +21210,8 @@
     },
     {
       "english": "to bother",
-      "history": "TTFTTTTTFTFTTTFTFF",
-      "last_encounter_time": 1565227118.9915645,
+      "history": "TTFFTTFTTTTTFTFTTTFTFF",
+      "last_encounter_time": 1567459254.890001,
       "proficiency_level": 4,
       "russian": "заморачиваться",
       "type": "Verb"
@@ -21250,8 +21234,8 @@
     },
     {
       "english": "to convince, urge",
-      "history": "TTTFTFFFFFTTFFTTTTFTTT",
-      "last_encounter_time": 1565226710.949931,
+      "history": "TFTTTFTFFFFFTTFFTTTTFTTT",
+      "last_encounter_time": 1567459215.418751,
       "proficiency_level": 4,
       "russian": "убеждать",
       "type": "Verb"
@@ -21266,9 +21250,9 @@
     },
     {
       "english": "depressed",
-      "history": "FTFTFTTFTFTTTTFFTFF",
-      "last_encounter_time": 1567125913.8741412,
-      "proficiency_level": 3,
+      "history": "TTFFTFTFTTFTFTTTTFFTFF",
+      "last_encounter_time": 1567458944.858179,
+      "proficiency_level": 4,
       "russian": "подавленный",
       "type": "Adjective"
     },
@@ -21658,8 +21642,8 @@
     },
     {
       "english": "hurt, affected",
-      "history": "TFTTTTFTTFTTTF",
-      "last_encounter_time": 1565226717.3572133,
+      "history": "TFTFTTTTFTTFTTTF",
+      "last_encounter_time": 1567458976.5385199,
       "proficiency_level": 4,
       "russian": "задетый",
       "type": "Adjective"
@@ -21794,8 +21778,8 @@
     },
     {
       "english": "curoisity",
-      "history": "TTTTTTTFTTTTTTFF",
-      "last_encounter_time": 1565226804.9988003,
+      "history": "TTTTTTTTFTTTTTTFF",
+      "last_encounter_time": 1567459095.9401252,
       "proficiency_level": 4,
       "russian": "любопытство",
       "type": "Noun"
@@ -21914,16 +21898,16 @@
     },
     {
       "english": "to humiliate",
-      "history": "TFTTTTTTTTTFFFF",
-      "last_encounter_time": 1565226887.4999008,
+      "history": "TFTFTTTTTTTTTFFFF",
+      "last_encounter_time": 1567459127.9793148,
       "proficiency_level": 4,
       "russian": "унизить",
       "type": "Verb"
     },
     {
       "english": "to wriggle out",
-      "history": "TTTTTTTTFTTTFFFF",
-      "last_encounter_time": 1565226858.6415958,
+      "history": "TTTTTTTTTFTTTFFFF",
+      "last_encounter_time": 1567459100.5629423,
       "proficiency_level": 4,
       "russian": "увиливать",
       "type": "Verb"
@@ -21978,16 +21962,16 @@
     },
     {
       "english": "to surpass",
-      "history": "FFTTTTTFTTTFFTTTTTFF",
-      "last_encounter_time": 1567125987.4759274,
-      "proficiency_level": 2,
+      "history": "TTFFTTTTTFTTTFFTTTTTFF",
+      "last_encounter_time": 1567458970.2760909,
+      "proficiency_level": 4,
       "russian": "превзойти",
       "type": "Verb"
     },
     {
       "english": "to blame, accuse",
-      "history": "TTTTTFTTTTF",
-      "last_encounter_time": 1565227072.0967932,
+      "history": "TTTTTTFTTTTF",
+      "last_encounter_time": 1567458815.2919533,
       "proficiency_level": 4,
       "russian": "обвинять",
       "type": "Verb"
@@ -22042,18 +22026,10 @@
     },
     {
       "english": "to hurt, damage",
-      "history": "FTFTTTTTTFTFTTTFTFTF",
-      "last_encounter_time": 1567126001.515976,
-      "proficiency_level": 3,
-      "russian": "повредить",
-      "type": "Verb"
-    },
-    {
-      "english": "to represent, present",
-      "history": "TTTTTTTTFTF",
-      "last_encounter_time": 1564620780.18908,
+      "history": "TTFFTFTTTTTTFTFTTTFTFTF",
+      "last_encounter_time": 1567458926.1004865,
       "proficiency_level": 4,
-      "russian": "представить",
+      "russian": "повредить",
       "type": "Verb"
     },
     {
@@ -22074,8 +22050,8 @@
     },
     {
       "english": "carelessly",
-      "history": "TTFTTTTTF",
-      "last_encounter_time": 1565226667.2710156,
+      "history": "TFTTFTTTTTF",
+      "last_encounter_time": 1567459114.9316475,
       "proficiency_level": 4,
       "russian": "беспечно",
       "type": "Adverb"
@@ -22114,9 +22090,9 @@
     },
     {
       "english": "anxious",
-      "history": "FTTTTTTTTFTTTTTFF",
-      "last_encounter_time": 1567125974.9761176,
-      "proficiency_level": 3,
+      "history": "TFTTTTTTTTFTTTTTFF",
+      "last_encounter_time": 1567458862.906049,
+      "proficiency_level": 4,
       "russian": "тревожный",
       "type": "Adjective"
     },
@@ -22338,8 +22314,8 @@
     },
     {
       "english": "to scatter, dispel, dissipate",
-      "history": "TTFTTTTTTF",
-      "last_encounter_time": 1565227059.2621236,
+      "history": "TFTTFTTTTTTF",
+      "last_encounter_time": 1567459232.853899,
       "proficiency_level": 4,
       "russian": "рассеять",
       "type": "Verb"
@@ -22418,16 +22394,16 @@
     },
     {
       "english": "to charm, enchant, fascinate",
-      "history": "TTFTTTTTT",
-      "last_encounter_time": 1565227185.39545,
+      "history": "TFTTFTTTTTT",
+      "last_encounter_time": 1567459103.7726386,
       "proficiency_level": 4,
       "russian": "очаровать",
       "type": "Verb"
     },
     {
       "english": "to charm, enchant, fascinate",
-      "history": "TTTTTTTTTTFTTFF",
-      "last_encounter_time": 1565226688.9986925,
+      "history": "TTTTTTTTTTTFTTFF",
+      "last_encounter_time": 1567459162.9043133,
       "proficiency_level": 4,
       "russian": "очаровывать",
       "type": "Verb"
@@ -22490,8 +22466,8 @@
     },
     {
       "english": "to set off",
-      "history": "TTFTTTTTF",
-      "last_encounter_time": 1565226651.5829372,
+      "history": "TTTFTTTTTF",
+      "last_encounter_time": 1567458829.4997065,
       "proficiency_level": 4,
       "russian": "отправляться",
       "type": "Verb"
@@ -23049,14 +23025,6 @@
       "type": "Particle"
     },
     {
-      "english": "really!, emotional (suprise, doubt, concern)",
-      "history": "TTTT",
-      "last_encounter_time": 1561080834.9436524,
-      "proficiency_level": 4,
-      "russian": "неужели",
-      "type": "Particle"
-    },
-    {
       "english": "concerning, about",
       "history": "TTTTTF",
       "last_encounter_time": 1566760214.791058,
@@ -23114,1018 +23082,1842 @@
     },
     {
       "english": "family (adj.)",
-      "history": "TTTTTTTTT",
-      "last_encounter_time": 1567121929.0167756,
+      "history": "TTTTTTTTTT",
+      "last_encounter_time": 1567457709.1550288,
       "proficiency_level": 4,
       "russian": "семейный",
       "type": "Adjective"
     },
     {
       "english": "tense",
-      "history": "TTTTTTTFT",
-      "last_encounter_time": 1567122003.4130754,
+      "history": "TTTTTTTTFT",
+      "last_encounter_time": 1567457903.5426664,
       "proficiency_level": 4,
       "russian": "напряжённый",
       "type": "Adjective"
     },
     {
       "english": "frightened, scared",
-      "history": "TTTTTTT",
-      "last_encounter_time": 1567122442.9443789,
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1567457951.489014,
       "proficiency_level": 4,
       "russian": "испуганный",
       "type": "Adjective"
     },
     {
       "english": "outraged, indignant",
-      "history": "TTTFTTTFFFFF",
-      "last_encounter_time": 1567122824.8197343,
+      "history": "TFTTTFTTTFFFFF",
+      "last_encounter_time": 1567458080.536983,
       "proficiency_level": 4,
       "russian": "возмущённый",
       "type": "Adjective"
     },
     {
       "english": "offended",
-      "history": "TTTTTTTFFF",
-      "last_encounter_time": 1567122741.8345485,
+      "history": "TTTTTTTTTTFFF",
+      "last_encounter_time": 1567459130.795325,
       "proficiency_level": 4,
       "russian": "обиженный",
       "type": "Adjective"
     },
     {
       "english": "terrific, awesome, very exciting",
-      "history": "TTTTTTFFF",
-      "last_encounter_time": 1567122677.0095782,
+      "history": "TTTTTTTFFF",
+      "last_encounter_time": 1567457738.7150505,
       "proficiency_level": 4,
       "russian": "потрясающий",
       "type": "Adjective"
     },
     {
       "english": "sly, cunning",
-      "history": "TTTTTTFTTFTT",
-      "last_encounter_time": 1567122762.5879292,
+      "history": "TTTTTTTFTTFTT",
+      "last_encounter_time": 1567457985.8229942,
       "proficiency_level": 4,
       "russian": "лукавый",
       "type": "Adjective"
     },
     {
       "english": "deprived of sincerity, friendliness",
-      "history": "TTTFFTFTTTFFFFF",
-      "last_encounter_time": 1567122782.6435544,
+      "history": "TTTTFFTFTTTFFFFF",
+      "last_encounter_time": 1567457734.008223,
       "proficiency_level": 4,
       "russian": "натянутый",
       "type": "Adjective"
     },
     {
       "english": "interested",
-      "history": "TTTTTTTF",
-      "last_encounter_time": 1567122382.9933724,
+      "history": "TTTTTTTTF",
+      "last_encounter_time": 1567457789.67112,
       "proficiency_level": 4,
       "russian": "заинтересованный",
       "type": "Adjective"
     },
     {
       "english": "brass",
-      "history": "TTTTTTTF",
-      "last_encounter_time": 1567122435.2744327,
+      "history": "TTTTTTTTF",
+      "last_encounter_time": 1567457931.8990366,
       "proficiency_level": 4,
       "russian": "латунный",
       "type": "Adjective"
     },
     {
       "english": "beloved, dear, lover",
-      "history": "TTTTTT",
-      "last_encounter_time": 1567125418.3811858,
+      "history": "TTTTTTT",
+      "last_encounter_time": 1567458451.7771122,
       "proficiency_level": 4,
       "russian": "возлюбленный",
       "type": "Adjective"
     },
     {
       "english": "ruthless, unrelenting",
-      "history": "TTTTFTTFTFFF",
-      "last_encounter_time": 1567125966.0891674,
+      "history": "TTTTTFTTFTFFF",
+      "last_encounter_time": 1567458327.4890347,
       "proficiency_level": 4,
       "russian": "безжалостый",
       "type": "Adjective"
     },
     {
       "english": "blue-ish",
-      "history": "TTTTFT",
-      "last_encounter_time": 1567040744.1892846,
+      "history": "TTTTTFT",
+      "last_encounter_time": 1567458100.0890095,
       "proficiency_level": 4,
       "russian": "голубоватый",
       "type": "Adjective"
     },
     {
       "english": "desperate",
-      "history": "TTTFTFFFFFF",
-      "last_encounter_time": 1567125819.2164776,
+      "history": "TFTTTFTFFFFFF",
+      "last_encounter_time": 1567458448.7830403,
       "proficiency_level": 4,
       "russian": "отчаянный",
       "type": "Adjective"
     },
     {
       "english": "spellbound",
-      "history": "TTTTFFFFF",
-      "last_encounter_time": 1567125812.4259973,
+      "history": "TFTTTTFFFFF",
+      "last_encounter_time": 1567458498.965039,
       "proficiency_level": 4,
       "russian": "заворожённый",
       "type": "Adjective"
     },
     {
       "english": "curious",
-      "history": "TTTTTT",
-      "last_encounter_time": 1566956587.2296078,
+      "history": "TTTTTTT",
+      "last_encounter_time": 1567458277.2395892,
       "proficiency_level": 4,
       "russian": "любопытный",
       "type": "Adjective"
     },
     {
       "english": "natural",
-      "history": "TTTTTT",
-      "last_encounter_time": 1566955329.192518,
+      "history": "TTTTTTT",
+      "last_encounter_time": 1567458260.6298714,
       "proficiency_level": 4,
       "russian": "естественный",
       "type": "Adjective"
     },
     {
       "english": "cowardly",
-      "history": "TTTTTFFF",
-      "last_encounter_time": 1567125573.9904547,
+      "history": "TFTTTTTFFF",
+      "last_encounter_time": 1567458455.7038684,
       "proficiency_level": 4,
       "russian": "трусливый",
       "type": "Adjective"
     },
     {
       "english": "grumpy",
-      "history": "TTTTTTTFF",
-      "last_encounter_time": 1567125676.8174133,
+      "history": "TTTTTTTTFF",
+      "last_encounter_time": 1567458430.3966691,
       "proficiency_level": 4,
       "russian": "ворчливый",
       "type": "Adjective"
     },
     {
       "english": "diligant",
-      "history": "TTTTTF",
-      "last_encounter_time": 1567041174.9660485,
+      "history": "TTTTTTTF",
+      "last_encounter_time": 1567458546.1334372,
       "proficiency_level": 4,
       "russian": "старательный",
       "type": "Adjective"
     },
     {
       "english": "extremely, exceedingly",
-      "history": "TTTFFFFFF",
-      "last_encounter_time": 1567125601.921245,
+      "history": "TTTTFFFFFF",
+      "last_encounter_time": 1567458195.3840544,
       "proficiency_level": 4,
       "russian": "чрезвычайно",
       "type": "Adverb"
     },
     {
       "english": "closely, tightly",
-      "history": "TTTTTFT",
-      "last_encounter_time": 1567121867.1182437,
+      "history": "TTTTTTFT",
+      "last_encounter_time": 1567457792.6850195,
       "proficiency_level": 4,
       "russian": "тесно",
       "type": "Adverb"
     },
     {
       "english": "whim",
-      "history": "TTTTTTFT",
-      "last_encounter_time": 1567122398.5444074,
+      "history": "TTTTTTTTTFT",
+      "last_encounter_time": 1567458072.3530726,
       "proficiency_level": 4,
       "russian": "каприз",
       "type": "Noun"
     },
     {
       "english": "a drop, blob, ounce",
-      "history": "TTTTTTTF",
-      "last_encounter_time": 1567122316.0274525,
+      "history": "TTTTTTTTF",
+      "last_encounter_time": 1567457864.3907413,
       "proficiency_level": 4,
       "russian": "капля",
       "type": "Noun"
     },
     {
       "english": "passion",
-      "history": "TTTTTTTFFFF",
-      "last_encounter_time": 1567122803.630944,
+      "history": "TTTTTTTTFFFF",
+      "last_encounter_time": 1567457859.736358,
       "proficiency_level": 4,
       "russian": "страсть",
       "type": "Noun"
     },
     {
       "english": "grip, grasp, clutch",
-      "history": "TTTTTTTT",
-      "last_encounter_time": 1567121926.104403,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1567457808.776518,
       "proficiency_level": 4,
       "russian": "хватка",
       "type": "Noun"
     },
     {
       "english": "a big pile of smth",
-      "history": "TTTTTFT",
-      "last_encounter_time": 1567122429.037437,
+      "history": "TTTTTTFT",
+      "last_encounter_time": 1567457944.863011,
       "proficiency_level": 4,
       "russian": "груда",
       "type": "Noun"
     },
     {
       "english": "defeat",
-      "history": "TTFTTTTFFFFF",
-      "last_encounter_time": 1567122734.9665952,
+      "history": "TTTFTTTTFFFFF",
+      "last_encounter_time": 1567457975.6211827,
       "proficiency_level": 4,
       "russian": "поражение",
       "type": "Noun"
     },
     {
       "english": "blush",
-      "history": "TTFTTTTTTFTFF",
-      "last_encounter_time": 1567122662.5095472,
+      "history": "TTTFTTTTTTFTFF",
+      "last_encounter_time": 1567457817.7910142,
       "proficiency_level": 4,
       "russian": "румянец",
       "type": "Noun"
     },
     {
       "english": "the appearance of smth",
-      "history": "TTTTTTTTTFF",
-      "last_encounter_time": 1567122818.2325885,
+      "history": "TTTTTTTTTTFF",
+      "last_encounter_time": 1567457912.0979524,
       "proficiency_level": 4,
       "russian": "внешность",
       "type": "Noun"
     },
     {
       "english": "distinctive mark on smth",
-      "history": "TTTTTTTF",
-      "last_encounter_time": 1567122241.6053658,
+      "history": "TTTTTTTTF",
+      "last_encounter_time": 1567457959.0370197,
       "proficiency_level": 4,
       "russian": "метка",
       "type": "Noun"
     },
     {
       "english": "coward",
-      "history": "TTTTTTTTTFF",
-      "last_encounter_time": 1567122798.0216117,
+      "history": "TTTTTTTTTTFF",
+      "last_encounter_time": 1567457826.8695898,
       "proficiency_level": 4,
       "russian": "трусиха",
       "type": "Noun"
     },
     {
       "english": "seduction",
-      "history": "TTTFTTTTTF",
-      "last_encounter_time": 1567122800.883591,
+      "history": "TTTTFTTTTTF",
+      "last_encounter_time": 1567458030.579273,
       "proficiency_level": 4,
       "russian": "соблазнение",
       "type": "Noun"
     },
     {
       "english": "power, authority",
-      "history": "TTTTTTF",
-      "last_encounter_time": 1567122432.7704036,
+      "history": "TFTTTTTTF",
+      "last_encounter_time": 1567457712.166045,
       "proficiency_level": 4,
       "russian": "власть",
       "type": "Noun"
     },
     {
       "english": "quarrel",
-      "history": "TTTTTTTTT",
-      "last_encounter_time": 1567121923.6756556,
+      "history": "TTTTTTTTTT",
+      "last_encounter_time": 1567457692.085046,
       "proficiency_level": 4,
       "russian": "ссора",
       "type": "Noun"
     },
     {
       "english": "cobblestone",
-      "history": "TTTTTTTFFFFF",
-      "last_encounter_time": 1567122786.3025796,
+      "history": "TTFTTTTTTTFFFFF",
+      "last_encounter_time": 1567459107.858168,
       "proficiency_level": 4,
       "russian": "булыжник",
       "type": "Noun"
     },
     {
       "english": "a glide, slip, slide",
-      "history": "TTTTTFTTTF",
-      "last_encounter_time": 1567122760.4652777,
+      "history": "TTTTTTTFTTTF",
+      "last_encounter_time": 1567458082.7184887,
       "proficiency_level": 4,
       "russian": "скольжение",
       "type": "Noun"
     },
     {
       "english": "bush",
-      "history": "TTTTTTTTTFF",
-      "last_encounter_time": 1567122809.4823017,
+      "history": "TTTTTTTTTTFF",
+      "last_encounter_time": 1567457754.9929147,
       "proficiency_level": 4,
       "russian": "куст",
       "type": "Noun"
     },
     {
       "english": "speed",
-      "history": "TTTTTTT",
-      "last_encounter_time": 1567121995.2972426,
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1567457980.1520355,
       "proficiency_level": 4,
       "russian": "скорость",
       "type": "Noun"
     },
     {
       "english": "full speed",
-      "history": "TTTTTTTT",
-      "last_encounter_time": 1567121935.8735278,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1567457782.4560387,
       "proficiency_level": 4,
       "russian": "полный скорость",
       "type": "Noun"
     },
     {
       "english": "friction",
-      "history": "TTTTTTT",
-      "last_encounter_time": 1567121892.0760858,
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1567457948.4287167,
       "proficiency_level": 4,
       "russian": "трение",
       "type": "Noun"
     },
     {
       "english": "muscle",
-      "history": "TTTTTTF",
-      "last_encounter_time": 1567125047.0070982,
+      "history": "TTTTTTTF",
+      "last_encounter_time": 1567458272.5160458,
       "proficiency_level": 4,
       "russian": "мышца, мускул",
       "type": "Noun"
     },
     {
       "english": "point (unit of score)",
-      "history": "TTTTTF",
-      "last_encounter_time": 1566956633.1879447,
+      "history": "TTTTTTF",
+      "last_encounter_time": 1567458185.8062553,
       "proficiency_level": 4,
       "russian": "очко",
       "type": "Noun"
     },
     {
       "english": "dispute, argument",
-      "history": "TTTTTT",
-      "last_encounter_time": 1567125225.039191,
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1567458524.938561,
       "proficiency_level": 4,
       "russian": "спор",
       "type": "Noun"
     },
     {
       "english": "shelf",
-      "history": "TTTTTF",
-      "last_encounter_time": 1567042045.4742336,
+      "history": "TFTTTTTF",
+      "last_encounter_time": 1567458178.5295093,
       "proficiency_level": 4,
       "russian": "полка",
       "type": "Noun"
     },
     {
       "english": "benefit, favor",
-      "history": "TTTTTTTTF",
-      "last_encounter_time": 1567125461.210977,
+      "history": "TTTTTTTTTF",
+      "last_encounter_time": 1567458149.140873,
       "proficiency_level": 4,
       "russian": "польза",
       "type": "Noun"
     },
     {
       "english": "edition",
-      "history": "TTTTTTTFTFF",
-      "last_encounter_time": 1567125639.3507118,
+      "history": "TTTTTTTTFTFF",
+      "last_encounter_time": 1567458381.5829506,
       "proficiency_level": 4,
       "russian": "издание",
       "type": "Noun"
     },
     {
       "english": "distance",
-      "history": "TTTTTTTTFF",
-      "last_encounter_time": 1567125199.2115917,
+      "history": "TTFTTTTTTTTFF",
+      "last_encounter_time": 1567459117.9033997,
       "proficiency_level": 4,
       "russian": "расстояние",
       "type": "Noun"
     },
     {
       "english": "jaw",
-      "history": "TTTTTF",
-      "last_encounter_time": 1567041741.9764252,
+      "history": "TTTTTTF",
+      "last_encounter_time": 1567458387.253079,
       "proficiency_level": 4,
       "russian": "челюсть",
       "type": "Noun"
     },
     {
       "english": "detail",
-      "history": "TTTTTT",
-      "last_encounter_time": 1567124901.4855568,
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1567458587.1357727,
       "proficiency_level": 4,
       "russian": "деталь",
       "type": "Noun"
     },
     {
       "english": "interest",
-      "history": "TTTTT",
-      "last_encounter_time": 1567125589.8540404,
+      "history": "TTTTTT",
+      "last_encounter_time": 1567458457.7949197,
       "proficiency_level": 4,
       "russian": "интерес",
       "type": "Noun"
     },
     {
       "english": "bright spot of light from sunbeam",
-      "history": "TTTTFFFFFF",
-      "last_encounter_time": 1567125815.9224222,
+      "history": "TTTTTTFFFFFF",
+      "last_encounter_time": 1567458577.878963,
       "proficiency_level": 4,
       "russian": "зайчик",
       "type": "Noun"
     },
     {
       "english": "housing, body, hull",
-      "history": "TTTTTTTT",
-      "last_encounter_time": 1567125321.2324684,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1567458097.1129842,
       "proficiency_level": 4,
       "russian": "корпус",
       "type": "Noun"
     },
     {
       "english": "shine",
-      "history": "TTTFTTTTTT",
-      "last_encounter_time": 1567125568.5666502,
+      "history": "TTTTFTTTTTT",
+      "last_encounter_time": 1567458146.576053,
       "proficiency_level": 4,
       "russian": "блеск",
       "type": "Noun"
     },
     {
       "english": "inch",
-      "history": "TTTTTFT",
-      "last_encounter_time": 1567041180.9094758,
+      "history": "TTTTTTFT",
+      "last_encounter_time": 1567458294.2000966,
       "proficiency_level": 4,
       "russian": "дюйм",
       "type": "Noun"
     },
     {
       "english": "small backless sofa with no headboard",
-      "history": "TTTTTTFTFFF",
-      "last_encounter_time": 1567125560.3934445,
+      "history": "TTTFTTTTTTFTFFF",
+      "last_encounter_time": 1567459134.5004342,
       "proficiency_level": 4,
       "russian": "кушетка",
       "type": "Noun"
     },
     {
       "english": "reading",
-      "history": "TTTTTTT",
-      "last_encounter_time": 1567125193.2770245,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1567458569.1500468,
       "proficiency_level": 4,
       "russian": "чтение",
       "type": "Noun"
     },
     {
       "english": "trust",
-      "history": "TTTTTF",
-      "last_encounter_time": 1567041633.0194814,
+      "history": "TTTTTTF",
+      "last_encounter_time": 1567458252.5737407,
       "proficiency_level": 4,
       "russian": "доверие",
       "type": "Noun"
     },
     {
       "english": "mistrust, distrust",
-      "history": "TTTTTTTFF",
-      "last_encounter_time": 1567125655.4349813,
+      "history": "TTTTTTTTFF",
+      "last_encounter_time": 1567458173.9220004,
       "proficiency_level": 4,
       "russian": "недоверие",
       "type": "Noun"
     },
     {
       "english": "fright, startle",
-      "history": "TTTTTT",
-      "last_encounter_time": 1567042212.7564616,
+      "history": "TTTTTTT",
+      "last_encounter_time": 1567458189.4576051,
       "proficiency_level": 4,
       "russian": "испуг",
       "type": "Noun"
     },
     {
       "english": "rival",
-      "history": "TTTTTFFFFF",
-      "last_encounter_time": 1567125885.2010794,
+      "history": "TTTTTTFFFFF",
+      "last_encounter_time": 1567458472.7267356,
       "proficiency_level": 4,
       "russian": "соперник",
       "type": "Noun"
     },
     {
       "english": "changeling",
-      "history": "TTTTTFF",
-      "last_encounter_time": 1567125565.901171,
+      "history": "TTTTTTTTFF",
+      "last_encounter_time": 1567459304.9701767,
       "proficiency_level": 4,
       "russian": "подменыш",
       "type": "Noun"
     },
     {
       "english": "to fall out",
-      "history": "TTTTTTTTFFF",
-      "last_encounter_time": 1567122728.8032703,
+      "history": "TTTTTTTTTFFF",
+      "last_encounter_time": 1567458013.0905352,
       "proficiency_level": 4,
       "russian": "выпасть",
       "type": "Verb"
     },
     {
       "english": "to threaten",
-      "history": "TTTFTTTTFFFF",
-      "last_encounter_time": 1567122816.214556,
+      "history": "TTTTFTTTTFFFF",
+      "last_encounter_time": 1567457806.009945,
       "proficiency_level": 4,
       "russian": "угрожать",
       "type": "Verb"
     },
     {
       "english": "to set fire, ignite",
-      "history": "TTTTTTTT",
-      "last_encounter_time": 1567122446.0921423,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1567457962.7043386,
       "proficiency_level": 4,
       "russian": "поджечь",
       "type": "Verb"
     },
     {
       "english": "to tan",
-      "history": "TTTTTTT",
-      "last_encounter_time": 1567122291.766504,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1567458067.1422281,
       "proficiency_level": 4,
       "russian": "загореть",
       "type": "Verb"
     },
     {
       "english": "to state, declare",
-      "history": "TTTTTTTTTFFF",
-      "last_encounter_time": 1567122812.1825874,
+      "history": "TTTTTTTTTTFFF",
+      "last_encounter_time": 1567457723.0800755,
       "proficiency_level": 4,
       "russian": "заявить",
       "type": "Verb"
     },
     {
       "english": "to change your mind, rethink",
-      "history": "TTTTTTTF",
-      "last_encounter_time": 1567122370.0074182,
+      "history": "TTTTTTTTF",
+      "last_encounter_time": 1567458026.2210205,
       "proficiency_level": 4,
       "russian": "передумать",
       "type": "Verb"
     },
     {
       "english": "to insist",
-      "history": "TTTFTTTTFFFFFFF",
-      "last_encounter_time": 1567122795.840815,
+      "history": "TTFTTTFTTTTFFFFFFF",
+      "last_encounter_time": 1567459284.470524,
       "proficiency_level": 4,
       "russian": "настаивать",
       "type": "Verb"
     },
     {
       "english": "to ignore",
-      "history": "TTTTTTTTTT",
-      "last_encounter_time": 1567121873.1180418,
+      "history": "TTTTTTTTTTT",
+      "last_encounter_time": 1567457714.7820127,
       "proficiency_level": 4,
       "russian": "игнорировать",
       "type": "Verb"
     },
     {
       "english": "to quarrel",
-      "history": "TTTTTTT",
-      "last_encounter_time": 1567122246.1974075,
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1567457971.1841621,
       "proficiency_level": 4,
       "russian": "ссориться",
       "type": "Verb"
     },
     {
       "english": "to inflate",
-      "history": "TTTTTTTT",
-      "last_encounter_time": 1567122277.8382885,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1567457983.053512,
       "proficiency_level": 4,
       "russian": "надуть",
       "type": "Verb"
     },
     {
       "english": "to stick out",
-      "history": "TTTTTTTTFF",
-      "last_encounter_time": 1567122366.4268746,
+      "history": "TTTTTTTTTFF",
+      "last_encounter_time": 1567457935.1480103,
       "proficiency_level": 4,
       "russian": "высунуть",
       "type": "Verb"
     },
     {
       "english": "to cling, get close to ea.oth.; start to argue",
-      "history": "TTTTTFTFFFFF",
-      "last_encounter_time": 1567122632.2510595,
+      "history": "TTTTTTFTFFFFF",
+      "last_encounter_time": 1567457699.7802918,
       "proficiency_level": 4,
       "russian": "сцепиться",
       "type": "Verb"
     },
     {
       "english": "to build, erect",
-      "history": "TTTTTTTFFFFF",
-      "last_encounter_time": 1567126005.1117237,
+      "history": "TTTTTTTTFFFFF",
+      "last_encounter_time": 1567457955.9967268,
       "proficiency_level": 4,
       "russian": "соорудить",
       "type": "Verb"
     },
     {
       "english": "to hustle, justle, shove",
-      "history": "TTTTTTTFFFFF",
-      "last_encounter_time": 1567122789.746582,
+      "history": "TTTTTTTTFFFFF",
+      "last_encounter_time": 1567457909.938016,
       "proficiency_level": 4,
       "russian": "толкаться",
       "type": "Verb"
     },
     {
       "english": "to get bored",
-      "history": "TTTTTTT",
-      "last_encounter_time": 1567122255.4543865,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1567457820.76103,
       "proficiency_level": 4,
       "russian": "заскучать",
       "type": "Verb"
     },
     {
       "english": "to reach out, lengthen",
-      "history": "TTFTTTTFFFF",
-      "last_encounter_time": 1567122701.0075817,
+      "history": "TTTTFTTTTFFFF",
+      "last_encounter_time": 1567459028.0682323,
       "proficiency_level": 4,
       "russian": "тянуться",
       "type": "Verb"
     },
     {
       "english": "to lend",
-      "history": "TTTTFFTTTFFFFFF",
-      "last_encounter_time": 1567122832.3325865,
+      "history": "TTTTTTFFTTTFFFFFF",
+      "last_encounter_time": 1567459031.4505463,
       "proficiency_level": 4,
       "russian": "одолжить",
       "type": "Verb"
     },
     {
       "english": "to give back (return), give out",
-      "history": "TTTTTTTT",
-      "last_encounter_time": 1567122351.2814193,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1567458001.7111056,
       "proficiency_level": 4,
       "russian": "отдать",
       "type": "Verb"
     },
     {
       "english": "to lift slightly",
-      "history": "TTTTTTTT",
-      "last_encounter_time": 1567122410.1394074,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1567457836.7206292,
       "proficiency_level": 4,
       "russian": "приподнять",
       "type": "Verb"
     },
     {
       "english": "to scatter (разобросать)",
-      "history": "TTTTTTTFFFF",
-      "last_encounter_time": 1567125866.7371433,
+      "history": "TTTTTTTTFFFF",
+      "last_encounter_time": 1567457899.508019,
       "proficiency_level": 4,
       "russian": "раскидать",
       "type": "Verb"
     },
     {
       "english": "to improve, better",
-      "history": "TTTTTTT",
-      "last_encounter_time": 1567122011.0354486,
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1567457749.3222136,
       "proficiency_level": 4,
       "russian": "улучшить",
       "type": "Verb"
     },
     {
       "english": "to improve, better",
-      "history": "TTTTTTT",
-      "last_encounter_time": 1567122070.6766925,
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1567457874.9170966,
       "proficiency_level": 4,
       "russian": "улучшать",
       "type": "Verb"
     },
     {
       "english": "to polish",
-      "history": "TTTTTTTT",
-      "last_encounter_time": 1567121948.3486893,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1567457885.6520371,
       "proficiency_level": 4,
       "russian": "полировать",
       "type": "Verb"
     },
     {
       "english": "to flatter",
-      "history": "TTTTTTTFFF",
-      "last_encounter_time": 1567122792.991607,
+      "history": "TTTTTTTTFFF",
+      "last_encounter_time": 1567457892.0751262,
       "proficiency_level": 4,
       "russian": "льстить",
       "type": "Verb"
     },
     {
       "english": "to crouch down; sit for a while",
-      "history": "TTTTTTTTFF",
-      "last_encounter_time": 1567122026.9871364,
+      "history": "TTTTTTTTTTFF",
+      "last_encounter_time": 1567457780.1700437,
       "proficiency_level": 4,
       "russian": "присесть",
       "type": "Verb"
     },
     {
       "english": "to pay attention, take note",
-      "history": "TTTTTTTTT",
-      "last_encounter_time": 1567121983.0723345,
+      "history": "TTTTTTTTTT",
+      "last_encounter_time": 1567457771.798921,
       "proficiency_level": 4,
       "russian": "обратить внимание",
       "type": "Verb"
     },
     {
       "english": "to pout, be offended",
-      "history": "TTTTTFT",
-      "last_encounter_time": 1567122235.757044,
+      "history": "TTTTTTFT",
+      "last_encounter_time": 1567458063.4378474,
       "proficiency_level": 4,
       "russian": "надуться",
       "type": "Verb"
     },
     {
       "english": "to hind, allude",
-      "history": "TTTTTTFF",
-      "last_encounter_time": 1567122738.6454806,
+      "history": "TTTTTTTFF",
+      "last_encounter_time": 1567457928.9997199,
       "proficiency_level": 4,
       "russian": "намекать",
       "type": "Verb"
     },
     {
       "english": "to lightly bite, squeeze lips",
-      "history": "TTTTTTTT",
-      "last_encounter_time": 1567122289.2724435,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1567457988.727347,
       "proficiency_level": 4,
       "russian": "прикусить",
       "type": "Verb"
     },
     {
       "english": "to clink, ring, ding",
-      "history": "TTTTTTT",
-      "last_encounter_time": 1567122064.5094216,
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1567457895.9570367,
       "proficiency_level": 4,
       "russian": "звенеть",
       "type": "Verb"
     },
     {
       "english": "to patiently endure (pain, suffering)",
-      "history": "TTTTTTFF",
-      "last_encounter_time": 1567125791.0445583,
+      "history": "TTTTTTTFF",
+      "last_encounter_time": 1567458142.6316996,
       "proficiency_level": 4,
       "russian": "вытерпеть",
       "type": "Verb"
     },
     {
       "english": "to deserve",
-      "history": "TTTFFFFFFFFFF",
-      "last_encounter_time": 1567125775.0070448,
+      "history": "TTFTTTFFFFFFFFFF",
+      "last_encounter_time": 1567459220.763752,
       "proficiency_level": 4,
       "russian": "заслуживать",
       "type": "Verb"
     },
     {
       "english": "selfish",
-      "history": "TTTTFT",
-      "last_encounter_time": 1567125229.5932617,
+      "history": "TTTTTFT",
+      "last_encounter_time": 1567458163.149057,
       "proficiency_level": 4,
       "russian": "эгоистичнйы",
       "type": "Verb"
     },
     {
       "english": "to interfere, meddle",
-      "history": "TTTFFFFFFFF",
-      "last_encounter_time": 1567125594.1175225,
+      "history": "TFTTTFFFFFFFF",
+      "last_encounter_time": 1567458269.0710528,
       "proficiency_level": 4,
       "russian": "вмешиваться",
       "type": "Verb"
     },
     {
       "english": "to abduct",
-      "history": "TTTTFFF",
-      "last_encounter_time": 1567125641.561557,
+      "history": "TTTTTTFFF",
+      "last_encounter_time": 1567458528.380264,
       "proficiency_level": 4,
       "russian": "похищать",
       "type": "Verb"
     },
     {
       "english": "to abduct",
-      "history": "TTTTTFFFF",
-      "last_encounter_time": 1567125636.0218647,
+      "history": "TTTTTTFFFF",
+      "last_encounter_time": 1567458443.870295,
       "proficiency_level": 4,
       "russian": "похитить",
       "type": "Verb"
     },
     {
       "english": "to conquer",
-      "history": "TTTTTTFFFF",
-      "last_encounter_time": 1567125777.9485598,
+      "history": "TTTTTTTTFFFF",
+      "last_encounter_time": 1567458555.001128,
       "proficiency_level": 4,
       "russian": "завоевать",
       "type": "Verb"
     },
     {
       "english": "to frown",
-      "history": "TTTTTTTFFFF",
-      "last_encounter_time": 1567125801.628248,
+      "history": "TTTTTTTTTFFFF",
+      "last_encounter_time": 1567459311.574488,
       "proficiency_level": 4,
       "russian": "ощериться",
       "type": "Verb"
     },
     {
       "english": "to wince, tremble for a moment",
-      "history": "TTTFFFFFFFF",
-      "last_encounter_time": 1567125571.594526,
+      "history": "TFTTTFFFFFFFF",
+      "last_encounter_time": 1567458323.8146043,
       "proficiency_level": 4,
       "russian": "вздрогнуть",
       "type": "Verb"
     },
     {
       "english": "to blaze",
-      "history": "TTTTTFFFFF",
-      "last_encounter_time": 1567125927.2582376,
+      "history": "TFTTTTTFFFFF",
+      "last_encounter_time": 1567458203.713694,
       "proficiency_level": 4,
       "russian": "пылать",
       "type": "Verb"
     },
     {
       "english": "to overcome, prevail, triumph",
-      "history": "TTTFTT",
-      "last_encounter_time": 1567040605.4500577,
+      "history": "TFTTTFTT",
+      "last_encounter_time": 1567458518.5501726,
       "proficiency_level": 4,
       "russian": "восторжествовать",
       "type": "Verb"
     },
     {
       "english": "to bow your head",
-      "history": "TTTTTF",
-      "last_encounter_time": 1567042026.2435434,
+      "history": "TTTTTTF",
+      "last_encounter_time": 1567458482.1322594,
       "proficiency_level": 4,
       "russian": "склонить голову",
       "type": "Verb"
     },
     {
       "english": "to surrender, give up",
-      "history": "TTTTTTTF",
-      "last_encounter_time": 1567125435.299051,
+      "history": "TTTTTTTTF",
+      "last_encounter_time": 1567458419.8228445,
       "proficiency_level": 4,
       "russian": "сдаваться",
       "type": "Verb"
     },
     {
       "english": "to screw up; spoil from inablity or carelessness",
-      "history": "TTTTTTT",
-      "last_encounter_time": 1567040862.5920663,
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1567458280.8310523,
       "proficiency_level": 4,
       "russian": "напортачить",
       "type": "Verb"
     },
     {
       "english": "to pounce",
-      "history": "TTTTTTTTFF",
-      "last_encounter_time": 1567125687.9837809,
+      "history": "TTTTTTTTTTFF",
+      "last_encounter_time": 1567458560.59458,
       "proficiency_level": 4,
       "russian": "наброситься",
       "type": "Verb"
     },
     {
       "english": "to be outraged",
-      "history": "TTTTFFFF",
-      "last_encounter_time": 1567125662.109979,
+      "history": "TTTTTTTFFFF",
+      "last_encounter_time": 1567459062.4099445,
       "proficiency_level": 4,
       "russian": "возмутиться",
       "type": "Verb"
     },
     {
       "english": "to touch, move (feelings)",
-      "history": "TTTTTTTT",
-      "last_encounter_time": 1567125505.4195569,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1567458167.7666986,
       "proficiency_level": 4,
       "russian": "тронуть",
       "type": "Verb"
     },
     {
       "english": "to seduce",
-      "history": "TTTTTTF",
-      "last_encounter_time": 1567124885.8068595,
+      "history": "TTTTTTTTF",
+      "last_encounter_time": 1567458566.1833937,
       "proficiency_level": 4,
       "russian": "соблазнить",
       "type": "Verb"
     },
     {
       "english": "to carve, process, bring into some state",
-      "history": "TTTTTTFFF",
-      "last_encounter_time": 1567125710.3083608,
+      "history": "TTTTTTTFFF",
+      "last_encounter_time": 1567458375.4180377,
       "proficiency_level": 4,
       "russian": "разделать",
       "type": "Verb"
     },
     {
       "english": "to slam shut",
-      "history": "TTTTFFFFFF",
-      "last_encounter_time": 1567125714.7512267,
+      "history": "TTFTTTTFFFFFF",
+      "last_encounter_time": 1567458591.7120328,
       "proficiency_level": 4,
       "russian": "захлопнуть",
       "type": "Verb"
     },
     {
       "english": "to compel, force, drive",
-      "history": "TTTTFFTFFF",
-      "last_encounter_time": 1567125631.1860986,
+      "history": "TTFFTTTTFFTFFF",
+      "last_encounter_time": 1567458439.1923466,
       "proficiency_level": 4,
       "russian": "вынудить",
       "type": "Verb"
     },
     {
       "english": "to compel, force, drive",
-      "history": "TTTTFTFFFF",
-      "last_encounter_time": 1567125587.5551085,
+      "history": "TTTTTFTFFFF",
+      "last_encounter_time": 1567458369.8332567,
       "proficiency_level": 4,
       "russian": "вынуждать",
       "type": "Verb"
     },
     {
       "english": "to reign",
-      "history": "TTTTFFFFF",
-      "last_encounter_time": 1567125700.8074107,
+      "history": "TTTTTTFFFFF",
+      "last_encounter_time": 1567458581.0050483,
       "proficiency_level": 4,
       "russian": "воцариться",
       "type": "Verb"
     },
     {
       "english": "to wait for someones appearance",
-      "history": "TTTTTTTFTFT",
-      "last_encounter_time": 1567125657.7793756,
+      "history": "TTTTTTTTTFTFT",
+      "last_encounter_time": 1567458536.912771,
       "proficiency_level": 4,
       "russian": "поджидать",
       "type": "Verb"
     },
     {
       "english": "to send out",
-      "history": "TTTTFT",
-      "last_encounter_time": 1567041341.3181784,
+      "history": "TTTTTTFT",
+      "last_encounter_time": 1567458594.3931253,
       "proficiency_level": 4,
       "russian": "отослать",
       "type": "Verb"
     },
     {
       "english": "to shine",
-      "history": "TTTTTTTTFF",
-      "last_encounter_time": 1567125707.8928616,
+      "history": "TTTTTTTTTFF",
+      "last_encounter_time": 1567458200.9319835,
       "proficiency_level": 4,
       "russian": "сиять",
       "type": "Verb"
     },
     {
       "english": "to resist, fight back",
-      "history": "TTTTFFFF",
-      "last_encounter_time": 1567125538.2608778,
+      "history": "TTTTTTFFFF",
+      "last_encounter_time": 1567458543.499843,
       "proficiency_level": 4,
       "russian": "сопротивляться",
       "type": "Verb"
     },
     {
       "english": "to visit",
-      "history": "TTTTTFFFFFF",
-      "last_encounter_time": 1567125963.1077724,
+      "history": "TFTTTTTFFFFFF",
+      "last_encounter_time": 1567458522.0179818,
       "proficiency_level": 4,
       "russian": "навестить",
       "type": "Verb"
     },
     {
       "english": "to flicker, flash",
-      "history": "TTTFFFFFFF",
-      "last_encounter_time": 1567125674.330276,
+      "history": "TTTTFFFFFFF",
+      "last_encounter_time": 1567458249.7895858,
       "proficiency_level": 4,
       "russian": "мелькнуть",
       "type": "Verb"
     },
     {
       "english": "to intend, to mean",
-      "history": "TTTTFTTTF",
-      "last_encounter_time": 1567125607.5533142,
+      "history": "TTTTTFTTTF",
+      "last_encounter_time": 1567458426.723029,
       "proficiency_level": 4,
       "russian": "намереваться",
       "type": "Verb"
     },
     {
       "english": "to throw oneself, rush quickly",
-      "history": "TTTTTTTTTTT",
-      "last_encounter_time": 1567041435.1514955,
+      "history": "TTTTTTTTTTTT",
+      "last_encounter_time": 1567458110.1244082,
       "proficiency_level": 4,
       "russian": "броситься",
       "type": "Verb"
     },
     {
       "english": "out there",
-      "history": "TTTTTTTTT",
-      "last_encounter_time": 1567122465.3324275,
+      "history": "TTTTTTTTTTT",
+      "last_encounter_time": 1567457829.0997944,
       "proficiency_level": 4,
       "russian": "вон там",
       "type": "Phrase"
     },
     {
       "english": "will happen, take place",
-      "history": "TTTTTTTTFFTTTF",
-      "last_encounter_time": 1567122806.2266119,
+      "history": "TTTTTTTTTTFFTTTF",
+      "last_encounter_time": 1567459252.1043386,
       "proficiency_level": 4,
       "russian": "произойдёт",
       "type": "Phrase"
     },
     {
       "english": "... tend to be ...",
-      "history": "TTTTTTTFF",
-      "last_encounter_time": 1567125591.9542458,
+      "history": "TTTTTTTTFF",
+      "last_encounter_time": 1567458347.5284007,
       "proficiency_level": 4,
       "russian": "... склонны быть ...",
       "type": "Phrase"
     },
     {
       "english": "to enjoy, relish, delight",
-      "history": "TTFTTTFFFFFF",
-      "last_encounter_time": 1567122732.7125645,
+      "history": "TTTFFTTFTTTFFFFFF",
+      "last_encounter_time": 1567458811.015717,
       "proficiency_level": 4,
       "russian": "наслаждать",
+      "type": "Verb"
+    },
+    {
+      "english": "chair",
+      "history": "TTTTTTTTTTTTTTT",
+      "last_encounter_time": 1566760319.333797,
+      "proficiency_level": 4,
+      "russian": "стул",
+      "type": "Noun"
+    },
+    {
+      "english": "obscene",
+      "history": "TTTTTTFF",
+      "last_encounter_time": 1567562573.1136782,
+      "proficiency_level": 4,
+      "russian": "непристойный",
+      "type": "Adjective"
+    },
+    {
+      "english": "to comb",
+      "history": "TTTFTTF",
+      "last_encounter_time": 1567562405.2871506,
+      "proficiency_level": 4,
+      "russian": "расчёсывать",
+      "type": "Verb"
+    },
+    {
+      "english": "skipping",
+      "history": "TTT",
+      "last_encounter_time": 1567561785.180744,
+      "proficiency_level": 4,
+      "russian": "вприпрыжку",
+      "type": "Adverb"
+    },
+    {
+      "english": "to get involved; to blend in",
+      "history": "TTFF",
+      "last_encounter_time": 1567562743.9845693,
+      "proficiency_level": 3,
+      "russian": "ввязаться",
+      "type": "Verb"
+    },
+    {
+      "english": "list",
+      "history": "TTTTTF",
+      "last_encounter_time": 1567562447.579524,
+      "proficiency_level": 4,
+      "russian": "список",
+      "type": "Noun"
+    },
+    {
+      "english": "to notify",
+      "history": "FFF",
+      "last_encounter_time": 1567562582.6936467,
+      "proficiency_level": 1,
+      "russian": "уведомить",
+      "type": "Verb"
+    },
+    {
+      "english": "superpower",
+      "history": "TTTTF",
+      "last_encounter_time": 1567562349.6376278,
+      "proficiency_level": 4,
+      "russian": "сверхспособность",
+      "type": "Noun"
+    },
+    {
+      "english": "to grit your teeth",
+      "history": "TTTTT",
+      "last_encounter_time": 1567562644.0140946,
+      "proficiency_level": 4,
+      "russian": "скрипеть зубами",
+      "type": "Phrase"
+    },
+    {
+      "english": "relief",
+      "history": "FFF",
+      "last_encounter_time": 1567562752.2247858,
+      "proficiency_level": 1,
+      "russian": "облегчение",
+      "type": "Noun"
+    },
+    {
+      "english": "to prefer",
+      "history": "FFF",
+      "last_encounter_time": 1567562512.7587123,
+      "proficiency_level": 1,
+      "russian": "предпочесть",
+      "type": "Verb"
+    },
+    {
+      "english": "the rest, other",
+      "history": "TTTFF",
+      "last_encounter_time": 1567562452.9260762,
+      "proficiency_level": 4,
+      "russian": "прочий",
+      "type": "Adjective"
+    },
+    {
+      "english": "to guess, have a hunch",
+      "history": "FFF",
+      "last_encounter_time": 1567562183.2555566,
+      "proficiency_level": 1,
+      "russian": "догадываться",
+      "type": "Verb"
+    },
+    {
+      "english": "to fill smth",
+      "history": "TTTTTTTTF",
+      "last_encounter_time": 1567562690.8856766,
+      "proficiency_level": 4,
+      "russian": "наполнять",
+      "type": "Verb"
+    },
+    {
+      "english": "to supply, feed",
+      "history": "FFF",
+      "last_encounter_time": 1567562701.1366572,
+      "proficiency_level": 1,
+      "russian": "питать",
+      "type": "Verb"
+    },
+    {
+      "english": "age, years",
+      "history": "TTTFF",
+      "last_encounter_time": 1567562361.8485348,
+      "proficiency_level": 4,
+      "russian": "возраст",
+      "type": "Noun"
+    },
+    {
+      "english": "setting, installation, fitting",
+      "history": "TTTTTF",
+      "last_encounter_time": 1567562501.7975307,
+      "proficiency_level": 4,
+      "russian": "установка",
+      "type": "Noun"
+    },
+    {
+      "english": "pressure",
+      "history": "TTTTTF",
+      "last_encounter_time": 1567562709.999384,
+      "proficiency_level": 4,
+      "russian": "давление",
+      "type": "Noun"
+    },
+    {
+      "english": "to squeeze out",
+      "history": "TFFF",
+      "last_encounter_time": 1567562717.0976908,
+      "proficiency_level": 2,
+      "russian": "выдавить",
+      "type": "Verb"
+    },
+    {
+      "english": "to drag out",
+      "history": "FFF",
+      "last_encounter_time": 1567562471.532214,
+      "proficiency_level": 1,
+      "russian": "выволакивать",
+      "type": "Verb"
+    },
+    {
+      "english": "asperation",
+      "history": "TTTTF",
+      "last_encounter_time": 1567562260.684525,
+      "proficiency_level": 4,
+      "russian": "устремление",
+      "type": "Noun"
+    },
+    {
+      "english": "to settle, put in order",
+      "history": "TTTFTF",
+      "last_encounter_time": 1567562265.913277,
+      "proficiency_level": 4,
+      "russian": "уладить",
+      "type": "Verb"
+    },
+    {
+      "english": "far away, in the distance",
+      "history": "TTTFF",
+      "last_encounter_time": 1567562523.79153,
+      "proficiency_level": 4,
+      "russian": "вдали",
+      "type": "Adverb"
+    },
+    {
+      "english": "to prance",
+      "history": "TTTFF",
+      "last_encounter_time": 1567562464.188613,
+      "proficiency_level": 4,
+      "russian": "гарцевать",
+      "type": "Verb"
+    },
+    {
+      "english": "sign-board",
+      "history": "TFFF",
+      "last_encounter_time": 1567562686.43563,
+      "proficiency_level": 2,
+      "russian": "вывеска",
+      "type": "Noun"
+    },
+    {
+      "english": "the presence",
+      "history": "FFF",
+      "last_encounter_time": 1567562552.017388,
+      "proficiency_level": 1,
+      "russian": "присутствие",
+      "type": "Noun"
+    },
+    {
+      "english": "commotion",
+      "history": "TFF",
+      "last_encounter_time": 1567562705.448667,
+      "proficiency_level": 2,
+      "russian": "переполох",
+      "type": "Noun"
+    },
+    {
+      "english": "saggy",
+      "history": "TTTFF",
+      "last_encounter_time": 1567562458.0385163,
+      "proficiency_level": 4,
+      "russian": "отвисший",
+      "type": "Adjective"
+    },
+    {
+      "english": "definitely",
+      "history": "TTTTTTFFFFTTFFTFTFTTFFTFTFTTTTTTFFF",
+      "last_encounter_time": 1567562682.9996138,
+      "proficiency_level": 4,
+      "russian": "однозначно, определенно",
+      "type": "Adverb"
+    },
+    {
+      "english": "to do (intricate mvments, strange tricks, etc.)",
+      "history": "TTTFFF",
+      "last_encounter_time": 1567562661.606681,
+      "proficiency_level": 4,
+      "russian": "выделывать",
+      "type": "Verb"
+    },
+    {
+      "english": "pole, post, column",
+      "history": "TTTTTTT",
+      "last_encounter_time": 1567562493.7044563,
+      "proficiency_level": 4,
+      "russian": "столб",
+      "type": "Noun"
+    },
+    {
+      "english": "reluctance, unwillingness",
+      "history": "TTTFF",
+      "last_encounter_time": 1567562241.6495366,
+      "proficiency_level": 4,
+      "russian": "неохота",
+      "type": "Noun"
+    },
+    {
+      "english": "lust",
+      "history": "TTTTTF",
+      "last_encounter_time": 1567562610.233679,
+      "proficiency_level": 4,
+      "russian": "похоть, вожделание",
+      "type": "Noun"
+    },
+    {
+      "english": "hypocrite, prude",
+      "history": "TTFFF",
+      "last_encounter_time": 1567562727.6441674,
+      "proficiency_level": 3,
+      "russian": "ханжа",
+      "type": "Noun"
+    },
+    {
+      "english": "significant, considerable",
+      "history": "TFTTTF",
+      "last_encounter_time": 1567562595.5983174,
+      "proficiency_level": 4,
+      "russian": "значительный",
+      "type": "Adjective"
+    },
+    {
+      "english": "drink, beverage",
+      "history": "TTTT",
+      "last_encounter_time": 1567562521.3050473,
+      "proficiency_level": 4,
+      "russian": "напиток",
+      "type": "Noun"
+    },
+    {
+      "english": "cunning",
+      "history": "TTTTTTF",
+      "last_encounter_time": 1567562170.1881444,
+      "proficiency_level": 4,
+      "russian": "хитрый",
+      "type": "Adjective"
+    },
+    {
+      "english": "shade, tint, tone",
+      "history": "TTTTF",
+      "last_encounter_time": 1567562322.2545164,
+      "proficiency_level": 4,
+      "russian": "оттенок",
+      "type": "Noun"
+    },
+    {
+      "english": "really!, emotional (suprise, doubt, concern)",
+      "history": "TTTTTTTTTTT",
+      "last_encounter_time": 1567562120.7690551,
+      "proficiency_level": 4,
+      "russian": "неужели, неужто",
+      "type": "Particle"
+    },
+    {
+      "english": "attractive",
+      "history": "TTTT",
+      "last_encounter_time": 1567562433.7710783,
+      "proficiency_level": 4,
+      "russian": "привлекательный",
+      "type": "Adjective"
+    },
+    {
+      "english": "stage curtain",
+      "history": "TTTTT",
+      "last_encounter_time": 1567562653.3916352,
+      "proficiency_level": 4,
+      "russian": "занавес",
+      "type": "Noun"
+    },
+    {
+      "english": "celebrity",
+      "history": "TTFTTFF",
+      "last_encounter_time": 1567562670.0206773,
+      "proficiency_level": 4,
+      "russian": "знаменитость",
+      "type": "Noun"
+    },
+    {
+      "english": "slim, shapely",
+      "history": "TTTTF",
+      "last_encounter_time": 1567562256.9835355,
+      "proficiency_level": 4,
+      "russian": "стройный",
+      "type": "Adjective"
+    },
+    {
+      "english": "startling, astounding",
+      "history": "FF",
+      "last_encounter_time": 1567562252.9625304,
+      "proficiency_level": 1,
+      "russian": "поразительный",
+      "type": "Adjective"
+    },
+    {
+      "english": "meticulously, carefully",
+      "history": "TTTTF",
+      "last_encounter_time": 1567562674.8714523,
+      "proficiency_level": 4,
+      "russian": "тщательно",
+      "type": "Adverb"
+    },
+    {
+      "english": "pondering",
+      "history": "TTTTTF",
+      "last_encounter_time": 1567562317.5655317,
+      "proficiency_level": 4,
+      "russian": "обдумывание",
+      "type": "Noun"
+    },
+    {
+      "english": "atached",
+      "history": "TTTFT",
+      "last_encounter_time": 1567562312.7115147,
+      "proficiency_level": 4,
+      "russian": "приклепённый",
+      "type": "Adjective"
+    },
+    {
+      "english": "to attach",
+      "history": "TTTT",
+      "last_encounter_time": 1567562155.3434465,
+      "proficiency_level": 4,
+      "russian": "прикрепить",
+      "type": "Verb"
+    },
+    {
+      "english": "to cross (criss-cross)",
+      "history": "TFTTTF",
+      "last_encounter_time": 1567562429.556874,
+      "proficiency_level": 4,
+      "russian": "скрестить",
+      "type": "Verb"
+    },
+    {
+      "english": "relative (person)",
+      "history": "TTFTTTT",
+      "last_encounter_time": 1567562461.176528,
+      "proficiency_level": 4,
+      "russian": "родственник",
+      "type": "Noun"
+    },
+    {
+      "english": "to choke from smth",
+      "history": "FFTF",
+      "last_encounter_time": 1567562650.1936235,
+      "proficiency_level": 1,
+      "russian": "поперхнуться",
+      "type": "Verb"
+    },
+    {
+      "english": "to imagine, present, introduce",
+      "history": "TTTTTTTTFTF",
+      "last_encounter_time": 1564620780.18908,
+      "proficiency_level": 4,
+      "russian": "представить",
+      "type": "Verb"
+    },
+    {
+      "english": "dressed",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "одетый",
+      "type": "Adjective"
+    },
+    {
+      "english": "cardboard",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "картон",
+      "type": "Noun"
+    },
+    {
+      "english": "torso",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "торс",
+      "type": "Noun"
+    },
+    {
+      "english": "eyesight, vision",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "зрение",
+      "type": "Noun"
+    },
+    {
+      "english": "bad, stupid, wrong",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "дурной",
+      "type": "Adjective"
+    },
+    {
+      "english": "reluctantly, grudgingly",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "нехотя",
+      "type": "Adverb"
+    },
+    {
+      "english": "male horse",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "конь",
+      "type": "Noun"
+    },
+    {
+      "english": "almighty, omnipotent",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "всемогущий",
+      "type": "Adjective"
+    },
+    {
+      "english": "essense, point, core",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "суть",
+      "type": "Noun"
+    },
+    {
+      "english": "will, wish, desire",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "воля",
+      "type": "Noun"
+    },
+    {
+      "english": "jet (stream of smth)",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "струя",
+      "type": "Noun"
+    },
+    {
+      "english": "skillfull",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "умелие",
+      "type": "Noun"
+    },
+    {
+      "english": "skill",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "умение",
+      "type": "Noun"
+    },
+    {
+      "english": "to flow in streams",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "струиться",
+      "type": "Verb"
+    },
+    {
+      "english": "to weave, intertwine, convolve",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "сплетать",
+      "type": "Verb"
+    },
+    {
+      "english": "to turn around in circles",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "крутиться",
+      "type": "Verb"
+    },
+    {
+      "english": "full of life, activity, excitement",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "оживлённый",
+      "type": "Adjective"
+    },
+    {
+      "english": "strong noise with reverberations",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "грохоть",
+      "type": "Noun"
+    },
+    {
+      "english": "to open (same as открыть)",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "отворить",
+      "type": "Verb"
+    },
+    {
+      "english": "side street, allyway",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "переулок",
+      "type": "Noun"
+    },
+    {
+      "english": "to accompany, attend",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "сопутствовать",
+      "type": "Verb"
+    },
+    {
+      "english": "damage, loss",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "урон",
+      "type": "Noun"
+    },
+    {
+      "english": "to kill many",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "перебить",
+      "type": "Verb"
+    },
+    {
+      "english": "innocent",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "невинный",
+      "type": "Adjective"
+    },
+    {
+      "english": "to get injured, come to harm",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "пострадать",
+      "type": "Verb"
+    },
+    {
+      "english": "different, otherwise",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "иной",
+      "type": "Adjective"
+    },
+    {
+      "english": "crisis",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "кризис",
+      "type": "Noun"
+    },
+    {
+      "english": "to scour",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "обыскивать",
+      "type": "Verb"
+    },
+    {
+      "english": "paper cover for book",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "обложка",
+      "type": "Noun"
+    },
+    {
+      "english": "hurried, hasty",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "торопливый",
+      "type": "Adjective"
+    },
+    {
+      "english": "to trot",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "рысить",
+      "type": "Verb"
+    },
+    {
+      "english": "trot; lynx, bobcat",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "рысь",
+      "type": "Noun"
+    },
+    {
+      "english": "exile",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "изгнание",
+      "type": "Noun"
+    },
+    {
+      "english": "space, expanse, room",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "пространство",
+      "type": "Noun"
+    },
+    {
+      "english": "overdose",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "передозировка",
+      "type": "Noun"
+    },
+    {
+      "english": "to erect",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "воздвигать",
+      "type": "Verb"
+    },
+    {
+      "english": "rubber",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "резина",
+      "type": "Noun"
+    },
+    {
+      "english": "to provoke",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "спровоцировать",
+      "type": "Verb"
+    },
+    {
+      "english": "teenager",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "подросток",
+      "type": "Noun"
+    },
+    {
+      "english": "to pull out",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "вытаскивать",
+      "type": "Verb"
+    },
+    {
+      "english": "old-fashioned",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "старомодный",
+      "type": "Adjective"
+    },
+    {
+      "english": "to sympathize",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "сочуствовать",
+      "type": "Verb"
+    },
+    {
+      "english": "dissolute, lecherous, lewd",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "развратный",
+      "type": "Adjective"
+    },
+    {
+      "english": "pride",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "гордость",
+      "type": "Noun"
+    },
+    {
+      "english": "number, quantity",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "число",
+      "type": "Noun"
+    },
+    {
+      "english": "flattering",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "лестный",
+      "type": "Adjective"
+    },
+    {
+      "english": "regarding, concering, over, on",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "касательно",
+      "type": "Preposition"
+    },
+    {
+      "english": "shame",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "стыд",
+      "type": "Noun"
+    },
+    {
+      "english": "to get stuck",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "застрять",
+      "type": "Verb"
+    },
+    {
+      "english": "throat",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "горло",
+      "type": "Noun"
+    },
+    {
+      "english": "to trot",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "порысить",
       "type": "Verb"
     },
     {
@@ -24138,16 +24930,16 @@
     },
     {
       "english": "decent",
-      "history": "TTFTTTTTTTTF",
-      "last_encounter_time": 1566673091.0097494,
+      "history": "TTTFTTTTTTTTF",
+      "last_encounter_time": 1567458738.4596415,
       "proficiency_level": 4,
       "russian": "приличный",
       "type": "Adjective"
     },
     {
       "english": "fair, hefty, significant in quantity",
-      "history": "F",
-      "last_encounter_time": 1566753339.15279,
+      "history": "FF",
+      "last_encounter_time": 1567458776.0040364,
       "proficiency_level": 1,
       "russian": "изрядный",
       "type": "Adjective"
@@ -24162,33 +24954,33 @@
     },
     {
       "english": "scenic, picturesque",
-      "history": "F",
-      "last_encounter_time": 1566673109.7422693,
+      "history": "FF",
+      "last_encounter_time": 1567458634.425205,
       "proficiency_level": 1,
       "russian": "живописный",
       "type": "Adjective"
     },
     {
       "english": "free (without pay)",
-      "history": "",
-      "last_encounter_time": null,
-      "proficiency_level": 0,
+      "history": "T",
+      "last_encounter_time": 1567458615.9087946,
+      "proficiency_level": 3,
       "russian": "бесплатный",
       "type": "Adjective"
     },
     {
       "english": "In short, ...",
-      "history": "F",
-      "last_encounter_time": 1566673054.8156435,
+      "history": "FF",
+      "last_encounter_time": 1567458696.5537705,
       "proficiency_level": 1,
       "russian": "Вкратце, ...",
       "type": "Adverb"
     },
     {
       "english": "calling, vocation",
-      "history": "TTFTTTTFTTTTF",
-      "last_encounter_time": 1566672752.1215963,
-      "proficiency_level": 4,
+      "history": "FTTFTTTTFTTTTF",
+      "last_encounter_time": 1567458686.312496,
+      "proficiency_level": 3,
       "russian": "призвание",
       "type": "Noun"
     },
@@ -24218,17 +25010,17 @@
     },
     {
       "english": "samplt",
-      "history": "FTT",
-      "last_encounter_time": 1566673008.8441262,
+      "history": "TFFTT",
+      "last_encounter_time": 1567458761.212842,
       "proficiency_level": 3,
       "russian": "образец",
       "type": "Noun"
     },
     {
       "english": "a stop along the way",
-      "history": "TTF",
-      "last_encounter_time": 1566672696.7987459,
-      "proficiency_level": 3,
+      "history": "FTTF",
+      "last_encounter_time": 1567458715.2340398,
+      "proficiency_level": 2,
       "russian": "привал",
       "type": "Noun"
     },
@@ -24242,25 +25034,25 @@
     },
     {
       "english": "a complete mess",
-      "history": "FT",
-      "last_encounter_time": 1566753355.4606123,
-      "proficiency_level": 2,
+      "history": "FFT",
+      "last_encounter_time": 1567458711.492001,
+      "proficiency_level": 1,
       "russian": "бардак",
       "type": "Noun"
     },
     {
       "english": "conquest",
-      "history": "FF",
-      "last_encounter_time": 1566672984.3616853,
-      "proficiency_level": 1,
+      "history": "TFF",
+      "last_encounter_time": 1567458704.0050516,
+      "proficiency_level": 2,
       "russian": "завоевание",
       "type": "Noun"
     },
     {
       "english": "reward",
-      "history": "F",
-      "last_encounter_time": 1566673195.0935605,
-      "proficiency_level": 1,
+      "history": "TTF",
+      "last_encounter_time": 1567458764.013688,
+      "proficiency_level": 3,
       "russian": "награда",
       "type": "Noun"
     },
@@ -24274,8 +25066,8 @@
     },
     {
       "english": "moron",
-      "history": "F",
-      "last_encounter_time": 1566753344.6992095,
+      "history": "FF",
+      "last_encounter_time": 1567458742.904482,
       "proficiency_level": 1,
       "russian": "дебил",
       "type": "Noun"
@@ -24298,41 +25090,41 @@
     },
     {
       "english": "devotion, dedication",
-      "history": "TF",
-      "last_encounter_time": 1566673047.4325895,
-      "proficiency_level": 2,
+      "history": "FTF",
+      "last_encounter_time": 1567458658.9490771,
+      "proficiency_level": 1,
       "russian": "преданность",
       "type": "Noun"
     },
     {
       "english": "roller coaster",
-      "history": "",
-      "last_encounter_time": null,
-      "proficiency_level": 0,
+      "history": "T",
+      "last_encounter_time": 1567458718.4243279,
+      "proficiency_level": 3,
       "russian": "американский горки",
       "type": "Noun"
     },
     {
       "english": "feeling, sensation",
-      "history": "",
-      "last_encounter_time": null,
-      "proficiency_level": 0,
+      "history": "F",
+      "last_encounter_time": 1567458681.755823,
+      "proficiency_level": 1,
       "russian": "ощущение",
       "type": "Noun"
     },
     {
       "english": "science",
-      "history": "",
-      "last_encounter_time": null,
-      "proficiency_level": 0,
+      "history": "F",
+      "last_encounter_time": 1567458700.2588723,
+      "proficiency_level": 1,
       "russian": "наука",
       "type": "Noun"
     },
     {
       "english": "link, reference",
-      "history": "",
-      "last_encounter_time": null,
-      "proficiency_level": 0,
+      "history": "T",
+      "last_encounter_time": 1567458661.7043831,
+      "proficiency_level": 3,
       "russian": "ссылка",
       "type": "Noun"
     },
@@ -24370,17 +25162,17 @@
     },
     {
       "english": "to look at in pleasure",
-      "history": "TFFTT",
-      "last_encounter_time": 1566672851.9809587,
-      "proficiency_level": 3,
+      "history": "TTFFTT",
+      "last_encounter_time": 1567458672.8333364,
+      "proficiency_level": 4,
       "russian": "любоваться",
       "type": "Verb"
     },
     {
       "english": "to stare",
-      "history": "FFTT",
-      "last_encounter_time": 1566673071.4038255,
-      "proficiency_level": 2,
+      "history": "TFFTT",
+      "last_encounter_time": 1567458667.4504616,
+      "proficiency_level": 3,
       "russian": "пялиться",
       "type": "Verb"
     },
@@ -24410,9 +25202,9 @@
     },
     {
       "english": "to bury, tomb, lay to rest",
-      "history": "TTF",
-      "last_encounter_time": 1566672813.1028864,
-      "proficiency_level": 3,
+      "history": "FTTF",
+      "last_encounter_time": 1567458676.8040738,
+      "proficiency_level": 2,
       "russian": "хоронить",
       "type": "Verb"
     },
@@ -24450,16 +25242,16 @@
     },
     {
       "english": "to welcome",
-      "history": "T",
-      "last_encounter_time": 1566753321.933973,
-      "proficiency_level": 3,
+      "history": "TT",
+      "last_encounter_time": 1567458627.6870267,
+      "proficiency_level": 4,
       "russian": "пожаловать",
       "type": "Verb"
     },
     {
       "english": "to miss due to absance; to feel bored",
-      "history": "TT",
-      "last_encounter_time": 1566672763.9004905,
+      "history": "TTT",
+      "last_encounter_time": 1567458748.0188823,
       "proficiency_level": 4,
       "russian": "скучать",
       "type": "Verb"
@@ -24482,17 +25274,17 @@
     },
     {
       "english": "to tear up (teardrops)",
-      "history": "",
-      "last_encounter_time": null,
-      "proficiency_level": 0,
+      "history": "F",
+      "last_encounter_time": 1567458637.443373,
+      "proficiency_level": 1,
       "russian": "дралить",
       "type": "Verb"
     },
     {
       "english": "to dial",
-      "history": "",
-      "last_encounter_time": null,
-      "proficiency_level": 0,
+      "history": "F",
+      "last_encounter_time": 1567458772.5204003,
+      "proficiency_level": 1,
       "russian": "набрать",
       "type": "Verb"
     },
@@ -24530,17 +25322,17 @@
     },
     {
       "english": "to fall into the dirt face first",
-      "history": "TT",
-      "last_encounter_time": 1566673094.0161407,
+      "history": "TTT",
+      "last_encounter_time": 1567458756.7496817,
       "proficiency_level": 4,
       "russian": "ударить в грязь лицом",
       "type": "Phrase"
     },
     {
       "english": "hell knows where",
-      "history": "TF",
-      "last_encounter_time": 1566673062.578379,
-      "proficiency_level": 2,
+      "history": "TTF",
+      "last_encounter_time": 1567458643.854053,
+      "proficiency_level": 3,
       "russian": "у чёрта на куличиках",
       "type": "Phrase"
     },
@@ -24554,9 +25346,9 @@
     },
     {
       "english": "Dont move!",
-      "history": "TTF",
-      "last_encounter_time": 1566672942.4599128,
-      "proficiency_level": 3,
+      "history": "FTTF",
+      "last_encounter_time": 1567458691.8370628,
+      "proficiency_level": 2,
       "russian": "ни с места",
       "type": "Phrase"
     },
@@ -24570,19 +25362,35 @@
     },
     {
       "english": "as you please",
-      "history": "",
-      "last_encounter_time": null,
-      "proficiency_level": 0,
+      "history": "F",
+      "last_encounter_time": 1567458753.5368214,
+      "proficiency_level": 1,
       "russian": "как тебе угодно",
       "type": "Phrase"
     },
     {
-      "english": "chair",
-      "history": "TTTTTTTTTTTTTTT",
-      "last_encounter_time": 1566760319.333797,
+      "english": "to become wiser, to manage to",
+      "history": "TTTTTTTTTF",
+      "last_encounter_time": 1567562672.447667,
       "proficiency_level": 4,
-      "russian": "стул",
-      "type": "Noun"
+      "russian": "умудриться",
+      "type": "Verb"
+    },
+    {
+      "english": "to sip",
+      "history": "TTTFF",
+      "last_encounter_time": 1567562615.3150926,
+      "proficiency_level": 4,
+      "russian": "потягивать",
+      "type": "Verb"
+    },
+    {
+      "english": "to take a seat/place",
+      "history": "TTTTT",
+      "last_encounter_time": 1567562408.6494045,
+      "proficiency_level": 4,
+      "russian": "занять место",
+      "type": "Adverb"
     }
   ],
   "metrics": [
@@ -34163,34 +34971,34 @@
     },
     {
       "all_metrics": {
-        "history_score": 2249.6937738969427,
+        "history_score": 2251.716912425834,
         "proficiency_counts": [
+          5,
+          190,
           13,
-          185,
-          14,
-          149,
-          2712
+          143,
+          2722
         ]
       },
       "card_type_metrics": {
         "Adjective": {
-          "history_score": 351.8936951040886,
+          "history_score": 352.2349555558643,
           "proficiency_counts": [
-            2,
+            1,
             7,
             5,
-            25,
-            402
+            23,
+            405
           ]
         },
         "Adverb": {
-          "history_score": 124.29160365680896,
+          "history_score": 124.30507768278298,
           "proficiency_counts": [
             0,
             11,
             0,
-            1,
-            164
+            0,
+            165
           ]
         },
         "Conjunction": {
@@ -34214,17 +35022,17 @@
           ]
         },
         "Noun": {
-          "history_score": 846.8683256177704,
+          "history_score": 847.8682625380059,
           "proficiency_counts": [
+            1,
+            148,
             5,
-            146,
-            5,
-            91,
-            1052
+            94,
+            1051
           ]
         },
         "Other": {
-          "history_score": 28.064262126762124,
+          "history_score": 29.114262126762124,
           "proficiency_counts": [
             0,
             0,
@@ -34244,10 +35052,10 @@
           ]
         },
         "Phrase": {
-          "history_score": 69.61413611972822,
+          "history_score": 69.868485038783,
           "proficiency_counts": [
-            2,
-            3,
+            1,
+            4,
             2,
             5,
             86
@@ -34274,18 +35082,143 @@
           ]
         },
         "Verb": {
-          "history_score": 739.6071877797242,
+          "history_score": 738.9713059915791,
           "proficiency_counts": [
-            4,
-            6,
             2,
-            22,
-            853
+            8,
+            1,
+            16,
+            860
           ]
         }
       },
       "date": "2019/09/02"
+    },
+    {
+      "all_metrics": {
+        "history_score": 2277.9433499281367,
+        "proficiency_counts": [
+          55,
+          199,
+          16,
+          145,
+          2759
+        ]
+      },
+      "card_type_metrics": {
+        "Adjective": {
+          "history_score": 357.03332156893623,
+          "proficiency_counts": [
+            11,
+            8,
+            5,
+            23,
+            413
+          ]
+        },
+        "Adverb": {
+          "history_score": 126.01251520071989,
+          "proficiency_counts": [
+            1,
+            11,
+            0,
+            0,
+            169
+          ]
+        },
+        "Conjunction": {
+          "history_score": 20.22896825396825,
+          "proficiency_counts": [
+            0,
+            12,
+            0,
+            2,
+            37
+          ]
+        },
+        "Interjection": {
+          "history_score": 9.53968253968254,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            0,
+            11
+          ]
+        },
+        "Noun": {
+          "history_score": 858.4993312134827,
+          "proficiency_counts": [
+            25,
+            150,
+            7,
+            95,
+            1065
+          ]
+        },
+        "Other": {
+          "history_score": 29.114262126762124,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            1,
+            36
+          ]
+        },
+        "Particle": {
+          "history_score": 5.25,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            0,
+            6
+          ]
+        },
+        "Phrase": {
+          "history_score": 70.368485038783,
+          "proficiency_counts": [
+            1,
+            4,
+            2,
+            5,
+            87
+          ]
+        },
+        "Preposition": {
+          "history_score": 34.62757936507936,
+          "proficiency_counts": [
+            1,
+            0,
+            0,
+            2,
+            40
+          ]
+        },
+        "Pronoun": {
+          "history_score": 20.375,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            0,
+            25
+          ]
+        },
+        "Verb": {
+          "history_score": 746.894204620728,
+          "proficiency_counts": [
+            16,
+            14,
+            2,
+            17,
+            870
+          ]
+        }
+      },
+      "date": "2019/09/03"
     }
   ],
-  "save_time": 1567446623.3709779
+  "save_time": 1567562755.5679827
 }

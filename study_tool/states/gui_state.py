@@ -70,6 +70,7 @@ class GUIState(State):
         if (pos.x >= rect.left and pos.y >= rect.top and
             pos.x < rect.right and pos.y < rect.bottom):
             if layout:
+                pos += layout.get_offset()
                 for child in layout.get_children():
                     result = self.get_widget_at_point(child, pos)
                     if result:
@@ -87,6 +88,7 @@ class GUIState(State):
             if isinstance(item, widgets.Widget):
                 yield item
             if layout:
+                pos += layout.get_offset()
                 for child in layout.get_children():
                     for subitem in self.iter_widgets_at_point(child, pos):
                         yield subitem

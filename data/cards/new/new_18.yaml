@@ -65,5 +65,5 @@ card_set:
     - [phrase, ух ты!, 'wow, woah!']
     - [phrase, где бы ты не был, wherever you are]
     - [particle, разве, 'really, (suprise, doubt, concern)']
-    - [particle, неужели, 'really!, emotional (suprise, doubt, concern)']
+    - [particle, 'неужели, неужто', 'really!, emotional (suprise, doubt, concern)']
     - [preposition, насчёт, 'concerning, about']

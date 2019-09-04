@@ -1,6 +1,7 @@
 import pygame
 import re
 import os
+import traceback
 from cmg import gui
 from cmg.application import Application
 from cmg.input import Keys
@@ -9,7 +10,6 @@ from cmg.event import Event
 from cmg.color import Color
 from cmg.color import Colors
 from cmg.widgets.widget import Widget
-
 
 class TextEdit(Widget):
     def __init__(self,
@@ -54,6 +54,9 @@ class TextEdit(Widget):
         self.cursor_switch_ms = 500  # /|\
         self.cursor_ms_counter = 0
         self.clock = pygame.time.Clock()
+
+    def set_background_text(self, text: str):
+        self.__background_text = text
 
     def set_autocomplete_source(self, autocomplete_source):
         self.__autocomplete_source = autocomplete_source
@@ -153,21 +156,6 @@ class TextEdit(Widget):
             if key == Keys.K_INSERT:
                 self.paste()
 
-        if KeyMods.LSHIFT in mod:
-            if key == Keys.K_RIGHT:
-                self.start_selection()
-                self.__cursor_position = min(
-                    self.__cursor_position + 1, len(self.__text))
-            elif key == Keys.K_LEFT:
-                self.start_selection()
-                self.__cursor_position = max(self.__cursor_position - 1, 0)
-            elif key == Keys.K_END:
-                self.start_selection()
-                self.__cursor_position = len(self.__text)
-            elif key == Keys.K_HOME:
-                self.start_selection()
-                self.__cursor_position = 0
-
         elif KeyMods.LCTRL in mod:
             if key == Keys.K_V:
                 self.paste()
@@ -189,17 +177,29 @@ class TextEdit(Widget):
             self.__text = (self.__text[:self.__cursor_position] +
                            self.__text[self.__cursor_position + 1:])
         elif key == Keys.K_RIGHT:
-            self.stop_selecting()
+            if KeyMods.LSHIFT in mod:
+                self.start_selection()
+            else:
+                self.stop_selecting()
             self.__cursor_position = min(
                 self.__cursor_position + 1, len(self.__text))
         elif key == Keys.K_LEFT:
-            self.stop_selecting()
+            if KeyMods.LSHIFT in mod:
+                self.start_selection()
+            else:
+                self.stop_selecting()
             self.__cursor_position = max(self.__cursor_position - 1, 0)
         elif key == Keys.K_END:
-            self.stop_selecting()
+            if KeyMods.LSHIFT in mod:
+                self.start_selection()
+            else:
+                self.stop_selecting()
             self.__cursor_position = len(self.__text)
         elif key == Keys.K_HOME:
-            self.stop_selecting()
+            if KeyMods.LSHIFT in mod:
+                self.start_selection()
+            else:
+                self.stop_selecting()
             self.__cursor_position = 0
         elif len(text) > 0:
             self.delete_selection()
@@ -255,10 +255,13 @@ class TextEdit(Widget):
         self.delete_selection()
 
     def paste(self):
-        self.delete_selection()
-        text = pygame.scrap.get(pygame.SCRAP_TEXT)
-        if text:
-            self.insert_text(text[:-1].decode())
+        try:
+            self.delete_selection()
+            text = pygame.scrap.get(pygame.SCRAP_TEXT)
+            if text:
+                self.insert_text(text[:-1].decode())
+        except Exception:
+            traceback.print_exc()
 
     def on_key_released(self, key, mod):
         # If none exist, create counter for that key:

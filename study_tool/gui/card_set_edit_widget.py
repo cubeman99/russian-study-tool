@@ -4,6 +4,7 @@ import pygame
 import random
 import re
 import time
+import traceback
 from cmg import color
 from cmg.color import Color, Colors
 from cmg import math
@@ -35,6 +36,7 @@ class CardRow(widgets.Widget):
         self.modified = Event()
         self.__card_set = card_set
         self.__is_new_card = True
+        self.__card_match = None
         
         # Create widgets
         self.button_edit = widgets.Button("E")
@@ -61,6 +63,7 @@ class CardRow(widgets.Widget):
         self.box_russian.text_edited.connect(self.__on_russian_changed)
         self.box_english.text_edited.connect(self.__on_english_changed)
         self.box_type.text_edited.connect(self.__on_type_changed)
+        self.box_russian.return_pressed.connect(self.__auto_complete)
 
         self.set_card(card)
 
@@ -141,6 +144,10 @@ class CardRow(widgets.Widget):
         return (card_type != self.card.get_word_type() or
                 repr(russian) != repr(self.card.get_russian()) or
                 repr(english) != repr(self.card.get_english()))
+
+    def __auto_complete(self):
+        if self.__card_match:
+            self.set_card(self.__card_match)
     
     def __on_russian_changed(self):
         # Convert 'ээ' to an accent mark (for when typing in russian mode)
@@ -174,6 +181,37 @@ class CardRow(widgets.Widget):
         self.box_russian.set_background_color(bg_color)
         self.box_english.set_background_color(bg_color)
         self.modified.emit()
+        self.__refresh_matches()
+        
+    def __refresh_matches(self):
+        word_type = self.get_word_type()
+        russian = self.get_russian()
+        english = self.get_english()
+
+        match = None
+        if not repr(english):
+            for index, card in enumerate(self.card_database.iter_cards()):
+                if self.matches(card, card_type=word_type, russian=russian):
+                    match = card
+                    break
+        
+        if match is not None:
+            self.box_english.set_background_text(repr(match.get_english()))
+        else:
+            self.box_english.set_background_text(None)
+        self.__card_match = match
+
+    def matches(self, card, card_type, russian, english=None):
+        russian = russian.text.lower() if russian else None
+        english = english.text.lower() if english else None
+        if card_type is not None and card_type != card.get_word_type():
+            return False
+        if russian and russian != card.get_russian().text.lower():
+            return False
+        if english and english != card.get_english().text.lower():
+            return False
+        return card_type is not None or russian or english
+
 
 class CardSetEditWidget(widgets.Widget):
     def __init__(self, card_set: CardSet, application):
@@ -281,63 +319,80 @@ class CardSetEditWidget(widgets.Widget):
 
     def save(self):
         """Save the card set to file."""
-        modified_cards = False
-        modified_set = False
-        key_change_cards = []
+        try:
+            modified_cards = False
+            modified_set = False
+            key_change_cards = []
 
-        cards = []
-        for row in self.rows:
-            card = row.card
-            if row.is_null_card():
-                continue
-            cards.append(card)
-            old_key = card.get_key()
-            row.apply()
-            new_key = card.get_key()
-            if not self.__card_database.has_card(card):
-                # Create new card
-                Config.logger.info("Creating card: {}".format(card))
-                card.generate_word_name()
-                self.__card_database.add_card(card)
-                modified_cards = True
-                modified_set = True
-            else:
-                if row.is_new_in_set():
-                    Config.logger.info("Adding card to set: {}".format(card))
-                    modified_set = True
-                if new_key != old_key:
-                    Config.logger.info("Applying changes to card: {}".format(card))
-                    # Check for a key change
-                    modified_cards = True
+            cards = []
+            for row in self.rows:
+                card = row.card
+                if row.is_null_card():
+                    continue
+                cards.append(card)
+                old_key = card.get_key()
+                row.apply()
+                new_key = card.get_key()
+                if not self.__card_database.has_card(card):
+                    # Create new card
+                    Config.logger.info("Creating card: {}".format(card))
                     card.generate_word_name()
-                    self.__card_database.apply_card_key_change(card)
-                    key_change_cards.append(card)
+                    self.__card_database.add_card(card)
+                    modified_cards = True
+                    modified_set = True
+                else:
+                    if row.is_new_in_set():
+                        Config.logger.info("Adding card to set: {}".format(card))
+                        modified_set = True
+                    if new_key != old_key:
+                        Config.logger.info("Applying changes to card: {}".format(card))
+                        # Check for a key change
+                        modified_cards = True
+                        card.generate_word_name()
+                        self.__card_database.apply_card_key_change(card)
+                        key_change_cards.append(card)
+        except Exception:
+            traceback.print_exc()
+            return
 
-        self.__card_set.cards = cards
-        self.__card_set.name = AccentedText(self.__box_name.get_text())
+        try:
+            self.__card_set.cards = cards
+            self.__card_set.name = AccentedText(self.__box_name.get_text())
 
-        # Save card database
-        Config.logger.info("Saving card data")
-        self.__application.save_card_data()
+            # Save card database
+            Config.logger.info("Saving card data")
+            self.__application.save_card_data()
+        except Exception:
+            traceback.print_exc()
+            return
 
         # Save study data and relevant card sets if there is a key change
-        if key_change_cards:
-            Config.logger.info("Saving study data")
-            self.__application.save_study_data()
-            for card_set in self.__application.iter_card_sets():
-                if any(card_set.has_card(x) for x in key_change_cards):
-                    Config.logger.info("Saving card set data for '{}'"
-                                        .format(card_set.get_name()))
-                    assert not card_set.is_fixed_card_set()
-                    self.__application.save_card_set(card_set)
+        try:
+            if key_change_cards:
+                Config.logger.info("Saving study data")
+                self.__application.save_study_data()
+                for card_set in self.__application.iter_card_sets():
+                    if any(card_set.has_card(x) for x in key_change_cards):
+                        Config.logger.info("Saving card set data for '{}'"
+                                            .format(card_set.get_name()))
+                        assert not card_set.is_fixed_card_set()
+                        self.__application.save_card_set(card_set)
+        except Exception:
+            traceback.print_exc()
 
         # Save the card set definition
-        if modified_cards or modified_set:
-            self.__application.save_card_set(self.__card_set)
+        try:
+            if modified_cards or modified_set:
+                self.__application.save_card_set(self.__card_set)
+        except Exception:
+            traceback.print_exc()
            
         # Refresh rows
-        for row in self.rows:
-            row.set_card(row.card)
+        try:
+            for row in self.rows:
+                row.set_card(row.card)
+        except Exception:
+            traceback.print_exc()
 
     def select_card_set(self, card_set):
         self.__card_set = card_set

@@ -997,7 +997,6 @@ cards:
 - {en: specifically, ru: конкре'тно, type: adverb}
 - {en: 'perfect, excellent', ru: отли'чно, type: adverb}
 - {en: correct, ru: пра'вильно, type: adverb}
-- {en: definitely, ru: однозна'чно, type: adverb}
 - {en: better, ru: лу'чше, type: adverb}
 - {en: worse, ru: ху'же, type: adverb}
 - {en: more often, ru: ча'ще, type: adverb}
@@ -1398,7 +1397,6 @@ cards:
 - {attrs: [m], en: character, ru: персона'ж, type: noun}
 - {attrs: [m], en: 'overview, review, survey', ru: обзо'р, type: noun}
 - {attrs: [f], en: reaction, ru: реа'кция, type: noun}
-- {attrs: [f], en: 'essense, point, core', ru: су'ть, type: noun}
 - {attrs: [f], en: culture, ru: культу'ра, type: noun}
 - {attrs: [n], en: generation, ru: поколе'ние, type: noun}
 - {en: laziness, ru: ле'нь, type: noun}
@@ -2835,7 +2833,6 @@ cards:
 - {attrs: [pf, verb.suffix.nu], en: to lightly push, ru: подтолкну'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: 'to cross, traverse', ru: пересека'ть, type: verb}
 - {attrs: [pf, verb.suffix.i], en: 'to hurt, damage', ru: повреди'ть, type: verb}
-- {attrs: [pf, verb.suffix.i], en: 'to represent, present', ru: предста'вить, type: verb}
 - {en: in turn, ru: в свою' о'чередь, type: phrase}
 - {en: 'really, indeed', ru: и впря'мь, type: phrase}
 - {en: carelessly, ru: беспе'чно, type: adverb}
@@ -2970,7 +2967,6 @@ cards:
 - {en: 'wow, woah!', ru: ух ты!, type: phrase}
 - {en: wherever you are, ru: где бы ты не был, type: phrase}
 - {en: 'really, (suprise, doubt, concern)', ru: ра'зве, type: particle}
-- {en: 'really!, emotional (suprise, doubt, concern)', ru: неуже'ли, type: particle}
 - {en: 'concerning, about', ru: насчёт, type: preposition}
 - {attrs: [m], en: table, ru: сто'л, type: noun}
 - {attrs: [impf], en: 'to call, beckon; to hand signal', ru: мани'ть, type: verb}
@@ -3115,3 +3111,117 @@ cards:
 - {en: '... tend to be ...', ru: '... скло''нны бы''ть ...', type: phrase}
 - {en: 'to enjoy, relish, delight', ru: наслажда'ть, type: verb}
 - {attrs: [m], en: chair, ru: сту'л, type: noun}
+- {en: obscene, ru: непристо'йный, type: adjective}
+- {attrs: [impf, verb.suffix.ai], en: to comb, ru: расчёсывать, type: verb}
+- {en: skipping, ru: вприпры'жку, type: adverb}
+- {attrs: [pf, verb.suffix.a3], en: to get involved; to blend in, ru: ввяза'ться, type: verb}
+- {attrs: [m], en: list, ru: спи'сок, type: noun}
+- {attrs: [pf, verb.suffix.i], en: to notify, ru: уве'домить, type: verb}
+- {attrs: [f], en: superpower, ru: сверхспосо'бность, type: noun}
+- {en: to grit your teeth, ru: скрип'еть зуба'ми, type: phrase}
+- {attrs: [n], en: relief, ru: облегче'ние, type: noun}
+- {attrs: [pf], en: to prefer, ru: предпоче'сть, type: verb}
+- {en: 'the rest, other', ru: про'чий, type: adjective}
+- {attrs: [impf, verb.suffix.ai, impf, verb.suffix.ai], en: 'to guess, have a hunch',
+  ru: дога'дываться, type: verb}
+- {attrs: [impf, verb.suffix.ai, impf, verb.suffix.ai], en: to fill smth, ru: наполня'ть,
+  type: verb}
+- {attrs: [impf, verb.suffix.ai], en: 'to supply, feed', ru: пита'ть, type: verb}
+- {attrs: [m], en: 'age, years', ru: во'зраст, type: noun}
+- {attrs: [f], en: 'setting, installation, fitting', ru: устано'вка, type: noun}
+- {attrs: [n], en: pressure, ru: давле'ние, type: noun}
+- {attrs: [pf, verb.suffix.i, pf, verb.suffix.i], en: to squeeze out, ru: вы'давить,
+  type: verb}
+- {attrs: [impf, verb.suffix.ai, impf, verb.suffix.ai], en: to drag out, ru: вывола'кивать,
+  type: verb}
+- {attrs: [n], en: asperation, ru: устремле'ние, type: noun}
+- {attrs: [pf, verb.suffix.i, pf, verb.suffix.i], en: 'to settle, put in order', ru: ула'дить,
+  type: verb}
+- {en: 'far away, in the distance', ru: вдали', type: adverb}
+- {en: to prance, ru: гарцева'ть, type: verb}
+- {attrs: [f], en: sign-board, ru: вы'веска, type: noun}
+- {attrs: [n], en: the presence, ru: прису'тствие, type: noun}
+- {attrs: [m], en: commotion, ru: переполо'х, type: noun}
+- {en: saggy, ru: отви'сший, type: adjective}
+- {en: definitely, ru: 'однозна''чно, определе''нно', type: adverb}
+- {attrs: [impf, verb.suffix.ai], en: 'to do (intricate mvments, strange tricks, etc.)',
+  ru: выде'лывать, type: verb}
+- {attrs: [m], en: 'pole, post, column', ru: сто'лб, type: noun}
+- {en: 'reluctance, unwillingness', ru: неохо'та, type: noun}
+- {en: lust, ru: 'похо''ть, вождела''ние', type: noun}
+- {attrs: [f], en: 'hypocrite, prude', ru: ханжа', type: noun}
+- {en: 'significant, considerable', ru: значи'тельный, type: adjective}
+- {attrs: [m], en: 'drink, beverage', ru: напи'ток, type: noun}
+- {en: cunning, ru: хи'трый, type: adjective}
+- {attrs: [m], en: 'shade, tint, tone', ru: отте'нок, type: noun}
+- {en: 'really!, emotional (suprise, doubt, concern)', ru: 'неуже''ли, неу''жто', type: particle}
+- {en: attractive, ru: привлека'тельный, type: adjective}
+- {attrs: [m], en: stage curtain, ru: за'навес, type: noun}
+- {en: celebrity, ru: знамени'тость, type: noun}
+- {en: 'slim, shapely', ru: стро'йный, type: adjective}
+- {en: 'startling, astounding', ru: порази'тельный, type: adjective}
+- {en: 'meticulously, carefully', ru: тща'тельно, type: adverb}
+- {attrs: [n], en: pondering, ru: обду'мывание, type: noun}
+- {en: atached, ru: приклепённый, type: adjective}
+- {attrs: [pf, verb.suffix.i], en: to attach, ru: прикрепи'ть, type: verb}
+- {attrs: [pf, verb.suffix.i], en: to cross (criss-cross), ru: скрести'ть, type: verb}
+- {attrs: [m], en: relative (person), ru: ро'дственник, type: noun}
+- {attrs: [pf, verb.suffix.nu], en: to choke from smth, ru: поперхну'ться, type: verb}
+- {attrs: [pf, verb.suffix.i], en: 'to imagine, present, introduce', ru: предста'вить,
+  type: verb}
+- {en: dressed, ru: оде'тый, type: adjective}
+- {attrs: [m], en: cardboard, ru: карто'н, type: noun}
+- {attrs: [m], en: torso, ru: то'рс, type: noun}
+- {attrs: [n], en: 'eyesight, vision', ru: зре'ние, type: noun}
+- {en: 'bad, stupid, wrong', ru: ду'рной, type: adjective}
+- {en: 'reluctantly, grudgingly', ru: нехотя', type: adverb}
+- {attrs: [m], en: male horse, ru: ко'нь, type: noun}
+- {en: 'almighty, omnipotent', ru: всемогу'щий, type: adjective}
+- {attrs: [f], en: 'essense, point, core', ru: су'ть, type: noun}
+- {en: 'will, wish, desire', ru: во'ля, type: noun}
+- {en: jet (stream of smth), ru: струя, type: noun}
+- {en: skillfull, ru: уме'лие, type: noun}
+- {en: skill, ru: уме'ние, type: noun}
+- {en: to flow in streams, ru: струи'ться, type: verb}
+- {en: 'to weave, intertwine, convolve', ru: сплета'ть, type: verb}
+- {en: to turn around in circles, ru: крути'ться, type: verb}
+- {en: 'full of life, activity, excitement', ru: оживлённый, type: adjective}
+- {en: strong noise with reverberations, ru: гро'хоть, type: noun}
+- {en: to open (same as откры'ть), ru: отвори'ть, type: verb}
+- {en: 'side street, allyway', ru: переу'лок, type: noun}
+- {en: 'to accompany, attend', ru: сопу'тствовать, type: verb}
+- {en: 'damage, loss', ru: уро'н, type: noun}
+- {en: to kill many, ru: переби'ть, type: verb}
+- {en: innocent, ru: неви'нный, type: adjective}
+- {en: 'to get injured, come to harm', ru: пострада'ть, type: verb}
+- {en: 'different, otherwise', ru: ино'й, type: adjective}
+- {en: crisis, ru: кри'зис, type: noun}
+- {en: to scour, ru: обы'скивать, type: verb}
+- {en: paper cover for book, ru: обло'жка, type: noun}
+- {en: 'hurried, hasty', ru: торопли'вый, type: adjective}
+- {attrs: [impf], en: to trot, ru: рыси'ть, type: verb}
+- {en: 'trot; lynx, bobcat', ru: ры'сь, type: noun}
+- {en: exile, ru: изгна'ние, type: noun}
+- {en: 'space, expanse, room', ru: простра'нство, type: noun}
+- {en: overdose, ru: передозиро'вка, type: noun}
+- {en: to erect, ru: воздвига'ть, type: verb}
+- {en: rubber, ru: рези'на, type: noun}
+- {attrs: [pf, verb.suffix.ova], en: to provoke, ru: спровоци'ровать, type: verb}
+- {attrs: [m], en: teenager, ru: подро'сток, type: noun}
+- {attrs: [impf, verb.suffix.ai], en: to pull out, ru: выта'скивать, type: verb}
+- {en: old-fashioned, ru: старомо'дный, type: adjective}
+- {en: to sympathize, ru: сочу'ствовать, type: verb}
+- {en: 'dissolute, lecherous, lewd', ru: развра'тный, type: adjective}
+- {attrs: [f], en: pride, ru: го'рдость, type: noun}
+- {attrs: [n], en: 'number, quantity', ru: число', type: noun}
+- {en: flattering, ru: ле'стный, type: adjective}
+- {en: 'regarding, concering, over, on', ru: касательно, type: preposition}
+- {attrs: [m], en: shame, ru: сты'д, type: noun}
+- {attrs: [pf], en: to get stuck, ru: застря'ть, type: verb}
+- {attrs: [n], en: throat, ru: го'рло, type: noun}
+- {attrs: [pf], en: to trot, ru: порыси'ть, type: verb}
+- {attrs: [pf, verb.suffix.i, pf, verb.suffix.i], en: 'to become wiser, to manage to',
+  ru: умудри'ться, type: verb}
+- {attrs: [impf, verb.suffix.ai, impf, verb.suffix.ai], en: to sip, ru: потя'гивать,
+  type: verb}
+- {en: to take a seat/place, ru: занять место, type: adverb}

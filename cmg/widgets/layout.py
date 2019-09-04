@@ -18,6 +18,9 @@ class Layout(LayoutItem):
             for widget in child.iter_widgets():
                 yield widget
 
+    def get_offset(self) -> Vec2:
+        return Vec2(0, 0)
+
     def get_children(self):
         pass
 
