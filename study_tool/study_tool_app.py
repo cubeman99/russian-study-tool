@@ -106,7 +106,7 @@ class StudyCardsApp(Application):
         #self.push_state(GUIState(widget=CardEditWidget(cards[0]), title="Edit Card"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["verbs"]["verbs_stem_ai"], self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["nouns"]["house"], self), title="Edit Card Set"))
-        self.push_state(GUIState(widget=CardSetEditWidget(self.root["test_set"], self), title="Edit Card Set"))
+        #self.push_state(GUIState(widget=CardSetEditWidget(self.root["test_set"], self), title="Edit Card Set"))
         #card = list(self.card_database.find_cards_by_word("слушать"))[0]
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
 
@@ -203,9 +203,8 @@ class StudyCardsApp(Application):
             del self.states[-1]
 
     def push_state(self, state):
-        state.app = self
         self.states.append(state)
-        state.begin()
+        state.init(self)
 
     def push_study_state(self, card_set, params):
         self.push_state(StudyState(card_set=card_set, params=params))

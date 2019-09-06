@@ -8,7 +8,7 @@ from cmg.application import *
 from cmg.graphics import *
 from cmg.input import *
 from study_tool.config import Config
-from study_tool.menu import Menu
+from study_tool.entities.menu import Menu
 from study_tool.states.state import *
 
 
@@ -35,6 +35,7 @@ class SubMenuState(State):
         self.buttons[2] = Button("Down")
 
         self.menu = Menu(options=self.options, viewport=None)
+        self.entity_manager.add_entity(self.menu)
         self.menu.option_margin = 8
         if self.height is None:
             self.height = ((len(self.options) * self.menu.option_spacing) +
@@ -63,9 +64,6 @@ class SubMenuState(State):
         self.app.pop_state()
         if action is not None:
             action()
-
-    def update(self, dt):
-        self.menu.update_menu(app=self.app, dt=dt)
 
     def draw(self, g):
         screen_width, screen_height = self.app.screen.get_size()

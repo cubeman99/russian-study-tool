@@ -11,7 +11,7 @@ from cmg.application import *
 from cmg.math import Vec2
 from study_tool.card import *
 from study_tool.card_set import *
-from study_tool.menu import Menu
+from study_tool.entities.menu import Menu
 from study_tool.states.state import *
 from study_tool.states.sub_menu_state import SubMenuState
 

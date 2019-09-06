@@ -359,6 +359,7 @@ class InputManager:
         self.key_released = Event(Keys, KeyMods)
         self.mouse_pressed = Event(Vec2, MouseButtons)
         self.mouse_released = Event(Vec2, MouseButtons)
+        self.__key_mods = KeyMods.NONE
 
     def bind(self, key, pressed=None, released=None, down=None):
         bind = KeyBind(key, pressed=pressed, released=released, down=down)
@@ -369,12 +370,16 @@ class InputManager:
         return bind
 
     def update(self):
+        self.__key_mods = KeyMods(pygame.key.get_mods())
         for key in self.down_keys:
             if key in self.bind_dict:
                 for bind in self.bind_dict[key]:
                     if bind.down_callback is not None:
                         bind.down_callback()
 
+    def get_key_mods(self) -> KeyMods:
+        return self.__key_mods
+       
     def on_key_down(self, key, mod, unicode):
         if key in self.bind_dict:
             for bind in self.bind_dict[key]:

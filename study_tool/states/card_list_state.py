@@ -10,7 +10,7 @@ from cmg.graphics import *
 from cmg.application import *
 from study_tool.card import *
 from study_tool.card_set import *
-from study_tool.menu import Menu
+from study_tool.entities.menu import Menu
 from study_tool.states.state import *
 from study_tool.states.sub_menu_state import SubMenuState
 
@@ -40,6 +40,7 @@ class CardListState(State):
         self.menu.option_margin = 10
         self.menu.draw_menu_option_text = self.draw_menu_option_text
         self.menu.get_option_background_color = self.get_option_background_color
+        self.entity_manager.add_entity(self.menu)
 
         g = self.app.graphics
         self.max_column_width = 0
@@ -53,9 +54,6 @@ class CardListState(State):
             [("Resume", None),
              ("Menu", self.app.pop_state),
                 ("Exit", self.app.quit)]))
-
-    def update(self, dt):
-        self.menu.update_menu(app=self.app, dt=dt)
 
     def get_option_background_color(self, index, card, highlighted):
         # if highlighted:
@@ -95,9 +93,6 @@ class CardListState(State):
         screen_width, screen_height = self.app.screen.get_size()
         screen_center_x = screen_width / 2
         screen_center_y = screen_height / 2
-
-        # Draw the list of menu options
-        self.menu.draw_menu(g)
 
         # Draw state
         State.draw(self, g)

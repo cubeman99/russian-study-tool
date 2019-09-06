@@ -10,7 +10,7 @@ from cmg.graphics import *
 from cmg.application import *
 from study_tool.card import Card
 from study_tool.card_set import *
-from study_tool.menu import Menu
+from study_tool.entities.menu import Menu
 from study_tool.states.state import *
 from study_tool.states.sub_menu_state import SubMenuState
 from study_tool.card_database import CardDatabase
@@ -115,7 +115,7 @@ class CardEditState(State):
 
     def on_text_changed(self):
         self.cards = []
-        text = self.text_edit.text()
+        text = self.text_edit.get_text()
         self.table_layout.clear()
         for index, card in enumerate(self.card_database.iter_cards()):
             if text in card.russian.text or text in card.english.text:

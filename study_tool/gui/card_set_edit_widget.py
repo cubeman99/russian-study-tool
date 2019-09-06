@@ -17,7 +17,7 @@ from study_tool.russian.types import WordType, get_word_type_short_name, parse_s
 from study_tool.card import Card
 from study_tool.card_attributes import CardAttributes
 from study_tool.card_set import CardSet
-from study_tool.menu import Menu
+from study_tool.entities.menu import Menu
 from study_tool.states.state import *
 from study_tool.states.sub_menu_state import SubMenuState
 from study_tool.card_database import CardDatabase

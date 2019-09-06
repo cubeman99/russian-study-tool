@@ -11,7 +11,7 @@ from cmg.input import *
 from study_tool.config import Config
 from study_tool.card import Card, CardSide
 from study_tool.card_set import CardSet, CardSetPackage
-from study_tool.menu import Menu
+from study_tool.entities.menu import Menu
 from study_tool.states.read_text_state import ReadTextState
 from study_tool.states.state import *
 from study_tool.states.study_state import StudyParams
@@ -45,6 +45,7 @@ class MenuState(State):
 
         # Create menu options
         self.menu = Menu(options=[], viewport=viewport)
+        self.entity_manager.add_entity(self.menu)
         self.menu.draw_menu_option_text = self.draw_menu_option_text
         self.menu.options = []
         if self.top_level:
@@ -128,7 +129,8 @@ class MenuState(State):
             action()
 
     def update(self, dt):
-        self.menu.update_menu(app=self.app, dt=dt)
+        State.update(self, dt)
+        #self.menu.update_menu(app=self.app, dt=dt)
 
     def draw_menu_option_text(self, g, option, rect, highlighted):
         name, value = option
@@ -155,7 +157,7 @@ class MenuState(State):
         screen_center_y = screen_height / 2
 
         # Draw the list of menu options
-        self.menu.draw_menu(g)
+        #self.menu.draw_menu(g)
 
         # Draw the state
         State.draw(self, g)

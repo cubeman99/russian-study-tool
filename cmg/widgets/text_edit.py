@@ -2,6 +2,8 @@ import pygame
 import re
 import os
 import traceback
+import win32clipboard
+import cmg
 from cmg import gui
 from cmg.application import Application
 from cmg.input import Keys
@@ -12,6 +14,10 @@ from cmg.color import Colors
 from cmg.widgets.widget import Widget
 
 class TextEdit(Widget):
+    """
+    Single-line text box for editing text.
+    """
+
     def __init__(self,
                  text="",
                  repeat_keys_initial_ms=400,
@@ -56,46 +62,56 @@ class TextEdit(Widget):
         self.clock = pygame.time.Clock()
 
     def set_background_text(self, text: str):
+        """Sets the background text of the text box."""
         self.__background_text = text
 
     def set_autocomplete_source(self, autocomplete_source):
+        """Sets the list of autocomplete items."""
         self.__autocomplete_source = autocomplete_source
     
-    def set_background_color(self, color):
+    def set_background_color(self, color: Color):
+        """Sets the background color of the text box."""
         self.__background_color = Color(color)
 
     def on_lose_focus(self):
+        """Called when the widget loses focus."""
         self.stop_selecting()
         self.__apply_autocomplete()
 
     def get_text(self) -> str:
+        """Gets the text in the text box."""
         return self.__text
 
     def set_text(self, text: str) -> str:
+        """Sets the text in the text box."""
         assert isinstance(text, str)
         self.__text = text
         self.__cursor_position = len(self.__text)
 
-    def text(self) -> str:
-        return self.__text
-
     def update(self):
+        """Updates the text box."""
         if self.is_focused():
 
             # Update key counters:
-            for key, mod in self.keyrepeat_counters:
+            repeat_dict = [key for key in self.keyrepeat_counters]
+            for key in repeat_dict:
                 # Update clock
-                self.keyrepeat_counters[(key, mod)][0] += self.clock.get_time()
+                self.keyrepeat_counters[key][0] += self.clock.get_time()
 
                 # Generate new key events if enough time has passed:
-                if self.keyrepeat_counters[(key, mod)][0] >= self.keyrepeat_intial_interval_ms:
-                    self.keyrepeat_counters[(key, mod)][0] = (
+                if self.keyrepeat_counters[key][0] >= self.keyrepeat_intial_interval_ms:
+                    self.keyrepeat_counters[key][0] = (
                         self.keyrepeat_intial_interval_ms
                         - self.keyrepeat_interval_ms
                     )
 
-                    event_key, event_unicode = key, self.keyrepeat_counters[(key, mod)][1]
-                    self.on_key_pressed(event_key, mod, event_unicode)
+                    # FIXME: better way to get this
+                    mods = KeyMods(pygame.key.get_mods())
+                    if mods == self.keyrepeat_counters[key][2]:
+                        event_key, event_unicode = key, self.keyrepeat_counters[key][1]
+                        self.on_key_pressed(event_key, mods, event_unicode)
+                    else:
+                        del self.keyrepeat_counters[key]
 
             # Update cursor visibility
             self.cursor_ms_counter += self.clock.get_time()
@@ -139,6 +155,7 @@ class TextEdit(Widget):
         self.clock.tick()
 
     def on_key_pressed(self, key, mod, text):
+        """Called when a key is pressed."""
         if key in [Keys.K_ESCAPE, Keys.K_TAB]:
             return
         
@@ -149,8 +166,8 @@ class TextEdit(Widget):
             return
 
         # If none exist, create counter for that key:
-        if (key, mod) not in self.keyrepeat_counters:
-            self.keyrepeat_counters[(key, mod)] = [0, text]
+        if key not in self.keyrepeat_counters:
+            self.keyrepeat_counters[key] = [0, text, mod]
 
         if KeyMods.LSHIFT in mod and KeyMods.LCTRL in mod:
             if key == Keys.K_INSERT:
@@ -169,13 +186,18 @@ class TextEdit(Widget):
                 self.copy()
 
         elif key == Keys.K_BACKSPACE:
-            self.__text = (self.__text[:max(self.__cursor_position - 1, 0)] +
-                           self.__text[self.__cursor_position:])
+            if self.is_selecting():
+                self.delete_selection()
+            else:
+                self.__text = (self.__text[:max(self.__cursor_position - 1, 0)] +
+                               self.__text[self.__cursor_position:])
             self.__cursor_position = max(self.__cursor_position - 1, 0)
         elif key == Keys.K_DELETE:
-            self.stop_selecting()
-            self.__text = (self.__text[:self.__cursor_position] +
-                           self.__text[self.__cursor_position + 1:])
+            if self.is_selecting():
+                self.delete_selection()
+            else:
+                self.__text = (self.__text[:self.__cursor_position] +
+                               self.__text[self.__cursor_position + 1:])
         elif key == Keys.K_RIGHT:
             if KeyMods.LSHIFT in mod:
                 self.start_selection()
@@ -205,14 +227,20 @@ class TextEdit(Widget):
             self.delete_selection()
             self.insert_text(text)
 
+    def on_key_released(self, key, mod):
+        """Called when a key is released."""
+        if key in self.keyrepeat_counters:
+            del self.keyrepeat_counters[key]
+
     def insert_text(self, text: str):
+        """Insert text at the current cursor position."""
         self.__text = (
             self.__text[:self.__cursor_position] + text +
-            self.__text[self.__cursor_position:]
-        )
+            self.__text[self.__cursor_position:])
         self.__cursor_position += len(text)
 
-    def get_selection_text(self):
+    def get_selection_text(self) -> str:
+        """Returns the string of selected texet."""
         if self.__select_position is None:
             return None
         start = min(self.__select_position, self.__cursor_position)
@@ -220,14 +248,17 @@ class TextEdit(Widget):
         return self.__text[start:end]
 
     def is_selecting(self) -> bool:
+        """Returns True if currently selecting text."""
         return (self.__select_position is not None and
                 self.__select_position != self.__cursor_position)
 
     def start_selection(self):
+        """Begin selecting at the current cursor position."""
         if self.__select_position is None:
             self.__select_position = self.__cursor_position
 
     def delete_selection(self):
+        """Delete selected text."""
         if self.is_selecting():
             start = min(self.__select_position, self.__cursor_position)
             end = max(self.__select_position, self.__cursor_position)
@@ -236,9 +267,11 @@ class TextEdit(Widget):
         self.__select_position = None
 
     def stop_selecting(self) -> bool:
+        """Deselect if selecting."""
         self.__select_position = None
 
     def select_all(self):
+        """Select all text."""
         if self.__text:
             self.__select_position = 0
             self.__cursor_position = len(self.__text)
@@ -246,29 +279,38 @@ class TextEdit(Widget):
             self.__select_position = None
     
     def copy(self):
+        """Copy text in selection."""
         text = self.get_selection_text()
         if text:
-            pygame.scrap.put(pygame.SCRAP_TEXT, text.encode() + b"\x00")
+            try:
+                win32clipboard.OpenClipboard()
+                win32clipboard.SetClipboardText(text, win32clipboard.CF_UNICODETEXT)
+            finally:
+                win32clipboard.CloseClipboard()
     
     def cut(self):
+        """Copy and delete text in selection."""
         self.copy()
         self.delete_selection()
 
     def paste(self):
+        """Insert text from clipboard."""
         try:
-            self.delete_selection()
-            text = pygame.scrap.get(pygame.SCRAP_TEXT)
+            text = None
+            try:
+                win32clipboard.OpenClipboard()
+                if win32clipboard.IsClipboardFormatAvailable(win32clipboard.CF_UNICODETEXT):
+                    text = win32clipboard.GetClipboardData(win32clipboard.CF_UNICODETEXT)
+            finally:
+                win32clipboard.CloseClipboard()
             if text:
-                self.insert_text(text[:-1].decode())
+                self.delete_selection()
+                self.insert_text(text)
         except Exception:
             traceback.print_exc()
 
-    def on_key_released(self, key, mod):
-        # If none exist, create counter for that key:
-        if (key, mod) in self.keyrepeat_counters:
-            del self.keyrepeat_counters[(key, mod)]
-
     def on_draw(self, g):
+        """Draw the text box."""
         top_padding = int((self.get_height() - self.__surface_text.get_height()) / 2)
         left_padding = 4
 
@@ -305,6 +347,10 @@ class TextEdit(Widget):
                         color=self.__font.get_text_color())
 
     def __get_ctrl_boundary(self, step=1):
+        """
+        Returns the next character index along word boundaries.
+        Used for when holding control and pressing left/right/backspace/delete
+        """
         pos = self.__cursor_position
         while pos > 0 and pos < len(self.__text):
             if not re.match(r"[A-Za-z0-9]", self.__text[pos]):
@@ -313,5 +359,6 @@ class TextEdit(Widget):
         return pos
 
     def __apply_autocomplete(self):
+        """Loads the current autocomplete suggestion text into the text box."""
         if self.__autocomplete_source and self.__background_text:
             self.set_text(self.__autocomplete_text)

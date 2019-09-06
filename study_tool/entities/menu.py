@@ -9,9 +9,10 @@ from cmg.application import *
 from cmg.graphics import *
 from cmg.input import *
 from study_tool.config import Config
+from study_tool.entities.entity import Entity
 
 
-class Menu:
+class Menu(Entity):
     def __init__(self, options, viewport):
         super().__init__()
         self.cursor = 0.0
@@ -22,6 +23,13 @@ class Menu:
         self.option_margin = 48
         self.scroll_position = 0.0
         self.option_border_thickness = 4
+
+    def update(self, dt):
+        app = self.context
+        self.update_menu(app, dt)
+            
+    def draw(self, g):
+        self.draw_menu(g)
 
     def selected_option(self):
         option_index = int(round(self.cursor))

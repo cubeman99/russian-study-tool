@@ -6,6 +6,8 @@ from cmg.graphics import *
 from cmg.application import *
 from enum import IntEnum
 from study_tool.config import Config
+from study_tool.entities.entity_manager import EntityManager
+from study_tool.entities.entity import Entity
 
 
 class Button:
@@ -43,6 +45,12 @@ class State:
         self.margin_top = Config.margin_top
         self.margin_bottom = Config.margin_top
         self.margin_color = Config.margin_color
+        self.entity_manager = None
+
+    def init(self, app):
+        self.app = app
+        self.entity_manager = EntityManager(context=self.app)
+        self.begin()
 
     def begin(self):
         self.app.input.bind(
@@ -56,7 +64,7 @@ class State:
         pass
 
     def update(self, dt):
-        pass
+        self.entity_manager.update(dt)
     
     def on_key_pressed(self, key, mod, text):
         pass
@@ -108,3 +116,6 @@ class State:
             g.draw_text(r.x + (r.width / 2), r.y + (r.height / 2),
                         text=button.name, align=Align.Centered,
                         color=Config.button_text_color)
+
+        # Draw entities
+        self.entity_manager.draw(g)

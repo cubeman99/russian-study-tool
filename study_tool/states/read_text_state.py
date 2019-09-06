@@ -10,7 +10,7 @@ from cmg.graphics import *
 from cmg.application import *
 from study_tool.card import *
 from study_tool.card_set import *
-from study_tool.menu import Menu
+from study_tool.entities.menu import Menu
 from study_tool.states.state import *
 from study_tool.states.sub_menu_state import SubMenuState
 from study_tool.example_database import split_words

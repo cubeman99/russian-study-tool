@@ -81,6 +81,8 @@ class ExampleDatabase:
             text = text.lower().replace("...", "").strip()
             if any(letter in text for letter in LETTERS):
                 text_list.append(text)
+                if "ё" in text:
+                    text_list.append(text.replace("ё", "е"))
         whole_word = True
         if len(text_list) == 1 and " " in text_list[0]:
             whole_word = False

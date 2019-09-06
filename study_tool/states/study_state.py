@@ -562,7 +562,20 @@ class StudyState(State):
                                 x=640, y=screen_height - self.margin_bottom - 20 - (22 * 4),
                                 font=self.word_details_font,
                                 text_color=color.BLACK)
-
+              
+        # Draw related cards
+        if self.card.get_related_cards() and self.revealed:  
+            y = screen_height - self.margin_bottom - 20 - (22 * 8) - 12
+            related_cards_text = AccentedText("")
+            for related_card in self.card.get_related_cards():
+                if related_cards_text.text:
+                    related_cards_text += ", "
+                related_cards_text += related_card.get_russian()
+            g.draw_text(20, y - (25 * 2),
+                        text="Related cards: " + related_cards_text,
+                        font=self.word_details_font,
+                        color=Config.card_back_text_color,
+                        align=Align.BottomLeft)
         # Draw state
         State.draw(self, g)
 
