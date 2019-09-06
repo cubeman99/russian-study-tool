@@ -33,7 +33,9 @@
 ощуще'ние - feeling, sensation
 нау'ка - science
 ссы'лка - link, reference
-
+ку'зница - forge
+эпо'ха - era, age
+алма'з - diamond
 @type verb
 повы'сить - to increase, raise @pf
 повыша'ть - to increase, raise @impf
@@ -56,6 +58,8 @@
 задрема'ть - to doze off
 дра'лить -- to tear up (teardrops)
 набра'ть - to dial
+огорчи'ть - to upset (cause grief)
+расколо'ть - to split
 
 @type phrase
 никогда' ещё не' было ничего' и никого' подо'бного - there has never been anything or anyone like this
