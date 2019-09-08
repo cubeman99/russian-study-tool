@@ -28,6 +28,7 @@ from study_tool.word_database import WordDatabase
 from study_tool.example_database import ExampleDatabase
 from study_tool.states.read_text_state import ReadTextState
 from study_tool.states.card_edit_state import CardEditState
+from study_tool.states.study_state import StudyParams
 import yaml
 
 DEAD_ZONE = 0.01
@@ -101,12 +102,14 @@ class StudyCardsApp(Application):
         # self.push_state(KeyboardState())
         # self.push_state(CardEditState(card_database=self.card_database))
         cards = list(self.card_database.iter_cards())
+        test_set = self.root["test_set"]
         #self.push_card_edit_state(None)
         #self.push_card_edit_state(cards[0])
         #self.push_state(GUIState(widget=CardEditWidget(cards[0]), title="Edit Card"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["verbs"]["verbs_stem_ai"], self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["nouns"]["house"], self), title="Edit Card Set"))
-        #self.push_state(GUIState(widget=CardSetEditWidget(self.root["test_set"], self), title="Edit Card Set"))
+        #self.push_state(GUIState(widget=CardSetEditWidget(test_set, self), title="Edit Card Set"))
+        self.push_study_state(test_set, StudyParams(random_side=True))
         #card = list(self.card_database.find_cards_by_word("слушать"))[0]
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
 

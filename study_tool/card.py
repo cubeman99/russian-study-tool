@@ -5,7 +5,6 @@ from study_tool.config import Config
 from study_tool.russian.word import *
 from study_tool.russian.word import WordType
 from study_tool.card_attributes import CardAttributes, ENGLISH_SIDE_CARD_ATTRIBUTES
-from cmg.graphics import color
 
 
 class CardSide(IntEnum):
@@ -72,6 +71,9 @@ class Card:
         # used by Scheduler
         self.rep = None
         self.age = 0
+
+    def get_word(self):
+        return self.word
 
     def get_fixed_card_set(self):
         return self.__fixed_card_set

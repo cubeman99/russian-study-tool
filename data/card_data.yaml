@@ -523,7 +523,8 @@ cards:
 - {attrs: [f], en: sister, ru: сестра', type: noun}
 - {attrs: [m], en: son, ru: сын, type: noun}
 - {attrs: [f], en: daughter, ru: до'чь, type: noun}
-- {attrs: [indec], en: parents, ru: родители, type: noun}
+- {attrs: [indec], en: parents, rel: [[verb, родить, to give birth]], ru: родители,
+  type: noun}
 - {attrs: [f], en: grandmother, ru: ба'бушка, type: noun}
 - {attrs: [f], en: grandfather, ru: де'душка, type: noun}
 - {attrs: [f], en: granddaughter, ru: внучка, type: noun}
@@ -1058,7 +1059,7 @@ cards:
 - {en: it is possible, ru: возмо'жно, type: other}
 - {en: it is impossible, ru: невозмо'жно, type: other}
 - {en: wonderful!, ru: замеча'тельно!, type: other}
-- {en: native, ru: родно'й, type: adjective}
+- {en: native, rel: [[verb, родить, to give birth]], ru: родно'й, type: adjective}
 - {attrs: [long], en: 'chic, posh, stylish', ru: шика'рный, type: adjective}
 - {attrs: [short], en: gorgeous, ru: шика'рен, type: adjective}
 - {en: successful, ru: уда'чный, type: adjective}
@@ -1306,7 +1307,8 @@ cards:
 - {attrs: [f], en: revenge, ru: ме'сть, type: noun}
 - {attrs: [f], en: trail, ru: тропа', type: noun}
 - {attrs: [m], en: chalk, ru: мело'к, type: noun}
-- {attrs: [f], en: dining (room), ru: столо'вая (ко'мната), type: noun}
+- {attrs: [f], en: dining (room), rel: [[noun, стол, table]], ru: столо'вая (ко'мната),
+  type: noun}
 - {attrs: [m], en: basement, ru: подва'л, type: noun}
 - {attrs: [f], en: stairs, ru: ле'стница, type: noun}
 - {attrs: [n], en: 'shelter, refuge, asylum', ru: убе'жище, type: noun}
@@ -1534,7 +1536,7 @@ cards:
 - {attrs: [m], en: patient, ru: пацие'нт, type: noun}
 - {attrs: [n], en: towel, ru: полоте'нце, type: noun}
 - {attrs: [f], en: 'box, case', ru: коро'бка, type: noun}
-- {attrs: [m], en: 'gender, kin', ru: ро'д, type: noun}
+- {attrs: [m], en: 'gender, kin', rel: [[verb, родить, to give birth]], ru: ро'д, type: noun}
 - {attrs: [n], en: 'offer, proposal, suggestion; sentence', ru: предложе'ние, type: noun}
 - {attrs: [f], en: conjunction, ru: конъю'нкция, type: noun}
 - {attrs: [m], en: preposition, ru: предло'г, type: noun}
@@ -1627,7 +1629,8 @@ cards:
 - {attrs: [pf, verb.suffix.i], en: 'to call off, cancel', ru: отмени'ться, type: verb}
 - {attrs: [pf, verb.suffix.i], en: to connect, ru: подключи'ть, type: verb}
 - {attrs: [impf, verb.suffix.i], en: 'to bring, carry, drag', ru: тащи'ть, type: verb}
-- {attrs: [impf, verb.suffix.i], en: to be proud, ru: горди'ться, type: verb}
+- {attrs: [impf, verb.suffix.i], en: to be proud, rel: [[noun, гордость, pride]], ru: горди'ться,
+  type: verb}
 - {attrs: [pf], en: to steal, ru: укра'сть, type: verb}
 - {attrs: [pf, verb.suffix.i], en: 'to cope, deal, manage', ru: спра'виться, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: 'to annoy, irritate, provoke', ru: раздража'ть,
@@ -2244,7 +2247,8 @@ cards:
 - {attrs: [impf, verb.suffix.ei], en: 'to be sorry, regret', ru: жале'ть, type: verb}
 - {attrs: [verb.suffix.ei], en: to become warm, ru: тепле'ть, type: verb}
 - {attrs: [impf, verb.suffix.ei], en: to turn yellow, ru: желте'ть, type: verb}
-- {attrs: [impf, verb.suffix.ei], en: to know how, ru: уме'ть, type: verb}
+- {attrs: [impf, verb.suffix.ei], en: to know how, rel: [[noun, умение, skill], [adjective,
+      умелый, skillfull]], ru: уме'ть, type: verb}
 - {attrs: [verb.suffix.ei], en: to become healthy, ru: здорове'ть, type: verb}
 - {attrs: [impf, verb.suffix.ei], en: to have, ru: име'ть, type: verb}
 - {attrs: [impf, verb.suffix.ei], en: 'to become thin, lose weight', ru: худе'ть, type: verb}
@@ -2455,8 +2459,8 @@ cards:
 - {attrs: [impf, verb.suffix.ai], en: 'to inflict, commit', ru: учиня'ть, type: verb}
 - {attrs: [impf, verb.suffix.avai], en: 'to be aware, recognize', ru: осознава'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: 'to suspect, surmise', ru: подозрева'ть, type: verb}
-- {attrs: [pf, verb.suffix.i], en: 'to excite, to raise thought, idea, feeling', ru: зароди'ть,
-  type: verb}
+- {attrs: [pf, verb.suffix.i], en: 'to excite, to raise thought, idea, feeling', rel: [
+    [verb, родить, to give birth]], ru: зароди'ть, type: verb}
 - {attrs: [pf, verb.suffix.i], en: 'to express, voice', ru: вы'разить, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: 'to dance, move legs', ru: припля'сывать, type: verb}
 - {attrs: [pf], en: 'to pronounce, get out', ru: произнести', type: verb}
@@ -2852,7 +2856,8 @@ cards:
 - {attrs: [m], en: 'bend, curve', ru: изги'б, type: noun}
 - {attrs: [m], en: 'metal bell, signal device', ru: звоно'к, type: noun}
 - {attrs: [n], en: adventure, ru: 'похожде''ние, приключе''ние', type: noun}
-- {attrs: [m], en: hearing (the sense), ru: слу'х, type: noun}
+- {attrs: [m], en: hearing (the sense), rel: [[noun, ухо, ear], [verb, слушать, to listen]],
+  ru: слу'х, type: noun}
 - {en: gossip, ru: слу'хи, type: noun}
 - {attrs: [n], en: liberation, ru: освобожде'ние, type: noun}
 - {attrs: [m], en: harem, ru: гаре'м, type: noun}
@@ -3174,7 +3179,7 @@ cards:
 - {attrs: [f], en: 'essense, point, core', ru: су'ть, type: noun}
 - {attrs: [f], en: 'will, wish, desire', ru: во'ля, type: noun}
 - {attrs: [f], en: jet (stream of smth), ru: струя', type: noun}
-- {attrs: [n], en: skill, ru: уме'ние, type: noun}
+- {attrs: [n], en: skill, rel: [[verb, уметь, to know how]], ru: уме'ние, type: noun}
 - {attrs: [impf, verb.suffix.i], en: to flow in streams, ru: струи'ться, type: verb}
 - {en: 'to weave, intertwine, convolve', ru: сплета'ть, type: verb}
 - {attrs: [impf, verb.suffix.i], en: to turn around in circles, ru: крути'ться, type: verb}
@@ -3219,7 +3224,6 @@ cards:
 - {attrs: [impf, verb.suffix.ai], en: to sip, ru: потя'гивать, type: verb}
 - {en: to take a seat/place, ru: занять место, type: adverb}
 - {en: definitely, ru: 'однозна''чно, определённо', type: adverb}
-- {en: skillfull, ru: уме'лый, type: noun}
 - {attrs: [impf, verb.suffix.ai], en: 'to touch thoroughly, or many times', ru: тро'гать,
   type: verb}
 - {attrs: [impf, verb.suffix.ai], en: 'to touch, mention', ru: каса'ться, type: verb}
@@ -3274,3 +3278,7 @@ cards:
 - {attrs: [f], en: an attack, ru: ата'ка, type: noun}
 - {en: 'stunned, perplexed, dumbfounded', ru: ошеломлённый, type: adjective}
 - {en: 'by suprise, suddenly, unexpectedly', ru: враспло'х, type: adverb}
+- {attrs: [pf, verb.suffix.i], en: to give birth, rel: [[noun, родители, parents], [
+      adjective, родной, native], [noun, род, 'gender, kin'], [verb, зародить, 'to
+        excite, to raise thought, idea, feeling']], ru: роди'ть, type: verb}
+- {en: skillfull, rel: [[verb, уметь, to know how]], ru: уме'лый, type: adjective}

@@ -3,6 +3,7 @@ card_set:
   version: 1
   cards:
     - [noun, стол, table]
-    - [noun, стул, chair]
-    - [verb, говорить, to speak]
-    - [noun, поведение, 'behavior, conduct']
+    - [verb, родить, to give birth]
+    - [adjective, родной, native]
+    - [adjective, умелый, skillfull]
+    - [verb, уметь, to know how]

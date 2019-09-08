@@ -8402,8 +8402,8 @@
     },
     {
       "english": "native",
-      "history": "TTTTTTTTTTTTF",
-      "last_encounter_time": 1552071454.1663482,
+      "history": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTF",
+      "last_encounter_time": 1567980060.7898583,
       "proficiency_level": 4,
       "russian": "родной",
       "type": "Adjective"
@@ -12594,8 +12594,8 @@
     },
     {
       "english": "behavior, conduct",
-      "history": "TTTTTTTTTTTTTTTFTFTFTTTFFF",
-      "last_encounter_time": 1567787184.126684,
+      "history": "TTTTTTTTTTTTTTTTTTTTTTFTFTFTTTFFF",
+      "last_encounter_time": 1567969536.8172376,
       "proficiency_level": 4,
       "russian": "поведение",
       "type": "Noun"
@@ -17538,8 +17538,8 @@
     },
     {
       "english": "to know how",
-      "history": "TTTTTTTTTTTTTTTFTFFFTFTFTTTFFFF",
-      "last_encounter_time": 1550453849.1345677,
+      "history": "TTTTTTTTFTTTTTTTTTTTTTTTTTTTTFTFFFTFTFTTTFFFF",
+      "last_encounter_time": 1567979913.6654515,
       "proficiency_level": 4,
       "russian": "уметь",
       "type": "Verb"
@@ -18594,8 +18594,8 @@
     },
     {
       "english": "to speak",
-      "history": "TTTTTTTTTTTTTT",
-      "last_encounter_time": 1567787178.2737994,
+      "history": "TTTTTTTTTTTTTTTTTTTTTTT",
+      "last_encounter_time": 1567969487.230394,
       "proficiency_level": 4,
       "russian": "говорить",
       "type": "Verb"
@@ -23026,8 +23026,8 @@
     },
     {
       "english": "table",
-      "history": "TTTTTTTTTTTTTTTT",
-      "last_encounter_time": 1567787180.8617873,
+      "history": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+      "last_encounter_time": 1567980037.9939864,
       "proficiency_level": 4,
       "russian": "стол",
       "type": "Noun"
@@ -24090,8 +24090,8 @@
     },
     {
       "english": "chair",
-      "history": "TTTTTTTTTTTTTTTTT",
-      "last_encounter_time": 1567787175.5481808,
+      "history": "TTTTTTTTTTTTTTTTTTTTTTTTT",
+      "last_encounter_time": 1567969484.6530433,
       "proficiency_level": 4,
       "russian": "стул",
       "type": "Noun"
@@ -24929,14 +24929,6 @@
       "type": "Adverb"
     },
     {
-      "english": "skillfull",
-      "history": "TTFTT",
-      "last_encounter_time": 1567724975.174798,
-      "proficiency_level": 4,
-      "russian": "умелый",
-      "type": "Noun"
-    },
-    {
       "english": "to touch thoroughly, or many times",
       "history": "TTTTTTTTTTTTTTTTF",
       "last_encounter_time": 1567778423.412889,
@@ -25327,6 +25319,22 @@
       "proficiency_level": 4,
       "russian": "врасплох",
       "type": "Adverb"
+    },
+    {
+      "english": "to give birth",
+      "history": "TTTTTTTTTTTTTTTTTTTT",
+      "last_encounter_time": 1567980047.1349428,
+      "proficiency_level": 4,
+      "russian": "родить",
+      "type": "Verb"
+    },
+    {
+      "english": "skillfull",
+      "history": "TTTTTTTTTTTTTTTTTTFTT",
+      "last_encounter_time": 1567980041.560027,
+      "proficiency_level": 4,
+      "russian": "умелый",
+      "type": "Adjective"
     },
     {
       "english": "indecent",
@@ -35895,18 +35903,18 @@
     },
     {
       "all_metrics": {
-        "history_score": 2357.245522496332,
+        "history_score": 2358.276061073569,
         "proficiency_counts": [
           9,
           190,
           13,
           143,
-          2872
+          2873
         ]
       },
       "card_type_metrics": {
         "Adjective": {
-          "history_score": 373.45512150103025,
+          "history_score": 373.4595857867445,
           "proficiency_counts": [
             1,
             7,
@@ -35946,7 +35954,7 @@
           ]
         },
         "Noun": {
-          "history_score": 887.8173853405847,
+          "history_score": 887.8434596321069,
           "proficiency_counts": [
             4,
             148,
@@ -36006,18 +36014,143 @@
           ]
         },
         "Verb": {
-          "history_score": 774.6847296250102,
+          "history_score": 775.6847296250102,
           "proficiency_counts": [
             3,
             8,
             1,
             16,
-            918
+            919
           ]
         }
       },
       "date": "2019/09/06"
+    },
+    {
+      "all_metrics": {
+        "history_score": 2358.8678278863154,
+        "proficiency_counts": [
+          9,
+          190,
+          13,
+          143,
+          2873
+        ]
+      },
+      "card_type_metrics": {
+        "Adjective": {
+          "history_score": 374.45068427159305,
+          "proficiency_counts": [
+            1,
+            7,
+            5,
+            23,
+            435
+          ]
+        },
+        "Adverb": {
+          "history_score": 130.28629283241924,
+          "proficiency_counts": [
+            0,
+            11,
+            0,
+            0,
+            173
+          ]
+        },
+        "Conjunction": {
+          "history_score": 20.22896825396825,
+          "proficiency_counts": [
+            0,
+            12,
+            0,
+            2,
+            37
+          ]
+        },
+        "Interjection": {
+          "history_score": 9.78968253968254,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            0,
+            12
+          ]
+        },
+        "Noun": {
+          "history_score": 887.4137680633974,
+          "proficiency_counts": [
+            4,
+            148,
+            5,
+            94,
+            1102
+          ]
+        },
+        "Other": {
+          "history_score": 29.114262126762124,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            1,
+            36
+          ]
+        },
+        "Particle": {
+          "history_score": 5.25,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            0,
+            6
+          ]
+        },
+        "Phrase": {
+          "history_score": 70.743485038783,
+          "proficiency_counts": [
+            1,
+            4,
+            2,
+            5,
+            87
+          ]
+        },
+        "Preposition": {
+          "history_score": 35.50059523809524,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            2,
+            41
+          ]
+        },
+        "Pronoun": {
+          "history_score": 20.375,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            0,
+            25
+          ]
+        },
+        "Verb": {
+          "history_score": 775.715089521618,
+          "proficiency_counts": [
+            3,
+            8,
+            1,
+            16,
+            919
+          ]
+        }
+      },
+      "date": "2019/09/08"
     }
   ],
-  "save_time": 1567787184.126684
+  "save_time": 1567980060.7898583
 }

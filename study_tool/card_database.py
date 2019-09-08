@@ -278,6 +278,7 @@ class CardDatabase:
                         raise Exception("Unable to find related card: " +
                                         str(related_card_key))
                     card.add_related_card(related_card)
+                    related_card.add_related_card(card)
 
     def serialize_study_data(self) -> dict:
         state = {"save_time": time.time(), 

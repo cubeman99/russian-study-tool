@@ -17,6 +17,7 @@ from study_tool.states.state import *
 from study_tool.states.study_state import StudyParams
 from study_tool.states.sub_menu_state import SubMenuState
 from study_tool.scheduler import ScheduleMode
+from study_tool.entities.study_proficiency_bar import StudyProficiencyBar
 
 
 class MenuState(State):
@@ -64,6 +65,17 @@ class MenuState(State):
             self.menu.options.append((name, card_set))
         self.menu.options.append(
             ("Study all " + self.package.name, self.package))
+        
+        # Create proficiency bar
+        title_left = self.option_margin
+        title_right = title_left + Graphics(None).measure_text(
+            text=self.title, font=self.title_font)[0]
+        bar = StudyProficiencyBar(
+            center_y=self.margin_top / 2,
+            left=max(screen_width * 0.6, title_right + 32),
+            right=screen_width - 32,
+            study_set=self.package)
+        self.entity_manager.add_entity(bar)
 
     def open_study_mode(self):
         self.app.push_state(ReadTextState())
@@ -141,15 +153,22 @@ class MenuState(State):
 
         # Draw the option name
         center_y = rect.y + (rect.height / 2)
-        g.draw_text(rect.x + 16, center_y,
-                    text=name, font=self.option_font,
-                    color=text_color, align=Align.MiddleLeft)
+        g.draw_text(rect.x + 16,
+                    center_y,
+                    text=name,
+                    font=self.option_font,
+                    color=text_color,
+                    align=Align.MiddleLeft)
 
         # Draw the completion bar
         if isinstance(value, CardSet) or isinstance(value, CardSetPackage):
-            self.app.draw_completion_bar(
-                g, center_y, int(rect.x + (rect.width * 0.6)),
-                rect.x + rect.width - 16, value)
+            bar = StudyProficiencyBar(
+                center_y=center_y,
+                left=int(rect.x + (rect.width * 0.6)),
+                right=rect.x + rect.width - 16,
+                study_set=value)
+            bar.on_create()
+            bar.draw(g)
 
     def draw(self, g):
         screen_width, screen_height = self.app.screen.get_size()
@@ -179,10 +198,4 @@ class MenuState(State):
                     font=self.title_font,
                     color=Config.title_color,
                     align=Align.Centered)
-
-        # Draw completion progress
-        self.app.draw_completion_bar(
-            g, self.margin_top / 2,
-            max(screen_width * 0.6, title_right + 32),
-            screen_width - 32,
-            self.package)
+      

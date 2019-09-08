@@ -52,6 +52,9 @@ class State:
         self.entity_manager = EntityManager(context=self.app)
         self.begin()
 
+    def add_entity(self, entity, pos=None) -> Entity:
+        return self.entity_manager.add_entity(entity, pos=pos)
+
     def begin(self):
         self.app.input.bind(
             pygame.K_z, pressed=lambda: self.buttons[0].action())

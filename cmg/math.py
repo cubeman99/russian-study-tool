@@ -1,4 +1,4 @@
-
+import pygame
 import math
 
 floor = math.floor
@@ -73,3 +73,5 @@ class Vec2:
 
     def totuple(self) -> tuple:
         return (self.x, self.y)
+
+Rect = pygame.Rect

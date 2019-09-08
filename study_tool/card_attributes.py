@@ -3,7 +3,7 @@ import os
 import time
 from study_tool.config import Config
 from study_tool.russian.word import *
-from cmg.graphics import color
+from cmg.color import Color
 
 
 class CardAttributes(Enum):
@@ -155,19 +155,19 @@ ATTRIBUTE_NAMES = {
 }
 
 ATTRIBUTE_COLORS = {
-    CardAttributes.Masculine: color.rgb(255, 0, 0),
-    CardAttributes.Femanine: color.rgb(255, 128, 200),
-    CardAttributes.Neuter: color.rgb(128, 128, 128),
-    CardAttributes.Perfective: color.rgb(128, 0, 128),
-    CardAttributes.Imperfective: color.rgb(0, 160, 180),
-    CardAttributes.Unidirectional: color.rgb(0, 180, 0),
-    CardAttributes.Multidirectional: color.rgb(180, 180, 0),
-    CardAttributes.Nominative: color.gray(50),
-    CardAttributes.Accusative: color.rgb(160, 0, 0),
-    CardAttributes.Dative: color.rgb(100, 0, 0),
-    CardAttributes.Genetive: color.rgb(80, 15, 0),
-    CardAttributes.Prepositional: color.rgb(0, 100, 0),
-    CardAttributes.Instrumental: color.rgb(100, 100, 0),
+    CardAttributes.Masculine: Color(255, 0, 0),
+    CardAttributes.Femanine: Color(255, 128, 200),
+    CardAttributes.Neuter: Color(128, 128, 128),
+    CardAttributes.Perfective: Color(128, 0, 128),
+    CardAttributes.Imperfective: Color(0, 160, 180),
+    CardAttributes.Unidirectional: Color(0, 180, 0),
+    CardAttributes.Multidirectional: Color(180, 180, 0),
+    CardAttributes.Nominative: Color(50, 50, 50),
+    CardAttributes.Accusative: Color(160, 0, 0),
+    CardAttributes.Dative: Color(100, 0, 0),
+    CardAttributes.Genetive: Color(80, 15, 0),
+    CardAttributes.Prepositional: Color(0, 100, 0),
+    CardAttributes.Instrumental: Color(100, 100, 0),
 }
 
 def get_card_attribute_display_name(attribute: CardAttributes):

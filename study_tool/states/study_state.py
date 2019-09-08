@@ -5,6 +5,7 @@ import random
 import time
 import cmg
 from cmg import math
+from cmg.math import Vec2
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
@@ -21,30 +22,12 @@ from study_tool.scheduler import Scheduler, ScheduleMode
 from study_tool.states.state import State, Button
 from study_tool.states.sub_menu_state import SubMenuState
 from study_tool import example_database
-
-
-class Row:
-
-    def __init__(self, columns):
-        self.columns = list(columns)
-
-    def __getitem__(self, column_index):
-        return self.columns[column_index]
-
-
-class Table:
-
-    def __init__(self, column_widths=None, row_height=20):
-        self.rows = []
-        self.column_widths = list(column_widths)
-        self.row_height = row_height
-
-    def add_row(self, columns):
-        row = Row(columns)
-        self.rows.append(row)
-
-    def __getitem__(self, row_index):
-        return self.rows[row_index]
+from study_tool.entities.word_box import WordBox
+from study_tool.entities.conjugation_table import ConjugationTable
+from study_tool.entities.text_label import TextLabel
+from study_tool.entities.entity import Entity
+from study_tool.entities.label_box import LabelBox
+from study_tool.entities.card_attribute_box import CardAttributeBox
 
 
 class StudyParams:
@@ -64,25 +47,54 @@ class StudyState(State):
                  card_set: StudySet,
                  params=StudyParams()):
         super().__init__()
-        self.card_fonts = [pygame.font.Font(None, x) for x in range(16, 73, 4)]
-        self.card_attribute_font = pygame.font.Font(None, 30)
-        self.card_status_font = pygame.font.Font(None, 30)
-        self.word_type_font = pygame.font.Font(None, 34)
-        self.word_details_font = pygame.font.Font(None, 24)
+
+        # Formatting
+        self.card_status_font = cmg.Font(30)
+        self.__left_margin = 20
+        self.__bottom_margin = 10
+        self.__card_text_area_height = 80
+        self.proficiency_margin_height = 32
+        self.__line_spacing = 22
+        self.__card_box_spacing = 4
+        self.__table_row_height = 22
+        self.__font_details = cmg.Font(24)
+        self.__font_card_attributes = cmg.Font(30)
+        self.__font_word_type = cmg.Font(34)
 
         # Study settings
         self.card_set = card_set
         self.shown_side = CardSide.English
         self.params = params
 
+        # Entities
+        self.__entity_reveal_root = None
+        self.__entity_word_type_label = None
+        self.__entity_verb_root = None
+        self.__entity_noun_root = None
+        self.__entity_example_root = None
+        self.__entity_adjective_root = None
+        self.__entity_related_cards = None
+        self.__entity_counterparts = None
+        self.__entity_prompt_text = None
+        self.__entity_reveal_text = None
+        self.__entity_prompt_attributes = None
+        self.__entity_reveal_attributes = None
+        self.__entity_word_translation = None
+        self.__entity_word_details = None
+        self.__table_noun = None
+        self.__table_adjective = None
+        self.__table_verb_past = None
+        self.__table_verb_present = None
+        self.__table_verb_participles = None
+
         # Internal state
         self.card = None
         self.revealed = False
+        self.reveal_text = AccentedText()
         self.prompt_text = AccentedText()
         self.prompt_attributes = []
         self.reveal_attributes = []
         self.scheduler = None
-        self.examples = []
 
     def begin(self):
         """Begin the state."""
@@ -95,6 +107,160 @@ class StudyState(State):
         self.seen_cards = []
         self.card = None
         self.revealed = False
+        self.__related_cards = []
+        self.__counterparts = []
+
+        self.__entity_reveal_root = self.add_entity(Entity())
+        self.__entity_noun_root = self.__entity_reveal_root.add_child(Entity())
+        self.__entity_adjective_root = self.__entity_reveal_root.add_child(Entity())
+        self.__entity_verb_root = self.__entity_reveal_root.add_child(Entity())
+        self.__entity_example_root = self.__entity_reveal_root.add_child(Entity())
+        self.__entity_prompt_attributes = self.add_entity(Entity())
+        self.__entity_reveal_attributes = self.__entity_reveal_root.add_child(Entity())
+
+        screen_width, screen_height = self.app.screen.get_size()
+        screen_center_x = screen_width / 2
+        screen_center_y = screen_height / 2
+
+        self.__entity_prompt_text = self.add_entity(LabelBox(
+            text="<PROMPT-TEXT>",
+            font=None,
+            color=Colors.BLACK,
+            align=Align.Centered,
+            max_font_size=74,
+            min_font_size=12))
+        self.__entity_reveal_text = self.__entity_reveal_root.add_child(LabelBox(
+            text="<REVEAL-TEXT>",
+            font=None,
+            color=Colors.BLACK,
+            align=Align.Centered,
+            max_font_size=74,
+            min_font_size=16))
+        h = self.__card_text_area_height
+        self.__entity_prompt_text.set_rect(0, screen_center_y - h, screen_width, h)
+        self.__entity_reveal_text.set_rect(0, screen_center_y, screen_width, h)
+        
+        # Draw word type at top-middle
+        self.__entity_word_type_label = self.add_entity(
+            TextLabel(
+                text="<WORD-TYPE>",
+                font=self.__font_word_type,
+                color=Colors.GRAY,
+                align=Align.TopCenter),
+            pos=Vec2(screen_center_x, self.margin_top + 32 + 16))
+        
+        y = screen_height - self.margin_bottom - 20 - (22 * 8) - 12 - (25 * 2)
+        self.__entity_related_cards = self.__entity_reveal_root.add_child(
+            TextLabel("Related cards:", font=self.__font_details),
+            pos=Vec2(self.__left_margin, y))
+        y += self.__line_spacing
+        self.__entity_counterparts = self.__entity_verb_root.add_child(
+            TextLabel("Imperfective Counterparts:", font=self.__font_details),
+            pos=Vec2(self.__left_margin, y))
+        y += self.__line_spacing
+        self.__entity_word_translation = self.__entity_verb_root.add_child(
+            TextLabel("<translation>", font=self.__font_details),
+            pos=Vec2(self.__left_margin, y))
+        y += self.__line_spacing
+        self.__entity_word_details = self.__entity_verb_root.add_child(
+            TextLabel("<details>", font=self.__font_details),
+            pos=Vec2(self.__left_margin, y))
+
+        table_bottom = screen_height - self.margin_bottom - self.__bottom_margin
+
+        # Create the Verb Non-Past Tense conjugation table
+        self.__table_verb_present = ConjugationTable(
+            font=self.__font_details,
+            row_count=7,
+            column_count=2,
+            column_widths=(40, 160),
+            row_height=self.__table_row_height)
+        self.__table_verb_present.set_text(0, 1, "Present Tense")
+        self.__table_verb_present.set_text(1, 0, "я")
+        self.__table_verb_present.set_text(2, 0, "ты")
+        self.__table_verb_present.set_text(3, 0, "он")
+        self.__table_verb_present.set_text(4, 0, "мы")
+        self.__table_verb_present.set_text(5, 0, "вы")
+        self.__table_verb_present.set_text(6, 0, "они")
+        self.__entity_verb_root.add_child(
+            self.__table_verb_present,
+            pos=Vec2(self.__left_margin, table_bottom - (self.__table_row_height * 7)))
+
+        # Create the Verb Past Tense conjugation table
+        self.__table_verb_past = ConjugationTable(
+            font=self.__font_details,
+            row_count=7,
+            column_count=2,
+            column_widths=(50, 160),
+            row_height=self.__table_row_height)
+        self.__table_verb_past.set_text(0, 1, "Past Tense")
+        self.__table_verb_past.set_text(1, 0, "он")
+        self.__table_verb_past.set_text(2, 0, "она")
+        self.__table_verb_past.set_text(3, 0, "оно")
+        self.__table_verb_past.set_text(4, 0, "они")
+        self.__table_verb_past.set_text(5, 0, "imp1")
+        self.__table_verb_past.set_text(6, 0, "imp2")
+        self.__entity_verb_root.add_child(
+            self.__table_verb_past,
+            pos=Vec2(240, table_bottom - (self.__table_row_height * 7)))
+        
+        # Create the Verb Participle conjugation table
+        self.__table_verb_participles = ConjugationTable(
+            font=self.__font_details,
+            row_count=4,
+            column_count=3,
+            column_widths=(100, 160, 160),
+            row_height=self.__table_row_height)
+        self.__table_verb_participles.set_text(0, 1, "Present")
+        self.__table_verb_participles.set_text(0, 2, "Past")
+        self.__table_verb_participles.set_text(1, 0, "Active")
+        self.__table_verb_participles.set_text(2, 0, "Adverbial")
+        self.__table_verb_participles.set_text(3, 0, "Passive")
+        self.__entity_verb_root.add_child(
+            self.__table_verb_participles,
+            pos=Vec2(640, table_bottom - (self.__table_row_height * 4)))
+        
+        # Create the Adjective conjugation table
+        self.__table_adjective = ConjugationTable(
+            font=self.__font_details,
+            row_count=8,
+            column_count=5,
+            column_widths=(120, 180, 180, 180, 180),
+            row_height=self.__table_row_height)
+        self.__table_adjective.set_text(0, 0, "Case")
+        self.__table_adjective.set_text(0, 1, "Masculine")
+        self.__table_adjective.set_text(0, 2, "Neuter")
+        self.__table_adjective.set_text(0, 3, "Femanine")
+        self.__table_adjective.set_text(0, 4, "Plural")
+        self.__table_adjective.set_text(7, 0, "Short")
+        for index, case in enumerate(Case):
+            self.__table_adjective.set_text(1 + index, 0, case.name)
+        self.__entity_adjective_root.add_child(
+            self.__table_adjective,
+            pos=Vec2(self.__left_margin, table_bottom - (self.__table_row_height * 8)))
+        
+        # Create the Noun conjugation table
+        self.__table_noun = ConjugationTable(
+            font=self.__font_details,
+            row_count=7,
+            column_count=3,
+            column_widths=(120, 180, 180),
+            row_height=self.__table_row_height)
+        self.__table_noun.set_text(0, 0, "Case")
+        self.__table_noun.set_text(0, 1, "Singular")
+        self.__table_noun.set_text(0, 2, "Plural")
+        for index, case in enumerate(Case):
+            self.__table_noun.set_text(1 + index, 0, case.name)
+        self.__entity_noun_root.add_child(
+            self.__table_noun,
+            pos=Vec2(self.__left_margin, table_bottom - (self.__table_row_height * 7)))
+        
+        self.__tables = [self.__table_noun,
+                         self.__table_adjective,
+                         self.__table_verb_present,
+                         self.__table_verb_past,
+                         self.__table_verb_participles]
+
         self.next_card()
 
     def pause(self):
@@ -125,6 +291,13 @@ class StudyState(State):
     def __on_card_updated(self, card: Card):
         """Called after a card is edited."""
         self.show_card(card)
+
+    def __on_revealed_changed(self):
+        """Called revealed or un-revealed."""
+        self.__entity_reveal_root.set_visible(self.revealed)
+        self.__entity_noun_root.set_visible(isinstance(self.card.word, Noun))
+        self.__entity_adjective_root.set_visible(isinstance(self.card.word, Adjective))
+        self.__entity_verb_root.set_visible(isinstance(self.card.word, Verb))
 
     def switch_sides(self):
         """Switch which side is shown first."""
@@ -254,79 +427,204 @@ class StudyState(State):
             self.reveal_attributes += self.card.get_attributes(reveal_side)
         else:
             self.prompt_text = self.card.get_text(self.shown_side)
-            self.prompt_attributes = self.card.get_attributes(self.shown_side)
             self.reveal_text = self.card.get_text(reveal_side)
-            self.reveal_attributes = self.card.get_attributes(reveal_side)
+            self.reveal_attributes = self.card.get_attributes()
+            self.prompt_attributes = [a for a in self.card.get_attributes()
+                                      if a in ENGLISH_SIDE_CARD_ATTRIBUTES]
 
         # Get examples and word occurences in the example
+        self.__entity_example_root.destroy_children()
         max_examples = Config.max_examples_to_display
-        self.examples = []
+        examples = []
         for example in self.card.examples:
-            self.examples.append((example, example_database.get_word_occurances(
+            examples.append((example, example_database.get_word_occurances(
                 word=forms, text=example.text)))
-        if len(self.examples) < max_examples:
-            self.examples += self.app.example_database.get_example_sentences(
-                forms, count=max_examples - len(self.examples))
+        total_example_count = len(examples)
+        if len(examples) < max_examples:
+            auto_examples = list(self.app.example_database.iter_example_sentences(forms))
+            random.shuffle(auto_examples)
+            examples += auto_examples[:max_examples - len(examples)]
+            total_example_count += len(auto_examples)
+        y = self.margin_top + self.proficiency_margin_height + 60
+        for index, (sentence, occurences) in enumerate(examples):
+            self.__entity_example_root.add_child(
+                TextLabel(text=AccentedText(sentence).text,
+                          font=self.__font_details,
+                          color=Colors.BLACK,
+                          align=Align.TopLeft),
+                pos=Vec2(self.__left_margin, y))
+            if occurences is None:
+                occurences = []
+            for start, word in occurences:
+                size = self.__font_details.measure(sentence[:start - 1])
+                self.__entity_example_root.add_child(
+                    TextLabel(text=word,
+                              font=self.__font_details,
+                              color=Colors.RED,
+                              align=Align.TopLeft),
+                    pos=Vec2(self.__left_margin + size.x, y))
+            y += self.__line_spacing
+        if examples:
+            self.__entity_example_root.add_child(
+                TextLabel(text="({} total examples)".format(total_example_count),
+                          font=self.__font_details,
+                          color=Colors.GRAY,
+                          align=Align.TopLeft),
+                pos=Vec2(self.__left_margin, y))
 
+        self.__entity_prompt_text.set_text(self.prompt_text)
+        self.__entity_reveal_text.set_text(self.reveal_text)
+        self.__entity_word_type_label.set_text(self.card.word_type.name)
+
+        # Create card attribute labels
+        screen_width, screen_height = self.app.screen.get_size()
+        screen_center_x = screen_width / 2
+        attr_spacing = 16
+        y1 = self.__entity_prompt_text.get_rect().top
+        y2 = self.__entity_reveal_text.get_rect().bottom
+        for parent, attributes, y, top in (
+            (self.__entity_prompt_attributes, self.prompt_attributes, y1, True),
+            (self.__entity_reveal_attributes, self.reveal_attributes, y2, False)):
+            # Measure the width of each attribute text
+            attributes = sorted(attributes, key=lambda x: x.name)
+            parent.destroy_children()
+            boxes = []
+            total_attr_width = 0
+            for index, attr in enumerate(attributes):
+                box = CardAttributeBox(attribute=attr, short=False, font=self.__font_card_attributes)
+                boxes.append(box)
+                parent.add_child(box)
+                total_attr_width += box.get_width()
+                if index > 0:
+                    total_attr_width += attr_spacing
+
+            # Set position for each attribute box
+            x = screen_center_x - (total_attr_width / 2)
+            for box in boxes:
+                box.set_x(x)
+                if top:
+                    box.set_y(y - box.get_height())
+                else:
+                    box.set_y(y)
+                x += box.get_width() + attr_spacing
+
+        # Reset conjugation tables
+        for table in self.__tables:
+            if self.shown_side == CardSide.Russian:
+                table.set_highlighted_text(self.prompt_text)
+            else:
+                table.set_highlighted_text(self.reveal_text)
+
+        for entity in self.__counterparts:
+            entity.destroy()
+        self.__counterparts = []
+        for entity in self.__related_cards:
+            entity.destroy()
+        self.__related_cards = []
+
+        # Create list of related cards
+        self.__entity_related_cards.set_text("Related cards:")
+        x = (self.__entity_related_cards.get_position().x +
+             self.__entity_related_cards.get_width() + self.__card_box_spacing)
+        y = self.__entity_related_cards.get_position().y
+        for related_card in self.card.get_related_cards():
+            entity = self.__entity_related_cards.add_child(
+                WordBox(related_card, font=self.__font_details), pos=Vec2(x, y))
+            self.__related_cards.append(entity)
+            x += entity.get_width() + self.__card_box_spacing
+            
+        # Populate Noun conjugation tables
+        if self.card.word is not None and isinstance(self.card.word, Noun):
+            noun = self.card.word
+            for index, case in enumerate(Case):
+                self.__table_noun.set_text(1 + index, 1, noun.get_declension(
+                    case=case, plurality=Plurality.Singular))
+                self.__table_noun.set_text(1 + index, 2, noun.get_declension(
+                    case=case, plurality=Plurality.Plural))
+
+        # Populate Adjective conjugation tables
+        elif self.card.word is not None and isinstance(self.card.word, Adjective):
+            adj = self.card.word
+            for index, case in enumerate(Case):
+                self.__table_adjective.set_text(1 + index, 1, adj.get_declension(
+                    case=case, gender=Gender.Masculine))
+                self.__table_adjective.set_text(1 + index, 2, adj.get_declension(
+                    case=case, gender=Gender.Neuter))
+                self.__table_adjective.set_text(1 + index, 3, adj.get_declension(
+                    case=case, gender=Gender.Femanine))
+                self.__table_adjective.set_text(1 + index, 4, adj.get_declension(
+                    case=case, plurality=Plurality.Plural))
+            self.__table_adjective.set_text(7, 1, adj.get_declension(
+                short=True, gender=Gender.Masculine))
+            self.__table_adjective.set_text(7, 2, adj.get_declension(
+                short=True, gender=Gender.Neuter))
+            self.__table_adjective.set_text(7, 3, adj.get_declension(
+                short=True, gender=Gender.Femanine))
+            self.__table_adjective.set_text(7, 4, adj.get_declension(
+                short=True, plurality=Plurality.Plural))
+            
+        # Populate Verb conjugation tables
+        elif self.card.word is not None and isinstance(self.card.word, Verb):
+            verb = self.card.word
+            other_aspect = Aspect(1 - verb.aspect)
+            
+            self.__entity_word_translation.set_text(
+                verb.infinitive + " -- " + verb.translation)
+            self.__entity_word_details.set_text(verb.info)
+
+            # Create list of counterparts
+            self.__entity_counterparts.set_text(other_aspect.name + " Counterparts:")
+            x = (self.__entity_counterparts.get_position().x +
+                 self.__entity_counterparts.get_width() +
+                 self.__card_box_spacing)
+            y = self.__entity_counterparts.get_position().y
+            for counterpart in verb.get_counterparts():
+                entity = self.__entity_counterparts.add_child(
+                    WordBox(counterpart, font=self.__font_details), pos=Vec2(x, y))
+                self.__counterparts.append(entity)
+                x += entity.get_width() + self.__card_box_spacing
+
+            # Present/Future tense
+            title = "Present" if verb.aspect == Aspect.Imperfective else "Future"
+            title += " Tense"
+            self.__table_verb_present.set_text(0, 1, title)
+            for index, (plurality, person) in enumerate([
+                    (Plurality.Singular, Person.First),
+                    (Plurality.Singular, Person.Second),
+                    (Plurality.Singular, Person.Third),
+                    (Plurality.Plural, Person.First),
+                    (Plurality.Plural, Person.Second),
+                    (Plurality.Plural, Person.Third)]):
+                conjugation = verb.non_past[(plurality, person)]
+                self.__table_verb_present.set_text(1 + index, 1, conjugation)
+
+            # Past tense
+            for index, (plurality, gender) in enumerate([
+                    (Plurality.Singular, Gender.Masculine),
+                    (Plurality.Singular, Gender.Femanine),
+                    (Plurality.Singular, Gender.Neuter),
+                    (Plurality.Plural, None)]):
+                conjugation = verb.past[(plurality, gender)]
+                self.__table_verb_past.set_text(1 + index, 1, conjugation)
+            self.__table_verb_past.set_text(5, 1, verb.imperative[Plurality.Singular])
+            self.__table_verb_past.set_text(6, 1, verb.imperative[Plurality.Plural])
+
+            # Participles
+            self.__table_verb_participles.set_text(1, 1, verb.active_participles[Tense.Present])
+            self.__table_verb_participles.set_text(1, 2, verb.active_participles[Tense.Past])
+            self.__table_verb_participles.set_text(2, 1, verb.adverbial_participles[Tense.Present])
+            self.__table_verb_participles.set_text(2, 2, verb.adverbial_participles[Tense.Past])
+            self.__table_verb_participles.set_text(3, 1, verb.passive_participles[Tense.Present])
+            self.__table_verb_participles.set_text(3, 2, verb.passive_participles[Tense.Past])
+
+        self.__on_revealed_changed()
         Config.logger.info("Showing card: " + repr(self.prompt_text))
 
     def reveal(self):
         """Reveal the other side of the card."""
         self.revealed = True
         self.buttons[0] = Button("Mark", self.mark)
-
-    def draw_table(self, g: Graphics, x, y, table: Table,
-                   font, text_color=color.BLACK):
-        cy = y
-        for row_index, row in enumerate(table):
-            cx = x
-            h = table.row_height
-            for column_index, text in enumerate(row):
-                w = table.column_widths[column_index]
-                back_color = color.WHITE
-                if text == self.prompt_text:
-                    back_color = color.YELLOW
-                g.fill_rect(cx, cy, w + 1, h + 1, back_color)
-                g.draw_rect(cx, cy, w + 1, h + 1, color.BLACK, 1)
-                g.draw_text(cx + 6, cy + (h / 2),
-                            text=AccentedText(text),
-                            font=font,
-                            color=text_color,
-                            align=Align.MiddleLeft)
-                cx += w
-            cy += h
-
-    def draw_attributes(self, g: Graphics, y, attributes: list):
-        screen_width, screen_height = self.app.screen.get_size()
-        screen_center_x = screen_width / 2
-        total_attr_width = 0
-        attr_spacing = 16
-        attributes = sorted(attributes, key=lambda x: x.name)
-        # Measure the width of each attribute text
-        for index, attr in enumerate(attributes):
-            name = card_attributes.get_card_attribute_display_name(attr)
-            w, h = g.measure_text(text=name, font=self.card_attribute_font)
-            total_attr_width += w
-            if index > 0:
-                total_attr_width += attr_spacing
-        # Draw each attribute
-        ax = screen_center_x - (total_attr_width / 2)
-        ay = y
-        for attr in attributes:
-            name = card_attributes.get_card_attribute_display_name(attr)
-            w, h = g.measure_text(text=name, font=self.card_attribute_font)
-            rect = pygame.Rect(ax, ay - h, w, h)
-            rect.inflate_ip(8, 6)
-            back_color = color.BLACK
-            if attr in ATTRIBUTE_COLORS:
-                back_color = ATTRIBUTE_COLORS[attr]
-            g.fill_rect(rect, color=back_color)
-            g.draw_text(ax, ay,
-                        text=name,
-                        font=self.card_attribute_font,
-                        color=color.WHITE,
-                        align=Align.BottomLeft)
-            ax += w + attr_spacing
+        self.__on_revealed_changed()
 
     def draw_top_proficiency_bar(self, g: Graphics, top_y, bar_height, bar_color):
         screen_width, screen_height = self.app.screen.get_size()
@@ -378,204 +676,22 @@ class StudyState(State):
         screen_width, screen_height = self.app.screen.get_size()
         screen_center_x = screen_width / 2
         screen_center_y = screen_height / 2
-        self.proficiency_margin_height = 32
 
         # Draw top/bottom proficiency bars
         if self.card.proficiency_level > 0:
-            marked_state_color = math.lerp(Config.proficiency_level_colors[
+            marked_state_color = cmg.math.lerp(Config.proficiency_level_colors[
                 self.card.proficiency_level], color.WHITE, 0.7)
             g.fill_rect(0, self.margin_top, screen_width,
                         self.proficiency_margin_height,
                         color=marked_state_color)
-            g.fill_rect(0, screen_height - self.margin_bottom - self.proficiency_margin_height,
-                        screen_width, self.proficiency_margin_height,
-                        color=marked_state_color)
+            if not self.revealed:
+                g.fill_rect(0, screen_height - self.margin_bottom - self.proficiency_margin_height,
+                            screen_width, self.proficiency_margin_height,
+                            color=marked_state_color)
             self.draw_top_proficiency_bar(g, self.margin_top,
                                           self.proficiency_margin_height,
                                           bar_color=marked_state_color)
 
-        # Draw word type
-        word_type_name = self.card.word_type.name
-        g.draw_text(screen_center_x, self.margin_top + 32 + 16,
-                    text=word_type_name,
-                    font=self.word_type_font,
-                    color=cmg.color.GRAY,
-                    align=Align.TopCenter)
-
-        # Draw card text and attributes
-        card_font = g.get_font_to_fit(
-            text=self.prompt_text, width=screen_width, fonts=self.card_fonts)
-        g.draw_text(screen_center_x, screen_center_y - 50,
-                    text=self.prompt_text,
-                    font=card_font,
-                    color=Config.card_front_text_color,
-                    align=Align.Centered)
-        self.draw_attributes(g, y=screen_center_y - 50 - 60,
-                             attributes=self.prompt_attributes)
-        if self.revealed:
-            card_font = g.get_font_to_fit(
-                text=self.reveal_text, width=screen_width, fonts=self.card_fonts)
-            g.draw_text(screen_center_x, screen_center_y + 50,
-                        text=self.reveal_text,
-                        font=card_font,
-                        color=Config.card_back_text_color,
-                        align=Align.Centered)
-            self.draw_attributes(g, y=screen_center_y + 50 + 60,
-                                 attributes=self.reveal_attributes)
-
-        # Draw example sentences
-        # TODO: draw accented text
-        if self.revealed and len(self.examples) > 0:
-            for index, (sentence, occurences) in enumerate(self.examples):
-                sentence = AccentedText(sentence).text
-                g.draw_text(20, self.margin_top + self.proficiency_margin_height + 60 + index * 20,
-                            text=sentence,
-                            font=self.word_details_font,
-                            color=Config.card_back_text_color,
-                            align=Align.TopLeft)
-                if occurences is None:
-                    occurences = []
-                for start, word in occurences:
-                    w, h = g.measure_text(
-                        sentence[:start - 1], font=self.word_details_font)
-                    g.draw_text(20 + w, self.margin_top + self.proficiency_margin_height + 60 + index * 20,
-                                text=word,
-                                font=self.word_details_font,
-                                color=color.RED,
-                                align=Align.TopLeft)
-
-        # Draw word details
-        if self.revealed and self.card.word is not None:
-            if isinstance(self.card.word, Noun):
-                noun = self.card.word
-                present = Table(column_widths=(120, 180, 180), row_height=22)
-                present.add_row(["Case", "Singular", "Plural"])
-                for case in Case:
-                    present.add_row([case.name,
-                                     noun.get_declension(
-                                         case=case, plurality=Plurality.Singular),
-                                     noun.get_declension(case=case, plurality=Plurality.Plural)])
-                self.draw_table(g, table=present,
-                                x=20, y=screen_height - self.margin_bottom - 50 - (22 * 7),
-                                font=self.word_details_font,
-                                text_color=color.BLACK)
-            elif isinstance(self.card.word, Adjective):
-                adj = self.card.word
-                present = Table(column_widths=(
-                    120, 180, 180, 180, 180), row_height=22)
-                present.add_row(
-                    ["", "Masculine", "Neuter", "Femanine", "Plural"])
-                for case in Case:
-                    present.add_row([case.name,
-                                     adj.get_declension(
-                                         case=case, gender=Gender.Masculine),
-                                     adj.get_declension(
-                                         case=case, gender=Gender.Neuter),
-                                     adj.get_declension(
-                                         case=case, gender=Gender.Femanine),
-                                     adj.get_declension(case=case, plurality=Plurality.Plural)])
-                present.add_row(["Short",
-                                 adj.get_declension(
-                                     short=True, gender=Gender.Masculine),
-                                 adj.get_declension(
-                                     short=True, gender=Gender.Neuter),
-                                 adj.get_declension(
-                                     short=True, gender=Gender.Femanine),
-                                 adj.get_declension(short=True, plurality=Plurality.Plural)])
-                self.draw_table(g, table=present,
-                                x=20, y=screen_height - self.margin_bottom - 50 - (22 * 8),
-                                font=self.word_details_font,
-                                text_color=color.BLACK)
-            elif isinstance(self.card.word, Verb):
-                verb = self.card.word
-                other_aspect = Aspect(1 - verb.aspect)
-
-                present = Table(column_widths=(40, 160), row_height=22)
-                title = "Present" if verb.aspect == Aspect.Imperfective else "Future"
-                title += " Tense"
-                present.add_row(["", title])
-                for index, (plurality, person, pronoun) in enumerate([
-                    (Plurality.Singular, Person.First, "я"),
-                    (Plurality.Singular, Person.Second, "ты"),
-                    (Plurality.Singular, Person.Third, "он"),
-                    (Plurality.Plural, Person.First, "мы"),
-                    (Plurality.Plural, Person.Second, "вы"),
-                        (Plurality.Plural, Person.Third, "они")]):
-                    conjugation = verb.non_past[(plurality, person)]
-                    present.add_row([pronoun, conjugation])
-
-                past = Table(column_widths=(50, 160), row_height=22)
-                past.add_row(["", "Past Tense"])
-                for index, (plurality, gender, pronoun) in enumerate([
-                    (Plurality.Singular, Gender.Masculine, "он"),
-                    (Plurality.Singular, Gender.Femanine, "она"),
-                    (Plurality.Singular, Gender.Neuter, "оно"),
-                        (Plurality.Plural, None, "они")]):
-                    conjugation = verb.past[(plurality, gender)]
-                    past.add_row([pronoun, conjugation])
-                past.add_row(["imp1", verb.imperative[Plurality.Singular]])
-                past.add_row(["imp2", verb.imperative[Plurality.Plural]])
-
-                participles = Table(column_widths=(
-                    100, 160, 160), row_height=22)
-                participles.add_row(["", "Present", "Past"])
-                participles.add_row(["Active",
-                                     verb.active_participles[Tense.Present],
-                                     verb.active_participles[Tense.Past]])
-                participles.add_row(["Adverbial",
-                                     verb.adverbial_participles[Tense.Present],
-                                     verb.adverbial_participles[Tense.Past]])
-                participles.add_row(["Passive",
-                                     verb.passive_participles[Tense.Present],
-                                     verb.passive_participles[Tense.Past]])
-
-                self.draw_table(g, table=present,
-                                x=20, y=screen_height - self.margin_bottom - 20 - (22 * 7),
-                                font=self.word_details_font,
-                                text_color=color.BLACK)
-                counterparts = AccentedText("")
-                for index, counterpart in enumerate(verb.counterparts):
-                    if index > 0:
-                        counterparts += ", "
-                    counterparts += counterpart
-                y = screen_height - self.margin_bottom - 20 - (22 * 7) - 12
-                g.draw_text(20, y - (25 * 2),
-                            text=other_aspect.name + " counterparts: " + counterparts,
-                            font=self.word_details_font,
-                            color=Config.card_back_text_color,
-                            align=Align.BottomLeft)
-                g.draw_text(20, y - (25 * 1),
-                            text=verb.infinitive + " -- " + verb.translation,
-                            font=self.word_details_font,
-                            color=Config.card_back_text_color,
-                            align=Align.BottomLeft)
-                g.draw_text(20, y - (25 * 0),
-                            text=verb.info,
-                            font=self.word_details_font,
-                            color=Config.card_back_text_color,
-                            align=Align.BottomLeft)
-                self.draw_table(g, table=past,
-                                x=240, y=screen_height - self.margin_bottom - 20 - (22 * 7),
-                                font=self.word_details_font,
-                                text_color=color.BLACK)
-                self.draw_table(g, table=participles,
-                                x=640, y=screen_height - self.margin_bottom - 20 - (22 * 4),
-                                font=self.word_details_font,
-                                text_color=color.BLACK)
-              
-        # Draw related cards
-        if self.card.get_related_cards() and self.revealed:  
-            y = screen_height - self.margin_bottom - 20 - (22 * 8) - 12
-            related_cards_text = AccentedText("")
-            for related_card in self.card.get_related_cards():
-                if related_cards_text.text:
-                    related_cards_text += ", "
-                related_cards_text += related_card.get_russian()
-            g.draw_text(20, y - (25 * 2),
-                        text="Related cards: " + related_cards_text,
-                        font=self.word_details_font,
-                        color=Config.card_back_text_color,
-                        align=Align.BottomLeft)
         # Draw state
         State.draw(self, g)
 

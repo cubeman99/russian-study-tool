@@ -1,7 +1,8 @@
 import pygame
 from pygame import Rect
 from enum import IntFlag
-from cmg import color
+import cmg
+from cmg.color import Colors
 from study_tool.russian.word import AccentedText
 from cmg.math import Vec2
 
@@ -37,7 +38,6 @@ class Graphics:
         self.font = pygame.font.Font(None, 38)
         self.accent_input_chars = "'´`"
         self.accent_render_char = "´"
-        self.accent_bitmap = {}
         self.__translation = Vec2(0, 0)
 
     def get_viewport(self) -> pygame.Rect:
@@ -70,7 +70,7 @@ class Graphics:
                          dest=(Vec2(dest) + self.__translation).totuple(),
                          area=source)
 
-    def draw_rect(self, x, y=None, width=None, height=None, color=color.BLACK, thickness=1):
+    def draw_rect(self, x, y=None, width=None, height=None, color=Colors.BLACK, thickness=1):
         if isinstance(x, pygame.Rect):
             rect = pygame.Rect(x)
         else:
@@ -79,7 +79,7 @@ class Graphics:
         rect.top += self.__translation.y
         pygame.draw.rect(self.screen, tuple(color), rect, thickness)
 
-    def fill_rect(self, x, y=None, width=None, height=None, color=color.BLACK):
+    def fill_rect(self, x, y=None, width=None, height=None, color=Colors.BLACK):
         if isinstance(x, pygame.Rect):
             rect = pygame.Rect(x)
         else:
@@ -105,12 +105,11 @@ class Graphics:
         """
         if font is None:
             font = self.font
-        text = AccentedText(text)
-        return font.size(text.text)
-        text_to_render = text
-        for accent_char in self.accent_input_chars:
-            text_to_render = text_to_render.replace(accent_char, "")
-        return font.size(text_to_render)
+        if isinstance(font, cmg.Font):
+            font = font.get_pygame_font()
+        if isinstance(text, AccentedText):
+            return Vec2(font.size(text.text))
+        return Vec2(font.size(text))
 
     def get_font_to_fit(self, text, width: float,
                         fonts: list) -> pygame.font.Font:
@@ -125,7 +124,24 @@ class Graphics:
                 return font
         return font
 
-    def draw_text(self, x, y, text, color=color.BLACK, font=None, align=Align.TopLeft, accented=True):
+    def get_font_size_to_fit(self,
+                             text,
+                             min_font_size: int,
+                             max_font_size: int,
+                             width: float) -> int:
+        """
+        Returns the largest font from a list of fonts that will allow the given
+        text to fit within the specified width.
+        """
+        assert max_font_size >= min_font_size
+        for font_size in range(max_font_size, min_font_size, -1):
+            font = cmg.Font(font_size)
+            w, _ = font.measure(AccentedText(text).text)
+            if w <= width:
+                return font_size
+        return min_font_size
+
+    def draw_text(self, x, y, text, color=Colors.BLACK, font=None, align=Align.TopLeft, accented=True):
         """
         Draw accented text.
         """
@@ -146,15 +162,17 @@ class Graphics:
             text_bitmap = font.render(text, True, tuple(color))
             self.blit(text_bitmap, (x, y))
 
-    def draw_accented_text(self, x, y, text, color=color.BLACK, font=None, align=Align.TopLeft):
+    def get_accent_bitmap(self, font, color):
+        return font.render(self.accent_render_char, True, tuple(color))
+
+    def draw_accented_text(self, x, y, text, color=Colors.BLACK, font=None, align=Align.TopLeft):
         """
         Draw accented text.
         """
+        if isinstance(font, cmg.Font):
+            font = font.get_pygame_font()
         if font is None:
             font = self.font
-        if font not in self.accent_bitmap:
-            self.accent_bitmap[font] = font.render(
-                self.accent_render_char, True, tuple(color))
         self.accent_half_width = self.font.size(self.accent_render_char)[0] / 2
 
         text = AccentedText(text)
@@ -173,12 +191,13 @@ class Graphics:
         self.blit(text_bitmap, Vec2(x, y))
 
         # Draw accent marks
-        for accent_index in text.accents:
-            w1, _ = font.size(text.text[:accent_index])
-            w2, _ = font.size(text.text[:accent_index + 1])
-            center_x = (w2 + w1) / 2
-            self.blit(self.accent_bitmap[font],
-                      Vec2(x + center_x - self.accent_half_width, y))
+        if text.accents:
+            accent_bitmap = self.get_accent_bitmap(font=font, color=color)
+            for accent_index in text.accents:
+                w1, _ = font.size(text.text[:accent_index])
+                w2, _ = font.size(text.text[:accent_index + 1])
+                center_x = (w2 + w1) / 2
+                self.blit(accent_bitmap, Vec2(x + center_x - self.accent_half_width, y))
 
     def blit(self, image, dest):
         self.screen.blit(image, (Vec2(dest) + self.__translation).totuple())
@@ -193,7 +212,7 @@ class TextPrint:
         self.font = pygame.font.Font(None, 38)
 
     def print(self, screen, textString):
-        textBitmap = self.font.render(textString, True, tuple(color.BLACK))
+        textBitmap = self.font.render(textString, True, tuple(Colors.BLACK))
         screen.blit(textBitmap, [self.x, self.y])
         self.y += self.line_height
 

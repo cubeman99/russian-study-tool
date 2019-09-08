@@ -97592,6 +97592,104 @@
       "examples": [],
       "name": "ошеломлённый",
       "type": "Adjective"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "рожать",
+          "рождать"
+        ],
+        "imperative": {
+          "Plural": "роди'те",
+          "Singular": "роди'"
+        },
+        "infinitive": "родить",
+        "info": "This verb can also mean the following: yield, give rise to, land, land bear.",
+        "non_past": {
+          "Plural": {
+            "First": "роди'м",
+            "Second": "роди'те",
+            "Third": "родя'т"
+          },
+          "Singular": {
+            "First": "рожу'",
+            "Second": "роди'шь",
+            "Third": "роди'т"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "роди'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "роди'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "рождённый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "родила'",
+          "Masculine": "роди'л",
+          "Neuter": "роди'ло",
+          "Plural": "роди'ли"
+        },
+        "translation": "to give birth"
+      },
+      "examples": [],
+      "name": "родить",
+      "type": "Verb"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "уме'лую",
+            "Dative": "уме'лой",
+            "Genetive": "уме'лой",
+            "Instrumental": "уме'лой",
+            "Nominative": "уме'лая",
+            "Prepositional": "уме'лой"
+          },
+          "Masculine": {
+            "Accusative": "уме'лого",
+            "Dative": "уме'лому",
+            "Genetive": "уме'лого",
+            "Instrumental": "уме'лым",
+            "Nominative": "уме'лый",
+            "Prepositional": "уме'лом"
+          },
+          "Neuter": {
+            "Accusative": "уме'лое",
+            "Dative": "уме'лому",
+            "Genetive": "уме'лого",
+            "Instrumental": "уме'лым",
+            "Nominative": "уме'лое",
+            "Prepositional": "уме'лом"
+          },
+          "Plural": {
+            "Accusative": "уме'лых",
+            "Dative": "уме'лым",
+            "Genetive": "уме'лых",
+            "Instrumental": "уме'лыми",
+            "Nominative": "уме'лые",
+            "Prepositional": "уме'лых"
+          }
+        },
+        "short_form": {
+          "Femanine": "уме'ла",
+          "Masculine": "уме'л",
+          "Neuter": "уме'ло",
+          "Plural": "уме'лы"
+        }
+      },
+      "examples": [],
+      "name": "умелый",
+      "type": "Adjective"
     }
   ]
 }
