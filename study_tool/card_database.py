@@ -306,20 +306,21 @@ class CardDatabase:
             key = (word_type,
                    AccentedText(card_state["russian"]).text,
                    AccentedText(card_state["english"]).text)
-            if key in self.cards:
+            card = self.cards.get(key, None)
+            if card:
                 card = self.cards[key]
                 card.deserialize_study_data(card_state)
             else:
                 Config.logger.warning("Card not found: " + repr(key))
-
+                
+        Config.logger.info("Deserializing study metrics")
         self.metrics_history = {}
         for metrics_state in state["metrics"]:
             metrics = StudyMetrics()
             metrics.deserialize(metrics_state)
             self.metrics_history[metrics.get_date_string()] = metrics
-        current_metrics = self.get_study_metrics()
-        self.metrics_history[current_metrics.get_date_string()
-                             ] = current_metrics
+        #current_metrics = self.get_study_metrics()
+        #self.metrics_history[current_metrics.get_date_string()] = current_metrics
 
     def deserialize_card_set(self, state: dict) -> CardSet:
         """Deserialize card set data."""
@@ -430,21 +431,6 @@ class CardDatabase:
                             card_set.key = card_set.name.text.lower().replace(" ", "_")
                             card_sets.append(card_set)
                             left_side = CardSide.Russian
-                            split_attributes = None
-                        elif command == "key":
-                            card_set.key = value
-                        elif command == "info":
-                            card_set.info = AccentedText(value)
-                        elif command == "side":
-                            card_set.side = name_to_side(value)
-                        elif command == "left":
-                            left_side = name_to_side(value)
-                        elif command == "split":
-                            split_sides = [v.strip() for v in value.split("/")]
-                            split_attributes = []
-                            for attr_list in split_sides:
-                                split_attributes.append([CardAttributes(x.strip())
-                                                         for x in attr_list.split()])
                         elif command == "type":
                             word_type = WORD_TYPE_DICT[value.lower()]
                         elif command == "ex" or command == "example":
@@ -486,12 +472,10 @@ class CardDatabase:
                                 card.word_type = word_type
                                 card.text[left_side] = text_l
                                 card.text[1 - left_side] = text_r
-                                card.add_attributes(attributes_l, left_side)
-                                card.add_attributes(
-                                    attributes_r, 1 - left_side)
+                                card.add_attributes(attributes_l)
+                                card.add_attributes(attributes_r)
                                 if split_attributes is not None and len(text_l_list) > 1:
-                                    card.add_attributes(attrs=split_attributes[split_index],
-                                                        side=1 - left_side)
+                                    card.add_attributes(split_attributes[split_index])
                                 card_set.cards.append(card)
                                 card.generate_word_name()
                                 self.add_card(card)
@@ -528,7 +512,7 @@ class CardDatabase:
                 elif file_path.endswith(".yaml"):
                     # Load new card set file
                     with open(file_path, "r", encoding="utf8") as f:
-                        state = yaml.safe_load(f)
+                        state = yaml.load(f, Loader=yaml.CLoader)
                         if "card_set" in state:
                             card_set = self.deserialize_card_set(state)
                             if card_set:

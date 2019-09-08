@@ -54,7 +54,7 @@ class Card:
     def __init__(self, front="", back=""):
         self.word_type = None
         self.text = [AccentedText(front), AccentedText(back)]
-        self.attributes = [[], []]
+        self.__attributes = []
         self.word_name = AccentedText(self.russian)
         self.examples = []
         self.related_cards = []
@@ -119,28 +119,27 @@ class Card:
     
     def clear_attributes(self):
         """Clear all card attributes."""
-        self.attributes = [[], []]
+        self.__attributes = []
     
     def clear_related_cards(self):
         """Clear all related cards."""
         self.related_cards = []
 
-    def add_attributes(self, attrs: list, side: CardSide):
+    def add_attributes(self, attrs: list):
         """Add multiple attributes to the card."""
         for attr in attrs:
-            self.add_attribute(attr=attr, side=side)
+            self.add_attribute(attr)
 
-    def add_attribute(self, attr: CardAttributes, side=CardSide.Russian):
+    def add_attribute(self, attr: CardAttributes):
         """Add an attribute to the card."""
-        if attr not in self.attributes[side]:
-            self.attributes[side].append(attr)
-            self.attributes[side].sort(key=lambda x: x.name)
+        if attr not in self.__attributes:
+            self.__attributes.append(attr)
+            self.__attributes.sort(key=lambda x: x.name)
 
     def get_display_text(self, side: CardSide):
         """Get the text to display for a given side."""
         text = self.text[side]
-        attributes = self.attributes[side]
-        if len(attributes) > 0:
+        if len(self.__attributes) > 0 and side == CardSide.Russian:
             text += " (" + ", ".join(a.value + "." for a in attributes) + ")"
         return text
 
@@ -159,9 +158,7 @@ class Card:
 
     def get_attributes(self, side=None) -> list:
         """Get the card attributes for a given side."""
-        if side is None:
-            return list(set(self.attributes[0] + self.attributes[1]))
-        return self.attributes[side]
+        return self.__attributes
 
     def get_related_cards(self) -> list:
         """Get the list of related cards."""
@@ -228,9 +225,8 @@ class Card:
         state["type"] = self.word_type.name.lower()
         state["en"] = repr(self.english)
         state["ru"] = repr(self.russian)
-        all_attributes = self.attributes[0] + self.attributes[1]
-        if all_attributes:
-            state["attrs"] = [x.value for x in all_attributes]
+        if self.__attributes:
+            state["attrs"] = [x.value for x in self.__attributes]
         if self.examples:
             state["ex"] = [[repr(e), ""] for e in self.examples]
         if self.related_cards:
@@ -251,7 +247,7 @@ class Card:
         if "ex" in state:
             for en, ru in state["ex"]:
                 self.examples.append(AccentedText(en))
-        self.attributes = [[], []]
+        self.__attributes = []
         if "attrs" in state:
             for attr_short in state["attrs"]:
                 attr = CardAttributes(attr_short)

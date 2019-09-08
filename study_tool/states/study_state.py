@@ -416,21 +416,21 @@ class StudyState(State):
             forms = self.card.russian.text
 
         # Get the card text and attributes
+        self.prompt_attributes = []
         if (self.params.random_form and self.shown_side == CardSide.Russian and
                 word is not None):
             # Get a random form of the card's word
-            self.prompt_attributes = []
             self.prompt_text, self.reveal_attributes = (
                 self.get_random_russian_form(card=self.card, word=word))
-            self.reveal_attributes += self.card.get_attributes(self.shown_side)
-            self.reveal_text = self.card.get_text(reveal_side)
-            self.reveal_attributes += self.card.get_attributes(reveal_side)
+            self.reveal_attributes += self.card.get_attributes()
+            self.reveal_text = self.card.get_text(CardSide.English)
         else:
             self.prompt_text = self.card.get_text(self.shown_side)
             self.reveal_text = self.card.get_text(reveal_side)
             self.reveal_attributes = self.card.get_attributes()
-            self.prompt_attributes = [a for a in self.card.get_attributes()
-                                      if a in ENGLISH_SIDE_CARD_ATTRIBUTES]
+            if self.shown_side == CardSide.English:
+                self.prompt_attributes = [a for a in self.card.get_attributes()
+                                          if a in ENGLISH_SIDE_CARD_ATTRIBUTES]
 
         # Get examples and word occurences in the example
         self.__entity_example_root.destroy_children()

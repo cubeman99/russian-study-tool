@@ -8402,8 +8402,8 @@
     },
     {
       "english": "native",
-      "history": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTF",
-      "last_encounter_time": 1567980060.7898583,
+      "history": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTF",
+      "last_encounter_time": 1567980575.0917163,
       "proficiency_level": 4,
       "russian": "родной",
       "type": "Adjective"
@@ -17538,8 +17538,8 @@
     },
     {
       "english": "to know how",
-      "history": "TTTTTTTTFTTTTTTTTTTTTTTTTTTTTFTFFFTFTFTTTFFFF",
-      "last_encounter_time": 1567979913.6654515,
+      "history": "TTTTTTTTTTFTTTTTTTTTTTTTTTTTTTTFTFFFTFTFTTTFFFF",
+      "last_encounter_time": 1567980573.1705384,
       "proficiency_level": 4,
       "russian": "уметь",
       "type": "Verb"
@@ -23026,8 +23026,8 @@
     },
     {
       "english": "table",
-      "history": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
-      "last_encounter_time": 1567980037.9939864,
+      "history": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+      "last_encounter_time": 1567980579.202382,
       "proficiency_level": 4,
       "russian": "стол",
       "type": "Noun"
@@ -25322,16 +25322,16 @@
     },
     {
       "english": "to give birth",
-      "history": "TTTTTTTTTTTTTTTTTTTT",
-      "last_encounter_time": 1567980047.1349428,
+      "history": "TTTTTTTTTTTTTTTTTTTTT",
+      "last_encounter_time": 1567980571.0230107,
       "proficiency_level": 4,
       "russian": "родить",
       "type": "Verb"
     },
     {
       "english": "skillfull",
-      "history": "TTTTTTTTTTTTTTTTTTFTT",
-      "last_encounter_time": 1567980041.560027,
+      "history": "TTTTTTTTTTTTTTTTTTTTFTT",
+      "last_encounter_time": 1567980577.3960319,
       "proficiency_level": 4,
       "russian": "умелый",
       "type": "Adjective"
@@ -36028,7 +36028,7 @@
     },
     {
       "all_metrics": {
-        "history_score": 2358.8678278863154,
+        "history_score": 2358.885987230359,
         "proficiency_counts": [
           9,
           190,
@@ -36039,7 +36039,7 @@
       },
       "card_type_metrics": {
         "Adjective": {
-          "history_score": 374.45068427159305,
+          "history_score": 374.4538227997316,
           "proficiency_counts": [
             1,
             7,
@@ -36139,7 +36139,7 @@
           ]
         },
         "Verb": {
-          "history_score": 775.715089521618,
+          "history_score": 775.7301103375236,
           "proficiency_counts": [
             3,
             8,
@@ -36152,5 +36152,5 @@
       "date": "2019/09/08"
     }
   ],
-  "save_time": 1567980060.7898583
+  "save_time": 1567980579.202382
 }

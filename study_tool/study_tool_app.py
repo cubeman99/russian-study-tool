@@ -4,6 +4,7 @@ os.environ["SDL_VIDEO_WINDOW_POS"] = "420,80"  # Set initial window position
 import pygame
 import time
 import shutil
+import yaml
 import cmg
 from cmg import color
 import cmg.logging
@@ -29,7 +30,6 @@ from study_tool.example_database import ExampleDatabase
 from study_tool.states.read_text_state import ReadTextState
 from study_tool.states.card_edit_state import CardEditState
 from study_tool.states.study_state import StudyParams
-import yaml
 
 DEAD_ZONE = 0.01
 
@@ -84,7 +84,7 @@ class StudyCardsApp(Application):
         # Load study data
         self.load_study_data()
 
-        self.save_card_data()
+        Config.logger.info("Initialization complete!")
 
         self.states = []
         self.main_menu = MenuState(package=self.root)
@@ -121,8 +121,6 @@ class StudyCardsApp(Application):
         self.input.key_released.connect(self.__on_key_released)
         self.input.mouse_pressed.connect(self.__on_mouse_pressed)
         self.input.mouse_released.connect(self.__on_mouse_released)
-
-        Config.logger.info("Initialization complete!")
 
     def iter_card_sets(self):
         """Iterate all card sets"""
@@ -188,13 +186,15 @@ class StudyCardsApp(Application):
         del state["card_set"]["cards"]
         with open(path, "wb") as opened_file:
             yaml.dump(state, opened_file, encoding="utf8",
-                        allow_unicode=True, default_flow_style=False)
+                      allow_unicode=True, default_flow_style=False,
+                      Dumper=yaml.CDumper)
             opened_file.write(b"  cards:\n")
             for card_state in cards_state:
                 opened_file.write(b"    - ")
                 yaml.dump(
                     card_state, opened_file, encoding="utf8",
-                    allow_unicode=True, default_flow_style=True)
+                    allow_unicode=True, default_flow_style=True,
+                    Dumper=yaml.CDumper)
                 
         card_set.set_fixed_card_set(False)
         card_set.set_file_path(path)
@@ -312,14 +312,17 @@ class StudyCardsApp(Application):
             for card in state:
                 f.write(b"- ")
                 yaml.dump(card, f, encoding="utf8",
-                          allow_unicode=True, default_flow_style=True)
-        shutil.move(temp_path, path)
+                          allow_unicode=True, default_flow_style=True,
+                          Dumper=yaml.CDumper)
+        os.remove(path)
+        os.rename(temp_path, path)
 
     def load_card_data(self):
         path = os.path.join(self.root_path, self.card_data_file_name)
         Config.logger.info("Loading card data from: " + path)
         with open(path, "r", encoding="utf8") as f:
-            state = yaml.safe_load(f)
+            state = yaml.load(f, Loader=yaml.CLoader)
+            Config.logger.info("Deserializing card data from: " + path)
             self.card_database.deserialize_card_data(state)
 
     def save_study_data(self):
@@ -330,7 +333,8 @@ class StudyCardsApp(Application):
         temp_path = path + ".temp"
         with open(temp_path, "w", encoding="utf8") as f:
             json.dump(state, f, indent=2, sort_keys=True, ensure_ascii=False)
-        shutil.move(temp_path, path)
+        os.remove(path)
+        os.rename(temp_path, path)
 
     def load_study_data(self):
         path = os.path.join(self.root_path, self.save_file_name)
@@ -338,6 +342,7 @@ class StudyCardsApp(Application):
             Config.logger.info("Loading study data from: " + path)
             with open(path, "r", encoding="utf8") as f:
                 state = json.load(f)
+                Config.logger.info("Deserializing study data from: " + path)
                 self.card_database.deserialize_study_data(state)
 
     def save_word_database(self):

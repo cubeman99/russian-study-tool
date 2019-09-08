@@ -1,4 +1,5 @@
 import json
+import os
 import shutil
 from study_tool.russian.types import *
 from study_tool.russian.word import *
@@ -94,29 +95,24 @@ class WordDatabase:
             if word is not None:
                 if isinstance(word, Verb):
                     if word.aspect == Aspect.Imperfective:
-                        card.add_attribute(
-                            CardAttributes.Imperfective, side=CardSide.English)
+                        card.add_attribute(CardAttributes.Imperfective)
                     elif word.aspect == Aspect.Perfective:
-                        card.add_attribute(
-                            CardAttributes.Perfective, side=CardSide.English)
+                        card.add_attribute(CardAttributes.Perfective)
                     suffix = word.classify_conjugation()
                     if suffix is not None:
-                        card.add_attribute(
-                            VERB_SUFFIX_TO_ATTRIBUTE[suffix], side=CardSide.English)
+                        card.add_attribute(VERB_SUFFIX_TO_ATTRIBUTE[suffix])
                 elif isinstance(word, Noun):
-                    if CardAttributes.Indeclinable in card.attributes[CardSide.Russian]:
+                    if CardAttributes.Indeclinable in card.get_attributes():
                         word.gender = None
                     else:
                         for gender, attr in GENDER_TO_ATTRIBUTE.items():
-                            if attr in card.attributes[CardSide.Russian]:
+                            if attr in card.get_attributes():
                                 word.gender = gender
                         if word.gender is not None:
-                            card.add_attribute(GENDER_TO_ATTRIBUTE[word.gender],
-                                               side=CardSide.Russian)
+                            card.add_attribute(GENDER_TO_ATTRIBUTE[word.gender])
                     if word.gender is None:
                         word.indeclinable = True
-                        card.add_attribute(CardAttributes.Indeclinable,
-                                           side=CardSide.Russian)
+                        card.add_attribute(CardAttributes.Indeclinable)
                 card.word = word
                 return True
         return False
@@ -138,7 +134,8 @@ class WordDatabase:
         with open(temp_path, "w", encoding="utf8") as f:
             json.dump(word_data, f, indent=2,
                       sort_keys=True, ensure_ascii=False)
-        shutil.move(temp_path, path)
+        os.remove(path)
+        os.rename(temp_path, path)
 
     def load(self, path):
         with open(path, "r", encoding="utf8") as f:
