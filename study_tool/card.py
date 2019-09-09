@@ -95,13 +95,13 @@ class Card:
 
     def get_key(self) -> tuple:
         """Get the key that identifies this card."""
-        return (self.word_type, self.russian.text, self.english.text)
+        return (self.word_type, self.russian.text.lower(), self.english.text.lower())
 
     def get_english_key(self) -> tuple:
-        return (self.word_type, self.english.text, ",".join(sorted([x.value for x in self.get_attributes() if x in ENGLISH_SIDE_CARD_ATTRIBUTES])))
+        return (self.word_type, self.english.text.lower(), ",".join(sorted([x.value for x in self.get_attributes() if x in ENGLISH_SIDE_CARD_ATTRIBUTES])))
 
     def get_russian_key(self) -> tuple:
-        return (self.word_type, self.russian.text, ",".join(sorted([x.value for x in self.get_attributes()])))
+        return (self.word_type, self.russian.text.lower(), ",".join(sorted([x.value for x in self.get_attributes()])))
     
     def get_proficiency_score(self) -> float:
         """Get the key proficiency score."""

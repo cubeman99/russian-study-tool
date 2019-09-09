@@ -80,13 +80,13 @@ class CardDatabase:
         Retreive a card by word type and text.
         """
         if english is not None and russian is not None:
-            key = (word_type, AccentedText(russian).text, AccentedText(english).text)
+            key = (word_type, AccentedText(russian).text.lower(), AccentedText(english).text.lower())
             return self.cards.get(key, None)
         if english is not None:
-            key = (word_type, AccentedText(english).text)
+            key = (word_type, AccentedText(english).text.lower())
             return self.english_key_to_card_dict.get(key, None)
         if russian is not None:
-            key = (word_type, AccentedText(russian).text)
+            key = (word_type, AccentedText(russian).text.lower())
             return self.russian_key_to_card_dict.get(key, None)
         raise Exception("Missing english or russian argument")
 
@@ -334,7 +334,7 @@ class CardDatabase:
             if len(card_state) == 3:
                 russian = card_state[1]
                 english = card_state[2]
-                key = (word_type, russian, english)
+                key = (word_type, russian.lower(), english.lower())
                 card = self.cards.get(key, None)
                 if card is None:
                     raise Exception("Cannot find card {} in database"

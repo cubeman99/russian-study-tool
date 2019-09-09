@@ -60,6 +60,7 @@
 набра'ть - to dial
 огорчи'ть - to upset (cause grief)
 расколо'ть - to split
+беда' - trouble
 
 @type phrase
 никогда' ещё не' было ничего' и никого' подо'бного - there has never been anything or anyone like this
