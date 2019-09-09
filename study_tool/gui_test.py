@@ -60,7 +60,7 @@ class GUITesterApp(Application):
 
         widget.set_layout(layout)
         self.state = GUIState(widget)
-        self.state.app = self
+        self.state.init(self)
         text_edit.focus()
 
     def update(self, dt):

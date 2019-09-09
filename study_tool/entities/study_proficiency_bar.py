@@ -9,7 +9,7 @@ class StudyProficiencyBar(Entity):
     Bar that displays the proficiency histogram of a study set.
     """
 
-    def __init__(self, center_y, left, right, study_set):
+    def __init__(self, study_set, center_y=0, left=0, right=0):
         super().__init__()
         self.center_y = center_y
         self.left = left
@@ -22,6 +22,9 @@ class StudyProficiencyBar(Entity):
 
     def on_create(self):
         """Called when the entity is created."""
+        self.recalculate()
+
+    def recalculate(self):
         cards = []
         if isinstance(self.study_set, list):
             cards = self.study_set
@@ -38,6 +41,7 @@ class StudyProficiencyBar(Entity):
                 self.__score += count * max(0, level - 1)
         self.__score /= max(1.0, float((Config.proficiency_levels - 1) * len(cards)))
         self.__score = int(round(self.__score * 100))
+
 
     def update(self, dt):
         """Update the entity."""

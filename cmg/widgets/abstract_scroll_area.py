@@ -170,11 +170,11 @@ class AbstractScrollArea(widgets.Widget):
 
     def on_update(self):
         viewport_height = self.__layout.get_height()
-        area_height = self.__widget.get_height()
+        area_height = self.__widget.get_height() + int(viewport_height * 0.8)
         self.__scrollbar_h.set_minimum(0)
         self.__scrollbar_h.set_maximum(
             max(0, area_height - viewport_height))
-        self.__scrollbar_h.set_page_step(area_height)
+        self.__scrollbar_h.set_page_step(viewport_height)
         self.__layout.set_offset(Vec2(
             0, self.__scrollbar_h.get_value()))
 

@@ -1,6 +1,7 @@
 import pygame
 import time
-from cmg import color
+import cmg
+from cmg.color import Colors
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
@@ -112,7 +113,7 @@ class State:
             if button.is_down and button.hold_time > 0 and button.timer > 0:
                 percent = button.timer / button.hold_time
                 g.fill_rect(r.x, r.y, r.width * percent,
-                            r.height, color=color.YELLOW)
+                            r.height, color=Colors.YELLOW)
             g.draw_rect(r.x, r.y, r.width, r.height,
                         thickness=Config.button_border_thickness,
                         color=Config.button_border_color)

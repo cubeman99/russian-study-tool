@@ -35,14 +35,21 @@ class MenuState(State):
         self.option_margin = 48
         self.option_border_thickness = 4
         self.menu = None
+        self.__metrics = None
+        self.__dirty_metrics = True
+        self.__bars = []
 
     def begin(self):
+        self.__bars = []
         self.title = (self.app.title if self.package.parent is None
                       else self.package.name)
 
         screen_width, screen_height = self.app.screen.get_size()
         viewport = pygame.Rect(0, self.margin_top, screen_width,
                                screen_height - self.margin_top - self.margin_bottom)
+        
+        self.__dirty_metrics = False
+        self.__metrics = self.package.get_study_metrics()
 
         # Create menu options
         self.menu = Menu(options=[], viewport=viewport)
@@ -56,13 +63,19 @@ class MenuState(State):
         else:
             self.menu.options.append(("Back", self.app.pop_state))
         for package in self.package.packages:
+            bar = StudyProficiencyBar(package)
+            bar.on_create()
+            self.__bars.append(bar)
             self.menu.options.append(
-                ("[...] {}".format(package.name), package))
+                ("[...] {}".format(package.name), package, bar))
         for card_set in self.package.card_sets:
             name = card_set.name
             if card_set.is_fixed_card_set():
                 name += " [txt]"
-            self.menu.options.append((name, card_set))
+            bar = StudyProficiencyBar(card_set)
+            bar.on_create()
+            self.__bars.append(bar)
+            self.menu.options.append((name, card_set, bar))
         self.menu.options.append(
             ("Study all " + self.package.name, self.package))
         
@@ -75,6 +88,7 @@ class MenuState(State):
             left=max(screen_width * 0.6, title_right + 32),
             right=screen_width - 32,
             study_set=self.package)
+        self.__bars.append(bar)
         self.entity_manager.add_entity(bar)
 
     def open_study_mode(self):
@@ -128,8 +142,13 @@ class MenuState(State):
         options += [("Cancel", None)]
         self.app.push_state(SubMenuState(card_set.name, options))
 
+    def mark_dirty_metrics(self):
+        self.__dirty_metrics = True
+
     def select(self):
-        option, action = self.menu.selected_option()
+        values = self.menu.selected_option()
+        option = values[0]
+        action = values[1]
         if isinstance(action, CardSetPackage):
             if action == self.package:
                 self.open_set(action)
@@ -142,10 +161,19 @@ class MenuState(State):
 
     def update(self, dt):
         State.update(self, dt)
-        #self.menu.update_menu(app=self.app, dt=dt)
+
+        if self.__dirty_metrics:
+            self.__metrics = self.package.get_study_metrics()
+            for bar in self.__bars:
+                bar.recalculate()
+            self.__dirty_metrics = False
 
     def draw_menu_option_text(self, g, option, rect, highlighted):
-        name, value = option
+        name = option[0]
+        value = option[1]
+        bar = None
+        if len(option) > 2:
+            bar = option[2]
         if highlighted:
             text_color = Config.option_highlighted_text_color
         else:
@@ -161,22 +189,16 @@ class MenuState(State):
                     align=Align.MiddleLeft)
 
         # Draw the completion bar
-        if isinstance(value, CardSet) or isinstance(value, CardSetPackage):
-            bar = StudyProficiencyBar(
-                center_y=center_y,
-                left=int(rect.x + (rect.width * 0.6)),
-                right=rect.x + rect.width - 16,
-                study_set=value)
-            bar.on_create()
+        if bar:
+            bar.center_y = center_y
+            bar.left = int(rect.x + (rect.width * 0.6))
+            bar.right = rect.x + rect.width - 16
             bar.draw(g)
 
     def draw(self, g):
         screen_width, screen_height = self.app.screen.get_size()
         screen_center_x = screen_width / 2
         screen_center_y = screen_height / 2
-
-        # Draw the list of menu options
-        #self.menu.draw_menu(g)
 
         # Draw the state
         State.draw(self, g)
@@ -191,10 +213,9 @@ class MenuState(State):
                     color=Config.title_color,
                     align=Align.MiddleLeft)
 
-        metrics = self.package.get_study_metrics()
         g.draw_text(screen_center_x, self.margin_top / 2,
-                    text="{:.0f} / {:.0f}".format(metrics.get_proficiency_count(),
-                                                  metrics.history_score),
+                    text="{:.0f} / {:.0f}".format(self.__metrics.get_proficiency_count(),
+                                                  self.__metrics.history_score),
                     font=self.title_font,
                     color=Config.title_color,
                     align=Align.Centered)

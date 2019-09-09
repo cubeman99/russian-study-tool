@@ -8402,8 +8402,8 @@
     },
     {
       "english": "native",
-      "history": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTF",
-      "last_encounter_time": 1567980575.0917163,
+      "history": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTF",
+      "last_encounter_time": 1567987750.6906784,
       "proficiency_level": 4,
       "russian": "родной",
       "type": "Adjective"
@@ -23026,8 +23026,8 @@
     },
     {
       "english": "table",
-      "history": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
-      "last_encounter_time": 1567980579.202382,
+      "history": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+      "last_encounter_time": 1567987756.8545396,
       "proficiency_level": 4,
       "russian": "стол",
       "type": "Noun"
@@ -25322,8 +25322,8 @@
     },
     {
       "english": "to give birth",
-      "history": "TTTTTTTTTTTTTTTTTTTTT",
-      "last_encounter_time": 1567980571.0230107,
+      "history": "TTTTTTTTTTTTTTTTTTTTTT",
+      "last_encounter_time": 1567987747.3078256,
       "proficiency_level": 4,
       "russian": "родить",
       "type": "Verb"
@@ -36028,7 +36028,7 @@
     },
     {
       "all_metrics": {
-        "history_score": 2358.885987230359,
+        "history_score": 2358.886384055756,
         "proficiency_counts": [
           9,
           190,
@@ -36039,7 +36039,7 @@
       },
       "card_type_metrics": {
         "Adjective": {
-          "history_score": 374.4538227997316,
+          "history_score": 374.4542196251284,
           "proficiency_counts": [
             1,
             7,
@@ -36152,5 +36152,5 @@
       "date": "2019/09/08"
     }
   ],
-  "save_time": 1567980579.202382
+  "save_time": 1567987756.8545396
 }

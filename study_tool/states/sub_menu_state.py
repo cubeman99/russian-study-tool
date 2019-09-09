@@ -87,5 +87,4 @@ class SubMenuState(State):
                     color=self.title_color,
                     align=Align.Centered)
 
-        # Draw the list of menu options
-        self.menu.draw_menu(g)
+        self.entity_manager.draw(g)

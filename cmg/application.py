@@ -1,11 +1,11 @@
 import pygame
+import time
 from cmg import color
 from cmg.input import InputManager
 from cmg.input import MouseButtons
 from cmg.input import Keys
 from cmg.input import KeyMods
 from cmg.math import Vec2
-
 
 class Application:
     instance = None
@@ -26,6 +26,11 @@ class Application:
         self.framerate = 60
         self.inputs = []
         self.input = InputManager()
+        self.__fps = 0
+        self.__frame_counter = 0
+
+    def get_frame_rate(self) -> float:
+        return self.__fps
 
     def quit(self):
         self.running = False
@@ -38,6 +43,10 @@ class Application:
 
     def run(self):
         self.running = True
+        self.__fps = 0.0
+        self.__frame_counter = 0
+        self.__frame_count_start_time = time.time()
+
         while self.running:
             # Event processing
             for event in pygame.event.get():
@@ -60,6 +69,16 @@ class Application:
             self.screen.fill(tuple(color.WHITE))
             self.draw()
             pygame.display.flip()
+            
+            # Update FPS counter
+            now = time.time()
+            self.__frame_counter += 1
+            if now - self.__frame_count_start_time >= 1.0:
+                self.__fps = self.__frame_counter
+                self.__frame_counter = 1
+                self.__frame_count_start_time -= 1.0
+                if now - self.__frame_count_start_time >= 1.0:
+                    self.__frame_count_start_time = now
 
             # Limit to 20 frames per second
             self.clock.tick(self.framerate)

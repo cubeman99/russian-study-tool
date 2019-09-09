@@ -39,6 +39,8 @@ class Graphics:
         self.accent_input_chars = "'´`"
         self.accent_render_char = "´"
         self.__translation = Vec2(0, 0)
+        self.__cached_text_bitmaps_prev = {}
+        self.__cached_text_bitmaps = {}
 
     def get_viewport(self) -> pygame.Rect:
         return self.screen.get_rect()
@@ -173,7 +175,6 @@ class Graphics:
             font = font.get_pygame_font()
         if font is None:
             font = self.font
-        self.accent_half_width = self.font.size(self.accent_render_char)[0] / 2
 
         text = AccentedText(text)
         w, h = font.size(text.text)
@@ -186,22 +187,49 @@ class Graphics:
         if Align.Bottom in align:
             y -= h
 
-        # Draw text
-        text_bitmap = font.render(text.text, True, tuple(color))
-        self.blit(text_bitmap, Vec2(x, y))
+        text_bitmap = self.get_cached_text(
+            text=repr(text), font=font, color=tuple(color))
 
-        # Draw accent marks
-        if text.accents:
-            accent_bitmap = self.get_accent_bitmap(font=font, color=color)
-            for accent_index in text.accents:
-                w1, _ = font.size(text.text[:accent_index])
-                w2, _ = font.size(text.text[:accent_index + 1])
-                center_x = (w2 + w1) / 2
-                self.blit(accent_bitmap, Vec2(x + center_x - self.accent_half_width, y))
+        if not text_bitmap:
+            # Draw text
+            text_bitmap = font.render(text.text, True, tuple(color))
+
+            # Draw accent marks
+            if text.accents:
+                accent_bitmap = self.get_accent_bitmap(font=font, color=color)
+                accent_half_width = int(accent_bitmap.get_width() / 2)
+                for accent_index in text.accents:
+                    w1, _ = font.size(text.text[:accent_index])
+                    w2, _ = font.size(text.text[:accent_index + 1])
+                    center_x = (w2 + w1) / 2
+                    text_bitmap.blit(accent_bitmap, (center_x - accent_half_width, 0))
+
+            self.cache_text(bitmap=text_bitmap, font=font,
+                            text=repr(text), color=tuple(color))
+
+        self.blit(text_bitmap, Vec2(x, y))
 
     def blit(self, image, dest):
         self.screen.blit(image, (Vec2(dest) + self.__translation).totuple())
 
+    def recache(self):
+        self.__cached_text_bitmaps_prev = self.__cached_text_bitmaps
+        self.__cached_text_bitmaps = {}
+
+    def cache_text(self, bitmap, text, font, color):
+        key = (text, self.get_font_key(font), color)
+        self.__cached_text_bitmaps[key] = bitmap
+
+    def get_cached_text(self, text, font, color):
+        key = (text, self.get_font_key(font), color)
+        result = self.__cached_text_bitmaps_prev.get(key, None)
+        if result:
+            self.__cached_text_bitmaps[key] = result
+        return result
+
+    def get_font_key(self, font):
+        return (font.get_linesize(), font.get_bold(),
+                font.get_italic(), font.get_underline())
 
 # This is a simple class that will help us print to the self.screen
 # It has nothing to do with the joysticks, just outputting the

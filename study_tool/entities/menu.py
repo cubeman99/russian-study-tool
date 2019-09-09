@@ -24,13 +24,6 @@ class Menu(Entity):
         self.scroll_position = 0.0
         self.option_border_thickness = 4
 
-    def update(self, dt):
-        app = self.context
-        self.update_menu(app, dt)
-            
-    def draw(self, g):
-        self.draw_menu(g)
-
     def selected_option(self):
         option_index = int(round(self.cursor))
         return self.options[option_index]
@@ -58,7 +51,8 @@ class Menu(Entity):
                     text=str(option), font=self.option_font,
                     color=text_color, align=Align.MiddleLeft)
 
-    def update_menu(self, app, dt):
+    def update(self, dt):
+        app = self.context
         move = app.inputs[2].get_amount() - app.inputs[0].get_amount()
         speed = 10.0
         self.cursor += move * dt * speed
@@ -84,7 +78,7 @@ class Menu(Entity):
         else:
             self.scroll_position = 0
 
-    def draw_menu(self, g):
+    def draw(self, g):
         top = -self.scroll_position
         option_index = int(round(self.cursor))
         option_top = self.viewport.y + top

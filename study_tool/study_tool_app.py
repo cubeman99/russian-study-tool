@@ -45,6 +45,7 @@ class StudyCardsApp(Application):
         self.joystick.init()
 
         self.font_bar_text = pygame.font.Font(None, 30)
+        self.__font_fps = cmg.Font(24)
 
         self.clock = pygame.time.Clock()
         self.graphics = Graphics(self.screen)
@@ -103,15 +104,15 @@ class StudyCardsApp(Application):
         # self.push_state(CardEditState(card_database=self.card_database))
         cards = list(self.card_database.iter_cards())
         test_set = self.root["test_set"]
+        #card = list(self.card_database.find_cards_by_word("слушать"))[0]
         #self.push_card_edit_state(None)
         #self.push_card_edit_state(cards[0])
         #self.push_state(GUIState(widget=CardEditWidget(cards[0]), title="Edit Card"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["verbs"]["verbs_stem_ai"], self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["nouns"]["house"], self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=CardSetEditWidget(test_set, self), title="Edit Card Set"))
-        self.push_study_state(test_set, StudyParams(random_side=True))
-        #card = list(self.card_database.find_cards_by_word("слушать"))[0]
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
+        #self.push_study_state(test_set, StudyParams(random_side=True))
 
         #self.save_card_set(self.root["nouns"]["house"])
 
@@ -388,6 +389,7 @@ class StudyCardsApp(Application):
         self.state.update(dt)
 
     def draw(self):
+        self.graphics.recache()
         self.graphics.clear(color.WHITE)
         states_to_draw = []
         for state in reversed(self.states):
@@ -397,6 +399,15 @@ class StudyCardsApp(Application):
         for state in reversed(states_to_draw):
             # TODO: fade background
             state.draw(self.graphics)
+            
+        # Draw FPS
+        fps = self.get_frame_rate()
+        self.graphics.draw_text(
+            4, 4,
+            text="FPS = {}".format(int(round(fps))),
+            font=self.__font_fps,
+            align=Align.TopLeft,
+            color=Colors.RED)
 
     def __on_key_pressed(self, key, mod, text):
         self.state.on_key_pressed(key, mod, text)
