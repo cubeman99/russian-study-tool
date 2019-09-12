@@ -28,6 +28,8 @@ from study_tool.entities.text_label import TextLabel
 from study_tool.entities.entity import Entity
 from study_tool.entities.label_box import LabelBox
 from study_tool.entities.card_attribute_box import CardAttributeBox
+from study_tool.gui.related_cards_widget import RelatedCardsWidget
+from study_tool.states.gui_state import GUIState
 
 
 class StudyParams:
@@ -262,17 +264,29 @@ class StudyState(State):
                          self.__table_verb_participles]
 
         self.next_card()
+        
+    def on_key_pressed(self, key, mod, text):
+        """Called when a key is pressed."""
+        if KeyMods.LSHIFT not in mod and KeyMods.LCTRL not in mod:
+
+            # R: Edit related cards
+            if key == Keys.K_R:
+                self.__on_click_edit_related_cards()
+
+            # E: Edit related cards
+            elif key == Keys.K_E:
+                self.__on_click_edit_card()
 
     def pause(self):
         other_side = CardSide(1 - self.shown_side)
         options =  [("Resume", None),
-                    ("Edit Card", self.__on_click_edit_card)]
+                    ("Edit Card", self.__on_click_edit_card),
+                    ("Edit Related Cards", self.__on_click_edit_related_cards)]
         if isinstance(self.card_set, CardSet):
             options.append(("Edit Set", self.__on_click_edit_card_set))
         options += [
              ("List", lambda: (self.app.pop_state(),
                                self.app.push_card_list_state(self.card_set))),
-             ("Quiz " + other_side.name, self.switch_sides),
              ("Menu", self.app.pop_state),
              ("Exit", self.app.quit)]
         self.app.push_state(SubMenuState("Pause", options))
@@ -282,6 +296,14 @@ class StudyState(State):
         widget = self.app.push_card_edit_state(
             self.card, allow_card_change=False)
         widget.updated.connect(self.__on_card_updated)
+    
+    def __on_click_edit_related_cards(self):
+        """Called to begin editing the current card's related cards."""
+        widget = RelatedCardsWidget(self.card, self.app)
+        widget.updated.connect(self.__on_card_updated)
+        self.app.push_state(GUIState(
+            widget=widget,
+            title="Edit Related Cards for {}".format(self.card.get_russian())))
     
     def __on_click_edit_card_set(self):
         """Called to begin editing the card set."""
@@ -298,11 +320,6 @@ class StudyState(State):
         self.__entity_noun_root.set_visible(isinstance(self.card.word, Noun))
         self.__entity_adjective_root.set_visible(isinstance(self.card.word, Adjective))
         self.__entity_verb_root.set_visible(isinstance(self.card.word, Verb))
-
-    def switch_sides(self):
-        """Switch which side is shown first."""
-        self.params.shown_side = CardSide(1 - self.params.shown_side)
-        self.shown_side = CardSide(1 - self.shown_side)
         
     def next(self):
         """

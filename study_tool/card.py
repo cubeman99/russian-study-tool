@@ -78,6 +78,9 @@ class Card:
     def get_fixed_card_set(self):
         return self.__fixed_card_set
 
+    def is_in_fixed_card_set(self) -> bool:
+        return self.__fixed_card_set is not None
+
     def set_fixed_card_set(self, card_set):
         self.__fixed_card_set = card_set
 

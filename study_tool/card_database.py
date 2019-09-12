@@ -304,8 +304,8 @@ class CardDatabase:
             if word_type is not None:
                 word_type = getattr(WordType, word_type)
             key = (word_type,
-                   AccentedText(card_state["russian"]).text,
-                   AccentedText(card_state["english"]).text)
+                   AccentedText(card_state["russian"]).text.lower(),
+                   AccentedText(card_state["english"]).text.lower())
             card = self.cards.get(key, None)
             if card:
                 card = self.cards[key]

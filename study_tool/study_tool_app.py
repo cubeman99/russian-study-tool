@@ -21,6 +21,7 @@ from study_tool.states.card_list_state import CardListState
 from study_tool.states.gui_state import GUIState
 from study_tool.gui.card_edit_widget import CardEditWidget
 from study_tool.gui.card_set_edit_widget import CardSetEditWidget
+from study_tool.gui.related_cards_widget import RelatedCardsWidget
 from study_tool.card_database import CardDatabase
 from study_tool.scheduler import ScheduleMode
 from study_tool.states.keyboard_state import KeyboardState
@@ -104,13 +105,14 @@ class StudyCardsApp(Application):
         # self.push_state(CardEditState(card_database=self.card_database))
         cards = list(self.card_database.iter_cards())
         test_set = self.root["test_set"]
-        #card = list(self.card_database.find_cards_by_word("слушать"))[0]
+        test_card = list(self.card_database.find_cards_by_word("слушать"))[0]
         #self.push_card_edit_state(None)
         #self.push_card_edit_state(cards[0])
         #self.push_state(GUIState(widget=CardEditWidget(cards[0]), title="Edit Card"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["verbs"]["verbs_stem_ai"], self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["nouns"]["house"], self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=CardSetEditWidget(test_set, self), title="Edit Card Set"))
+        #self.push_state(GUIState(widget=RelatedCardsWidget(test_card, self), title="Edit Related Cards"))
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
         #self.push_study_state(test_set, StudyParams(random_side=True))
 

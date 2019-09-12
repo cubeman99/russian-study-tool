@@ -444,7 +444,8 @@
         "преврать",
         "заискрыться",
         "исназиловать",
-        "хныкать"
+        "хныкать",
+        "беда"
       ]
     }
   },
@@ -100083,6 +100084,157 @@
       },
       "examples": [],
       "name": "овёс",
+      "type": "Noun"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "бескра'йную",
+            "Dative": "бескра'йной",
+            "Genetive": "бескра'йной",
+            "Instrumental": "бескра'йной бескра'йною",
+            "Nominative": "бескра'йная",
+            "Prepositional": "бескра'йной"
+          },
+          "Masculine": {
+            "Accusative": "бескра'йного",
+            "Dative": "бескра'йному",
+            "Genetive": "бескра'йного",
+            "Instrumental": "бескра'йным",
+            "Nominative": "бескра'йный",
+            "Prepositional": "бескра'йном"
+          },
+          "Neuter": {
+            "Accusative": "бескра'йное",
+            "Dative": "бескра'йному",
+            "Genetive": "бескра'йного",
+            "Instrumental": "бескра'йным",
+            "Nominative": "бескра'йное",
+            "Prepositional": "бескра'йном"
+          },
+          "Plural": {
+            "Accusative": "бескра'йных",
+            "Dative": "бескра'йным",
+            "Genetive": "бескра'йных",
+            "Instrumental": "бескра'йными",
+            "Nominative": "бескра'йные",
+            "Prepositional": "бескра'йных"
+          }
+        },
+        "short_form": {
+          "Femanine": "бескра'йна",
+          "Masculine": "бескра'ен",
+          "Neuter": "бескра'йно",
+          "Plural": "бескра'йны"
+        }
+      },
+      "examples": [],
+      "name": "бескрайный",
+      "type": "Adjective"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "поглощать"
+        ],
+        "imperative": {
+          "Plural": "поглоти'те",
+          "Singular": "поглоти'"
+        },
+        "infinitive": "поглотить",
+        "info": "This verb can also mean the following: devour, take up, absorb.",
+        "non_past": {
+          "Plural": {
+            "First": "погло'тим",
+            "Second": "погло'тите",
+            "Third": "погло'тят"
+          },
+          "Singular": {
+            "First": "поглощу'",
+            "Second": "погло'тишь",
+            "Third": "погло'тит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "поглоти'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "поглоти'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "поглощённый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "поглоти'ла",
+          "Masculine": "поглоти'л",
+          "Neuter": "поглоти'ло",
+          "Plural": "поглоти'ли"
+        },
+        "translation": "to swallow up"
+      },
+      "examples": [],
+      "name": "поглотить",
+      "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "произноше'ния",
+            "Dative": "произноше'ниям",
+            "Genetive": "произноше'ний",
+            "Instrumental": "произноше'ниями",
+            "Nominative": "произноше'ния",
+            "Prepositional": "произноше'ниях"
+          },
+          "Singular": {
+            "Accusative": "произноше'ние",
+            "Dative": "произноше'нию",
+            "Genetive": "произноше'ния",
+            "Instrumental": "произноше'нием",
+            "Nominative": "произноше'ние",
+            "Prepositional": "произноше'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "произношение",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "отвлече'ния",
+            "Dative": "отвлече'ниям",
+            "Genetive": "отвлече'ний",
+            "Instrumental": "отвлече'ниями",
+            "Nominative": "отвлече'ния",
+            "Prepositional": "отвлече'ниях"
+          },
+          "Singular": {
+            "Accusative": "отвлече'ние",
+            "Dative": "отвлече'нию",
+            "Genetive": "отвлече'ния",
+            "Instrumental": "отвлече'нием",
+            "Nominative": "отвлече'ние",
+            "Prepositional": "отвлече'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "отвлечение",
       "type": "Noun"
     }
   ]

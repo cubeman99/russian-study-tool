@@ -1,0 +1,22 @@
+#==============================================================================
+@name New 20
+#==============================================================================
+
+@type adjective
+
+@type adverb
+
+@type noun
+
+@type phrase
+
+@type other
+
+@type particle
+
+@type conjunction
+
+@type interjection
+
+@type preposition
+
