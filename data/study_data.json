@@ -8386,8 +8386,8 @@
     },
     {
       "english": "native",
-      "history": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTF",
-      "last_encounter_time": 1568249548.1318934,
+      "history": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTF",
+      "last_encounter_time": 1568252853.929568,
       "proficiency_level": 4,
       "russian": "родной",
       "type": "Adjective"
@@ -16090,8 +16090,8 @@
     },
     {
       "english": "he, it",
-      "history": "TTTTTTTT",
-      "last_encounter_time": 1568249783.1562805,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1568337030.2679782,
       "proficiency_level": 4,
       "russian": "он",
       "type": "Pronoun"
@@ -16114,8 +16114,8 @@
     },
     {
       "english": "we",
-      "history": "TTTTTTTT",
-      "last_encounter_time": 1568249793.7005277,
+      "history": "TTTTTTTTT",
+      "last_encounter_time": 1568337032.2757423,
       "proficiency_level": 4,
       "russian": "мы",
       "type": "Pronoun"
@@ -16138,128 +16138,128 @@
     },
     {
       "english": "who",
-      "history": "TTTTTTTTT",
-      "last_encounter_time": 1552859250.5555787,
+      "history": "TTTTTTTTTTT",
+      "last_encounter_time": 1568336966.5691855,
       "proficiency_level": 4,
       "russian": "кто",
       "type": "Pronoun"
     },
     {
       "english": "what sort of",
-      "history": "TTTTTTTTT",
-      "last_encounter_time": 1552859251.452069,
+      "history": "TTTTTTTTTTT",
+      "last_encounter_time": 1568336936.890683,
       "proficiency_level": 4,
       "russian": "какой",
       "type": "Pronoun"
     },
     {
       "english": "what",
-      "history": "TTTTTTTTTT",
-      "last_encounter_time": 1552859249.5394602,
+      "history": "TTTTTTTTTTTT",
+      "last_encounter_time": 1568336945.6517696,
       "proficiency_level": 4,
       "russian": "что",
       "type": "Pronoun"
     },
     {
       "english": "each other",
-      "history": "TTTTTTTTTT",
-      "last_encounter_time": 1552859268.6348717,
+      "history": "TTTTTTTTTTTT",
+      "last_encounter_time": 1568336940.9318025,
       "proficiency_level": 4,
       "russian": "друг друга",
       "type": "Pronoun"
     },
     {
       "english": "self",
-      "history": "TTTTTTTTTTTTTT",
-      "last_encounter_time": 1552859256.1218379,
+      "history": "TTTTTTTTTTTTTTTTT",
+      "last_encounter_time": 1568336963.2301366,
       "proficiency_level": 4,
       "russian": "себя",
       "type": "Pronoun"
     },
     {
       "english": "the whole, all the",
-      "history": "TTTTTT",
-      "last_encounter_time": 1552859260.2041693,
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1568336967.9735887,
       "proficiency_level": 4,
       "russian": "весь",
       "type": "Pronoun"
     },
     {
       "english": "all",
-      "history": "TTTTTT",
-      "last_encounter_time": 1564451558.1818473,
+      "history": "TTTTTTT",
+      "last_encounter_time": 1568336931.1025677,
       "proficiency_level": 4,
       "russian": "все",
       "type": "Pronoun"
     },
     {
       "english": "everything",
-      "history": "TTTTTT",
-      "last_encounter_time": 1552859264.4508004,
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1568336947.6534996,
       "proficiency_level": 4,
       "russian": "всё",
       "type": "Pronoun"
     },
     {
       "english": "whose",
-      "history": "TTTTTTTTTT",
-      "last_encounter_time": 1552859267.6310916,
+      "history": "TTTTTTTTTTTT",
+      "last_encounter_time": 1568336955.6569319,
       "proficiency_level": 4,
       "russian": "чей",
       "type": "Pronoun"
     },
     {
       "english": "this, that",
-      "history": "TTTTTTTTT",
-      "last_encounter_time": 1552859266.591623,
+      "history": "TTTTTTTTTTT",
+      "last_encounter_time": 1568336969.8061867,
       "proficiency_level": 4,
       "russian": "этот",
       "type": "Pronoun"
     },
     {
       "english": "that",
-      "history": "TTTTTTTTTTT",
-      "last_encounter_time": 1552859238.573277,
+      "history": "TTTTTTTTTTTTT",
+      "last_encounter_time": 1568336938.2656596,
       "proficiency_level": 4,
       "russian": "тот",
       "type": "Pronoun"
     },
     {
       "english": "such a, like that",
-      "history": "TTTTTTTTTTF",
-      "last_encounter_time": 1552859247.5636427,
+      "history": "TTTTTTTTTTTF",
+      "last_encounter_time": 1568336923.8067977,
       "proficiency_level": 4,
       "russian": "такой",
       "type": "Pronoun"
     },
     {
       "english": "(them)self, used for emphasis",
-      "history": "TTTTTTTTTTT",
-      "last_encounter_time": 1552859262.0574603,
+      "history": "TTTTTTTTTTTTT",
+      "last_encounter_time": 1568336949.5361013,
       "proficiency_level": 4,
       "russian": "сам",
       "type": "Pronoun"
     },
     {
       "english": "the very",
-      "history": "TTTTTTTTTTTTT",
-      "last_encounter_time": 1552859255.0913675,
+      "history": "TTTTTTTTTTTTTTT",
+      "last_encounter_time": 1568336953.7361119,
       "proficiency_level": 4,
       "russian": "самый",
       "type": "Pronoun"
     },
     {
       "english": "nothing",
-      "history": "TTTTTT",
-      "last_encounter_time": 1564451577.7910602,
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1568336951.8417556,
       "proficiency_level": 4,
       "russian": "ничто",
       "type": "Pronoun"
     },
     {
       "english": "noone",
-      "history": "TTTTTT",
-      "last_encounter_time": 1552859265.5236428,
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1568336961.673038,
       "proficiency_level": 4,
       "russian": "никто",
       "type": "Pronoun"
@@ -17514,8 +17514,8 @@
     },
     {
       "english": "to know how",
-      "history": "TTTTTTTTTTTTFTTTTTTTTTTTTTTTTTTTTFTFFFTFTFTTTFFFF",
-      "last_encounter_time": 1568249553.680997,
+      "history": "TTTTTTTTTTTTTFTTTTTTTTTTTTTTTTTTTTFTFFFTFTFTTTFFFF",
+      "last_encounter_time": 1568252856.5474198,
       "proficiency_level": 4,
       "russian": "уметь",
       "type": "Verb"
@@ -22970,8 +22970,8 @@
     },
     {
       "english": "table",
-      "history": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
-      "last_encounter_time": 1568249550.9812436,
+      "history": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+      "last_encounter_time": 1568253068.2920156,
       "proficiency_level": 4,
       "russian": "стол",
       "type": "Noun"
@@ -25258,8 +25258,8 @@
     },
     {
       "english": "to give birth",
-      "history": "TTTTTTTTTTTTTTTTTTTTTTTT",
-      "last_encounter_time": 1568249559.0337172,
+      "history": "TTTTTTTTTTTTTTTTTTTTTTTTT",
+      "last_encounter_time": 1568252861.355821,
       "proficiency_level": 4,
       "russian": "родить",
       "type": "Verb"
@@ -26327,6 +26327,326 @@
       "proficiency_level": 3,
       "russian": "образец",
       "type": "Noun"
+    },
+    {
+      "english": "distraction",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "отвлечение",
+      "type": "Noun"
+    },
+    {
+      "english": "queen",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "королева",
+      "type": "Noun"
+    },
+    {
+      "english": "to do",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "сделать",
+      "type": "Verb"
+    },
+    {
+      "english": "floor",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "пол",
+      "type": "Noun"
+    },
+    {
+      "english": "pony",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "пони",
+      "type": "Noun"
+    },
+    {
+      "english": "wing",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "крыло",
+      "type": "Noun"
+    },
+    {
+      "english": "stallion",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "жеребец",
+      "type": "Noun"
+    },
+    {
+      "english": "so, and for that...",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "поэтому",
+      "type": "Conjunction"
+    },
+    {
+      "english": "between",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "между",
+      "type": "Preposition"
+    },
+    {
+      "english": "straight",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "прямо",
+      "type": "Adverb"
+    },
+    {
+      "english": "other",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "другой",
+      "type": "Adjective"
+    },
+    {
+      "english": "to find",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "найти",
+      "type": "Verb"
+    },
+    {
+      "english": "to fall silent, to shut up",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "замолчать",
+      "type": "Verb"
+    },
+    {
+      "english": "difficult, hard",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "сложный",
+      "type": "Adjective"
+    },
+    {
+      "english": "part",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "часть",
+      "type": "Noun"
+    },
+    {
+      "english": "to see",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "увидеть",
+      "type": "Verb"
+    },
+    {
+      "english": "to seem",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "казаться",
+      "type": "Verb"
+    },
+    {
+      "english": "to think",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "подумать",
+      "type": "Verb"
+    },
+    {
+      "english": "for the sake of",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "ради",
+      "type": "Preposition"
+    },
+    {
+      "english": "to decide, solve",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "решить",
+      "type": "Verb"
+    },
+    {
+      "english": "to stop, dwell, stand still",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "остановиться",
+      "type": "Verb"
+    },
+    {
+      "english": "moon",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "луна",
+      "type": "Noun"
+    },
+    {
+      "english": "to disappear, vanish",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "исчезнуть",
+      "type": "Verb"
+    },
+    {
+      "english": "through",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "сквозь",
+      "type": "Preposition"
+    },
+    {
+      "english": "ideal, perfect",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "идеальный",
+      "type": "Adjective"
+    },
+    {
+      "english": "stone, rock",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "камень",
+      "type": "Noun"
+    },
+    {
+      "english": "please",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "пожалуйста",
+      "type": "Interjection"
+    },
+    {
+      "english": "how much",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "сколько",
+      "type": "Adverb"
+    },
+    {
+      "english": "my",
+      "history": "TTTTTTT",
+      "last_encounter_time": 1568337018.4632576,
+      "proficiency_level": 4,
+      "russian": "мой",
+      "type": "Pronoun"
+    },
+    {
+      "english": "your (singular/informal)",
+      "history": "TTTTTTT",
+      "last_encounter_time": 1568337021.8600652,
+      "proficiency_level": 4,
+      "russian": "твой",
+      "type": "Pronoun"
+    },
+    {
+      "english": "our",
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1568337015.025148,
+      "proficiency_level": 4,
+      "russian": "наш",
+      "type": "Pronoun"
+    },
+    {
+      "english": "your (plural/formal)",
+      "history": "TTTTTTT",
+      "last_encounter_time": 1568337016.7091644,
+      "proficiency_level": 4,
+      "russian": "ваш",
+      "type": "Pronoun"
+    },
+    {
+      "english": "their",
+      "history": "TTTTTTT",
+      "last_encounter_time": 1568337023.3501728,
+      "proficiency_level": 4,
+      "russian": "их",
+      "type": "Pronoun"
+    },
+    {
+      "english": "ones own (my/your/his/etc.)",
+      "history": "TTTTTTTT",
+      "last_encounter_time": 1568337020.1407952,
+      "proficiency_level": 4,
+      "russian": "свой",
+      "type": "Pronoun"
+    },
+    {
+      "english": "playground",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "детская площадка",
+      "type": "Noun"
+    },
+    {
+      "english": "slide",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "горка",
+      "type": "Noun"
+    },
+    {
+      "english": "swing",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "качель",
+      "type": "Noun"
+    },
+    {
+      "english": "merry-go-round",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "карусель",
+      "type": "Noun"
+    },
+    {
+      "english": "sandbox",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "песочница",
+      "type": "Noun"
+    },
+    {
+      "english": "to keep safe",
+      "history": "",
+      "last_encounter_time": null,
+      "proficiency_level": 0,
+      "russian": "беречь",
+      "type": "Verb"
     }
   ],
   "metrics": [
@@ -36907,9 +37227,9 @@
     },
     {
       "all_metrics": {
-        "history_score": 2416.7301536937543,
+        "history_score": 2416.735689610786,
         "proficiency_counts": [
-          4,
+          5,
           193,
           13,
           195,
@@ -36918,7 +37238,7 @@
       },
       "card_type_metrics": {
         "Adjective": {
-          "history_score": 388.07963349992264,
+          "history_score": 388.0799891186993,
           "proficiency_counts": [
             1,
             7,
@@ -36960,7 +37280,7 @@
         "Noun": {
           "history_score": 904.4364915068053,
           "proficiency_counts": [
-            1,
+            2,
             146,
             6,
             120,
@@ -37018,7 +37338,7 @@
           ]
         },
         "Verb": {
-          "history_score": 812.9557614275236,
+          "history_score": 812.9609417257782,
           "proficiency_counts": [
             1,
             10,
@@ -37029,7 +37349,132 @@
         }
       },
       "date": "2019/09/11"
+    },
+    {
+      "all_metrics": {
+        "history_score": 2422.738894738991,
+        "proficiency_counts": [
+          38,
+          193,
+          13,
+          195,
+          2892
+        ]
+      },
+      "card_type_metrics": {
+        "Adjective": {
+          "history_score": 388.0799891186993,
+          "proficiency_counts": [
+            4,
+            7,
+            5,
+            25,
+            445
+          ]
+        },
+        "Adverb": {
+          "history_score": 132.8686061745497,
+          "proficiency_counts": [
+            2,
+            10,
+            0,
+            1,
+            175
+          ]
+        },
+        "Conjunction": {
+          "history_score": 20.00396825396825,
+          "proficiency_counts": [
+            1,
+            12,
+            0,
+            2,
+            37
+          ]
+        },
+        "Interjection": {
+          "history_score": 9.66468253968254,
+          "proficiency_counts": [
+            1,
+            0,
+            0,
+            2,
+            10
+          ]
+        },
+        "Noun": {
+          "history_score": 904.4364915068053,
+          "proficiency_counts": [
+            15,
+            146,
+            6,
+            120,
+            1097
+          ]
+        },
+        "Other": {
+          "history_score": 28.314262126762124,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            1,
+            36
+          ]
+        },
+        "Particle": {
+          "history_score": 5.25,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            0,
+            6
+          ]
+        },
+        "Phrase": {
+          "history_score": 58.28115292645089,
+          "proficiency_counts": [
+            1,
+            7,
+            1,
+            23,
+            68
+          ]
+        },
+        "Preposition": {
+          "history_score": 34.83392857142857,
+          "proficiency_counts": [
+            3,
+            1,
+            0,
+            3,
+            39
+          ]
+        },
+        "Pronoun": {
+          "history_score": 28.044871794871792,
+          "proficiency_counts": [
+            0,
+            0,
+            0,
+            0,
+            31
+          ]
+        },
+        "Verb": {
+          "history_score": 812.9609417257782,
+          "proficiency_counts": [
+            11,
+            10,
+            1,
+            18,
+            948
+          ]
+        }
+      },
+      "date": "2019/09/12"
     }
   ],
-  "save_time": 1568250180.6452038
+  "save_time": 1568337032.2757423
 }

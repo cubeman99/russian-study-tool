@@ -1,4 +1,10 @@
+import re
 from study_tool.russian.word import AccentedText
+from study_tool.russian.word import split_words
+
+
+def split_sentences(paragraph: str):
+    return re.findall(r"\s*(.*?[\.\?\!]+)\s+", paragraph + " ")
 
 
 class Chapter:
@@ -38,3 +44,15 @@ class Story:
             chapter = Chapter()
             chapter.deserialize(chapter_state)
             self.chapters.append(chapter)
+
+    def iter_sentences(self):
+        for chapter in self.chapters:
+            for paragraph in chapter.paragraphs:
+                paragraph = paragraph.text
+                for sentence in split_sentences(paragraph):
+                    yield sentence
+
+    def iter_words(self):
+        for sentence in self.iter_sentences():
+            for word, _ in split_words(sentence):
+                yield word

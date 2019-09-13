@@ -677,7 +677,7 @@ cards:
 - {en: 'light (of weight), easy', ru: лёгкий, type: adjective}
 - {en: heavy, ru: тяжёлый, type: adjective}
 - {en: simple, ru: просто'й, type: adjective}
-- {en: difficult, ru: тру'дный, type: adjective}
+- {en: difficult, rel: [[adjective, сложный, 'difficult, hard']], ru: тру'дный, type: adjective}
 - {en: important, ru: ва'жный, type: adjective}
 - {en: necessary, ru: ну'жный, type: adjective}
 - {en: desirable, ru: жела'тельный, type: adjective}
@@ -1941,7 +1941,8 @@ cards:
 - {attrs: [n], en: return, ru: возвраще'ние, type: noun}
 - {attrs: [f], en: 'fight, tussle', ru: дра'ка, type: noun}
 - {attrs: [m], en: side of torso, ru: бо'к, type: noun}
-- {attrs: [f], en: 'stop, layover', ru: остано'вка, type: noun}
+- {attrs: [f], en: 'stop, layover', rel: [[verb, остановиться, 'to stop, dwell, stand
+        still']], ru: остано'вка, type: noun}
 - {en: supervision, ru: присмо'тра, type: noun}
 - {attrs: [m], en: sword, ru: ме'ч, type: noun}
 - {attrs: [f], en: purchase, ru: поку'пка, type: noun}
@@ -2069,7 +2070,8 @@ cards:
 - {attrs: [acc], en: under (motion), ru: под, type: preposition}
 - {attrs: [instr], en: 'behind, beyond (location)', ru: за, type: preposition}
 - {attrs: [instr], en: under (location), ru: под, type: preposition}
-- {attrs: [gen], en: for the benefit of, ru: для, type: preposition}
+- {attrs: [gen], en: for the benefit of, rel: [[preposition, ради, for the sake of]],
+  ru: для, type: preposition}
 - {attrs: [gen], en: from a place, ru: 'с, со', type: preposition}
 - {attrs: [gen], en: 'by, at a place', ru: у, type: preposition}
 - {attrs: [gen], en: 'from, out of', ru: из, type: preposition}
@@ -2205,7 +2207,8 @@ cards:
 - {attrs: [stem.obstruent, pf], en: to lie down, ru: ле'чь, type: verb}
 - {attrs: [impf, stem.obstruent], en: to burn something, ru: же'чь, type: verb}
 - {attrs: [impf, stem.obstruent], en: to bake, ru: пе'чь, type: verb}
-- {attrs: [stem.obstruent, pf], en: to distract, ru: отвле'чь, type: verb}
+- {attrs: [stem.obstruent, pf], en: to distract, rel: [[noun, отвлечение, distraction]],
+  ru: отвле'чь, type: verb}
 - {attrs: [stem.obstruent, pf], en: to attract, ru: привле'чь, type: verb}
 - {attrs: [impf, stem.obstruent], en: to flow, ru: те'чь, type: verb}
 - {attrs: [impf, irreg], en: to want, ru: хоте'ть, type: verb}
@@ -2349,7 +2352,8 @@ cards:
 - {attrs: [impf, verb.suffix.nu2], en: to smell, ru: па'хнуть, type: verb}
 - {attrs: [pf, verb.suffix.nu2], en: to reach; to achieve, ru: дости'гнуть, type: verb}
 - {attrs: [pf, verb.suffix.nu2], en: to get used to, ru: привы'кнуть, type: verb}
-- {attrs: [pf, verb.suffix.nu2], en: to fall silent, ru: замо'лкнуть, type: verb}
+- {attrs: [pf, verb.suffix.nu2], en: to fall silent, rel: [[verb, замолчать, 'to fall
+        silent, to shut up']], ru: замо'лкнуть, type: verb}
 - {attrs: [impf, verb.suffix.nu2], en: to go blind, ru: сле'пнуть, type: verb}
 - {attrs: [impf, verb.suffix.nu2], en: to turn sour, ru: ки'снуть, type: verb}
 - {attrs: [impf, verb.suffix.nu2], en: to become dry, ru: со'хнуть, type: verb}
@@ -2446,7 +2450,8 @@ cards:
 - {attrs: [impf, verb.suffix.zha], en: to breathe, ru: дыша'ть, type: verb}
 - {attrs: [impf, verb.suffix.zha], en: to sound, ru: звуча'ть, type: verb}
 - {attrs: [impf, verb.suffix.zha], en: to shout, ru: крича'ть, type: verb}
-- {attrs: [impf, verb.suffix.zha], en: to be silent, ru: молча'ть, type: verb}
+- {attrs: [impf, verb.suffix.zha], en: to be silent, rel: [[verb, замолчать, 'to fall
+        silent, to shut up']], ru: молча'ть, type: verb}
 - {attrs: [impf, verb.suffix.zha], en: to hear, ru: слы'шать, type: verb}
 - {attrs: [impf, verb.suffix.zha], en: to stand, ru: стоя'ть, type: verb}
 - {attrs: [impf, verb.suffix.zha], en: to knock, ru: стуча'ть, type: verb}
@@ -2667,7 +2672,7 @@ cards:
 - {en: 'exclusively, only', ru: исключи'тельно, type: adverb}
 - {en: literally, ru: буква'льно, type: adverb}
 - {en: 'much, much more', ru: гора'здо, type: adverb}
-- {en: 'partly, partially', ru: части'чно, type: adverb}
+- {en: 'partly, partially', rel: [[noun, часть, part]], ru: части'чно, type: adverb}
 - {en: unnoticed, ru: незаме'чанный, type: adjective}
 - {en: insurmountable, ru: непреодоли'мый, type: adjective}
 - {en: young, ru: ю'ный, type: adjective}
@@ -2751,7 +2756,8 @@ cards:
 - {en: silver, ru: серебро', type: noun}
 - {en: gold, ru: зо'лото, type: noun}
 - {attrs: [m], en: band of light in unlit space, ru: просве'т, type: noun}
-- {attrs: [n], en: dissapearance, ru: исчезнове'ние, type: noun}
+- {attrs: [n], en: dissapearance, rel: [[verb, исчезнуть, 'to disappear, vanish']],
+  ru: исчезнове'ние, type: noun}
 - {attrs: [f], en: the middle, ru: середи'на, type: noun}
 - {attrs: [m], en: flight, ru: полёт, type: noun}
 - {attrs: [f], en: spark, ru: и'скра, type: noun}
@@ -3268,7 +3274,7 @@ cards:
 - {en: innocent, ru: неви'нный, type: adjective}
 - {attrs: [pf, verb.suffix.ai], en: 'to get injured, come to harm', ru: пострада'ть,
   type: verb}
-- {en: 'different, otherwise', ru: ино'й, type: adjective}
+- {en: 'different, otherwise', rel: [[adjective, другой, other]], ru: ино'й, type: adjective}
 - {en: crisis, ru: кри'зис, type: noun}
 - {attrs: [impf, verb.suffix.ai], en: to scour, ru: обы'скивать, type: verb}
 - {attrs: [f], en: paper cover for book, ru: обло'жка, type: noun}
@@ -3405,7 +3411,8 @@ cards:
 - {attrs: [pf, prep, verb.suffix.i], en: 'to take care of, look after', ru: позабо'титься,
   type: verb}
 - {attrs: [impf, verb.suffix.e], en: to sniffle, ru: сопе'ть, type: verb}
-- {en: 'resolute, decisive, determined', ru: реши'тельный, type: adjective}
+- {en: 'resolute, decisive, determined', rel: [[verb, решить, 'to decide, solve']],
+  ru: реши'тельный, type: adjective}
 - {attrs: [pf], en: to squeeze., ru: сжа'ть, type: verb}
 - {attrs: [m], en: 'fang, canine', ru: клы'к, type: noun}
 - {en: fanged, ru: клыка'стый, type: adjective}
@@ -3535,3 +3542,42 @@ cards:
 - {attrs: [m], en: sample, ru: образе'ц, type: noun}
 - {attrs: [n], en: distraction, rel: [[verb, отвлечь, to distract]], ru: отвлече'ние,
   type: noun}
+- {attrs: [f], en: queen, ru: короле'ва, type: noun}
+- {attrs: [pf, verb.suffix.ai], en: to do, ru: сдела'ть, type: verb}
+- {attrs: [m], en: floor, ru: по'л, type: noun}
+- {attrs: [indec], en: pony, ru: по'ни, type: noun}
+- {attrs: [n], en: wing, ru: крыло', type: noun}
+- {attrs: [m], en: stallion, ru: жеребе'ц, type: noun}
+- {en: 'so, and for that...', ru: поэ'тому, type: conjunction}
+- {attrs: [instr], en: between, ru: ме'жду, type: preposition}
+- {en: straight, ru: пря'мо, type: adverb}
+- {en: other, rel: [[adjective, иной, 'different, otherwise']], ru: друго'й, type: adjective}
+- {attrs: [pf], en: to find, ru: найти', type: verb}
+- {attrs: [pf, verb.suffix.zha], en: 'to fall silent, to shut up', rel: [[verb, замолкнуть,
+      to fall silent], [verb, молчать, to be silent]], ru: замолча'ть, type: verb}
+- {en: 'difficult, hard', rel: [[adjective, трудный, difficult]], ru: сло'жный, type: adjective}
+- {attrs: [f], en: part, rel: [[adverb, частично, 'partly, partially']], ru: ча'сть,
+  type: noun}
+- {attrs: [pf, verb.suffix.e], en: to see, ru: уви'деть, type: verb}
+- {attrs: [impf, verb.suffix.a3], en: to seem, ru: каза'ться, type: verb}
+- {attrs: [pf, verb.suffix.ai], en: to think, ru: поду'мать, type: verb}
+- {attrs: [gen], en: for the sake of, rel: [[preposition, для, for the benefit of]],
+  ru: ради, type: preposition}
+- {attrs: [pf, verb.suffix.i], en: 'to decide, solve', rel: [[adjective, решительный,
+      'resolute, decisive, determined']], ru: реши'ть, type: verb}
+- {attrs: [pf, verb.suffix.i], en: 'to stop, dwell, stand still', rel: [[noun, остановка,
+      'stop, layover']], ru: останови'ться, type: verb}
+- {attrs: [f], en: moon, ru: луна', type: noun}
+- {attrs: [pf, verb.suffix.nu2], en: 'to disappear, vanish', rel: [[noun, исчезновение,
+      dissapearance]], ru: исче'знуть, type: verb}
+- {attrs: [acc], en: through, ru: скво'зь, type: preposition}
+- {en: 'ideal, perfect', ru: идеа'льный, type: adjective}
+- {attrs: [m], en: 'stone, rock', ru: ка'мень, type: noun}
+- {en: please, ru: пожа'луйста, type: interjection}
+- {en: how much, ru: ско'лько, type: adverb}
+- {en: my, ru: мо'й, type: pronoun}
+- {en: your (singular/informal), ru: тво'й, type: pronoun}
+- {en: our, ru: на'ш, type: pronoun}
+- {en: your (plural/formal), ru: ва'ш, type: pronoun}
+- {en: their, ru: их', type: pronoun}
+- {en: one's own (my/your/his/etc.), ru: сво'й, type: pronoun}

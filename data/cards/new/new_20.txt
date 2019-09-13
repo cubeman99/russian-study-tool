@@ -7,6 +7,14 @@
 @type adverb
 
 @type noun
+де'тская площа'дка - playground
+го'рка - slide
+каче'ль - swing
+карусе'ль -- merry-go-round
+песо'чница - sandbox
+
+@type verb
+бере'чь - to keep safe
 
 @type phrase
 

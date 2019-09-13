@@ -123,12 +123,23 @@ def get_stress_index(word):
 
 
 class Word:
-    def __init__(self):
+    def __init__(self, custom=False):
         self.word_type = WordType.Noun
         self.name = AccentedText()
         self.meaning = None
         self.examples = []
         self.complete = False
+        self.__forms = []
+        self.__custom = custom
+
+    def set_custom(self, custom: bool):
+        self.__custom = custom
+
+    def is_custom(self) -> bool:
+        return self.__custom
+
+    def get_key(self) -> tuple:
+        return (self.word_type, self.name.text.lower().replace("ё", "е"))
 
     def get_name(self) -> AccentedText:
         return self.name
@@ -137,7 +148,7 @@ class Word:
         return self.meaning
 
     def get_all_forms(self):
-        return [self.name]
+        return [self.name] + self.__forms
 
     def serialize(self):
         data = {"type": self.word_type.name,
@@ -156,9 +167,12 @@ class Word:
         self.word_type = getattr(WordType, data["type"])
         self.examples = []
         self.complete = True
-        for example in data["examples"]:
-            self.examples.append((AccentedText(example["Russian"]),
-                                  AccentedText(example["English"])))
+        if "forms" in data:
+            self.__forms = [AccentedText(x) for x in data["forms"]]
+        if "examples" in data:
+            for example in data["examples"]:
+                self.examples.append((AccentedText(example["Russian"]),
+                                      AccentedText(example["English"])))
 
     #--------------------------------------------------------------------------
     # Private methods

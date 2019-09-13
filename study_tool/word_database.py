@@ -1,6 +1,7 @@
 import json
 import os
 import shutil
+import yaml
 from study_tool.russian.types import *
 from study_tool.russian.word import *
 from study_tool.russian.adjective import Adjective
@@ -137,10 +138,15 @@ class WordDatabase:
         os.remove(path)
         os.rename(temp_path, path)
 
-    def load(self, path):
+    def load(self, path, custom: bool):
         with open(path, "r", encoding="utf8") as f:
-            word_data = json.load(f)
-        self.deserialize(word_data)
+            if path.endswith("yaml"):
+                word_data = yaml.load(f, Loader=yaml.CLoader)
+            elif path.endswith("json"):
+                word_data = json.load(f)
+            else:
+                raise Exception(path)
+        self.deserialize(word_data, custom=custom)
 
     def serialize(self):
         data = {
@@ -150,7 +156,7 @@ class WordDatabase:
             }
         }
         for name, word in self.words.items():
-            if word is not None and word.word_type in WORD_TYPE_TYPES and word.complete:
+            if word is not None and word.word_type in WORD_TYPE_TYPES and word.complete and not word.is_custom():
                 word_data = Word.serialize(word)
                 data["words"].append(word_data)
         bad_word_data = data["cooljugator"]["404_words"]
@@ -160,8 +166,7 @@ class WordDatabase:
             bad_word_data[word_type.name].append(word)
         return data
 
-    def deserialize(self, data):
-        self.words = {}
+    def deserialize(self, data, custom=False):
         for word_data in data["words"]:
             word_type = getattr(WordType, word_data["type"])
             word = None
@@ -171,14 +176,19 @@ class WordDatabase:
                 word = Adjective()
             elif word_type == WordType.Noun:
                 word = Noun()
+            else:
+                word = Word()
             Word.deserialize(word, word_data)
-            word.deserialize(word_data[word_type.name])
+            if word_type.name in word_data:
+                word.deserialize(word_data[word_type.name])
+            word.set_custom(custom)
             self.add_word(word)
-        for word_type_name, word_list in data["cooljugator"]["404_words"].items():
-            word_type = getattr(WordType, word_type_name)
-            for name in word_list:
-                self.__note_cooljugator_404_word(
-                    word_type=word_type, name=name)
+        if "cooljugator" in data:
+            for word_type_name, word_list in data["cooljugator"]["404_words"].items():
+                word_type = getattr(WordType, word_type_name)
+                for name in word_list:
+                    self.__note_cooljugator_404_word(
+                        word_type=word_type, name=name)
 
     #--------------------------------------------------------------------------
     # Private methods

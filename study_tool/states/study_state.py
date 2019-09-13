@@ -3,6 +3,7 @@ import os
 import pygame
 import random
 import time
+import win32clipboard
 import cmg
 from cmg import math
 from cmg.math import Vec2
@@ -276,6 +277,16 @@ class StudyState(State):
             # E: Edit related cards
             elif key == Keys.K_E:
                 self.__on_click_edit_card()
+
+        elif KeyMods.LCTRL in mod and KeyMods.LSHIFT not in mod:
+            # Ctrl+C: Copy Russian text
+            if key == Keys.K_C:
+                text = self.card.get_russian().text
+                try:
+                    win32clipboard.OpenClipboard()
+                    win32clipboard.SetClipboardText(text, win32clipboard.CF_UNICODETEXT)
+                finally:
+                    win32clipboard.CloseClipboard()
 
     def pause(self):
         other_side = CardSide(1 - self.shown_side)

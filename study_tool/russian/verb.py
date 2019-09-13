@@ -267,36 +267,69 @@ class Verb(Word):
         return data
 
     def deserialize(self, data):
-        self.infinitive = AccentedText(data["infinitive"])
-        self.translation = AccentedText(data["translation"])
-        self.info = AccentedText(data["info"])
-        self.counterparts = [AccentedText(c) for c in data["counterparts"]]
-        self.aspect = getattr(Aspect, data["aspect"])
+        self.infinitive = self.name
+        self.counterparts = []
 
-        self.non_past[(Plurality.Singular, Person.First)] = AccentedText(
-            data["non_past"]["Singular"]["First"])
-        self.non_past[(Plurality.Singular, Person.Second)] = AccentedText(
-            data["non_past"]["Singular"]["Second"])
-        self.non_past[(Plurality.Singular, Person.Third)] = AccentedText(
-            data["non_past"]["Singular"]["Third"])
-        self.non_past[(Plurality.Plural, Person.First)] = AccentedText(
-            data["non_past"]["Plural"]["First"])
-        self.non_past[(Plurality.Plural, Person.Second)] = AccentedText(
-            data["non_past"]["Plural"]["Second"])
-        self.non_past[(Plurality.Plural, Person.Third)] = AccentedText(
-            data["non_past"]["Plural"]["Third"])
-        self.past[(Plurality.Singular, Gender.Masculine)
-                  ] = AccentedText(data["past"]["Masculine"])
-        self.past[(Plurality.Singular, Gender.Femanine)
-                  ] = AccentedText(data["past"]["Femanine"])
-        self.past[(Plurality.Singular, Gender.Neuter)
-                  ] = AccentedText(data["past"]["Neuter"])
-        self.past[(Plurality.Plural, None)] = AccentedText(
-            data["past"]["Plural"])
-        self.imperative[Plurality.Singular] = AccentedText(
-            data["imperative"]["Singular"])
-        self.imperative[Plurality.Plural] = AccentedText(
-            data["imperative"]["Plural"])
+        self.translation = AccentedText(data["translation"])
+        self.info = AccentedText(data.get("info", ""))
+
+        if "infinitive" in data:
+            self.infinitive = AccentedText(data["infinitive"])
+        if "counterparts" in data:
+            self.counterparts = [AccentedText(c) for c in data["counterparts"]]
+
+        if "aspect" in data:
+            self.aspect = getattr(Aspect, data["aspect"])
+            non_past_list = None
+        elif "future" in data:
+            self.aspect = Aspect.Perfective
+            non_past_list = [AccentedText(x) for x in data["future"]]
+        elif "present" in data:
+            self.aspect = Aspect.Imperfective
+            non_past_list = [AccentedText(x) for x in data["present"]]
+        else:
+            raise KeyError()
+
+        if non_past_list:
+            self.non_past[(Plurality.Singular, Person.First)] = non_past_list[0]
+            self.non_past[(Plurality.Singular, Person.Second)] = non_past_list[1]
+            self.non_past[(Plurality.Singular, Person.Third)] = non_past_list[2]
+            self.non_past[(Plurality.Plural, Person.First)] = non_past_list[3]
+            self.non_past[(Plurality.Plural, Person.Second)] = non_past_list[4]
+            self.non_past[(Plurality.Plural, Person.Third)] = non_past_list[5]
+        else:
+            self.non_past[(Plurality.Singular, Person.First)] = AccentedText(
+                data["non_past"]["Singular"]["First"])
+            self.non_past[(Plurality.Singular, Person.Second)] = AccentedText(
+                data["non_past"]["Singular"]["Second"])
+            self.non_past[(Plurality.Singular, Person.Third)] = AccentedText(
+                data["non_past"]["Singular"]["Third"])
+            self.non_past[(Plurality.Plural, Person.First)] = AccentedText(
+                data["non_past"]["Plural"]["First"])
+            self.non_past[(Plurality.Plural, Person.Second)] = AccentedText(
+                data["non_past"]["Plural"]["Second"])
+            self.non_past[(Plurality.Plural, Person.Third)] = AccentedText(
+                data["non_past"]["Plural"]["Third"])
+
+        if isinstance(data["past"], list):
+            self.past[(Plurality.Singular, Gender.Masculine)] = AccentedText(data["past"][0])
+            self.past[(Plurality.Singular, Gender.Femanine)] =  AccentedText(data["past"][1])
+            self.past[(Plurality.Singular, Gender.Neuter)] =  AccentedText(data["past"][2])
+            self.past[(Plurality.Plural, None)] =  AccentedText(data["past"][3])
+        else:
+            self.past[(Plurality.Singular, Gender.Masculine)] = AccentedText(data["past"]["Masculine"])
+            self.past[(Plurality.Singular, Gender.Femanine)] = AccentedText(data["past"]["Femanine"])
+            self.past[(Plurality.Singular, Gender.Neuter)] = AccentedText(data["past"]["Neuter"])
+            self.past[(Plurality.Plural, None)] = AccentedText(
+                data["past"]["Plural"])
+
+        if isinstance(data["imperative"], list):
+            self.imperative[Plurality.Singular] = AccentedText(data["imperative"][0])
+            self.imperative[Plurality.Plural] = AccentedText(data["imperative"][1])
+        else:
+            self.imperative[Plurality.Singular] = AccentedText(data["imperative"]["Singular"])
+            self.imperative[Plurality.Plural] = AccentedText(data["imperative"]["Plural"])
+        
         self.active_participles[Tense.Present] = AccentedText(
             data["participles"]["Active"]["Present"])
         self.active_participles[Tense.Past] = AccentedText(
@@ -310,35 +343,3 @@ class Verb(Word):
         self.adverbial_participles[Tense.Past] = AccentedText(
             data["participles"]["Adverbial"]["Past"])
 
-
-class Noun(Word):
-    def __init__(self):
-        Word.__init__(self)
-        self.word_type = WordType.Noun
-        self.declension = {
-            (Plurality.Singular, Case.Nominative): "",
-            (Plurality.Singular, Case.Accusative): "",
-            (Plurality.Singular, Case.Genetive): "",
-            (Plurality.Singular, Case.Dative): "",
-            (Plurality.Singular, Case.Prepositional): "",
-            (Plurality.Singular, Case.Instrumental): "",
-            (Plurality.Plural, Case.Nominative): "",
-            (Plurality.Plural, Case.Accusative): "",
-            (Plurality.Plural, Case.Genetive): "",
-            (Plurality.Plural, Case.Dative): "",
-            (Plurality.Plural, Case.Prepositional): "",
-            (Plurality.Plural, Case.Instrumental): ""}
-
-    def serialize(self):
-        data = {"declension": {}}
-        for plurality in Plurality:
-            data["declension"][plurality.name] = {}
-            for case in Case:
-                data["declension"][plurality.name][case.name] = self.declension[(
-                    plurality, case)]
-
-    def deserialize(self, data):
-        for plurality in Plurality:
-            for case in Case:
-                self.declension[(plurality, case)] = AccentedText(
-                    data["declension"][plurality.name][case.name])

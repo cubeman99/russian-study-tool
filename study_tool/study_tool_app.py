@@ -62,6 +62,7 @@ class StudyCardsApp(Application):
         self.card_data_file_name = "card_data.yaml"
         self.save_file_name = "study_data.json"
         self.word_data_file_name = "word_data.json"
+        self.custom_word_data_file_name = "custom_words.yaml"
         self.example_data_file_name = "examples.json"
 
         # Load word data
@@ -125,10 +126,32 @@ class StudyCardsApp(Application):
         self.input.mouse_pressed.connect(self.__on_mouse_pressed)
         self.input.mouse_released.connect(self.__on_mouse_released)
 
+        self.get_unknown_words_from_examples()
+
     def iter_card_sets(self):
         """Iterate all card sets"""
         for card_set in self.root.all_card_sets():
             yield card_set
+
+    def get_unknown_words_from_examples(self):
+        story = self.example_database.get_story("Проблемы и сложности попытки назначить свидание Твайлайт Спаркл")
+        print(story)
+        frequencies = {}
+        for text in story.iter_words():
+            text = text.lower().replace("ё", "е")
+            words = self.word_database.lookup_word(text)
+            if not words:
+                key = text
+                frequencies[key] = frequencies.get(key, 0) + 1
+            # if words:
+            #     word = words[0]
+            #     key = word.get_key()
+            #     frequencies[key] = frequencies.get(key, 0) + 1
+        result = list(frequencies.items())
+        result.sort(key=lambda x: x[1], reverse=True)
+        for word, count in result[:50]:
+            print("{} {}".format(count, word))
+
 
     def assimilate_card_set_to_yaml(self, card_set):
         """
@@ -357,7 +380,11 @@ class StudyCardsApp(Application):
         path = os.path.join(self.root_path, self.word_data_file_name)
         if os.path.isfile(path):
             Config.logger.info("Loading word data from: " + path)
-            self.word_database.load(path)
+            self.word_database.load(path, custom=False)
+        path = os.path.join(self.root_path, self.custom_word_data_file_name)
+        if os.path.isfile(path):
+            Config.logger.info("Loading custom word data from: " + path)
+            self.word_database.load(path, custom=True)
 
     def save_example_database(self):
         path = os.path.join(self.root_path, self.example_data_file_name)

@@ -60,6 +60,7 @@ def get_word_occurances(word, text):
 class ExampleDatabase:
     def __init__(self):
         self.stories = []
+        self.__story_dict = {}
 
     def get_example_sentences(self, text, count=None):
         examples = list(self.iter_example_sentences(text))
@@ -67,6 +68,9 @@ class ExampleDatabase:
         if count is not None:
             return examples[:count]
         return examples
+
+    def get_story(self, title: str) -> Story:
+        return self.__story_dict.get(title.lower(), None)
 
     def iter_example_sentences(self, text):
         if not isinstance(text, list):
@@ -177,4 +181,5 @@ class ExampleDatabase:
         if len(story.chapters) == 0:
             raise Exception("No chapters")
         self.stories.append(story)
+        self.__story_dict[story.title.text.lower()] = story
         return story
