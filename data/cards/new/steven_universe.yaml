@@ -1,0 +1,30 @@
+card_set:
+  name: Вселленая Стевена
+  version: 1
+  cards:
+    - [verb, терзать, to torment]
+    - [verb, реять, 'to flutter, soar']
+    - [noun, отвага, courage]
+    - [verb, смолкать, 'to grow silent, to shut up']
+    - [verb, подсесть, to sit next to something/someone]
+    - [preposition, прежде, before]
+    - [adjective, нежный, 'gentle, tender, affectionate']
+    - [noun, алмаз, diamond]
+    - [verb, сливаться, 'to flow together, merge, fuse']
+    - [noun, слияние, 'fusion, merger']
+    - [noun, камень, 'stone, rock']
+    - [noun, жемчуг, pearl]
+    - [noun, сила, 'strength, power, force']
+    - [phrase, 'почему ты мне раньше это не рассказывал?', 'Why havent you told me this
+    before?']
+    - [phrase, никогда ещё не было ничего и никого подобного, there has never been anything
+    or anyone like this]
+    - [verb, защищать, to protect]
+    - [noun, щит, shield]
+    - [noun, шар, 'orb, sphere, globe, ball']
+    - [adjective, бескрайный, 'immense, boundless']
+    - [noun, изумруд, emerald]
+    - [noun, вселенная, universe]
+    - [noun, ребята, 'guys, children']
+    - [phrase, где бы ты не был, wherever you are]
+    - [phrase, ух ты!, 'wow, woah!']

@@ -101161,6 +101161,339 @@
       "examples": [],
       "name": "камень",
       "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "избавляться"
+        ],
+        "imperative": {
+          "Plural": "изба'вьтесь",
+          "Singular": "изба'вься"
+        },
+        "infinitive": "избавиться",
+        "info": "This verb can also mean the following: rid, do.",
+        "non_past": {
+          "Plural": {
+            "First": "изба'вимся",
+            "Second": "изба'витесь",
+            "Third": "изба'вятся"
+          },
+          "Singular": {
+            "First": "изба'влюсь",
+            "Second": "изба'вишься",
+            "Third": "изба'вится"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "изба'вившийся",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "изба'вившись",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "изба'вилась",
+          "Masculine": "изба'вился",
+          "Neuter": "изба'вилось",
+          "Plural": "изба'вились"
+        },
+        "translation": "to get rid of"
+      },
+      "examples": [],
+      "name": "избавиться",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "растерзать",
+          "затерзать",
+          "истерзать"
+        ],
+        "imperative": {
+          "Plural": "терза'йте",
+          "Singular": "терза'й"
+        },
+        "infinitive": "терзать",
+        "info": "This verb can also mean the following: rack.",
+        "non_past": {
+          "Plural": {
+            "First": "терза'ем",
+            "Second": "терза'ете",
+            "Third": "терза'ют"
+          },
+          "Singular": {
+            "First": "терза'ю",
+            "Second": "терза'ешь",
+            "Third": "терза'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "терза'вший",
+            "Present": "терза'ющий"
+          },
+          "Adverbial": {
+            "Past": "терза'в",
+            "Present": "терза'я"
+          },
+          "Passive": {
+            "Past": "те'рзанный",
+            "Present": "терза'емый"
+          }
+        },
+        "past": {
+          "Femanine": "терза'ла",
+          "Masculine": "терза'л",
+          "Neuter": "терза'ло",
+          "Plural": "терза'ли"
+        },
+        "translation": "to torment"
+      },
+      "examples": [],
+      "name": "терзать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "ринуть"
+        ],
+        "imperative": {
+          "Plural": "ре'йте",
+          "Singular": "ре'й"
+        },
+        "infinitive": "реять",
+        "info": "This verb can also mean the following: fly, flutter, hover.",
+        "non_past": {
+          "Plural": {
+            "First": "ре'ем",
+            "Second": "ре'ете",
+            "Third": "ре'ют"
+          },
+          "Singular": {
+            "First": "ре'ю",
+            "Second": "ре'ешь",
+            "Third": "ре'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "ре'явший",
+            "Present": "ре'ющий"
+          },
+          "Adverbial": {
+            "Past": "ре'яв",
+            "Present": "ре'я"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "ре'яла",
+          "Masculine": "ре'ял",
+          "Neuter": "ре'яло",
+          "Plural": "ре'яли"
+        },
+        "translation": "to soar"
+      },
+      "examples": [],
+      "name": "реять",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "подсаживаться"
+        ],
+        "imperative": {
+          "Plural": "подся'дьте",
+          "Singular": "подся'дь"
+        },
+        "infinitive": "подсесть",
+        "info": "This verb can also mean the following: get hooked, get.",
+        "non_past": {
+          "Plural": {
+            "First": "подся'дем",
+            "Second": "подся'дете",
+            "Third": "подся'дут"
+          },
+          "Singular": {
+            "First": "подся'ду",
+            "Second": "подся'дешь",
+            "Third": "подся'дет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "подсе'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "подсе'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "подсе'ла",
+          "Masculine": "подсе'л",
+          "Neuter": "подсе'ло",
+          "Plural": "подсе'ли"
+        },
+        "translation": "to take a seat"
+      },
+      "examples": [],
+      "name": "подсесть",
+      "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "отва'ги",
+            "Dative": "отва'гам",
+            "Genetive": "отва'г",
+            "Instrumental": "отва'гами",
+            "Nominative": "отва'ги",
+            "Prepositional": "отва'гах"
+          },
+          "Singular": {
+            "Accusative": "отва'гу",
+            "Dative": "отва'ге",
+            "Genetive": "отва'ги",
+            "Instrumental": "отва'гой",
+            "Nominative": "отва'га",
+            "Prepositional": "отва'ге"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "отвага",
+      "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "смолкнуть"
+        ],
+        "imperative": {
+          "Plural": "смолка'йте",
+          "Singular": "смолка'й"
+        },
+        "infinitive": "смолкать",
+        "info": "This verb can also mean the following: grow, grow silent, fall silent, fall into silence, stop.",
+        "non_past": {
+          "Plural": {
+            "First": "смолка'ем",
+            "Second": "смолка'ете",
+            "Third": "смолка'ют"
+          },
+          "Singular": {
+            "First": "смолка'ю",
+            "Second": "смолка'ешь",
+            "Third": "смолка'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "смолка'вший",
+            "Present": "смолка'ющий"
+          },
+          "Adverbial": {
+            "Past": "смолка'в",
+            "Present": "смолка'я"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "смолка'ла",
+          "Masculine": "смолка'л",
+          "Neuter": "смолка'ло",
+          "Plural": "смолка'ли"
+        },
+        "translation": "to cease"
+      },
+      "examples": [],
+      "name": "смолкать",
+      "type": "Verb"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "слия'ния",
+            "Dative": "слия'ниям",
+            "Genetive": "слия'ний",
+            "Instrumental": "слия'ниями",
+            "Nominative": "слия'ния",
+            "Prepositional": "слия'ниях"
+          },
+          "Singular": {
+            "Accusative": "слия'ние",
+            "Dative": "слия'нию",
+            "Genetive": "слия'ния",
+            "Instrumental": "слия'нием",
+            "Nominative": "слия'ние",
+            "Prepositional": "слия'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "слияние",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "си'лы",
+            "Dative": "си'лам",
+            "Genetive": "си'л",
+            "Instrumental": "си'лами",
+            "Nominative": "си'лы",
+            "Prepositional": "си'лах"
+          },
+          "Singular": {
+            "Accusative": "си'лу",
+            "Dative": "си'ле",
+            "Genetive": "си'лы",
+            "Instrumental": "си'лой",
+            "Nominative": "си'ла",
+            "Prepositional": "си'ле"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "сила",
+      "type": "Noun"
     }
   ]
 }
