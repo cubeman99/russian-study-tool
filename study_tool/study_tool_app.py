@@ -31,6 +31,7 @@ from study_tool.example_database import ExampleDatabase
 from study_tool.states.read_text_state import ReadTextState
 from study_tool.states.card_edit_state import CardEditState
 from study_tool.states.study_state import StudyParams
+from study_tool.study_database import StudyDatabase
 
 DEAD_ZONE = 0.01
 
@@ -72,7 +73,7 @@ class StudyCardsApp(Application):
         # Load card data
         self.card_database = CardDatabase(word_database=self.word_database)
         self.load_card_data()
-
+        
         # Load card sets
         Config.logger.info("Loading card sets from: " + self.cards_path)
         self.root = self.card_database.load_card_package_directory(
@@ -86,6 +87,14 @@ class StudyCardsApp(Application):
 
         # Load study data
         self.load_study_data()
+        
+        self.study_database = StudyDatabase()
+        for card in self.card_database.iter_cards():
+            info = self.study_database.create_card_study_data(card)
+            info.history = card.history
+            info.last_encounter_time = card.last_encounter_time
+            info.proficiency_level = card.proficiency_level
+        self.study_database.save("data/test_study_data.yaml")
 
         Config.logger.info("Initialization complete!")
 

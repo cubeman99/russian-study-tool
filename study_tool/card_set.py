@@ -12,7 +12,7 @@ from study_tool.config import Config
 
 class CardGroupMetrics:
     def __init__(self):
-        self.history_score = 0
+        self.history_score = 0.0
         self.proficiency_counts = []
         for level in range(0, Config.proficiency_levels + 1):
             self.proficiency_counts.append(0)

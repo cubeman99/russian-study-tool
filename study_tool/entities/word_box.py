@@ -40,8 +40,10 @@ class WordBox(Entity):
 
     def on_create(self):
         """Called when the entity is created."""
-        self.__word = self.context.word_database.lookup_word(self.__text.text)
-        self.__cards = list(self.context.card_database.find_cards_by_word(self.__text.text))
+        if not self.__word:
+            self.__word = self.context.word_database.lookup_word(self.__text.text)
+        if not self.__cards:
+            self.__cards = list(self.context.card_database.find_cards_by_word(self.__text.text))
         self.__size = Graphics(None).measure_text(self.__text, font=self.__font)
         self.set_size(self.__size + (self.__padding * 2))
 

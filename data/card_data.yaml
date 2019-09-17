@@ -1067,8 +1067,8 @@ cards:
 - {attrs: [impf, verb.suffix.ai], en: to inspire, ru: вдохновля'ть, type: verb}
 - {en: it is possible, ru: возмо'жно, type: other}
 - {en: it is impossible, ru: невозмо'жно, type: other}
-- {en: wonderful!, rel: [[noun, замечание, 'comment, remark, note, observation']], ru: замеча'тельно!,
-  type: other}
+- {en: wonderful!, rel: [[noun, замечание, 'comment, remark, note, observation'], [
+      verb, замечать, to notice]], ru: замеча'тельно!, type: other}
 - {en: native, rel: [[noun, родители, parents], [verb, родить, to give birth], [noun,
       род, 'gender, kin']], ru: родно'й, type: adjective}
 - {attrs: [long], en: 'chic, posh, stylish', ru: шика'рный, type: adjective}
@@ -1583,7 +1583,8 @@ cards:
 - {attrs: [pf, verb.suffix.i], en: 'to keep in mind, remember, memorize', ru: запо'мнить,
   type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to notice, rel: [[noun, замечание, 'comment, remark,
-        note, observation']], ru: замеча'ть, type: verb}
+        note, observation'], [adjective, незамечанный, unnoticed], [other, замечательно!,
+      wonderful!]], ru: замеча'ть, type: verb}
 - {attrs: [pf, verb.suffix.i], en: to fall in love, ru: влюби'ться, type: verb}
 - {attrs: [pf, verb.suffix.i], en: 'to concede, yield, give way', ru: уступи'ть, type: verb}
 - {attrs: [impf, verb.suffix.i], en: to paint, ru: кра'сить, type: verb}
@@ -2716,8 +2717,8 @@ cards:
 - {en: literally, ru: буква'льно, type: adverb}
 - {en: 'much, much more', ru: гора'здо, type: adverb}
 - {en: 'partly, partially', rel: [[noun, часть, part]], ru: части'чно, type: adverb}
-- {en: unnoticed, rel: [[verb, заметить, 'to notice, observe']], ru: незаме'чанный,
-  type: adjective}
+- {en: unnoticed, rel: [[verb, заметить, 'to notice, observe'], [verb, замечать, to
+        notice]], ru: незаме'чанный, type: adjective}
 - {en: insurmountable, ru: непреодоли'мый, type: adjective}
 - {en: young, ru: ю'ный, type: adjective}
 - {en: 'severe, harsh', ru: суро'вый, type: adjective}
@@ -3642,8 +3643,8 @@ cards:
 - {attrs: [pf, verb.suffix.i], en: 'to encourage, cheer up', ru: ободри'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to torment, ru: терза'ть, type: verb}
 - {attrs: [f], en: courage, ru: отва'га, type: noun}
-- {attrs: [impf, verb.suffix.ai], en: 'to grow silent, to shut up', rel: [[verb, замолкнуть,
-      to fall silent], [verb, молчать, to be silent], [noun, молчание, silence]],
+- {attrs: [impf, verb.suffix.ai], en: 'to grow silent, to shut up', rel: [[noun, молчание,
+      silence], [verb, замолкнуть, to fall silent], [verb, молчать, to be silent]],
   ru: смолк'ать, type: verb}
 - {attrs: [pf], en: to sit next to something/someone, rel: [[verb, сесть, to sit down]],
   ru: подсе'сть, type: verb}
