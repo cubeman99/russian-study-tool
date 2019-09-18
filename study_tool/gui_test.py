@@ -28,7 +28,6 @@ from study_tool.russian import conjugation
 from study_tool.word_database import WordDatabase
 from study_tool.example_database import ExampleDatabase
 from study_tool.states.read_text_state import ReadTextState
-from study_tool.states.card_edit_state import CardEditState
 import yaml
 
 class GUITesterApp(Application):

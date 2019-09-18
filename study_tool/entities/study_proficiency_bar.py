@@ -35,13 +35,23 @@ class StudyProficiencyBar(Entity):
         self.__proficiency_counts = {}
         self.__score = 0
         for level in range(Config.proficiency_levels, -1, -1):
-            count = len([c for c in cards if c.proficiency_level == level])
-            self.__proficiency_counts[level] = count
-            if count > 0:
-                self.__score += count * max(0, level - 1)
+            self.__proficiency_counts[level] = 0
+        for card in cards:
+            study_data = self.context.study_database.get_card_study_data(card)
+            self.__proficiency_counts[study_data.get_proficiency_level()] += 1
+        for level in range(Config.proficiency_levels, -1, -1):
+            count = self.__proficiency_counts[level]
+            self.__score += count * max(0, level - 1)
+
+
+        #for level in range(Config.proficiency_levels, -1, -1):
+        #    count = len([c for c in cards if c.proficiency_level == level])
+        #    self.__proficiency_counts[level] = count
+        #    if count > 0:
+        #        self.__score += count * max(0, level - 1)
+
         self.__score /= max(1.0, float((Config.proficiency_levels - 1) * len(cards)))
         self.__score = int(round(self.__score * 100))
-
 
     def update(self, dt):
         """Update the entity."""

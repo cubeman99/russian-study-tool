@@ -29,6 +29,7 @@ from study_tool.entities.text_label import TextLabel
 from study_tool.entities.entity import Entity
 from study_tool.entities.label_box import LabelBox
 from study_tool.entities.card_attribute_box import CardAttributeBox
+from study_tool.entities.study_proficiency_bar import StudyProficiencyBar
 from study_tool.gui.related_cards_widget import RelatedCardsWidget
 from study_tool.states.gui_state import GUIState
 
@@ -89,9 +90,12 @@ class StudyState(State):
         self.__table_verb_past = None
         self.__table_verb_present = None
         self.__table_verb_participles = None
+        self.__proficiency_bar = None
 
         # Internal state
         self.card = None
+        self.__study_data = None
+        self.__study_metrics = None
         self.revealed = False
         self.reveal_text = AccentedText()
         self.prompt_text = AccentedText()
@@ -106,9 +110,11 @@ class StudyState(State):
         self.buttons[2] = Button("Next", self.next)
 
         self.scheduler = Scheduler(cards=self.card_set.cards,
-                                   mode=self.params.mode)
+                                   mode=self.params.mode,
+                                   study_database=self.app.study_database)
         self.seen_cards = []
         self.card = None
+        self.__study_data = None
         self.revealed = False
         self.__related_cards = []
         self.__counterparts = []
@@ -124,6 +130,13 @@ class StudyState(State):
         screen_width, screen_height = self.app.screen.get_size()
         screen_center_x = screen_width / 2
         screen_center_y = screen_height / 2
+        
+        self.__proficiency_bar = StudyProficiencyBar(
+            center_y=self.margin_top / 2,
+            left=screen_center_x + 80,
+            right=screen_width - 32,
+            study_set=[c for c in self.scheduler.get_all_cards()])
+        self.add_entity(self.__proficiency_bar)
 
         self.__entity_prompt_text = self.add_entity(LabelBox(
             text="<PROMPT-TEXT>",
@@ -425,6 +438,9 @@ class StudyState(State):
         """Shows a new card."""
 
         self.card = card
+        self.__study_data = self.app.study_database.get_card_study_data(card)
+        self.__proficiency_bar.recalculate()
+        self.__study_metrics = self.app.study_database.get_group_study_metrics(self.card_set)
         self.revealed = False
         self.buttons[0] = Button("Reveal", self.reveal)
 
@@ -663,12 +679,12 @@ class StudyState(State):
         # Draw recent history (left)
         max_history_display_count = 10
         history_display_count = min(max_history_display_count,
-                                    len(self.card.history))
+                                    len(self.__study_data.get_history_list()))
         history_box_size = 20
         padding = (self.proficiency_margin_height - history_box_size) // 2
         spacing = 3
         for index in range(0, history_display_count):
-            marked = not self.card.history[index]
+            marked = not self.__study_data.get_history_list()[index]
             t = index / (max_history_display_count * 1.2)
             c = cmg.math.lerp(marked_overlay_color, bar_color, t)
             x = padding + ((history_display_count - index - 1) *
@@ -684,15 +700,15 @@ class StudyState(State):
 
         # Draw time since last encounter (right)
         g.draw_text(screen_width - 16, top_y + (bar_height // 2),
-                    text=self.card.elapsed_time_string(),
+                    text=self.__study_data.elapsed_time_string(),
                     align=Align.MiddleRight,
                     color=marked_overlay_color,
                     font=self.card_status_font)
 
         # Draw current and predicted history score (middle)
-        score_fail = self.card.get_next_history_score(False)
-        score = self.card.get_history_score()
-        score_pass = self.card.get_next_history_score(True)
+        score_fail = self.__study_data.get_next_history_score(False)
+        score = self.__study_data.get_history_score()
+        score_pass = self.__study_data.get_next_history_score(True)
         g.draw_text(screen_center_x, top_y + (bar_height // 2),
                     text="{:.4f} < {:.4f} > {:.4f}".format(
                         score_fail, score, score_pass),
@@ -706,9 +722,9 @@ class StudyState(State):
         screen_center_y = screen_height / 2
 
         # Draw top/bottom proficiency bars
-        if self.card.proficiency_level > 0:
+        if self.__study_data.get_proficiency_level() > 0:
             marked_state_color = cmg.math.lerp(Config.proficiency_level_colors[
-                self.card.proficiency_level], color.WHITE, 0.7)
+                self.__study_data.get_proficiency_level()], color.WHITE, 0.7)
             g.fill_rect(0, self.margin_top, screen_width,
                         self.proficiency_margin_height,
                         color=marked_state_color)
@@ -728,13 +744,9 @@ class StudyState(State):
                     text=self.card_set.name,
                     color=cmg.color.GRAY,
                     align=Align.MiddleLeft)
-        metrics = self.card_set.get_study_metrics()
         g.draw_text(screen_center_x, self.margin_top / 2,
-                    text="{:.0f} / {:.0f}".format(metrics.get_proficiency_count(),
-                                                  metrics.history_score),
+                    text="{:.0f} / {:.0f}".format(self.__study_metrics.get_proficiency_count(),
+                                                  self.__study_metrics.history_score),
                     color=cmg.color.GRAY,
                     align=Align.Centered)
-        self.app.draw_completion_bar(g, self.margin_top / 2,
-                                     screen_center_x + 80,
-                                     screen_width - 32,
-                                     [c for c in self.scheduler.get_all_cards()])
+        

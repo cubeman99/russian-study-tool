@@ -49,7 +49,7 @@ class MenuState(State):
                                screen_height - self.margin_top - self.margin_bottom)
         
         self.__dirty_metrics = False
-        self.__metrics = self.package.get_study_metrics()
+        self.__metrics = self.app.study_database.get_group_study_metrics(self.package)
 
         # Create menu options
         self.menu = Menu(options=[], viewport=viewport)
@@ -64,7 +64,7 @@ class MenuState(State):
             self.menu.options.append(("Back", self.app.pop_state))
         for package in self.package.packages:
             bar = StudyProficiencyBar(package)
-            bar.on_create()
+            bar.init(None, self.app)
             self.__bars.append(bar)
             self.menu.options.append(
                 ("[...] {}".format(package.name), package, bar))
@@ -73,7 +73,7 @@ class MenuState(State):
             if card_set.is_fixed_card_set():
                 name += " [txt]"
             bar = StudyProficiencyBar(card_set)
-            bar.on_create()
+            bar.init(None, self.app)
             self.__bars.append(bar)
             self.menu.options.append((name, card_set, bar))
         self.menu.options.append(
@@ -163,7 +163,7 @@ class MenuState(State):
         State.update(self, dt)
 
         if self.__dirty_metrics:
-            self.__metrics = self.package.get_study_metrics()
+            self.__metrics = self.app.study_database.get_group_study_metrics(self.package)
             for bar in self.__bars:
                 bar.recalculate()
             self.__dirty_metrics = False

@@ -13,6 +13,7 @@ from study_tool.card_set import *
 from study_tool.entities.menu import Menu
 from study_tool.states.state import *
 from study_tool.states.sub_menu_state import SubMenuState
+from study_tool.entities.study_proficiency_bar import StudyProficiencyBar
 
 
 class CardListState(State):
@@ -33,6 +34,8 @@ class CardListState(State):
         self.buttons[2] = Button("Scroll Down")
 
         screen_width, screen_height = self.app.screen.get_size()
+        screen_center_x = screen_width / 2
+        screen_center_y = screen_height / 2
         viewport = pygame.Rect(0, self.margin_top, screen_width,
                                screen_height - self.margin_top - self.margin_bottom)
 
@@ -48,6 +51,13 @@ class CardListState(State):
             self.max_column_width = max(self.max_column_width,
                                         g.measure_text(card.russian, font=self.card_font)[0])
 
+        self.__proficiency_bar = StudyProficiencyBar(
+            center_y=self.margin_top / 2,
+            left=screen_center_x + 80,
+            right=screen_width - 32,
+            study_set=self.card_set.cards)
+        self.add_entity(self.__proficiency_bar)
+
     def pause(self):
         self.app.push_state(SubMenuState(
             "Pause",
@@ -56,14 +66,12 @@ class CardListState(State):
                 ("Exit", self.app.quit)]))
 
     def get_option_background_color(self, index, card, highlighted):
-        # if highlighted:
-        #  return Config.option_highlighted_background_color
-        # else:
-        if not card.encountered:
+        study_data = self.app.study_database.get_card_study_data(card)
+        if not study_data.is_encountered():
             row_color = self.row_unseen_color
         else:
             row_color = math.lerp(Config.proficiency_level_colors[
-                card.proficiency_level], color.WHITE, 0.7)
+                study_data.get_proficiency_level()], color.WHITE, 0.7)
         if index % 2 == 1:
             row_color *= 0.94
         if highlighted:
@@ -102,7 +110,3 @@ class CardListState(State):
                     text=self.card_set.name,
                     color=Config.title_color,
                     align=Align.MiddleLeft)
-        self.app.draw_completion_bar(g, self.margin_top / 2,
-                                     screen_center_x - 80,
-                                     screen_width - 32,
-                                     self.card_set)

@@ -74,20 +74,28 @@ class ProficiencySet:
 
 
 class Scheduler:
-    def __init__(self, cards, mode=ScheduleMode.Learning):
+    """
+    Handles scheduling the order of cards to study.
+    """
+
+    def __init__(self, cards, study_database, mode=ScheduleMode.Learning):
         cards = list(cards)
         self.mode = mode
+        self.study_database = study_database
+
         self.proficiency_levels = Config.proficiency_levels
         self.proficiency_level_intervals = Config.proficiency_level_intervals
         self.new_card_interval = Config.new_card_interval
         self.min_repeat_interval = Config.min_repeat_interval
+
         self.sets = {}
+        for level in range(0, self.proficiency_levels + 1):
+            self.sets[level] = ProficiencySet(level=level, cards=[])
         for card in cards:
             card.rep = None
-        for level in range(0, self.proficiency_levels + 1):
-            self.sets[level] = ProficiencySet(level=level,
-                                              cards=[c for c in cards
-                                                     if c.proficiency_level == level])
+            study_data = self.study_database.get_card_study_data(card)
+            self.sets[study_data.get_proficiency_level()].add(card)
+
         self.rep = 0
 
     def get_all_cards(self):
@@ -96,35 +104,26 @@ class Scheduler:
                 yield card
 
     def mark(self, card: Card, knew_it: bool):
-        self.sets[card.proficiency_level].remove(card)
-        if card.proficiency_level == 0:
-            card.proficiency_level = 3 if knew_it else 1
-        elif knew_it:
-            card.proficiency_level = min(card.proficiency_level + 1,
-                                         self.proficiency_levels)
-        else:
-            card.proficiency_level = max(1, card.proficiency_level - 1)
-        self.sets[card.proficiency_level].add(card)
+        study_data = self.study_database.get_card_study_data(card)
+        self.sets[study_data.get_proficiency_level()].remove(card)
+        self.study_database.mark_card(card, knew_it)
+        self.sets[study_data.get_proficiency_level()].add(card)
         card.rep = self.rep
-        card.last_encounter_time = time.time()
-        card.history.insert(0, knew_it)
-        if len(card.history) > Config.max_card_history_size:
-            card.history = card.history[:Config.max_card_history_size]
 
     def next(self) -> Card:
-        card = self._get_next_card()
+        card = self.__get_next_card()
         self.rep += 1
         return card
 
-    def _get_next_card(self) -> Card:
+    def __get_next_card(self) -> Card:
         card = None
 
         if self.mode == ScheduleMode.NewOnly:
-            card = self._get_new_card()
+            card = self.__get_new_card()
             return card
 
         if self.rep % self.new_card_interval == 0:
-            card = self._get_new_card()
+            card = self.__get_new_card()
             if card is not None:
                 return card
 
@@ -144,13 +143,13 @@ class Scheduler:
                     available_sets[next_set], rep=self.rep)
                 return card
 
-            card = self._get_new_card()
+            card = self.__get_new_card()
             if card is not None:
                 return card
 
         return None
 
-    def _get_new_card(self) -> Card:
+    def __get_new_card(self) -> Card:
         if len(self.sets[0].cards) == 0:
             return None
         card = choose(self.sets[0].cards)

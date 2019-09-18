@@ -64,10 +64,11 @@ class WordBox(Entity):
         if self.__cards:
             outline_color = Colors.BLACK
             card = self.__cards[0]
+            study_data = self.context.study_database.get_card_study_data(card)
             background_color = math.lerp(
                 Color(255, 128, 128),
                 Color(128, 255, 128),
-                t=card.get_history_score())
+                t=study_data.get_history_score())
             
         # Draw the background
         g.fill_rect(pos.x,

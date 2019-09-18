@@ -61,11 +61,6 @@ class Card:
         self.source = None
         self.__fixed_card_set = None
 
-        # CardStudyData
-        self.proficiency_level = 0  # 0 = new/unseen
-        self.history = []  # History of True or False markings
-        self.last_encounter_time = None
-
         self.word = None
 
         # used by Scheduler
@@ -106,20 +101,6 @@ class Card:
     def get_russian_key(self) -> tuple:
         return (self.word_type, self.russian.text.lower(), ",".join(sorted([x.value for x in self.get_attributes()])))
     
-    def get_proficiency_score(self) -> float:
-        """Get the key proficiency score."""
-        return max(0.0, float(self.proficiency_level - 1) /
-                   (Config.proficiency_levels - 1))
-
-    def get_history_score(self) -> float:
-        """Get the card's current history score."""
-        return get_history_score(self.history)
-
-    def get_next_history_score(self, knew_it: bool) -> float:
-        """Get the card's next history score, given whether it was known or not."""
-        history = [knew_it] + self.history
-        return get_history_score(history[:Config.max_card_history_size])
-    
     def clear_attributes(self):
         """Clear all card attributes."""
         self.__attributes = []
@@ -142,8 +123,8 @@ class Card:
     def get_display_text(self, side: CardSide):
         """Get the text to display for a given side."""
         text = self.text[side]
-        if len(self.__attributes) > 0 and side == CardSide.Russian:
-            text += " (" + ", ".join(a.value + "." for a in attributes) + ")"
+        if self.__attributes and side == CardSide.Russian:
+            text += " (" + ", ".join(a.value + "." for a in self.__attributes) + ")"
         return text
 
     def get_word_type(self) -> WordType:
@@ -176,31 +157,6 @@ class Card:
     def russian(self):
         """Get the card's Russian side text."""
         return self.text[CardSide.Russian]
-
-    @property
-    def encountered(self):
-        """Get whether the card has been encountered yet."""
-        return self.last_encounter_time is not None
-
-    def elapsed_time_string(self):
-        """
-        Get the string representing the time since the last encouder.
-        example: "15 minutes ago".
-        """
-        elapsed_time = time.time() - self.last_encounter_time
-        units = "second"
-        if elapsed_time > 60:
-            units = "minute"
-            elapsed_time /= 60
-            if elapsed_time > 60:
-                units = "hour"
-                elapsed_time /= 60
-                if elapsed_time > 24:
-                    units = "day"
-                    elapsed_time /= 24
-        elapsed_time = int(round(elapsed_time))
-        return "{} {}{} ago".format(elapsed_time, units,
-                                    "s" if elapsed_time != 1 else "")
 
     def set_english(self, english: AccentedText):
         """Set the english text."""
@@ -257,23 +213,6 @@ class Card:
                 self.add_attribute(attr)
         self.related_cards = []  # Card database deserializes these
                
-    def serialize_study_data(self):
-        """Serialize the study data."""
-        history_str = "".join("T" if h else "F" for h in self.history)
-        return dict(type=None if self.word_type is None else self.word_type.name,
-                    russian=repr(self.text[CardSide.Russian]),
-                    english=repr(self.text[CardSide.English]),
-                    proficiency_level=self.proficiency_level,
-                    last_encounter_time=self.last_encounter_time,
-                    history=history_str)
-
-    def deserialize_study_data(self, state):
-        """Deserialize the study data."""
-        self.proficiency_level = state["proficiency_level"]
-        self.last_encounter_time = state["last_encounter_time"]
-        history_str = state["history"]
-        self.history = [c == "T" for c in history_str]
-
     def __repr__(self):
         attrs = "|".join(sorted([x.value for x in self.get_attributes()]))
         return "Card({}, '{}', '{}', '{}')".format(

@@ -29,7 +29,6 @@ from study_tool.russian import conjugation
 from study_tool.word_database import WordDatabase
 from study_tool.example_database import ExampleDatabase
 from study_tool.states.read_text_state import ReadTextState
-from study_tool.states.card_edit_state import CardEditState
 from study_tool.states.study_state import StudyParams
 from study_tool.study_database import StudyDatabase
 
@@ -61,7 +60,7 @@ class StudyCardsApp(Application):
         self.root_path = "data"
         self.cards_path = os.path.join(self.root_path, "cards")
         self.card_data_file_name = "card_data.yaml"
-        self.save_file_name = "study_data.json"
+        self.save_file_name = "study_data.yaml"
         self.word_data_file_name = "word_data.json"
         self.custom_word_data_file_name = "custom_words.yaml"
         self.example_data_file_name = "examples.json"
@@ -86,15 +85,19 @@ class StudyCardsApp(Application):
         # self.save_example_database()
 
         # Load study data
-        self.load_study_data()
-        
         self.study_database = StudyDatabase()
-        for card in self.card_database.iter_cards():
-            info = self.study_database.create_card_study_data(card)
-            info.history = card.history
-            info.last_encounter_time = card.last_encounter_time
-            info.proficiency_level = card.proficiency_level
-        self.study_database.save("data/test_study_data.yaml")
+        self.load_study_data()
+        # for card in self.card_database.iter_cards():
+        #     info = self.study_database.create_card_study_data(card)
+        #     info.history = card.history
+        #     info.last_encounter_time = card.last_encounter_time
+        #     info.proficiency_level = card.proficiency_level
+        # for date_str, metrics in self.card_database.metrics_history.items():
+        #     new_metrics = self.study_database.create_metrics_history(date_str)
+        #     new_metrics.date = metrics.date
+        #     new_metrics.copy(metrics)
+        # self.study_database.save("data/test_study_data.yaml")
+        # self.study_database.load("data/test_study_data.yaml")
 
         Config.logger.info("Initialization complete!")
 
@@ -112,7 +115,6 @@ class StudyCardsApp(Application):
         # self.root["verbs"]["stems"].get_problem_cards()
         # self.push_card_list_state(self.root.card_sets[1])
         # self.push_state(KeyboardState())
-        # self.push_state(CardEditState(card_database=self.card_database))
         cards = list(self.card_database.iter_cards())
         test_set = self.root["test_set"]
         test_card = list(self.card_database.find_cards_by_word("слушать"))[0]
@@ -124,7 +126,7 @@ class StudyCardsApp(Application):
         #self.push_state(GUIState(widget=CardSetEditWidget(test_set, self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=RelatedCardsWidget(test_card, self), title="Edit Related Cards"))
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
-        #self.push_study_state(test_set, StudyParams(random_side=True))
+        self.push_study_state(test_set, StudyParams(random_side=True))
 
         #self.save_card_set(self.root["nouns"]["house"])
 
@@ -135,7 +137,7 @@ class StudyCardsApp(Application):
         self.input.mouse_pressed.connect(self.__on_mouse_pressed)
         self.input.mouse_released.connect(self.__on_mouse_released)
 
-        self.get_unknown_words_from_examples()
+        #self.get_unknown_words_from_examples()
 
     def iter_card_sets(self):
         """Iterate all card sets"""
@@ -362,23 +364,11 @@ class StudyCardsApp(Application):
 
     def save_study_data(self):
         path = os.path.join(self.root_path, self.save_file_name)
-        Config.logger.debug("Saving study data to: " + path)
-        state = self.card_database.serialize_study_data()
-        self.card_database.deserialize_study_data(state)
-        temp_path = path + ".temp"
-        with open(temp_path, "w", encoding="utf8") as f:
-            json.dump(state, f, indent=2, sort_keys=True, ensure_ascii=False)
-        os.remove(path)
-        os.rename(temp_path, path)
+        return self.study_database.save(path)
 
     def load_study_data(self):
         path = os.path.join(self.root_path, self.save_file_name)
-        if os.path.isfile(path):
-            Config.logger.info("Loading study data from: " + path)
-            with open(path, "r", encoding="utf8") as f:
-                state = json.load(f)
-                Config.logger.info("Deserializing study data from: " + path)
-                self.card_database.deserialize_study_data(state)
+        return self.study_database.load(path)
 
     def save_word_database(self):
         path = os.path.join(self.root_path, self.word_data_file_name)
