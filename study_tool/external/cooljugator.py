@@ -147,7 +147,7 @@ def get_verb_info(infinitive):
     other_meanings = match.group("info")
     verb.info = AccentedText(other_meanings)
     counterparts = match.group("counterparts")
-    verb.counterparts = [AccentedText(c.strip()) for c in counterparts.split(",")]
+    verb.counterparts = [AccentedText(c.strip()) for c in counterparts.split(",") if bool(c.strip())]
     for index, (plurality, person) in enumerate([
       (Plurality.Singular, Person.First),
       (Plurality.Singular, Person.Second),

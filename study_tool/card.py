@@ -62,6 +62,7 @@ class Card:
         self.__fixed_card_set = None
 
         self.word = None
+        self.__study_data = None
 
         # used by Scheduler
         self.rep = None
@@ -69,6 +70,12 @@ class Card:
 
     def get_word(self):
         return self.word
+
+    def get_study_data(self):
+        return self.__study_data
+
+    def set_study_data(self, study_data):
+        self.__study_data = study_data
 
     def get_fixed_card_set(self):
         return self.__fixed_card_set

@@ -227,6 +227,7 @@ class StudyDatabase:
         with self.__lock.acquire_write():
             assert key not in self.__study_data_dict
             self.__study_data_dict[key] = study_data
+            card.set_study_data(study_data)
             return study_data
 
     def apply_key_change(self, old_key, new_key):
@@ -283,14 +284,14 @@ class StudyDatabase:
                 os.remove(path)
             os.rename(temp_path, path)
 
-    def load(self, path: str):
+    def load(self, path: str, card_database):
         """Load the study data from file."""
         with self.__lock.acquire_write():
             Config.logger.info("Loading study data from: " + path)
             with open(path, "r", encoding="utf8") as f:
                 state = yaml.load(f, Loader=yaml.CLoader)
                 Config.logger.info("Deserializing study data from: " + path)
-                self.__deserialize(state)
+                self.__deserialize(state, card_database)
                 
     def __update_current_metrics(self):
         current_metrics = self.get_study_metrics()
@@ -316,7 +317,7 @@ class StudyDatabase:
             state["cards"].append(card_state)
         return state
 
-    def __deserialize(self, state: dict):
+    def __deserialize(self, state: dict, card_database):
         """Deserialize the study data from a dictionary."""
 
         # Deserialize metrics hisstory
@@ -335,4 +336,7 @@ class StudyDatabase:
             card_study_data = CardStudyData()
             card_study_data.deserialize(card_state[3:])
             self.__study_data_dict[key] = card_study_data
+            card = card_database.get_card(*key)
+            if card:
+                card.set_study_data(study_data)
 

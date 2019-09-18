@@ -22,6 +22,7 @@ from study_tool.states.gui_state import GUIState
 from study_tool.gui.card_edit_widget import CardEditWidget
 from study_tool.gui.card_set_edit_widget import CardSetEditWidget
 from study_tool.gui.related_cards_widget import RelatedCardsWidget
+from study_tool.gui.query_widget import QueryWidget
 from study_tool.card_database import CardDatabase
 from study_tool.scheduler import ScheduleMode
 from study_tool.states.keyboard_state import KeyboardState
@@ -31,6 +32,7 @@ from study_tool.example_database import ExampleDatabase
 from study_tool.states.read_text_state import ReadTextState
 from study_tool.states.study_state import StudyParams
 from study_tool.study_database import StudyDatabase
+from study_tool.query import CardQuery
 
 DEAD_ZONE = 0.01
 
@@ -115,7 +117,8 @@ class StudyCardsApp(Application):
         #self.push_state(GUIState(widget=CardSetEditWidget(test_set, self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=RelatedCardsWidget(test_card, self), title="Edit Related Cards"))
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
-        self.push_study_state(test_set, StudyParams(random_side=True))
+        #self.push_study_state(test_set, StudyParams(random_side=True))
+        self.push_state(GUIState(widget=QueryWidget(self), title="Study Query"))
 
         #self.save_card_set(self.root["nouns"]["house"])
 
@@ -132,6 +135,17 @@ class StudyCardsApp(Application):
         """Iterate all card sets"""
         for card_set in self.root.all_card_sets():
             yield card_set
+
+    def query_cards(self, query: CardQuery):
+        """Iterates cards using a query."""
+        count = 0
+        for _, card in self.card_database.cards.items():
+            study_data = self.study_database.get_card_study_data(card)
+            if query.matches(card, study_data):
+                yield card
+                count += 1
+                if query.max_count is not None and count >= query.max_count:
+                    break
 
     def get_unknown_words_from_examples(self):
         story = self.example_database.get_story("Проблемы и сложности попытки назначить свидание Твайлайт Спаркл")
@@ -358,7 +372,7 @@ class StudyCardsApp(Application):
 
     def load_study_data(self):
         path = os.path.join(self.root_path, self.save_file_name)
-        return self.study_database.load(path)
+        return self.study_database.load(path, self.card_database)
 
     def save_word_database(self):
         path = os.path.join(self.root_path, self.word_data_file_name)

@@ -276,7 +276,7 @@ class Verb(Word):
         if "infinitive" in data:
             self.infinitive = AccentedText(data["infinitive"])
         if "counterparts" in data:
-            self.counterparts = [AccentedText(c) for c in data["counterparts"]]
+            self.counterparts = [AccentedText(c) for c in data["counterparts"] if c]
 
         if "aspect" in data:
             self.aspect = getattr(Aspect, data["aspect"])

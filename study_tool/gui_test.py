@@ -45,6 +45,7 @@ class GUITesterApp(Application):
 
         widget = widgets.Widget()
         layout = widgets.VBoxLayout()
+        layout.add(widgets.ComboBox(["Cat", "Dog", "Horse"]))
         text_edit = widgets.TextEdit()
         layout.add(text_edit)
         layout.add(widgets.Button("Hello"))
