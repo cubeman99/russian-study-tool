@@ -2,6 +2,7 @@ import os
 import threading
 import time
 import yaml
+from cmg.utilities.read_write_lock import ReadWriteLock
 from datetime import datetime
 from study_tool.card import Card
 from study_tool.card_attributes import CardAttributes
@@ -165,12 +166,12 @@ class StudyDatabase:
     def __init__(self):
         self.__metrics_history = {}
         self.__study_data_dict = {}
-        self.__lock = threading.RLock()
+        self.__lock = ReadWriteLock()
 
     def get_card_study_data(self, card: Card) -> CardStudyData:
         """Get or create the study data for a card."""
         key = card.get_key()
-        with self.__lock:
+        with self.__lock.acquire_read():
             if key in self.__study_data_dict:
                 return self.__study_data_dict[key]
             return self.create_card_study_data(card)
@@ -178,7 +179,7 @@ class StudyDatabase:
     def get_study_metrics(self) -> StudyMetrics:
         """Get study metrics for all cards."""
         metrics = StudyMetrics()
-        with self.__lock:
+        with self.__lock.acquire_read():
             for key, data in self.__study_data_dict.items():
                 history_score = data.get_history_score()
                 word_type = key[0]
@@ -202,7 +203,7 @@ class StudyDatabase:
         Mark a card as "knew it" or "didn't know it". This will adjust its
         proficiencly level accordingly.
         """
-        with self.__lock:
+        with self.__lock.acquire_write():
             study_data = self.get_card_study_data(card)
             study_data.last_encounter_time = time.time()
             study_data.history.insert(0, knew_it)
@@ -223,19 +224,14 @@ class StudyDatabase:
         """Create study data for a card."""
         key = card.get_key()
         study_data = CardStudyData()
-        with self.__lock:
+        with self.__lock.acquire_write():
             assert key not in self.__study_data_dict
             self.__study_data_dict[key] = study_data
             return study_data
 
-    def create_metrics_history(self, date_str: str):
-        metrics = StudyMetrics()
-        self.__metrics_history[date_str] = metrics
-        return metrics
-
     def apply_key_change(self, old_key, new_key):
         """Apply a change in card keys to the database."""
-        with self.__lock:
+        with self.__lock.acquire_write():
             assert new_key not in self.__study_data_dict
             if old_key in self.__study_data_dict:
                 item = self.__study_data_dict[old_key]
@@ -244,14 +240,14 @@ class StudyDatabase:
 
     def clear(self):
         """Clears all study data."""
-        with self.__lock:
+        with self.__lock.acquire_write():
             self.__metrics_history = {}
             self.__study_data_dict = {}
     
     def save(self, path: str):
         """Save the study data to file."""
         Config.logger.debug("Saving study data to: " + path)
-        with self.__lock:
+        with self.__lock.acquire_read():
             state = self.__serialize()
 
             cards_state = state["cards"]
@@ -289,7 +285,7 @@ class StudyDatabase:
 
     def load(self, path: str):
         """Load the study data from file."""
-        with self.__lock:
+        with self.__lock.acquire_write():
             Config.logger.info("Loading study data from: " + path)
             with open(path, "r", encoding="utf8") as f:
                 state = yaml.load(f, Loader=yaml.CLoader)

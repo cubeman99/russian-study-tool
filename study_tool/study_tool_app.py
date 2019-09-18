@@ -77,7 +77,7 @@ class StudyCardsApp(Application):
         Config.logger.info("Loading card sets from: " + self.cards_path)
         self.root = self.card_database.load_card_package_directory(
             path=self.cards_path, name="words")
-        self.save_word_database()
+        #self.save_word_database()
 
         # Load example data
         self.example_database = ExampleDatabase()
@@ -87,17 +87,6 @@ class StudyCardsApp(Application):
         # Load study data
         self.study_database = StudyDatabase()
         self.load_study_data()
-        # for card in self.card_database.iter_cards():
-        #     info = self.study_database.create_card_study_data(card)
-        #     info.history = card.history
-        #     info.last_encounter_time = card.last_encounter_time
-        #     info.proficiency_level = card.proficiency_level
-        # for date_str, metrics in self.card_database.metrics_history.items():
-        #     new_metrics = self.study_database.create_metrics_history(date_str)
-        #     new_metrics.date = metrics.date
-        #     new_metrics.copy(metrics)
-        # self.study_database.save("data/test_study_data.yaml")
-        # self.study_database.load("data/test_study_data.yaml")
 
         Config.logger.info("Initialization complete!")
 
@@ -265,6 +254,7 @@ class StudyCardsApp(Application):
     def get_card_word_details(self, card):
         updated = self.word_database.populate_card_details(card, download=True)
         if updated:
+            Config.logger.info("Saving word database")
             self.save_word_database()
         return card.word
 
@@ -384,6 +374,7 @@ class StudyCardsApp(Application):
         if os.path.isfile(path):
             Config.logger.info("Loading custom word data from: " + path)
             self.word_database.load(path, custom=True)
+        Config.logger.info("Loading {} words".format(len(self.word_database.words)))
 
     def save_example_database(self):
         path = os.path.join(self.root_path, self.example_data_file_name)

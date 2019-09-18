@@ -1,4 +1,4 @@
-save_time: 1568766227.7877305
+save_time: 1568770393.9195979
 cards:
   - [noun, абрикос, apricot, 4, 1554250410.845265, TTTT]
   - [noun, абрикосовый, apricot juice, 1, 1548521307.1751826, F]
@@ -1144,7 +1144,7 @@ cards:
   - [noun, стиль, style, 4, 1551664004.8427296, TTTTTTTTTTT]
   - [noun, стих, 'verse, poetry', 4, 1553983438.3044956, TTTTTTTTTTTT]
   - [noun, сто, '100', 4, 1564451325.6395116, TTTTT]
-  - [noun, стол, table, 4, 1568766161.0582387, TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]
+  - [noun, стол, table, 4, 1568770391.4118867, TTTTTFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]
   - [noun, столб, 'pole, post, column', 4, 1567643867.7570348, TTTTTTTTTT]
   - [noun, столкновение, collision, 4, 1568338931.4612346, TTTFFTTTTTTTTFF]
   - [noun, столовая (комната), dining (room), 4, 1554947913.7968972, TTTFTTTTT]
@@ -1622,8 +1622,8 @@ cards:
   - [verb, заливать, 'to fill, overflow, flood', 4, 1560304359.2174196, TTTTTTTT]
   - [verb, залить, 'to fill, overflow, flood', 4, 1560304344.3135052, TTTTTTT]
   - [verb, замедлить, to slow down smth, 4, 1568686145.2277145, TTFTTTTTTTTTTTT]
-  - [verb, заметить, 'to notice, observe', 4, 1568765038.3252027, TTTTTTTTTTFTTFTTTTFFF]
-  - [verb, замечать, to notice, 4, 1568765032.4429963, TFTTTTTTTTTTTTTTF]
+  - [verb, заметить, 'to notice, observe', 4, 1568770393.7791593, TTTTTTTFTTTTTTTTTTTTTFTTFTTTTFFF]
+  - [verb, замечать, to notice, 4, 1568770393.2017527, TTTTTFFTTTTTTTTFTTTTTTTTTTTTTTF]
   - [verb, замолкнуть, to fall silent, 4, 1567459893.1613863, TFTTTTTTTTTTTTTTTTTTFFFTFTTTTTTFF]
   - [verb, замолчать, 'to fall silent, to shut up', 0, null, '']
   - [verb, заморачиваться, to bother, 4, 1568686247.2260578, TTTFTTFTTFFTTFTTTTTFTFTTTFTFF]
@@ -2176,7 +2176,7 @@ cards:
   - [verb, рисковать, to risk, 4, 1549847887.4138353, TTTTTT]
   - [verb, рисовать, to draw, 4, 1549143543.34384, TTTTTTTTT]
   - [verb, робеть, to be timid, 4, 1550453727.880701, TFTTTTTTTTTTTTTFFTTFFTTTFFFF]
-  - [verb, родить, to give birth, 4, 1568766158.497644, TTFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]
+  - [verb, родить, to give birth, 4, 1568770388.402588, TTTTFFFTTTTFTTFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]
   - [verb, родиться, to be born, 4, 1552070953.0577052, TTTTTTTTF]
   - [verb, ронять, to drop, 4, 1557970618.7007098, TFTTFTTTFFTF]
   - [verb, ругаться, 'to swear, curse', 4, 1554948331.082187, TFTFTTTTTTTTTFTF]
@@ -2351,7 +2351,7 @@ cards:
   - [verb, улучшить, 'to improve, better', 4, 1567457749.3222136, TTTTTTTT]
   - [verb, улыбнуться, to smile, 4, 1550453934.7681909, TTTTTTTTTTFFFFTTTTTTF]
   - [verb, умереть, to die, 4, 1567459743.974678, TTFTTTTTTTTTTTTTT]
-  - [verb, уметь, to know how, 4, 1568766217.6772091, TTTTTTTTTTTTTTTTTTTFTTTTTTTTTTTTTTTTTTTTFTFFFTFTFTTTFFFF]
+  - [verb, уметь, to know how, 4, 1568770391.9862552, TTTTTTFFTTTTTTTTTTTTTTTTTTTTTTTFTTTTTTTTTTTTTTTTTTTTFTFFFTFTFTTTFFFF]
   - [verb, умудриться, 'to become wiser, to manage to', 4, 1567643726.584924, TTTTTTTTTTF]
   - [verb, унизить, to humiliate, 4, 1567459127.9793148, TFTFTTTTTTTTTFFFF]
   - [verb, унимать, 'to quiet, calm', 4, 1559264091.596394, TTTTFTTTFFTFFF]
@@ -2764,7 +2764,7 @@ cards:
   - [adjective, решительный, 'resolute, decisive, determined', 4, 1568075264.9732664,
   TTTTTT]
   - [adjective, робкий, timid, 4, 1555294442.2179317, TTTTTTTTTTTTTTT]
-  - [adjective, родной, native, 4, 1568766226.0463963, TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTF]
+  - [adjective, родной, native, 4, 1568770390.0398993, TTTTTTFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTF]
   - [adjective, розовый, pink, 4, 1564451603.7321053, TTTTTTT]
   - [adjective, русый, light brown (hair color), 4, 1554164131.859609, TTTTTT]
   - [adjective, рыжий, red-haired, 4, 1550545174.0235875, TTTTFTTTTTT]
@@ -2863,7 +2863,7 @@ cards:
   - [adjective, ужасен, horrifying, 4, 1564451665.842958, TTTTTTF]
   - [adjective, ужасный, horrible, 4, 1564451619.7908647, TTTTTTTT]
   - [adjective, узкий, 'tight, narrow', 4, 1564451685.7840889, TTTTTTT]
-  - [adjective, умелый, skillfull, 4, 1568766227.7757435, TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTFTT]
+  - [adjective, умелый, skillfull, 4, 1568770392.564658, TTTTTFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTFTT]
   - [adjective, уместный, relevant, 4, 1565131774.9245708, TTTTTTTT]
   - [adjective, умный, 'clever, smart, intelligent', 4, 1553202806.6410718, TTTTTTT]
   - [adjective, уморительный, hilarious, 4, 1556373338.531191, TTTTF]
@@ -4579,16 +4579,16 @@ metrics:
       0, 0, 0, 0, 31]}, Verb: {history_score: 813.6651547830606, proficiency_counts: [
       11, 10, 1, 15, 955]}, all: {history_score: 2422.910433975024, proficiency_counts: [
       37, 192, 13, 187, 2910]}}
-  2019/09/17: {Adjective: {history_score: 387.59379898372816, proficiency_counts: [4, 7, 5, 24,
+  2019/09/17: {Adjective: {history_score: 387.40332908540944, proficiency_counts: [4, 7, 5, 24,
       446]}, Adverb: {history_score: 132.46242326432267, proficiency_counts: [2, 10,
       0, 1, 175]}, Conjunction: {history_score: 20.019841269841265, proficiency_counts: [
       1, 12, 0, 2, 37]}, Interjection: {history_score: 9.66468253968254, proficiency_counts: [
-      1, 0, 0, 2, 10]}, Noun: {history_score: 904.3579487045772, proficiency_counts: [
+      1, 0, 0, 2, 10]}, Noun: {history_score: 904.2865201331487, proficiency_counts: [
       14, 146, 6, 118, 1103]}, Other: {history_score: 28.31426212676212, proficiency_counts: [
       0, 0, 0, 1, 36]}, Particle: {history_score: 5.25, proficiency_counts: [0, 0,
       0, 0, 6]}, Phrase: {history_score: 58.4561529264509, proficiency_counts: [1,
       6, 1, 21, 71]}, Preposition: {history_score: 35.083928571428565, proficiency_counts: [
       3, 1, 0, 3, 40]}, Pronoun: {history_score: 28.044871794871792, proficiency_counts: [
-      0, 0, 0, 0, 31]}, Verb: {history_score: 813.3086407312381, proficiency_counts: [
-      11, 10, 1, 15, 955]}, all: {history_score: 2422.5565509129055, proficiency_counts: [
+      0, 0, 0, 0, 31]}, Verb: {history_score: 813.1465432277332, proficiency_counts: [
+      11, 10, 1, 15, 955]}, all: {history_score: 2422.1325549396533, proficiency_counts: [
       37, 192, 13, 187, 2910]}}

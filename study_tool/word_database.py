@@ -83,16 +83,21 @@ class WordDatabase:
                              word_type=card.word_type)
 
     def populate_card_details(self, card, download=False) -> bool:
+        updated = False
         if card.word_type is not None:
             word = self.get_word(name=card.word_name,
                                  word_type=card.word_type)
             if download and (word is None or not word.complete):
                 word = self.download_word(name=card.word_name,
                                           word_type=card.word_type)
+                if word:
+                    updated = True
             if word is None:
                 word = self.__create_default_word(card.word_name,
                                                   word_type=card.word_type,
                                                   meaning=card.english)
+                updated = True
+
             if word is not None:
                 if isinstance(word, Verb):
                     if word.aspect == Aspect.Imperfective:
@@ -115,8 +120,7 @@ class WordDatabase:
                         word.indeclinable = True
                         card.add_attribute(CardAttributes.Indeclinable)
                 card.word = word
-                return True
-        return False
+            return updated
 
     def add_word(self, word) -> Word:
         key = (word.word_type, word.name.text)

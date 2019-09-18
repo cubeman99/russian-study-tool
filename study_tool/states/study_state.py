@@ -107,7 +107,7 @@ class StudyState(State):
         """Begin the state."""
         self.buttons[0] = Button("Reveal", self.reveal)
         self.buttons[1] = Button("Exit", self.pause)
-        self.buttons[2] = Button("Next", self.next)
+        self.buttons[2] = Button("Next", lambda: self.next(knew_it=True))
 
         self.scheduler = Scheduler(cards=self.card_set.cards,
                                    mode=self.params.mode,
@@ -345,23 +345,21 @@ class StudyState(State):
         self.__entity_adjective_root.set_visible(isinstance(self.card.word, Adjective))
         self.__entity_verb_root.set_visible(isinstance(self.card.word, Verb))
         
-    def next(self):
+    def next(self, knew_it=True):
         """
-        Mark the current card as "did know" then move to the next card.
+        Mark the current card as "knew it" or "did NOT know it"
+        then move to the next card.
         """
-        self.scheduler.mark(self.card, knew_it=True)
-        self.app.save_study_data()
+        self.scheduler.mark(self.card, knew_it=knew_it)
+
         self.next_card()
 
-    def mark(self):
-        """
-        Mark the current card as "did NOT know" then move to the next card.
-        """
-        self.scheduler.mark(self.card, knew_it=False)
-        self.app.save_study_data()
-        self.next_card()
+        # Save study data in the background
+        import threading
+        thread = threading.Thread(target=self.app.save_study_data)
+        thread.start()
 
-    def get_random_russian_form(self, card: Card, word: Word):
+    def __get_random_russian_form(self, card: Card, word: Word):
         """Get a random form of a russian word."""
         if isinstance(word, Verb):
             odds = random.randint(1, 10)
@@ -426,7 +424,7 @@ class StudyState(State):
             return (card.get_text(CardSide.Russian), [])
 
     def next_card(self):
-        """Shows the next card."""
+        """Chooses the next card and shows it."""
         card = self.scheduler.next()
         if card is None:
             self.app.pop_state()
@@ -465,7 +463,7 @@ class StudyState(State):
                 word is not None):
             # Get a random form of the card's word
             self.prompt_text, self.reveal_attributes = (
-                self.get_random_russian_form(card=self.card, word=word))
+                self.__get_random_russian_form(card=self.card, word=word))
             self.reveal_attributes += self.card.get_attributes()
             self.reveal_text = self.card.get_text(CardSide.English)
         else:
@@ -667,7 +665,7 @@ class StudyState(State):
     def reveal(self):
         """Reveal the other side of the card."""
         self.revealed = True
-        self.buttons[0] = Button("Mark", self.mark)
+        self.buttons[0] = Button("Mark", lambda: self.next(knew_it=False))
         self.__on_revealed_changed()
 
     def draw_top_proficiency_bar(self, g: Graphics, top_y, bar_height, bar_color):
