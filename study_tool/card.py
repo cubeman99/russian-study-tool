@@ -52,17 +52,19 @@ class Card:
     A card with English and Russian sides that can be studied.
     """
 
-    def __init__(self, front="", back=""):
-        self.word_type = None
-        self.text = [AccentedText(front), AccentedText(back)]
+    def __init__(self, russian="", english="", word_type=None):
+        # Card data
+        self.word_type = word_type
+        self.text = [AccentedText(russian), AccentedText(english)]
         self.__attributes = []
-        self.word_name = AccentedText(self.russian)
         self.examples = []
         self.related_cards = []
+        
+        # Cached data
         self.source = None
         self.__fixed_card_set = None
         self.__word_patterns = []
-
+        self.word_name = AccentedText(self.russian)
         self.word = None
         self.__study_data = None
 
@@ -140,6 +142,10 @@ class Card:
         if attr not in self.__attributes:
             self.__attributes.append(attr)
             self.__attributes.sort(key=lambda x: x.name)
+
+    def add_example(self, russian):
+        """Add an example to the card."""
+        self.examples.append(AccentedText(russian))
 
     def get_display_text(self, side: CardSide):
         """Get the text to display for a given side."""

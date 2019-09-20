@@ -7,7 +7,7 @@ import yaml
 from datetime import datetime
 from cmg.event import Event
 from cmg.utilities.read_write_lock import ReadWriteLock
-from study_tool.card import Card, CardSide, SourceLocation
+from study_tool.card import Card, SourceLocation
 from study_tool.card_set import CardSet, CardSetPackage, CardGroupMetrics, StudySet
 from study_tool.card_attributes import CardAttributes
 from study_tool.external import googledocs
@@ -307,6 +307,7 @@ class CardDatabase:
         with self.__lock_dirty:
             self.__dirty_cards.add(a)
             self.__dirty_cards.add(b)
+        self.card_data_changed.emit(card)
         
     def unlink_related_cards(self, a: Card, b: Card):
         """Un-links two cards as not related."""
@@ -318,6 +319,7 @@ class CardDatabase:
         with self.__lock_dirty:
             self.__dirty_cards.add(a)
             self.__dirty_cards.add(b)
+        self.card_data_changed.emit(card)
 
     def save_all_changes(self):
         """
@@ -545,23 +547,13 @@ class CardDatabase:
     def __load_card_set_file(self, path):
         card_set = None
         card_sets = []
-        left_side = CardSide.Russian
-
-        def name_to_side(name):
-            if name.lower() in ["ru", "russian"]:
-                return CardSide.Russian
-            elif name.lower() in ["en", "english"]:
-                return CardSide.English
-            else:
-                raise Exception("uknown language: '{}'".format(name))
 
         with open(path, "r", encoding="utf8") as f:
             filename = path
             line_number = -1
             line = ""
-            word_type = WordType.Other
             card_set = None
-            split_attributes = None
+            word_type = None
             card = None
             try:
                 for filename, line_number, line in self.__preprocess_lines(path, f):
@@ -580,13 +572,11 @@ class CardDatabase:
                             card_set.name = AccentedText(value)
                             card_set.key = card_set.name.text.lower().replace(" ", "_")
                             card_sets.append(card_set)
-                            left_side = CardSide.Russian
                         elif command == "type":
                             word_type = WORD_TYPE_DICT[value.lower()]
                         elif command == "ex" or command == "example":
-                            if card is None:
-                                raise Exception()
-                            card.examples.append(AccentedText(command_text))
+                            assert card is not None
+                            card.add_example(command_text)
                         else:
                             raise Exception(
                                 "uknown @ command: '{}'".format(command))
@@ -602,33 +592,21 @@ class CardDatabase:
                                           for t in line.split(delimeter)]
                                 break
                         if len(tokens) == 2:
-                            text_l_list, attributes_l = self.__parse_card_text(
-                                tokens[0], split=True)
-                            text_r, attributes_r = self.__parse_card_text(
-                                tokens[1])
-                            if len(text_l_list) > 1:
-                                if split_attributes is None:
-                                    raise Exception(
-                                        "detected '/' with no split configured")
-                                if len(split_attributes) != len(text_l_list):
-                                    raise Exception("mismatch with split size of {}"
-                                                    .format(len(split_attributes)))
-                            for split_index, text_l in enumerate(text_l_list):
-                                card = Card()
-                                card.set_fixed_card_set(card_set)
-                                card.source = SourceLocation(filename=filename,
-                                                             line_number=line_number,
-                                                             line_text=line)
-                                card.word_type = word_type
-                                card.text[left_side] = text_l
-                                card.text[1 - left_side] = text_r
-                                card.add_attributes(attributes_l)
-                                card.add_attributes(attributes_r)
-                                if split_attributes is not None and len(text_l_list) > 1:
-                                    card.add_attributes(split_attributes[split_index])
-                                card_set.cards.append(card)
-                                card.generate_word_name()
-                                self.add_card(card)
+                            assert word_type is not None
+                            russian, attributes_left = self.__parse_card_text(tokens[0])
+                            english, attributes_right = self.__parse_card_text(tokens[1])
+                            card = Card(russian=russian,
+                                        english=english,
+                                        word_type=word_type)
+                            card.set_fixed_card_set(card_set)
+                            card.source = SourceLocation(filename=filename,
+                                                         line_number=line_number,
+                                                         line_text=line)
+                            card.add_attributes(attributes_left)
+                            card.add_attributes(attributes_right)
+                            card_set.add_card(card)
+                            card.generate_word_name()
+                            self.add_card(card)
                         else:
                             raise Exception("unable to tokenize line")
             except Exception as e:
@@ -639,7 +617,7 @@ class CardDatabase:
                 exit(1)
         return sorted(card_sets, key=lambda x: x.name)
     
-    def __parse_card_text(self, text, split=False):
+    def __parse_card_text(self, text):
         attributes = []
         for name in re.findall(r"\@(\S+)", text):
             attribute = CardAttributes(name)
@@ -648,10 +626,7 @@ class CardDatabase:
             except:
                 raise Exception("unknown card attribute '{}'".format(name))
         text = re.sub(r"\@\S+", "", text).strip()
-        if split:
-            text = [AccentedText(x.strip()) for x in text.split("/")]
-        else:
-            text = AccentedText(text)
+        text = AccentedText(text)
         return text, attributes
 
     def __preprocess_lines(self, filename, lines):
