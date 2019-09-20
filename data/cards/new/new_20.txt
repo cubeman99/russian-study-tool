@@ -14,7 +14,6 @@
 песо'чница - sandbox
 
 @type verb
-бере'чь - to keep safe
 
 @type phrase
 

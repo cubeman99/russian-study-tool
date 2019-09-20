@@ -84,9 +84,24 @@ class CardRow(widgets.Widget):
         self.__on_modified()
 
     def apply(self):
-        self.card.set_russian(self.get_russian())
-        self.card.set_english(self.get_english())
-        self.card.set_word_type(self.get_word_type())
+        """Applies changes to the card."""
+        if self.is_null_card():
+            return
+        assert self.is_valid()
+
+        created = not self.card_database.has_card(self.card)
+        new_card = Card(copy=self.card,
+                        russian=self.get_russian(),
+                        english=self.get_english(),
+                        word_type=self.get_word_type())
+        if created:
+            Config.logger.info("Creating new card: " + repr(new_card))
+            self.card = new_card
+            self.card_database.add_card(self.card)
+        else:
+            self.card_database.update_card(
+                original=self.card, modified=new_card)
+        self.set_card(self.card)
     
     def auto_set_word_type(self) -> WordType:
         russian = self.get_russian().text.lower()
@@ -253,8 +268,27 @@ class CardSetEditWidget(widgets.Widget):
         self.__button_save.clicked.connect(self.__on_click_save)
         self.__button_add_card.clicked.connect(self.__on_click_add_new_card)
         self.__button_convert.clicked.connect(self.__on_click_convert)
+        self.__box_name.text_edited.connect(self.__on_modified)
         
         self.__box_name.focus()
+
+    def is_modified(self) -> bool:
+        """Returns True if anything is modified."""
+        name = AccentedText(self.__box_name.get_text())
+        if repr(name) != repr(self.__card_set.get_name()):
+            return True
+
+        new_cards = [row.card for row in self.rows if not row.is_null_card()]
+        old_cards = self.__card_set.get_cards()
+        if (len(old_cards) != len(new_cards) or
+            any(a is not b for a, b in zip(old_cards, new_cards))):
+                return True
+
+        for row in self.rows:
+            if not row.is_null_card() and row.is_modified():
+                return True
+
+        return False
 
     def add_empty_row(self):
         self.add_card(Card(), fill_empty_row=False)
@@ -275,6 +309,7 @@ class CardSetEditWidget(widgets.Widget):
         row.button_delete.clicked.connect(lambda: self.remove_row(row))
         row.button_edit.clicked.connect(lambda: self.__on_click_edit_card(card))
         row.modified.connect(self.__on_modified)
+        self.__on_modified()
 
     def remove_card(self, card: Card):
         index = [row.card for row in self.rows].index(card)
@@ -287,6 +322,7 @@ class CardSetEditWidget(widgets.Widget):
         self.__layout_card_list.remove(row)
         if index == len(self.rows):
             self.add_empty_row()
+        self.__on_modified()
 
     def next_row(self, row: CardRow, column: int):
         index = self.rows.index(row)
@@ -302,104 +338,29 @@ class CardSetEditWidget(widgets.Widget):
             box = next_row.box_english
         box.focus()
 
-    def is_modified(self):
-        name = AccentedText(self.__box_name.get_text())
-        self.__card_set.set_name(name)
-        if repr(name) != repr(self.__card_set.get_name()):
-            return True
-        for card in self.__card_set.get_cards():
-            if not self.__has_card(card):
-                return True
-        for row in self.rows:
-            if (not row.is_null_card() and
-                (not self.__card_database.has_card(row.card) or
-                (row.is_new_in_set() or row.is_modified()))):
-                  return True
-        return False
-
-    def save(self):
+    def apply(self):
         """Save the card set to file."""
         try:
-            modified_cards = False
-            modified_set = False
-            key_change_cards = []
-
-            # Check for cards added to the set
-            cards = []
+            # Apply card changes and create new cards
             for row in self.rows:
-                card = row.card
-                if row.is_null_card():
-                    continue
-                cards.append(card)
-                old_key = card.get_key()
                 row.apply()
-                new_key = card.get_key()
-                if not self.__card_database.has_card(card):
-                    # Create new card
-                    Config.logger.info("Creating card: {}".format(card))
-                    card.generate_word_name()
-                    self.__card_database.add_card(card)
-                    modified_cards = True
-                    modified_set = True
-                else:
-                    if row.is_new_in_set():
-                        self.__card_database.add_card_to_set(card, self.__card_set)
-                        modified_set = True
-                    if new_key != old_key:
-                        Config.logger.info("Applying changes to card: {}".format(card))
-                        # Check for a key change
-                        modified_cards = True
-                        card.generate_word_name()
-                        self.__card_database.apply_card_key_change(card)
-                        key_change_cards.append(card)
+            cards = [row.card for row in self.rows if not row.is_null_card()]
 
-            # Check for cards removed from the set
-            for card in self.__card_set.get_cards():
-                if card not in cards:
-                    modified_set = True
-                    self.__card_database.remove_card_from_set(card, self.__card_set)
+            # Update the card set
+            name = AccentedText(self.__box_name.get_text())
+            self.__card_database.update_card_set(
+                card_set=self.__card_set,
+                name=name,
+                cards=cards)
+
+            self.select_card_set(self.__card_set)
+
+            # Save any changes
+            self.__application.save_all_changes()
 
         except Exception:
             traceback.print_exc()
             return
-
-        try:
-            self.__card_set.name = AccentedText(self.__box_name.get_text())
-
-            # Save card database
-            Config.logger.info("Saving card data")
-            self.__application.save_card_data()
-        except Exception:
-            traceback.print_exc()
-            return
-
-        # Save study data and relevant card sets if there is a key change
-        try:
-            if key_change_cards:
-                Config.logger.info("Saving study data")
-                self.__application.save_study_data()
-                for card_set in self.__application.iter_card_sets():
-                    if any(card_set.has_card(x) for x in key_change_cards):
-                        Config.logger.info("Saving card set data for '{}'"
-                                            .format(card_set.get_name()))
-                        assert not card_set.is_fixed_card_set()
-                        self.__application.save_card_set(card_set)
-        except Exception:
-            traceback.print_exc()
-
-        # Save the card set definition
-        try:
-            if modified_cards or modified_set:
-                self.__application.save_card_set(self.__card_set)
-        except Exception:
-            traceback.print_exc()
-           
-        # Refresh rows
-        try:
-            for row in self.rows:
-                row.set_card(row.card)
-        except Exception:
-            traceback.print_exc()
 
     def select_card_set(self, card_set):
         self.__card_set = card_set
@@ -440,21 +401,13 @@ class CardSetEditWidget(widgets.Widget):
             card, allow_card_change=False)
         widget.updated.connect(self.__on_card_updated)
         
-    def __on_click_remove_card(self, card: Card):
-        self.__card_set.remove_card(card)
-        self.save()
-        self.select_card_set(self.__card_set)
-
     def __on_click_done(self):
-        name = AccentedText(self.__box_name.get_text())
-        self.__card_set.set_name(name)
-        if repr(name) != repr(self.__card_set.get_name()):
-            self.save()
+        self.apply()
         self.close()
 
     def __on_click_save(self):
         if self.is_modified():
-            self.save()
+            self.apply()
 
     def __on_card_updated(self, card: Card):
         """Called when a card in the set is updated."""
@@ -464,6 +417,7 @@ class CardSetEditWidget(widgets.Widget):
         else:
             self.add_card(card, fill_empty_row=True)
             self.add_empty_row()
+        __on_modified()
 
     def __on_modified(self):
         modified = self.is_modified()

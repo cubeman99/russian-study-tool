@@ -12,8 +12,8 @@ class CardRow(widgets.Widget):
         super().__init__()
         self.card = card
 
-        self.edit_russian = widgets.TextEdit(repr(card.russian))
-        self.edit_english = widgets.TextEdit(repr(card.english))
+        self.edit_russian = widgets.TextEdit(repr(card.get_russian()))
+        self.edit_english = widgets.TextEdit(repr(card.get_english()))
         self.button_select = widgets.Button(select_text)
         self.button_clicked = self.button_select.clicked
 

@@ -49,7 +49,7 @@ class CardListState(State):
         self.max_column_width = 0
         for card in self.card_set.cards:
             self.max_column_width = max(self.max_column_width,
-                                        g.measure_text(card.russian, font=self.card_font)[0])
+                                        g.measure_text(card.get_russian(), font=self.card_font)[0])
 
         self.__proficiency_bar = StudyProficiencyBar(
             center_y=self.margin_top / 2,

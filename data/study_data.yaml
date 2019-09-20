@@ -1,4 +1,4 @@
-save_time: 1569012114.77636
+save_time: 1569022706.334118
 cards:
   - [noun, абрикос, apricot, 4, 1554250410.845265, TTTT]
   - [noun, абрикосовый, apricot juice, 1, 1548521307.1751826, F]
@@ -1401,7 +1401,6 @@ cards:
   - [verb, беднеть, to grow poor, 4, 1550453832.8070972, TTTTTTTTTTTTTTTFFTTTFFFFTFF]
   - [verb, бежать, to run, 4, 1550448730.6978083, TTTTTTTTTTFTT]
   - [verb, белеть, to become/show white, 4, 1567459734.5072482, TFTTTTTTTTTTTTFTTTTFFFF]
-  - [verb, беречь, to guard, 3, 1567460029.773366, FTTTFTTFTFTTTFFFFF]
   - [verb, беречь, to keep safe, 0, null, '']
   - [verb, бить, to beat, 4, 1555464933.5640182, TTTTTTTTTTT]
   - [verb, бледнеть, to grow pale, 4, 1550453932.9047287, TTTTTTTTTTTTFTTTTTTTFFTTTTFFFF]
@@ -1409,7 +1408,6 @@ cards:
   - [verb, блёкнуть, to fade; to wither, 4, 1567459669.215297, TFTTTTTTTTTTTFTTTTFTFTTFFFTTTFFTTFFFFTTTFFFFFF]
   - [verb, богатеть, to get rich, 4, 1550453487.3394132, TTTTTTTTTTTTTTFTTTTFFFF]
   - [verb, боготворить, to worship, 4, 1565131734.267651, TTTTTTTF]
-  - [verb, болеть, to ache (third-person only), 4, 1550451812.8379586, TTTTTTTTTTTFTTTFF]
   - [verb, болеть, to be ill, 4, 1550452026.1477702, TTTTTTTTTTTFTTTTTTTTTFF]
   - [verb, болтать, 'to chat, gossip; to propel, shake', 4, 1552070791.7949276, TTTTTTTTTTTT]
   - [verb, бороться, 'to fight, struggle, combat', 4, 1550541711.4340096, TT]
@@ -1587,7 +1585,6 @@ cards:
   - [verb, 'жать (жму, жмёшь, … жмут)', 'to press, squeeze', 4, 1555465029.9081047, TTTTTTTTTTTTTTTFF]
   - [verb, 'жать (жну, жнёшь, … жнут)', to reap, 4, 1567459587.94188, TTFTTTTTTTT]
   - [verb, ждать, to wait, 4, 1567126285.7489042, TTTTTTTTTTTTT]
-  - [verb, желать, to wish, 4, 1551401870.0914493, TTTTT]
   - [verb, желать, 'to wish, desire', 4, 1552071641.0438917, TTTTTTTTTT]
   - [verb, желтеть, to turn yellow, 4, 1550452024.334202, TTTTTTTTTTTTTTTTTTFFF]
   - [verb, жениться, to get married, 4, 1550102161.6702213, TTTTTTTTTTTF]
@@ -1622,7 +1619,7 @@ cards:
   - [verb, заливать, 'to fill, overflow, flood', 4, 1560304359.2174196, TTTTTTTT]
   - [verb, залить, 'to fill, overflow, flood', 4, 1560304344.3135052, TTTTTTT]
   - [verb, замедлить, to slow down smth, 4, 1568686145.2277145, TTFTTTTTTTTTTTT]
-  - [verb, заметить, 'to notice, observe', 4, 1569012049.6775653, TTTTTTTTTTTTTTTFTTTTTTTTTTTTTFTTFTTTTFFF]
+  - [verb, заметить, 'to notice, observe', 4, 1569022700.3400824, TTTTTTTTTTTTTTTTFTTTTTTTTTTTTTFTTFTTTTFFF]
   - [verb, замечать, to notice, 4, 1569012095.0011358, TTTFTFTTTTTTTTTTTTTFFTTTTTTTTFTTTTTTTTTTTTTTF]
   - [verb, замолкнуть, to fall silent, 4, 1567459893.1613863, TFTTTTTTTTTTTTTTTTTTFFFTFTTTTTTFF]
   - [verb, замолчать, 'to fall silent, to shut up', 0, null, '']
@@ -2176,7 +2173,7 @@ cards:
   - [verb, рисковать, to risk, 4, 1549847887.4138353, TTTTTT]
   - [verb, рисовать, to draw, 4, 1549143543.34384, TTTTTTTTT]
   - [verb, робеть, to be timid, 4, 1550453727.880701, TFTTTTTTTTTTTTTFFTTFFTTTFFFF]
-  - [verb, родить, to give birth, 4, 1569012113.592995, TTTTTTTTTTTTTTTTTTTTFFFTTTTFTTFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]
+  - [verb, родить, to give birth, 3, 1569022697.1080155, T]
   - [verb, родиться, to be born, 4, 1552070953.0577052, TTTTTTTTF]
   - [verb, ронять, to drop, 4, 1557970618.7007098, TFTTFTTTFFTF]
   - [verb, ругаться, 'to swear, curse', 4, 1554948331.082187, TFTFTTTTTTTTTFTF]
@@ -2310,7 +2307,6 @@ cards:
   - [verb, треснуть, to crack, 4, 1568338939.6048603, TTTTTFTTTTTFTTTTF]
   - [verb, трогать, 'to touch thoroughly, or many times', 4, 1568075798.0066266, TTTTTTTTTTTTTTTTTF]
   - [verb, тронуть, 'to touch, move (feelings)', 4, 1567458167.7666986, TTTTTTTTT]
-  - [verb, трясти, to shake, 4, 1550533694.5084925, TTTTTTTTTTFF]
   - [verb, трясти, 'to shake, jiggle', 4, 1568338889.6047478, TTTTTTTTFTTTTTTFFF]
   - [verb, тусить, 'to party, hang out, chill', 1, 1568846295.785658, FFT]
   - [verb, тыкать, 'to poke, prod', 4, 1568075808.35119, TTTTTTT]
@@ -2863,7 +2859,7 @@ cards:
   - [adjective, ужасен, horrifying, 4, 1564451665.842958, TTTTTTF]
   - [adjective, ужасный, horrible, 4, 1564451619.7908647, TTTTTTTT]
   - [adjective, узкий, 'tight, narrow', 4, 1564451685.7840889, TTTTTTT]
-  - [adjective, умелый, skillfull, 4, 1569007252.230022, TTTTTTTTTTTFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTFTT]
+  - [adjective, умелый, skillfull, 4, 1569014279.4220455, TTTTTTTTTTTTFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTFTT]
   - [adjective, уместный, relevant, 4, 1565131774.9245708, TTTTTTTT]
   - [adjective, умный, 'clever, smart, intelligent', 4, 1553202806.6410718, TTTTTTT]
   - [adjective, уморительный, hilarious, 4, 1556373338.531191, TTTTF]
@@ -2912,8 +2908,8 @@ cards:
   - [adjective, ясный, clear, 4, 1550532810.768977, TTTTTTT]
   - [preposition, без, without, 4, 1554947265.565941, TTTTTT]
   - [preposition, близ, near, 4, 1552435740.3300006, TTTTTT]
-  - [preposition, в, 'in, at (location)', 4, 1552857191.5411222, TTTTTT]
-  - [preposition, в, 'to, into, in (motion)', 4, 1552857187.3185961, TTTTT]
+  - [preposition, в + acc., 'to, into, in (motion)', 4, 1552857187.3185961, TTTTT]
+  - [preposition, в + prep., 'in, at (location)', 4, 1552857191.5411222, TTTTTT]
   - [preposition, вместо, instead of, 4, 1552181741.913055, TTTTTTTFTTF]
   - [preposition, вне, outside, 4, 1568598542.8968847, TTTTTTTTT]
   - [preposition, возле, 'by, near', 4, 1554856383.1568599, TTTTTF]
@@ -2922,8 +2918,8 @@ cards:
   - [preposition, вроде, 'like, such as', 4, 1554249679.960606, TTTTTTTTTTF]
   - [preposition, для, for the benefit of, 4, 1556402540.1678143, TT]
   - [preposition, до, 'before, until', 4, 1552435714.8819559, TTTTTT]
-  - [preposition, за, 'behind, beyond (location)', 4, 1552857194.4450693, TTTTTTT]
-  - [preposition, за, 'behind, beyond (motion)', 4, 1552857184.1695967, TTTTTT]
+  - [preposition, за + acc., 'behind, beyond (motion)', 4, 1552857184.1695967, TTTTTT]
+  - [preposition, за + instr., 'behind, beyond (location)', 4, 1552857194.4450693, TTTTTTT]
   - [preposition, из, 'from, out of', 4, 1552857190.6000926, TTTTTT]
   - [preposition, извне, from outside, 4, 1568598410.3557184, TTTTTTT]
   - [preposition, к, 'toward, up to a point; toward, by point in time, to a persion',
@@ -2935,27 +2931,27 @@ cards:
   - [preposition, кроме + gen., 'besides, except', 4, 1552070720.2642913, TTTTTTTT]
   - [preposition, между, between, 0, null, '']
   - [preposition, мимо, past (typical with про- motion verb), 4, 1552858807.1609442, TTTTTT]
-  - [preposition, на, 'on, at, in (location)', 4, 1552857192.4328575, TTTTTTTT]
-  - [preposition, на, 'to, into, onto, on (motion)', 4, 1552857195.3621464, TTTTTTT]
+  - [preposition, на + acc., 'to, into, onto, on (motion)', 4, 1552857195.3621464, TTTTTTT]
+  - [preposition, на + prep., 'on, at, in (location)', 4, 1552857192.4328575, TTTTTTTT]
   - [preposition, над, over, 4, 1555294214.4325233, TTTTTTTTTTTTTT]
   - [preposition, напротив, 'opposite of, across from', 4, 1558133818.0222437, TFTTTTTT]
   - [preposition, насчёт, 'concerning, about', 4, 1566760214.791058, TTTTTF]
-  - [preposition, 'о, об, обо', 'about, concerning', 4, 1552857184.965636, TTTTTTTF]
+  - [preposition, о; об; обо, 'about, concerning', 4, 1552857184.965636, TTTTTTTF]
   - [preposition, около, 'around, near', 4, 1552435850.1495655, TTTTTFTTTTT]
   - [preposition, от, from, 4, 1552857193.4412441, TTTTTT]
   - [preposition, перед, in front of, 4, 1555294451.9387236, TTTTTTTTTTTTT]
-  - [preposition, по, 'against, striking', 3, 1565139138.3845186, T]
-  - [preposition, по, 'by, in the way of', 3, 1565139134.7639492, T]
+  - [preposition, по + acc., 'against, striking', 3, 1565139138.3845186, T]
+  - [preposition, по + dat., 'by, in the way of', 3, 1565139134.7639492, T]
   - [preposition, поверь, believe me, 4, 1556063620.613782, TTTT]
   - [preposition, поверь в себя, believe in yourself, 1, 1568250131.7459295, F]
-  - [preposition, под, under (location), 4, 1552857183.3534157, TTTTTT]
-  - [preposition, под, under (motion), 4, 1552857196.1262984, TTTTTTT]
+  - [preposition, под + acc., under (motion), 4, 1552857196.1262984, TTTTTTT]
+  - [preposition, под + instr., under (location), 4, 1552857183.3534157, TTTTTT]
   - [preposition, после, after, 4, 1552435771.794761, TTTTTT]
   - [preposition, прежде, before, 4, 1568597783.8119998, TTT]
   - [preposition, против, 'against, opposed to', 4, 1552181298.5204673, TTTTTTT]
   - [preposition, ради, for the sake of, 0, null, '']
   - [preposition, радом с, next to, 4, 1555294420.4251225, TTTTTTTTTTTTTTT]
-  - [preposition, 'с, со', from a place, 4, 1552857174.4092612, TTTTTFF]
+  - [preposition, с; со, from a place, 4, 1552857174.4092612, TTTTTFF]
   - [preposition, сквозь, through, 0, null, '']
   - [preposition, у, 'by, at a place', 4, 1552857170.7523801, TTTTTT]
   - [preposition, это много для меня значит., it means a lot to me., 3, 1568250021.6517992,
@@ -3175,10 +3171,10 @@ cards:
   - [conjunction, или … или …, either … or …, 4, 1555022432.4902244, TTTT]
   - [conjunction, итак, and so, 4, 1554948118.260315, TTTTTT]
   - [conjunction, кабы, if only (если бы), 4, 1568239721.4934034, TTFFTTTTTT]
-  - [conjunction, 'как будто, будто бы, как будто бы, словно', 'as though, as if', 3,
-  1568853630.4035969, TT]
+  - [conjunction, как будто; будто бы; как будто бы; словно, 'as though, as if', 3, 1568853630.4035969,
+  TT]
   - [conjunction, как только, as soon as, 4, 1555022415.094191, TTTFTF]
-  - [conjunction, 'как … так и …, не только … но и …', not only … but also …, 4, 1555022405.3109856,
+  - [conjunction, как … так и …; не только … но и …, not only … but also …, 4, 1555022405.3109856,
   TT]
   - [conjunction, когда, when, 4, 1555022417.1836045, TTTT]
   - [conjunction, кроме того, besides, 4, 1558400769.889147, TTTT]
@@ -4606,16 +4602,16 @@ metrics:
       0, 0, 0, 0, 31]}, Verb: {history_score: 814.5821827570096, proficiency_counts: [
       10, 9, 3, 16, 954]}, all: {history_score: 2429.6421458384957, proficiency_counts: [
       42, 191, 16, 190, 2912]}}
-  2019/09/20: {Adjective: {history_score: 387.33821166214705, proficiency_counts: [4, 7, 5, 24,
-      446]}, Adverb: {history_score: 132.46242326432267, proficiency_counts: [2, 10,
-      0, 1, 175]}, Conjunction: {history_score: 22.0906746031746, proficiency_counts: [
-      6, 4, 1, 4, 38]}, Interjection: {history_score: 9.66468253968254, proficiency_counts: [
+  2019/09/20: {Adjective: {history_score: 387.3435439489079, proficiency_counts: [4, 7, 5, 24, 446]},
+  Adverb: {history_score: 132.46242326432267, proficiency_counts: [2, 10, 0, 1, 175]},
+  Conjunction: {history_score: 22.0906746031746, proficiency_counts: [6, 4, 1, 4,
+      38]}, Interjection: {history_score: 9.66468253968254, proficiency_counts: [
       1, 0, 0, 2, 10]}, Noun: {history_score: 908.391877276006, proficiency_counts: [
       14, 146, 6, 117, 1104]}, Other: {history_score: 28.31426212676212, proficiency_counts: [
       0, 0, 0, 1, 36]}, Particle: {history_score: 5.25, proficiency_counts: [0, 0,
       0, 0, 6]}, Phrase: {history_score: 58.4561529264509, proficiency_counts: [1,
       6, 1, 21, 71]}, Preposition: {history_score: 35.083928571428565, proficiency_counts: [
       3, 1, 0, 3, 40]}, Pronoun: {history_score: 28.044871794871792, proficiency_counts: [
-      0, 0, 0, 0, 31]}, Verb: {history_score: 814.3944990415686, proficiency_counts: [
-      10, 9, 3, 16, 954]}, all: {history_score: 2429.491583806417, proficiency_counts: [
-      41, 183, 16, 189, 2911]}}
+      0, 0, 0, 0, 31]}, Verb: {history_score: 810.9361686630691, proficiency_counts: [
+      10, 9, 3, 16, 950]}, all: {history_score: 2426.0385857146784, proficiency_counts: [
+      41, 183, 16, 189, 2907]}}

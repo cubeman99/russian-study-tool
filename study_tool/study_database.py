@@ -171,10 +171,14 @@ class StudyDatabase:
         """
         Creates an empty database.
         """
+        self.__word_data_path = None
         self.__card_database = card_database
         self.__metrics_history = {}
         self.__study_data_dict = {}
         self.__lock = ReadWriteLock()
+
+        # Dirty state
+        self.__lock_dirty = threading.RLock()
         self.__dirty = False
 
         # Events
@@ -237,7 +241,8 @@ class StudyDatabase:
             else:
                 study_data.proficiency_level = max(
                     1, study_data.proficiency_level - 1)
-            self.__dirty = True
+            with self.__lock_dirty:
+                self.__dirty = True
 
         self.card_study_data_changed.emit(card, study_data)
 
@@ -255,11 +260,22 @@ class StudyDatabase:
         with self.__lock.acquire_write():
             self.__metrics_history = {}
             self.__study_data_dict = {}
+
+    def save_all_changes(self):
+        """Saves all modified data to file."""
+        with self.__lock_dirty:
+            if self.__dirty:
+                self.save()
     
-    def save(self, path: str):
+    def save(self, path=None):
         """Save the study data to file."""
-        Config.logger.debug("Saving study data to: " + path)
         with self.__lock.acquire_read():
+            if path is None:
+                path = self.__word_data_path
+            self.__word_data_path = path
+            assert path is not None
+
+            Config.logger.debug("Saving study data to: " + path)
             state = self.__serialize()
 
             cards_state = state["cards"]
@@ -294,17 +310,20 @@ class StudyDatabase:
             if os.path.isfile(path):
                 os.remove(path)
             os.rename(temp_path, path)
-            self.__dirty = False
+            with self.__lock_dirty:
+                self.__dirty = False
 
     def load(self, path: str, card_database):
         """Load the study data from file."""
         with self.__lock.acquire_write():
+            self.__word_data_path = path
             Config.logger.info("Loading study data from: " + path)
             with open(path, "r", encoding="utf8") as f:
                 state = yaml.load(f, Loader=yaml.CLoader)
                 Config.logger.info("Deserializing study data from: " + path)
                 self.__deserialize(state, card_database)
-            self.__dirty = False
+            with self.__lock_dirty:
+                self.__dirty = False
                 
     def __update_current_metrics(self):
         current_metrics = self.get_study_metrics()
@@ -312,7 +331,7 @@ class StudyDatabase:
 
     def __on_card_key_changed(self, *args, **kwargs):
         """Called after a card's key changes."""
-        with self.__lock.acquire_write():
+        with self.__lock_dirty:
             self.__dirty = True
 
     def __serialize(self) -> dict:

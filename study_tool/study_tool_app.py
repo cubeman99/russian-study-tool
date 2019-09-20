@@ -308,6 +308,10 @@ class StudyCardsApp(Application):
     def state(self):
         return self.states[-1]
 
+    def save_all_changes(self):
+        self.card_database.save_all_changes()
+        self.study_database.save_all_changes()
+
     def save_card_data(self):
         self.card_database.save_card_data()
 
@@ -316,8 +320,7 @@ class StudyCardsApp(Application):
         self.card_database.load_card_data(path)
 
     def save_study_data(self):
-        path = os.path.join(self.root_path, self.save_file_name)
-        return self.study_database.save(path)
+        return self.study_database.save()
 
     def load_study_data(self):
         path = os.path.join(self.root_path, self.save_file_name)

@@ -67,9 +67,9 @@ class CardRow(widgets.Widget):
         self.card = card
 
         self.edit_card_type = widgets.Label(
-            get_word_type_short_name(card.word_type) + ".")
-        self.edit_russian = widgets.Label(repr(card.russian))
-        self.edit_english = widgets.Label(repr(card.english))
+            get_word_type_short_name(card.get_word_type()) + ".")
+        self.edit_russian = widgets.Label(repr(card.get_russian()))
+        self.edit_english = widgets.Label(repr(card.get_english()))
         self.button_select = widgets.Button("Select")
 
         self.button_select.set_enabled(
@@ -246,59 +246,29 @@ class CardEditWidget(widgets.Widget):
         assert self.__is_valid_key()
 
         created = not self.__card_database.has_card(self.__card)
-
-        if not created:
-            Config.logger.info("Applying card updates for: " + repr(self.__card))
         
-        # Update card key values
-        old_key = self.__card.get_key()
-        self.__card.set_russian(self.get_russian())
-        self.__card.set_english(self.get_english())
-        self.__card.set_word_type(self.get_card_type())
-        new_key = self.__card.get_key()
-        self.__card.generate_word_name()
-
-        # Update attributes
-        old_attrs = self.get_card_attributes()
-        new_attrs = self.get_attributes()
-        if new_attrs != old_attrs:
-            self.__card.clear_attributes()
-            for attr in new_attrs:
-                self.__card.add_attribute(attr)
-
-        # Update related cards
-        self.__card.clear_related_cards()
-        for card in self.get_related_cards():
-            self.__card.add_related_card(card)
+        # Create the card representing the widget state
+        new_card = Card(copy=self.__card,
+                        russian=self.get_russian(),
+                        english=self.get_english(),
+                        word_type=self.get_card_type(),
+                        attributes=self.get_attributes(),
+                        related_cards=self.get_related_cards(),
+                        examples=self.__card.get_examples())
 
         if created:
-            # Create new card
+            # Create a new card
+            self.__card = new_card
             self.__card_database.add_card(self.__card)
             self.__application.save_card_data()
-            Config.logger.info("Created new card: " + repr(self.__card))
             self.select_card(self.__card)
-
         else:
-            # Check for a key change
-            if new_key != old_key:
-                Config.logger.info("Applying key change: {} --> {}"
-                                   .format(old_key, new_key))
-            self.__card_database.apply_card_key_change(self.__card)
+            # Apply the card updates
+            self.__card_database.update_card(
+                original=self.__card, modified=new_card)
 
-            # Save card database
-            Config.logger.info("Saving card data")
-            self.__application.save_card_data()
-
-            # Save study data and relevant card sets if there is a key change
-            if new_key != old_key:
-                Config.logger.info("Saving study data")
-                self.__application.save_study_data()
-                for card_set in self.__application.iter_card_sets():
-                    if card_set.has_card(self.__card):
-                        Config.logger.info("Saving card set data for '{}'"
-                                           .format(card_set.get_name()))
-                        assert not card_set.is_fixed_card_set()
-                        self.__application.save_card_set(card_set)
+            # Save changes
+            self.__application.save_all_changes()
 
         self.updated.emit(self.__card)
         Config.logger.info("Success!")

@@ -81,27 +81,13 @@ class RelatedCardsWidget(widgets.Widget):
         self.__refresh_search_results()
 
     def apply(self):
-        """Applies the card changes."""
-        new_cards = self.__table_related_cards.get_cards()
-        old_cards = list(self.__card.get_related_cards())
-        touched_cards = set()
-
-        # Add new related cards
-        for new_card in new_cards:
-            if new_card not in old_cards:
-                self.__card_database.link_related_cards(new_card, self.__card)
-                touched_cards.add(self.__card)
-                touched_cards.add(new_card)
-
-        # Remove old related cards
-        for old_card in old_cards:
-            if old_card not in new_cards:
-                self.__card_database.unlink_related_cards(old_card, self.__card)
-                touched_cards.add(self.__card)
-                touched_cards.add(old_card)
-
-        # Save all card data
-        if touched_cards:
+        """Applies changes to the the card."""
+        new_related_cards = self.__table_related_cards.get_cards()
+        updated_card = Card(copy=self.__card,
+                            related_cards=new_related_cards)
+        changed = self.__card_database.update_card(
+            original=self.__card, modified=updated_card)
+        if changed:
             self.updated.emit(self.__card)
             
     def on_close(self):

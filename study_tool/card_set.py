@@ -42,10 +42,10 @@ class CardGroupMetrics:
 
 class StudySet:
     def __init__(self, name="", cards=()):
-        self.name = name
+        self.name = AccentedText(name)
         self.cards = list(cards)
 
-    def get_name(self) -> str:
+    def get_name(self) -> AccentedText:
         return self.name
 
     def get_cards(self) -> list:
@@ -57,14 +57,17 @@ class StudySet:
     def has_card(self, card: Card) -> bool:
         return card in self.cards
 
-    def set_name(self, name: str):
-        self.name = name
+    def set_name(self, name: AccentedText):
+        self.name = AccentedText(name)
 
     def add_card(self, card: Card):
         self.cards.append(card)
 
     def remove_card(self, card: Card):
         self.cards.remove(card)
+
+    def set_cards(self, cards: list):
+        self.cards = list(cards)
 
     def clear(self):
         self.cards = []

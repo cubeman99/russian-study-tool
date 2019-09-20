@@ -57,7 +57,7 @@ class WordDatabase:
 
     def get_word_from_card(self, card: Card) -> Word:
         return self.get_word(name=card.word_name,
-                             word_type=card.word_type)
+                             word_type=card.get_word_type())
 
     def lookup_word(self, word: str) -> Word:
         """Looks up a Word object by text, in any form."""
@@ -106,21 +106,21 @@ class WordDatabase:
         """
         with self.__lock.acquire_write():
             updated = False
-            if card.word_type is not None:
+            if card.get_word_type() is not None:
                 word = self.get_word(name=card.word_name,
-                                     word_type=card.word_type)
+                                     word_type=card.get_word_type())
 
                 # Attempt to download details about the word
                 if download and (word is None or not word.complete):
                     word = self.download_word(name=card.word_name,
-                                              word_type=card.word_type)
+                                              word_type=card.get_word_type())
                     updated = word is not None
 
                 # Create a default word with auto-conjugation
                 if word is None:
                     word = self.__create_default_word(card.word_name,
-                                                      word_type=card.word_type,
-                                                      meaning=card.english)
+                                                      word_type=card.get_word_type(),
+                                                      meaning=card.get_english())
                     updated = word is not None
 
                 # Update the card data from the word details

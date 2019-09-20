@@ -455,7 +455,7 @@ class StudyState(State):
         if word is not None:
             forms = word.get_all_forms()
         else:
-            forms = self.card.russian.text
+            forms = self.card.get_russian().text
 
         # Get the card text and attributes
         self.prompt_attributes = []
@@ -478,7 +478,7 @@ class StudyState(State):
         self.__entity_example_root.destroy_children()
         max_examples = Config.max_examples_to_display
         examples = []
-        for example in self.card.examples:
+        for example in self.card.get_examples():
             examples.append((example, example_database.get_word_occurances(
                 word=forms, text=example.text)))
         total_example_count = len(examples)
@@ -518,7 +518,7 @@ class StudyState(State):
 
         self.__entity_prompt_text.set_text(self.prompt_text)
         self.__entity_reveal_text.set_text(self.reveal_text)
-        self.__entity_word_type_label.set_text(self.card.word_type.name)
+        self.__entity_word_type_label.set_text(self.card.get_word_type().name)
 
         # Create card attribute labels
         screen_width, screen_height = self.app.screen.get_size()

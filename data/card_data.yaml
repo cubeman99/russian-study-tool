@@ -946,7 +946,6 @@ cards:
 - {en: both … and …, ru: и … и …, type: conjunction}
 - {en: neither … nor …, ru: ни … ни …, type: conjunction}
 - {en: either … or …, ru: и'ли … и'ли …, type: conjunction}
-- {en: not only … but also …, ru: 'как … так и …, не то''лько … но и …', type: conjunction}
 - {en: now … now …, ru: то … то …, type: conjunction}
 - {en: when, ru: когда', type: conjunction}
 - {en: while, ru: пока', type: conjunction}
@@ -964,8 +963,6 @@ cards:
 - {en: than, ru: чем, type: conjunction}
 - {en: 'while, whilst', ru: в то вре'мя как, type: conjunction}
 - {en: since, ru: с тех по'р как, type: conjunction}
-- {en: 'as though, as if', ru: 'как бу''дто, бу''дто бы, как бу''дто бы, сло''вно',
-  type: conjunction}
 - {en: 'as long as, in so far as, since', ru: поско'льку, type: conjunction}
 - {en: excuse me; I'm sorry, rel: [[other, простите, sorry], [phrase, прошу прошения!,
       i beg your pardon! pardon me!]], ru: извини'те, type: other}
@@ -1108,7 +1105,7 @@ cards:
 - {attrs: [impf, verb.suffix.i], en: to be ashamed, ru: стыди'ться, type: verb}
 - {attrs: [pf, verb.suffix.ai], en: 'to conceive, plan', ru: заду'мать, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to differ, ru: отлича'ться, type: verb}
-- {attrs: [impf, verb.suffix.ai], en: 'to wish, desire', ru: жела'ть, type: verb}
+- {attrs: [gen, impf, verb.suffix.ai], en: 'to wish, desire', ru: жела'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to be shy, ru: скро'мничать, type: verb}
 - {attrs: [pf, verb.suffix.a3], en: to hide, ru: спря'тать, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to remind, ru: напомина'ть, type: verb}
@@ -2069,20 +2066,10 @@ cards:
 - {en: 5000th, ru: пятиты'сячный, type: adjective}
 - {en: 1.000.000th, ru: миллио'нный, type: adjective}
 - {en: 1.000.000.000th, ru: миллиа'рдный, type: adjective}
-- {attrs: [acc], en: 'to, into, in (motion)', ru: в, type: preposition}
-- {attrs: [acc], en: 'to, into, onto, on (motion)', ru: на, type: preposition}
-- {attrs: [prep], en: 'in, at (location)', ru: в, type: preposition}
-- {attrs: [prep], en: 'on, at, in (location)', ru: на, type: preposition}
-- {attrs: [acc], en: 'behind, beyond (motion)', ru: за, type: preposition}
-- {attrs: [acc], en: under (motion), ru: под, type: preposition}
-- {attrs: [instr], en: 'behind, beyond (location)', ru: за, type: preposition}
-- {attrs: [instr], en: under (location), ru: под, type: preposition}
 - {attrs: [gen], en: for the benefit of, rel: [[preposition, ради, for the sake of]],
   ru: для, type: preposition}
-- {attrs: [gen], en: from a place, ru: 'с, со', type: preposition}
 - {attrs: [gen], en: 'by, at a place', ru: у, type: preposition}
 - {attrs: [gen], en: 'from, out of', ru: из, type: preposition}
-- {attrs: [prep], en: 'about, concerning', ru: 'о, об, обо', type: preposition}
 - {attrs: [dat], en: 'toward, up to a point; toward, by point in time, to a persion',
   ru: к, type: preposition}
 - {attrs: [gen], en: from, ru: от, type: preposition}
@@ -2094,8 +2081,6 @@ cards:
 - {attrs: [gen], en: near, ru: бли'з, type: preposition}
 - {attrs: [gen], en: after, ru: по'сле, type: preposition}
 - {attrs: [gen], en: 'before, until', ru: до, type: preposition}
-- {attrs: [dat], en: 'by, in the way of', ru: по, type: preposition}
-- {attrs: [acc], en: 'against, striking', ru: по, type: preposition}
 - {attrs: [1st, nom, sing], en: I, ru: я, type: pronoun}
 - {attrs: [informal, nom, 2nd, sing], en: you, ru: ты, type: pronoun}
 - {attrs: [m, nom, sing, 3rd], en: 'he, it', ru: он, type: pronoun}
@@ -2122,7 +2107,6 @@ cards:
 - {en: noone, ru: никто', type: pronoun}
 - {en: to converse, ru: разгова'рывать, type: verb}
 - {attrs: [pf], en: to turn into, ru: преврати'ться, type: verb}
-- {attrs: [gen, impf, verb.suffix.ai], en: to wish, ru: жела'ть, type: verb}
 - {attrs: [gen, impf, verb.suffix.ai], en: to strive for, ru: добива'ться, type: verb}
 - {attrs: [gen, impf, verb.suffix.ai], en: to achieve, rel: [[noun, достижение, achievement]],
   ru: достига'ть, type: verb}
@@ -2193,7 +2177,7 @@ cards:
 - {attrs: [impf, stem.obstruent], en: to crawl, ru: ползти', type: verb}
 - {attrs: [impf, stem.obstruent, uni], en: to carry, ru: нести', type: verb}
 - {attrs: [stem.obstruent, pf], en: 'to save, rescue', ru: спасти', type: verb}
-- {attrs: [impf, stem.obstruent], en: to shake, ru: трясти', type: verb}
+- {attrs: [impf, stem.obstruent], en: 'to shake, jiggle', ru: трясти', type: verb}
 - {attrs: [impf, stem.obstruent], en: to wander, ru: брести', type: verb}
 - {attrs: [impf, stem.obstruent, uni], en: to lead, ru: вести', type: verb}
 - {attrs: [impf, stem.obstruent], en: to put, ru: кла'сть, type: verb}
@@ -2209,7 +2193,7 @@ cards:
   type: verb}
 - {attrs: [impf, stem.obstruent], en: to rake; to row, ru: грести', type: verb}
 - {attrs: [impf, stem.obstruent], en: to scrape, ru: скрести', type: verb}
-- {attrs: [impf, stem.obstruent], en: to guard, ru: бере'чь, type: verb}
+- {attrs: [impf, stem.obstruent], en: to keep safe, ru: бере'чь, type: verb}
 - {attrs: [impf, stem.obstruent], en: to cut (hair), ru: стри'чь, type: verb}
 - {attrs: [impf, stem.obstruent], en: to be able, ru: мо'чь, type: verb}
 - {attrs: [stem.obstruent, pf], en: to help, ru: помо'чь, type: verb}
@@ -2459,8 +2443,6 @@ cards:
         endure (pain, suffering)']], ru: терпе'ть, type: verb}
 - {attrs: [impf, verb.suffix.e], en: to snore, ru: храпе'ть, type: verb}
 - {attrs: [impf, verb.suffix.e], en: to make noise, ru: шуме'ть, type: verb}
-- {attrs: [impf, verb.suffix.e, verb.suffix.ei], en: to ache (third-person only), ru: боле'ть,
-  type: verb}
 - {attrs: [impf, verb.suffix.e], en: to burn, ru: горе'ть, type: verb}
 - {attrs: [impf, verb.suffix.e], en: 'to look, watch', ru: смотре'ть, type: verb}
 - {attrs: [gen, impf, verb.suffix.zha], en: to be afraid of, ru: боя'ться, type: verb}
@@ -2703,7 +2685,6 @@ cards:
 - {attrs: [impf, verb.suffix.ai], en: to interrupt, ru: прерыва'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: 'to sparkle, shine brightly', ru: сверка'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to push off, ru: отта'лкиваться, type: verb}
-- {attrs: [impf], en: 'to shake, jiggle', ru: трясти', type: verb}
 - {attrs: [pf, verb.suffix.i], en: to roll your eyes, ru: закати'ть глаза', type: verb}
 - {attrs: [pf], en: to burst out laughing, ru: рассмея'ться, type: verb}
 - {attrs: [pf, verb.suffix.i], en: 'to portray, picture', ru: изобрази'ть, type: verb}
@@ -3103,8 +3084,6 @@ cards:
 - {en: wherever you are, ru: где бы ты не был, type: phrase}
 - {en: 'really, (suprise, doubt, concern)', ru: ра'зве, type: particle}
 - {en: 'concerning, about', ru: насчёт, type: preposition}
-- {attrs: [m], en: table, rel: [[noun, столовая (комната), dining (room)], [verb, заметить,
-      'to notice, observe']], ru: сто'л, type: noun}
 - {attrs: [impf], en: 'to call, beckon; to hand signal', ru: мани'ть, type: verb}
 - {en: It would be great if ..., ru: 'во''т бы [бы''ло хорошо''] ...', type: phrase}
 - {en: wedding (adj.), ru: сва'дебный, type: adjective}
@@ -3428,9 +3407,6 @@ cards:
 - {attrs: [f], en: an attack, ru: ата'ка, type: noun}
 - {en: 'stunned, perplexed, dumbfounded', ru: ошеломлённый, type: adjective}
 - {en: 'by suprise, suddenly, unexpectedly', ru: враспло'х, type: adverb}
-- {attrs: [pf, verb.suffix.i], en: to give birth, rel: [[noun, родители, parents], [
-      adjective, родной, native], [noun, род, 'gender, kin'], [verb, зародить, 'to
-        excite, to raise thought, idea, feeling']], ru: роди'ть, type: verb}
 - {en: skillfull, rel: [[verb, уметь, to know how], [noun, умение, skill]], ru: уме'лый,
   type: adjective}
 - {attrs: [impf, verb.suffix.i], en: to avenge, rel: [[noun, месть, revenge]], ru: мсти'ть,
@@ -3681,3 +3657,22 @@ cards:
         (implies intent)]], ru: до того' как ..., type: conjunction}
 - {en: thanks to the fact that ..., ru: благодаря' тому' что ..., type: conjunction}
 - {en: on account of ..., ru: 'из-за того'', что ...', type: conjunction}
+- {attrs: [acc], en: 'to, into, in (motion)', ru: в + acc., type: preposition}
+- {attrs: [prep], en: 'in, at (location)', ru: в + prep., type: preposition}
+- {attrs: [acc], en: 'to, into, onto, on (motion)', ru: на + acc., type: preposition}
+- {attrs: [prep], en: 'on, at, in (location)', ru: на + prep., type: preposition}
+- {attrs: [acc], en: 'behind, beyond (motion)', ru: за + acc., type: preposition}
+- {attrs: [acc], en: under (motion), ru: под + acc., type: preposition}
+- {attrs: [instr], en: 'behind, beyond (location)', ru: за + instr., type: preposition}
+- {attrs: [instr], en: under (location), ru: под + instr., type: preposition}
+- {attrs: [acc], en: 'against, striking', ru: по + acc., type: preposition}
+- {attrs: [dat], en: 'by, in the way of', ru: по + dat., type: preposition}
+- {attrs: [gen], en: from a place, ru: с; со, type: preposition}
+- {attrs: [prep], en: 'about, concerning', ru: о; об; обо, type: preposition}
+- {en: not only … but also …, ru: как … так и …; не то'лько … но и …, type: conjunction}
+- {en: 'as though, as if', ru: как бу'дто; бу'дто бы; как бу'дто бы; сло'вно, type: conjunction}
+- {attrs: [pf, verb.suffix.i], en: to give birth, rel: [[noun, родители, parents], [
+      adjective, родной, native], [noun, род, 'gender, kin'], [verb, зародить, 'to
+        excite, to raise thought, idea, feeling']], ru: роди'ть, type: verb}
+- {attrs: [m], en: table, rel: [[verb, заметить, 'to notice, observe'], [noun, столовая
+        (комната), dining (room)]], ru: сто'л, type: noun}
