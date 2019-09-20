@@ -102,6 +102,11 @@ class GUIState(State):
         screen_width, screen_height = self.app.screen.get_size()
         viewport = pygame.Rect(0, self.margin_top, screen_width,
                                screen_height - self.margin_top - self.margin_bottom)
+        
+    def on_end(self):
+        """Called when the state ends."""
+        if self.__widget:
+            self.__widget.on_close()
 
     def pause(self):
         self.app.push_state(SubMenuState("Pause",

@@ -1,4 +1,4 @@
-save_time: 1569007262.3478482
+save_time: 1569012114.77636
 cards:
   - [noun, абрикос, apricot, 4, 1554250410.845265, TTTT]
   - [noun, абрикосовый, apricot juice, 1, 1548521307.1751826, F]
@@ -1144,7 +1144,7 @@ cards:
   - [noun, стиль, style, 4, 1551664004.8427296, TTTTTTTTTTT]
   - [noun, стих, 'verse, poetry', 4, 1553983438.3044956, TTTTTTTTTTTT]
   - [noun, сто, '100', 4, 1564451325.6395116, TTTTT]
-  - [noun, стол, table, 4, 1569007249.2411363, TTTTTTTTTTTTTTTTTFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]
+  - [noun, стол, table, 4, 1569012066.3494773, TTTTTTTTTTTTTTTTTTFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]
   - [noun, столб, 'pole, post, column', 4, 1567643867.7570348, TTTTTTTTTT]
   - [noun, столкновение, collision, 4, 1568338931.4612346, TTTFFTTTTTTTTFF]
   - [noun, столовая (комната), dining (room), 4, 1554947913.7968972, TTTFTTTTT]
@@ -1622,8 +1622,8 @@ cards:
   - [verb, заливать, 'to fill, overflow, flood', 4, 1560304359.2174196, TTTTTTTT]
   - [verb, залить, 'to fill, overflow, flood', 4, 1560304344.3135052, TTTTTTT]
   - [verb, замедлить, to slow down smth, 4, 1568686145.2277145, TTFTTTTTTTTTTTT]
-  - [verb, заметить, 'to notice, observe', 4, 1569007251.4581828, TTTTTTTTTTTTTTFTTTTTTTTTTTTTFTTFTTTTFFF]
-  - [verb, замечать, to notice, 4, 1569007249.9779327, TFTFTTTTTTTTTTTTTFFTTTTTTTTFTTTTTTTTTTTTTTF]
+  - [verb, заметить, 'to notice, observe', 4, 1569012049.6775653, TTTTTTTTTTTTTTTFTTTTTTTTTTTTTFTTFTTTTFFF]
+  - [verb, замечать, to notice, 4, 1569012095.0011358, TTTFTFTTTTTTTTTTTTTFFTTTTTTTTFTTTTTTTTTTTTTTF]
   - [verb, замолкнуть, to fall silent, 4, 1567459893.1613863, TFTTTTTTTTTTTTTTTTTTFFFTFTTTTTTFF]
   - [verb, замолчать, 'to fall silent, to shut up', 0, null, '']
   - [verb, заморачиваться, to bother, 4, 1568686247.2260578, TTTFTTFTTFFTTFTTTTTFTFTTTFTFF]
@@ -2176,7 +2176,7 @@ cards:
   - [verb, рисковать, to risk, 4, 1549847887.4138353, TTTTTT]
   - [verb, рисовать, to draw, 4, 1549143543.34384, TTTTTTTTT]
   - [verb, робеть, to be timid, 4, 1550453727.880701, TFTTTTTTTTTTTTTFFTTFFTTTFFFF]
-  - [verb, родить, to give birth, 4, 1569007234.7366982, TTTTTTTTTTTTTTTTTTFFFTTTTFTTFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]
+  - [verb, родить, to give birth, 4, 1569012113.592995, TTTTTTTTTTTTTTTTTTTTFFFTTTTFTTFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]
   - [verb, родиться, to be born, 4, 1552070953.0577052, TTTTTTTTF]
   - [verb, ронять, to drop, 4, 1557970618.7007098, TFTTFTTTFFTF]
   - [verb, ругаться, 'to swear, curse', 4, 1554948331.082187, TFTFTTTTTTTTTFTF]
@@ -3162,8 +3162,8 @@ cards:
   TTTTF]
   - [conjunction, до тех пор, 'until, as long as', 4, 1568338109.8707743, TTTTTTTF]
   - [conjunction, до тех пор; пока … не, 'until, so long as', 0, null, '']
-  - [conjunction, до того как ..., before ...; before the fact that ..., 4, 1569007262.1220846,
-  TFTTTT]
+  - [conjunction, до того как ..., before ...; before the fact that ..., 4, 1569012053.6028144,
+  TTFTTTT]
   - [conjunction, допустим, 'lets say, supposably', 4, 1558400623.3557732, TFTT]
   - [conjunction, если, if, 4, 1555022377.029188, TT]
   - [conjunction, если … не, unless, 4, 1555022409.1642723, TTTFF]
@@ -3200,8 +3200,8 @@ cards:
   - [conjunction, после того как ..., after the fact that ..., 0, null, '']
   - [conjunction, потому что, because, 4, 1555022426.8550005, TTTT]
   - [conjunction, поэтому, 'so, and for that...', 3, 1568852884.1455944, T]
-  - [conjunction, 'прежде, чем ...', before ... (implies intent), 4, 1569007253.8872237,
-  TTTTT]
+  - [conjunction, 'прежде, чем ...', before ... (implies intent), 4, 1569012112.1689322,
+  TTTTTT]
   - [conjunction, 'с тем, чтобы ...', 'with the purpose of, so that', 1, 1568853589.462523,
   FF]
   - [conjunction, с тех пор как, since, 1, 1568853566.365723, FF]
@@ -4608,14 +4608,14 @@ metrics:
       42, 191, 16, 190, 2912]}}
   2019/09/20: {Adjective: {history_score: 387.33821166214705, proficiency_counts: [4, 7, 5, 24,
       446]}, Adverb: {history_score: 132.46242326432267, proficiency_counts: [2, 10,
-      0, 1, 175]}, Conjunction: {history_score: 21.54900793650793, proficiency_counts: [
+      0, 1, 175]}, Conjunction: {history_score: 22.0906746031746, proficiency_counts: [
       6, 4, 1, 4, 38]}, Interjection: {history_score: 9.66468253968254, proficiency_counts: [
-      1, 0, 0, 2, 10]}, Noun: {history_score: 908.3905614865323, proficiency_counts: [
+      1, 0, 0, 2, 10]}, Noun: {history_score: 908.391877276006, proficiency_counts: [
       14, 146, 6, 117, 1104]}, Other: {history_score: 28.31426212676212, proficiency_counts: [
       0, 0, 0, 1, 36]}, Particle: {history_score: 5.25, proficiency_counts: [0, 0,
       0, 0, 6]}, Phrase: {history_score: 58.4561529264509, proficiency_counts: [1,
       6, 1, 21, 71]}, Preposition: {history_score: 35.083928571428565, proficiency_counts: [
       3, 1, 0, 3, 40]}, Pronoun: {history_score: 28.044871794871792, proficiency_counts: [
-      0, 0, 0, 0, 31]}, Verb: {history_score: 814.2795578768853, proficiency_counts: [
-      10, 9, 3, 16, 954]}, all: {history_score: 2428.8336601855935, proficiency_counts: [
+      0, 0, 0, 0, 31]}, Verb: {history_score: 814.3944990415686, proficiency_counts: [
+      10, 9, 3, 16, 954]}, all: {history_score: 2429.491583806417, proficiency_counts: [
       41, 183, 16, 189, 2911]}}

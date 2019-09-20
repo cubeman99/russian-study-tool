@@ -1,10 +1,12 @@
 import os
 import random
 import re
+import threading
 import time
 import yaml
 from datetime import datetime
 from cmg.event import Event
+from cmg.utilities.read_write_lock import ReadWriteLock
 from study_tool.card import Card, CardSide, SourceLocation
 from study_tool.card_set import CardSet, CardSetPackage, CardGroupMetrics, StudySet
 from study_tool.card_attributes import CardAttributes
@@ -22,46 +24,34 @@ for word_type in WordType:
     WORD_TYPE_DICT[word_type.name.lower()] = word_type
 
 
-class StudyMetrics:
-    def __init__(self):
-        self.date = datetime.now()
-        self.all_metrics = CardGroupMetrics()
-        self.word_type_metrics = {}
-        for word_type in WordType:
-            self.word_type_metrics[word_type] = CardGroupMetrics()
-
-    def get_date_string(self) -> str:
-        return self.date.strftime("%Y/%m/%d")
-
-    def serialize(self):
-        state = {"date": self.get_date_string(),
-                 "all_metrics": self.all_metrics.serialize(),
-                 "card_type_metrics": {}}
-        for word_type, metrics in self.word_type_metrics.items():
-            if metrics.get_total_count() > 0:
-                state["card_type_metrics"][word_type.name] = metrics.serialize()
-        return state
-
-    def deserialize(self, state):
-        self.date = datetime.strptime(state["date"], "%Y/%m/%d")
-        self.all_metrics.deserialize(state["all_metrics"])
-        for word_type in WordType:
-            if word_type.name in state["card_type_metrics"]:
-                self.word_type_metrics[word_type].deserialize(
-                    state["card_type_metrics"][word_type.name])
-
-
 class CardDatabase:
     """
     Database class to store Cards, CardSets, and CardSetPackages
     """
+
     def __init__(self, word_database: WordDatabase):
-        self.cards = {}
+        """
+        Creates an empty database.
+        """
         self.word_database = word_database
+        self.__lock_modify = ReadWriteLock()
+        self.__card_data_path = None
+
+        # Card data
+        self.cards = {}
         self.__word_to_cards_dict = {}
         self.__russian_key_to_card_dict = {}
         self.__english_key_to_card_dict = {}
+
+        # Card set data
+        self.__root_package = None
         self.__path_to_card_sets_dict = {}
+
+        # Dirty state
+        self.__lock_dirty = threading.RLock()
+        self.__dirty_cards = set()
+        self.__dirty_key_change_cards = set()
+        self.__dirty_card_sets = set()
 
         # Events
         self.card_created = Event(Card)
@@ -71,164 +61,184 @@ class CardDatabase:
         self.card_added_to_set = Event(Card, CardSet)
         self.card_removed_from_set = Event(Card, CardSet)
 
+    def get_root_package(self) -> CardSetPackage:
+        return self.__root_package
+
     def has_card(self, card: Card) -> bool:
-        return card in self.cards.values()
+        with self.__lock_modify.acquire_read():
+            return card in self.cards.values()
 
     def get_card_sets_from_path(self, path: str) -> list:
-        return self.__path_to_card_sets_dict.get(path, [])
+        with self.__lock_modify.acquire_read():
+            return self.__path_to_card_sets_dict.get(path, [])
 
     def get_card_by_key(self, word_type: WordType, russian: str, english: str):
-        key = (word_type, russian, english)
-        return self.cards.get(key, None)
+        with self.__lock_modify.acquire_read():
+            key = (word_type, russian, english)
+            return self.cards.get(key, None)
 
     def get_card(self, word_type: WordType, english=None, russian=None) -> Card:
         """
         Retreive a card by word type and text.
         """
-        if english is not None and russian is not None:
-            key = (word_type, AccentedText(russian).text.lower(), AccentedText(english).text.lower())
-            return self.cards.get(key, None)
-        if english is not None:
-            key = (word_type, AccentedText(english).text.lower())
-            return self.__english_key_to_card_dict.get(key, None)
-        if russian is not None:
-            key = (word_type, AccentedText(russian).text.lower())
-            return self.__russian_key_to_card_dict.get(key, None)
-        raise Exception("Missing english or russian argument")
+        with self.__lock_modify.acquire_read():
+            if english is not None and russian is not None:
+                key = (word_type,
+                       AccentedText(russian).text.lower(),
+                       AccentedText(english).text.lower())
+                return self.cards.get(key, None)
+            if english is not None:
+                key = (word_type, AccentedText(english).text.lower())
+                return self.__english_key_to_card_dict.get(key, None)
+            if russian is not None:
+                key = (word_type, AccentedText(russian).text.lower())
+                return self.__russian_key_to_card_dict.get(key, None)
+            raise Exception("Missing english or russian argument")
 
     def iter_cards(self, word_type=None, english=None, russian=None):
         """
         Iterate cards with the specified fields.
         """
-        if english is not None:
-            english = AccentedText(english).text.lower()
-        if russian is not None:
-            russian = AccentedText(russian).text.lower()
-        for _, card in self.cards.items():
-            if word_type is not None and card.get_word_type() != word_type:
-                continue
-            if english is not None and card.english.text.lower() != english:
-                continue
-            if russian is not None and card.russian.text.lower() != russian:
-                continue
-            yield card
+        with self.__lock_modify.acquire_read():
+            if english is not None:
+                english = AccentedText(english).text.lower()
+            if russian is not None:
+                russian = AccentedText(russian).text.lower()
+            for _, card in self.cards.items():
+                if word_type is not None and card.get_word_type() != word_type:
+                    continue
+                if english is not None and card.english.text.lower() != english:
+                    continue
+                if russian is not None and card.russian.text.lower() != russian:
+                    continue
+                yield card
 
     def find_card(self, word_type=None, english=None, russian=None) -> Card:
+        """Returns the first card with the given properties, or None."""
         for card in self.iter_cards(word_type=word_type, english=english, russian=russian):
             return card
         return None
             
     def find_cards_by_word(self, word: str):
         """Find a card by the name of a word."""
-        for word_obj in self.word_database.lookup_word(word):
-            if word_obj in self.__word_to_cards_dict:
-                for card in self.__word_to_cards_dict[word_obj]:
-                    yield card
-
-    def get_study_metrics(self) -> StudyMetrics:
-        metrics = StudyMetrics()
-        card_set = StudySet(cards=self.cards.values())
-        metrics.all_metrics = card_set.get_study_metrics()
-        for word_type in WordType:
-            card_set = StudySet(cards=(c for c in self.cards.values()
-                                       if c.word_type == word_type))
-            metrics.word_type_metrics[word_type] = card_set.get_study_metrics()
-        return metrics
+        word_obj_list = self.word_database.lookup_word(word)
+        with self.__lock_modify.acquire_read():
+            for word_obj in word_obj_list:
+                if word_obj in self.__word_to_cards_dict:
+                    for card in self.__word_to_cards_dict[word_obj]:
+                        yield card
 
     def clear(self):
         """Clear all cards."""
-        self.cards = {}
-        self.__word_to_cards_dict = {}
-        self.__russian_key_to_card_dict = {}
-        self.__english_key_to_card_dict = {}
-        self.__path_to_card_sets_dict = {}
+        with self.__lock_modify.acquire_write():
+            self.cards = {}
+            self.__word_to_cards_dict = {}
+            self.__russian_key_to_card_dict = {}
+            self.__english_key_to_card_dict = {}
+            self.__path_to_card_sets_dict = {}
 
     def add_card_to_set(self, card: Card, card_set: CardSet):
         """Adds a card to a card set."""
-        self.card_added_to_set.emit(card, card_set)
+        Config.logger.info("Adding card '{}' to set '{}'".format(card, card_set.get_name()))
+        with self.__lock_modify.acquire_write():
+            card_set.add_card(card)
+            with self.__lock_dirty:
+                self.__dirty_card_sets.add(card_set)
+            self.card_added_to_set.emit(card, card_set)
 
-    def remove_card_to_set(self, card: Card, card_set: CardSet):
+    def remove_card_from_set(self, card: Card, card_set: CardSet):
         """Removes card from a card set."""
-        self.card_removed_from_set.emit(card, card_set)
+        Config.logger.info("Removing card '{}' from set '{}'".format(card, card_set.get_name()))
+        with self.__lock_modify.acquire_write():
+            card_set.remove_card(card)
+            with self.__lock_dirty:
+                self.__dirty_card_sets.add(card_set)
+            self.card_removed_from_set.emit(card, card_set)
 
     def add_card(self, card: Card):
         """
         Adds a new card to the database.
         """
-        word_type = card.get_word_type()
+        with self.__lock_modify.acquire_write():
+            word_type = card.get_word_type()
 
-        # Get the Word info associated with this card
-        word = None
-        for card_word_name in card.get_word_names():
-            word = self.word_database.download_word(
-                name=card_word_name,
-                word_type=card.word_type)
-        if word is not None and word.complete:
-            self.word_database.populate_card_details(card=card)
-        if word is not None:
-            if word not in self.__word_to_cards_dict:
-                self.__word_to_cards_dict[word] = [card]
-            else:
-                self.__word_to_cards_dict[word].append(card)
+            # Get the Word info associated with this card
+            word = None
+            for card_word_name in card.get_word_names():
+                word = self.word_database.download_word(
+                    name=card_word_name,
+                    word_type=card.word_type)
+            if word is not None and word.complete:
+                self.word_database.populate_card_details(card=card)
+            if word is not None:
+                if word not in self.__word_to_cards_dict:
+                    self.__word_to_cards_dict[word] = [card]
+                else:
+                    self.__word_to_cards_dict[word].append(card)
 
-        # Register the card's english and russian identifiers
-        ru_key = card.get_russian_key()
-        en_key = card.get_english_key()
-        key = card.get_key()
-        if ru_key in self.__russian_key_to_card_dict:
-            print(ru_key)
-            print(self.__russian_key_to_card_dict[ru_key],
-                  self.__russian_key_to_card_dict[ru_key].source)
-            print(card)
-            raise Exception("Duplicate card russian: {} '{}'".format(
-                word_type.name, card.get_russian().text))
-        if en_key in self.__english_key_to_card_dict:
-            print(en_key)
-            print(self.__english_key_to_card_dict[en_key],
-                  self.__english_key_to_card_dict[en_key].source)
-            print(card)
-            raise Exception("Duplicate card english: {} '{}'".format(
-                word_type.name, card.get_english().text))
-        if key in self.cards:
-            print(card)
-            print(self.cards[key])
-            raise Exception("Duplicate card: " + repr(key))
-        self.__russian_key_to_card_dict[ru_key] = card
-        self.__english_key_to_card_dict[en_key] = card
-        self.cards[key] = card
+            # Register the card's english and russian identifiers
+            ru_key = card.get_russian_key()
+            en_key = card.get_english_key()
+            key = card.get_key()
+            if ru_key in self.__russian_key_to_card_dict:
+                print(ru_key)
+                print(self.__russian_key_to_card_dict[ru_key],
+                      self.__russian_key_to_card_dict[ru_key].source)
+                print(card)
+                raise Exception("Duplicate card russian: {} '{}'".format(
+                    word_type.name, card.get_russian().text))
+            if en_key in self.__english_key_to_card_dict:
+                print(en_key)
+                print(self.__english_key_to_card_dict[en_key],
+                      self.__english_key_to_card_dict[en_key].source)
+                print(card)
+                raise Exception("Duplicate card english: {} '{}'".format(
+                    word_type.name, card.get_english().text))
+            if key in self.cards:
+                print(card)
+                print(self.cards[key])
+                raise Exception("Duplicate card: " + repr(key))
+            self.__russian_key_to_card_dict[ru_key] = card
+            self.__english_key_to_card_dict[en_key] = card
+            self.cards[key] = card
+            with self.__lock_dirty:
+                self.__dirty_cards.add(card)
         self.card_created.emit(card)
        
     def remove_card(self, card: Card):
         """
         Remove a card from the card database.
         """
-        # Remove from russian key dict
-        found_ru_key = False
-        for key, old_card in self.__russian_key_to_card_dict.items():
-            if old_card == card:
-                found_ru_key = True
-                del self.__russian_key_to_card_dict[key]
-                break
-        assert found_ru_key
+        with self.__lock_modify.acquire_write():
+            # Remove from russian key dict
+            found_ru_key = False
+            for key, old_card in self.__russian_key_to_card_dict.items():
+                if old_card == card:
+                    found_ru_key = True
+                    del self.__russian_key_to_card_dict[key]
+                    break
+            assert found_ru_key
 
-        # Remove from english key dict
-        found_en_key = False
-        for key, old_card in self.__english_key_to_card_dict.items():
-            if old_card == card:
-                found_en_key = True
-                del self.__english_key_to_card_dict[key]
-                break
-        assert found_en_key
+            # Remove from english key dict
+            found_en_key = False
+            for key, old_card in self.__english_key_to_card_dict.items():
+                if old_card == card:
+                    found_en_key = True
+                    del self.__english_key_to_card_dict[key]
+                    break
+            assert found_en_key
 
-        # Remove from key dict
-        found_key = False
-        for key, old_card in self.cards.items():
-            if old_card == card:
-                found_key = True
-                del self.cards[key]
-                break
-        assert found_key
+            # Remove from key dict
+            found_key = False
+            for key, old_card in self.cards.items():
+                if old_card == card:
+                    found_key = True
+                    del self.cards[key]
+                    break
+            assert found_key
         
+            with self.__lock_dirty:
+                self.__dirty_cards.add(card)
         self.card_deleted.emit(card)
 
     def apply_card_key_change(self, card: Card):
@@ -237,53 +247,191 @@ class CardDatabase:
 
         :param card: The Card with the updated key.
         """
-        new_ru_key = card.get_russian_key()
-        new_en_key = card.get_english_key()
-        new_key = card.get_key()
+        with self.__lock_modify.acquire_write():
+            new_ru_key = card.get_russian_key()
+            new_en_key = card.get_english_key()
+            new_key = card.get_key()
 
-        # Update russian key dict
-        found_ru_key = False
-        for old_ru_key, old_card in self.__russian_key_to_card_dict.items():
-            if old_card == card:
-                found_ru_key = True
-                if old_ru_key != new_ru_key:
-                    Config.logger.info("Russian key change: {} -> {}"
-                                       .format(old_ru_key, new_ru_key))
-                    del self.__russian_key_to_card_dict[old_ru_key]
-                    self.__russian_key_to_card_dict[new_ru_key] = card
-                    break
-        assert found_ru_key
+            # Update russian key dict
+            found_ru_key = False
+            for old_ru_key, old_card in self.__russian_key_to_card_dict.items():
+                if old_card == card:
+                    found_ru_key = True
+                    if old_ru_key != new_ru_key:
+                        Config.logger.info("Russian key change: {} -> {}"
+                                           .format(old_ru_key, new_ru_key))
+                        del self.__russian_key_to_card_dict[old_ru_key]
+                        self.__russian_key_to_card_dict[new_ru_key] = card
+                        break
+            assert found_ru_key
 
-        # Update english key dict
-        found_en_key = False
-        for old_en_key, old_card in self.__english_key_to_card_dict.items():
-            if old_card == card:
-                found_en_key = True
-                if old_en_key != new_en_key:
-                    Config.logger.info("English key change: {} -> {}"
-                                       .format(old_en_key, new_en_key))
-                    del self.__english_key_to_card_dict[old_en_key]
-                    self.__english_key_to_card_dict[new_en_key] = card
-                    break
-        assert found_en_key
+            # Update english key dict
+            found_en_key = False
+            for old_en_key, old_card in self.__english_key_to_card_dict.items():
+                if old_card == card:
+                    found_en_key = True
+                    if old_en_key != new_en_key:
+                        Config.logger.info("English key change: {} -> {}"
+                                           .format(old_en_key, new_en_key))
+                        del self.__english_key_to_card_dict[old_en_key]
+                        self.__english_key_to_card_dict[new_en_key] = card
+                        break
+            assert found_en_key
 
-        # Update key dict
-        found_key = False
-        for old_key, old_card in self.cards.items():
-            if old_card == card:
-                found_key = True
-                if old_key != new_key:
-                    Config.logger.info("Key change: {} -> {}"
-                                       .format(old_key, new_key))
-                    del self.cards[old_key]
-                    self.cards[new_key] = card
-                    break
-        assert found_key
-
+            # Update key dict
+            found_key = False
+            for old_key, old_card in self.cards.items():
+                if old_card == card:
+                    found_key = True
+                    if old_key != new_key:
+                        Config.logger.info("Key change: {} -> {}"
+                                           .format(old_key, new_key))
+                        del self.cards[old_key]
+                        self.cards[new_key] = card
+                        break
+            assert found_key
+        
+            with self.__lock_dirty:
+                self.__dirty_key_change_cards.add(card)
+                self.__dirty_cards.add(card)
         self.card_key_changed.emit(card)
         self.card_data_changed.emit(card)
 
-    def serialize_card_data(self) -> dict:
+    def link_related_cards(self, a: Card, b: Card):
+        """Links two cards as related."""
+        Config.logger.info("Linking related cards '{a}' and '{b}'"
+                           .format(a=repr(a.get_russian()),
+                                   b=repr(b.get_russian())))
+        a.add_related_card(b)
+        b.add_related_card(a)
+        with self.__lock_dirty:
+            self.__dirty_cards.add(a)
+            self.__dirty_cards.add(b)
+        
+    def unlink_related_cards(self, a: Card, b: Card):
+        """Un-links two cards as not related."""
+        Config.logger.info("Unlinking related cards '{a}' and '{b}'"
+                           .format(a=repr(a.get_russian()),
+                                   b=repr(b.get_russian())))
+        a.remove_related_card(b)
+        b.remove_related_card(a)
+        with self.__lock_dirty:
+            self.__dirty_cards.add(a)
+            self.__dirty_cards.add(b)
+
+    def save_all_changes(self):
+        """
+        Saves all modified data to file, including cards and card sets.
+        """
+        with self.__lock_modify.acquire_write():
+            with self.__lock_dirty:
+                # Save card data
+                if self.__dirty_cards:
+                    self.save_card_data()
+                self.__dirty_cards.clear()
+
+                # Any card sets which contain any cards whose key changed must
+                # also be saved
+                for card_set in self.__root_package.all_card_sets():
+                    for card in self.__dirty_key_change_cards:
+                        if card_set.has_card(card):
+                            self.__dirty_card_sets.add(card_set)
+
+                # Save card sets
+                for card_set in self.__dirty_card_sets:
+                    self.save_card_set(card_set)
+                self.__dirty_card_sets.clear()
+        
+    def save_card_data(self, path=None):
+        """
+        Saves card data to a YAML file.
+        """
+        if path is None:
+            path = self.__card_data_path
+        assert path is not None
+        Config.logger.info("Saving card data to: " + path)
+
+        with self.__lock_modify.acquire_read():
+
+            # Serialize the card data
+            state = self.__serialize_card_data()
+
+            # Verify the serialized data can be deserialized
+            #self.__deserialize_card_data({"cards": state})
+
+            # Save to temp file first
+            temp_path = path + ".temp"
+            with open(temp_path, "wb") as f:
+                f.write(b"cards:\n")
+                for card in state:
+                    f.write(b"- ")
+                    yaml.dump(card, f, encoding="utf8",
+                              allow_unicode=True, default_flow_style=True,
+                              Dumper=yaml.CDumper)
+            os.remove(path)
+            os.rename(temp_path, path)
+            with self.__lock_dirty:
+                self.__dirty_cards.clear()
+
+    def load_card_data(self, path: str):
+        """
+        Loads card data from a YAML file.
+        """
+        Config.logger.info("Loading card data from: " + path)
+        with self.__lock_modify.acquire_write():
+            self.__card_data_path = path
+            with open(path, "r", encoding="utf8") as f:
+                state = yaml.load(f, Loader=yaml.CLoader)
+                self.__deserialize_card_data(state)
+            with self.__lock_dirty:
+                self.__dirty_cards.clear()
+                    
+    def load_card_sets(self, path: str) -> CardSetPackage:
+        """
+        Loads the root card package.
+        """
+        Config.logger.info("Loading card sets from directory: " + path)
+        with self.__lock_modify.acquire_write():
+            self.__root_package = self.__load_card_package_directory(
+                path=path, name="words")
+            with self.__lock_dirty:
+                self.__dirty_card_sets.clear()
+            return self.__root_package
+
+    def save_card_set(self, card_set: CardSet, path=None):
+        """
+        Save a single card set file to a YAML file.
+        """
+        Config.logger.info("Saving card set '{}'".format(card_set.get_name()))
+        with self.__lock_modify.acquire_read():
+            if path is None:
+                path = card_set.get_file_path()
+                assert path is not None
+        
+            state = card_set.serialize()
+
+            cards_state = state["card_set"]["cards"]
+            del state["card_set"]["cards"]
+            with open(path, "wb") as opened_file:
+                yaml.dump(state, opened_file, encoding="utf8",
+                          allow_unicode=True, default_flow_style=False,
+                          Dumper=yaml.CDumper)
+                opened_file.write(b"  cards:\n")
+                for card_state in cards_state:
+                    opened_file.write(b"    - ")
+                    yaml.dump(
+                        card_state, opened_file, encoding="utf8",
+                        allow_unicode=True, default_flow_style=True,
+                        Dumper=yaml.CDumper)
+                
+            card_set.set_fixed_card_set(False)
+            card_set.set_file_path(path)
+
+            with self.__lock_dirty:
+                if card_set in self.__dirty_card_sets:
+                    self.__dirty_card_sets.remove(card_set)
+
+    def __serialize_card_data(self) -> dict:
         """Serialize card data."""
         state = []
         for card in self.iter_cards():
@@ -291,7 +439,7 @@ class CardDatabase:
                 state.append(card.serialize_card_data())
         return state
 
-    def deserialize_card_data(self, state: dict):
+    def __deserialize_card_data(self, state: dict):
         """Deserialize card data."""
         card_list = []
         for card_state in state["cards"]:
@@ -316,8 +464,8 @@ class CardDatabase:
                                         str(related_card_key))
                     card.add_related_card(related_card)
                     related_card.add_related_card(card)
-                    
-    def load_card_package_directory(self, path: str, name: str) -> CardSetPackage:
+
+    def __load_card_package_directory(self, path: str, name: str) -> CardSetPackage:
         package = CardSetPackage(name=name, path=path)
 
         for filename in os.listdir(path):
@@ -325,7 +473,7 @@ class CardDatabase:
 
             if os.path.isdir(file_path):
                 # Load a new sub-package
-                sub_package = self.load_card_package_directory(
+                sub_package = self.__load_card_package_directory(
                     path=file_path, name=str(filename))
                 if sub_package is not None:
                     sub_package.parent = package

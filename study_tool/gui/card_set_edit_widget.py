@@ -324,6 +324,7 @@ class CardSetEditWidget(widgets.Widget):
             modified_set = False
             key_change_cards = []
 
+            # Check for cards added to the set
             cards = []
             for row in self.rows:
                 card = row.card
@@ -342,7 +343,7 @@ class CardSetEditWidget(widgets.Widget):
                     modified_set = True
                 else:
                     if row.is_new_in_set():
-                        Config.logger.info("Adding card to set: {}".format(card))
+                        self.__card_database.add_card_to_set(card, self.__card_set)
                         modified_set = True
                     if new_key != old_key:
                         Config.logger.info("Applying changes to card: {}".format(card))
@@ -351,12 +352,18 @@ class CardSetEditWidget(widgets.Widget):
                         card.generate_word_name()
                         self.__card_database.apply_card_key_change(card)
                         key_change_cards.append(card)
+
+            # Check for cards removed from the set
+            for card in self.__card_set.get_cards():
+                if card not in cards:
+                    modified_set = True
+                    self.__card_database.remove_card_from_set(card, self.__card_set)
+
         except Exception:
             traceback.print_exc()
             return
 
         try:
-            self.__card_set.cards = cards
             self.__card_set.name = AccentedText(self.__box_name.get_text())
 
             # Save card database

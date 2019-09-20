@@ -1,6 +1,7 @@
 import json
 import os
 import shutil
+import threading
 import yaml
 from cmg.event import Event
 from cmg.utilities.read_write_lock import ReadWriteLock
@@ -14,23 +15,30 @@ from study_tool.card_attributes import CardAttributes
 from study_tool.card_attributes import *
 from study_tool.config import Config
 
-WORD_TYPE_TYPES = {
-    WordType.Verb: Verb,
-    WordType.Noun: Noun,
-    WordType.Adjective: Adjective,
-}
-
 
 class WordDatabase:
     """
     Database class to store Words.
     """
+
+    # WordType to class
+    __WORD_TYPE_TYPES = {
+        WordType.Verb: Verb,
+        WordType.Noun: Noun,
+        WordType.Adjective: Adjective,
+    }
+
     def __init__(self):
+        """
+        Creates an empty database.
+        """
+        self.__lock = ReadWriteLock()
         self.words = {}
         self.__word_dictionary = {}
         self.__word_dictionary_lax = {}
         self.__cooljugator_404_words = []
-        self.__lock = ReadWriteLock()
+
+        self.__lock_save = threading.Lock()
 
         # Events
         self.word_created = Event(Word)
@@ -43,7 +51,7 @@ class WordDatabase:
         with self.__lock.acquire_read():
             if key in self.words:
                 return self.words[key]
-        if word_type not in WORD_TYPE_TYPES:
+        if word_type not in self.__WORD_TYPE_TYPES:
             return self.__create_default_word(name=name, word_type=word_type)
         return None
 
@@ -93,22 +101,29 @@ class WordDatabase:
             return word
 
     def populate_card_details(self, card, download=False) -> bool:
+        """
+        Populates card data with information from a Word.
+        """
         with self.__lock.acquire_write():
             updated = False
             if card.word_type is not None:
                 word = self.get_word(name=card.word_name,
                                      word_type=card.word_type)
+
+                # Attempt to download details about the word
                 if download and (word is None or not word.complete):
                     word = self.download_word(name=card.word_name,
                                               word_type=card.word_type)
-                    if word:
-                        updated = True
+                    updated = word is not None
+
+                # Create a default word with auto-conjugation
                 if word is None:
                     word = self.__create_default_word(card.word_name,
                                                       word_type=card.word_type,
                                                       meaning=card.english)
-                    updated = True
+                    updated = word is not None
 
+                # Update the card data from the word details
                 if word is not None:
                     if isinstance(word, Verb):
                         if word.aspect == Aspect.Imperfective:
@@ -131,7 +146,7 @@ class WordDatabase:
                             word.indeclinable = True
                             card.add_attribute(CardAttributes.Indeclinable)
                     card.word = word
-                return updated
+            return updated
 
     def add_word(self, word: Word) -> Word:
         """Adds a new word the database."""
@@ -147,24 +162,26 @@ class WordDatabase:
 
     def save(self, path: str):
         """Save word data to a file."""
-        word_data = self.serialize()
-        temp_path = path + ".temp"
-        with open(temp_path, "w", encoding="utf8") as f:
-            json.dump(word_data, f, indent=2,
-                        sort_keys=True, ensure_ascii=False)
-        os.remove(path)
-        os.rename(temp_path, path)
+        with self.__lock_save:
+            word_data = self.serialize()
+            temp_path = path + ".temp"
+            with open(temp_path, "w", encoding="utf8") as f:
+                json.dump(word_data, f, indent=2,
+                            sort_keys=True, ensure_ascii=False)
+            os.remove(path)
+            os.rename(temp_path, path)
 
     def load(self, path: str, custom: bool):
         """Load word data from a file."""
-        with open(path, "r", encoding="utf8") as f:
-            if path.endswith("yaml"):
-                word_data = yaml.load(f, Loader=yaml.CLoader)
-            elif path.endswith("json"):
-                word_data = json.load(f)
-            else:
-                raise Exception(path)
-        self.deserialize(word_data, custom=custom)
+        with self.__lock_save:
+            with open(path, "r", encoding="utf8") as f:
+                if path.endswith("yaml"):
+                    word_data = yaml.load(f, Loader=yaml.CLoader)
+                elif path.endswith("json"):
+                    word_data = json.load(f)
+                else:
+                    raise Exception(path)
+            self.deserialize(word_data, custom=custom)
 
     def serialize(self) -> dict:
         """Serialize word data."""
@@ -175,20 +192,29 @@ class WordDatabase:
                     "404_words": {}
                 }
             }
+
+            # Serialize word data
             for name, word in self.words.items():
-                if (word is not None and word.word_type in WORD_TYPE_TYPES and word.complete and not word.is_custom()):
+                if (word is not None and
+                        word.word_type in self.__WORD_TYPE_TYPES and
+                        word.complete and
+                        not word.is_custom()):
                     word_data = Word.serialize(word)
                     data["words"].append(word_data)
+
+            # Serialize list of words with download errors
             bad_word_data = data["cooljugator"]["404_words"]
             for word_type, word in self.__cooljugator_404_words:
                 if word_type.name not in bad_word_data:
                     bad_word_data[word_type.name] = []
                 bad_word_data[word_type.name].append(word)
+
             return data
 
     def deserialize(self, data: dict, custom=False):
         """Deserialize word data."""
         with self.__lock.acquire_write():
+            # Deserialize word data
             for word_data in data["words"]:
                 word_type = getattr(WordType, word_data["type"])
                 word = None
@@ -205,15 +231,13 @@ class WordDatabase:
                     word.deserialize(word_data[word_type.name])
                 word.set_custom(custom)
                 self.add_word(word)
+            
+            # Deserialize list of words with download errors
             if "cooljugator" in data:
                 for word_type_name, word_list in data["cooljugator"]["404_words"].items():
                     word_type = getattr(WordType, word_type_name)
                     for name in word_list:
                         self.__note_cooljugator_404_word(word_type=word_type, name=name)
-
-    #--------------------------------------------------------------------------
-    # Private methods
-    #--------------------------------------------------------------------------
 
     def __add_to_dictionary(self, form: AccentedText, word: Word):
         """Add a word form to the lookup dictionary."""

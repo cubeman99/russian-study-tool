@@ -1182,7 +1182,7 @@ cards:
 - {attrs: [pf, verb.suffix.a3], en: 'find oneself, turn out', ru: ока'заться, type: verb}
 - {attrs: [impf, verb.suffix.i], en: 'to become, begin, come', ru: стано'виться, type: verb}
 - {attrs: [pf, verb.suffix.i], en: 'to notice, observe', rel: [[adjective, незамечанный,
-      unnoticed]], ru: заме'тить, type: verb}
+      unnoticed], [noun, стол, table]], ru: заме'тить, type: verb}
 - {attrs: [pf, verb.suffix.i], en: to deliver, ru: доста'вить, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to invite, ru: приглаша'ть, type: verb}
 - {attrs: [pf, verb.suffix.i], en: 'to put, to lay', ru: положи'ть, type: verb}
@@ -3103,8 +3103,8 @@ cards:
 - {en: wherever you are, ru: где бы ты не был, type: phrase}
 - {en: 'really, (suprise, doubt, concern)', ru: ра'зве, type: particle}
 - {en: 'concerning, about', ru: насчёт, type: preposition}
-- {attrs: [m], en: table, rel: [[noun, столовая (комната), dining (room)]], ru: сто'л,
-  type: noun}
+- {attrs: [m], en: table, rel: [[noun, столовая (комната), dining (room)], [verb, заметить,
+      'to notice, observe']], ru: сто'л, type: noun}
 - {attrs: [impf], en: 'to call, beckon; to hand signal', ru: мани'ть, type: verb}
 - {en: It would be great if ..., ru: 'во''т бы [бы''ло хорошо''] ...', type: phrase}
 - {en: wedding (adj.), ru: сва'дебный, type: adjective}
@@ -3665,9 +3665,9 @@ cards:
 - {en: (right) before the fact that ..., rel: [[conjunction, 'прежде, чем ...', before
         ... (implies intent)], [conjunction, до того как ..., before ...; before the
         fact that ...]], ru: пе'ред тем как ..., type: conjunction}
-- {en: before ... (implies intent), rel: [[conjunction, до того как ..., before ...;
-        before the fact that ...], [conjunction, перед тем как ..., (right) before
-        the fact that ...]], ru: 'пре''жде, чем ...', type: conjunction}
+- {en: before ... (implies intent), rel: [[conjunction, перед тем как ..., (right) before
+        the fact that ...], [conjunction, до того как ..., before ...; before the
+        fact that ...]], ru: 'пре''жде, чем ...', type: conjunction}
 - {en: after the fact that ..., ru: по'сле того' как ..., type: conjunction}
 - {en: in view of (the fact that), ru: 'ввиду'' того'', что ...', type: conjunction}
 - {en: in consequence of (the fact that), ru: 'всле''дствие того'', что ...', type: conjunction}

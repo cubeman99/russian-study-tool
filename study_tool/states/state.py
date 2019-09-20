@@ -57,17 +57,22 @@ class State:
         return self.entity_manager.add_entity(entity, pos=pos)
 
     def begin(self):
+        """Called when the state begins."""
         self.app.input.bind(
             pygame.K_z, pressed=lambda: self.buttons[0].action())
         self.app.input.bind(
             pygame.K_x, pressed=lambda: self.buttons[1].action())
         self.app.input.bind(
             pygame.K_c, pressed=lambda: self.buttons[2].action())
+    
+    def on_end(self):
+        """Called when the state ends."""
 
     def process_input(self):
         pass
 
-    def update(self, dt):
+    def update(self, dt: float):
+        """Called when the state is updated."""
         self.entity_manager.update(dt)
     
     def on_key_pressed(self, key, mod, text):

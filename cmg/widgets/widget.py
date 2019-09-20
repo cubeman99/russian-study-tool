@@ -94,6 +94,10 @@ class Widget(LayoutItem):
             self.set_minimum_size(self.layout.calc_minimum_size())
         return self.get_minimum_size()
 
+    def on_close(self):
+        """Called when the widget is closed."""
+        pass
+
     def on_update(self):
         pass
 

@@ -1,3 +1,4 @@
+import threading
 from cmg import widgets
 from cmg.color import Color
 from cmg.event import Event
@@ -51,7 +52,7 @@ class RelatedCardsWidget(widgets.Widget):
         # Connect signals
         self.__box_search.text_edited.connect(self.__on_search_text_changed)
         self.__box_search.return_pressed.connect(self.__on_search_return_pressed)
-        self.__button_apply.clicked.connect(self.save)
+        self.__button_apply.clicked.connect(self.apply)
         self.__button_cancel.clicked.connect(self.__on_click_cancel)
         self.__table_searched_cards.card_button_clicked.connect(self.__on_search_card_clicked)
         self.__table_related_cards.card_button_clicked.connect(self.__on_related_card_clicked)
@@ -79,8 +80,8 @@ class RelatedCardsWidget(widgets.Widget):
             self.add_related_card(card, save=False)
         self.__refresh_search_results()
 
-    def save(self):
-        """Save the card changes."""
+    def apply(self):
+        """Applies the card changes."""
         new_cards = self.__table_related_cards.get_cards()
         old_cards = list(self.__card.get_related_cards())
         touched_cards = set()
@@ -88,29 +89,25 @@ class RelatedCardsWidget(widgets.Widget):
         # Add new related cards
         for new_card in new_cards:
             if new_card not in old_cards:
-                Config.logger.info("Linking related cards '{}' and '{}'"
-                                    .format(repr(self.__card.get_russian()),
-                                            repr(new_card.get_russian())))
-                self.__card.add_related_card(new_card)
-                new_card.add_related_card(self.__card)
+                self.__card_database.link_related_cards(new_card, self.__card)
                 touched_cards.add(self.__card)
                 touched_cards.add(new_card)
 
         # Remove old related cards
         for old_card in old_cards:
             if old_card not in new_cards:
-                Config.logger.info("Unlinking related cards '{}' and '{}'"
-                                    .format(repr(self.__card.get_russian()),
-                                            repr(old_card.get_russian())))
-                self.__card.remove_related_card(old_card)
-                old_card.remove_related_card(self.__card)
+                self.__card_database.unlink_related_cards(old_card, self.__card)
                 touched_cards.add(self.__card)
                 touched_cards.add(old_card)
 
         # Save all card data
         if touched_cards:
-            self.__application.save_card_data()
             self.updated.emit(self.__card)
+            
+    def on_close(self):
+        """Called when the widget is closed."""
+        thread = threading.Thread(target=self.__card_database.save_all_changes)
+        thread.start()
 
     def __on_click_cancel(self):
         """Cancel the card changes."""
@@ -121,12 +118,13 @@ class RelatedCardsWidget(widgets.Widget):
         self.__table_related_cards.add(card)
         self.__refresh_search_results()
         if save:
-            self.save()
+            self.apply()
 
     def remove_related_card(self, card: Card):
         """Remove a related card from the list of related cards."""
         self.__table_related_cards.remove(card)
         self.__refresh_search_results()
+        self.apply()
     
     def __on_search_card_clicked(self, card: Card):
         """Called when a card in the search results is clicked."""

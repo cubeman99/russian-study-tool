@@ -76,9 +76,7 @@ class StudyCardsApp(Application):
         # Load data
         self.load_word_database()
         self.load_card_data()
-        Config.logger.info("Loading card sets from: " + self.cards_path)
-        self.root = self.card_database.load_card_package_directory(
-            path=self.cards_path, name="words")
+        self.card_database.load_card_sets(self.cards_path)
         #self.save_word_database()
         self.load_example_database()
         self.load_study_data()
@@ -124,6 +122,10 @@ class StudyCardsApp(Application):
 
         #self.get_unknown_words_from_examples()
 
+    @property
+    def root(self) -> CardSetPackage:
+        return self.card_database.get_root_package()
+
     def iter_card_sets(self):
         """Iterate all card sets"""
         for card_set in self.root.all_card_sets():
@@ -159,7 +161,6 @@ class StudyCardsApp(Application):
         for word, count in result[:50]:
             print("{} {}".format(count, word))
 
-
     def assimilate_card_set_to_yaml(self, card_set):
         """
         Convert a old-style text based card set file into YAML,
@@ -187,7 +188,7 @@ class StudyCardsApp(Application):
             card_count += file_card_set.get_card_count()
             file_card_set.set_fixed_card_set(False)
         Config.logger.info("Saving new card data")
-        self.save_card_data()
+        self.card_database.save_card_data()
 
         # Replace card set text file with YAML
         for file_card_set in card_sets_in_file:
@@ -206,36 +207,14 @@ class StudyCardsApp(Application):
             card_count, len(card_sets_in_file)))
 
     def save_card_set(self, card_set: CardSet, path=None):
-        """
-        Save a single card set file to YAML.
-        """
-        if path is None:
-            path = card_set.get_file_path()
-            assert path is not None
-        
-        state = card_set.serialize()
-
-        cards_state = state["card_set"]["cards"]
-        del state["card_set"]["cards"]
-        with open(path, "wb") as opened_file:
-            yaml.dump(state, opened_file, encoding="utf8",
-                      allow_unicode=True, default_flow_style=False,
-                      Dumper=yaml.CDumper)
-            opened_file.write(b"  cards:\n")
-            for card_state in cards_state:
-                opened_file.write(b"    - ")
-                yaml.dump(
-                    card_state, opened_file, encoding="utf8",
-                    allow_unicode=True, default_flow_style=True,
-                    Dumper=yaml.CDumper)
-                
-        card_set.set_fixed_card_set(False)
-        card_set.set_file_path(path)
+        """Save a single card set file to YAML."""
+        self.card_database.save_card_set(card_set=card_set, path=path)
 
     def pop_state(self):
         if len(self.states) == 1:
             self.quit()
         else:
+            self.states[-1].on_end()
             del self.states[-1]
 
     def push_state(self, state):
@@ -261,7 +240,7 @@ class StudyCardsApp(Application):
     def get_card_word_details(self, card):
         updated = self.word_database.populate_card_details(card, download=True)
         if updated:
-            Config.logger.info("Saving word database")
+            Config.logger.info("Saving word database due to updates from card '{}'".format(card))
             self.save_word_database()
         return card.word
 
@@ -330,34 +309,11 @@ class StudyCardsApp(Application):
         return self.states[-1]
 
     def save_card_data(self):
-        path = os.path.join(self.root_path, self.card_data_file_name)
-        Config.logger.info("Saving card data to: " + path)
-
-        # Serialize the card data
-        state = self.card_database.serialize_card_data()
-
-        # Verify the serialized data can be deserialized
-        #self.card_database.deserialize_card_data({"cards": state})
-
-        # Save to temp file first
-        temp_path = path + ".temp"
-        with open(temp_path, "wb") as f:
-            f.write(b"cards:\n")
-            for card in state:
-                f.write(b"- ")
-                yaml.dump(card, f, encoding="utf8",
-                          allow_unicode=True, default_flow_style=True,
-                          Dumper=yaml.CDumper)
-        os.remove(path)
-        os.rename(temp_path, path)
+        self.card_database.save_card_data()
 
     def load_card_data(self):
         path = os.path.join(self.root_path, self.card_data_file_name)
-        Config.logger.info("Loading card data from: " + path)
-        with open(path, "r", encoding="utf8") as f:
-            state = yaml.load(f, Loader=yaml.CLoader)
-            Config.logger.info("Deserializing card data from: " + path)
-            self.card_database.deserialize_card_data(state)
+        self.card_database.load_card_data(path)
 
     def save_study_data(self):
         path = os.path.join(self.root_path, self.save_file_name)
