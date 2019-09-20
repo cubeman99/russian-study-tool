@@ -72,6 +72,21 @@ class ExampleDatabase:
     def get_story(self, title: str) -> Story:
         return self.__story_dict.get(title.lower(), None)
 
+    def iter_sentences(self):
+        for story in self.stories:
+            for chapter in story.chapters:
+                for paragraph in chapter.paragraphs:
+                    paragraph = paragraph.text
+                    for sentence in split_sentences(paragraph):
+                        yield sentence
+
+    def iter_example_sentences_2(self, patterns):
+        for sentence in self.iter_sentences():
+            for pattern in patterns:
+                instances = list(pattern.finditer(sentence))
+                if instances:
+                    yield sentence, instances
+
     def iter_example_sentences(self, text):
         if not isinstance(text, list):
             text_list0 = [text]

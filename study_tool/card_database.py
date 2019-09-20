@@ -4,6 +4,7 @@ import re
 import time
 import yaml
 from datetime import datetime
+from cmg.event import Event
 from study_tool.card import Card, CardSide, SourceLocation
 from study_tool.card_set import CardSet, CardSetPackage, CardGroupMetrics, StudySet
 from study_tool.card_attributes import CardAttributes
@@ -51,29 +52,34 @@ class StudyMetrics:
 
 
 class CardDatabase:
+    """
+    Database class to store Cards, CardSets, and CardSetPackages
+    """
     def __init__(self, word_database: WordDatabase):
         self.cards = {}
-        self.metrics_history = {}
         self.word_database = word_database
-        self.word_to_cards_dict = {}
-        self.russian_key_to_card_dict = {}
-        self.english_key_to_card_dict = {}
+        self.__word_to_cards_dict = {}
+        self.__russian_key_to_card_dict = {}
+        self.__english_key_to_card_dict = {}
         self.__path_to_card_sets_dict = {}
 
-    def clear(self):
-        """Clear all cards."""
-        self.cards = {}
-        self.metrics_history = {}
-        self.word_to_cards_dict = {}
-        self.russian_key_to_card_dict = {}
-        self.english_key_to_card_dict = {}
-        self.__path_to_card_sets_dict = {}
+        # Events
+        self.card_created = Event(Card)
+        self.card_deleted = Event(Card)
+        self.card_key_changed = Event(Card)
+        self.card_data_changed = Event(Card)
+        self.card_added_to_set = Event(Card, CardSet)
+        self.card_removed_from_set = Event(Card, CardSet)
 
     def has_card(self, card: Card) -> bool:
         return card in self.cards.values()
 
     def get_card_sets_from_path(self, path: str) -> list:
         return self.__path_to_card_sets_dict.get(path, [])
+
+    def get_card_by_key(self, word_type: WordType, russian: str, english: str):
+        key = (word_type, russian, english)
+        return self.cards.get(key, None)
 
     def get_card(self, word_type: WordType, english=None, russian=None) -> Card:
         """
@@ -84,10 +90,10 @@ class CardDatabase:
             return self.cards.get(key, None)
         if english is not None:
             key = (word_type, AccentedText(english).text.lower())
-            return self.english_key_to_card_dict.get(key, None)
+            return self.__english_key_to_card_dict.get(key, None)
         if russian is not None:
             key = (word_type, AccentedText(russian).text.lower())
-            return self.russian_key_to_card_dict.get(key, None)
+            return self.__russian_key_to_card_dict.get(key, None)
         raise Exception("Missing english or russian argument")
 
     def iter_cards(self, word_type=None, english=None, russian=None):
@@ -115,8 +121,8 @@ class CardDatabase:
     def find_cards_by_word(self, word: str):
         """Find a card by the name of a word."""
         for word_obj in self.word_database.lookup_word(word):
-            if word_obj in self.word_to_cards_dict:
-                for card in self.word_to_cards_dict[word_obj]:
+            if word_obj in self.__word_to_cards_dict:
+                for card in self.__word_to_cards_dict[word_obj]:
                     yield card
 
     def get_study_metrics(self) -> StudyMetrics:
@@ -129,8 +135,26 @@ class CardDatabase:
             metrics.word_type_metrics[word_type] = card_set.get_study_metrics()
         return metrics
 
+    def clear(self):
+        """Clear all cards."""
+        self.cards = {}
+        self.__word_to_cards_dict = {}
+        self.__russian_key_to_card_dict = {}
+        self.__english_key_to_card_dict = {}
+        self.__path_to_card_sets_dict = {}
+
+    def add_card_to_set(self, card: Card, card_set: CardSet):
+        """Adds a card to a card set."""
+        self.card_added_to_set.emit(card, card_set)
+
+    def remove_card_to_set(self, card: Card, card_set: CardSet):
+        """Removes card from a card set."""
+        self.card_removed_from_set.emit(card, card_set)
+
     def add_card(self, card: Card):
-        """Add a new card to the database."""
+        """
+        Adds a new card to the database.
+        """
         word_type = card.get_word_type()
 
         # Get the Word info associated with this card
@@ -142,26 +166,26 @@ class CardDatabase:
         if word is not None and word.complete:
             self.word_database.populate_card_details(card=card)
         if word is not None:
-            if word not in self.word_to_cards_dict:
-                self.word_to_cards_dict[word] = [card]
+            if word not in self.__word_to_cards_dict:
+                self.__word_to_cards_dict[word] = [card]
             else:
-                self.word_to_cards_dict[word].append(card)
+                self.__word_to_cards_dict[word].append(card)
 
         # Register the card's english and russian identifiers
         ru_key = card.get_russian_key()
         en_key = card.get_english_key()
         key = card.get_key()
-        if ru_key in self.russian_key_to_card_dict:
+        if ru_key in self.__russian_key_to_card_dict:
             print(ru_key)
-            print(self.russian_key_to_card_dict[ru_key],
-                  self.russian_key_to_card_dict[ru_key].source)
+            print(self.__russian_key_to_card_dict[ru_key],
+                  self.__russian_key_to_card_dict[ru_key].source)
             print(card)
             raise Exception("Duplicate card russian: {} '{}'".format(
                 word_type.name, card.get_russian().text))
-        if en_key in self.english_key_to_card_dict:
+        if en_key in self.__english_key_to_card_dict:
             print(en_key)
-            print(self.english_key_to_card_dict[en_key],
-                  self.english_key_to_card_dict[en_key].source)
+            print(self.__english_key_to_card_dict[en_key],
+                  self.__english_key_to_card_dict[en_key].source)
             print(card)
             raise Exception("Duplicate card english: {} '{}'".format(
                 word_type.name, card.get_english().text))
@@ -169,27 +193,30 @@ class CardDatabase:
             print(card)
             print(self.cards[key])
             raise Exception("Duplicate card: " + repr(key))
-        self.russian_key_to_card_dict[ru_key] = card
-        self.english_key_to_card_dict[en_key] = card
+        self.__russian_key_to_card_dict[ru_key] = card
+        self.__english_key_to_card_dict[en_key] = card
         self.cards[key] = card
+        self.card_created.emit(card)
        
     def remove_card(self, card: Card):
-        """Remove a card from the card database."""
+        """
+        Remove a card from the card database.
+        """
         # Remove from russian key dict
         found_ru_key = False
-        for key, old_card in self.russian_key_to_card_dict.items():
+        for key, old_card in self.__russian_key_to_card_dict.items():
             if old_card == card:
                 found_ru_key = True
-                del self.russian_key_to_card_dict[key]
+                del self.__russian_key_to_card_dict[key]
                 break
         assert found_ru_key
 
         # Remove from english key dict
         found_en_key = False
-        for key, old_card in self.english_key_to_card_dict.items():
+        for key, old_card in self.__english_key_to_card_dict.items():
             if old_card == card:
                 found_en_key = True
-                del self.english_key_to_card_dict[key]
+                del self.__english_key_to_card_dict[key]
                 break
         assert found_en_key
 
@@ -201,37 +228,42 @@ class CardDatabase:
                 del self.cards[key]
                 break
         assert found_key
-
+        
+        self.card_deleted.emit(card)
 
     def apply_card_key_change(self, card: Card):
-        """Called when a card's key has changed"""
+        """
+        Called when a card's key has changed.
+
+        :param card: The Card with the updated key.
+        """
         new_ru_key = card.get_russian_key()
         new_en_key = card.get_english_key()
         new_key = card.get_key()
 
         # Update russian key dict
         found_ru_key = False
-        for old_ru_key, old_card in self.russian_key_to_card_dict.items():
+        for old_ru_key, old_card in self.__russian_key_to_card_dict.items():
             if old_card == card:
                 found_ru_key = True
                 if old_ru_key != new_ru_key:
                     Config.logger.info("Russian key change: {} -> {}"
                                        .format(old_ru_key, new_ru_key))
-                    del self.russian_key_to_card_dict[old_ru_key]
-                    self.russian_key_to_card_dict[new_ru_key] = card
+                    del self.__russian_key_to_card_dict[old_ru_key]
+                    self.__russian_key_to_card_dict[new_ru_key] = card
                     break
         assert found_ru_key
 
         # Update english key dict
         found_en_key = False
-        for old_en_key, old_card in self.english_key_to_card_dict.items():
+        for old_en_key, old_card in self.__english_key_to_card_dict.items():
             if old_card == card:
                 found_en_key = True
                 if old_en_key != new_en_key:
                     Config.logger.info("English key change: {} -> {}"
                                        .format(old_en_key, new_en_key))
-                    del self.english_key_to_card_dict[old_en_key]
-                    self.english_key_to_card_dict[new_en_key] = card
+                    del self.__english_key_to_card_dict[old_en_key]
+                    self.__english_key_to_card_dict[new_en_key] = card
                     break
         assert found_en_key
 
@@ -248,7 +280,11 @@ class CardDatabase:
                     break
         assert found_key
 
+        self.card_key_changed.emit(card)
+        self.card_data_changed.emit(card)
+
     def serialize_card_data(self) -> dict:
+        """Serialize card data."""
         state = []
         for card in self.iter_cards():
             if card.get_fixed_card_set() is None:
@@ -256,6 +292,7 @@ class CardDatabase:
         return state
 
     def deserialize_card_data(self, state: dict):
+        """Deserialize card data."""
         card_list = []
         for card_state in state["cards"]:
             card = Card()
@@ -279,50 +316,44 @@ class CardDatabase:
                                         str(related_card_key))
                     card.add_related_card(related_card)
                     related_card.add_related_card(card)
+                    
+    def load_card_package_directory(self, path: str, name: str) -> CardSetPackage:
+        package = CardSetPackage(name=name, path=path)
 
-    def serialize_study_data(self) -> dict:
-        state = {"save_time": time.time(), 
-                 "cards": [],
-                 "metrics": []}
-        current_metrics = self.get_study_metrics()
-        self.metrics_history[current_metrics.get_date_string()
-                             ] = current_metrics
-        for date_string, metrics in self.metrics_history.items():
-            state["metrics"].append(metrics.serialize())
+        for filename in os.listdir(path):
+            file_path = os.path.join(path, filename)
 
-        for _, card in self.cards.items():
-            card_state = card.serialize_study_data()
-            card_state["type"] = None if card.word_type is None else card.word_type.name
-            card_state["russian"] = card.russian.text
-            card_state["english"] = card.english.text
-            state["cards"].append(card_state)
-        return state
+            if os.path.isdir(file_path):
+                # Load a new sub-package
+                sub_package = self.load_card_package_directory(
+                    path=file_path, name=str(filename))
+                if sub_package is not None:
+                    sub_package.parent = package
+                    package.packages.append(sub_package)
 
-    def deserialize_study_data(self, state: dict):
-        for card_state in state["cards"]:
-            word_type = card_state["type"]
-            if word_type is not None:
-                word_type = getattr(WordType, word_type)
-            key = (word_type,
-                   AccentedText(card_state["russian"]).text.lower(),
-                   AccentedText(card_state["english"]).text.lower())
-            card = self.cards.get(key, None)
-            if card:
-                card = self.cards[key]
-                card.deserialize_study_data(card_state)
-            else:
-                Config.logger.warning("Card not found: " + repr(key))
-                
-        Config.logger.info("Deserializing study metrics")
-        self.metrics_history = {}
-        for metrics_state in state["metrics"]:
-            metrics = StudyMetrics()
-            metrics.deserialize(metrics_state)
-            self.metrics_history[metrics.get_date_string()] = metrics
-        #current_metrics = self.get_study_metrics()
-        #self.metrics_history[current_metrics.get_date_string()] = current_metrics
+            elif os.path.isfile(file_path):
 
-    def deserialize_card_set(self, state: dict) -> CardSet:
+                if file_path.endswith(".txt"):
+                    # Load legacy card set file
+                    package.card_sets += self.__load_card_set_file(file_path)
+
+                elif file_path.endswith(".yaml"):
+                    # Load new card set file
+                    with open(file_path, "r", encoding="utf8") as f:
+                        state = yaml.load(f, Loader=yaml.CLoader)
+                        if "card_set" in state:
+                            card_set = self.__deserialize_card_set(state)
+                            if card_set:
+                                package.add_card_set(card_set)
+                                self.__add_card_set_path(card_set, path=file_path)
+
+        if len(package.packages) == 0 and len(package.card_sets) == 0:
+            return None
+        package.card_sets.sort(key=lambda x: x.name)
+        package.packages.sort(key=lambda x: x.name)
+        return package
+
+    def __deserialize_card_set(self, state: dict) -> CardSet:
         """Deserialize card set data."""
         state = state["card_set"]
         card_set = CardSet()
@@ -362,37 +393,8 @@ class CardDatabase:
             else:
                 raise Exception(card_state)
         return card_set
-
-    def parse_card_text(self, text, split=False):
-        attributes = []
-        for name in re.findall(r"\@(\S+)", text):
-            attribute = CardAttributes(name)
-            try:
-                attributes.append(attribute)
-            except:
-                raise Exception("unknown card attribute '{}'".format(name))
-        text = re.sub(r"\@\S+", "", text).strip()
-        if split:
-            text = [AccentedText(x.strip()) for x in text.split("/")]
-        else:
-            text = AccentedText(text)
-        return text, attributes
-
-    def preprocess_lines(self, filename, lines):
-        for line_index, line in enumerate(lines):
-            if line.startswith("@googledoc"):
-                # Include text from a Google Doc
-                tokens = line.strip().split()
-                document_id = tokens[1]
-                Config.logger.info("Loading googledoc: " + document_id)
-                document = googledocs.get_document(document_id)
-                title = "googledoc[" + document["title"] + "]"
-                for line in self.preprocess_lines(title, iter(document["text"].splitlines())):
-                    yield line
-            else:
-                yield filename, line_index + 1, line
-
-    def load_card_set_file(self, path):
+    
+    def __load_card_set_file(self, path):
         card_set = None
         card_sets = []
         left_side = CardSide.Russian
@@ -414,7 +416,7 @@ class CardDatabase:
             split_attributes = None
             card = None
             try:
-                for filename, line_number, line in self.preprocess_lines(path, f):
+                for filename, line_number, line in self.__preprocess_lines(path, f):
                     line = line.strip()
                     if line.startswith("@"):
                         command = line.split()[0][1:]
@@ -452,9 +454,9 @@ class CardDatabase:
                                           for t in line.split(delimeter)]
                                 break
                         if len(tokens) == 2:
-                            text_l_list, attributes_l = self.parse_card_text(
+                            text_l_list, attributes_l = self.__parse_card_text(
                                 tokens[0], split=True)
-                            text_r, attributes_r = self.parse_card_text(
+                            text_r, attributes_r = self.__parse_card_text(
                                 tokens[1])
                             if len(text_l_list) > 1:
                                 if split_attributes is None:
@@ -488,42 +490,35 @@ class CardDatabase:
                 raise
                 exit(1)
         return sorted(card_sets, key=lambda x: x.name)
+    
+    def __parse_card_text(self, text, split=False):
+        attributes = []
+        for name in re.findall(r"\@(\S+)", text):
+            attribute = CardAttributes(name)
+            try:
+                attributes.append(attribute)
+            except:
+                raise Exception("unknown card attribute '{}'".format(name))
+        text = re.sub(r"\@\S+", "", text).strip()
+        if split:
+            text = [AccentedText(x.strip()) for x in text.split("/")]
+        else:
+            text = AccentedText(text)
+        return text, attributes
 
-    def load_card_package_directory(self, path: str, name: str) -> CardSetPackage:
-        package = CardSetPackage(name=name, path=path)
-
-        for filename in os.listdir(path):
-            file_path = os.path.join(path, filename)
-
-            if os.path.isdir(file_path):
-                # Load a new sub-package
-                sub_package = self.load_card_package_directory(
-                    path=file_path, name=str(filename))
-                if sub_package is not None:
-                    sub_package.parent = package
-                    package.packages.append(sub_package)
-
-            elif os.path.isfile(file_path):
-
-                if file_path.endswith(".txt"):
-                    # Load legacy card set file
-                    package.card_sets += self.load_card_set_file(file_path)
-
-                elif file_path.endswith(".yaml"):
-                    # Load new card set file
-                    with open(file_path, "r", encoding="utf8") as f:
-                        state = yaml.load(f, Loader=yaml.CLoader)
-                        if "card_set" in state:
-                            card_set = self.deserialize_card_set(state)
-                            if card_set:
-                                package.add_card_set(card_set)
-                                self.__add_card_set_path(card_set, path=file_path)
-
-        if len(package.packages) == 0 and len(package.card_sets) == 0:
-            return None
-        package.card_sets.sort(key=lambda x: x.name)
-        package.packages.sort(key=lambda x: x.name)
-        return package
+    def __preprocess_lines(self, filename, lines):
+        for line_index, line in enumerate(lines):
+            if line.startswith("@googledoc"):
+                # Include text from a Google Doc
+                tokens = line.strip().split()
+                document_id = tokens[1]
+                Config.logger.info("Loading googledoc: " + document_id)
+                document = googledocs.get_document(document_id)
+                title = "googledoc[" + document["title"] + "]"
+                for line in self.__preprocess_lines(title, iter(document["text"].splitlines())):
+                    yield line
+            else:
+                yield filename, line_index + 1, line
 
     def remove_card_set_path(self, path: str):
         """

@@ -67,27 +67,20 @@ class StudyCardsApp(Application):
         self.custom_word_data_file_name = "custom_words.yaml"
         self.example_data_file_name = "examples.json"
 
-        # Load word data
+        # Create databases
         self.word_database = WordDatabase()
-        self.load_word_database()
-
-        # Load card data
         self.card_database = CardDatabase(word_database=self.word_database)
+        self.study_database = StudyDatabase(card_database=self.card_database)
+        self.example_database = ExampleDatabase()
+
+        # Load data
+        self.load_word_database()
         self.load_card_data()
-        
-        # Load card sets
         Config.logger.info("Loading card sets from: " + self.cards_path)
         self.root = self.card_database.load_card_package_directory(
             path=self.cards_path, name="words")
         #self.save_word_database()
-
-        # Load example data
-        self.example_database = ExampleDatabase()
         self.load_example_database()
-        # self.save_example_database()
-
-        # Load study data
-        self.study_database = StudyDatabase()
         self.load_study_data()
 
         Config.logger.info("Initialization complete!")
@@ -118,7 +111,7 @@ class StudyCardsApp(Application):
         #self.push_state(GUIState(widget=RelatedCardsWidget(test_card, self), title="Edit Related Cards"))
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
         #self.push_study_state(test_set, StudyParams(random_side=True))
-        self.push_state(GUIState(widget=QueryWidget(self), title="Study Query"))
+        #self.push_state(GUIState(widget=QueryWidget(self), title="Study Query"))
 
         #self.save_card_set(self.root["nouns"]["house"])
 

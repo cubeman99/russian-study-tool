@@ -4,8 +4,7 @@ from study_tool.russian.word import *
 from study_tool.word_database import *
 
 VERB_CLASSIFICATIONS = {
-VerbSuffix.Ai: [
-  "бегать",
+VerbSuffix.Ai: ["бегать",
   "объяснять",
   "вспоминать",
   "опаздывать",
@@ -40,8 +39,7 @@ VerbSuffix.Ai: [
   "получать",
   "рассказывать"],
 
-VerbSuffix.Ei: [
-  "бедне´ть",
+VerbSuffix.Ei: ["бедне´ть",
   "неме´ть",
   "беле´ть",
   "полне´ть",
@@ -71,8 +69,7 @@ VerbSuffix.Ei: [
   "ясне´ть",
   "лысе´ть"],
 
-VerbSuffix.Ova: [
-  "рискова'ть",
+VerbSuffix.Ova: ["рискова'ть",
   "анализи´ровать",
   "копи´ровать",
   "арестова´ть",
@@ -107,8 +104,7 @@ VerbSuffix.Ova: [
   "экспорти´ровать",
   "сове'товать"],
 
-VerbSuffix.Nu: [
-  "верну´ться",
+VerbSuffix.Nu: ["верну´ться",
   "ло´пнуть",
   "взгляну´ть",
   "отдохну´ть",
@@ -129,8 +125,7 @@ VerbSuffix.Nu: [
   "тяну´ть",
   "помяну´ть"],
 
-VerbSuffix.Nu2: [
-  "блёкнуть",
+VerbSuffix.Nu2: ["блёкнуть",
   "кре´пнуть",
   "га´снуть",
   "мёрзнуть",
@@ -145,8 +140,8 @@ VerbSuffix.Nu2: [
   "ки´снуть",
   "со´хнуть"],
  
-VerbSuffix.A1: [
-  # (a) those that are preceded by a vocalic root and whose root-final consonant
+VerbSuffix.A1: [# (a) those that are preceded by a vocalic root and whose root-final
+  # consonant
   #     alternates (пис-/пиш-/писа´ть",
   "писа´ть",
   "маха´ть",
@@ -161,8 +156,7 @@ VerbSuffix.A1: [
   "колеба´ть",
   "дрема´ть"],
  
-VerbSuffix.A2: [
-  # (b) those with a vocalic root ending in й, and so the suffix is spelled
+VerbSuffix.A2: [# (b) those with a vocalic root ending in й, and so the suffix is spelled
   #     я (й 1 а) (надея-ся/наде´яться",
   "се´ять",
   "наде´яться",
@@ -170,8 +164,7 @@ VerbSuffix.A2: [
   "ла´ять",
   "та´ять"],
  
-VerbSuffix.A3: [
-  # (c) those that are preceded by a nonvocalic root (жд-/жда´ть",
+VerbSuffix.A3: [# (c) those that are preceded by a nonvocalic root (жд-/жда´ть",
   "вра´ть",
   "жда´ть",
   "жра´ть",
@@ -183,8 +176,7 @@ VerbSuffix.A3: [
   "дра´ть",
   "зва´ть"],
 
-VerbSuffix.Avai: [
-  # (a) Verbs with the root -да
+VerbSuffix.Avai: [# (a) Verbs with the root -да
   "отдава´ть",
   "преподава´ть",
   "передава´ть",
@@ -202,15 +194,14 @@ VerbSuffix.Avai: [
   "перестава´ть",
   "устава´ть"],
 
-VerbSuffix.O: [
-  "боро´ться",
+VerbSuffix.O: ["боро´ться",
   "коло´ть",
   "моло´ть",
   "поло´ть",
   "поро´ть"],
 
-VerbSuffix.I: [
-  # Yes consonant mutation  "ходи´ть",
+VerbSuffix.I: [# Yes consonant mutation
+  "ходи´ть",
   "вози´ть",
   "носи´ть",
   "плати´ть",
@@ -229,8 +220,7 @@ VerbSuffix.I: [
   "учи´ть",
   "хвали´ть"],
 
-VerbSuffix.E: [
-  # Yes consonant mutation
+VerbSuffix.E: [# Yes consonant mutation
   "ви´деть",
   "висе´ть",
   "зави´сеть",
@@ -244,8 +234,7 @@ VerbSuffix.E: [
   "горе´ть",
   "смотре´ть"],
 
-VerbSuffix.Zha: [
-  "боя´ться",
+VerbSuffix.Zha: ["боя´ться",
   "держа´ть",
   "дрожа´ть",
   "дыша´ть",
@@ -257,25 +246,54 @@ VerbSuffix.Zha: [
   "стуча´ть"],
 }
 
-def test_verb_classification():
-  root_path = "data"
-  word_data_file_name = "word_data.json"
+#def test_verb_classification():
+#  root_path = "data"
+#  word_data_file_name = "word_data.json"
+#
+#  wd = WordDatabase()
+#  path = os.path.join(root_path, word_data_file_name)
+#  wd.load(path)
+#
+#  for expected_suffix, verbs in VERB_CLASSIFICATIONS.items():
+#    print(expected_suffix)
+#    for verb in verbs:
+#      verb = AccentedText(verb)
+#      if verb.text in wd.words:
+#        actual_suffix = wd[verb].classify_conjugation()
+#        if actual_suffix != expected_suffix:
+#          print("  " + verb)
+#        expect_eq(actual=actual_suffix,
+#                  expected=expected_suffix)
+#      else:
+#        verb = wd.add_verb(verb)
+#        if verb is not None:
+#             wd.save(path)
 
-  wd = WordDatabase()
-  path = os.path.join(root_path, word_data_file_name)
-  wd.load(path)
+from study_tool.russian.word import WordPattern
 
-  for expected_suffix, verbs in VERB_CLASSIFICATIONS.items():
-    print(expected_suffix)
-    for verb in verbs:
-      verb = AccentedText(verb)
-      if verb.text in wd.words:
-        actual_suffix = wd[verb].classify_conjugation()
-        if actual_suffix != expected_suffix:
-          print("  " + verb)
-        expect_eq(actual=actual_suffix,
-                  expected=expected_suffix)
-      else:
-        verb = wd.add_verb(verb)
-        if verb is not None:
-          wd.save(path)
+
+def test_word_match():
+    pattern = WordPattern("до того как")
+    assert pattern.match("до того как")
+    assert pattern.match("я до того, как он")
+    assert not pattern.match("до того кака")
+    assert not pattern.match("пдо того как")
+    
+    pattern = WordPattern("до (сих|тех) пор")
+    assert pattern.match("до сих пор")
+    assert pattern.match("до тех, пор")
+    assert pattern.match("до тех пор пора")
+    assert not pattern.match("до сихх пор")
+    assert not pattern.match("до сихтех пор")
+    
+    pattern = WordPattern("все")
+    assert pattern.match("все")
+    assert pattern.match("всё")
+    assert not pattern.match("всн")
+    pattern = WordPattern("всё")
+    assert pattern.match("все")
+    assert pattern.match("всё")
+    assert not pattern.match("всн")
+
+if __name__ == "__main__":
+    test_word_match()

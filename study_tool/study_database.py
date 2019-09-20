@@ -2,8 +2,9 @@ import os
 import threading
 import time
 import yaml
-from cmg.utilities.read_write_lock import ReadWriteLock
 from datetime import datetime
+from cmg.event import Event
+from cmg.utilities.read_write_lock import ReadWriteLock
 from study_tool.card import Card
 from study_tool.card_attributes import CardAttributes
 from study_tool.config import Config
@@ -111,7 +112,7 @@ class CardStudyData:
         return self.last_encounter_time
         
     def get_proficiency_score(self) -> float:
-        """Get the key proficiency score."""
+        """Get the card's proficiency score."""
         return max(0.0, float(self.proficiency_level - 1) /
                    (Config.proficiency_levels - 1))
 
@@ -162,27 +163,44 @@ class CardStudyData:
 
 
 class StudyDatabase:
+    """
+    Database class to store study data for Cards, and overall study metrics
+    """
 
-    def __init__(self):
+    def __init__(self, card_database):
+        """
+        Creates an empty database.
+        """
+        self.__card_database = card_database
         self.__metrics_history = {}
         self.__study_data_dict = {}
         self.__lock = ReadWriteLock()
+        self.__dirty = False
+
+        # Events
+        self.card_study_data_changed = Event(Card, CardStudyData)
+
+        # Connect
+        self.__card_database.card_key_changed.connect(self.__on_card_key_changed)
+
+    def is_data_modified(self) -> bool:
+        """Returns True if the data has been modified since the last load/save."""
+        return self.__dirty
 
     def get_card_study_data(self, card: Card) -> CardStudyData:
         """Get or create the study data for a card."""
-        key = card.get_key()
         with self.__lock.acquire_read():
-            if key in self.__study_data_dict:
-                return self.__study_data_dict[key]
-            return self.create_card_study_data(card)
+            if card in self.__study_data_dict:
+                return self.__study_data_dict[card]
+        return self.create_card_study_data(card)
     
     def get_study_metrics(self) -> StudyMetrics:
         """Get study metrics for all cards."""
         metrics = StudyMetrics()
         with self.__lock.acquire_read():
-            for key, data in self.__study_data_dict.items():
+            for card, data in self.__study_data_dict.items():
                 history_score = data.get_history_score()
-                word_type = key[0]
+                word_type = card.get_word_type()
                 m = metrics.word_type_metrics[word_type]
                 m.proficiency_counts[data.get_proficiency_level()] += 1
                 m.history_score += history_score
@@ -219,25 +237,18 @@ class StudyDatabase:
             else:
                 study_data.proficiency_level = max(
                     1, study_data.proficiency_level - 1)
+            self.__dirty = True
+
+        self.card_study_data_changed.emit(card, study_data)
 
     def create_card_study_data(self, card: Card) -> CardStudyData:
         """Create study data for a card."""
-        key = card.get_key()
         study_data = CardStudyData()
         with self.__lock.acquire_write():
-            assert key not in self.__study_data_dict
-            self.__study_data_dict[key] = study_data
+            assert card not in self.__study_data_dict
+            self.__study_data_dict[card] = study_data
             card.set_study_data(study_data)
             return study_data
-
-    def apply_key_change(self, old_key, new_key):
-        """Apply a change in card keys to the database."""
-        with self.__lock.acquire_write():
-            assert new_key not in self.__study_data_dict
-            if old_key in self.__study_data_dict:
-                item = self.__study_data_dict[old_key]
-                del self.__study_data_dict[old_key]
-                self.__study_data_dict[new_key] = item
 
     def clear(self):
         """Clears all study data."""
@@ -283,6 +294,7 @@ class StudyDatabase:
             if os.path.isfile(path):
                 os.remove(path)
             os.rename(temp_path, path)
+            self.__dirty = False
 
     def load(self, path: str, card_database):
         """Load the study data from file."""
@@ -292,10 +304,16 @@ class StudyDatabase:
                 state = yaml.load(f, Loader=yaml.CLoader)
                 Config.logger.info("Deserializing study data from: " + path)
                 self.__deserialize(state, card_database)
+            self.__dirty = False
                 
     def __update_current_metrics(self):
         current_metrics = self.get_study_metrics()
         self.__metrics_history[current_metrics.get_date_string()] = current_metrics
+
+    def __on_card_key_changed(self, *args, **kwargs):
+        """Called after a card's key changes."""
+        with self.__lock.acquire_write():
+            self.__dirty = True
 
     def __serialize(self) -> dict:
         """Serialize the study data into a dictionary."""
@@ -310,8 +328,9 @@ class StudyDatabase:
 
         # Serialize card study data
         items = list(self.__study_data_dict.items())
-        items.sort(key=lambda x: x[0])
-        for key, card_study_data in items:
+        items.sort(key=lambda item: item[0].get_key())
+        for card, card_study_data in items:
+            key = card.get_key()
             card_state = [key[0].name.lower(), key[1], key[2]]
             card_state += card_study_data.serialize()
             state["cards"].append(card_state)
@@ -333,10 +352,12 @@ class StudyDatabase:
         for card_state in state["cards"]:
             word_type = parse_word_type(card_state[0])
             key = (word_type, card_state[1], card_state[2])
+            card = self.__card_database.get_card_by_key(*key)
+            if card is None:
+                Config.logger.error("Study data: Error finding card with key: " + str(key))
+                continue
             card_study_data = CardStudyData()
             card_study_data.deserialize(card_state[3:])
-            self.__study_data_dict[key] = card_study_data
-            card = card_database.get_card(*key)
-            if card:
-                card.set_study_data(study_data)
+            self.__study_data_dict[card] = card_study_data
+            card.set_study_data(card_study_data)
 

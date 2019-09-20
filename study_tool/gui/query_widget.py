@@ -31,11 +31,15 @@ class QueryWidget(widgets.Widget):
     Widget for editing a study query.
     """
 
-    def __init__(self, application):
+    def __init__(self, application, cards_source=None):
         super().__init__()
         self.__application = application
+        if cards_source:
+            self.__cards_source = cards_source
+        else:
+            self.__cards_source = list(application.card_database.cards.values())
         self.__card_database = application.card_database
-        self.__study_database = application.card_database
+        self.__study_database = application.study_database
         self.__cards = []
         self.__study_params = None
 
@@ -116,14 +120,13 @@ class QueryWidget(widgets.Widget):
            cards = []
         else:
             # Query the cards
-            temp = query.max_count
-            query.max_count = None
-            cards = list(self.__application.query_cards(query))
-            query.max_count = temp
+            cards = []
+            for card in self.__cards_source:
+                study_data = self.__study_database.get_card_study_data(card)
+                if query.matches(card, study_data):
+                    cards.append((card, study_data))
 
         # Sort the list
-        cards = [(card, self.__application.study_database.get_card_study_data(card)) for card in cards]
-
         sort_method = self.__combo_sort.get_text()
         if sort_method == SortMethod.RANDOM:
             random.shuffle(cards)
@@ -157,7 +160,7 @@ class QueryWidget(widgets.Widget):
             row = self.__table_cards.add(card, enabled=True)
             color = Config.proficiency_level_colors[study_data.get_proficiency_level()]
             row.set_color(color)
-        cards = [card for cards, _ in cards]
+        cards = [card for card, _ in cards]
 
         self.__cards = cards
         self.__button_begin.set_enabled(len(cards) > 0 and self.__study_params)

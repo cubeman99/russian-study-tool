@@ -9,3 +9,5 @@ card_set:
     - [verb, уметь, to know how]
     - [verb, заметить, 'to notice, observe']
     - [verb, замечать, to notice]
+    - [conjunction, 'прежде, чем ...', before ... (implies intent)]
+    - [conjunction, до того как ..., before ...; before the fact that ...]

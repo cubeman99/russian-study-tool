@@ -96,6 +96,9 @@ class StudySet:
                                if len(c.history) < 5
                                or c.get_history_score() < 0.9])
 
+    def __repr__(self):
+        return "StudySet<{} cards>".format(len(self.cards))
+
 
 class CardSet(StudySet):
     def __init__(self, cards=(), fixed_card_set=False):
@@ -144,6 +147,9 @@ class CardSet(StudySet):
                  card.get_english().text])
         return {"card_set": state}
 
+    def __repr__(self):
+        return "CardSet(\"{}\")".format(self.get_name())
+
             
 
 
@@ -180,3 +186,6 @@ class CardSetPackage(StudySet):
             if card_set.key == name:
                 return card_set
         raise KeyError(name)
+
+    def __repr__(self):
+        return "CardSetPackage(\"{}\")".format(self.get_name())

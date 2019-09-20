@@ -4,6 +4,7 @@ import time
 from study_tool.config import Config
 from study_tool.russian.word import *
 from study_tool.russian.word import WordType
+from study_tool.russian.word import WordPattern
 from study_tool.card_attributes import CardAttributes, ENGLISH_SIDE_CARD_ATTRIBUTES
 
 
@@ -60,6 +61,7 @@ class Card:
         self.related_cards = []
         self.source = None
         self.__fixed_card_set = None
+        self.__word_patterns = []
 
         self.word = None
         self.__study_data = None
@@ -74,24 +76,11 @@ class Card:
     def get_study_data(self):
         return self.__study_data
 
-    def set_study_data(self, study_data):
-        self.__study_data = study_data
+    def get_word_patterns(self) -> list:
+        return self.__word_patterns
 
     def get_fixed_card_set(self):
         return self.__fixed_card_set
-
-    def is_in_fixed_card_set(self) -> bool:
-        return self.__fixed_card_set is not None
-
-    def set_fixed_card_set(self, card_set):
-        self.__fixed_card_set = card_set
-
-    def generate_word_name(self):
-        """Generate the lits of word names from the card text."""
-        self.word_name = AccentedText(self.russian)
-        word_tokens = list(split_words(self.russian.text))
-        if len(word_tokens) > 0:
-            self.word_name = AccentedText(word_tokens[0][0])
 
     def get_word_names(self):
         """Get the list of word names associated with this card."""
@@ -100,13 +89,38 @@ class Card:
 
     def get_key(self) -> tuple:
         """Get the key that identifies this card."""
-        return (self.word_type, self.russian.text.lower(), self.english.text.lower())
+        return (self.word_type,
+                self.russian.text.lower(),
+                self.english.text.lower())
 
     def get_english_key(self) -> tuple:
-        return (self.word_type, self.english.text.lower(), ",".join(sorted([x.value for x in self.get_attributes() if x in ENGLISH_SIDE_CARD_ATTRIBUTES])))
+        return (self.word_type, self.english.text.lower(),
+                ",".join(sorted([x.value for x in self.get_attributes() if x in ENGLISH_SIDE_CARD_ATTRIBUTES])))
 
     def get_russian_key(self) -> tuple:
-        return (self.word_type, self.russian.text.lower(), ",".join(sorted([x.value for x in self.get_attributes()])))
+        return (self.word_type, self.russian.text.lower(),
+                ",".join(sorted([x.value for x in self.get_attributes()])))
+
+    def is_in_fixed_card_set(self) -> bool:
+        return self.__fixed_card_set is not None
+
+    def set_fixed_card_set(self, card_set):
+        self.__fixed_card_set = card_set
+
+    def set_study_data(self, study_data):
+        self.__study_data = study_data
+
+    def generate_word_name(self):
+        """Generate the lits of word names from the card text."""
+        self.word_name = AccentedText(self.russian)
+        word_tokens = list(split_words(self.russian.text))
+        if len(word_tokens) > 0:
+            self.word_name = AccentedText(word_tokens[0][0])
+        self.__word_patterns = []
+        for text in self.russian.text.split(";"):
+            tokens = list(x for x, _ in split_words(self.russian.text))
+            pattern = WordPattern(tokens)
+            self.__word_patterns.append(pattern)
     
     def clear_attributes(self):
         """Clear all card attributes."""

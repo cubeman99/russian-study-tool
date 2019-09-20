@@ -3,6 +3,7 @@ import os
 import pygame
 import random
 import time
+import threading
 import cmg
 from cmg import math
 from cmg.application import *
@@ -18,15 +19,22 @@ from study_tool.states.study_state import StudyParams
 from study_tool.states.sub_menu_state import SubMenuState
 from study_tool.scheduler import ScheduleMode
 from study_tool.entities.study_proficiency_bar import StudyProficiencyBar
+from study_tool.gui.query_widget import QueryWidget
+from study_tool.states.gui_state import GUIState
 
 
 class MenuState(State):
+    """
+    Menu state for browsing card sets and packages.
+    """
     def __init__(self, package: CardSetPackage):
         super().__init__()
         self.package = package
+
         self.buttons[0] = Button("Up")
-        self.buttons[1] = Button("Select", self.select)
+        self.buttons[1] = Button("Select", self.__select)
         self.buttons[2] = Button("Down")
+
         self.title = None
         self.top_level = package.parent == None
         self.title_font = pygame.font.Font(None, 50)
@@ -35,9 +43,11 @@ class MenuState(State):
         self.option_margin = 48
         self.option_border_thickness = 4
         self.menu = None
+
         self.__metrics = None
-        self.__dirty_metrics = True
         self.__bars = []
+        self.__dirty_metrics_set = set()
+        self.__lock_dirty = threading.Lock()
 
     def begin(self):
         self.__bars = []
@@ -48,8 +58,8 @@ class MenuState(State):
         viewport = pygame.Rect(0, self.margin_top, screen_width,
                                screen_height - self.margin_top - self.margin_bottom)
         
-        self.__dirty_metrics = False
         self.__metrics = self.app.study_database.get_group_study_metrics(self.package)
+        self.__dirty_metrics_set = set()
 
         # Create menu options
         self.menu = Menu(options=[], viewport=viewport)
@@ -59,7 +69,7 @@ class MenuState(State):
         if self.top_level:
             self.menu.options.append(("Quit", self.app.pop_state))
             self.menu.options.append(("Card Editor", self.__open_card_editor))
-            self.menu.options.append(("Story Mode", self.open_study_mode))
+            self.menu.options.append(("Story Mode", self.__open_study_mode))
         else:
             self.menu.options.append(("Back", self.app.pop_state))
         for package in self.package.packages:
@@ -91,83 +101,25 @@ class MenuState(State):
         self.__bars.append(bar)
         self.entity_manager.add_entity(bar)
 
-    def open_study_mode(self):
-        self.app.push_state(ReadTextState())
-
-    def __open_card_editor(self):
-        self.app.push_card_edit_state(
-            Card(),
-            close_on_apply=False,
-            allow_card_change=True)
-
-    def open_set(self, card_set):
-        options = [
-            ("Quiz Random Sides",
-             lambda: self.app.push_study_state(
-                 card_set=card_set,
-                 params=StudyParams(random_side=True))),
-            ("Quiz Random Forms",
-                lambda: self.app.push_study_state(
-                    card_set=card_set,
-                    params=StudyParams(random_side=True,
-                                       random_form=True))),
-            ("Quiz English",
-                lambda: self.app.push_study_state(
-                    card_set=card_set,
-                    params=StudyParams(shown_side=CardSide.English))),
-            ("Quiz Russian",
-                lambda: self.app.push_study_state(
-                    card_set=card_set,
-                    params=StudyParams(shown_side=CardSide.Russian))),
-            ("Quiz New Cards",
-                lambda: self.app.push_study_state(
-                    card_set=card_set,
-                    params=StudyParams(random_side=True,
-                                       mode=ScheduleMode.NewOnly))),
-            ("Quiz Problem Cards",
-                lambda: self.app.push_study_state(
-                    card_set=card_set.get_problem_cards(),
-                    params=StudyParams(random_side=True))),
-            ("List", lambda: self.app.push_card_list_state(card_set)),
-            ("Edit", lambda: self.app.push_card_set_edit_state(card_set))]
-        if isinstance(card_set, CardSet) and card_set.is_fixed_card_set():
-            old_file_path = card_set.get_file_path()
-            card_sets_in_file = self.app.card_database.get_card_sets_from_path(old_file_path)
-            if len(card_sets_in_file) > 1:
-                text = "Assimilate {} sets to YAML".format(len(card_sets_in_file))
-            else:
-                text = "Assimilate to YAML"
-            options.append((text, lambda: self.app.assimilate_card_set_to_yaml(card_set)))
-
-        options += [("Cancel", None)]
-        self.app.push_state(SubMenuState(card_set.name, options))
-
-    def mark_dirty_metrics(self):
-        self.__dirty_metrics = True
-
-    def select(self):
-        values = self.menu.selected_option()
-        option = values[0]
-        action = values[1]
-        if isinstance(action, CardSetPackage):
-            if action == self.package:
-                self.open_set(action)
-            else:
-                self.app.push_state(MenuState(action))
-        elif isinstance(action, CardSet):
-            self.open_set(action)
-        else:
-            action()
+        # Connect signals
+        self.app.study_database.card_study_data_changed.connect(
+            self.__on_card_study_data_changed)
+        self.app.card_database.card_added_to_set.connect(
+            self.__on_card_added_or_removed_to_set)
+        self.app.card_database.card_removed_from_set.connect(
+            self.__on_card_added_or_removed_to_set)
 
     def update(self, dt):
         State.update(self, dt)
 
-        if self.__dirty_metrics:
-            self.__metrics = self.app.study_database.get_group_study_metrics(self.package)
-            for bar in self.__bars:
+        # Recalculate metrics
+        with self.__lock_dirty:
+            for bar in self.__dirty_metrics_set:
                 bar.recalculate()
-            self.__dirty_metrics = False
-
+                if bar.study_set == self.package:
+                    self.__metrics = self.app.study_database.get_group_study_metrics(self.package)
+            self.__dirty_metrics_set.clear()
+            
     def draw_menu_option_text(self, g, option, rect, highlighted):
         name = option[0]
         value = option[1]
@@ -219,4 +171,86 @@ class MenuState(State):
                     font=self.title_font,
                     color=Config.title_color,
                     align=Align.Centered)
-      
+
+    def __open_study_mode(self):
+        self.app.push_state(ReadTextState())
+
+    def __open_set(self, card_set):
+        options = [
+            ("Quiz Random Sides",
+             lambda: self.app.push_study_state(
+                 card_set=card_set,
+                 params=StudyParams(random_side=True))),
+            ("Quiz Random Forms",
+                lambda: self.app.push_study_state(
+                    card_set=card_set,
+                    params=StudyParams(random_side=True,
+                                       random_form=True))),
+            ("Quiz English",
+                lambda: self.app.push_study_state(
+                    card_set=card_set,
+                    params=StudyParams(shown_side=CardSide.English))),
+            ("Quiz Russian",
+                lambda: self.app.push_study_state(
+                    card_set=card_set,
+                    params=StudyParams(shown_side=CardSide.Russian))),
+            ("Quiz New Cards",
+                lambda: self.app.push_study_state(
+                    card_set=card_set,
+                    params=StudyParams(random_side=True,
+                                       mode=ScheduleMode.NewOnly))),
+            ("Quiz Problem Cards",
+                lambda: self.app.push_study_state(
+                    card_set=card_set.get_problem_cards(),
+                    params=StudyParams(random_side=True))),
+            ("Query",
+                lambda: self.app.push_state(GUIState(
+                    widget=QueryWidget(self.app, card_set.cards), title="Study Query"))),
+            ("List", lambda: self.app.push_card_list_state(card_set)),
+            ("Edit", lambda: self.app.push_card_set_edit_state(card_set))]
+        if isinstance(card_set, CardSet) and card_set.is_fixed_card_set():
+            old_file_path = card_set.get_file_path()
+            card_sets_in_file = self.app.card_database.get_card_sets_from_path(old_file_path)
+            if len(card_sets_in_file) > 1:
+                text = "Assimilate {} sets to YAML".format(len(card_sets_in_file))
+            else:
+                text = "Assimilate to YAML"
+            options.append((text, lambda: self.app.assimilate_card_set_to_yaml(card_set)))
+
+        options += [("Cancel", None)]
+        self.app.push_state(SubMenuState(card_set.name, options))
+
+    def __select(self):
+        values = self.menu.selected_option()
+        option = values[0]
+        action = values[1]
+        if isinstance(action, CardSetPackage):
+            if action == self.package:
+                self.__open_set(action)
+            else:
+                self.app.push_state(MenuState(action))
+        elif isinstance(action, CardSet):
+            self.__open_set(action)
+        else:
+            action()
+
+    def __open_card_editor(self):
+        self.app.push_card_edit_state(
+            Card(),
+            close_on_apply=False,
+            allow_card_change=True)
+
+    def __on_card_study_data_changed(self, card, card_study_data):
+        """Called when a card's study data changes."""
+        for bar in self.__bars:
+            if bar.study_set.has_card(card):
+                with self.__lock_dirty:
+                    self.__dirty_metrics_set.add(bar)
+
+    def __on_card_added_or_removed_to_set(self, card, card_set):
+        """Called when a card is added to a card set."""
+        for bar in self.__bars:
+            if bar.study_set == card_set:
+                with self.__lock_dirty:
+                    self.__dirty_metrics_set.add(bar)
+

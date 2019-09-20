@@ -1,4 +1,5 @@
 import threading
+import traceback
 
 
 class CallOnExit:
@@ -20,9 +21,10 @@ class ReadWriteLock:
     only one "write lock."
     """
 
-    def __init__(self):
+    def __init__(self, verbose=False):
         self.__read_ready = threading.Condition(threading.RLock())
         self.__readers = 0
+        self.__verbose = verbose
 
     def acquire_read(self):
         """
@@ -33,6 +35,8 @@ class ReadWriteLock:
         try:
             self.__readers += 1
         finally:
+            if self.__verbose:
+                print("ACQUIRED READER: " + str(self.__readers))
             self.__read_ready.release()
         return CallOnExit(self.release_read)
 
@@ -46,6 +50,8 @@ class ReadWriteLock:
             if not self.__readers:
                 self.__read_ready.notifyAll()
         finally:
+            if self.__verbose:
+                print("RELEASED READER: " + str(self.__readers))
             self.__read_ready.release()
 
     def acquire_write(self):
@@ -54,7 +60,10 @@ class ReadWriteLock:
         acquired read or write locks.
         """
         self.__read_ready.acquire()
+        if self.__verbose:
+            print("ACQUIRED WRITE: " + str(self.__readers))
         while self.__readers > 0:
+            traceback.print_stack()
             self.__read_ready.wait()
         return CallOnExit(self.release_write)
 
@@ -62,4 +71,6 @@ class ReadWriteLock:
         """
         Release a write lock.
         """
+        if self.__verbose:
+            print("RELEASED WRITE: " + str(self.__readers))
         self.__read_ready.release()

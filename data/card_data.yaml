@@ -962,23 +962,11 @@ cards:
 - {en: unless, ru: е'сли … не, type: conjunction}
 - {en: although, ru: хотя', type: conjunction}
 - {en: than, ru: чем, type: conjunction}
-- {en: before, ru: 'до того'' как, пре''жде чем', type: conjunction}
-- {en: (right) before, ru: пе'ред тем как, type: conjunction}
-- {en: after, ru: по'сле того' как, type: conjunction}
 - {en: 'while, whilst', ru: в то вре'мя как, type: conjunction}
-- {en: since, ru: с тех пор как, type: conjunction}
-- {en: 'until, so long as', ru: 'до тех пор, пока'' … не', type: conjunction}
-- {en: despite the fact that, ru: 'несмотря'' на то, что', type: conjunction}
+- {en: since, ru: с тех по'р как, type: conjunction}
 - {en: 'as though, as if', ru: 'как бу''дто, бу''дто бы, как бу''дто бы, сло''вно',
   type: conjunction}
-- {en: 'with the purpose of, so that', ru: 'с тем, что''бы', type: conjunction}
-- {en: 'because, thanks to the fact that', ru: благодаря' тому' что, type: conjunction}
-- {en: 'because, on account of', ru: 'из-за того'', что', type: conjunction}
 - {en: 'as long as, in so far as, since', ru: поско'льку, type: conjunction}
-- {en: in view of (the fact that), ru: 'ввиду'' того'', что', type: conjunction}
-- {en: in consequence of (the fact that), ru: 'всле''дствие того'', что', type: conjunction}
-- {en: 'because of, on the strength of (the fact that)', ru: 'в си''лу того'', что',
-  type: conjunction}
 - {en: excuse me; I'm sorry, rel: [[other, простите, sorry], [phrase, прошу прошения!,
       i beg your pardon! pardon me!]], ru: извини'те, type: other}
 - {en: bye! (informal), ru: пока', type: other}
@@ -2803,7 +2791,7 @@ cards:
 - {en: to close your eyes, ru: прикры'ть глаза', type: phrase}
 - {attrs: [gen], en: from outside, ru: извне', type: preposition}
 - {attrs: [gen], en: outside, ru: вне', type: preposition}
-- {en: unexpectedly, rel: [[verb, ожидать, to expect], [noun, ожидание, expectation]],
+- {en: unexpectedly, rel: [[noun, ожидание, expectation], [verb, ожидать, to expect]],
   ru: неожи'данно, type: adverb}
 - {en: suspiciously, rel: [[verb, подозревать, 'to suspect, surmise']], ru: подозри'тельно,
   type: adverb}
@@ -2822,16 +2810,16 @@ cards:
 - {attrs: [m], en: band of light in unlit space, ru: просве'т, type: noun}
 - {attrs: [n], en: dissapearance, rel: [[verb, исчезнуть, 'to disappear, vanish']],
   ru: исчезнове'ние, type: noun}
-- {attrs: [f], en: the middle, rel: [[adjective, средний, middle], [noun, среда, wednesday]],
-  ru: середи'на, type: noun}
+- {attrs: [f], en: the middle, rel: [[noun, среда, wednesday], [adjective, средний,
+      middle]], ru: середи'на, type: noun}
 - {attrs: [m], en: flight, rel: [[verb, лететь, to fly]], ru: полёт, type: noun}
 - {attrs: [f], en: spark, rel: [[verb, заискрыться, to sparkle]], ru: и'скра, type: noun}
 - {attrs: [m], en: turn, ru: поворо'т, type: noun}
 - {attrs: [m], en: dead end, ru: тупи'к, type: noun}
 - {attrs: [m], en: 'size, dimension', rel: [[noun, размер, size]], ru: габари'т, type: noun}
 - {attrs: [m], en: 'chute, gutter', ru: жёлоб, type: noun}
-- {attrs: [f], en: cover, rel: [[verb, прикрыть, to cover up], [verb, раскрыть, to uncover]],
-  ru: кры'шка, type: noun}
+- {attrs: [f], en: cover, rel: [[verb, раскрыть, to uncover], [verb, прикрыть, to cover
+        up]], ru: кры'шка, type: noun}
 - {attrs: [f], en: splinter, ru: ще'пка, type: noun}
 - {en: sawdust, ru: опи'лки, type: noun}
 - {attrs: [m], en: 'hatch, manhole', ru: лю'к, type: noun}
@@ -2844,8 +2832,8 @@ cards:
   type: noun}
 - {en: ceiling (adj.), ru: потоло'чный, type: noun}
 - {attrs: [n], en: 'pursuit, chase, persecution', ru: пресле'дование, type: noun}
-- {attrs: [n], en: breath, rel: [[verb, дохнуть, to breath], [verb, дышать, to breathe],
-    [noun, вдох, 'breath, inhalation']], ru: дыха'ние, type: noun}
+- {attrs: [n], en: breath, rel: [[verb, дохнуть, to breath], [noun, вдох, 'breath, inhalation'],
+    [verb, дышать, to breathe]], ru: дыха'ние, type: noun}
 - {attrs: [impf, verb.suffix.ai], en: to curse, ru: проклина'ть, type: verb}
 - {attrs: [pf], en: to curse, rel: [[adjective, проклятый, 'damned, cursed']], ru: прокля'сть,
   type: verb}
@@ -3674,3 +3662,22 @@ cards:
   ru: си'ла, type: noun}
 - {attrs: [impf, verb.suffix.a3], en: 'to flutter, soar', ru: ре'ять, type: verb}
 - {attrs: [pf, verb.suffix.i], en: to fall through, ru: провали'ться, type: verb}
+- {en: (right) before the fact that ..., rel: [[conjunction, 'прежде, чем ...', before
+        ... (implies intent)], [conjunction, до того как ..., before ...; before the
+        fact that ...]], ru: пе'ред тем как ..., type: conjunction}
+- {en: before ... (implies intent), rel: [[conjunction, до того как ..., before ...;
+        before the fact that ...], [conjunction, перед тем как ..., (right) before
+        the fact that ...]], ru: 'пре''жде, чем ...', type: conjunction}
+- {en: after the fact that ..., ru: по'сле того' как ..., type: conjunction}
+- {en: in view of (the fact that), ru: 'ввиду'' того'', что ...', type: conjunction}
+- {en: in consequence of (the fact that), ru: 'всле''дствие того'', что ...', type: conjunction}
+- {en: 'because of, on the strength of (the fact that)', ru: 'в си''лу того'', что ...',
+  type: conjunction}
+- {en: 'until, so long as', ru: до тех по'р; пока' … не, type: conjunction}
+- {en: despite the fact that, ru: 'несмотря'' на то, что ...', type: conjunction}
+- {en: 'with the purpose of, so that', ru: 'с тем, что''бы ...', type: conjunction}
+- {en: before ...; before the fact that ..., rel: [[conjunction, перед тем как ...,
+      (right) before the fact that ...], [conjunction, 'прежде, чем ...', before ...
+        (implies intent)]], ru: до того' как ..., type: conjunction}
+- {en: thanks to the fact that ..., ru: благодаря' тому' что ..., type: conjunction}
+- {en: on account of ..., ru: 'из-за того'', что ...', type: conjunction}

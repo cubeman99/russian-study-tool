@@ -57,20 +57,17 @@ class AccentedText:
 
     def __add__(self, other):
         if isinstance(other, AccentedText):
-            return AccentedText(
-                self.text + other.text,
+            return AccentedText(self.text + other.text,
                 self.accents + tuple(a + len(self.text) for a in other.accents))
         else:
-            return AccentedText(
-                self.text + str(other),
+            return AccentedText(self.text + str(other),
                 self.accents)
 
     def __radd__(self, other):
         if isinstance(other, AccentedText):
             raise Exception(other)
         else:
-            return AccentedText(
-                str(other) + self.text,
+            return AccentedText(str(other) + self.text,
                 tuple(a + len(other) for a in self.accents))
 
     def __str__(self):
@@ -180,3 +177,74 @@ class Word:
 
     def __hash__(self):
         return hash((self.word_type, self.name.text))
+
+    
+class WordPatternToken:
+    """
+    Used for matching a single word.
+    """
+    def __init__(self, pattern):
+        self.__pattern = pattern
+        pattern = re.sub("[ёе]", "[её]", pattern, flags=re.IGNORECASE)
+        self.__regex = re.compile(
+            "^" + pattern + "$", flags=re.IGNORECASE)
+
+    def match(self, word):
+        word = word.lower()
+        return self.__regex.match(word)
+    
+    def __repr__(self):
+        return self.__pattern
+
+
+class WordPattern:
+    """
+    Used for matching words
+    """
+    def __init__(self, pattern):
+        self.__pattern = pattern
+        if isinstance(pattern, list):
+            self.__tokens = [WordPatternToken(x) for x in pattern]
+        elif isinstance(pattern, str):
+            self.__tokens = [WordPatternToken(x) for x in pattern.split()]
+        else:
+            raise TypeError(pattern)
+
+    def match(self, text: str) -> bool:
+        return self.search(text) is not None
+
+    def search(self, text: str):
+        word_list = list(split_words(text))
+        start = 0
+        while start < len(word_list) - len(self.__tokens) + 1:
+            matches = True
+            for index, token in enumerate(self.__tokens):
+                word, _ = word_list[start + index]
+                word = word.lower()
+                if not token.match(word):
+                    matches = False
+                    break
+            start += 1
+            if matches:
+                return start
+        return None
+
+    def finditer(self, text: str):
+        word_list = list(split_words(text))
+        start = 0
+        while start < len(word_list) - len(self.__tokens) + 1:
+            matches = True
+            instances = []
+            for index, token in enumerate(self.__tokens):
+                word, word_start = word_list[start + index]
+                if not token.match(word):
+                    matches = False
+                    break
+                instances.append((word_start, word))
+            start += 1
+            if matches:
+                for instance in instances:
+                    yield instance
+
+    def __repr__(self):
+        return "WordPattern(" + " ".join(repr(x) for x in self.__tokens) + ")"

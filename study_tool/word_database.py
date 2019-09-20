@@ -2,6 +2,7 @@ import json
 import os
 import shutil
 import yaml
+from cmg.event import Event
 from cmg.utilities.read_write_lock import ReadWriteLock
 from study_tool.russian.types import *
 from study_tool.russian.word import *
@@ -21,12 +22,18 @@ WORD_TYPE_TYPES = {
 
 
 class WordDatabase:
+    """
+    Database class to store Words.
+    """
     def __init__(self):
         self.words = {}
         self.__word_dictionary = {}
         self.__word_dictionary_lax = {}
         self.__cooljugator_404_words = []
         self.__lock = ReadWriteLock()
+
+        # Events
+        self.word_created = Event(Word)
 
     def get_word(self, name: str, word_type: WordType) -> Word:
         """
@@ -67,7 +74,7 @@ class WordDatabase:
 
             if self.__is_word_404_on_cooljugator(word_type=word_type, name=name.text):
                 if key not in self.words:
-                    self.words[key] = self.__create_default_word(name=name, word_type=word_type)
+                    word = self.__create_default_word(name=name, word_type=word_type)
                 return self.words[key]
 
             if key in self.words:
@@ -79,8 +86,7 @@ class WordDatabase:
             elif word_type == WordType.Adjective:
                 word = self.__add_adjective(name)
             else:
-                self.words[key] = self.__create_default_word(name=name, word_type=word_type)
-                return self.words[key]
+                return self.__create_default_word(name=name, word_type=word_type)
 
             if word is not None and word.word_type != word_type:
                 raise Exception(word.word_type)
@@ -136,7 +142,8 @@ class WordDatabase:
             for form in word.get_all_forms():
                 self.__add_to_dictionary(form=form, word=word)
             self.words[key] = word
-            return word
+        self.word_created.emit(word)
+        return word
 
     def save(self, path: str):
         """Save word data to a file."""

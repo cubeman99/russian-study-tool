@@ -5,7 +5,8 @@ from cmg import gui
 from cmg import widgets
 from cmg import color
 from cmg.event import Event
-from cmg.input import Keys, MouseButtons
+from cmg.input import Keys
+from cmg.input import MouseButtons
 
 class Button(widgets.Widget):
     def __init__(self, text=""):

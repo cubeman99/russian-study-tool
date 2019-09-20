@@ -483,7 +483,9 @@ class StudyState(State):
                 word=forms, text=example.text)))
         total_example_count = len(examples)
         if len(examples) < max_examples:
-            auto_examples = list(self.app.example_database.iter_example_sentences(forms))
+            #auto_examples = list(self.app.example_database.iter_example_sentences(forms))
+            auto_examples = list(self.app.example_database.iter_example_sentences_2(
+                self.card.get_word_patterns()))
             random.shuffle(auto_examples)
             examples += auto_examples[:max_examples - len(examples)]
             total_example_count += len(auto_examples)
