@@ -4,6 +4,7 @@ import random
 import re
 from study_tool.russian.types import *
 from study_tool.russian.word import *
+from study_tool.russian.word import WordPattern
 from study_tool.russian.adjective import Adjective
 from study_tool.russian.noun import Noun
 from study_tool.russian.verb import Verb
@@ -58,7 +59,8 @@ def get_word_occurances(word, text):
 
 
 class ExampleDatabase:
-    def __init__(self):
+    def __init__(self, word_database):
+        self.__word_database = word_database
         self.stories = []
         self.__story_dict = {}
 
@@ -80,12 +82,32 @@ class ExampleDatabase:
                     for sentence in split_sentences(paragraph):
                         yield sentence
 
-    def iter_example_sentences_2(self, patterns):
-        for sentence in self.iter_sentences():
-            for pattern in patterns:
-                instances = list(pattern.finditer(sentence))
-                if instances:
-                    yield sentence, instances
+    def get_word_patterns(self, text: str) -> list:
+        """
+        Converts a card russian text into a list of WordPattern objects.
+        """
+        word_patterns = []
+        for text in text.split(";"):
+            pattern = WordPattern()
+            for token, _ in split_words(text):
+                words = self.__word_database.lookup_word(token)
+                if words:
+                    pattern.add_word(words[0])
+                else:
+                    pattern.add_regex(token)
+            word_patterns.append(pattern)
+        return word_patterns
+
+    def iter_example_sentences_2(self, patterns: list):
+        """
+        Finds examples matching one or more WordPattern.
+        """
+        if patterns:
+            for sentence in self.iter_sentences():
+                for pattern in patterns:
+                    instances = list(pattern.finditer(sentence))
+                    if instances:
+                        yield sentence, instances
 
     def iter_example_sentences(self, text):
         if not isinstance(text, list):

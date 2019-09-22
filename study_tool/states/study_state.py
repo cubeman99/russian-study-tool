@@ -2,6 +2,7 @@ from enum import IntEnum
 import os
 import pygame
 import random
+import threading
 import time
 import win32clipboard
 import cmg
@@ -44,6 +45,49 @@ class StudyParams:
         self.random_form = random_form
         self.shown_side = shown_side
         self.mode = mode
+
+
+class ExampleThread(threading.Thread):
+    def __init__(self, example_database, cards: list):
+        threading.Thread.__init__(self)
+        self.__example_database = example_database
+        self.__cards = list(cards)
+        self.__running = False
+        self.__lock = threading.Lock()
+        self.__card_example_dict = {}
+
+    def get_examples(self, card) -> list:
+        with self.__lock:
+            if card in self.__card_example_dict:
+                return self.__card_example_dict[card]
+        examples = self.find_examples(card)
+        with self.__lock:
+            self.__card_example_dict[card] = examples
+            return self.__card_example_dict[card]
+
+    def stop(self):
+        self.__running = False
+        self.join()
+
+    def run(self):
+        self.__running = True
+        for card in self.__cards:
+            time.sleep(0.05)
+            examples = self.find_examples(card)
+            with self.__lock:
+                self.__card_example_dict[card] = examples
+            if not self.__running:
+                break
+        self.__running = False
+
+    def find_examples(self, card: Card) -> list:
+        word_patterns = self.__example_database.get_word_patterns(
+            card.get_russian().text)
+        auto_examples = list(self.__example_database.iter_example_sentences_2(
+            word_patterns))
+        random.shuffle(auto_examples)
+        import time
+        return auto_examples
 
 
 class StudyState(State):
@@ -94,6 +138,7 @@ class StudyState(State):
 
         # Internal state
         self.card = None
+        self.__example_thread = None
         self.__study_data = None
         self.__study_metrics = None
         self.revealed = False
@@ -108,6 +153,11 @@ class StudyState(State):
         self.buttons[0] = Button("Reveal", self.reveal)
         self.buttons[1] = Button("Exit", self.pause)
         self.buttons[2] = Button("Next", lambda: self.next(knew_it=True))
+        
+        self.__example_thread = ExampleThread(
+            example_database=self.app.example_database,
+            cards=self.card_set.get_cards())
+        self.__example_thread.start()
 
         self.scheduler = Scheduler(cards=self.card_set.cards,
                                    mode=self.params.mode,
@@ -278,6 +328,10 @@ class StudyState(State):
                          self.__table_verb_participles]
 
         self.next_card()
+
+    def on_end(self):
+        """Called when the state ends."""
+        self.__example_thread.stop()
         
     def on_key_pressed(self, key, mod, text):
         """Called when a key is pressed."""
@@ -451,7 +505,9 @@ class StudyState(State):
         reveal_side = 1 - self.shown_side
 
         # Get word info associated with this card
-        word = self.app.get_card_word_details(self.card)
+        word = self.app.word_database.get_word(
+            name=self.card.word_name,
+            word_type=self.card.get_word_type())
         if word is not None:
             forms = word.get_all_forms()
         else:
@@ -483,10 +539,7 @@ class StudyState(State):
                 word=forms, text=example.text)))
         total_example_count = len(examples)
         if len(examples) < max_examples:
-            #auto_examples = list(self.app.example_database.iter_example_sentences(forms))
-            auto_examples = list(self.app.example_database.iter_example_sentences_2(
-                self.card.get_word_patterns()))
-            random.shuffle(auto_examples)
+            auto_examples = self.__example_thread.get_examples(self.card)
             examples += auto_examples[:max_examples - len(examples)]
             total_example_count += len(auto_examples)
         y = self.margin_top + self.proficiency_margin_height + 60

@@ -54,7 +54,8 @@ class GUIState(State):
                 if widget.is_focusable() and button in [MouseButtons.LEFT, MouseButtons.RIGHT]:
                     widget.focus()
             for widget in self.iter_widgets_at_point(self.__widget, pos):
-                widget.on_mouse_pressed(pos, button)
+                if widget.is_enabled():
+                    widget.on_mouse_pressed(pos, button)
 
     def on_mouse_released(self, pos, button):
         if self.__widget:

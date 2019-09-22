@@ -37,7 +37,7 @@ class CardDatabase:
         """
         Creates an empty database.
         """
-        self.word_database = word_database
+        self.__word_database = word_database
         self.__lock_modify = ReadWriteLock()
         self.__card_data_path = None
 
@@ -125,7 +125,7 @@ class CardDatabase:
             
     def find_cards_by_word(self, word: str):
         """Find a card by the name of a word."""
-        word_obj_list = self.word_database.lookup_word(word)
+        word_obj_list = self.__word_database.lookup_word(word)
         with self.__lock_modify.acquire_read():
             for word_obj in word_obj_list:
                 if word_obj in self.__word_to_cards_dict:
@@ -168,20 +168,6 @@ class CardDatabase:
                 Config.logger.info("Creating new card: " + repr(card))
             word_type = card.get_word_type()
 
-            # Get the Word info associated with this card
-            word = None
-            for card_word_name in card.get_word_names():
-                word = self.word_database.download_word(
-                    name=card_word_name,
-                    word_type=card.get_word_type())
-            if word is not None and word.complete:
-                self.word_database.populate_card_details(card=card)
-            if word is not None:
-                if word not in self.__word_to_cards_dict:
-                    self.__word_to_cards_dict[word] = [card]
-                else:
-                    self.__word_to_cards_dict[word].append(card)
-
             # Register the card's english and russian identifiers
             ru_key = card.get_russian_key()
             en_key = card.get_english_key()
@@ -207,6 +193,22 @@ class CardDatabase:
             self.__russian_key_to_card_dict[ru_key] = card
             self.__english_key_to_card_dict[en_key] = card
             self.cards[key] = card
+
+            # Get the Word info associated with this card
+            word = None
+            card.generate_word_name()
+            for card_word_name in card.get_word_names():
+                word = self.__word_database.download_word(
+                    name=card_word_name,
+                    word_type=card.get_word_type())
+            if word is not None:
+                if word.is_complete():
+                    self.__word_database.populate_card_details(card=card)
+                if word not in self.__word_to_cards_dict:
+                    self.__word_to_cards_dict[word] = [card]
+                else:
+                    self.__word_to_cards_dict[word].append(card)
+
             if not card.is_in_fixed_card_set():
                 with self.__lock_dirty:
                     self.__dirty_cards.add(card)

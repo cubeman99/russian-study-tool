@@ -70,20 +70,23 @@ class WordDatabase:
                 word_objs += self.__word_dictionary_lax[key]
             return word_objs
 
-    def download_word(self, name: AccentedText, word_type: WordType) -> Word:
+    def download_word(self, name: AccentedText, word_type: WordType,
+                      default_on_fallback=True) -> Word:
         """
         Download word info from Cooljugator.
         :returns: the Word object
         """
         key = (word_type, name.text)
-        with self.__lock.acquire_write():
-            if key in self.words and self.words[key].complete:
+        with self.__lock.acquire_read():
+            if key in self.words and self.words[key].is_complete():
                 return self.words[key]
 
+        with self.__lock.acquire_write():
             if self.__is_word_404_on_cooljugator(word_type=word_type, name=name.text):
-                if key not in self.words:
+                if default_on_fallback and key not in self.words:
                     word = self.__create_default_word(name=name, word_type=word_type)
-                return self.words[key]
+                    return self.words[key]
+                return None
 
             if key in self.words:
                 del self.words[key]
@@ -93,8 +96,10 @@ class WordDatabase:
                 word = self.__add_noun(name)
             elif word_type == WordType.Adjective:
                 word = self.__add_adjective(name)
-            else:
+            elif default_on_fallback:
                 return self.__create_default_word(name=name, word_type=word_type)
+            else:
+                return None
 
             if word is not None and word.word_type != word_type:
                 raise Exception(word.word_type)
@@ -111,9 +116,10 @@ class WordDatabase:
                                      word_type=card.get_word_type())
 
                 # Attempt to download details about the word
-                if download and (word is None or not word.complete):
+                if download and (word is None or not word.is_complete()):
                     word = self.download_word(name=card.word_name,
-                                              word_type=card.get_word_type())
+                                              word_type=card.get_word_type(),
+                                              default_on_fallback=False)
                     updated = word is not None
 
                 # Create a default word with auto-conjugation
@@ -197,7 +203,7 @@ class WordDatabase:
             for name, word in self.words.items():
                 if (word is not None and
                         word.word_type in self.__WORD_TYPE_TYPES and
-                        word.complete and
+                        word.is_complete() and
                         not word.is_custom()):
                     word_data = Word.serialize(word)
                     data["words"].append(word_data)

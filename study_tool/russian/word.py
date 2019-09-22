@@ -135,6 +135,9 @@ class Word:
     def is_custom(self) -> bool:
         return self.__custom
 
+    def is_complete(self) -> bool:
+        return self.complete
+
     def get_key(self) -> tuple:
         return (self.word_type, self.name.text.lower().replace("ё", "е"))
 
@@ -144,7 +147,7 @@ class Word:
     def get_meaning(self):
         return self.meaning
 
-    def get_all_forms(self):
+    def get_all_forms(self) -> list:
         return [self.name] + self.__forms
 
     def serialize(self):
@@ -183,32 +186,68 @@ class WordPatternToken:
     """
     Used for matching a single word.
     """
-    def __init__(self, pattern):
+    def __init__(self, word=None):
+        self.__regex = None
+        self.__pattern = None
+        self.__word_name = None
+        if word:
+            self.__word_name = word.lower()
+        self.__word = None
+        self.__forms = []
+
+    def match(self, word: str):
+        word = word.lower().replace("ё", "е")
+        if self.__word:
+            return word in self.__forms
+        return self.__regex.match(word)
+
+    def set_word(self, word: Word):
+        self.__word = word
+        self.__word_name = self.__word.get_name().text
+        self.__forms = [x.text.lower().replace("ё", "е") for x in word.get_all_forms()]
+        self.__pattern = None
+        self.__regex = None
+
+    def set_regex(self, pattern: str):
+        self.__word = None
+        self.__word_name = None
         self.__pattern = pattern
         pattern = re.sub("[ёе]", "[её]", pattern, flags=re.IGNORECASE)
         self.__regex = re.compile(
             "^" + pattern + "$", flags=re.IGNORECASE)
-
-    def match(self, word):
-        word = word.lower()
-        return self.__regex.match(word)
     
     def __repr__(self):
-        return self.__pattern
+        if self.__word:
+            return "[" + self.__word.get_name().text + "]"
+        if self.__regex:
+            return self.__pattern
+        return "None"
 
 
 class WordPattern:
     """
     Used for matching words
     """
-    def __init__(self, pattern):
+    def __init__(self, pattern=None):
         self.__pattern = pattern
-        if isinstance(pattern, list):
+        if pattern is None:
+            self.__tokens = []
+        elif isinstance(pattern, list):
             self.__tokens = [WordPatternToken(x) for x in pattern]
         elif isinstance(pattern, str):
             self.__tokens = [WordPatternToken(x) for x in pattern.split()]
         else:
             raise TypeError(pattern)
+
+    def add_regex(self, pattern: str):
+        token = WordPatternToken()
+        token.set_regex(pattern)
+        self.__tokens.append(token)
+
+    def add_word(self, word: Word):
+        token = WordPatternToken()
+        token.set_word(word)
+        self.__tokens.append(token)
 
     def match(self, text: str) -> bool:
         return self.search(text) is not None
@@ -246,5 +285,12 @@ class WordPattern:
                 for instance in instances:
                     yield instance
 
+    def __getitem__(self, index: int):
+        return self.__tokens[index]
+
+    def __iter__(self):
+        for token in self.__tokens:
+            yield token
+
     def __repr__(self):
-        return "WordPattern(" + " ".join(repr(x) for x in self.__tokens) + ")"
+        return "WordPattern(" + ", ".join(repr(x) for x in self.__tokens) + ")"

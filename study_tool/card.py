@@ -60,6 +60,7 @@ class Card:
         if copy is not None:
             self.set(copy)
         else:
+            # Word data
             self.__word_type = None
             self.__russian = AccentedText("")
             self.__english = AccentedText("")
@@ -168,6 +169,7 @@ class Card:
         word_tokens = list(split_words(self.__russian.text))
         if len(word_tokens) > 0:
             self.word_name = AccentedText(word_tokens[0][0])
+
         self.__word_patterns = []
         for text in self.__russian.text.split(";"):
             tokens = list(x for x, _ in split_words(self.__russian.text))

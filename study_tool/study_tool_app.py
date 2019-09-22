@@ -70,8 +70,8 @@ class StudyCardsApp(Application):
         # Create databases
         self.word_database = WordDatabase()
         self.card_database = CardDatabase(word_database=self.word_database)
+        self.example_database = ExampleDatabase(word_database=self.word_database)
         self.study_database = StudyDatabase(card_database=self.card_database)
-        self.example_database = ExampleDatabase()
 
         # Load data
         self.load_word_database()
@@ -237,7 +237,7 @@ class StudyCardsApp(Application):
         self.push_state(state)
         return widget
 
-    def get_card_word_details(self, card):
+    def get_card_word_details(self, card: Card):
         updated = self.word_database.populate_card_details(card, download=True)
         if updated:
             Config.logger.info("Saving word database due to updates from card '{}'".format(card))
