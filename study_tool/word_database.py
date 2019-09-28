@@ -39,9 +39,14 @@ class WordDatabase:
         self.__word_dictionary_lax = {}
         self.__cooljugator = Cooljugator()
         self.__lock_save = threading.Lock()
+        self.__is_saving = False
 
         # Events
         self.word_created = Event(Word)
+
+    def is_saving(self) -> bool:
+        """Returns True if currently saving the database."""
+        return self.__is_saving
 
     def get_word(self, name: str, word_type: WordType) -> Word:
         """
@@ -160,6 +165,7 @@ class WordDatabase:
     def save(self, path: str):
         """Save word data to a file."""
         with self.__lock_save:
+            self.__is_saving = True
             word_data = self.serialize()
             temp_path = path + ".temp"
             with open(temp_path, "w", encoding="utf8") as f:
@@ -167,6 +173,7 @@ class WordDatabase:
                             sort_keys=True, ensure_ascii=False)
             os.remove(path)
             os.rename(temp_path, path)
+            self.__is_saving = False
 
     def load(self, path: str, custom: bool):
         """Load word data from a file."""

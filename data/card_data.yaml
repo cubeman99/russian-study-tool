@@ -1181,7 +1181,7 @@ cards:
 - {attrs: [pf, verb.suffix.a3], en: 'find oneself, turn out', ru: ока'заться, type: verb}
 - {attrs: [impf, verb.suffix.i], en: 'to become, begin, come', ru: стано'виться, type: verb}
 - {attrs: [pf, verb.suffix.i], en: 'to notice, observe', rel: [[adjective, незамечанный,
-      unnoticed], [noun, стол, table]], ru: заме'тить, type: verb}
+      unnoticed]], ru: заме'тить, type: verb}
 - {attrs: [pf, verb.suffix.i], en: to deliver, ru: доста'вить, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to invite, ru: приглаша'ть, type: verb}
 - {attrs: [pf, verb.suffix.i], en: 'to put, to lay', ru: положи'ть, type: verb}
@@ -3688,8 +3688,8 @@ cards:
 - {attrs: [pf, verb.suffix.i], en: to give birth, rel: [[noun, родители, parents], [
       adjective, родной, native], [noun, род, 'gender, kin'], [verb, зародить, 'to
         excite, to raise thought, idea, feeling']], ru: роди'ть, type: verb}
-- {attrs: [m], en: table, rel: [[verb, заметить, 'to notice, observe'], [noun, столовая
-        (комната), dining (room)]], ru: сто'л, type: noun}
+- {attrs: [m], en: table, rel: [[noun, столовая (комната), dining (room)]], ru: сто'л,
+  type: noun}
 - {en: to cheer up (yourself), ru: взбодри'ться, type: verb}
 - {attrs: [impf, verb.suffix.zha], en: to consist, rel: [[verb, стоять, to stand]],
   ru: состоя'ть, type: verb}

@@ -176,6 +176,8 @@ class StudyDatabase:
         self.__metrics_history = {}
         self.__study_data_dict = {}
         self.__lock = ReadWriteLock()
+        self.__is_saving = False
+        self.__lock_save = threading.Lock()
 
         # Dirty state
         self.__lock_dirty = threading.RLock()
@@ -186,6 +188,10 @@ class StudyDatabase:
 
         # Connect
         self.__card_database.card_key_changed.connect(self.__on_card_key_changed)
+
+    def is_saving(self) -> bool:
+        """Returns True if currently saving the database."""
+        return self.__is_saving
 
     def is_data_modified(self) -> bool:
         """Returns True if the data has been modified since the last load/save."""
@@ -269,49 +275,52 @@ class StudyDatabase:
     
     def save(self, path=None):
         """Save the study data to file."""
-        with self.__lock.acquire_read():
-            if path is None:
-                path = self.__word_data_path
-            self.__word_data_path = path
-            assert path is not None
+        with self.__lock_save:
+            self.__is_saving = True
+            with self.__lock.acquire_read():
+                if path is None:
+                    path = self.__word_data_path
+                self.__word_data_path = path
+                assert path is not None
 
-            Config.logger.debug("Saving study data to: " + path)
-            state = self.__serialize()
+                Config.logger.debug("Saving study data to: " + path)
+                state = self.__serialize()
 
-            cards_state = state["cards"]
-            del state["cards"]
-            metrics_state_dict = state["metrics"]
-            del state["metrics"]
+                cards_state = state["cards"]
+                del state["cards"]
+                metrics_state_dict = state["metrics"]
+                del state["metrics"]
 
-            temp_path = path + ".temp"
-            with open(temp_path, "wb") as opened_file:
-                yaml.dump(state, opened_file, encoding="utf8",
-                          allow_unicode=True, default_flow_style=False,
-                          Dumper=yaml.CDumper)
+                temp_path = path + ".temp"
+                with open(temp_path, "wb") as opened_file:
+                    yaml.dump(state, opened_file, encoding="utf8",
+                              allow_unicode=True, default_flow_style=False,
+                              Dumper=yaml.CDumper)
                 
-                opened_file.write(b"cards:\n")
-                for card_state in cards_state:
-                    opened_file.write(b"  - ")
-                    yaml.dump(
-                        card_state, opened_file, encoding="utf8",
-                        allow_unicode=True, default_flow_style=True,
-                        Dumper=yaml.CDumper)
+                    opened_file.write(b"cards:\n")
+                    for card_state in cards_state:
+                        opened_file.write(b"  - ")
+                        yaml.dump(
+                            card_state, opened_file, encoding="utf8",
+                            allow_unicode=True, default_flow_style=True,
+                            Dumper=yaml.CDumper)
 
-                opened_file.write(b"metrics:\n")
-                metrics_state_dict = list(metrics_state_dict.items())
-                metrics_state_dict.sort(key=lambda x: x[0])
-                for data_string, metrics_state in metrics_state_dict:
-                    opened_file.write("  {}: ".format(data_string).encode())
-                    yaml.dump(
-                        metrics_state, opened_file, encoding="utf8",
-                        allow_unicode=True, default_flow_style=True,
-                        Dumper=yaml.CDumper)
+                    opened_file.write(b"metrics:\n")
+                    metrics_state_dict = list(metrics_state_dict.items())
+                    metrics_state_dict.sort(key=lambda x: x[0])
+                    for data_string, metrics_state in metrics_state_dict:
+                        opened_file.write("  {}: ".format(data_string).encode())
+                        yaml.dump(
+                            metrics_state, opened_file, encoding="utf8",
+                            allow_unicode=True, default_flow_style=True,
+                            Dumper=yaml.CDumper)
 
-            if os.path.isfile(path):
-                os.remove(path)
-            os.rename(temp_path, path)
-            with self.__lock_dirty:
-                self.__dirty = False
+                if os.path.isfile(path):
+                    os.remove(path)
+                os.rename(temp_path, path)
+                with self.__lock_dirty:
+                    self.__dirty = False
+            self.__is_saving = False
 
     def load(self, path: str, card_database):
         """Load the study data from file."""

@@ -2,6 +2,7 @@ import json
 import os
 os.environ["SDL_VIDEO_WINDOW_POS"] = "420,80"  # Set initial window position
 import pygame
+import threading
 import time
 import shutil
 import yaml
@@ -49,6 +50,7 @@ class StudyCardsApp(Application):
 
         self.font_bar_text = pygame.font.Font(None, 30)
         self.__font_fps = cmg.Font(24)
+        self.__font_status = cmg.Font(20)
 
         self.clock = pygame.time.Clock()
         self.graphics = Graphics(self.screen)
@@ -77,9 +79,9 @@ class StudyCardsApp(Application):
         self.load_word_database()
         self.load_card_data()
         self.card_database.load_card_sets(self.cards_path)
-        self.save_word_database()
         self.load_example_database()
         self.load_study_data()
+        self.save_word_database()
 
         Config.logger.info("Initialization complete!")
 
@@ -108,7 +110,7 @@ class StudyCardsApp(Application):
         #self.push_state(GUIState(widget=CardSetEditWidget(test_set, self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=RelatedCardsWidget(test_card, self), title="Edit Related Cards"))
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
-        #self.push_study_state(test_set, StudyParams(random_side=True))
+        self.push_study_state(test_set, StudyParams(random_side=True))
         #self.push_state(GUIState(widget=QueryWidget(self), title="Study Query"))
 
         #self.save_card_set(self.root["nouns"]["house"])
@@ -328,7 +330,7 @@ class StudyCardsApp(Application):
 
     def save_word_database(self):
         path = os.path.join(self.root_path, self.word_data_file_name)
-        Config.logger.debug("Saving word data to: " + path)
+        Config.logger.info("Saving word data to: " + path)
         self.word_database.save(path)
 
     def load_word_database(self):
@@ -376,6 +378,8 @@ class StudyCardsApp(Application):
     def draw(self):
         self.graphics.recache()
         self.graphics.clear(color.WHITE)
+        screen_width, screen_height = self.screen.get_size()
+
         states_to_draw = []
         for state in reversed(self.states):
             states_to_draw.append(state)
@@ -384,7 +388,25 @@ class StudyCardsApp(Application):
         for state in reversed(states_to_draw):
             # TODO: fade background
             state.draw(self.graphics)
-            
+        
+        # Draw save status
+        kwargs = dict( 
+            font=self.__font_status,
+            align=Align.TopLeft,
+            color=Colors.RED)
+        y = screen_height - Config.margin_top + 4
+        if self.study_database.is_saving():
+            self.graphics.draw_text(
+                4, y, text="Saving study data...", **kwargs)
+        y += 24
+        if self.card_database.is_saving():
+            self.graphics.draw_text(
+                4, y, text="Saving card data...", **kwargs)
+        y += 24
+        if self.word_database.is_saving():
+            self.graphics.draw_text(
+                4, y, text="Saving word data...", **kwargs)
+
         # Draw FPS
         fps = self.get_frame_rate()
         self.graphics.draw_text(

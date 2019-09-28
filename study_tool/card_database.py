@@ -40,6 +40,7 @@ class CardDatabase:
         self.__word_database = word_database
         self.__lock_modify = ReadWriteLock()
         self.__card_data_path = None
+        self.__is_saving = False
 
         # Card data
         self.cards = {}
@@ -52,6 +53,7 @@ class CardDatabase:
         self.__path_to_card_sets_dict = {}
 
         # Dirty state
+        self.__lock_save = threading.Lock()
         self.__lock_dirty = threading.RLock()
         self.__dirty_cards = set()
         self.__dirty_key_change_cards = set()
@@ -64,6 +66,15 @@ class CardDatabase:
         self.card_data_changed = Event(Card)
         self.card_added_to_set = Event(Card, CardSet)
         self.card_removed_from_set = Event(Card, CardSet)
+        
+    def is_saving(self) -> bool:
+        """Returns True if currently saving the database."""
+        return self.__is_saving
+        
+    def iter_card_sets(self) -> bool:
+        """Iterates all card sets."""
+        for card_set in self.__root_package.all_card_sets():
+            yield card_set
 
     def get_root_package(self) -> CardSetPackage:
         return self.__root_package
@@ -453,28 +464,32 @@ class CardDatabase:
             path = self.__card_data_path
         assert path is not None
         Config.logger.info("Saving card data to: " + path)
+        
+        with self.__lock_save:
+            with self.__lock_modify.acquire_read():
+                self.__is_saving = True
 
-        with self.__lock_modify.acquire_read():
+                # Serialize the card data
+                state = self.__serialize_card_data()
 
-            # Serialize the card data
-            state = self.__serialize_card_data()
+                # Verify the serialized data can be deserialized
+                #self.__deserialize_card_data({"cards": state})
 
-            # Verify the serialized data can be deserialized
-            #self.__deserialize_card_data({"cards": state})
+                # Save to temp file first
+                temp_path = path + ".temp"
+                with open(temp_path, "wb") as f:
+                    f.write(b"cards:\n")
+                    for card in state:
+                        f.write(b"- ")
+                        yaml.dump(card, f, encoding="utf8",
+                                  allow_unicode=True, default_flow_style=True,
+                                  Dumper=yaml.CDumper)
+                os.remove(path)
+                os.rename(temp_path, path)
+                with self.__lock_dirty:
+                    self.__dirty_cards.clear()
 
-            # Save to temp file first
-            temp_path = path + ".temp"
-            with open(temp_path, "wb") as f:
-                f.write(b"cards:\n")
-                for card in state:
-                    f.write(b"- ")
-                    yaml.dump(card, f, encoding="utf8",
-                              allow_unicode=True, default_flow_style=True,
-                              Dumper=yaml.CDumper)
-            os.remove(path)
-            os.rename(temp_path, path)
-            with self.__lock_dirty:
-                self.__dirty_cards.clear()
+                self.__is_saving = False
 
     def load_card_data(self, path: str):
         """
@@ -506,26 +521,28 @@ class CardDatabase:
         Save a single card set file to a YAML file.
         """
         Config.logger.info("Saving card set '{}'".format(card_set.get_name()))
-        with self.__lock_modify.acquire_read():
-            if path is None:
-                path = card_set.get_file_path()
-                assert path is not None
+        with self.__lock_save:
+            self.__is_saving = True
+            with self.__lock_modify.acquire_read():
+                if path is None:
+                    path = card_set.get_file_path()
+                    assert path is not None
         
-            state = card_set.serialize()
+                state = card_set.serialize()
 
-            cards_state = state["card_set"]["cards"]
-            del state["card_set"]["cards"]
-            with open(path, "wb") as opened_file:
-                yaml.dump(state, opened_file, encoding="utf8",
-                          allow_unicode=True, default_flow_style=False,
-                          Dumper=yaml.CDumper)
-                opened_file.write(b"  cards:\n")
-                for card_state in cards_state:
-                    opened_file.write(b"    - ")
-                    yaml.dump(
-                        card_state, opened_file, encoding="utf8",
-                        allow_unicode=True, default_flow_style=True,
-                        Dumper=yaml.CDumper)
+                cards_state = state["card_set"]["cards"]
+                del state["card_set"]["cards"]
+                with open(path, "wb") as opened_file:
+                    yaml.dump(state, opened_file, encoding="utf8",
+                              allow_unicode=True, default_flow_style=False,
+                              Dumper=yaml.CDumper)
+                    opened_file.write(b"  cards:\n")
+                    for card_state in cards_state:
+                        opened_file.write(b"    - ")
+                        yaml.dump(
+                            card_state, opened_file, encoding="utf8",
+                            allow_unicode=True, default_flow_style=True,
+                            Dumper=yaml.CDumper)
                 
             card_set.set_fixed_card_set(False)
             card_set.set_file_path(path)
@@ -533,6 +550,7 @@ class CardDatabase:
             with self.__lock_dirty:
                 if card_set in self.__dirty_card_sets:
                     self.__dirty_card_sets.remove(card_set)
+            self.__is_saving = False
 
     def __serialize_card_data(self) -> dict:
         """Serialize card data."""

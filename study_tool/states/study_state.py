@@ -32,6 +32,7 @@ from study_tool.entities.label_box import LabelBox
 from study_tool.entities.card_attribute_box import CardAttributeBox
 from study_tool.entities.study_proficiency_bar import StudyProficiencyBar
 from study_tool.gui.related_cards_widget import RelatedCardsWidget
+from study_tool.gui.add_card_to_set_widget import AddCardToSetWidget
 from study_tool.states.gui_state import GUIState
 
 
@@ -344,6 +345,10 @@ class StudyState(State):
             if key == Keys.K_R:
                 self.__on_click_edit_related_cards()
 
+            # S: Add card to set
+            if key == Keys.K_S:
+                self.__on_click_add_to_set()
+
             # E: Edit related cards
             elif key == Keys.K_E:
                 self.__on_click_edit_card()
@@ -385,6 +390,14 @@ class StudyState(State):
         self.app.push_state(GUIState(
             widget=widget,
             title="Edit Related Cards for {}".format(self.card.get_russian())))
+    
+    def __on_click_add_to_set(self):
+        """Called to begin editing the current card's related cards."""
+        widget = AddCardToSetWidget(self.card, self.app)
+        widget.updated.connect(self.__on_card_updated)
+        self.app.push_state(GUIState(
+            widget=widget,
+            title="Card Sets Containing {}".format(self.card.get_russian())))
     
     def __on_click_edit_card_set(self):
         """Called to begin editing the card set."""
