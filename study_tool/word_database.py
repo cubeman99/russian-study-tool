@@ -14,6 +14,7 @@ from study_tool.card import Card
 from study_tool.card_attributes import CardAttributes
 from study_tool.card_attributes import *
 from study_tool.config import Config
+from study_tool.external.cooljugator import Cooljugator
 
 
 class WordDatabase:
@@ -36,8 +37,7 @@ class WordDatabase:
         self.words = {}
         self.__word_dictionary = {}
         self.__word_dictionary_lax = {}
-        self.__cooljugator_404_words = []
-
+        self.__cooljugator = Cooljugator()
         self.__lock_save = threading.Lock()
 
         # Events
@@ -47,7 +47,7 @@ class WordDatabase:
         """
         Looks up a Word object by its word type and dictionary form.
         """
-        key = (word_type, name.text)
+        key = self.__get_word_key(word_type=word_type, name=name)
         with self.__lock.acquire_read():
             if key in self.words:
                 return self.words[key]
@@ -73,34 +73,24 @@ class WordDatabase:
     def download_word(self, name: AccentedText, word_type: WordType,
                       default_on_fallback=True) -> Word:
         """
-        Download word info from Cooljugator.
+        Download a word from Cooljugator.
+
         :returns: the Word object
         """
-        key = (word_type, name.text)
+        key = self.__get_word_key(word_type=word_type, name=name)
         with self.__lock.acquire_read():
             if key in self.words and self.words[key].is_complete():
                 return self.words[key]
 
         with self.__lock.acquire_write():
-            if self.__is_word_404_on_cooljugator(word_type=word_type, name=name.text):
-                if default_on_fallback and key not in self.words:
-                    word = self.__create_default_word(name=name, word_type=word_type)
-                    return self.words[key]
-                return None
-
-            if key in self.words:
-                del self.words[key]
-            if word_type == WordType.Verb:
-                word = self.__add_verb(name)
-            elif word_type == WordType.Noun:
-                word = self.__add_noun(name)
-            elif word_type == WordType.Adjective:
-                word = self.__add_adjective(name)
+            word = self.__cooljugator.download_word_info(
+                word_type=word_type, name=name)
+            if word:
+                self.add_word(word, replace=True)
+            elif key in self.words:
+                return self.words[key]
             elif default_on_fallback:
-                return self.__create_default_word(name=name, word_type=word_type)
-            else:
-                return None
-
+                word = self.__create_default_word(name=name, word_type=word_type)
             if word is not None and word.word_type != word_type:
                 raise Exception(word.word_type)
             return word
@@ -154,12 +144,13 @@ class WordDatabase:
                     card.word = word
             return updated
 
-    def add_word(self, word: Word) -> Word:
+    def add_word(self, word: Word, replace=False) -> Word:
         """Adds a new word the database."""
-        key = (word.word_type, word.name.text)
+        key = word.get_key()
         with self.__lock.acquire_write():
-            if key in self.words:
-                raise Exception("Duplicate word: {} ({})".format(word.name.text, word.word_type.name))
+            if not replace and key in self.words:
+                raise Exception("Duplicate word: {} ({})"
+                                .format(word.name.text, word.word_type.name))
             for form in word.get_all_forms():
                 self.__add_to_dictionary(form=form, word=word)
             self.words[key] = word
@@ -192,58 +183,42 @@ class WordDatabase:
     def serialize(self) -> dict:
         """Serialize word data."""
         with self.__lock.acquire_read():
-            data = {
-                "words": [],
-                "cooljugator": {
-                    "404_words": {}
-                }
-            }
+            data = {"words": []}
 
             # Serialize word data
-            for name, word in self.words.items():
-                if (word is not None and
-                        word.word_type in self.__WORD_TYPE_TYPES and
+            for _, word in sorted(self.words.items(), key=lambda x: (x[0][1], x[0][0])):
+                if (word.word_type in self.__WORD_TYPE_TYPES and
                         word.is_complete() and
                         not word.is_custom()):
                     word_data = Word.serialize(word)
                     data["words"].append(word_data)
 
-            # Serialize list of words with download errors
-            bad_word_data = data["cooljugator"]["404_words"]
-            for word_type, word in self.__cooljugator_404_words:
-                if word_type.name not in bad_word_data:
-                    bad_word_data[word_type.name] = []
-                bad_word_data[word_type.name].append(word)
+            data["cooljugator"] = self.__cooljugator.serialize()
 
             return data
 
     def deserialize(self, data: dict, custom=False):
-        """Deserialize word data."""
+        """
+        Deserialize word data.
+
+        :param data: The dictionary of serialized word data.
+        :param custom: True to mark loaded words as "Custom", which are not
+                       saved.
+        """
         with self.__lock.acquire_write():
+            # Deserialize list of words with download errors
+            if "cooljugator" in data:
+                self.__cooljugator.deserialize(data["cooljugator"])
+
             # Deserialize word data
             for word_data in data["words"]:
                 word_type = getattr(WordType, word_data["type"])
-                word = None
-                if word_type == WordType.Verb:
-                    word = Verb()
-                elif word_type == WordType.Adjective:
-                    word = Adjective()
-                elif word_type == WordType.Noun:
-                    word = Noun()
-                else:
-                    word = Word()
+                word = self.__WORD_TYPE_TYPES.get(word_type, Word)()
                 Word.deserialize(word, word_data)
                 if word_type.name in word_data:
                     word.deserialize(word_data[word_type.name])
                 word.set_custom(custom)
                 self.add_word(word)
-            
-            # Deserialize list of words with download errors
-            if "cooljugator" in data:
-                for word_type_name, word_list in data["cooljugator"]["404_words"].items():
-                    word_type = getattr(WordType, word_type_name)
-                    for name in word_list:
-                        self.__note_cooljugator_404_word(word_type=word_type, name=name)
 
     def __add_to_dictionary(self, form: AccentedText, word: Word):
         """Add a word form to the lookup dictionary."""
@@ -272,41 +247,5 @@ class WordDatabase:
         self.add_word(word)
         return word
 
-    def __add_verb(self, infinitive) -> Verb:
-        from study_tool.external import cooljugator
-        Config.logger.info("Downloading verb info for " + infinitive)
-        verb = cooljugator.get_verb_info(infinitive)
-        if verb is not None:
-            self.add_word(verb)
-        else:
-            self.__note_cooljugator_404_word(WordType.Verb, infinitive.text)
-        return verb
-
-    def __add_noun(self, dictionary_form) -> Noun:
-        from study_tool.external import cooljugator
-        Config.logger.info("Downloading noun info for " + dictionary_form)
-        noun = cooljugator.get_noun_info(dictionary_form)
-        if noun is not None:
-            self.add_word(noun)
-        else:
-            self.__note_cooljugator_404_word(WordType.Noun, dictionary_form.text)
-        return noun
-
-    def __add_adjective(self, dictionary_form) -> Adjective:
-        from study_tool.external import cooljugator
-        Config.logger.info("Downloading adjective info for " + dictionary_form)
-        adjective = cooljugator.get_adjective_info(dictionary_form)
-        if adjective is not None:
-            self.add_word(adjective)
-        else:
-            self.__note_cooljugator_404_word(WordType.Adjective, dictionary_form.text)
-        return adjective
-
-    def __note_cooljugator_404_word(self, word_type: WordType, name: str):
-        self.__cooljugator_404_words.append((word_type, name))
-
-    def is_word_404_on_cooljugator(self, name: str, word_type: WordType) -> bool:
-        return self.__is_word_404_on_cooljugator(name=name, word_type=word_type)
-
-    def __is_word_404_on_cooljugator(self, name: str, word_type: WordType) -> bool:
-        return (word_type, name) in self.__cooljugator_404_words
+    def __get_word_key(self, word_type, name):
+        return (word_type, AccentedText(name).text.lower().replace("ё", "е"))

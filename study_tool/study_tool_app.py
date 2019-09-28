@@ -77,7 +77,7 @@ class StudyCardsApp(Application):
         self.load_word_database()
         self.load_card_data()
         self.card_database.load_card_sets(self.cards_path)
-        #self.save_word_database()
+        self.save_word_database()
         self.load_example_database()
         self.load_study_data()
 

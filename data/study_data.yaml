@@ -1,4 +1,4 @@
-save_time: 1569022706.334118
+save_time: 1569696451.2688224
 cards:
   - [noun, абрикос, apricot, 4, 1554250410.845265, TTTT]
   - [noun, абрикосовый, apricot juice, 1, 1548521307.1751826, F]
@@ -26,6 +26,7 @@ cards:
   - [noun, арфа, harp, 4, 1552858630.1672454, TTTTTT]
   - [noun, архитектор, architect, 1, 1548522345.9121895, F]
   - [noun, атака, an attack, 4, 1568076018.7045283, TTTTTT]
+  - [noun, аура, aura, 4, 1569628917.0024912, TTTTTTT]
   - [noun, бабочка, butterfly, 4, 1553201924.4056184, TTTTTT]
   - [noun, бабушка, grandmother, 4, 1548640860.4572556, TTTT]
   - [noun, багаж, luggage, 4, 1554948199.2066135, TTTTT]
@@ -73,7 +74,7 @@ cards:
   - [noun, бродяга, tramp, 1, 1548522711.5832896, F]
   - [noun, брокколи, broccoli, 3, 1550717333.5707638, T]
   - [noun, броня, armor, 4, 1556063864.377486, TTTTF]
-  - [noun, брошь, brooch, 2, 1565138642.1802783, TFF]
+  - [noun, брошь, brooch, 1, 1569023864.8325217, FTFF]
   - [noun, брюки, trousers, 4, 1565138545.1441925, TTT]
   - [noun, бубнение, mumbling, 4, 1564013668.313305, TTTTTTTTTT]
   - [noun, буйвол, buffalo, 4, 1565138795.9933476, TFTFTTTFF]
@@ -127,7 +128,7 @@ cards:
   - [noun, водное поло, water polo, 4, 1558133625.278797, TTTTT]
   - [noun, водолазка, poloneck, 1, 1565138473.77395, FF]
   - [noun, возвращение, return, 4, 1559264343.1766891, TTTFTTTFFF]
-  - [noun, воздух, air, 4, 1556478050.2525258, TTTTTTF]
+  - [noun, воздух, air, 4, 1569696428.2868018, TTTTTTTTTTTTTTTTTF]
   - [noun, возможность, 'opportunity, possibility', 4, 1558400742.5722501, TTTTTTTTF]
   - [noun, возражение, objection, 4, 1565131890.1248715, TTTTTTTTTTF]
   - [noun, возраст, 'age, years', 4, 1568153218.6166375, TFTFTTTTTFF]
@@ -203,7 +204,7 @@ cards:
   - [noun, гордость, pride, 4, 1567725069.664965, TTTTTTTFF]
   - [noun, горизонт, horizon, 4, 1553983381.7411473, TTTTTTTTTTTTTTF]
   - [noun, горилла, gorilla, 4, 1565138826.1529896, TTTTTT]
-  - [noun, горка, slide, 0, null, '']
+  - [noun, горка, slide, 4, 1569629341.2363076, TTTT]
   - [noun, горло, throat, 4, 1567646178.5252764, TTTTTF]
   - [noun, горох, pea, 1, 1550717336.1508877, F]
   - [noun, горчица, mustard, 1, 1548521512.9550824, F]
@@ -259,7 +260,7 @@ cards:
   - [noun, десять, '10', 4, 1564451342.608668, TTTTTT]
   - [noun, деталь, detail, 4, 1567458587.1357727, TTTTTTTT]
   - [noun, дети, children, 3, 1548522005.420078, T]
-  - [noun, детская площадка, playground, 0, null, '']
+  - [noun, детская площадка, playground, 3, 1569629340.1089473, TTF]
   - [noun, детство, childhood, 4, 1557970246.1464775, TTTTTTF]
   - [noun, джинсы, jeans, 4, 1565138514.9249618, TTT]
   - [noun, диван, couch, 4, 1565138171.502384, TTTTTT]
@@ -316,6 +317,7 @@ cards:
   - [noun, жизнь, life, 4, 1554948120.7407854, TTTTTT]
   - [noun, жилет, waistcoat, 1, 1565138414.6482995, FF]
   - [noun, жираф, giraffe, 4, 1553202044.14317, TTTTTTTT]
+  - [noun, жук, bug, 4, 1569628906.9418557, TTTTTTTTT]
   - [noun, журнал, magazine, 4, 1556478504.3702242, TTTTTTTTT]
   - [noun, 'журналист, журналистка', journalist, 3, 1565139070.1350126, T]
   - [noun, жёлоб, 'chute, gutter', 4, 1568686195.240202, TTFTTTTTTTTT]
@@ -363,7 +365,7 @@ cards:
   - [noun, золото, gold, 4, 1568686116.6848292, TTTTTTTTTT]
   - [noun, зонт, umbrella, 4, 1554856338.187781, TTTTTTTTF]
   - [noun, зоопарк, zoo, 4, 1551036748.6870759, TTTF]
-  - [noun, зрелость, maturity, 2, 1565138332.427395, FFTTTFFF]
+  - [noun, зрелость, maturity, 1, 1569023855.9152355, FFFTTTFFF]
   - [noun, зрение, 'eyesight, vision', 4, 1568153898.6909046, TTTTT]
   - [noun, зритель, spectator, 1, 1548522063.2453146, F]
   - [noun, зуб, tooth, 4, 1553032796.0027308, TTTTTT]
@@ -422,10 +424,10 @@ cards:
   - [noun, картон, cardboard, 4, 1568153747.1914153, TTTT]
   - [noun, картофель, potato, 3, 1550717282.5847015, T]
   - [noun, картофель фри, french fries, 1, 1548521116.5475688, F]
-  - [noun, карусель, merry-go-round, 0, null, '']
+  - [noun, карусель, merry-go-round, 4, 1569629336.2716439, TT]
   - [noun, касса, register, 4, 1561080747.0609393, TTTTTTTT]
   - [noun, кассир, cashier, 4, 1552070561.4125013, TTTTTTTTTTT]
-  - [noun, качель, swing, 0, null, '']
+  - [noun, качель, swing, 2, 1569629326.3308003, TFF]
   - [noun, качество, quality, 4, 1556063762.1741443, TTTTTTTTTTF]
   - [noun, кеды, 'gumshoes, canvas shoes', 4, 1565138585.0836515, TT]
   - [noun, кекс, cupcake, 3, 1550717254.3192496, T]
@@ -442,6 +444,7 @@ cards:
   - [noun, клубника, strawberry, 4, 1554250476.5684903, TTTTTTTTT]
   - [noun, клык, 'fang, canine', 4, 1568074963.1099725, TTTTTT]
   - [noun, ключ, key, 4, 1556478486.617745, TTTTTTTTTTTTTT]
+  - [noun, кляп, a gag (for mouth), 4, 1569628928.1517036, TTTTTTTT]
   - [noun, книга, book, 4, 1556478502.0051544, TTTTTTTTTTT]
   - [noun, кнопка, button, 1, 1558832887.1547842, F]
   - [noun, князь, prince, 1, 1548521358.4125624, F]
@@ -471,6 +474,7 @@ cards:
   - [noun, конь, male horse, 4, 1567725015.9540284, TTTTTT]
   - [noun, копир, copier, 4, 1555208614.2276075, TTTTTT]
   - [noun, копыто, hoof, 4, 1553032966.865299, TTTTTTTT]
+  - [noun, копьё, spear, 4, 1569628937.2372909, TTTTTTTTFF]
   - [noun, корабль, ship, 4, 1552086678.5733087, TTTTTTTTT]
   - [noun, кореш, close friend (slang), 3, 1558832866.2652414, T]
   - [noun, корзина, basket, 4, 1554948311.3943994, TTTTTTTTTTTTFTTFTTTFF]
@@ -487,7 +491,7 @@ cards:
   - [noun, кость, bone, 4, 1554948096.454445, TTTTTTFTTTTTFT]
   - [noun, костюм, suit, 4, 1565138555.484972, TTTT]
   - [noun, кот, cat (male), 4, 1565138776.2841067, TT]
-  - [noun, кофе, coffee, 3, 1550717372.5076866, T]
+  - [noun, кофе, coffee, 4, 1569023837.5694504, TT]
   - [noun, кофта, blouse, 1, 1565138552.5463219, FF]
   - [noun, кошка, cat (female), 4, 1565138751.8416407, TT]
   - [noun, кошмар, nightmare, 4, 1556478524.9529088, TTTTT]
@@ -548,7 +552,7 @@ cards:
   - [noun, лимонад, lemonade, 3, 1548522587.2545981, T]
   - [noun, лиса, fox, 4, 1565138739.1941602, TTTTTF]
   - [noun, лифчик, brassiere, 4, 1556063791.4677138, TTTTTF]
-  - [noun, лицо, face, 4, 1553032774.0266786, TTTTTTTTTTTTTFFFTTT]
+  - [noun, лицо, face, 4, 1569023839.6139507, TTTTTTTTTTTTTTFFFTTT]
   - [noun, личное местоимение, personal pronouns, 4, 1556063607.955038, TTTFTTTTF]
   - [noun, лоб, forehead, 4, 1565131645.4924898, TTTTTTTT]
   - [noun, ловкость, 'agility, dexterity', 4, 1565131717.3298707, TTTTTTTT]
@@ -615,7 +619,7 @@ cards:
   - [noun, молодой человек, young man, 1, 1548521958.855432, F]
   - [noun, молодость, 'youth (25 - 30, usable with inanimate objs)', 4, 1565138297.4745636,
   TT]
-  - [noun, молодёжь, young people, 1, 1548521452.915238, F]
+  - [noun, молодёжь, young people, 1, 1569023862.9250884, FF]
   - [noun, молоко, milk, 3, 1550717292.6287344, T]
   - [noun, молоток, hammer, 4, 1553129079.6858258, TTTTTT]
   - [noun, молочный коктейль, milkshake, 1, 1548522608.6619422, F]
@@ -748,9 +752,12 @@ cards:
   - [noun, осел, donkey, 4, 1553201735.550269, TTTTTTT]
   - [noun, осень, fall, 4, 1550716616.014418, TTTF]
   - [noun, основание, 'the base, bottom', 4, 1568338928.3272414, TTTTTTFTTTTTFFFF]
+  - [noun, оставка, resignation, 4, 1569628924.1579247, TTTTFTTTF]
+  - [noun, оставшиеся, the remaining, 4, 1569628883.796536, TTFTTFTT]
   - [noun, остановка, 'stop, layover', 4, 1560304288.3976004, TTTT]
   - [noun, остров, island, 4, 1556478054.5572171, TTTTTT]
   - [noun, осьминог, octopus, 4, 1565138840.8133514, TTTTTTTFF]
+  - [noun, отбеливатель, bleach, 4, 1569628909.9892147, TTTTTFTTFTT]
   - [noun, отвага, courage, 4, 1568597778.978784, TTTFF]
   - [noun, ответственность, responsibility, 4, 1558400746.0739584, TTTTTTTTF]
   - [noun, отвлечение, distraction, 0, null, '']
@@ -803,7 +810,7 @@ cards:
   - [noun, персонаж, character, 4, 1553983051.5521984, TTTTTTTTTT]
   - [noun, песня, song, 4, 1554947432.1084738, TTTTTTTTTFFF]
   - [noun, песок, sand, 4, 1558400731.3426392, TTTTTFTTTF]
-  - [noun, песочница, sandbox, 0, null, '']
+  - [noun, песочница, sandbox, 3, 1569629338.2385943, TTF]
   - [noun, петух, cock (chicken), 4, 1565138814.6089373, TTTTT]
   - [noun, печенье, cookie, 3, 1550717306.7417245, T]
   - [noun, печь, 'stove, furnace', 4, 1568846102.5623925, TFTTTT]
@@ -846,7 +853,7 @@ cards:
   - [noun, подземелье, dungeon, 4, 1568240630.5363219, TTTTTTTT]
   - [noun, подменыш, changeling, 4, 1567459304.9701767, TTTTTTTTFF]
   - [noun, подросток, teenager, 4, 1568153840.5912352, TFTFTTTFT]
-  - [noun, подушка, pillow, 4, 1565138227.84615, TTTT]
+  - [noun, подушка, pillow, 4, 1569188750.2936482, TTTTT]
   - [noun, подъем, 'the rise, rising', 4, 1568337514.0707161, TFTTTTTTTTFTFTTTTTTF]
   - [noun, поезд, train, 4, 1552071861.7453673, TTTTTT]
   - [noun, пожар, 'large fire, conflagration', 4, 1553983599.8279305, TTTTTTTTTTTTT]
@@ -873,12 +880,13 @@ cards:
   - [noun, помидор (помидоры), tomato, 3, 1548521690.3734148, T]
   - [noun, помощь, help, 4, 1565138346.3886704, TTTTTTTTTTTTT]
   - [noun, понедельник, monday, 3, 1568249891.3015375, T]
-  - [noun, пони, pony, 0, null, '']
+  - [noun, пони, pony, 3, 1569023833.2774642, T]
   - [noun, пончик, donut, 4, 1556402063.0914931, TTTTT]
   - [noun, попугай, parrot, 4, 1553201798.705295, TTTTTF]
   - [noun, попытка, an attempt, 4, 1568338030.563301, TTTTTTTT]
   - [noun, поражение, defeat, 4, 1567457975.6211827, TTTFTTTTFFFFF]
   - [noun, порог, threshold, 4, 1564013502.2981775, TTTTTTTTTFF]
+  - [noun, порошок, powder, 4, 1569628911.5988522, TTTTFTTTFTFTF]
   - [noun, 'портной, портниха', tailor/dressmaker, 1, 1565138922.2735765, F]
   - [noun, портфель, briefcase, 4, 1556478498.3639848, TTTTTTTTT]
   - [noun, посадка, landing, 4, 1559264272.41201, TFTTTFF]
@@ -927,7 +935,7 @@ cards:
   - [noun, пробка, cork; traffic jam, 4, 1568075460.784737, TTTTTTTF]
   - [noun, проблема, problem, 4, 1556478548.6248775, TTTTTTTT]
   - [noun, пробуждение, awakening, 4, 1561080839.005649, TTTFF]
-  - [noun, прогноз, 'prediction, forecast, prognosis', 4, 1564013596.7641966, TTTTTTTTT]
+  - [noun, прогноз, 'prediction, forecast, prognosis', 4, 1569023844.077111, TTTTTTTTTT]
   - [noun, 'программист, программистка', computer programmer, 3, 1565138969.74521, T]
   - [noun, прогулка, 'walk, stroll', 4, 1558400533.3009675, TTTTTTF]
   - [noun, 'продавец, продавщица', salesperson, 1, 1565139065.49878, F]
@@ -941,6 +949,7 @@ cards:
   - [noun, просвет, band of light in unlit space, 4, 1568686097.8582387, TTTTT]
   - [noun, пространство, 'space, expanse, room', 4, 1568152621.0976124, TTTTTF]
   - [noun, простуда, cold (illness), 4, 1554948771.1119888, TTTTTFFTTTTF]
+  - [noun, простынь, bed sheet, 4, 1569628903.305087, TTTTTFTTTFF]
   - [noun, противоречие, contradiction, 4, 1568338573.7098148, TTFFTTTTTTF]
   - [noun, противостояние, standoff, 1, 1563231711.894349, F]
   - [noun, профессор, professor, 3, 1553040895.9246275, TFT]
@@ -967,6 +976,7 @@ cards:
   - [noun, равнина, plain, 4, 1556478039.8365088, TTTFTF]
   - [noun, радио, radio, 4, 1555208635.3045948, TTTTTT]
   - [noun, радость, joy, 4, 1558133199.409606, TTTTTTTF]
+  - [noun, развлечение, entertainment, 4, 1569628848.6545534, TTTTTTTF]
   - [noun, развод, divorce, 4, 1556063650.951842, TTTTTTTTTTTTFF]
   - [noun, разговор, 'conversation, talk', 4, 1555983327.381768, TTTTTTT]
   - [noun, разгром, 'ruin, devestation', 4, 1564536836.9195197, TTTTTF]
@@ -987,7 +997,7 @@ cards:
   - [noun, растрата, 'a criminally wasted amount, a blunder', 4, 1568074874.3838387, TTTTTT]
   - [noun, реакция, reaction, 4, 1558134323.458691, TTTTTTTTTTTTT]
   - [noun, ребенок, child, 3, 1548520958.5041864, T]
-  - [noun, ребята, 'guys, children', 4, 1568597775.3320036, TTTT]
+  - [noun, ребята, 'guys, children', 4, 1569629266.2611954, TTTTT]
   - [noun, резина, rubber, 4, 1567646796.260905, TTTTTTTT]
   - [noun, результат, result, 4, 1552070672.2164252, TTTTTTTTTTTF]
   - [noun, река, river, 4, 1556478057.4686751, TTTTT]
@@ -1074,6 +1084,7 @@ cards:
   - [noun, скольжение, 'a glide, slip, slide', 4, 1567458082.7184887, TTTTTTTFTTTF]
   - [noun, скорость, speed, 4, 1567457980.1520355, TTTTTTTT]
   - [noun, скрипка, violin, 4, 1550541777.7757087, TTTTTTF]
+  - [noun, скука, boredome, 4, 1569628926.7288866, TTFTTTTFTTF]
   - [noun, скумбрия, mackerel, 4, 1551402748.3987067, TTTFFFF]
   - [noun, слабость, weakness, 4, 1553983025.3502588, TTTTTTT]
   - [noun, слава, 'fame, glory, honor', 4, 1558133643.4394221, TTTTT]
@@ -1082,6 +1093,7 @@ cards:
   - [noun, слеза, 'tear, teardrop', 4, 1552181903.5878148, TTTTTTFTTTTTF]
   - [noun, слива, plum, 4, 1554250423.1947775, TTTTF]
   - [noun, сливки, cream, 4, 1553040911.4099941, TT]
+  - [noun, слизь, mucus, 4, 1569628899.0803347, TTTTTTTF]
   - [noun, слияние, 'fusion, merger', 4, 1568597792.4787714, TTT]
   - [noun, словарь, dictionary, 4, 1556478509.918304, TTTTTTT]
   - [noun, слово, word, 4, 1556478453.722927, TTTTTTT]
@@ -1093,6 +1105,7 @@ cards:
   - [noun, сметана, sour cream, 4, 1553041046.1279597, TT]
   - [noun, смех, laughter, 4, 1568338925.313112, TTTTTTTTTTT]
   - [noun, смешанный, mixed juice, 1, 1548521336.0356328, F]
+  - [noun, снаряжение, equipment, 4, 1569696440.8667667, TTTFTTFTTTTTFTFF]
   - [noun, снег, snow, 4, 1556477921.8570359, TTT]
   - [noun, снеговик, snowman, 4, 1558400727.848228, TTTTTTTTTTTFT]
   - [noun, собака, dog (female), 4, 1565138707.4331522, TT]
@@ -1124,6 +1137,7 @@ cards:
   - [noun, союз, union, 4, 1556063823.100252, TTTT]
   - [noun, спа, spa, 4, 1556063804.7244694, TTT]
   - [noun, спальная комната, bedroom, 4, 1565138174.2655654, TTTT]
+  - [noun, спасение, 'rescue, salvation', 4, 1569696438.4277337, TTTTTTTT]
   - [noun, специи, spice, 1, 1548521137.3689075, F]
   - [noun, спешка, 'rush, hurry, haste', 4, 1555983346.9200246, TTTTTTTTTFTTFTTTF]
   - [noun, спина, back, 4, 1553032784.382407, TTTTTF]
@@ -1144,7 +1158,7 @@ cards:
   - [noun, стиль, style, 4, 1551664004.8427296, TTTTTTTTTTT]
   - [noun, стих, 'verse, poetry', 4, 1553983438.3044956, TTTTTTTTTTTT]
   - [noun, сто, '100', 4, 1564451325.6395116, TTTTT]
-  - [noun, стол, table, 4, 1569012066.3494773, TTTTTTTTTTTTTTTTTTFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]
+  - [noun, стол, table, 4, 1569188747.000811, TTTTTTTTTTTTTTTTTTTTFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]
   - [noun, столб, 'pole, post, column', 4, 1567643867.7570348, TTTTTTTTTT]
   - [noun, столкновение, collision, 4, 1568338931.4612346, TTTFFTTTTTTTTFF]
   - [noun, столовая (комната), dining (room), 4, 1554947913.7968972, TTTFTTTTT]
@@ -1242,6 +1256,7 @@ cards:
   - [noun, тяжесть, gravity, 4, 1565138328.0271697, TFTTTTFF]
   - [noun, тётя, auntie, 1, 1548521846.5680292, F]
   - [noun, убежище, 'shelter, refuge, asylum', 4, 1554948830.0173953, TFTTFFTTTTTTFF]
+  - [noun, уважение, respect, 4, 1569696448.2268028, TTTTTTTT]
   - [noun, угол, 'corner, angle', 4, 1558133682.2329206, TTTTTTTTTTT]
   - [noun, удивление, suprise, 4, 1554947699.4977727, TTTFTTTT]
   - [noun, удовольствие, 'satisfaction, pleasure', 4, 1558133205.5527318, TTFFTFTFTFTTFTTF]
@@ -1298,6 +1313,7 @@ cards:
   - [noun, хныканье, whimper, 4, 1568075174.5091908, TTTTTTTTFTF]
   - [noun, хозяин, master, 4, 1558133627.8182015, TFTTT]
   - [noun, холостой, single, 1, 1548640959.3128586, FF]
+  - [noun, храбрость, bravery, 4, 1569696446.3667054, TTTTTTFTFTT]
   - [noun, 'христианин, христианка', christian, 3, 1568249924.6399782, T]
   - [noun, 'художник, художница', artist, 3, 1565138908.007944, T]
   - [noun, царь, tsar, 4, 1553041028.7347503, TT]
@@ -1401,7 +1417,7 @@ cards:
   - [verb, беднеть, to grow poor, 4, 1550453832.8070972, TTTTTTTTTTTTTTTFFTTTFFFFTFF]
   - [verb, бежать, to run, 4, 1550448730.6978083, TTTTTTTTTTFTT]
   - [verb, белеть, to become/show white, 4, 1567459734.5072482, TFTTTTTTTTTTTTFTTTTFFFF]
-  - [verb, беречь, to keep safe, 0, null, '']
+  - [verb, беречь, to keep safe, 4, 1569629272.8386316, TT]
   - [verb, бить, to beat, 4, 1555464933.5640182, TTTTTTTTTTT]
   - [verb, бледнеть, to grow pale, 4, 1550453932.9047287, TTTTTTTTTTTTFTTTTTTTFFTTTTFFFF]
   - [verb, блестеть, 'to glisten, shine', 4, 1560304122.4751885, TFTTTFTTFTTTF]
@@ -1437,6 +1453,7 @@ cards:
   - [verb, веселеть, to become cheerful, 4, 1549818387.8667526, TTTTTTTTTTTF]
   - [verb, веселиться, to have fun, 4, 1559264370.867982, TTTTTT]
   - [verb, вести, to lead, 4, 1550533535.1591156, TTTTTTTTTTTTTFF]
+  - [verb, взбодриться, to cheer up (yourself), 4, 1569628895.4391925, TTTTFFTTFFTTTTFFFF]
   - [verb, взвесить, to weigh; to think through, 4, 1558400403.2028923, TFTTTFTTTF]
   - [verb, взвешивать, to weigh; to think through, 4, 1558400756.3498847, TTTTTF]
   - [verb, взглянуть, to cast a glance, 4, 1550453654.5643456, TTTTFTFTTTTTTTFFTTTTTT]
@@ -1490,6 +1507,7 @@ cards:
   - [verb, выдавать, 'to give, distribute', 4, 1558133638.6669714, TTTTTTFTT]
   - [verb, выдавить, to squeeze out, 4, 1568153955.046433, TTFTTTTTFTFFF]
   - [verb, выдать, 'to give, distribute', 4, 1554856401.6556423, TTTTTTTF]
+  - [verb, выделить, 'to highlight, pick out', 4, 1569628930.8159482, TFTTTFTTTFFF]
   - [verb, выделывать, 'to do (intricate mvments, strange tricks, etc.)', 4, 1568153033.711248,
   TTTFTTTFFF]
   - [verb, выдержать, 'to withstand, endure, hold out', 4, 1564013661.6133473, TTTFTTTTT]
@@ -1532,10 +1550,11 @@ cards:
   - [verb, говорить, to speak, 4, 1567969487.230394, TTTTTTTTTTTTTTTTTTTTTTT]
   - [verb, голосовать, to vote, 4, 1552435719.3588178, TTTTTTTTTTT]
   - [verb, голубеть, to turn blue, 4, 1549842250.9031906, TTTTTTTTTF]
-  - [verb, гордиться, to be proud, 4, 1555983423.487349, TTFTTTTTFTTTF]
+  - [verb, гордиться, to be proud, 4, 1569696422.2426658, TTTTTTTTTTTTTTFTTTTTFTTTF]
   - [verb, горевать, to grieve, 4, 1550453883.0270877, TTTTTFTTTTTTTTTTTTTTTFFF]
   - [verb, гореть, to burn, 4, 1550453860.6166482, TTTTFTTTTTTFTTTTTTFFTTTFFF]
   - [verb, готовить, to prepare, 4, 1550102144.1913667, TTTTTTTTTTTTT]
+  - [verb, греметь, 'to rattle, thunder', 4, 1569696434.9112554, TTTTTTTTTF]
   - [verb, грести, to rake; to row, 4, 1567459824.611812, TFTTTTTFTTTTTTFF]
   - [verb, греть, to warm, 4, 1567459645.9931438, TFTTTFTTTTTTTTTTTTTFTTTTTFFF]
   - [verb, грузить, 'to ship, load', 4, 1564448000.7651157, TTTTTTTTTT]
@@ -1554,6 +1573,7 @@ cards:
   - [verb, деться, 'to get away, hide', 4, 1565227097.6010344, TTTTTTFTTTTTF]
   - [verb, длиться, to last, 4, 1558133564.1993525, TTFTTTTTTFTTTF]
   - [verb, добиваться, to strive for, 4, 1567459878.8973453, TTFFTTTTFFF]
+  - [verb, добраться, to reach someone/smth after time/effort, 4, 1569696436.805658, TTTTFTTTF]
   - [verb, догадываться, 'to guess, have a hunch', 4, 1567725518.20411, TTFTTTFFFFF]
   - [verb, дождаться, to wait for a long time, 4, 1555983452.2062144, TTTTFTTTTFF]
   - [verb, дозволить, 'to permit, allow', 4, 1568240310.6507642, TFTTTFTTT]
@@ -1619,8 +1639,8 @@ cards:
   - [verb, заливать, 'to fill, overflow, flood', 4, 1560304359.2174196, TTTTTTTT]
   - [verb, залить, 'to fill, overflow, flood', 4, 1560304344.3135052, TTTTTTT]
   - [verb, замедлить, to slow down smth, 4, 1568686145.2277145, TTFTTTTTTTTTTTT]
-  - [verb, заметить, 'to notice, observe', 4, 1569022700.3400824, TTTTTTTTTTTTTTTTFTTTTTTTTTTTTTFTTFTTTTFFF]
-  - [verb, замечать, to notice, 4, 1569012095.0011358, TTTFTFTTTTTTTTTTTTTFFTTTTTTTTFTTTTTTTTTTTTTTF]
+  - [verb, заметить, 'to notice, observe', 4, 1569189402.8029618, TTTTTTTTTTTTTTTTTTTTFTTTTTTTTTTTTTFTTFTTTTFFF]
+  - [verb, замечать, to notice, 4, 1569189553.3703165, TTTTTTFTFTTTTTTTTTTTTTFFTTTTTTTTFTTTTTTTTTTTTTTF]
   - [verb, замолкнуть, to fall silent, 4, 1567459893.1613863, TFTTTTTTTTTTTTTTTTTTFFFTFTTTTTTFF]
   - [verb, замолчать, 'to fall silent, to shut up', 0, null, '']
   - [verb, заморачиваться, to bother, 4, 1568686247.2260578, TTTFTTFTTFFTTFTTTTTFTFTTTFTFF]
@@ -1788,6 +1808,7 @@ cards:
   - [verb, напоминать, to remind, 4, 1552071610.9512095, TTTTTTTTTF]
   - [verb, напортачить, to screw up; spoil from inablity or carelessness, 4, 1567458280.8310523,
   TTTTTTTT]
+  - [verb, наскучивать, to bore, 4, 1569696451.2368474, TTTTTTFTTTF]
   - [verb, наслаждать, 'to enjoy, relish, delight', 4, 1568153671.4697986, TTTTTFFTTFTTTFFFFFF]
   - [verb, настаивать, to insist, 4, 1568154029.0704505, TTTFTTTFTTTTFFFFFFF]
   - [verb, наступить, 'to tread on; to start, come', 4, 1568152258.7578595, TTTTTTTFF]
@@ -1809,6 +1830,7 @@ cards:
   - [verb, нырять, to dive, 4, 1568686016.6931713, TTFTTTTTTTT]
   - [verb, ныть, to ache, 4, 1567459731.4960375, TTFTTTTTTTTTTTFTTTTTTTFF]
   - [verb, обвинять, 'to blame, accuse', 4, 1568153884.6500218, TTTTTTTFTTTTF]
+  - [verb, обвить, to entwine, 4, 1569696442.664006, TTTTTTTTTTTF]
   - [verb, обедать, to have lunch, 4, 1566761278.0081248, TTTTTTTTTTTTTTTTT]
   - [verb, обезуметь, to go crazy, 4, 1568338020.4883182, TTTTTFTT]
   - [verb, обернуться, to turn around, 4, 1564013603.0741591, TTTTTTTTF]
@@ -1842,6 +1864,7 @@ cards:
   - [verb, ограничивать, 'to limit, restrict', 4, 1555983461.3844335, TTTTTTFTTTFFTTTTFF]
   - [verb, ограничить, 'to limit, restrict', 4, 1558134240.2004201, TTFFTFTFTTTTFTTTTTT]
   - [verb, одеться, to get dressed, 4, 1555465135.8462284, TFTTTTTTTTTTTTFFTTTTFFTFF]
+  - [verb, одолевать, to overcome, 4, 1569696384.4486094, TTFTTTTTFFFFFTF]
   - [verb, одолжить, to lend, 4, 1568153858.8555777, TFTTTTTTFFTTTFFFFFF]
   - [verb, ожидать, to expect, 4, 1557970221.2330346, TT]
   - [verb, оказаться, 'find oneself, turn out', 4, 1554947862.935749, TTFTTTTTTTTFTFTTTTTFFF]
@@ -1862,7 +1885,7 @@ cards:
   - [verb, остановить, to stop, 4, 1558134337.8194726, TTTTTTTTFFTTTF]
   - [verb, остановиться, 'to stop, dwell, stand still', 0, null, '']
   - [verb, остаться, 'to remain, stay, be left', 4, 1568153051.6791809, TFTT]
-  - [verb, остерегаться, to beware, 4, 1556063970.9154775, TFTTTFFFF]
+  - [verb, остерегаться, to beware, 4, 1569628944.7409153, TTTTTTTTFTFTTTFFFF]
   - [verb, отбывать, to depart, 4, 1554163850.8195603, TTTFTTTTT]
   - [verb, отбыть, to depart, 4, 1551913523.772808, TTTTTF]
   - [verb, отвергать, to reject, 4, 1568338092.7399335, TTFTFTTFTFTTTFTTTTFFFTFFTTTFF]
@@ -1907,7 +1930,8 @@ cards:
   - [verb, пахнуть, to smell, 4, 1550101854.1436698, TTTTTTTTTTTTTTTT]
   - [verb, перебивать, 'to break, interrupt', 1, 1568846235.6729317, FF]
   - [verb, перебить, to kill many, 4, 1568153892.734977, TTFTTT]
-  - [verb, передавать, to pass; to convey; to broadcast, 4, 1550186071.4198134, TTTTTTTTTTTTTTTF]
+  - [verb, передавать, to pass; to convey; to broadcast, 4, 1569696426.1298547, TFTTTTTTTTTTTTTTTTTTTTTTTF]
+  - [verb, передать, to transfer to, 4, 1569628901.0927203, TTTTTTTTT]
   - [verb, передвигаться, 'to get around, move around', 4, 1568598399.4219062, TTTTTTTT]
   - [verb, передумать, 'to change your mind, rethink', 4, 1567458026.2210205, TTTTTTTTF]
   - [verb, переживать, 'to worry, relive', 4, 1561080421.102791, TT]
@@ -1951,6 +1975,7 @@ cards:
   - [verb, подготовить, 'to prepare, get something ready for someone', 4, 1558133993.0786145,
   TFTTTTTTTFTF]
   - [verb, поддаться, to succumb, 4, 1565131817.7866724, TTTTTTF]
+  - [verb, поддерживать, 'to support, maintain', 4, 1569696431.9109523, TTTTTFTTTTT]
   - [verb, поджечь, 'to set fire, ignite', 4, 1567457962.7043386, TTTTTTTTT]
   - [verb, поджидать, to wait for someones appearance, 4, 1567458536.912771, TTTTTTTTTFTFT]
   - [verb, подключить, to connect, 4, 1555983433.249952, TTTTTTFTTTTTF]
@@ -1961,7 +1986,7 @@ cards:
   - [verb, подогреть, to heat up a little, 4, 1564536936.7752273, TTTTTTTTFF]
   - [verb, подозревать, 'to suspect, surmise', 4, 1568240639.7020948, TTTTTTTTFTFTTFTTTFFFFTTTFF]
   - [verb, подписать, to sign, 4, 1558134246.7273598, TTTTTTTTTF]
-  - [verb, подсесть, to sit next to something/someone, 4, 1568597712.8577065, TTT]
+  - [verb, подсесть, to sit next to something/someone, 3, 1569629271.8502645, FTTT]
   - [verb, подсовывать, 'to slip, put under', 4, 1568240514.7967575, TTFTTTTTF]
   - [verb, подсчитать, 'to tally up, count', 4, 1568240339.2500167, TTTTTFTTT]
   - [verb, подтолкнуть, to lightly push, 4, 1564447962.4721444, TTTTTTT]
@@ -2057,6 +2082,7 @@ cards:
   - [verb, прикусить, 'to lightly bite, squeeze lips', 4, 1567457988.727347, TTTTTTTTT]
   - [verb, приложить, to put and hold in place, 4, 1561080779.4216151, TTTTTF]
   - [verb, прильнуть, 'to snuggle, nestle', 4, 1561080721.6853786, TTTFF]
+  - [verb, применить, 'to apply, implement in practice', 4, 1569628914.8930018, TTTTTFTTTFF]
   - [verb, принять, to accept, 4, 1555464568.9905887, TFTTTTTFTTTTTFTFTTTTTF]
   - [verb, приобрести, 'to purchase, acquire', 4, 1567459665.4343638, TTFFTTTTTTFTTTTF]
   - [verb, 'приписать, подписать', 'to add in, insert writing', 4, 1556402112.2332215,
@@ -2132,6 +2158,7 @@ cards:
   - [verb, разобрать, 'to dismantle, deconstruct, analyze', 4, 1568338769.1042404, TTTFTFTTTFFTFTFTTTTFTFFFFF]
   - [verb, разобраться, to figure it out, 4, 1568338858.1163552, TFTTTTTTF]
   - [verb, разойтись, 'to break up, to part', 4, 1556402121.9826968, TFTTTTT]
+  - [verb, разочаровывать, to dissapoint, 4, 1569628912.7878804, TTTFTFTTTF]
   - [verb, разразиться, 'to break out, manifest with force', 4, 1568152514.50133, TTTTTFTTTTF]
   - [verb, разрыдаться, to burst into tears, 4, 1568075133.2774348, TTTTTT]
   - [verb, ранить, 'to wound, injure, hurt', 4, 1558134070.460407, TFTTTTTTTTF]
@@ -2167,13 +2194,13 @@ cards:
   - [verb, рехнуться, 'to lose your mind, go crazy', 1, 1568846256.7491093, FF]
   - [verb, решать, 'to decide, solve', 4, 1549815511.3817048, TTTTTTTTTTTF]
   - [verb, решить, 'to decide, solve', 0, null, '']
-  - [verb, реять, 'to flutter, soar', 4, 1568597808.573248, TTTFFFF]
+  - [verb, реять, 'to flutter, soar', 3, 1569629278.7022278, FTTTFFFF]
   - [verb, ржать, to neigh, 4, 1567126176.8773637, TFTTTTTTTTTTTTTTTTTTTTTTFTFFFF]
   - [verb, рискнуть, to risk, 4, 1550186136.425755, TTTTTTTTTTTT]
   - [verb, рисковать, to risk, 4, 1549847887.4138353, TTTTTT]
   - [verb, рисовать, to draw, 4, 1549143543.34384, TTTTTTTTT]
   - [verb, робеть, to be timid, 4, 1550453727.880701, TFTTTTTTTTTTTTTFFTTFFTTTFFFF]
-  - [verb, родить, to give birth, 3, 1569022697.1080155, T]
+  - [verb, родить, to give birth, 4, 1569188753.577781, TTT]
   - [verb, родиться, to be born, 4, 1552070953.0577052, TTTTTTTTF]
   - [verb, ронять, to drop, 4, 1557970618.7007098, TFTTFTTTFFTF]
   - [verb, ругаться, 'to swear, curse', 4, 1554948331.082187, TFTFTTTTTTTTTFTF]
@@ -2243,6 +2270,7 @@ cards:
   - [verb, сорвать, to rip off, 4, 1568337998.0247602, TTTTTTTTTTTF]
   - [verb, соскочить, 'to get off, jump off', 4, 1568151946.3128223, TTTFTFTTTFF]
   - [verb, сослать, to banish, 4, 1568337935.7934768, TTFTTTFFTTFTTTFTTFTTTFF]
+  - [verb, состоять, to consist, 4, 1569696433.6774895, TTTTTTTTTT]
   - [verb, сохнуть, to become dry, 4, 1550101865.5796387, TTTTTTTTTTTTTTTTT]
   - [verb, сочуствовать, to sympathize, 4, 1567724952.1581385, TTTTTF]
   - [verb, спасти, 'to save, rescue', 4, 1550533418.4499013, TTTTTTTTTTFF]
@@ -2291,7 +2319,7 @@ cards:
   - [verb, темнеть, to darken, 4, 1554249703.7832813, TTTTTTTT]
   - [verb, теплеть, to become warm, 4, 1549927313.0585196, TTTTTTTTTTTF]
   - [verb, тереть, 'to rub, grate', 4, 1555465197.7775555, TTTTTTTTTTTTTTFFF]
-  - [verb, терзать, to torment, 4, 1568597727.2206879, TTTF]
+  - [verb, терзать, to torment, 4, 1569629275.1115513, TFTTTF]
   - [verb, терпеть, to tolerate, 4, 1550452237.0545745, TTTTTTTTTTTTTTFF]
   - [verb, терять, to lose (something), 4, 1558133869.574347, TTTTTTTTTTTTT]
   - [verb, течь, to flow, 4, 1550533544.4461362, TTTTTTTTTTTFF]
@@ -2347,7 +2375,7 @@ cards:
   - [verb, улучшить, 'to improve, better', 4, 1567457749.3222136, TTTTTTTT]
   - [verb, улыбнуться, to smile, 4, 1550453934.7681909, TTTTTTTTTTFFFFTTTTTTF]
   - [verb, умереть, to die, 4, 1567459743.974678, TTFTTTTTTTTTTTTTT]
-  - [verb, уметь, to know how, 4, 1569007250.7358212, TTTFTTTTTTTTTTTTTTTTTTFFTTTTTTTTTTTTTTTTTTTTTTTFTTTTTTTTTTTTTTTTTTTTFTFFFTFTFTTTFFFF]
+  - [verb, уметь, to know how, 4, 1569188696.0049462, TTTTTFTTTTTTTTTTTTTTTTTTFFTTTTTTTTTTTTTTTTTTTTTTTFTTTTTTTTTTTTTTTTTTTTFTFFFTFTFTTTFFFF]
   - [verb, умудриться, 'to become wiser, to manage to', 4, 1567643726.584924, TTTTTTTTTTF]
   - [verb, унизить, to humiliate, 4, 1567459127.9793148, TFTFTTTTTTTTTFFFF]
   - [verb, унимать, 'to quiet, calm', 4, 1559264091.596394, TTTTFTTTFFTFFF]
@@ -2636,6 +2664,7 @@ cards:
   - [adjective, некрасивый, ugly, 4, 1550533212.8926568, TTTTTT]
   - [adjective, неловкий, 'akward, clumsy', 4, 1564536491.5577037, TTTTTT]
   - [adjective, немецкий, german, 3, 1568250031.5108335, T]
+  - [adjective, немой, speechless, 4, 1569696449.6608334, TTTTTTTFTTTTF]
   - [adjective, необходимый, 'required, that which you cant do without', 4, 1565227240.3612347,
   TTTTTTTFTTTTTTTF]
   - [adjective, неопрятный, sloppy, 4, 1552182446.5833356, TTTTTT]
@@ -2658,6 +2687,7 @@ cards:
   - [adjective, обалденный, astounding, 4, 1556401863.7109895, TTTFFTTTFF]
   - [adjective, обиженный, offended, 4, 1567459130.795325, TTTTTTTTTTFFF]
   - [adjective, обманутый, 'cheated, deceived', 4, 1564537116.2970145, TTTTTTT]
+  - [adjective, оборотный, negotiable, 4, 1569628949.2334876, TFTTTFTFTTTTFF]
   - [adjective, обреченный, doomed, 4, 1555983357.9242418, TFTTFTFTTTFFF]
   - [adjective, общий, common, 4, 1550545111.2228296, TTTTTTTTTTTTTTTFFF]
   - [adjective, обязательный, 'requried, mandatory', 4, 1557970643.3341582, TFTTTTF]
@@ -2693,6 +2723,7 @@ cards:
   - [adjective, переломный, 'crucial, critical', 4, 1568153286.6239243, TTTTTFTTTFFFFF]
   - [adjective, плохой, bad, 4, 1550533128.2874572, TTTTTT]
   - [adjective, побежённый, defeated, 4, 1564013673.77936, TTTTTTTFTTTTF]
+  - [adjective, погружённый, immersed, 4, 1569628881.3937507, TTFTTFTTTFF]
   - [adjective, подавленный, depressed, 4, 1568153988.8488755, TFTTFFTFTFTTFTFTTTTFFTFF]
   - [adjective, подводный, underwater, 4, 1553983465.9076083, TTTTTTTTTTTT]
   - [adjective, подземный, underground, 4, 1553983563.0477016, TTTTTTTTTF]
@@ -2728,6 +2759,7 @@ cards:
   - [adjective, приятный, pleasant, 4, 1550532594.6265306, TTTTTT]
   - [adjective, прозрачный, 'transparent, clear', 4, 1555983264.278789, TFTTTFTTTFTTF]
   - [adjective, проклятый, 'damned, cursed', 4, 1568074837.2770355, TTTTTTTTF]
+  - [adjective, пронзительный, 'piercing, harsh to hear', 4, 1569628869.3053036, TTTFTTTFFTFTFFF]
   - [adjective, простой, simple, 4, 1550533185.7830365, TTTTTT]
   - [adjective, противоположный, opposite, 4, 1568686104.5787032, TTTTTTTFTT]
   - [adjective, прохладный, 'chill, cool', 4, 1558133299.7683082, TTTTTTTTTTTT]
@@ -2784,6 +2816,7 @@ cards:
   - [adjective, скептический, skeptical, 4, 1568337420.780618, TTTTTTTT]
   - [adjective, скользкий, slippery, 4, 1554947702.4813368, TFTTTTT]
   - [adjective, скорый, 'rapid, quick', 4, 1550533087.3971584, TTTTTT]
+  - [adjective, скромный, modest, 4, 1569629335.1964514, TTTF]
   - [adjective, скучный, boring, 4, 1550533052.4742715, TTTTTT]
   - [adjective, славный, 'glorious, nice', 4, 1559264101.0589383, TTT]
   - [adjective, сладкий, sweet, 4, 1550532811.8857872, TTTTTTTF]
@@ -2791,6 +2824,7 @@ cards:
   - [adjective, сложенный, folded, 4, 1568240567.6443484, TTFTTTTTTTTFTF]
   - [adjective, сложный, 'difficult, hard', 0, null, '']
   - [adjective, случайный, random, 4, 1568686207.1537726, TTTTTTTTTT]
+  - [adjective, смелый, brave, 4, 1569629329.4883752, TT]
   - [adjective, смешной, funny, 4, 1550532581.643716, TTTTTTT]
   - [adjective, смутный, 'vague, unclear', 4, 1564620424.199301, TTTTTTTTTFF]
   - [adjective, смущённый, embarrassed, 4, 1568338848.4387984, TTTTTTTFTTFTTTTFFF]
@@ -2819,7 +2853,7 @@ cards:
   - [adjective, счастливый, happy, 4, 1551317344.3990338, TTTTTT]
   - [adjective, такой, such a, 4, 1553973796.421667, TTTTTTTT]
   - [adjective, твёрдый, 'hard, firm', 4, 1564451655.3212724, TTTTTTTFTTTTFFFF]
-  - [adjective, текущий, current, 4, 1564441754.2128146, TTTTTF]
+  - [adjective, текущий, current, 4, 1569696429.9410062, TTTTTTTTTTTTTF]
   - [adjective, теперешний, present-day (nowadays), 4, 1551310963.664186, TTTFTTT]
   - [adjective, тихий, quiet, 4, 1553202803.8013809, TTTTTT]
   - [adjective, тогдашний, of that time, 4, 1552182536.051557, TTTTTTTTTTTFFF]
@@ -2859,7 +2893,7 @@ cards:
   - [adjective, ужасен, horrifying, 4, 1564451665.842958, TTTTTTF]
   - [adjective, ужасный, horrible, 4, 1564451619.7908647, TTTTTTTT]
   - [adjective, узкий, 'tight, narrow', 4, 1564451685.7840889, TTTTTTT]
-  - [adjective, умелый, skillfull, 4, 1569014279.4220455, TTTTTTTTTTTTFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTFTT]
+  - [adjective, умелый, skillfull, 4, 1569189551.495105, TTTTTTTTTTTTTTTFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTFTT]
   - [adjective, уместный, relevant, 4, 1565131774.9245708, TTTTTTTT]
   - [adjective, умный, 'clever, smart, intelligent', 4, 1553202806.6410718, TTTTTTT]
   - [adjective, уморительный, hilarious, 4, 1556373338.531191, TTTTF]
@@ -2867,7 +2901,7 @@ cards:
   - [adjective, унизительный, humiliating, 4, 1565227012.7058358, TTTTTTFTFTTTTF]
   - [adjective, уникальный, unique, 4, 1552527193.7848842, TTTTTTTTTTTTTT]
   - [adjective, унылый, mopey, 4, 1568337951.3073175, TFTTTTTT]
-  - [adjective, упрямый, stubborn, 4, 1568338082.3089936, TTFTTTTTTTTF]
+  - [adjective, упрямый, stubborn, 4, 1569696444.411904, TTTTTTTTTTTTTTFTTTTTTTTF]
   - [adjective, утренний, morning, 4, 1552182439.9221985, TFTTTTFTTTTFF]
   - [adjective, уютный, cozy, 4, 1553983614.7541387, TTTTTTTFTT]
   - [adjective, физический, physical, 4, 1556373563.5582173, TTTTTTTTTTTTF]
@@ -2929,23 +2963,23 @@ cards:
   - [preposition, касательно, 'regarding, concering, over, on', 4, 1567724968.1978717,
   TTTTTFTF]
   - [preposition, кроме + gen., 'besides, except', 4, 1552070720.2642913, TTTTTTTT]
-  - [preposition, между, between, 0, null, '']
+  - [preposition, между, between, 4, 1569191282.8297868, TT]
   - [preposition, мимо, past (typical with про- motion verb), 4, 1552858807.1609442, TTTTTT]
   - [preposition, на + acc., 'to, into, onto, on (motion)', 4, 1552857195.3621464, TTTTTTT]
   - [preposition, на + prep., 'on, at, in (location)', 4, 1552857192.4328575, TTTTTTTT]
   - [preposition, над, over, 4, 1555294214.4325233, TTTTTTTTTTTTTT]
-  - [preposition, напротив, 'opposite of, across from', 4, 1558133818.0222437, TFTTTTTT]
+  - [preposition, напротив, 'opposite of, across from', 4, 1569189679.3444262, TTFTTTTTT]
   - [preposition, насчёт, 'concerning, about', 4, 1566760214.791058, TTTTTF]
   - [preposition, о; об; обо, 'about, concerning', 4, 1552857184.965636, TTTTTTTF]
   - [preposition, около, 'around, near', 4, 1552435850.1495655, TTTTTFTTTTT]
   - [preposition, от, from, 4, 1552857193.4412441, TTTTTT]
   - [preposition, перед, in front of, 4, 1555294451.9387236, TTTTTTTTTTTTT]
   - [preposition, по + acc., 'against, striking', 3, 1565139138.3845186, T]
-  - [preposition, по + dat., 'by, in the way of', 3, 1565139134.7639492, T]
+  - [preposition, по + dat., 'by, in the way of', 4, 1569191193.3728232, TT]
   - [preposition, поверь, believe me, 4, 1556063620.613782, TTTT]
   - [preposition, поверь в себя, believe in yourself, 1, 1568250131.7459295, F]
   - [preposition, под + acc., under (motion), 4, 1552857196.1262984, TTTTTTT]
-  - [preposition, под + instr., under (location), 4, 1552857183.3534157, TTTTTT]
+  - [preposition, под + instr., under (location), 4, 1569191278.6657226, TTTTTTT]
   - [preposition, после, after, 4, 1552435771.794761, TTTTTT]
   - [preposition, прежде, before, 4, 1568597783.8119998, TTT]
   - [preposition, против, 'against, opposed to', 4, 1552181298.5204673, TTTTTTT]
@@ -2968,18 +3002,18 @@ cards:
   - [adverb, вечером, in the evening, 4, 1550716780.9115653, TTTTTTTTTTTTTT]
   - [adverb, 'вкратце, ...', 'in short, ...', 3, 1568250145.0541031, T]
   - [adverb, вместе, together, 4, 1558133844.686355, TTTTTTTTTTT]
-  - [adverb, вниз, down(ward), 1, 1555023103.879232, FFF]
-  - [adverb, внизу, below, 1, 1555022900.2589931, FF]
-  - [adverb, внутри, inside, 4, 1555023083.864144, TTT]
-  - [adverb, внутрь, to inside, 4, 1555023078.0918167, TTTTTTF]
+  - [adverb, вниз, down(ward), 2, 1569629239.85248, TFFFF]
+  - [adverb, внизу, below, 1, 1569629226.3708005, FTFF]
+  - [adverb, внутри, inside, 4, 1569629232.9148202, TFTTT]
+  - [adverb, внутрь, to inside, 4, 1569629195.151836, TTTTTTTF]
   - [adverb, вовремя, on time, 4, 1550716750.1429727, TTTTTTTF]
   - [adverb, вовсе, at all (old style word), 4, 1558134145.6737928, TFTFTTTT]
-  - [adverb, впереди, 'in front, ahead', 1, 1555023055.4838743, FFTFFF]
-  - [adverb, вперёд, 'forward, ahead', 1, 1555022938.4892008, FF]
+  - [adverb, впереди, 'in front, ahead', 2, 1569629235.6560183, TFFTFFF]
+  - [adverb, вперёд, 'forward, ahead', 3, 1569629229.1115422, TTFF]
   - [adverb, вприпрыжку, skipping, 4, 1567725508.8309164, TTTTTTT]
   - [adverb, врасплох, 'by suprise, suddenly, unexpectedly', 4, 1568152555.8496652, TTTFTTFTTTTFF]
   - [adverb, всегда, always, 4, 1550716782.644565, TTTTTTTTTTTTT]
-  - [adverb, где, where, 4, 1555023064.270004, TTTT]
+  - [adverb, где, where, 4, 1569629157.5280483, TTTTT]
   - [adverb, где-нибудь, somewhere (anywhere), 4, 1552248189.6188874, TTTT]
   - [adverb, где-то, somewhere, 4, 1552248210.1698425, TTT]
   - [adverb, глубже, deeper, 4, 1568075238.9825838, TTTTTT]
@@ -2993,8 +3027,8 @@ cards:
   - [adverb, действительно, 'actually, truely, really', 4, 1554948629.0449936, TTFFTFTTFTTTTTTTTTTTF]
   - [adverb, днём, during the day, 4, 1550716810.9685252, TTTTTTF]
   - [adverb, долго, (for) a long time, 4, 1550716746.8896368, TTTTTTFF]
-  - [adverb, дома, at home, 4, 1555022882.7156298, TTT]
-  - [adverb, домой, to home, 4, 1555023001.0211515, TTTTTF]
+  - [adverb, дома, at home, 4, 1569629188.6517398, TTTT]
+  - [adverb, домой, to home, 4, 1569629200.0713296, TTTTTTF]
   - [adverb, дороже, more expensive, 4, 1555294117.8468957, TTTTTTTTTTTTTT]
   - [adverb, достаточно, sufficiently, 4, 1551827728.3325915, TTTTTTTTTTTTFFFFF]
   - [adverb, едва, barely, 4, 1568240160.272079, TTTTTTT]
@@ -3002,10 +3036,10 @@ cards:
   - [adverb, ещё не, not yet, 4, 1550716814.4601004, TTTFTTTTTTT]
   - [adverb, занять место, to take a seat/place, 4, 1567643587.7134383, TTTTTTT]
   - [adverb, зачем, what for, 4, 1552070656.959259, TTTTTTTTTTTT]
-  - [adverb, здесь, here, 4, 1555023065.9661417, TTT]
+  - [adverb, здесь, here, 4, 1569629211.6245787, TTTT]
   - [adverb, здорово, 'very good, perfect', 4, 1561080323.5143456, TTTTT]
   - [adverb, зимой, in the winter, 4, 1550716792.6865482, TTTTTTT]
-  - [adverb, изнутри, from inside, 1, 1555022987.5775685, FF]
+  - [adverb, изнутри, from inside, 1, 1569629216.6069655, FFF]
   - [adverb, именно, 'namely, precisely, exactly', 4, 1555294120.4817817, TTTTT]
   - [adverb, иначе, 'differently, otherwise', 4, 1552086437.5206504, TTTTTTTTFF]
   - [adverb, иногда, sometimes, 4, 1550716730.48498, TTTTTTTF]
@@ -3030,8 +3064,8 @@ cards:
   - [adverb, мрачно, gloomy, 4, 1568240463.9210517, TTTTTTTTTFTTTF]
   - [adverb, наверное, probably, 4, 1554947910.034705, TTTTTFTTTTTTTFTFFF]
   - [adverb, наверняка, for sure, 4, 1558134255.8384848, TTFFTFTTTFTFFFFFTTTFFF]
-  - [adverb, наверх, up(ward), 1, 1555022889.9380991, FF]
-  - [adverb, наверху, above, 1, 1555022994.7563348, FF]
+  - [adverb, наверх, up(ward), 1, 1569629176.0854993, FFF]
+  - [adverb, наверху, above, 1, 1569629209.8899884, FFF]
   - [adverb, навсегда, forever, 4, 1550716718.261298, TTTTTTFFT]
   - [adverb, надолго, for a long time (following the completion of an action), 4, 1550716799.9405632,
   TTTTTTT]
@@ -3042,7 +3076,7 @@ cards:
   - [adverb, наконец-то, 'finally, at last', 4, 1558134087.3681695, TTTTTTTTTTTTTT]
   - [adverb, налево, to the left, 4, 1555023097.6593785, TTT]
   - [adverb, направо, to the right, 4, 1555022907.5802763, TTTF]
-  - [adverb, наружу, to outside, 1, 1555023051.2054245, FF]
+  - [adverb, наружу, to outside, 1, 1569629242.0808392, FFFF]
   - [adverb, насколько, 'by how much, as far as', 4, 1568240373.7470589, TTTTTTTT]
   - [adverb, негде, there is no place, 4, 1552248549.9749506, TTTTT]
   - [adverb, недавно, recently, 4, 1550716785.5333073, TTTTTTTF]
@@ -3070,9 +3104,9 @@ cards:
   - [adverb, осенью, in the fall, 4, 1550716823.890184, TTFTTTTTTTF]
   - [adverb, основательно, thoroughly, 4, 1568153790.440606, TTFTTFTFTTTF]
   - [adverb, особенно, especially, 4, 1554948492.947122, TTFTTTTTTFFFTTFTFTFTTTTF]
-  - [adverb, откуда, from where, 4, 1555023062.281025, TTTF]
+  - [adverb, откуда, from where, 4, 1569629156.3527865, TTTTF]
   - [adverb, отлично, 'perfect, excellent', 4, 1552009668.0109074, TTTTTTTTTTTFTTTFF]
-  - [adverb, отовсюду, from everywhere, 1, 1555022961.6434257, FF]
+  - [adverb, отовсюду, from everywhere, 1, 1569629203.8878634, FFF]
   - [adverb, отсюда, from here, 4, 1555023100.4995532, TTT]
   - [adverb, оттуда, from there, 4, 1555022933.949961, TT]
   - [adverb, охота, 'feel like, it is desired (modal)', 4, 1558400708.3313432, TTTTTTTTTT]
@@ -3082,7 +3116,7 @@ cards:
   - [adverb, по-моему, 'in my opinion, to my thinking', 4, 1557970452.1428924, TTT]
   - [adverb, поблизости, 'nearby, close to smth', 4, 1568075907.9744325, TTTTTF]
   - [adverb, подозрительно, suspiciously, 4, 1568685681.2778254, TTTTTTTTTTTFFTTTFFF]
-  - [adverb, 'позади, сзади', behind, 4, 1568598481.116568, TTTTTFFFFFF]
+  - [adverb, 'позади, сзади', behind, 4, 1569629181.351286, TTTTTTFFFFFF]
   - [adverb, поздно, late, 4, 1550716804.5048275, TTTTTTTFT]
   - [adverb, позже, later, 4, 1552858798.903122, TTTTTTTT]
   - [adverb, полностью, 'fully, completely', 4, 1554948383.9309456, TFTTTT]
@@ -3097,7 +3131,7 @@ cards:
   - [adverb, примерно, 'roughly speaking, about', 4, 1556401986.444741, TTTFTTFTTF]
   - [adverb, просто, simply, 4, 1553973788.4210181, TT]
   - [adverb, проще, 'simpler, easier', 4, 1568338903.429838, TTTTTTTTTTTTT]
-  - [adverb, прямо, straight, 0, null, '']
+  - [adverb, прямо, straight, 4, 1569629172.8430483, TT]
   - [adverb, равноценно, equivilant to, 4, 1568240109.521365, TFTTTTTT]
   - [adverb, раз, 'time, once, since', 4, 1553973819.5455446, TT]
   - [adverb, разве, 'really, perhaps, unless', 4, 1556401956.9554815, TT]
@@ -3106,29 +3140,30 @@ cards:
   - [adverb, редко, rarely, 4, 1550716817.3059552, TTTTTTTTT]
   - [adverb, ровно, 'exactly, smooth', 4, 1554948495.187706, TTTTT]
   - [adverb, сбоку, at the side of, 4, 1568337680.7374227, TFTTTTTTTTT]
-  - [adverb, сверху, 'from above, on top of', 4, 1554948922.0951734, TTTTTTTFTTTTTF]
+  - [adverb, сверху, 'from above, on top of', 4, 1569629171.5173678, TTTTTTTTFTTTTTF]
   - [adverb, сейчас, 'now, at the moment', 4, 1550716819.3890953, TTTTTTTT]
   - [adverb, сколько, how much, 0, null, '']
   - [adverb, скоро, soon, 4, 1550716735.0451303, TTTTTTTTTT]
-  - [adverb, слева, on the left, 4, 1555022998.8529985, TTT]
+  - [adverb, слева, on the left, 4, 1569629169.009404, TTTT]
   - [adverb, слегка, slightly, 4, 1551827710.5341408, TTTTTTTTTTFF]
   - [adverb, слишком, 'too, overly', 4, 1551827721.4699647, TTT]
   - [adverb, случайно, 'by chance, accidentally', 4, 1556373498.6210592, TTT]
-  - [adverb, снаружи, on the outside, 4, 1563414477.026893, TTTTTT]
+  - [adverb, снаружи, on the outside, 4, 1569629222.5079975, TTTTTTT]
   - [adverb, сначала, (at) first, 4, 1550716778.8809566, TTTTFTTTTT]
-  - [adverb, снизу, from below, 4, 1555023074.5233579, TTTF]
+  - [adverb, снизу, from below, 4, 1569629192.3341973, TTTTF]
   - [adverb, 'снова, опять, вновь, ещё раз', again, 4, 1554948008.9702923, TTTTTTTTFFT]
   - [adverb, совершенно, absolutely, 4, 1551827716.8474483, TTTTTTFTFTTTTFFFF]
   - [adverb, совсем, quite, 4, 1551827736.6792436, TTTTTTTTTTTTTFFF]
   - [adverb, соответственно, 'respectively, accordingly', 4, 1560304341.558346, TTFTFTFTTTF]
   - [adverb, сполна, in full, 4, 1555294293.743604, TTTTTTTTTTTF]
-  - [adverb, справа, on the right, 4, 1555023029.9819756, TT]
+  - [adverb, справа, on the right, 4, 1569629178.891589, TTT]
+  - [adverb, спустя, after something; later, 4, 1569628826.4765213, TTTTTTTF]
   - [adverb, сразу, immediately, 4, 1550716711.7556915, TTTFTTTFTF]
   - [adverb, срочно, urgent, 4, 1554948940.0829632, TTTTFTTTFFTFTT]
   - [adverb, сюда, to here, 4, 1555022967.8521907, TTTTF]
   - [adverb, так, so, 4, 1551827731.087185, TTTTTTTTTTTTT]
   - [adverb, также, 'also (one subject, different thing)', 4, 1554948574.267958, TTTTT]
-  - [adverb, там, there, 4, 1555023022.5612385, TT]
+  - [adverb, там, there, 4, 1569629230.977936, TTT]
   - [adverb, теперь, 'now, nowadays', 4, 1550716820.8954077, TTTTTTT]
   - [adverb, тесно, 'closely, tightly', 4, 1567457792.6850195, TTTTTTFT]
   - [adverb, тогда, then (at that time), 4, 1550716806.9393675, TTTTTTTTTTT]
@@ -3146,33 +3181,35 @@ cards:
   - [adverb, чрезвычайно, 'extremely, exceedingly', 4, 1568152695.49874, TFTTTTFFFFFF]
   - [adverb, чуть (чуть-чуть), a tiny bit, 4, 1551827725.2873497, TTTTTTTTTTTTFTF]
   - [conjunction, а, 'and, but (rather), whereas', 4, 1568852894.4212153, TTTTTT]
-  - [conjunction, благодаря тому что ..., thanks to the fact that ..., 0, null, '']
+  - [conjunction, благодаря тому что ..., thanks to the fact that ..., 1, 1569629027.946204,
+  F]
   - [conjunction, 'в силу того, что ...', 'because of, on the strength of (the fact that)',
-  2, 1568853637.2621925, FT]
-  - [conjunction, в то время как, 'while, whilst', 1, 1568853639.872139, FFF]
-  - [conjunction, 'ввиду того, что ...', in view of (the fact that), 0, null, '']
+  1, 1569629038.88928, FFT]
+  - [conjunction, в то время как, 'while, whilst', 1, 1569629124.825066, FFFFF]
+  - [conjunction, 'ввиду того, что ...', in view of (the fact that), 1, 1569629118.5806308,
+  F]
   - [conjunction, вдобавок, in addition, 4, 1558400674.940956, TFTTTF]
-  - [conjunction, 'вследствие того, что ...', in consequence of (the fact that), 0, null,
-  '']
+  - [conjunction, 'вследствие того, что ...', in consequence of (the fact that), 1, 1569629086.497689,
+  F]
   - [conjunction, 'для того, чтобы', 'for the purpose of, so that', 4, 1555022436.4469995,
   TTTTF]
   - [conjunction, до тех пор, 'until, as long as', 4, 1568338109.8707743, TTTTTTTF]
-  - [conjunction, до тех пор; пока … не, 'until, so long as', 0, null, '']
-  - [conjunction, до того как ..., before ...; before the fact that ..., 4, 1569012053.6028144,
-  TTFTTTT]
+  - [conjunction, до тех пор; пока … не, 'until, so long as', 1, 1569629077.4737477, FF]
+  - [conjunction, до того как ..., before ...; before the fact that ..., 4, 1569629090.9991682,
+  TTTTTFTTFTTTT]
   - [conjunction, допустим, 'lets say, supposably', 4, 1558400623.3557732, TFTT]
   - [conjunction, если, if, 4, 1555022377.029188, TT]
   - [conjunction, если … не, unless, 4, 1555022409.1642723, TTTFF]
   - [conjunction, и, and, 4, 1555022303.4465852, TTFT]
   - [conjunction, и … и …, both … and …, 4, 1568852898.148735, TTTT]
   - [conjunction, из-за того, because of, 4, 1558400587.5717075, TFTTTF]
-  - [conjunction, 'из-за того, что ...', on account of ..., 0, null, '']
+  - [conjunction, 'из-за того, что ...', on account of ..., 1, 1569629137.166314, FF]
   - [conjunction, или, or, 4, 1568852891.94865, TTTT]
   - [conjunction, или … или …, either … or …, 4, 1555022432.4902244, TTTT]
   - [conjunction, итак, and so, 4, 1554948118.260315, TTTTTT]
   - [conjunction, кабы, if only (если бы), 4, 1568239721.4934034, TTFFTTTTTT]
-  - [conjunction, как будто; будто бы; как будто бы; словно, 'as though, as if', 3, 1568853630.4035969,
-  TT]
+  - [conjunction, как будто; будто бы; как будто бы; словно, 'as though, as if', 4, 1569629114.1850321,
+  TTT]
   - [conjunction, как только, as soon as, 4, 1555022415.094191, TTTFTF]
   - [conjunction, как … так и …; не только … но и …, not only … but also …, 4, 1555022405.3109856,
   TT]
@@ -3181,26 +3218,27 @@ cards:
   - [conjunction, ли, 'whether, if', 4, 1553973798.6963909, TT]
   - [conjunction, либо, 'or (exclusive or, either or)', 4, 1558400729.723811, TTTTTTTTTTTT]
   - [conjunction, нежели, than (same as чем), 4, 1564013492.4599876, TTTTTTTTTT]
-  - [conjunction, 'несмотря на то, что ...', despite the fact that, 3, 1568853627.864603,
-  T]
+  - [conjunction, 'несмотря на то, что ...', despite the fact that, 4, 1569629083.0692756,
+  TTT]
   - [conjunction, ни … ни …, neither … nor …, 4, 1555022396.4751687, TFTTTTT]
   - [conjunction, но, but, 4, 1555022392.621766, TT]
   - [conjunction, однако, 'but, however', 4, 1555022421.0679133, TTT]
-  - [conjunction, перед тем как ..., (right) before the fact that ..., 3, 1569005386.2260194,
-  T]
+  - [conjunction, перед тем как ..., (right) before the fact that ..., 4, 1569629033.4459698,
+  TT]
   - [conjunction, пока, while, 4, 1555022428.8502383, TTTTF]
   - [conjunction, пока … не, until, 4, 1555022450.9880981, TTTTF]
-  - [conjunction, поскольку, 'as long as, in so far as, since', 1, 1568853583.1282244,
-  FFF]
+  - [conjunction, поскольку, 'as long as, in so far as, since', 1, 1569629122.778715,
+  FFFF]
   - [conjunction, после тово, after that, 4, 1558133510.6870356, TTTTTTT]
-  - [conjunction, после того как ..., after the fact that ..., 0, null, '']
+  - [conjunction, после того как ..., after the fact that ..., 2, 1569629128.1633997,
+  TF]
   - [conjunction, потому что, because, 4, 1555022426.8550005, TTTT]
   - [conjunction, поэтому, 'so, and for that...', 3, 1568852884.1455944, T]
-  - [conjunction, 'прежде, чем ...', before ... (implies intent), 4, 1569012112.1689322,
-  TTTTTT]
-  - [conjunction, 'с тем, чтобы ...', 'with the purpose of, so that', 1, 1568853589.462523,
-  FF]
-  - [conjunction, с тех пор как, since, 1, 1568853566.365723, FF]
+  - [conjunction, 'прежде, чем ...', before ... (implies intent), 4, 1569629080.490973,
+  TTTTTTTTTT]
+  - [conjunction, 'с тем, чтобы ...', 'with the purpose of, so that', 1, 1569629096.510077,
+  FFF]
+  - [conjunction, с тех пор как, since, 1, 1569629134.5615087, FFFF]
   - [conjunction, так как, 'since, because', 4, 1555022387.4536502, TTTF]
   - [conjunction, так что, 'so, so that', 4, 1555022447.8770401, TTT]
   - [conjunction, то … то …, now … now …, 4, 1555022352.2570739, TTTT]
@@ -3312,7 +3350,7 @@ cards:
   - [phrase, всё равно, 'its all the same, who cares', 4, 1553983604.2848985, TTTTTTTTT]
   - [phrase, вылетело из головы, 'flew out of my head, it was at the tip of my tongue',
   1, 1563231790.7773724, F]
-  - [phrase, где бы ты не был, wherever you are, 4, 1568597751.749675, TTTF]
+  - [phrase, где бы ты не был, wherever you are, 4, 1569629264.3703845, TTTTF]
   - [phrase, давным-давно, 'long ago and far away, once upon a time', 4, 1554164022.805034,
   TTTTTT]
   - [phrase, деньги не пахнуть, money doesnt smell (the ends justify the means), 3, 1566672873.954827,
@@ -4602,16 +4640,81 @@ metrics:
       0, 0, 0, 0, 31]}, Verb: {history_score: 814.5821827570096, proficiency_counts: [
       10, 9, 3, 16, 954]}, all: {history_score: 2429.6421458384957, proficiency_counts: [
       42, 191, 16, 190, 2912]}}
-  2019/09/20: {Adjective: {history_score: 387.3435439489079, proficiency_counts: [4, 7, 5, 24, 446]},
-  Adverb: {history_score: 132.46242326432267, proficiency_counts: [2, 10, 0, 1, 175]},
-  Conjunction: {history_score: 22.0906746031746, proficiency_counts: [6, 4, 1, 4,
-      38]}, Interjection: {history_score: 9.66468253968254, proficiency_counts: [
-      1, 0, 0, 2, 10]}, Noun: {history_score: 908.391877276006, proficiency_counts: [
-      14, 146, 6, 117, 1104]}, Other: {history_score: 28.31426212676212, proficiency_counts: [
+  2019/09/20: {Adjective: {history_score: 387.34820431305354, proficiency_counts: [4, 7, 5, 24,
+      446]}, Adverb: {history_score: 132.46242326432267, proficiency_counts: [2, 10,
+      0, 1, 175]}, Conjunction: {history_score: 21.9906746031746, proficiency_counts: [
+      5, 5, 1, 5, 37]}, Interjection: {history_score: 9.66468253968254, proficiency_counts: [
+      1, 0, 0, 2, 10]}, Noun: {history_score: 908.4846352125138, proficiency_counts: [
+      13, 148, 4, 117, 1105]}, Other: {history_score: 28.31426212676212, proficiency_counts: [
       0, 0, 0, 1, 36]}, Particle: {history_score: 5.25, proficiency_counts: [0, 0,
       0, 0, 6]}, Phrase: {history_score: 58.4561529264509, proficiency_counts: [1,
-      6, 1, 21, 71]}, Preposition: {history_score: 35.083928571428565, proficiency_counts: [
-      3, 1, 0, 3, 40]}, Pronoun: {history_score: 28.044871794871792, proficiency_counts: [
-      0, 0, 0, 0, 31]}, Verb: {history_score: 810.9361686630691, proficiency_counts: [
-      10, 9, 3, 16, 950]}, all: {history_score: 2426.0385857146784, proficiency_counts: [
-      41, 183, 16, 189, 2907]}}
+      6, 1, 21, 71]}, Preposition: {history_score: 35.25059523809524, proficiency_counts: [
+      2, 1, 0, 4, 40]}, Pronoun: {history_score: 28.044871794871792, proficiency_counts: [
+      0, 0, 0, 0, 31]}, Verb: {history_score: 810.9888038810523, proficiency_counts: [
+      10, 9, 3, 15, 951]}, all: {history_score: 2426.255305899982, proficiency_counts: [
+      38, 186, 14, 190, 2908]}}
+  2019/09/22: {Adjective: {history_score: 387.3559680632077, proficiency_counts: [4, 7, 5, 24, 446]},
+  Adverb: {history_score: 132.46242326432267, proficiency_counts: [2, 10, 0, 1, 175]},
+  Conjunction: {history_score: 22.1781746031746, proficiency_counts: [5, 5, 1, 4,
+      38]}, Interjection: {history_score: 9.66468253968254, proficiency_counts: [
+      1, 0, 0, 2, 10]}, Noun: {history_score: 908.6523841302627, proficiency_counts: [
+      13, 148, 4, 117, 1105]}, Other: {history_score: 28.31426212676212, proficiency_counts: [
+      0, 0, 0, 1, 36]}, Particle: {history_score: 5.25, proficiency_counts: [0, 0,
+      0, 0, 6]}, Phrase: {history_score: 58.4561529264509, proficiency_counts: [1,
+      6, 1, 21, 71]}, Preposition: {history_score: 35.358928571428564, proficiency_counts: [
+      2, 1, 0, 2, 42]}, Pronoun: {history_score: 28.044871794871792, proficiency_counts: [
+      0, 0, 0, 0, 31]}, Verb: {history_score: 811.1314217705152, proficiency_counts: [
+      10, 9, 3, 15, 951]}, all: {history_score: 2426.869269790681, proficiency_counts: [
+      38, 186, 14, 187, 2911]}}
+  2019/09/25: {Adjective: {history_score: 389.59004648478606, proficiency_counts: [4, 8, 5, 24,
+      449]}, Adverb: {history_score: 132.76242326432268, proficiency_counts: [2, 10,
+      0, 1, 176]}, Conjunction: {history_score: 22.1781746031746, proficiency_counts: [
+      5, 5, 1, 4, 38]}, Interjection: {history_score: 9.66468253968254, proficiency_counts: [
+      1, 0, 0, 2, 10]}, Noun: {history_score: 915.263495241374, proficiency_counts: [
+      13, 148, 4, 117, 1121]}, Other: {history_score: 28.31426212676212, proficiency_counts: [
+      0, 0, 0, 1, 36]}, Particle: {history_score: 5.25, proficiency_counts: [0, 0,
+      0, 0, 6]}, Phrase: {history_score: 58.4561529264509, proficiency_counts: [1,
+      6, 1, 21, 71]}, Preposition: {history_score: 35.358928571428564, proficiency_counts: [
+      2, 1, 0, 2, 42]}, Pronoun: {history_score: 28.044871794871792, proficiency_counts: [
+      0, 0, 0, 0, 31]}, Verb: {history_score: 817.1175273316206, proficiency_counts: [
+      10, 10, 3, 15, 962]}, all: {history_score: 2442.000564884477, proficiency_counts: [
+      38, 188, 14, 187, 2942]}}
+  2019/09/26: {Adjective: {history_score: 390.403473335713, proficiency_counts: [6, 7, 5, 24, 450]},
+  Adverb: {history_score: 133.39992326432267, proficiency_counts: [2, 10, 0, 1, 176]},
+  Conjunction: {history_score: 22.1781746031746, proficiency_counts: [5, 5, 1, 4,
+      38]}, Interjection: {history_score: 9.66468253968254, proficiency_counts: [
+      1, 0, 0, 2, 10]}, Noun: {history_score: 920.9339155889999, proficiency_counts: [
+      13, 148, 4, 117, 1121]}, Other: {history_score: 28.31426212676212, proficiency_counts: [
+      0, 0, 0, 1, 36]}, Particle: {history_score: 5.25, proficiency_counts: [0, 0,
+      0, 0, 6]}, Phrase: {history_score: 58.4561529264509, proficiency_counts: [1,
+      6, 1, 21, 71]}, Preposition: {history_score: 35.358928571428564, proficiency_counts: [
+      2, 1, 0, 2, 42]}, Pronoun: {history_score: 28.044871794871792, proficiency_counts: [
+      0, 0, 0, 0, 31]}, Verb: {history_score: 821.2171796029298, proficiency_counts: [
+      10, 9, 3, 15, 963]}, all: {history_score: 2453.2215643543373, proficiency_counts: [
+      40, 186, 14, 187, 2944]}}
+  2019/09/27: {Adjective: {history_score: 390.90624764473733, proficiency_counts: [4, 7, 5, 24,
+      452]}, Adverb: {history_score: 135.16820775760715, proficiency_counts: [1, 7,
+      2, 2, 177]}, Conjunction: {history_score: 23.060218253968248, proficiency_counts: [
+      0, 10, 1, 1, 41]}, Interjection: {history_score: 9.66468253968254, proficiency_counts: [
+      1, 0, 0, 2, 10]}, Noun: {history_score: 924.3259896913684, proficiency_counts: [
+      8, 148, 5, 119, 1123]}, Other: {history_score: 28.31426212676212, proficiency_counts: [
+      0, 0, 0, 1, 36]}, Particle: {history_score: 5.25, proficiency_counts: [0, 0,
+      0, 0, 6]}, Phrase: {history_score: 58.61448625978423, proficiency_counts: [
+      1, 6, 1, 21, 71]}, Preposition: {history_score: 35.358928571428564, proficiency_counts: [
+      2, 1, 0, 2, 42]}, Pronoun: {history_score: 28.044871794871792, proficiency_counts: [
+      0, 0, 0, 0, 31]}, Verb: {history_score: 821.9478233153071, proficiency_counts: [
+      9, 9, 3, 17, 962]}, all: {history_score: 2460.6557179555184, proficiency_counts: [
+      26, 188, 17, 189, 2951]}}
+  2019/09/28: {Adjective: {history_score: 390.9212369609766, proficiency_counts: [4, 7, 5, 24, 452]},
+  Adverb: {history_score: 135.16820775760715, proficiency_counts: [1, 7, 2, 2, 177]},
+  Conjunction: {history_score: 23.060218253968248, proficiency_counts: [0, 10, 1,
+      1, 41]}, Interjection: {history_score: 9.66468253968254, proficiency_counts: [
+      1, 0, 0, 2, 10]}, Noun: {history_score: 924.3825331994598, proficiency_counts: [
+      8, 148, 5, 119, 1123]}, Other: {history_score: 28.31426212676212, proficiency_counts: [
+      0, 0, 0, 1, 36]}, Particle: {history_score: 5.25, proficiency_counts: [0, 0,
+      0, 0, 6]}, Phrase: {history_score: 58.61448625978423, proficiency_counts: [
+      1, 6, 1, 21, 71]}, Preposition: {history_score: 35.358928571428564, proficiency_counts: [
+      2, 1, 0, 2, 42]}, Pronoun: {history_score: 28.044871794871792, proficiency_counts: [
+      0, 0, 0, 0, 31]}, Verb: {history_score: 821.904758232242, proficiency_counts: [
+      9, 9, 3, 17, 962]}, all: {history_score: 2460.684185696784, proficiency_counts: [
+      26, 188, 17, 189, 2951]}}

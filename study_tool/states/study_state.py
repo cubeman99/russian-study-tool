@@ -48,6 +48,9 @@ class StudyParams:
 
 
 class ExampleThread(threading.Thread):
+    """
+    Thread to find example sentences from the example database for each card.
+    """
     def __init__(self, example_database, cards: list):
         threading.Thread.__init__(self)
         self.__example_database = example_database

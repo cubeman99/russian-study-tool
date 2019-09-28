@@ -174,12 +174,11 @@ class Word:
                 self.examples.append((AccentedText(example["Russian"]),
                                       AccentedText(example["English"])))
 
-    #--------------------------------------------------------------------------
-    # Private methods
-    #--------------------------------------------------------------------------
-
     def __hash__(self):
         return hash((self.word_type, self.name.text))
+
+    def __repr__(self):
+        return "Word({}, {})".format(self.word_type.name, repr(self.name))
 
     
 class WordPatternToken:
