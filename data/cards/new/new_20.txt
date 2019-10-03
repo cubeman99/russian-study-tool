@@ -3,8 +3,12 @@
 #==============================================================================
 
 @type adjective
-сме'лый - brave
+отва'жный; сме'лый - brave
 скро'мный - modest
+заме'тный - noticable
+разбро'санный - scattered
+внеземно'й - extraterrestrial
+органи'ческий; органи'чный - organic
 
 @type adverb
 
@@ -14,16 +18,34 @@
 каче'ль - swing
 карусе'ль -- merry-go-round
 песо'чница - sandbox
+рассужде'ние - reasoning
+пасха'лка - easter egg
+пережива'ние - experience, state of mind
+тра'вма - injury
+ролева'я моде'ль - role model
+## ощуще'ние - sensation, feeling
+му'дак - asshole
+сравне'ние - comparison
+# херня - bullshit
 
 @type verb
+хло'пать - to clap, slam
+размечта'ться - to surrender to dreams
+вы'грать - to win
+переигра'ть - to replay (a game)
+игро'к - a player (of a game)
+ро'зыгрыш - prank; giveaway
+прои'грыватель - audio/video player
 
 @type phrase
+опя'ть же - yet again
 
 @type other
 
 @type particle
 
 @type conjunction
+... именно тем, что ... -- ... exactly what, precisely what ...
 
 @type interjection
 

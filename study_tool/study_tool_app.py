@@ -15,6 +15,7 @@ from cmg.graphics import *
 from cmg.application import *
 from enum import IntEnum
 from study_tool.card_set import *
+from study_tool.card_set import StudySet
 from study_tool.config import Config
 from study_tool.states.menu_state import MenuState
 from study_tool.states.study_state import StudyState
@@ -110,7 +111,7 @@ class StudyCardsApp(Application):
         #self.push_state(GUIState(widget=CardSetEditWidget(test_set, self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=RelatedCardsWidget(test_card, self), title="Edit Related Cards"))
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
-        self.push_study_state(test_set, StudyParams(random_side=True))
+        #self.push_study_state(test_set, StudyParams(random_side=True))
         #self.push_state(GUIState(widget=QueryWidget(self), title="Study Query"))
 
         #self.save_card_set(self.root["nouns"]["house"])
@@ -223,8 +224,25 @@ class StudyCardsApp(Application):
         self.states.append(state)
         state.init(self)
 
-    def push_study_state(self, card_set, params):
-        self.push_state(StudyState(card_set=card_set, params=params))
+    def query_cards(self, query: CardQuery, card_set: StudySet) -> StudySet:
+        """
+        Queries the card/study databases to return a study set.
+        """
+        assert isinstance(query, CardQuery)
+        assert isinstance(card_set, StudySet)
+        cards = []
+        for card in card_set.get_cards():
+            study_data = self.study_database.get_card_study_data(card)
+            if query.matches(card, study_data):
+                cards.append(card)
+        return StudySet(cards=cards)
+
+    def push_study_state(self, card_set: CardSet, card_query=None, params=None):
+        if card_query:
+            card_set = self.query_cards(card_query, card_set=card_set)
+        if not params:
+            params = StudyParams()
+        self.push_state(StudyState(card_set, params=params))
 
     def push_card_list_state(self, card_set):
         self.push_state(CardListState(card_set))

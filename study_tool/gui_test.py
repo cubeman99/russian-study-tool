@@ -30,11 +30,25 @@ from study_tool.example_database import ExampleDatabase
 from study_tool.states.read_text_state import ReadTextState
 import yaml
 
+
+DEAD_ZONE = 0.01
+
+
 class GUITesterApp(Application):
 
     def __init__(self):
         self.title = "GUI Test"
         Application.__init__(self, title=self.title, width=1100, height=900)
+        
+        pygame.joystick.init()
+        self.joystick = pygame.joystick.Joystick(0)
+        self.joystick.init()
+        self.joystick_ready = False
+        self.inputs = [
+            Input(index=2, name="Middle", reversed=True, max=1, min=-1),
+            Input(index=1, name="Left", reversed=True, max=1, min=-1),
+            Input(index=3, name="Right", reversed=True, max=1, min=-1)]
+
 
         self.input.bind(pygame.K_ESCAPE, pressed=self.quit)
         self.input.key_pressed.connect(self.__on_key_pressed)
@@ -45,11 +59,21 @@ class GUITesterApp(Application):
 
         widget = widgets.Widget()
         layout = widgets.VBoxLayout()
-        layout.add(widgets.ComboBox(["Cat", "Dog", "Horse"]))
+        layout.add(widgets.HBoxLayout(
+            widgets.Label("Combo Box:"),
+            widgets.ComboBox(["Cat", "Dog", "Horse"])))
         text_edit = widgets.TextEdit()
         layout.add(text_edit)
-        layout.add(widgets.Button("Hello"))
-        layout.add(widgets.TextEdit("World"))
+        button = widgets.Button("Hello")
+        button.clicked.connect(self.__on_button_clicked)
+        layout.add(button)
+        check_box = widgets.CheckBox("Check Box")
+        check_box.clicked.connect(self.__on_check_box_clicked)
+        layout.add(check_box)
+        layout.add(widgets.HBoxLayout(widgets.Button("Button 2!"),
+                                      widgets.CheckBox("Check Box"),
+                                      widgets.TextEdit()))
+        layout.add(widgets.Label("This is a label"))
 
         scroll_area = widgets.Widget()
         scroll_layout = widgets.VBoxLayout()
@@ -63,7 +87,25 @@ class GUITesterApp(Application):
         self.state.init(self)
         text_edit.focus()
 
+    def __on_button_clicked(self):
+        print("Button clicked!")
+
+    def __on_check_box_clicked(self):
+        print("Check Box clicked!")
+
     def update(self, dt):
+        if not self.joystick_ready:
+            for axis in range(self.joystick.get_numaxes()):
+                if self.joystick.get_axis(axis) != 0:
+                    self.joystick_ready = True
+        if self.joystick_ready:
+            for index, input in enumerate(self.inputs):
+                input.update(self.joystick.get_axis(input.index))
+                self.state.buttons[index].update(
+                    dt=dt,
+                    is_down=input.amount > DEAD_ZONE,
+                    is_pressed=input.amount > DEAD_ZONE and input.prev_amount <= DEAD_ZONE)
+
         self.state.process_input()
         self.state.update(dt)
 

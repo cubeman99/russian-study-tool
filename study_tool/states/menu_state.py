@@ -21,6 +21,7 @@ from study_tool.scheduler import ScheduleMode
 from study_tool.entities.study_proficiency_bar import StudyProficiencyBar
 from study_tool.gui.query_widget import QueryWidget
 from study_tool.states.gui_state import GUIState
+from study_tool.query import CardQuery
 
 
 class MenuState(State):
@@ -201,7 +202,8 @@ class MenuState(State):
                                        mode=ScheduleMode.NewOnly))),
             ("Quiz Problem Cards",
                 lambda: self.app.push_study_state(
-                    card_set=card_set.get_problem_cards(),
+                    card_set=card_set,
+                    card_query=CardQuery(max_score=0.9),
                     params=StudyParams(random_side=True))),
             ("Query",
                 lambda: self.app.push_state(GUIState(

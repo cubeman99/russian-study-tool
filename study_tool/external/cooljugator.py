@@ -16,6 +16,8 @@ from study_tool.russian.verb import Verb
 from study_tool.russian.adjective import Adjective
 from study_tool.config import Config
 
+class Cooljugator404Exception(Exception):
+    pass
 
 class Cooljugator:
 
@@ -37,11 +39,13 @@ class Cooljugator:
         self.__404_words = set()
         self.__error_words = set()
         self.__lock = threading.Lock()
+        self.BeautifulSoup = None
 
     def setup_imports(self):
         """Import the required python modules."""
         with self.__lock:
             from bs4 import BeautifulSoup
+            self.BeautifulSoup = BeautifulSoup
 
     def download_word_info(self, word_type: WordType, name) -> Word:
         """
@@ -53,24 +57,31 @@ class Cooljugator:
                 return None
             if key in self.__error_words:
                 return None
+        result = None
         if word_type in self.__WORD_TYPE_TYPES:
             Config.logger.info("Downloading {} info for: {} "
                                 .format(key[0].name, key[1]))
             try:
                 if word_type == WordType.Adjective:
-                    return self.download_adjective_info(name)
+                    result = self.download_adjective_info(name)
                 if word_type == WordType.Noun:
-                    return self.download_noun_info(name)
+                    result = self.download_noun_info(name)
                 if word_type == WordType.Verb:
-                    return self.download_verb_info(name)
+                    result = self.download_verb_info(name)
                 raise Exception(word_type)
-            except:
+            except Cooljugator404Exception:
+                pass
+            except Exception:
                 Config.logger.error("Error downloading {} data for: {}"
                                 .format(key[0].name, key[1]))
                 with self.__lock:
                     self.__error_words.add(key)
                     traceback.print_exc()
-        return None
+        if result:
+            with self.__lock:
+                if key in self.__error_words:
+                    self.__error_words.remove(key)
+        return result
 
     def download_noun_info(self, dictionary_form) -> Noun:
         """
@@ -84,18 +95,36 @@ class Cooljugator:
 
         noun = Noun()
         noun.name = dictionary_form
-        noun.declension[(Plurality.Singular, Case.Nominative)] = self.__get_conjugation(root, "nom_S")
-        noun.declension[(Plurality.Singular, Case.Accusative)] = self.__get_conjugation(root, "acc_S")
-        noun.declension[(Plurality.Singular, Case.Genetive)] = self.__get_conjugation(root, "gen_S")
-        noun.declension[(Plurality.Singular, Case.Dative)] = self.__get_conjugation(root, "dat_S")
-        noun.declension[(Plurality.Singular, Case.Instrumental)] = self.__get_conjugation(root, "instr_S")
-        noun.declension[(Plurality.Singular, Case.Prepositional)] = self.__get_conjugation(root, "prep_S")
-        noun.declension[(Plurality.Plural, Case.Nominative)] = self.__get_conjugation(root, "nom_P")
-        noun.declension[(Plurality.Plural, Case.Accusative)] = self.__get_conjugation(root, "acc_P")
-        noun.declension[(Plurality.Plural, Case.Genetive)] = self.__get_conjugation(root, "gen_P")
-        noun.declension[(Plurality.Plural, Case.Dative)] = self.__get_conjugation(root, "dat_P")
-        noun.declension[(Plurality.Plural, Case.Instrumental)] = self.__get_conjugation(root, "instr_P")
-        noun.declension[(Plurality.Plural, Case.Prepositional)] = self.__get_conjugation(root, "prep_P")
+
+        # Get singular forms
+        noun.declension[(Plurality.Singular, Case.Nominative)] = self.__get_conjugation(root, ["nom_S_no_accent", "nom_no_accent"])
+        noun.declension[(Plurality.Singular, Case.Genetive)] = self.__get_conjugation(root, ["gen_S_no_accent", "gen_no_accent"])
+        noun.declension[(Plurality.Singular, Case.Dative)] = self.__get_conjugation(root, ["dat_S_no_accent", "dat_no_accent"])
+        noun.declension[(Plurality.Singular, Case.Instrumental)] = self.__get_conjugation(root, ["instr_S_no_accent", "instr_no_accent"])
+        noun.declension[(Plurality.Singular, Case.Prepositional)] = self.__get_conjugation(root, ["prep_S_no_accent", "prep_no_accent"])
+        try:
+            noun.declension[(Plurality.Singular, Case.Accusative)] = self.__get_conjugation(root, ["acc_S_no_accent", "acc_no_accent"])
+        except:
+            # Sometimes it doesn't list accusative for animate nouns, so assume genetive
+            noun.declension[(Plurality.Singular, Case.Accusative)] = AccentedText(
+                noun.declension[(Plurality.Singular, Case.Genetive)])
+
+        # Get plural forms if present
+        try:
+            noun.declension[(Plurality.Plural, Case.Nominative)] = self.__get_conjugation(root, "nom_P")
+            noun.declension[(Plurality.Plural, Case.Genetive)] = self.__get_conjugation(root, "gen_P")
+            noun.declension[(Plurality.Plural, Case.Dative)] = self.__get_conjugation(root, "dat_P")
+            noun.declension[(Plurality.Plural, Case.Instrumental)] = self.__get_conjugation(root, "instr_P")
+            noun.declension[(Plurality.Plural, Case.Prepositional)] = self.__get_conjugation(root, "prep_P")
+            try:
+                noun.declension[(Plurality.Plural, Case.Accusative)] = self.__get_conjugation(root, "acc_P")
+            except:
+                # Sometimes it doesn't list accusative for animate nouns, so assume genetive
+                noun.declension[(Plurality.Plural, Case.Accusative)] = AccentedText(
+                    noun.declension[(Plurality.Plural, Case.Genetive)])
+        except:
+            pass
+
         gender = noun.classify_gender()
         if gender is not None:
             noun.gender = gender
@@ -176,6 +205,8 @@ class Cooljugator:
         verb.info = AccentedText(other_meanings)
         counterparts = match.group("counterparts")
         verb.counterparts = [AccentedText(c.strip()) for c in counterparts.split(",") if bool(c.strip())]
+
+        # Get conjugation info
         for index, (plurality, person) in enumerate(
             [(Plurality.Singular, Person.First),
                 (Plurality.Singular, Person.Second),
@@ -277,13 +308,14 @@ class Cooljugator:
         """
         Downloads an html page.
         """
+        self.setup_imports()
         response = requests.get(url)
-        soup = BeautifulSoup(response.text, features="lxml")
+        soup = self.BeautifulSoup(response.text, features="lxml")
         # Check if this is a 404 error
         for h1 in soup.body.find_all("h1"):
             if "page not found" in h1.text.lower():
                 with self.__lock:
                     self.__404_words.add(key)
                 Config.logger.warning("404 Page not found: " + url)
-                raise Exception("404 Page not found: " + url)
+                raise Cooljugator404Exception("404 Page not found: " + url)
         return soup

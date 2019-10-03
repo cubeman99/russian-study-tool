@@ -9,18 +9,18 @@ class Noun(Word):
         self.gender = None
         self.indeclinable = False
         self.declension = {
-            (Plurality.Singular, Case.Nominative): "",
-            (Plurality.Singular, Case.Accusative): "",
-            (Plurality.Singular, Case.Genetive): "",
-            (Plurality.Singular, Case.Dative): "",
-            (Plurality.Singular, Case.Prepositional): "",
-            (Plurality.Singular, Case.Instrumental): "",
-            (Plurality.Plural, Case.Nominative): "",
-            (Plurality.Plural, Case.Accusative): "",
-            (Plurality.Plural, Case.Genetive): "",
-            (Plurality.Plural, Case.Dative): "",
-            (Plurality.Plural, Case.Prepositional): "",
-            (Plurality.Plural, Case.Instrumental): ""}
+            (Plurality.Singular, Case.Nominative): AccentedText(""),
+            (Plurality.Singular, Case.Accusative): AccentedText(""),
+            (Plurality.Singular, Case.Genetive): AccentedText(""),
+            (Plurality.Singular, Case.Dative): AccentedText(""),
+            (Plurality.Singular, Case.Prepositional): AccentedText(""),
+            (Plurality.Singular, Case.Instrumental): AccentedText(""),
+            (Plurality.Plural, Case.Nominative): AccentedText(""),
+            (Plurality.Plural, Case.Accusative): AccentedText(""),
+            (Plurality.Plural, Case.Genetive): AccentedText(""),
+            (Plurality.Plural, Case.Dative): AccentedText(""),
+            (Plurality.Plural, Case.Prepositional): AccentedText(""),
+            (Plurality.Plural, Case.Instrumental): AccentedText("")}
 
     def classify_gender(self):
         nom_sing = self.declension[(Plurality.Singular, Case.Nominative)].text

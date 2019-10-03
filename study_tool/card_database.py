@@ -225,11 +225,17 @@ class CardDatabase:
                     self.__dirty_cards.add(card)
         self.card_created.emit(card)
        
-    def remove_card(self, card: Card):
+    def delete_card(self, card: Card):
         """
-        Remove a card from the card database.
+        Delete a card from the card database.
         """
+        Config.logger.info("Deleting card: " + repr(card))
         with self.__lock_modify.acquire_write():
+            # Unlink related cards
+            related_cards = list(card.get_related_cards())
+            for related_card in related_cards:
+                self.ununlink_related_cards(card, related_card)
+
             # Remove from russian key dict
             found_ru_key = False
             for key, old_card in self.__russian_key_to_card_dict.items():
@@ -256,6 +262,11 @@ class CardDatabase:
                     del self.cards[key]
                     break
             assert found_key
+
+            # Remove this card from any card sets
+            for card_set in self.iter_card_sets():
+                if card_set.has_card(card):
+                    self.remove_card_from_set(card, card_set)
         
             with self.__lock_dirty:
                 self.__dirty_cards.add(card)

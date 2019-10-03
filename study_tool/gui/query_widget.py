@@ -59,9 +59,11 @@ class QueryWidget(widgets.Widget):
         self.__combo_sort = widgets.ComboBox([SortMethod.RANDOM, SortMethod.LOWEST_SCORE,
                                               SortMethod.NEWEST, SortMethod.OLDEST], index=0)
         self.__button_begin = widgets.Button("Begin")
+        self.__button_back = widgets.Button("Back")
 
         # Create layouts
         layout_left = widgets.VBoxLayout()
+        layout_left.add(self.__button_back)
         layout_left.add(widgets.Label("Card Filter:"))
         layout_left.add(widgets.HBoxLayout(widgets.Label("Max Count:"), self.__box_count))
         layout_left.add(widgets.HBoxLayout(widgets.Label("Max Level:"), self.__combo_proficiency))
@@ -90,6 +92,7 @@ class QueryWidget(widgets.Widget):
         self.__checkbox_random_forms.clicked.connect(self.__on_query_edited)
         self.__checkbox_only_once.clicked.connect(self.__on_query_edited)
         self.__button_begin.clicked.connect(self.__on_click_begin)
+        self.__button_back.clicked.connect(self.close)
 
         self.__box_count.focus()
         self.__refresh_search_results()

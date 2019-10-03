@@ -417,7 +417,7 @@ class CardSetEditWidget(widgets.Widget):
         else:
             self.add_card(card, fill_empty_row=True)
             self.add_empty_row()
-        __on_modified()
+        self.__on_modified()
 
     def __on_modified(self):
         modified = self.is_modified()

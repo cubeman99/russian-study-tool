@@ -63,6 +63,9 @@ class ComboBox(widgets.Widget):
     def on_mouse_pressed(self, pos, button):
         pass
 
+    def on_pressed(self):
+        self.set_index((self.__index + 1) % len(self.__options))
+
     def on_draw(self, g):
         if not self.__surface:
             self.__surface = self.__font.render(self.__text)

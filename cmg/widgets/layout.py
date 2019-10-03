@@ -24,6 +24,11 @@ class Layout(LayoutItem):
     def get_children(self):
         pass
 
+    def iter_child_widgets(self):
+        for child in self.get_children():
+            for widget in child.iter_child_widgets():
+                yield widget
+
     def on_update(self):
         pass
 

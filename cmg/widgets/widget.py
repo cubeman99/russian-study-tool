@@ -23,6 +23,9 @@ class Widget(LayoutItem):
     def is_visible(self) -> bool:
         return self.__visible
 
+    def get_focused_widget(self):
+        return self.focused_widget
+
     def set_visible(self, visible: bool):
         if not visible:
             self.closed.emit()
@@ -71,7 +74,7 @@ class Widget(LayoutItem):
                        if x.is_focusable() and x.is_enabled())
         if not widgets:
             self.change_focus(None)
-        elif self.focused_widget is None:
+        elif self.focused_widget is None or self.focused_widget not in widgets:
             self.change_focus(widgets[0])
         else:
             index = widgets.index(self.focused_widget)
@@ -83,6 +86,7 @@ class Widget(LayoutItem):
                 else:
                     index = (index + len(widgets) - 1) % len(widgets)
                 self.change_focus(widgets[index])
+        return self.focused_widget
 
     def calc_maximum_size(self) -> Vec2:
         if self.layout:
@@ -122,6 +126,9 @@ class Widget(LayoutItem):
     def on_mouse_released(self, pos, button):
         pass
 
+    def on_pressed(self):
+        pass
+
     def set_layout(self, layout):
         self.layout = layout
         self.layout.set_parent(self)
@@ -129,11 +136,14 @@ class Widget(LayoutItem):
     def focus(self) -> bool:
         self.get_root_parent().change_focus(self)
 
-    def get_focused_widget(self):
-        return self.focused_widget
-
     def is_focused(self) -> bool:
         return self.focused
+
+    def iter_child_widgets(self):
+        yield self
+        if self.layout:
+            for widget in self.layout.iter_child_widgets():
+                yield widget
 
     def main_update(self):
         self.calc_maximum_size()

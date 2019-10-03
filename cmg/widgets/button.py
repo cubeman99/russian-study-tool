@@ -33,13 +33,19 @@ class Button(widgets.Widget):
             self.__text = text
             self.__surface = None
 
+    def click(self):
+        self.clicked.emit()
+
     def on_key_pressed(self, key, mod, text):
         if key in [Keys.K_RETURN, Keys.K_SPACE]:
-            self.clicked.emit()
+            self.click()
             
     def on_mouse_pressed(self, pos, button):
         if button == MouseButtons.LEFT:
-            self.clicked.emit()
+            self.click()
+
+    def on_pressed(self):
+        self.click()
 
     def on_draw(self, g):
         if not self.__surface:

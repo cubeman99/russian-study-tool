@@ -285,24 +285,10 @@ class CardEditWidget(widgets.Widget):
             self.select_card(self.__card)
 
     def delete_card(self):
+        return
         assert self.__card_database.has_card(self.__card)
-        Config.logger.info("Deleting card: " + repr(self.__card))
-        self.__card_database.remove_card(self.__card)
-        
-        # Remove card from card sets
-        for card_set in self.__application.iter_card_sets():
-            if card_set.has_card(self.__card):
-                assert not card_set.is_fixed_card_set()
-                Config.logger.info("Removing card from card set '{}'"
-                                    .format(card_set.get_name()))
-                card_set.remove_card(self.__card)
-                self.__application.save_card_set(card_set)
-        
-        Config.logger.info("Saving study data")
-        self.__application.save_study_data()
-        Config.logger.info("Saving card data")
-        self.__application.save_card_data()
-
+        self.__card_database.delete_card(self.__card)
+        self.__card_database.save_all_changes()
         self.select_card(None)
 
     def clear_attributes(self):
