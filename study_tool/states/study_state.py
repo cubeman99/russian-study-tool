@@ -20,7 +20,8 @@ from study_tool.russian.types import *
 from study_tool.russian.adjective import Adjective
 from study_tool.russian.noun import Noun
 from study_tool.russian.verb import Verb
-from study_tool.scheduler import Scheduler, ScheduleMode
+from study_tool.scheduler import Scheduler
+from study_tool.scheduler import SchedulerParams
 from study_tool.states.state import State, Button
 from study_tool.states.sub_menu_state import SubMenuState
 from study_tool import example_database
@@ -38,14 +39,12 @@ from study_tool.states.gui_state import GUIState
 
 class StudyParams:
     def __init__(self,
-                 random_side=False,
+                 random_side=True,
                  random_form=False,
-                 shown_side=CardSide.English,
-                 mode=ScheduleMode.Learning):
+                 shown_side=CardSide.English):
         self.random_side = random_side
         self.random_form = random_form
         self.shown_side = shown_side
-        self.mode = mode
 
 
 class ExampleThread(threading.Thread):
@@ -97,7 +96,8 @@ class ExampleThread(threading.Thread):
 class StudyState(State):
     def __init__(self,
                  card_set: StudySet,
-                 params=StudyParams()):
+                 study_params=StudyParams(),
+                 scheduler_params: SchedulerParams=None):
         super().__init__()
 
         # Formatting
@@ -116,7 +116,8 @@ class StudyState(State):
         # Study settings
         self.card_set = card_set
         self.shown_side = CardSide.English
-        self.params = params
+        self.params = study_params
+        self.__scheduler_params = scheduler_params
 
         # Entities
         self.__entity_reveal_root = None
@@ -164,8 +165,8 @@ class StudyState(State):
         self.__example_thread.start()
 
         self.scheduler = Scheduler(cards=self.card_set.cards,
-                                   mode=self.params.mode,
-                                   study_database=self.app.study_database)
+                                   study_database=self.app.study_database,
+                                   params=self.__scheduler_params)
         self.seen_cards = []
         self.card = None
         self.__study_data = None
@@ -189,7 +190,7 @@ class StudyState(State):
             center_y=self.margin_top / 2,
             left=screen_center_x + 80,
             right=screen_width - 32,
-            study_set=[c for c in self.scheduler.get_all_cards()])
+            study_set=self.card_set)
         self.add_entity(self.__proficiency_bar)
 
         self.__entity_prompt_text = self.add_entity(LabelBox(

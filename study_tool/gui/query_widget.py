@@ -15,6 +15,7 @@ from study_tool.card import Card
 from study_tool.card_set import StudySet
 from study_tool.card import CardSide
 from study_tool.query import CardQuery
+from study_tool.scheduler import SchedulerParams
 from study_tool.gui.card_list_table import CardListTable
 from study_tool.config import Config
 from study_tool.states.study_state import StudyParams
@@ -42,6 +43,7 @@ class QueryWidget(widgets.Widget):
         self.__study_database = application.study_database
         self.__cards = []
         self.__study_params = None
+        self.__scheduler_params = None
 
         card_type_options = ["Any"]
         card_type_options += [x.name for x in WordType]
@@ -102,7 +104,10 @@ class QueryWidget(widgets.Widget):
         self.__refresh_search_results()
         if self.__cards and self.__study_params:
             study_set = StudySet(name="Study Query", cards=self.__cards)
-            self.__application.push_study_state(study_set, params=self.__study_params)
+            self.__application.push_study_state(
+                study_set,
+                study_params=self.__study_params,
+                scheduler_params=self.__scheduler_params)
                 
     def __on_query_edited(self):
         """Called when the query widgets change."""
@@ -156,6 +161,10 @@ class QueryWidget(widgets.Widget):
         params.shown_side = (CardSide.English if self.__combo_side.get_index() == 1
                              else CardSide.Russian)
         self.__study_params = params
+
+        # Define the scheduler params
+        self.__scheduler_params = SchedulerParams(
+            max_repetitions=1 if self.__checkbox_only_once.is_checked() else 0)
         
         # Popluate the table
         self.__table_cards.clear()

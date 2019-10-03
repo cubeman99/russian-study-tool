@@ -17,7 +17,7 @@ from study_tool.states.read_text_state import ReadTextState
 from study_tool.states.state import *
 from study_tool.states.study_state import StudyParams
 from study_tool.states.sub_menu_state import SubMenuState
-from study_tool.scheduler import ScheduleMode
+from study_tool.scheduler import SchedulerParams
 from study_tool.entities.study_proficiency_bar import StudyProficiencyBar
 from study_tool.gui.query_widget import QueryWidget
 from study_tool.states.gui_state import GUIState
@@ -181,30 +181,31 @@ class MenuState(State):
             ("Quiz Random Sides",
              lambda: self.app.push_study_state(
                  card_set=card_set,
-                 params=StudyParams(random_side=True))),
+                 study_params=StudyParams(random_side=True))),
             ("Quiz Random Forms",
                 lambda: self.app.push_study_state(
                     card_set=card_set,
-                    params=StudyParams(random_side=True,
-                                       random_form=True))),
+                    study_params=StudyParams(random_side=True,
+                                             random_form=True))),
             ("Quiz English",
                 lambda: self.app.push_study_state(
                     card_set=card_set,
-                    params=StudyParams(shown_side=CardSide.English))),
+                    study_params=StudyParams(shown_side=CardSide.English))),
             ("Quiz Russian",
                 lambda: self.app.push_study_state(
                     card_set=card_set,
-                    params=StudyParams(shown_side=CardSide.Russian))),
+                    study_params=StudyParams(shown_side=CardSide.Russian))),
             ("Quiz New Cards",
                 lambda: self.app.push_study_state(
                     card_set=card_set,
-                    params=StudyParams(random_side=True,
-                                       mode=ScheduleMode.NewOnly))),
+                    card_query=CardQuery(max_proficiency=0),
+                    study_params=StudyParams(random_side=True),
+                    scheduler_params=SchedulerParams(max_repetitions=1))),
             ("Quiz Problem Cards",
                 lambda: self.app.push_study_state(
                     card_set=card_set,
                     card_query=CardQuery(max_score=0.9),
-                    params=StudyParams(random_side=True))),
+                    study_params=StudyParams(random_side=True))),
             ("Query",
                 lambda: self.app.push_state(GUIState(
                     widget=QueryWidget(self.app, card_set.cards), title="Study Query"))),

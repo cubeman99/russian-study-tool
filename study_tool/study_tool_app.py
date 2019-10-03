@@ -14,27 +14,28 @@ from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
 from enum import IntEnum
+from study_tool.card_database import CardDatabase
 from study_tool.card_set import *
 from study_tool.card_set import StudySet
 from study_tool.config import Config
-from study_tool.states.menu_state import MenuState
-from study_tool.states.study_state import StudyState
-from study_tool.states.card_list_state import CardListState
-from study_tool.states.gui_state import GUIState
+from study_tool.example_database import ExampleDatabase
 from study_tool.gui.card_edit_widget import CardEditWidget
 from study_tool.gui.card_set_edit_widget import CardSetEditWidget
 from study_tool.gui.related_cards_widget import RelatedCardsWidget
 from study_tool.gui.query_widget import QueryWidget
-from study_tool.card_database import CardDatabase
-from study_tool.scheduler import ScheduleMode
-from study_tool.states.keyboard_state import KeyboardState
+from study_tool.query import CardQuery
 from study_tool.russian import conjugation
-from study_tool.word_database import WordDatabase
-from study_tool.example_database import ExampleDatabase
+from study_tool.russian.word import WordSourceEnum
+from study_tool.scheduler import SchedulerParams
+from study_tool.states.menu_state import MenuState
+from study_tool.states.study_state import StudyState
+from study_tool.states.card_list_state import CardListState
+from study_tool.states.gui_state import GUIState
+from study_tool.states.keyboard_state import KeyboardState
 from study_tool.states.read_text_state import ReadTextState
 from study_tool.states.study_state import StudyParams
 from study_tool.study_database import StudyDatabase
-from study_tool.query import CardQuery
+from study_tool.word_database import WordDatabase
 
 DEAD_ZONE = 0.01
 
@@ -111,9 +112,11 @@ class StudyCardsApp(Application):
         #self.push_state(GUIState(widget=CardSetEditWidget(test_set, self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=RelatedCardsWidget(test_card, self), title="Edit Related Cards"))
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
-        #self.push_study_state(test_set, StudyParams(random_side=True))
+        self.push_study_state(test_set,
+                              study_params=StudyParams(random_side=True),
+                              scheduler_params=SchedulerParams(max_repetitions=1))
         #self.push_state(GUIState(widget=QueryWidget(self), title="Study Query"))
-
+        
         #self.save_card_set(self.root["nouns"]["house"])
 
         self.input.bind(pygame.K_ESCAPE, pressed=self.pop_state)
@@ -237,12 +240,21 @@ class StudyCardsApp(Application):
                 cards.append(card)
         return StudySet(cards=cards)
 
-    def push_study_state(self, card_set: CardSet, card_query=None, params=None):
+    def push_study_state(self,
+                         card_set: CardSet,
+                         card_query=None,
+                         study_params=None,
+                         scheduler_params=SchedulerParams()):
+        """
+        Begin a new study state.
+        """
         if card_query:
             card_set = self.query_cards(card_query, card_set=card_set)
-        if not params:
-            params = StudyParams()
-        self.push_state(StudyState(card_set, params=params))
+        if not study_params:
+            study_params = StudyParams()
+        self.push_state(StudyState(card_set,
+                                   study_params=study_params,
+                                   scheduler_params=scheduler_params))
 
     def push_card_list_state(self, card_set):
         self.push_state(CardListState(card_set))
@@ -263,66 +275,6 @@ class StudyCardsApp(Application):
             Config.logger.info("Saving word database due to updates from card '{}'".format(card))
             self.save_word_database()
         return card.word
-
-    def draw_completion_bar(self, g, center_y, left, right, card_set):
-        cards = []
-        if isinstance(card_set, list):
-            cards = card_set
-        else:
-            cards = list(card_set.cards)
-        total_cards = len(cards)
-
-        font = self.font_bar_text
-        left_margin = g.measure_text("100%", font=font)[0] + 4
-        right_margin = g.measure_text(str(9999), font=font)[0] + 4
-        bar_height = g.measure_text("1", font=font)[1]
-        bar_width = right - left - left_margin - right_margin
-        top = center_y - (bar_height / 2)
-
-        if False:
-            cards = sorted(
-                cards, key=lambda x: x.get_history_score(), reverse=True)
-            for index, card in enumerate(cards):
-                score = card.get_history_score()
-                x = left + left_margin + bar_width * \
-                    (float(index) / len(cards))
-                w = max(1, math.ceil(float(bar_width) / len(cards)))
-                c = math.lerp(color.RED, color.GREEN, score)
-                h = math.ceil(score * bar_height)
-                g.fill_rect(x, top + bar_height - h, w, h, color=c)
-        else:
-            x = left + left_margin
-            score = 0
-            for level in range(Config.proficiency_levels, -1, -1):
-                count = len([c for c in cards if c.proficiency_level == level])
-                if count > 0:
-                    score += count * max(0, level - 1)
-                    level_width = int(
-                        round(bar_width * (float(count) / total_cards)))
-                    if x + level_width > left + left_margin + bar_width:
-                        level_width = (left + left_margin + bar_width) - x
-                    g.fill_rect(x, top, level_width, bar_height,
-                                color=Config.proficiency_level_colors[level])
-                    x += level_width
-            score /= max(1.0, float((Config.proficiency_levels - 1) * len(cards)))
-            score = int(round(score * 100))
-        score = 0
-        g.draw_text(left + left_margin - 4, center_y, text="{}%".format(score),
-                    color=color.BLACK, align=Align.MiddleRight, font=font)
-        g.draw_text(right - right_margin + 4, center_y, text=str(total_cards),
-                    color=color.BLACK, align=Align.MiddleLeft, font=font)
-
-    def draw_text_box(self, text, x, y, width, height,
-                      border_color=color.BLACK, border_width=2,
-                      background_color=color.WHITE, text_color=color.BLACK):
-        r = pygame.Rect(x, y, 0, 0)
-        r.inflate_ip(width, height)
-        self.graphics.fill_rect(
-            r.x, r.y, r.width, r.height, color=background_color)
-        self.graphics.draw_rect(
-            r.x, r.y, r.width, r.height, thickness=2, color=border_color)
-        self.graphics.draw_text(
-            x, y, text, align=Align.Centered, color=text_color)
 
     @property
     def state(self):
@@ -354,12 +306,12 @@ class StudyCardsApp(Application):
     def load_word_database(self):
         path = os.path.join(self.root_path, self.word_data_file_name)
         if os.path.isfile(path):
-            Config.logger.info("Loading word data from: " + path)
-            self.word_database.load(path, custom=False)
+            Config.logger.info("Loading cooljugator word data from: " + path)
+            self.word_database.load(path, source_type=WordSourceEnum.Cooljugator)
         path = os.path.join(self.root_path, self.custom_word_data_file_name)
         if os.path.isfile(path):
             Config.logger.info("Loading custom word data from: " + path)
-            self.word_database.load(path, custom=True)
+            self.word_database.load(path, source_type=WordSourceEnum.Custom)
         Config.logger.info("Loading {} words".format(len(self.word_database.words)))
 
     def save_example_database(self):

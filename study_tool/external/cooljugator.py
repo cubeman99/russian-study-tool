@@ -78,6 +78,7 @@ class Cooljugator:
                     self.__error_words.add(key)
                     traceback.print_exc()
         if result:
+            result.set_complete(True)
             with self.__lock:
                 if key in self.__error_words:
                     self.__error_words.remove(key)
@@ -132,7 +133,6 @@ class Cooljugator:
         else:
             noun.gender = None
             noun.indeclinable = True
-        noun.complete = True
         return noun
 
     def download_adjective_info(self, dictionary_form) -> Adjective:
@@ -161,7 +161,6 @@ class Cooljugator:
             adj.short_form[gender] = self.__get_conjugation(root, "short_" + letter)
         except:
             adj.short_form[gender] = AccentedText("-")
-        adj.complete = True
         return adj
 
     def download_verb_info(self, infinitive) -> Verb:
@@ -241,7 +240,6 @@ class Cooljugator:
         #    russian = russian.replace(a, b)
         #  verb.examples.append((russian, english))
 
-        verb.complete = True
         return verb
             
     def serialize(self) -> dict:

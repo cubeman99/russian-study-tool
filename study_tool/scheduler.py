@@ -48,29 +48,39 @@ def choose_weighted_by_age(values, rep):
                                key=lambda x: max(1, (rep - x.rep) * (rep - x.rep)))
 
 
-class ScheduleMode(IntEnum):
-    Learning = 1
-    NewOnly = 2
+class SchedulerParams:
+    def __init__(self, max_repetitions=0):
+        """
+        :param max_repetitions: Max number of times a card can be shown, 0 for infinite.
+        """
+        self.max_repetitions = max_repetitions
 
 
 class ProficiencySet:
-    def __init__(self, level, cards):
-        self.cards = list(cards)
+    def __init__(self, level, cards=()):
+        self.cards = set(cards)
         self.rep = None
         self.level = level
 
     def remove(self, card):
-        index = self.cards.index(card)
-        if index < 0:
-            raise Exception(card)
-        del self.cards[index]
+        assert card in self.cards
+        self.cards.remove(card)
 
     def add(self, card):
-        self.cards.append(card)
+        self.cards.add(card)
 
     def available_cards(self, rep, age):
         return [c for c in self.cards
                 if c.rep is None or rep - c.rep >= age]
+
+
+class CardSchedulingInfo:
+    def __init__(self, card: Card, study_data):
+        self.card = card
+        self.study_data = study_data
+        self.rep = None
+        self.age = 0
+        self.shown_count = 0
 
 
 class Scheduler:
@@ -78,69 +88,89 @@ class Scheduler:
     Handles scheduling the order of cards to study.
     """
 
-    def __init__(self, cards, study_database, mode=ScheduleMode.Learning):
-        cards = list(cards)
-        self.mode = mode
-        self.study_database = study_database
-
-        self.proficiency_levels = Config.proficiency_levels
+    def __init__(self, cards, study_database, params=None):
+        """
+        Constructs the scheduler.
+        """
+        self.__study_database = study_database
+        self.__params = params
+        if params is None:
+            self.__params = SchedulerParams()
+           
         self.proficiency_level_intervals = Config.proficiency_level_intervals
         self.new_card_interval = Config.new_card_interval
         self.min_repeat_interval = Config.min_repeat_interval
 
-        self.sets = {}
-        for level in range(0, self.proficiency_levels + 1):
-            self.sets[level] = ProficiencySet(level=level, cards=[])
+        # Create card info
+        self.__card_info_dict = {}
+        self.__cards = set()
         for card in cards:
-            card.rep = None
-            study_data = self.study_database.get_card_study_data(card)
-            self.sets[study_data.get_proficiency_level()].add(card)
+            study_data = self.__study_database.get_card_study_data(card)
+            info = CardSchedulingInfo(card=card, study_data=study_data)
+            self.__cards.add(info)
+            self.__card_info_dict[card] = info
 
-        self.rep = 0
+        # Group cards into proficiency sets
+        self.__sets = {}
+        for level in range(0, Config.proficiency_levels + 1):
+            self.__sets[level] = ProficiencySet(level=level)
+        for card in self.__cards:
+            self.__sets[card.study_data.get_proficiency_level()].add(card)
 
-    def get_all_cards(self):
-        for proficiency_set in self.sets.values():
-            for card in proficiency_set.cards:
-                yield card
+        self.__rep = 0
+
+    def reset(self):
+        """Reset the scheduler."""
+        for level in range(0, Config.proficiency_levels + 1):
+            self.__sets[level] = ProficiencySet(level=level, cards=[])
+        for card in self.__cards:
+            self.__sets[card.study_data.get_proficiency_level()].add(card)
+        self.__rep = 0
 
     def mark(self, card: Card, knew_it: bool):
-        study_data = self.study_database.get_card_study_data(card)
-        self.sets[study_data.get_proficiency_level()].remove(card)
-        self.study_database.mark_card(card, knew_it)
-        self.sets[study_data.get_proficiency_level()].add(card)
-        card.rep = self.rep
+        """Mark a card as "knew it" or "didn't know it"."""
+        info = self.__card_info_dict[card]
+        self.__sets[info.study_data.get_proficiency_level()].remove(info)
+        self.__study_database.mark_card(card, knew_it)
+        self.__sets[info.study_data.get_proficiency_level()].add(info)
+        info.rep = self.__rep
+        info.shown_count += 1
+
+        # Check if we have shown this card too many times
+        if (self.__params.max_repetitions > 0 and
+                info.shown_count >= self.__params.max_repetitions):
+            self.__sets[info.study_data.get_proficiency_level()].remove(info)
 
     def next(self) -> Card:
-        card = self.__get_next_card()
-        self.rep += 1
-        return card
+        """Get the next scheduled card."""
+        info = self.__get_next_card()
+        self.__rep += 1
+        return info.card if info else None
 
-    def __get_next_card(self) -> Card:
+    def __get_next_card(self) -> CardSchedulingInfo:
+        """Get the next scheduled CardSchedulingInfo."""
         card = None
 
-        if self.mode == ScheduleMode.NewOnly:
-            card = self.__get_new_card()
-            return card
-
-        if self.rep % self.new_card_interval == 0:
+        # Show a new card every new card interval
+        if self.__rep % self.new_card_interval == 0:
             card = self.__get_new_card()
             if card is not None:
                 return card
 
         for min_interval in range(self.min_repeat_interval, -1, -1):
             available_sets = {}
-            for proficiency_set in self.sets.values():
+            for proficiency_set in self.__sets.values():
                 if proficiency_set.level != 0:
                     cards = proficiency_set.available_cards(
-                        self.rep, min_interval)
+                        self.__rep, min_interval)
                     if len(cards) > 0:
                         available_sets[proficiency_set] = cards
 
             if len(available_sets) > 0:
                 next_set = choose_weighted_by_age(
-                    list(available_sets.keys()), rep=self.rep)
+                    list(available_sets.keys()), rep=self.__rep)
                 card = choose_weighted_by_age(
-                    available_sets[next_set], rep=self.rep)
+                    available_sets[next_set], rep=self.__rep)
                 return card
 
             card = self.__get_new_card()
@@ -149,9 +179,8 @@ class Scheduler:
 
         return None
 
-    def __get_new_card(self) -> Card:
-        if len(self.sets[0].cards) == 0:
+    def __get_new_card(self) -> CardSchedulingInfo:
+        """Returns the next scheduled 'new' CardSchedulingInfo."""
+        if not self.__sets[0].cards:
             return None
-        card = choose(self.sets[0].cards)
-        card.rep = self.rep
-        return card
+        return choose(self.__sets[0].cards)

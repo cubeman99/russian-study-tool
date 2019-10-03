@@ -63,7 +63,8 @@ class ReadWriteLock:
         if self.__verbose:
             print("ACQUIRED WRITE: " + str(self.__readers))
         while self.__readers > 0:
-            traceback.print_stack()
+            if self.__verbose:
+                traceback.print_stack()
             self.__read_ready.wait()
         return CallOnExit(self.release_write)
 

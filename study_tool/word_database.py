@@ -7,6 +7,7 @@ from cmg.event import Event
 from cmg.utilities.read_write_lock import ReadWriteLock
 from study_tool.russian.types import *
 from study_tool.russian.word import *
+from study_tool.russian.word import WordSourceEnum
 from study_tool.russian.adjective import Adjective
 from study_tool.russian.noun import Noun
 from study_tool.russian.verb import Verb
@@ -175,7 +176,7 @@ class WordDatabase:
             os.rename(temp_path, path)
             self.__is_saving = False
 
-    def load(self, path: str, custom: bool):
+    def load(self, path: str, source_type: WordSourceEnum):
         """Load word data from a file."""
         with self.__lock_save:
             with open(path, "r", encoding="utf8") as f:
@@ -185,7 +186,7 @@ class WordDatabase:
                     word_data = json.load(f)
                 else:
                     raise Exception(path)
-            self.deserialize(word_data, custom=custom)
+            self.deserialize(word_data, source_type=source_type)
 
     def serialize(self) -> dict:
         """Serialize word data."""
@@ -194,9 +195,8 @@ class WordDatabase:
 
             # Serialize word data
             for _, word in sorted(self.words.items(), key=lambda x: (x[0][1], x[0][0])):
-                if (word.word_type in self.__WORD_TYPE_TYPES and
-                        word.is_complete() and
-                        not word.is_custom()):
+                if (word.get_word_type() in self.__WORD_TYPE_TYPES and
+                        word.get_source() == WordSourceEnum.Cooljugator):
                     word_data = Word.serialize(word)
                     data["words"].append(word_data)
 
@@ -204,13 +204,12 @@ class WordDatabase:
 
             return data
 
-    def deserialize(self, data: dict, custom=False):
+    def deserialize(self, data: dict, source_type: WordSourceEnum):
         """
         Deserialize word data.
 
         :param data: The dictionary of serialized word data.
-        :param custom: True to mark loaded words as "Custom", which are not
-                       saved.
+        :param source_type: Source type for the words.
         """
         with self.__lock.acquire_write():
             # Deserialize list of words with download errors
@@ -224,7 +223,7 @@ class WordDatabase:
                 Word.deserialize(word, word_data)
                 if word_type.name in word_data:
                     word.deserialize(word_data[word_type.name])
-                word.set_custom(custom)
+                word.set_source(source_type)
                 self.add_word(word)
 
     def __add_to_dictionary(self, form: AccentedText, word: Word):
