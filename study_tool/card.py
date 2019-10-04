@@ -89,10 +89,6 @@ class Card:
         self.word = None
         self.__study_data = None
 
-        # used by Scheduler
-        self.rep = None
-        self.age = 0
-
     def set(self, other):
         """Sets the card data based on a copy."""
         self.__word_type = other.get_word_type()

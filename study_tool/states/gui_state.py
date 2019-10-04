@@ -25,9 +25,11 @@ from study_tool import card
 
 class GUIState(State):
 
-    def __init__(self, widget=None, title="Untitled GUI"):
+    def __init__(self, widget=None, title=None):
         super().__init__()
-        self.__title = title
+        if title is None and widget:
+            title = widget.get_window_title()
+        self.__title = AccentedText(title)
         self.__widget = widget
         self.__cursor_item = None
         self.__cursor_pos = 0.0
@@ -40,19 +42,29 @@ class GUIState(State):
         
     def on_key_pressed(self, key, mod, text):
         if self.__widget:
-            if key == Keys.K_TAB:
-                if KeyMods.LSHIFT in mod:
-                    self.__widget.cycle_next_focus(reverse=True)
-                else:
-                    self.__widget.cycle_next_focus(reverse=False)
+
+            # Check for tab to change focus
+            if key == Keys.K_TAB and mod == KeyMods.NONE:
+                self.__widget.cycle_next_focus(reverse=False)
+                return
+            elif key == Keys.K_TAB and mod == KeyMods.LSHIFT:
+                self.__widget.cycle_next_focus(reverse=True)
+                return
+
+            # Notify widgets
             widget = self.__widget.get_focused_widget()
             while widget:
                 if widget.on_key_pressed(key, mod, text):
                     break
+                for shortcut in widget.get_key_shortcuts():
+                    if shortcut.matches(key, mod):
+                        if shortcut.invoke():
+                            break
                 widget = widget.get_parent_widget()
         
     def on_key_released(self, key, mod):
         if self.__widget:
+            # Notify widgets
             widget = self.__widget.get_focused_widget()
             while widget:
                 if widget.on_key_released(key, mod):
@@ -128,6 +140,9 @@ class GUIState(State):
             self.__widget.on_close()
             
     def click(self):
+        if not self.__cursor_item and self.__widget.get_focused_widget():
+            self.__cursor_item = self.__widget.get_focused_widget()
+            self.__cursor_pos = 0.5
         if self.__cursor_item:
             self.__cursor_item.on_pressed()
 
@@ -202,10 +217,10 @@ class GUIState(State):
         State.draw(self, g)
 
         # Draw title
-        g.draw_text(32, self.margin_top / 2,
-                    text=self.__title,
-                    color=Config.title_color,
-                    align=Align.MiddleLeft)
+        g.draw_accented_text(32, self.margin_top / 2,
+                             text=self.__title,
+                             color=Config.title_color,
+                             align=Align.MiddleLeft)
 
     def __close(self):
         if self.__widget:

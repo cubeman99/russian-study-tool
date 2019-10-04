@@ -6,6 +6,7 @@ from study_tool.card import Card
 from study_tool.card_set import CardSet
 from study_tool.config import Config
 from study_tool.gui.generic_table_widget import GenericTableWidget
+from study_tool.gui.card_set_browser_widget import CardSetBrowserWidget
 
 
 class AddCardToSetWidget(widgets.Widget):
@@ -15,6 +16,7 @@ class AddCardToSetWidget(widgets.Widget):
 
     def __init__(self, card: Card, application):
         super().__init__()
+        self.set_window_title("Card Sets Containing {}".format(card.get_russian().text))
         self.__card = card
         self.__application = application
         self.__card_database = application.card_database
@@ -28,12 +30,15 @@ class AddCardToSetWidget(widgets.Widget):
         self.__button_apply = widgets.Button("Apply")
         self.__button_create_set = widgets.Button("Create New Card Set")
         self.__table_card_sets = GenericTableWidget()
-        self.__table_card_sets.add_text_column(lambda item: item.get_name())
-        self.__table_card_sets.add_button_column("Remove", self.__on_card_set_clicked)
+        self.__table_card_sets.add_text_column(lambda item: item.get_name(), stretch=1)
+        self.__table_card_sets.add_button_column("Remove", self.__on_card_set_clicked, stretch=0)
         self.__table_search_results = GenericTableWidget()
         self.__table_search_results.add_text_column(lambda item: item.get_name())
-        self.__table_search_results.add_button_column("Add", self.__on_search_card_clicked)
+        self.__table_search_results.add_button_column("Add", self.__on_search_card_set_clicked)
         self.__label_result_count = widgets.Label("<result-count>")
+        self.__card_set_browser = CardSetBrowserWidget(
+            application.card_database.get_root_package(),
+            close_on_select=False)
 
         # Create layouts
         layout_left = widgets.VBoxLayout()
@@ -49,6 +54,7 @@ class AddCardToSetWidget(widgets.Widget):
         layout_right.add(layout_search_box)
         layout_right.add(self.__label_result_count)
         layout_right.add(widgets.AbstractScrollArea(self.__table_search_results))
+        layout_right.add(self.__card_set_browser)
         layout_right.add(self.__button_create_set)
         layout = widgets.VBoxLayout()
         layout.add(widgets.HBoxLayout(layout_left, layout_right))
@@ -59,6 +65,7 @@ class AddCardToSetWidget(widgets.Widget):
         self.__box_search.return_pressed.connect(self.__on_search_return_pressed)
         self.__button_apply.clicked.connect(self.apply)
         self.__button_create_set.clicked.connect(self.__on_click_create_set)
+        self.__card_set_browser.card_set_selected.connect(self.__on_select_card_set)
 
         self.select_card(card)
         self.__box_search.focus()
@@ -123,13 +130,20 @@ class AddCardToSetWidget(widgets.Widget):
         """Called when Create New Card Set is clicked."""
         pass
     
-    def __on_search_card_clicked(self, card_set: CardSet):
-        """Called when a card in the search results is clicked."""
+    def __on_search_card_set_clicked(self, card_set: CardSet):
+        """Called when a card set in the search results is clicked."""
         self.add_card_set(card_set, save=True)
 
     def __on_card_set_clicked(self, card_set: CardSet):
-        """Called when a card in the card sets is clicked."""
+        """Called when a card set in the card set list is clicked."""
         self.remove_card_set(card_set)
+
+    def __on_select_card_set(self, card_set: CardSet):
+        """Called when a card set in the card set browser is clicked."""
+        if self.__table_card_sets.contains(card_set):
+            self.remove_card_set(card_set)
+        else:
+            self.add_card_set(card_set)
 
     def __on_search_return_pressed(self):
         """Called when pressing enter in the search box."""

@@ -159,11 +159,20 @@ class CardSet(StudySet):
 class CardSetPackage(StudySet):
     def __init__(self, name, path, parent=None):
         # NOTE: Purposefully avoiding super __init__ here
-        self.name = name
+        self.name = AccentedText(name)
         self.path = path
         self.parent = parent
         self.card_sets = []
         self.packages = []
+
+    def get_parent(self):
+        return self.parent
+
+    def get_packages(self) -> list:
+        return self.packages
+
+    def get_card_sets(self) -> list:
+        return self.card_sets
 
     def all_card_sets(self):
         for package in self.packages:

@@ -79,7 +79,6 @@ class CardSchedulingInfo:
         self.card = card
         self.study_data = study_data
         self.rep = None
-        self.age = 0
         self.shown_count = 0
 
 

@@ -11,6 +11,7 @@ from study_tool.russian.types import Tense
 from study_tool.russian.types import WordType
 from study_tool.russian.word import AccentedText
 from study_tool.russian.word import Word
+from study_tool.russian.word import WordSourceEnum
 from study_tool.russian.noun import Noun
 from study_tool.russian.verb import Verb
 from study_tool.russian.adjective import Adjective
@@ -64,11 +65,12 @@ class Cooljugator:
             try:
                 if word_type == WordType.Adjective:
                     result = self.download_adjective_info(name)
-                if word_type == WordType.Noun:
+                elif word_type == WordType.Noun:
                     result = self.download_noun_info(name)
-                if word_type == WordType.Verb:
+                elif word_type == WordType.Verb:
                     result = self.download_verb_info(name)
-                raise Exception(word_type)
+                else:
+                    raise Exception(word_type)
             except Cooljugator404Exception:
                 pass
             except Exception:
@@ -79,6 +81,7 @@ class Cooljugator:
                     traceback.print_exc()
         if result:
             result.set_complete(True)
+            result.set_source(WordSourceEnum.Cooljugator)
             with self.__lock:
                 if key in self.__error_words:
                     self.__error_words.remove(key)

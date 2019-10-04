@@ -16,13 +16,13 @@ class Keys(IntEnum):
     K_ESCAPE     = pygame.K_ESCAPE       # ^[      escape
     K_SPACE      = pygame.K_SPACE        #         space
     K_EXCLAIM    = pygame.K_EXCLAIM      # !       exclaim
-    K_QUOTEDBL   = pygame.K_QUOTEDBL     # "       quotedbl
-    K_HASH       = pygame.K_HASH         # #       hash
+    K_DOUBLE_QUOTE = pygame.K_QUOTEDBL     # "       quotedbl
+    K_POUND        = pygame.K_HASH         # #       hash
     K_DOLLAR     = pygame.K_DOLLAR       # $       dollar
     K_AMPERSAND  = pygame.K_AMPERSAND    # &       ampersand
     K_QUOTE      = pygame.K_QUOTE        #         quote
-    K_LEFTPAREN  = pygame.K_LEFTPAREN    # (       left parenthesis
-    K_RIGHTPAREN = pygame.K_RIGHTPAREN   # )       right parenthesis
+    K_OPEN_PAREN  = pygame.K_LEFTPAREN    # (       left parenthesis
+    K_CLOSE_PAREN = pygame.K_RIGHTPAREN   # )       right parenthesis
     K_ASTERISK   = pygame.K_ASTERISK     # *       asterisk
     K_PLUS       = pygame.K_PLUS         # +       plus sign
     K_COMMA      = pygame.K_COMMA        # ,       comma
@@ -46,10 +46,10 @@ class Keys(IntEnum):
     K_GREATER    = pygame.K_GREATER      # >       greater-than sign
     K_QUESTION   = pygame.K_QUESTION     # ?       question mark
     K_AT         = pygame.K_AT           # @       at
-    K_LEFTBRACKE = pygame.K_LEFTBRACKET  # [       left bracket
-    K_BACKSLASH  = pygame.K_BACKSLASH    # \       backslash
-    K_RIGHTBRACK = pygame.K_RIGHTBRACKET #  ]      right bracket
-    K_CARET      = pygame.K_CARET        # ^       caret
+    K_OPEN_BRACK  = pygame.K_LEFTBRACKET  # [       left bracket
+    K_BACKSLASH   = pygame.K_BACKSLASH    # \       backslash
+    K_CLOSE_BRACK = pygame.K_RIGHTBRACKET #  ]      right bracket
+    K_CARET       = pygame.K_CARET        # ^       caret
     K_UNDERSCORE = pygame.K_UNDERSCORE   # _       underscore
     K_BACKQUOTE  = pygame.K_BACKQUOTE    # `       grave
     K_A          = pygame.K_a            # a       a
@@ -168,6 +168,131 @@ class MouseButtons(IntEnum):
     RIGHT = 3
     WHEEL_UP = 4
     WHEEL_DOWN = 5
+
+
+class KeyShortcut:
+
+    MOD_NAMES = {
+        "ctrl": KeyMods.LCTRL,
+        "shift": KeyMods.LSHIFT,
+        "alt": KeyMods.LALT,
+        "meta": KeyMods.META,
+        "win": KeyMods.META,
+        "caps": KeyMods.CAPS,
+        "num": KeyMods.NUMLOCK,
+        "mode": KeyMods.MODE,
+        }
+
+    KEY_NAMES = {
+        "left": Keys.K_LEFT,
+        "right": Keys.K_RIGHT,
+        "up": Keys.K_UP,
+        "down": Keys.K_DOWN,
+        "home": Keys.K_HOME,
+        "end": Keys.K_END,
+        "insert": Keys.K_INSERT,
+        "ins": Keys.K_INSERT,
+        "delete": Keys.K_DELETE,
+        "del": Keys.K_DELETE,
+        "pageup": Keys.K_PAGEUP,
+        "pagedown": Keys.K_PAGEDOWN,
+        "pgup": Keys.K_PAGEUP,
+        "pgdown": Keys.K_PAGEDOWN,
+        "space": Keys.K_SPACE,
+        "enter": Keys.K_SPACE,
+        "return": Keys.K_RETURN,
+        "ret": Keys.K_RETURN,
+        "escape": Keys.K_ESCAPE,
+        "esc": Keys.K_ESCAPE,
+        ";": Keys.K_SEMICOLON,
+        ".": Keys.K_PERIOD,
+        ",": Keys.K_COMMA,
+        "[": Keys.K_OPEN_BRACK,
+        "]": Keys.K_CLOSE_BRACK,
+        "-": Keys.K_MINUS,
+        "=": Keys.K_EQUALS,
+        "'": Keys.K_QUOTE,
+        "/": Keys.K_SLASH,
+        "0": Keys.K_0,
+        "1": Keys.K_1,
+        "2": Keys.K_2,
+        "3": Keys.K_3,
+        "4": Keys.K_4,
+        "5": Keys.K_5,
+        "6": Keys.K_6,
+        "7": Keys.K_7,
+        "8": Keys.K_8,
+        "9": Keys.K_9,
+        "f1": Keys.K_F1,
+        "f2": Keys.K_F2,
+        "f3": Keys.K_F3,
+        "f4": Keys.K_F4,
+        "f5": Keys.K_F5,
+        "f6": Keys.K_F6,
+        "f7": Keys.K_F7,
+        "f8": Keys.K_F8,
+        "f9": Keys.K_F9,
+        "f10": Keys.K_F10,
+        "f11": Keys.K_F11,
+        "f12": Keys.K_F12,
+        "f13": Keys.K_F13,
+        "f14": Keys.K_F14,
+        "f15": Keys.K_F15,
+        "a": Keys.K_A,
+        "b": Keys.K_B,
+        "c": Keys.K_C,
+        "d": Keys.K_D,
+        "e": Keys.K_E,
+        "f": Keys.K_F,
+        "g": Keys.K_G,
+        "h": Keys.K_H,
+        "i": Keys.K_I,
+        "j": Keys.K_J,
+        "k": Keys.K_K,
+        "l": Keys.K_L,
+        "m": Keys.K_M,
+        "n": Keys.K_N,
+        "o": Keys.K_O,
+        "p": Keys.K_P,
+        "q": Keys.K_Q,
+        "r": Keys.K_R,
+        "s": Keys.K_S,
+        "y": Keys.K_Y,
+        "u": Keys.K_U,
+        "v": Keys.K_V,
+        "w": Keys.K_W,
+        "x": Keys.K_X,
+        "y": Keys.K_Y,
+        "z": Keys.K_Z,
+        }
+
+    def __init__(self, pattern: str, callback=None):
+        if isinstance(pattern, KeyShortcut):
+            self.__keys = set(pattern.__keys)
+            self.__mods = pattern.__mods
+            self.__callback = callback if callback else pattern.callback
+        else:
+            self.__keys = set()
+            self.__mods = KeyMods.NONE
+            self.__callback = callback
+            tokens = [x.strip().lower() for x in pattern.split("+")]
+            for token in tokens:
+                if token in self.MOD_NAMES:
+                    self.__mods |= self.MOD_NAMES[token]
+                if token in self.KEY_NAMES:
+                    self.__keys.add(self.KEY_NAMES[token])
+
+    def invoke(self):
+        if self.__callback:
+            self.__callback()
+
+    def get_callback(self):
+        return self.__callback
+
+    def matches(self, key, mods):
+        if self.__keys and key not in self.__keys:
+            return False
+        return mods == self.__mods
 
 
 class Input:

@@ -22,7 +22,10 @@ from study_tool.example_database import ExampleDatabase
 from study_tool.gui.card_edit_widget import CardEditWidget
 from study_tool.gui.card_set_edit_widget import CardSetEditWidget
 from study_tool.gui.related_cards_widget import RelatedCardsWidget
+from study_tool.gui.add_card_to_set_widget import AddCardToSetWidget
 from study_tool.gui.query_widget import QueryWidget
+from study_tool.gui.card_set_browser_widget import CardSetBrowserWidget
+from study_tool.gui.card_set_browser_widget import CardSetPackageBrowserWidget
 from study_tool.query import CardQuery
 from study_tool.russian import conjugation
 from study_tool.russian.word import WordSourceEnum
@@ -111,11 +114,12 @@ class StudyCardsApp(Application):
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["nouns"]["house"], self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=CardSetEditWidget(test_set, self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=RelatedCardsWidget(test_card, self), title="Edit Related Cards"))
+        self.push_state(GUIState(widget=AddCardToSetWidget(test_card, self), title="Add to Card Set"))
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
-        self.push_study_state(test_set,
-                              study_params=StudyParams(random_side=True),
-                              scheduler_params=SchedulerParams(max_repetitions=1))
-        #self.push_state(GUIState(widget=QueryWidget(self), title="Study Query"))
+        #self.push_study_state(test_set, study_params=StudyParams(random_side=True), scheduler_params=SchedulerParams(max_repetitions=1))
+        #self.push_state(GUIState(widget=QueryWidget(self, test_set.get_cards()), title="Study Query"))
+        #self.push_gui_state(CardSetBrowserWidget(self.card_database.get_root_package()))
+        #self.push_gui_state(CardSetPackageBrowserWidget(self.card_database.get_root_package()))
         
         #self.save_card_set(self.root["nouns"]["house"])
 
@@ -222,6 +226,10 @@ class StudyCardsApp(Application):
         else:
             self.states[-1].on_end()
             del self.states[-1]
+
+    def push_gui_state(self, widget, title=None):
+        state = GUIState(widget=widget, title=title)
+        self.push_state(state)
 
     def push_state(self, state):
         self.states.append(state)

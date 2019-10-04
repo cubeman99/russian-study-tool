@@ -16,7 +16,7 @@ from study_tool.card_set import StudySet
 from study_tool.card import CardSide
 from study_tool.query import CardQuery
 from study_tool.scheduler import SchedulerParams
-from study_tool.gui.card_list_table import CardListTable
+from study_tool.gui.generic_table_widget import GenericTableWidget
 from study_tool.config import Config
 from study_tool.states.study_state import StudyParams
 
@@ -49,7 +49,9 @@ class QueryWidget(widgets.Widget):
         card_type_options += [x.name for x in WordType]
 
         # Create widgets
-        self.__table_cards = CardListTable(select_text="+")
+        self.__table_cards = GenericTableWidget()
+        self.__table_cards.add_text_column(lambda card: card.get_russian().text)
+        self.__table_cards.add_text_column(lambda card: card.get_english().text)
         self.__box_count = widgets.TextEdit("60")
         self.__combo_proficiency = widgets.ComboBox(["New", "Red", "Orange", "Yellow", "Any"], index=4)
         self.__box_score = widgets.TextEdit("1.0")
@@ -169,9 +171,8 @@ class QueryWidget(widgets.Widget):
         # Popluate the table
         self.__table_cards.clear()
         for card, study_data in cards:
-            row = self.__table_cards.add(card, enabled=True)
             color = Config.proficiency_level_colors[study_data.get_proficiency_level()]
-            row.set_color(color)
+            row = self.__table_cards.add(card, color=color)
         cards = [card for card, _ in cards]
 
         self.__cards = cards

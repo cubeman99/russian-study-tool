@@ -73,9 +73,9 @@ class Expandable2DArray:
     def remove(self, item):
         row, col = self.find(item)
         if row is not None:
-            self.delete(row, col)
+            self.remove_at(row, col)
 
-    def delete(self, row: int, col: int):
+    def remove_at(self, row: int, col: int):
         if row in self.__rows and col in self.__rows[row]:
             del self.__rows[row][col]
             if not self.__rows[row]:
@@ -86,10 +86,18 @@ class GridLayout(Layout):
     def __init__(self):
         super().__init__()
         self.__children = Expandable2DArray()
+        self.__column_stretch_factors = {}
+        self.__row_stretch_factors = {}
 
     def get_children(self) -> list:
         """Returns the list of children."""
         return list(self.__children.values())
+
+    def set_column_stretch(self, col: int, stretch: float):
+        self.__column_stretch_factors[col] = stretch
+
+    def set_row_stretch(self, row: int, stretch: float):
+        self.__row_stretch_factors[row] = stretch
 
     def add(self, item, row: int, col: int):
         """Adds a child to the grid."""
@@ -99,15 +107,41 @@ class GridLayout(Layout):
         self.__children.set(row, col, item)
         item.set_parent(self)
 
-    def remove(self, item):
+    def remove(self, child):
         """Removes a child."""
-        item.set_parent(None)
-        self.__children.remove(item)
+        child.set_parent(None)
+        self.__children.remove(child)
+
+    def remove_row(self, row: int, shift_up=False):
+        """Removes an entire row."""
+        row_items = list(self.__children.row_items(row))
+        for col, child in row_items:
+            child.set_parent(None)
+            self.__children.remove_at(row, col)
+        if shift_up:
+            for row in range(row + 1, self.__children.row_count()):
+                row_items = list(self.__children.row_items(row))
+                for col, child in row_items:
+                    self.__children.remove_at(row, col)
+                    self.__children.set(row - 1, col, child)
+
+    def remove_column(self, col: int, shift_left=False):
+        """Removes an entire column."""
+        col_items = list(self.__children.col_items(col))
+        for row, child in col_items:
+            child.set_parent(None)
+            self.__children.remove_at(row, col)
+        if shift_left:
+            for col in range(col + 1, self.__children.col_count()):
+                col_items = list(self.__children.col_items(col))
+                for row, child in col_items:
+                    self.__children.remove_at(row, col)
+                    self.__children.set(row, col - 1, child)
 
     def clear(self):
         """Clears all children."""
-        items = list(self.__children.items())
-        for child in self.__children.values():
+        children = list(self.__children.values())
+        for child in children:
             self.remove(child)
 
     def on_update(self):
@@ -166,8 +200,7 @@ class GridLayout(Layout):
         stretch_space = size[axis]
         stretch_list = []
 
-        stretch_factors = {}
-        stretch_factor_total = sum(stretch_factors.values())
+        stretch_factors = dict((self.__column_stretch_factors, self.__row_stretch_factors)[axis])
         sizes = {}
         min_sizes = {}
         max_sizes = {}
@@ -181,13 +214,16 @@ class GridLayout(Layout):
             for _, child in self.__children.col_items(i):
                 min_sizes[i] = max(min_sizes[i], child.get_minimum_size()[axis])
                 max_sizes[i] = min(max_sizes[i], child.get_maximum_size()[axis])
-            if i in stretch_factors and stretch_factors[i] > 0:
+            if i not in stretch_factors:
+                stretch_factors[i] = 1
+            if stretch_factors[i] > 0:
                 stretch_list.append(i)
             else:
                 sizes[i] = max(16, min_sizes[i])
                 stretch_space -= sizes[i]
         
-        if not stretch_list:
+        # If all stretch factors are 0, then make them all 1
+        if not stretch_list or sum(stretch_factors.values()) == 0:
             stretch_space = size[axis]
             for i in range(count):
                 stretch_list.append(i)

@@ -4,10 +4,9 @@ from cmg.event import Event
 from study_tool.russian.word import AccentedText
 
 
-class GenericTableRow(widgets.Widget):
+class GenericTableRow:
 
-    def __init__(self, item, select_text="Select", enabled=True):
-        super().__init__()
+    def __init__(self, item):
         self.item = item
 
 
@@ -17,6 +16,9 @@ class GenericTableColumn:
     
     def get_stretch(self):
         return self.__stretch
+    
+    def set_stretch(self, stretch):
+        self.__stretch = stretch
     
     def create(self, item):
         return None
@@ -42,7 +44,7 @@ class GenericTableTextColumn(GenericTableColumn):
 
     def create(self, item):
         text = AccentedText(self.__text_func(item)).text
-        label = widgets.TextEdit(text)
+        label = widgets.Label(text)
         return label
 
 
@@ -52,10 +54,14 @@ class GenericTableWidget(widgets.Widget):
     """
     def __init__(self):
         super().__init__()
+        self.__row_list = []
         self.__item_to_row_dict = {}
         self.__columns = []
-        self.__layout_rows = widgets.VBoxLayout()
-        self.set_layout(self.__layout_rows)
+        self.__grid_layout = widgets.GridLayout()
+        self.set_layout(self.__grid_layout)
+
+    def contains(self, item) -> bool:
+        return item in self.__item_to_row_dict
 
     def get_row(self, item):
         return self.__item_to_row_dict.get(item, None)
@@ -63,36 +69,51 @@ class GenericTableWidget(widgets.Widget):
     def get_items(self) -> list:
         return list(self.__item_to_row_dict.keys())
 
-    def add_text_column(self, text_func):
-        column = GenericTableTextColumn(text_func)
-        self.__columns.append(column)
+    def add_text_column(self, text_func, stretch=None):
+        self.add_column(GenericTableTextColumn(text_func),
+                        stretch=stretch)
 
-    def add_button_column(self, text, callback):
-        column = GenericTableButtonColumn(text=text, callback=callback)
+    def add_button_column(self, text, callback, stretch=None):
+        self.add_column(
+            GenericTableButtonColumn(text=text, callback=callback),
+            stretch=stretch)
+
+    def add_column(self, column: GenericTableButtonColumn, stretch=None):
+        index = len(self.__columns)
         self.__columns.append(column)
+        if stretch is not None:
+            column.set_stretch(stretch)
+        self.__grid_layout.set_column_stretch(
+            index, column.get_stretch())
 
     def clear(self):
-        self.__layout_rows.clear()
+        self.__grid_layout.clear()
+        self.__row_list = []
         self.__item_to_row_dict = {}
 
-    def add(self, item, enabled=True) -> GenericTableRow:
+    def add(self, item, enabled=True, color=None) -> GenericTableRow:
         if item in self.__item_to_row_dict:
             return self.__item_to_row_dict[item]
         
         # Create the row
-        row = GenericTableRow(item, enabled=enabled)
-        layout = widgets.HBoxLayout()
-        for column in self.__columns:
+        row_index = len(self.__row_list)
+        row = GenericTableRow(item)
+        for col_index, column in enumerate(self.__columns):
             widget = column.create(item)
-            layout.add_widget(widget, stretch=column.get_stretch())
-        row.set_layout(layout)
+            widget.set_enabled(enabled)
+            self.__grid_layout.add(widget, row_index, col_index)
+            if color:
+                pass
 
-        self.__layout_rows.add(row)
+        self.__row_list.append(row)
         self.__item_to_row_dict[item] = row
         return row
 
     def remove(self, item):
+        assert item in self.__item_to_row_dict
         row = self.__item_to_row_dict[item]
-        self.__layout_rows.remove(row)
+        row_index = self.__row_list.index(row)
         del self.__item_to_row_dict[item]
+        self.__row_list.remove(row)
+        self.__grid_layout.remove_row(row_index, shift_up=True)
 

@@ -9,6 +9,9 @@
 разбро'санный - scattered
 внеземно'й - extraterrestrial
 органи'ческий; органи'чный - organic
+второстепе'нный - secondary, not best, not main
+разу'мный - reasonable
+внеза'пный - sudden
 
 @type adverb
 
@@ -36,6 +39,8 @@
 игро'к - a player (of a game)
 ро'зыгрыш - prank; giveaway
 прои'грыватель - audio/video player
+заме'нить - to replace
+угомони'ться - to settle down
 
 @type phrase
 опя'ть же - yet again

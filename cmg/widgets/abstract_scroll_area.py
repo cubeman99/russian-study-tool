@@ -179,7 +179,6 @@ class AbstractScrollArea(widgets.Widget):
             0, self.__scrollbar_v.get_value()))
 
     def on_key_pressed(self, key, mod, text):
-        print(key)
         if mod == KeyMods.NONE:
             if key == Keys.K_PAGEUP:
                 self.__scrollbar_v.set_value(self.__scrollbar_v.get_value() -

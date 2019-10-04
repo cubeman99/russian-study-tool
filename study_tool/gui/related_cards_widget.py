@@ -14,6 +14,7 @@ class RelatedCardsWidget(widgets.Widget):
 
     def __init__(self, card: Card, application):
         super().__init__()
+        self.set_window_title("Edit Related Cards for {}".format(card.get_russian().text))
         self.__card = card
         self.__application = application
         self.__card_database = application.card_database

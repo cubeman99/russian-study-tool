@@ -388,17 +388,13 @@ class StudyState(State):
         """Called to begin editing the current card's related cards."""
         widget = RelatedCardsWidget(self.card, self.app)
         widget.updated.connect(self.__on_card_updated)
-        self.app.push_state(GUIState(
-            widget=widget,
-            title="Edit Related Cards for {}".format(self.card.get_russian())))
+        self.app.push_gui_state(widget)
     
     def __on_click_add_to_set(self):
         """Called to begin editing the current card's related cards."""
         widget = AddCardToSetWidget(self.card, self.app)
         widget.updated.connect(self.__on_card_updated)
-        self.app.push_state(GUIState(
-            widget=widget,
-            title="Card Sets Containing {}".format(self.card.get_russian())))
+        self.app.push_gui_state(widget)
     
     def __on_click_edit_card_set(self):
         """Called to begin editing the card set."""

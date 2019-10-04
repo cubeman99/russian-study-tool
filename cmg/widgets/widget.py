@@ -4,6 +4,8 @@ from cmg import color
 from cmg.widgets.layout_item import LayoutItem
 from cmg.math import Vec2
 from cmg.event import Event
+from cmg.input import KeyShortcut
+
 
 class Widget(LayoutItem):
     def __init__(self):
@@ -14,16 +16,16 @@ class Widget(LayoutItem):
         self.focused = False
         self.focusable = False
         self.closed = Event()
+        self.__window_title = ""
         self.__enabled = True
         self.__visible = True
+        self.__key_shortcuts = []
 
-    def get_parent_widget(self):
-        parent = self.get_parent()
-        while parent:
-            if isinstance(parent, Widget):
-                return parent
-            parent = parent.get_parent()
-        return None
+    def is_focusable(self) -> bool:
+        return self.focusable
+    
+    def is_enabled(self) -> bool:
+        return self.__enabled
 
     def get_layout(self):
         return self.layout
@@ -34,13 +36,32 @@ class Widget(LayoutItem):
     def get_focused_widget(self):
         return self.focused_widget
 
+    def get_window_title(self) -> str:
+        return self.__window_title
+
+    def get_key_shortcuts(self) -> list:
+        return self.__key_shortcuts
+
+    def get_parent_widget(self):
+        parent = self.get_parent()
+        while parent:
+            if isinstance(parent, Widget):
+                return parent
+            parent = parent.get_parent()
+        return None
+
+    def set_window_title(self, window_title: str):
+        self.__window_title = window_title
+
     def set_visible(self, visible: bool):
         if not visible:
             self.closed.emit()
         self.__visible = visible
 
-    def close(self):
-        self.set_visible(False)
+    def add_key_shortcut(self, shortcut: str, callback=None):
+        shortcut = KeyShortcut(shortcut, callback=callback)
+        self.__key_shortcuts.append(shortcut)
+        return shortcut
 
     def set_parent(self, parent):
         if parent != self.parent:
@@ -50,12 +71,8 @@ class Widget(LayoutItem):
                 self.get_root_parent().change_focus(None)
             self.parent = parent
 
-    def is_focusable(self) -> bool:
-        return self.focusable
-    
-
-    def is_enabled(self) -> bool:
-        return self.__enabled
+    def close(self):
+        self.set_visible(False)
 
     def set_focusable(self, focusable: bool):
         self.focusable = focusable

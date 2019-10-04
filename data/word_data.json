@@ -8304,6 +8304,53 @@
       "Adjective": {
         "declension": {
           "Femanine": {
+            "Accusative": "внеза'пную",
+            "Dative": "внеза'пной",
+            "Genetive": "внеза'пной",
+            "Instrumental": "внеза'пной",
+            "Nominative": "внеза'пная",
+            "Prepositional": "внеза'пной"
+          },
+          "Masculine": {
+            "Accusative": "внеза'пного",
+            "Dative": "внеза'пному",
+            "Genetive": "внеза'пного",
+            "Instrumental": "внеза'пным",
+            "Nominative": "внеза'пный",
+            "Prepositional": "внеза'пном"
+          },
+          "Neuter": {
+            "Accusative": "внеза'пное",
+            "Dative": "внеза'пному",
+            "Genetive": "внеза'пного",
+            "Instrumental": "внеза'пным",
+            "Nominative": "внеза'пное",
+            "Prepositional": "внеза'пном"
+          },
+          "Plural": {
+            "Accusative": "внеза'пных",
+            "Dative": "внеза'пным",
+            "Genetive": "внеза'пных",
+            "Instrumental": "внеза'пными",
+            "Nominative": "внеза'пные",
+            "Prepositional": "внеза'пных"
+          }
+        },
+        "short_form": {
+          "Femanine": "",
+          "Masculine": "",
+          "Neuter": "",
+          "Plural": "внеза'пны"
+        }
+      },
+      "examples": [],
+      "name": "внезапный",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
             "Accusative": "вне'шнюю",
             "Dative": "вне'шней",
             "Genetive": "вне'шней",
@@ -11543,6 +11590,53 @@
       },
       "examples": [],
       "name": "второй",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
+            "Accusative": "второстепе'нную",
+            "Dative": "второстепе'нной",
+            "Genetive": "второстепе'нной",
+            "Instrumental": "второстепе'нной",
+            "Nominative": "второстепе'нная",
+            "Prepositional": "второстепе'нной"
+          },
+          "Masculine": {
+            "Accusative": "второстепе'нного",
+            "Dative": "второстепе'нному",
+            "Genetive": "второстепе'нного",
+            "Instrumental": "второстепе'нным",
+            "Nominative": "второстепе'нный",
+            "Prepositional": "второстепе'нном"
+          },
+          "Neuter": {
+            "Accusative": "второстепе'нное",
+            "Dative": "второстепе'нному",
+            "Genetive": "второстепе'нного",
+            "Instrumental": "второстепе'нным",
+            "Nominative": "второстепе'нное",
+            "Prepositional": "второстепе'нном"
+          },
+          "Plural": {
+            "Accusative": "второстепе'нных",
+            "Dative": "второстепе'нным",
+            "Genetive": "второстепе'нных",
+            "Instrumental": "второстепе'нными",
+            "Nominative": "второстепе'нные",
+            "Prepositional": "второстепе'нных"
+          }
+        },
+        "short_form": {
+          "Femanine": "",
+          "Masculine": "",
+          "Neuter": "",
+          "Plural": "второстепе'нны"
+        }
+      },
+      "examples": [],
+      "name": "второстепенный",
       "type": "Adjective"
     },
     {
@@ -25756,6 +25850,56 @@
       },
       "examples": [],
       "name": "замедлить",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "заменять"
+        ],
+        "imperative": {
+          "Plural": "замени'те",
+          "Singular": "замени'"
+        },
+        "infinitive": "заменить",
+        "info": "This verb can also mean the following: commute, substitute.",
+        "non_past": {
+          "Plural": {
+            "First": "заме'ним",
+            "Second": "заме'ните",
+            "Third": "заме'нят"
+          },
+          "Singular": {
+            "First": "заменю'",
+            "Second": "заме'нишь",
+            "Third": "заме'нит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "замени'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "замени'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "заменённый",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "замени'ла",
+          "Masculine": "замени'л",
+          "Neuter": "замени'ло",
+          "Plural": "замени'ли"
+        },
+        "translation": "to replace"
+      },
+      "examples": [],
+      "name": "заменить",
       "type": "Verb"
     },
     {
@@ -76824,6 +76968,53 @@
       "Adjective": {
         "declension": {
           "Femanine": {
+            "Accusative": "разу'мную",
+            "Dative": "разу'мной",
+            "Genetive": "разу'мной",
+            "Instrumental": "разу'мной",
+            "Nominative": "разу'мная",
+            "Prepositional": "разу'мной"
+          },
+          "Masculine": {
+            "Accusative": "разу'много",
+            "Dative": "разу'мному",
+            "Genetive": "разу'много",
+            "Instrumental": "разу'мным",
+            "Nominative": "разу'мный",
+            "Prepositional": "разу'мном"
+          },
+          "Neuter": {
+            "Accusative": "разу'мное",
+            "Dative": "разу'мному",
+            "Genetive": "разу'много",
+            "Instrumental": "разу'мным",
+            "Nominative": "разу'мное",
+            "Prepositional": "разу'мном"
+          },
+          "Plural": {
+            "Accusative": "разу'мных",
+            "Dative": "разу'мным",
+            "Genetive": "разу'мных",
+            "Instrumental": "разу'мными",
+            "Nominative": "разу'мные",
+            "Prepositional": "разу'мных"
+          }
+        },
+        "short_form": {
+          "Femanine": "",
+          "Masculine": "",
+          "Neuter": "",
+          "Plural": "разу'мны"
+        }
+      },
+      "examples": [],
+      "name": "разумный",
+      "type": "Adjective"
+    },
+    {
+      "Adjective": {
+        "declension": {
+          "Femanine": {
             "Accusative": "разъярённую",
             "Dative": "разъярённой",
             "Genetive": "разъярённой",
@@ -97546,6 +97737,56 @@
       "examples": [],
       "name": "уго'л",
       "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "угомоняться"
+        ],
+        "imperative": {
+          "Plural": "угомони'тесь",
+          "Singular": "угомони'сь"
+        },
+        "infinitive": "угомониться",
+        "info": "",
+        "non_past": {
+          "Plural": {
+            "First": "угомони'мся",
+            "Second": "угомони'тесь",
+            "Third": "угомоня'тся"
+          },
+          "Singular": {
+            "First": "угомоню'сь",
+            "Second": "угомони'шься",
+            "Third": "угомони'тся"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "угомони'вшийся",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "угомони'вшись",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "угомони'лась",
+          "Masculine": "угомони'лся",
+          "Neuter": "угомони'лось",
+          "Plural": "угомони'лись"
+        },
+        "translation": "to calm down"
+      },
+      "examples": [],
+      "name": "угомониться",
+      "type": "Verb"
     },
     {
       "Noun": {

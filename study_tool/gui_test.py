@@ -47,8 +47,13 @@ class GUITesterApp(Application):
         grid_layout.add(widgets.Label("Name"), 0, 1)
         grid_layout.add(widgets.TextEdit(), 1, 0)
         grid_layout.add(widgets.Button("Button"), 1, 1)
+        grid_layout.set_column_stretch(0, 2)
+        grid_layout.set_column_stretch(1, 3)
 
         widget = widgets.Widget()
+        def callback():
+            print("Pressed Ctrl+F!!!")
+        widget.add_key_shortcut("Ctrl+F", callback)
         layout = widgets.VBoxLayout()
         layout.add(widgets.HBoxLayout(
             widgets.Label("Combo Box:"),
