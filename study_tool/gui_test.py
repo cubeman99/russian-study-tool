@@ -13,22 +13,7 @@ from cmg.graphics import *
 from cmg.application import *
 from cmg import widgets
 from enum import IntEnum
-from study_tool.card_set import *
-from study_tool.config import Config
-from study_tool.states.menu_state import MenuState
-from study_tool.states.study_state import StudyState
-from study_tool.states.card_list_state import CardListState
 from study_tool.states.gui_state import GUIState
-from study_tool.gui.card_edit_widget import CardEditWidget
-from study_tool.gui.card_set_edit_widget import CardSetEditWidget
-from study_tool.card_database import CardDatabase
-from study_tool.scheduler import ScheduleMode
-from study_tool.states.keyboard_state import KeyboardState
-from study_tool.russian import conjugation
-from study_tool.word_database import WordDatabase
-from study_tool.example_database import ExampleDatabase
-from study_tool.states.read_text_state import ReadTextState
-import yaml
 
 
 DEAD_ZONE = 0.01
@@ -57,6 +42,12 @@ class GUITesterApp(Application):
         self.input.mouse_released.connect(self.__on_mouse_released)
         self.graphics = Graphics(self.screen)
 
+        grid_layout = widgets.GridLayout()
+        grid_layout.add(widgets.Label("ID"), 0, 0)
+        grid_layout.add(widgets.Label("Name"), 0, 1)
+        grid_layout.add(widgets.TextEdit(), 1, 0)
+        grid_layout.add(widgets.Button("Button"), 1, 1)
+
         widget = widgets.Widget()
         layout = widgets.VBoxLayout()
         layout.add(widgets.HBoxLayout(
@@ -70,6 +61,7 @@ class GUITesterApp(Application):
         check_box = widgets.CheckBox("Check Box")
         check_box.clicked.connect(self.__on_check_box_clicked)
         layout.add(check_box)
+        layout.add(grid_layout)
         layout.add(widgets.HBoxLayout(widgets.Button("Button 2!"),
                                       widgets.CheckBox("Check Box"),
                                       widgets.TextEdit()))

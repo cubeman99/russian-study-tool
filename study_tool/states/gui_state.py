@@ -45,12 +45,19 @@ class GUIState(State):
                     self.__widget.cycle_next_focus(reverse=True)
                 else:
                     self.__widget.cycle_next_focus(reverse=False)
-            if self.__widget.get_focused_widget():
-                self.__widget.get_focused_widget().on_key_pressed(key, mod, text)
+            widget = self.__widget.get_focused_widget()
+            while widget:
+                if widget.on_key_pressed(key, mod, text):
+                    break
+                widget = widget.get_parent_widget()
         
     def on_key_released(self, key, mod):
-        if self.__widget and self.__widget.get_focused_widget():
-            self.__widget.get_focused_widget().on_key_released(key, mod)
+        if self.__widget:
+            widget = self.__widget.get_focused_widget()
+            while widget:
+                if widget.on_key_released(key, mod):
+                    break
+                widget = widget.get_parent_widget()
             
     def on_mouse_pressed(self, pos, button):
         if self.__widget:
@@ -119,13 +126,7 @@ class GUIState(State):
         """Called when the state ends."""
         if self.__widget:
             self.__widget.on_close()
-
-    def pause(self):
-        self.app.push_state(SubMenuState("Pause",
-                                         [("Resume", None),
-                                          ("Menu", self.__close),
-                                          ("Exit", self.app.quit)]))
-
+            
     def click(self):
         if self.__cursor_item:
             self.__cursor_item.on_pressed()

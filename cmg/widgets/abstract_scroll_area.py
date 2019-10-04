@@ -150,11 +150,11 @@ class AbstractScrollArea(widgets.Widget):
         super().__init__()
         self.__widget = None
         self.__layout = SubRegionLayout()
-        self.__scrollbar_h = ScrollBar(axis=1)
+        self.__scrollbar_v = ScrollBar(axis=1)
 
         main_layout = HBoxLayout()
         main_layout.add_layout(self.__layout)
-        main_layout.add_widget(self.__scrollbar_h)
+        main_layout.add_widget(self.__scrollbar_v)
         self.set_layout(main_layout)
 
         if widget:
@@ -171,21 +171,25 @@ class AbstractScrollArea(widgets.Widget):
     def on_update(self):
         viewport_height = self.__layout.get_height()
         area_height = self.__widget.get_height() + int(viewport_height * 0.8)
-        self.__scrollbar_h.set_minimum(0)
-        self.__scrollbar_h.set_maximum(
+        self.__scrollbar_v.set_minimum(0)
+        self.__scrollbar_v.set_maximum(
             max(0, area_height - viewport_height))
-        self.__scrollbar_h.set_page_step(viewport_height)
+        self.__scrollbar_v.set_page_step(viewport_height)
         self.__layout.set_offset(Vec2(
-            0, self.__scrollbar_h.get_value()))
+            0, self.__scrollbar_v.get_value()))
 
     def on_key_pressed(self, key, mod, text):
+        print(key)
         if mod == KeyMods.NONE:
-            if key == MouseButtons.PAGE_UP:
-                self.__scrollbar_h.set_value(self.__scrollbar_h.get_value() -
-                                             self.__scrollbar_h.get_page_step())
-            elif key == MouseButtons.PAGE_DOWN:
-                self.__scrollbar_h.set_value(self.__scrollbar_h.get_value() +
-                                             self.__scrollbar_h.get_page_step())
+            if key == Keys.K_PAGEUP:
+                self.__scrollbar_v.set_value(self.__scrollbar_v.get_value() -
+                                             self.__scrollbar_v.get_page_step())
+                return True
+            elif key == Keys.K_PAGEDOWN:
+                self.__scrollbar_v.set_value(self.__scrollbar_v.get_value() +
+                                             self.__scrollbar_v.get_page_step())
+                return True
+        return False
             
     def on_mouse_pressed(self, pos, button):
         scroll = 0
@@ -194,8 +198,8 @@ class AbstractScrollArea(widgets.Widget):
         elif button == MouseButtons.WHEEL_DOWN:
             scroll = 1
         if scroll != 0:
-            self.__scrollbar_h.set_value(
-                self.__scrollbar_h.get_value() + (scroll * 40))
+            self.__scrollbar_v.set_value(
+                self.__scrollbar_v.get_value() + (scroll * 40))
 
     def on_mouse_released(self, pos, button):
         pass

@@ -17,6 +17,14 @@ class Widget(LayoutItem):
         self.__enabled = True
         self.__visible = True
 
+    def get_parent_widget(self):
+        parent = self.get_parent()
+        while parent:
+            if isinstance(parent, Widget):
+                return parent
+            parent = parent.get_parent()
+        return None
+
     def get_layout(self):
         return self.layout
     
@@ -115,19 +123,19 @@ class Widget(LayoutItem):
         pass
     
     def on_key_pressed(self, key, mod, text):
-        pass
+        return False
     
     def on_key_released(self, key, mod):
-        pass
+        return False
     
     def on_mouse_pressed(self, pos, button):
-        pass
+        return False
 
     def on_mouse_released(self, pos, button):
-        pass
+        return False
 
     def on_pressed(self):
-        pass
+        return False
 
     def set_layout(self, layout):
         self.layout = layout
