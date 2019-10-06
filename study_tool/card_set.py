@@ -104,18 +104,25 @@ class StudySet:
 
 
 class CardSet(StudySet):
-    def __init__(self, cards=(), fixed_card_set=False):
-        StudySet.__init__(self, name="Untitled", cards=cards)
+    def __init__(self, cards=(), fixed_card_set=False, name="Untitled", path=None):
+        StudySet.__init__(self, name=name, cards=cards)
         self.key = None
         self.path = ""
         self.info = ""
         self.side = CardSide.English
         self.source = None
+        self.__package = None
         self.__file_path = None
         self.__is_fixed_card_set = fixed_card_set
 
+    def get_package(self):
+        return self.__package
+
     def get_file_path(self) -> str:
         return self.__file_path
+
+    def set_package(self, package):
+        self.__package = package
 
     def set_file_path(self, path: str):
         self.__file_path = path
@@ -157,16 +164,29 @@ class CardSet(StudySet):
 
 
 class CardSetPackage(StudySet):
-    def __init__(self, name, path, parent=None):
+    def __init__(self, name, path: str, parent=None):
         # NOTE: Purposefully avoiding super __init__ here
         self.name = AccentedText(name)
         self.path = path
+        self.__dirname = os.path.basename(path)
         self.parent = parent
         self.card_sets = []
         self.packages = []
 
+    def get_path(self) -> str:
+        return self.path
+
+    def get_directory_name(self) -> str:
+        return self.__dirname
+
     def get_parent(self):
         return self.parent
+
+    def get_root(self):
+        root = self
+        while root.get_parent():
+            root = root.get_parent()
+        return root
 
     def get_packages(self) -> list:
         return self.packages
@@ -188,6 +208,8 @@ class CardSetPackage(StudySet):
                 yield card
 
     def add_card_set(self, card_set: CardSet):
+        """Adds a new card set to the package."""
+        card_set.set_package(self)
         self.card_sets.append(card_set)
 
     def __getitem__(self, name):

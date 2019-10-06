@@ -16,7 +16,6 @@ class CardSetBrowserWidget(widgets.Widget):
     def __init__(self, card_set_package: CardSetPackage, card_set_mode=True, close_on_select=True):
         super().__init__()
         self.__package = card_set_package
-        self.__path_list = []
         self.__card_set_mode = card_set_mode
         self.__close_on_select = close_on_select
 
@@ -61,21 +60,19 @@ class CardSetBrowserWidget(widgets.Widget):
             self.close()
             return
 
-        if package in self.__path_list:
-            start = self.__path_list.index(package)
-            self.__path_list = self.__path_list[:start]
-            indices = range(start, len(self.__path_list))
-            while len(self.__path_bar_layout.get_children()) > len(self.__path_list):
-                button = self.__path_bar_layout.get_children()[-1]
-                self.__path_bar_layout.remove(button)
-
         self.__package = package
 
-        self.__path_list.append(package)
-        path_button = widgets.Button(package.get_name().text)
-        self.__path_bar_layout.add(path_button)
-        path_button.clicked.connect(lambda: self.select_package(package))
-        
+        # Create the path list buttons
+        path_buttons = []
+        parent = package
+        while parent:
+            button = self.__create_path_button(parent)
+            path_buttons.insert(0, button)
+            parent = parent.get_parent()
+        self.__path_bar_layout.clear()
+        for button in path_buttons:
+            self.__path_bar_layout.add(button)
+
         self.__list_layout.clear()
 
         back_button = None
@@ -101,6 +98,11 @@ class CardSetBrowserWidget(widgets.Widget):
         if back_button:
             back_button.focus()
         self.package_changed.emit(package)
+
+    def __create_path_button(self, package: CardSetPackage) -> widgets.Button:
+        button = widgets.Button(package.get_name().text)
+        button.clicked.connect(lambda: self.select_package(package))
+        return button
 
     def __create_package_button(self, package: CardSetPackage) -> widgets.Button:
         if self.__card_set_mode:

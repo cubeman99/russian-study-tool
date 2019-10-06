@@ -46,6 +46,7 @@ DEAD_ZONE = 0.01
 class StudyCardsApp(Application):
 
     def __init__(self):
+        Config.app = self
         self.title = "Russian"
         Application.__init__(self, title=self.title, width=1100, height=900)
 
@@ -112,9 +113,9 @@ class StudyCardsApp(Application):
         #self.push_state(GUIState(widget=CardEditWidget(cards[0]), title="Edit Card"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["verbs"]["verbs_stem_ai"], self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["nouns"]["house"], self), title="Edit Card Set"))
-        #self.push_state(GUIState(widget=CardSetEditWidget(test_set, self), title="Edit Card Set"))
-        #self.push_state(GUIState(widget=RelatedCardsWidget(test_card, self), title="Edit Related Cards"))
-        self.push_state(GUIState(widget=AddCardToSetWidget(test_card, self), title="Add to Card Set"))
+        self.push_gui_state(CardSetEditWidget(test_set, self))
+        #self.push_gui_state(RelatedCardsWidget(test_card, self))
+        #self.push_gui_state(AddCardToSetWidget(test_card, self))
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
         #self.push_study_state(test_set, study_params=StudyParams(random_side=True), scheduler_params=SchedulerParams(max_repetitions=1))
         #self.push_state(GUIState(widget=QueryWidget(self, test_set.get_cards()), title="Study Query"))

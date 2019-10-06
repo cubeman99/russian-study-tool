@@ -41,6 +41,43 @@ def get_history_score(history):
     return score
 
 
+def get_card_word_name(russian: AccentedText):
+    word_name = AccentedText(russian)
+    word_tokens = list(split_words(russian.text))
+    if len(word_tokens) > 0:
+        word_name = AccentedText(word_tokens[0][0])
+    return word_name
+
+
+def get_card_key(word_type: WordType, russian: AccentedText,
+                 english: AccentedText) -> tuple:
+    """
+    Get the key that identifies a card.
+    """
+    return (word_type,
+            AccentedText(russian).text.lower(),
+            AccentedText(english).text.lower())
+
+def get_card_english_key(word_type: WordType,
+                         english: AccentedText, card_attributes=()) -> tuple:
+    """
+    Returns the key that identifies the Russian translation
+    from English text.
+    """
+    english_attributes = [
+        x.value for x in card_attributes
+        if x in ENGLISH_SIDE_CARD_ATTRIBUTES]
+    return (word_type, AccentedText(english).text.lower(),
+            ",".join(sorted(english_attributes)))
+
+def get_card_russian_key(word_type: WordType, russian: AccentedText) -> tuple:
+    """
+    Returns the key that identifies the English translation
+    from Russian text.
+    """
+    return (word_type, AccentedText(russian).text.lower())
+    
+
 class Card:
     """
     A card with English and Russian sides that can be studied.
@@ -124,23 +161,21 @@ class Card:
 
     def get_key(self) -> tuple:
         """Get the key that identifies this card."""
-        return (self.__word_type,
-                self.__russian.text.lower(),
-                self.__english.text.lower())
+        return get_card_key(self.__word_type, self.__russian, self.__english)
 
     def get_english_key(self) -> tuple:
         """
         Returns the key that identifies the Russian translation
         from English text.
         """
-        return (self.__word_type, self.__english.text.lower(),
-                ",".join(sorted(self.get_english_attributes())))
+        return get_card_english_key(
+            self.__word_type, self.__english, self.__card_attributes)
     
     def get_english_attributes(self) -> list:
         """
         Gets the list of card attributes to show along with the English text.
         """
-        return [x.value for x in self.get_attributes()
+        return [x.value for x in self.__card_attributes
                 if x in ENGLISH_SIDE_CARD_ATTRIBUTES]
 
     def get_russian_key(self) -> tuple:
@@ -148,7 +183,7 @@ class Card:
         Returns the key that identifies the English translation
         from Russian text.
         """
-        return (self.__word_type, self.__russian.text.lower())
+        return get_card_russian_key(self.__word_type, self.__russian)
 
     def is_in_fixed_card_set(self) -> bool:
         return self.__fixed_card_set is not None

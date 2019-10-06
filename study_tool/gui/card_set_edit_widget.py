@@ -14,18 +14,88 @@ from cmg.application import *
 from cmg.event import Event
 from study_tool import card_attributes
 from study_tool.russian.types import WordType, get_word_type_short_name, parse_short_word_type
+from study_tool.russian.types import Aspect
+from study_tool.russian.types import Gender
 from study_tool.card import Card
+from study_tool.card import get_card_key
+from study_tool.card import get_card_english_key
+from study_tool.card import get_card_russian_key
+from study_tool.card import get_card_word_name
 from study_tool.card_attributes import CardAttributes
 from study_tool.card_set import CardSet
 from study_tool.entities.menu import Menu
 from study_tool.states.state import *
 from study_tool.states.sub_menu_state import SubMenuState
 from study_tool.card_database import CardDatabase
+from study_tool.russian.word import Word
+from study_tool.russian.noun import Noun
+from study_tool.russian.verb import Verb
 from cmg.application import Application
 from cmg.input import Keys
 from cmg import widgets
 from study_tool import card
 from study_tool.config import Config
+
+
+class CardRussianTextEdit(widgets.TextEdit):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.__attribute_font = cmg.Font(22)
+        self.__attributes = set()
+        self.__word = None
+       
+    def set_attributes(self, card_attributes):
+        self.__attributes = set(card_attributes)
+       
+    def set_word(self, word):
+        self.__word = word
+
+    def on_draw(self, g):
+        # Draw the text box
+        widgets.TextEdit.on_draw(self, g)
+        
+        # Draw the attributes on the right
+        rect = self.get_rect()
+        padding = 2
+        spacing = 2
+        y_margin = 3
+        x = rect.right - spacing
+        y = rect.top
+        height = rect.height
+        
+        # Draw the marker indicating word source
+        w = height - (2 * y_margin)
+        x -= w
+        if self.__word:
+            g.fill_rect(x, y + y_margin, w, w, color=Colors.GREEN)
+        x -= spacing
+
+        for attribute in self.__attributes:
+            text = card_attributes.ATTRIBUTE_SHORT_DISPLAY_NAMES.get(
+                attribute, attribute.value)
+            width, _ = self.__attribute_font.measure(text)
+            width += 2 * padding
+            x -= width
+
+            # Determine colors
+            text_color = Colors.WHITE
+            background_color = Colors.BLACK
+            if attribute in card_attributes.ATTRIBUTE_COLORS:
+                background_color = card_attributes.ATTRIBUTE_COLORS[attribute]
+            
+            # Draw the background box
+            g.fill_rect(x, y + y_margin, width, height - (2 * y_margin),
+                        color=background_color)
+
+            # Draw the text in the box
+            g.draw_accented_text(x + (width // 2),
+                                 y + (rect.height // 2),
+                                 text=text,
+                                 font=self.__attribute_font,
+                                 color=text_color,
+                                 align=Align.Centered)
+            x -= spacing
+
 
 class CardRow(widgets.Widget):
 
@@ -37,14 +107,16 @@ class CardRow(widgets.Widget):
         self.__card_set = card_set
         self.__is_new_card = True
         self.__card_match = None
+        self.__word = None
         
         # Create widgets
         self.button_edit = widgets.Button("E")
         self.button_delete = widgets.Button("X")
         self.box_type = widgets.TextEdit("")
         self.box_type.set_minimum_width(90)
-        self.box_russian = widgets.TextEdit("")
+        self.box_russian = CardRussianTextEdit("")
         self.box_english = widgets.TextEdit("")
+
 
         word_types = [get_word_type_short_name(word_type)
                       for word_type in WordType]
@@ -68,6 +140,7 @@ class CardRow(widgets.Widget):
         self.set_card(card)
 
     def set_card(self, card: Card):
+        """Sets the card to edit."""
         self.card = card
         self.__is_new_card = not self.card_database.has_card(card)
         fixed = self.card.get_fixed_card_set() is not None
@@ -102,26 +175,6 @@ class CardRow(widgets.Widget):
             self.card_database.update_card(
                 original=self.card, modified=new_card)
         self.set_card(self.card)
-    
-    def auto_set_word_type(self) -> WordType:
-        russian = self.get_russian().text.lower()
-        
-        word_type_endings_dict = {
-            WordType.Adjective: ["ый", "ий", "ой"],
-            WordType.Verb: ["ить", "ать", "еть", "ять", "уть", "ться", "сти", "стись"],
-            WordType.Noun: ["ие", "ость", "а"],
-            WordType.Adverb: ["о"],
-        }
-
-        for word_type, endings in word_type_endings_dict.items():
-            for ending in endings:
-                if russian.endswith(ending):
-                    self.box_type.set_text(
-                        get_word_type_short_name(word_type))
-                    return word_type
-        if " " in russian:
-            return WordType.Phrase
-        return None
 
     def get_word_type(self) -> WordType:
         return parse_short_word_type(self.box_type.get_text())
@@ -159,6 +212,29 @@ class CardRow(widgets.Widget):
         return (card_type != self.card.get_word_type() or
                 repr(russian) != repr(self.card.get_russian()) or
                 repr(english) != repr(self.card.get_english()))
+    
+    def auto_set_word_type(self) -> WordType:
+        """
+        Auto generates the word type based on the russian word ending.
+        """
+        russian = self.get_russian().text.lower()
+        
+        word_type_endings_dict = {
+            WordType.Adjective: ["ый", "ий", "ой"],
+            WordType.Verb: ["ить", "ать", "еть", "ять", "уть", "ться", "сти", "стись"],
+            WordType.Noun: ["ие", "ость", "а"],
+            WordType.Adverb: ["о"],
+        }
+
+        for word_type, endings in word_type_endings_dict.items():
+            for ending in endings:
+                if russian.endswith(ending):
+                    self.box_type.set_text(
+                        get_word_type_short_name(word_type))
+                    return word_type
+        if " " in russian:
+            return WordType.Phrase
+        return None
 
     def __auto_complete(self):
         if self.__card_match:
@@ -179,22 +255,99 @@ class CardRow(widgets.Widget):
         self.__on_modified()
 
     def __on_modified(self):
+        """Called when anything is modified."""
         empty = self.is_empty()
-        bg_color = Colors.WHITE
-        if not self.__card_set.has_card(self.card):
-            if not empty:
-                if self.is_valid():
-                    bg_color = Color(200, 255, 200)
-                else:
-                    bg_color = Color(255, 200, 200)
+        valid = self.is_valid()
+        modified = self.is_modified()
+        word_type = self.get_word_type()
+        russian = self.get_russian()
+        english = self.get_english()
+        new_in_database = not Config.app.card_database.has_card(self.card)
+        new_in_set = not self.__card_set.has_card(self.card)
+
+        # Look up the word and get important card attributes
+        self.__word = None
+        card_attributes = set()
+        if word_type is not None and russian.text:
+            word_name = get_card_word_name(russian)
+            self.__word = Config.app.word_database.get_word(
+                name=word_name.text, word_type=word_type)
+            self.box_russian.set_word(self.__word)
+            if isinstance(self.__word, Verb):
+                if self.__word.get_aspect() == Aspect.Imperfective:
+                    card_attributes.add(CardAttributes.Imperfective)
+                elif self.__word.get_aspect() == Aspect.Perfective:
+                    card_attributes.add(CardAttributes.Perfective)
+            elif isinstance(self.__word, Noun):
+                if self.__word.get_gender() == Gender.Masculine:
+                    card_attributes.add(CardAttributes.Masculine)
+                elif self.__word.get_gender() == Gender.Femanine:
+                    card_attributes.add(CardAttributes.Femanine)
+                elif self.__word.get_gender() == Gender.Neuter:
+                    card_attributes.add(CardAttributes.Neuter)
+            attrs = ", ".join(x.value for x in list(sorted(card_attributes)))
         else:
-            if not self.is_valid():
-                bg_color = Color(255, 200, 200)
-            elif self.is_modified():
-                bg_color = Color(255, 255, 200)
-        self.box_type.set_background_color(bg_color)
-        self.box_russian.set_background_color(bg_color)
-        self.box_english.set_background_color(bg_color)
+            self.box_russian.set_word(None)
+        if not new_in_database:
+            card_attributes = self.card.get_attributes()
+        self.box_russian.set_attributes(card_attributes)
+        
+        # Check for duplicate key
+        key = get_card_key(word_type, russian, english)
+        existing_card = Config.app.card_database.get_card_by_key(key)
+        if existing_card and existing_card != self.card:
+            valid = False
+
+        color = Colors.WHITE
+        color_default = Colors.WHITE
+        color_invalid = Color(255, 200, 200)
+        color_new = Color(200, 255, 200)
+        color_invalid = Color(255, 200, 200)
+        color_modified = Color(255, 255, 200)
+        
+        if new_in_database and empty:
+            color_word_type = color_default
+            color_russian = color_default
+            color_english = color_default
+        else:
+            if new_in_database:
+                color = color_new
+            else:
+                if not valid:
+                    color = color_invalid
+                elif new_in_set:
+                    color = color_new
+            color_word_type = color
+            color_russian = color
+            color_english = color
+       
+            if word_type is None:
+                color_word_type = color_invalid
+            elif not new_in_database and word_type != self.card.get_word_type():
+                color_word_type = color_modified
+            if not russian.text:
+                color_russian = color_invalid
+            elif not new_in_database and repr(russian) != repr(self.card.get_russian()):
+                color_russian = color_modified
+            if not english.text:
+                color_english = color_invalid
+            elif not new_in_database and repr(english) != repr(self.card.get_english()):
+                color_english = color_modified
+        
+            # Check for duplicate english/russian keys
+            ru_key = get_card_russian_key(word_type, russian)
+            en_key = get_card_english_key(
+                word_type, english, card_attributes=card_attributes)
+            existing_card = Config.app.card_database.get_card_by_russian_key(ru_key)
+            if existing_card and existing_card != self.card:
+                color_russian = color_invalid
+            existing_card = Config.app.card_database.get_card_by_english_key(en_key)
+            if existing_card and existing_card != self.card:
+                color_english = color_invalid
+
+        self.box_type.set_background_color(color_word_type)
+        self.box_russian.set_background_color(color_russian)
+        self.box_english.set_background_color(color_english)
         self.modified.emit()
         self.__refresh_matches()
         
@@ -229,8 +382,13 @@ class CardRow(widgets.Widget):
 
 
 class CardSetEditWidget(widgets.Widget):
+    """
+    Widget to edit card sets.
+    """
+
     def __init__(self, card_set: CardSet, application):
         super().__init__()
+        self.set_window_title("Edit Card Set")
         if not card_set:
             card_set = CardSet()
         self.__card_set = card_set
@@ -269,7 +427,8 @@ class CardSetEditWidget(widgets.Widget):
         self.__button_add_card.clicked.connect(self.__on_click_add_new_card)
         self.__button_convert.clicked.connect(self.__on_click_convert)
         self.__box_name.text_edited.connect(self.__on_modified)
-        
+        self.add_key_shortcut("Ctrl+S", self.__on_click_save)
+
         self.__box_name.focus()
 
     def is_modified(self) -> bool:

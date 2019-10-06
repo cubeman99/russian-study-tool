@@ -12,7 +12,7 @@ cards:
 - {attrs: [m], en: 'wardrobe, cabinets', ru: шка'ф, type: noun}
 - {attrs: [f], en: kitchen, ru: ку'хня, type: noun}
 - {attrs: [f], en: dishes, ru: посу'да, type: noun}
-- {en: kettle, ru: ча'йник, type: noun}
+- {attrs: [m], en: kettle, ru: ча'йник, type: noun}
 - {attrs: [f], en: stove-top, ru: плита', type: noun}
 - {attrs: [f], en: oven, ru: духо'вка, type: noun}
 - {en: dishwasher, ru: посудомо'ечная маши'на, type: noun}
@@ -30,23 +30,24 @@ cards:
 - {en: bedroom, ru: спа'льная ко'мната, type: noun}
 - {attrs: [f], en: bed, ru: крова'ть, type: noun}
 - {attrs: [f], en: pillow, ru: поду'шка, type: noun}
-- {en: computer mouse, ru: мы'шка, type: noun}
-- {en: headphones, ru: нау'шники, type: noun}
-- {en: nonsense, ru: чушь, type: noun}
+- {attrs: [f], en: computer mouse, ru: мы'шка, type: noun}
+- {attrs: [indec], en: headphones, ru: нау'шники, type: noun}
+- {attrs: [indec], en: nonsense, ru: чушь, type: noun}
 - {attrs: [f], en: thing, ru: вещь, type: noun}
-- {en: 'power, might', ru: мощь, type: noun}
+- {attrs: [indec], en: 'power, might', ru: мощь, type: noun}
 - {attrs: [f], en: help, ru: по'мощь, type: noun}
-- {en: 'youth (25 - 30, usable with inanimate objs)', ru: мо'лодость, type: noun}
+- {attrs: [indec], en: 'youth (25 - 30, usable with inanimate objs)', ru: мо'лодость,
+  type: noun}
 - {attrs: [n], en: 'youth (14 - 17, only for animate objs)', ru: ю'ношество, type: noun}
 - {attrs: [f], en: maturity, ru: зре'лость, type: noun}
 - {attrs: [f], en: rudeness, ru: гру'бость, type: noun}
-- {en: politeness, ru: ве'жливость, type: noun}
+- {attrs: [indec], en: politeness, ru: ве'жливость, type: noun}
 - {attrs: [f], en: freshness, ru: све'жесть, type: noun}
 - {en: news, ru: но'вость, type: noun}
 - {attrs: [f], en: gravity, ru: тя'жесть, type: noun}
 - {attrs: [f], en: clumsiness, ru: неуклю'жесть, type: noun}
-- {en: boldness, ru: сме'лость, type: noun}
-- {en: linen, ru: бельё, type: noun}
+- {attrs: [indec], en: boldness, ru: сме'лость, type: noun}
+- {attrs: [n], en: linen, ru: бельё, type: noun}
 - {attrs: [f], en: banner, ru: зна'мя, type: noun}
 - {attrs: [f], en: burden, ru: бре'мя, type: noun}
 - {attrs: [f], en: mane, ru: гри'ва, type: noun}
@@ -86,7 +87,7 @@ cards:
 - {attrs: [m], en: lion, ru: ле'в, type: noun}
 - {attrs: [m], en: tiger, ru: ти'гр, type: noun}
 - {attrs: [m], en: giraffe, ru: жира'ф, type: noun}
-- {en: zebra, ru: зе'бра, type: noun}
+- {attrs: [f], en: zebra, ru: зе'бра, type: noun}
 - {attrs: [m], en: rhino, ru: носоро'г, type: noun}
 - {attrs: [m], en: hippopotamus, ru: гиппопота'м, type: noun}
 - {attrs: [f], en: gorilla, ru: гори'лла, type: noun}
@@ -103,25 +104,25 @@ cards:
 - {attrs: [f], en: chicken, ru: ку'рица, type: noun}
 - {attrs: [m], en: cock (chicken), ru: пету'х, type: noun}
 - {attrs: [f], en: cow, ru: коро'ва, type: noun}
-- {en: bull, ru: бы'к, type: noun}
+- {attrs: [m], en: bull, ru: бы'к, type: noun}
 - {attrs: [f], en: sheep, ru: овца', type: noun}
 - {attrs: [m], en: ram, ru: бара'н, type: noun}
 - {attrs: [f], en: goat (female), ru: коза', type: noun}
-- {en: goat (male), ru: козёл, type: noun}
+- {attrs: [m], en: goat (male), ru: козёл, type: noun}
 - {en: donkey, ru: осе'л, type: noun}
 - {attrs: [f], en: horse, ru: ло'шадь, type: noun}
 - {attrs: [m], en: goose, ru: гу'сь, type: noun}
 - {attrs: [f], en: duck, ru: у'тка, type: noun}
 - {attrs: [m], en: spider, ru: пау'к, type: noun}
-- {en: ant, ru: мураве'й, type: noun}
+- {attrs: [m], en: ant, ru: мураве'й, type: noun}
 - {attrs: [f], en: bee, ru: пчела', type: noun}
 - {attrs: [f], en: wasp, ru: оса', type: noun}
 - {attrs: [m], en: worm, ru: червя'к, type: noun}
-- {en: butterfly, ru: ба'бочка, type: noun}
+- {attrs: [f], en: butterfly, ru: ба'бочка, type: noun}
 - {attrs: [f], en: moth, ru: мо'ль, type: noun}
-- {en: fish, ru: ры'ба, type: noun}
+- {attrs: [f], en: fish, ru: ры'ба, type: noun}
 - {attrs: [m], en: dolphin, ru: дельфи'н, type: noun}
-- {en: crocodile, ru: крокоди'л, type: noun}
+- {attrs: [m], en: crocodile, ru: крокоди'л, type: noun}
 - {attrs: [m], en: alligator, ru: аллига'тор, type: noun}
 - {attrs: [m], en: octopus, ru: осьмино'г, type: noun}
 - {attrs: [m], en: whale, ru: ки'т, type: noun}
@@ -129,7 +130,7 @@ cards:
 - {attrs: [f], en: turtle, ru: черепа'ха, type: noun}
 - {attrs: [f], en: frog, ru: лягу'шка, type: noun}
 - {attrs: [f], en: seal, ru: не'рпа, type: noun}
-- {en: toad, ru: жа'ба, type: noun}
+- {attrs: [f], en: toad, ru: жа'ба, type: noun}
 - {attrs: [m], en: squid, ru: кальма'р, type: noun}
 - {attrs: [f], en: bird, ru: пти'ца, type: noun}
 - {attrs: [m], en: woodpecker, ru: дя'тел, type: noun}
@@ -151,7 +152,7 @@ cards:
 - {attrs: [f], en: paint, ru: кра'ска, type: noun}
 - {attrs: [n], en: body, ru: те'ло, type: noun}
 - {attrs: [f], en: head, ru: голова', type: noun}
-- {attrs: [pluronly], en: hair, ru: во'лосы, type: noun}
+- {attrs: [indec, pluronly], en: hair, ru: во'лосы, type: noun}
 - {attrs: [n], en: face, ru: лицо', type: noun}
 - {attrs: [m], en: eye, ru: гла'з, type: noun}
 - {attrs: [n], en: ear, rel: [[noun, слух, hearing (the sense)]], ru: у'хо, type: noun}
@@ -199,14 +200,14 @@ cards:
 - {attrs: [f], en: clothes, ru: одежда, type: noun}
 - {attrs: [f], en: shirt, ru: рубашка, type: noun}
 - {attrs: [m], en: suit, ru: костюм, type: noun}
-- {en: trousers, ru: брюки, type: noun}
+- {attrs: [indec], en: trousers, ru: брюки, type: noun}
 - {en: socks, ru: носки, type: noun}
 - {attrs: [m], en: sweater, ru: свитер, type: noun}
 - {attrs: [f], en: t-shirt, ru: футболка, type: noun}
 - {attrs: [f], en: 't-shirt, polo-shirt', ru: тенниска, type: noun}
 - {attrs: [f], en: 'singlet, tank-top', ru: майка, type: noun}
 - {attrs: [f], en: blouse, ru: кофта, type: noun}
-- {en: jeans, ru: джинсы, type: noun}
+- {attrs: [indec], en: jeans, ru: джинсы, type: noun}
 - {attrs: [f], en: skirt, ru: юбка, type: noun}
 - {attrs: [n], en: dress, ru: пла'тье, type: noun}
 - {attrs: [f], en: poloneck, ru: водолазка, type: noun}
@@ -225,7 +226,7 @@ cards:
 - {attrs: [m], en: 'gumshoes, canvas shoes', ru: кеды, type: noun}
 - {en: boot shoes, ru: ботинки, type: noun}
 - {en: sandals, ru: босоножки, type: noun}
-- {en: slippers, ru: тапочки, type: noun}
+- {attrs: [indec], en: slippers, ru: тапочки, type: noun}
 - {en: bra, ru: бюстгалтер, type: noun}
 - {en: jewelry, rel: [[noun, украшение, 'decoration, adornment']], ru: украшения, type: noun}
 - {attrs: [n], en: ring, ru: кольцо, type: noun}
@@ -236,8 +237,8 @@ cards:
 - {en: earrings, ru: сережки, type: noun}
 - {attrs: [m], en: pendant, ru: кулон, type: noun}
 - {attrs: [f], en: brooch, ru: бро'шь, type: noun}
-- {en: glasses, ru: очки', type: noun}
-- {en: 'clock, watch', ru: часы', type: noun}
+- {attrs: [indec], en: glasses, ru: очки', type: noun}
+- {attrs: [indec], en: 'clock, watch', ru: часы', type: noun}
 - {attrs: [m], en: computer, ru: компью'тер, type: noun}
 - {en: internet, ru: интерне'т, type: noun}
 - {attrs: [m], en: password, ru: паро'ль, type: noun}
@@ -286,7 +287,7 @@ cards:
 - {attrs: [m], en: step, ru: ша'г, type: noun}
 - {attrs: [m], en: ticket, ru: биле'т, type: noun}
 - {attrs: [f], en: party, ru: вечери'нка, type: noun}
-- {en: money, ru: де'ньги, type: noun}
+- {attrs: [indec], en: money, ru: де'ньги, type: noun}
 - {attrs: [f], en: 'map, card', ru: ка'рта, type: noun}
 - {attrs: [f], en: problem, ru: пробле'ма, type: noun}
 - {attrs: [m], en: project, ru: прое'кт, type: noun}
@@ -354,7 +355,7 @@ cards:
 - {attrs: [f], en: water, ru: вода, type: noun}
 - {attrs: [n], en: milk, ru: молоко', type: noun}
 - {attrs: [m], en: kefir, ru: кефир, type: noun}
-- {en: cream, ru: сли'вки, type: noun}
+- {attrs: [indec], en: cream, ru: сли'вки, type: noun}
 - {attrs: [m], en: lemonade, ru: лимонад, type: noun}
 - {attrs: [f], en: coke, ru: кока-кола, type: noun}
 - {attrs: [indec], en: hot chocolate, ru: какао, type: noun}
@@ -362,10 +363,10 @@ cards:
 - {attrs: [n], en: apple, ru: я'блоко, type: noun}
 - {attrs: [f], en: pear, ru: гру'ша, type: noun}
 - {attrs: [m], en: orange (fruit), ru: апельси'н, type: noun}
-- {en: grapes, ru: виноград, type: noun}
+- {attrs: [m], en: grapes, ru: виноград, type: noun}
 - {attrs: [m], en: grapefruit, ru: грейпфру'т, type: noun}
 - {en: kiwi fruit, ru: киви, type: noun}
-- {en: mandarine, ru: мандарин, type: noun}
+- {attrs: [m], en: mandarine, ru: мандарин, type: noun}
 - {attrs: [indec], en: mango, ru: ма'нго, type: noun}
 - {attrs: [m], en: banana, ru: бана'н, type: noun}
 - {attrs: [m], en: pineapple, ru: анана'с, type: noun}
@@ -379,12 +380,12 @@ cards:
 - {attrs: [f], en: cherry, ru: 'ви''шня, чере''шня', type: noun}
 - {attrs: [f], en: melon, ru: ды'ня, type: noun}
 - {attrs: [m], en: watermelon, ru: арбу'з, type: noun}
-- {en: gooseberry, ru: крыжовник, type: noun}
+- {attrs: [m], en: gooseberry, ru: крыжовник, type: noun}
 - {en: vegtables, ru: овощи, type: noun}
 - {en: cucumber, ru: огурец (огурцы), type: noun}
 - {en: tomato, ru: помидор (помидоры), type: noun}
 - {en: vegtable marrow, ru: кабачок (кабачки), type: noun}
-- {attrs: [nopl], en: potato, ru: картофель, type: noun}
+- {attrs: [m, nopl], en: potato, ru: картофель, type: noun}
 - {en: 'aubergine, egg-plant', ru: баклажан (баклажаны), type: noun}
 - {attrs: [f, nopl], en: cabbage, ru: капуста, type: noun}
 - {attrs: [nopl], en: cauliflower, ru: цветная капуста, type: noun}
@@ -403,8 +404,8 @@ cards:
 - {attrs: [m], en: mushroom, ru: гриб (грибы), type: noun}
 - {attrs: [n], en: meat, ru: мя'со, type: noun}
 - {attrs: [f], en: beef, ru: говя'дина, type: noun}
-- {en: mutton, ru: бара'нина, type: noun}
-- {en: pork, ru: свини'на, type: noun}
+- {attrs: [f], en: mutton, ru: бара'нина, type: noun}
+- {attrs: [f], en: pork, ru: свини'на, type: noun}
 - {attrs: [f], en: veal, ru: теля'тина, type: noun}
 - {attrs: [f], en: lamb, ru: ягня'тина, type: noun}
 - {attrs: [f], en: rabbit (food), ru: крольча'тина (кро'лик), type: noun}
@@ -420,7 +421,7 @@ cards:
 - {attrs: [f, nopl], en: codfish, ru: треска', type: noun}
 - {attrs: [f, nopl], en: sardine, ru: сарди'на, type: noun}
 - {attrs: [f, nopl], en: mackerel, ru: ску'мбрия, type: noun}
-- {attrs: [nopl], en: carp, ru: ка'рп, type: noun}
+- {attrs: [m, nopl], en: carp, ru: ка'рп, type: noun}
 - {attrs: [m, nopl], en: tuna, ru: туне'ц, type: noun}
 - {en: oyster, ru: устри'ца (устрицы), type: noun}
 - {en: mussel, ru: ми'дия (мидии), type: noun}
@@ -447,7 +448,7 @@ cards:
 - {attrs: [f], en: vanilla, ru: ваниль, type: noun}
 - {attrs: [m], en: ginger, ru: имбирь, type: noun}
 - {attrs: [m], en: rosemary, ru: розмарин, type: noun}
-- {en: mustard, ru: горчица, type: noun}
+- {attrs: [f], en: mustard, ru: горчица, type: noun}
 - {attrs: [f], en: cinnamon, ru: корица, type: noun}
 - {attrs: [m], en: basil, ru: базилик, type: noun}
 - {attrs: [f], en: sweet roll, ru: булочка, type: noun}
@@ -461,7 +462,7 @@ cards:
 - {en: (chewing) gum, ru: 'жевательная резинка, жевачка', type: noun}
 - {attrs: [m], en: stuffed roll, ru: пирожок, type: noun}
 - {attrs: [m], en: chocolate, ru: шокола'д, type: noun}
-- {en: flour, ru: мука, type: noun}
+- {attrs: [f], en: flour, ru: мука, type: noun}
 - {attrs: [m], en: bread, ru: хлеб, type: noun}
 - {attrs: [m], en: pancake, ru: блин, type: noun}
 - {attrs: [m], en: white bread, ru: белый хлеб, type: noun}
@@ -469,7 +470,7 @@ cards:
 - {attrs: [f], en: grain, ru: крупа, type: noun}
 - {attrs: [f], en: buckwheat, ru: гречка, type: noun}
 - {attrs: [m], en: barley, ru: ячмень, type: noun}
-- {en: millet, ru: пшено, type: noun}
+- {attrs: [n], en: millet, ru: пшено, type: noun}
 - {attrs: [m], en: rice, ru: рис, type: noun}
 - {attrs: [m], en: cheese, ru: сыр, type: noun}
 - {attrs: [n], en: egg, ru: яйцо, type: noun}
@@ -519,8 +520,8 @@ cards:
 - {attrs: [f], en: family, ru: семья, type: noun}
 - {attrs: [m], en: father, ru: отец, type: noun}
 - {attrs: [f], en: mother, ru: ма'ть, type: noun}
-- {en: dad, ru: па'па, type: noun}
-- {en: mom, ru: мама, type: noun}
+- {attrs: [f], en: dad, ru: па'па, type: noun}
+- {attrs: [f], en: mom, ru: мама, type: noun}
 - {attrs: [m], en: brother, ru: брат, type: noun}
 - {attrs: [f], en: sister, ru: сестра', type: noun}
 - {attrs: [m], en: son, ru: сын, type: noun}
@@ -540,7 +541,7 @@ cards:
 - {attrs: [m], en: marriage, ru: брак, type: noun}
 - {en: married, ru: 'замужем, женатый', type: noun}
 - {en: marry, ru: 'жениться, выходить замуж', type: noun}
-- {en: single, ru: холостой, type: noun}
+- {attrs: [m], en: single, ru: холостой, type: noun}
 - {attrs: [f], en: widow, ru: вдова, type: noun}
 - {attrs: [m], en: widower, ru: вдовец, type: noun}
 - {en: relatives, ru: родственники, type: noun}
@@ -554,14 +555,14 @@ cards:
 - {attrs: [m], en: father-in-law (wife's father), ru: те'сть, type: noun}
 - {attrs: [f], en: mother-in-law (husband's mother), ru: свекро'вь, type: noun}
 - {attrs: [m], en: person, ru: человек, type: noun}
-- {en: people, ru: лю'ди, type: noun}
+- {attrs: [indec], en: people, ru: лю'ди, type: noun}
 - {attrs: [f], en: man, ru: мужчи'на, type: noun}
 - {attrs: [f], en: woman, ru: женщина, type: noun}
 - {attrs: [m], en: young boy, ru: мальчик, type: noun}
 - {attrs: [f], en: young girl, ru: девочка, type: noun}
 - {attrs: [f], en: young woman, ru: девушка, type: noun}
 - {en: young man, ru: молодой человек, type: noun}
-- {en: young people, ru: молодёжь, type: noun}
+- {attrs: [indec], en: young people, ru: молодёжь, type: noun}
 - {attrs: [m], en: adult, ru: взрослый, type: noun}
 - {attrs: [f], en: youth, ru: ю'ноша, type: noun}
 - {en: child, ru: ребенок, type: noun}
@@ -1012,7 +1013,7 @@ cards:
 - {attrs: [f], en: voice acting, ru: озву'чка, type: noun}
 - {attrs: [f], en: team (sport team), ru: кома'нда, type: noun}
 - {attrs: [m], en: example, ru: приме'р, type: noun}
-- {en: idol, ru: куми'р, type: noun}
+- {attrs: [m], en: idol, ru: куми'р, type: noun}
 - {attrs: [f], en: grass, ru: трава', type: noun}
 - {en: textbook, ru: уче'бник, type: noun}
 - {attrs: [m], en: verb, ru: глаго'л, type: noun}
@@ -1085,7 +1086,7 @@ cards:
 - {attrs: [m], en: ghost, ru: при'зрак, type: noun}
 - {attrs: [m], en: guest, ru: го'сть, type: noun}
 - {en: pity, ru: жа'ль, type: noun}
-- {en: heat, ru: жара', type: noun}
+- {attrs: [f], en: heat, ru: жара', type: noun}
 - {attrs: [f], en: victory, ru: побе'да, type: noun}
 - {attrs: [m], en: gift, ru: пода'рок, type: noun}
 - {attrs: [f], en: soul, ru: душа', type: noun}
@@ -1213,15 +1214,15 @@ cards:
 - {attrs: [m], en: 'corner, angle', ru: уго'л, type: noun}
 - {attrs: [m], en: circle, rel: [[verb, крутиться, to turn around in circles], [noun,
       окружение, 'encirclement, surroundings']], ru: кру'г, type: noun}
-- {en: east, ru: восто'к, type: noun}
+- {attrs: [m], en: east, ru: восто'к, type: noun}
 - {attrs: [m], en: west, ru: за'пад, type: noun}
-- {en: north, ru: се'вер, type: noun}
+- {attrs: [m], en: north, ru: се'вер, type: noun}
 - {attrs: [m], en: south, ru: ю'г, type: noun}
 - {attrs: [m], en: cartoon show, ru: му'льтик, type: noun}
 - {attrs: [n], en: exception, ru: исключе'ние, type: noun}
 - {attrs: [m], en: yard, ru: дво'р, type: noun}
 - {attrs: [f], en: 'picture, painting', ru: карти'на, type: noun}
-- {en: kindness, ru: доброта', type: noun}
+- {attrs: [f], en: kindness, ru: доброта', type: noun}
 - {attrs: [f], en: harmony, ru: гармо'ния, type: noun}
 - {attrs: [m], en: ruler, ru: прави'тель, type: noun}
 - {en: one and a half, ru: полтора', type: noun}
@@ -1327,7 +1328,7 @@ cards:
 - {attrs: [m], en: drawing, ru: рису'нок, type: noun}
 - {attrs: [f], en: stool, ru: табуре'тка, type: noun}
 - {attrs: [m], en: 'crate, box, chest', ru: я'щик, type: noun}
-- {en: hammer, ru: молото'к, type: noun}
+- {attrs: [m], en: hammer, ru: молото'к, type: noun}
 - {attrs: [f], en: harp, ru: а'рфа, type: noun}
 - {attrs: [m], en: ball (sport), ru: мя'ч, type: noun}
 - {attrs: [m], en: 'orb, sphere, globe, ball', ru: ша'р, type: noun}
@@ -1373,7 +1374,7 @@ cards:
 - {attrs: [m], en: horizon, ru: горизо'нт, type: noun}
 - {attrs: [m], en: fireplace, ru: ками'н, type: noun}
 - {attrs: [m], en: chimney, ru: дымохо'д, type: noun}
-- {en: doll, ru: ку'кла, type: noun}
+- {attrs: [f], en: doll, ru: ку'кла, type: noun}
 - {attrs: [f], en: puddle, ru: лу'жа, type: noun}
 - {attrs: [f], en: queue, ru: о'чередь, type: noun}
 - {attrs: [m], en: poison, ru: я'д, type: noun}
@@ -1414,7 +1415,7 @@ cards:
 - {attrs: [f], en: reaction, rel: [[verb, реагировать, to react]], ru: реа'кция, type: noun}
 - {attrs: [f], en: culture, ru: культу'ра, type: noun}
 - {attrs: [n], en: generation, ru: поколе'ние, type: noun}
-- {en: laziness, rel: [[verb, лениться, to be lazy]], ru: ле'нь, type: noun}
+- {attrs: [indec], en: laziness, rel: [[verb, лениться, to be lazy]], ru: ле'нь, type: noun}
 - {attrs: [f], en: connection, ru: свя'зь, type: noun}
 - {attrs: [f], en: weakness, ru: сла'бость, type: noun}
 - {attrs: [impf], en: to sneeze, ru: чиха'ть, type: noun}
@@ -1620,7 +1621,7 @@ cards:
         в Росси''и, бо''лее че''стным (в эмо''цией).', '']], ru: впечатле'ние, type: noun}
 - {attrs: [f], en: emotion, ru: эмо'ция, type: noun}
 - {attrs: [f], en: topic, ru: те'ма, type: noun}
-- {en: 'rush, hurry, haste', ru: спе'шка, type: noun}
+- {attrs: [f], en: 'rush, hurry, haste', ru: спе'шка, type: noun}
 - {attrs: [f], en: energy, ru: эне'ргия, type: noun}
 - {attrs: [m], en: fence, ru: забо'р, type: noun}
 - {attrs: [f], en: freedom, ru: свобо'да, type: noun}
@@ -1687,7 +1688,7 @@ cards:
 - {attrs: [n], en: 'test, trial', rel: [[noun, попытка, an attempt]], ru: испыта'ние,
   type: noun}
 - {attrs: [f], en: a hundred, ru: со'тня, type: noun}
-- {en: paradise, ru: ра'й, type: noun}
+- {attrs: [m], en: paradise, ru: ра'й, type: noun}
 - {attrs: [f], en: 'leak, leakage', ru: уте'чка, type: noun}
 - {attrs: [f], en: property, ru: со'бственность, type: noun}
 - {attrs: [m], en: union, ru: сою'з, type: noun}
@@ -1716,7 +1717,7 @@ cards:
 - {en: prepositional case, ru: предло'жный паде'ж, type: noun}
 - {en: neuter gender, ru: сре'дный ро'д, type: noun}
 - {en: personal pronouns, ru: ли'чное местоиме'ние, type: noun}
-- {en: present tense, ru: настоя'щее вре'мя, type: noun}
+- {attrs: [n], en: present tense, ru: настоя'щее вре'мя, type: noun}
 - {en: past tense, ru: проше'дшее вре'мя, type: noun}
 - {attrs: [pf, verb.suffix.a3], en: 'to tie, connect, join', ru: связа'ть, type: verb}
 - {attrs: [impf, verb.suffix.i], en: to milk, ru: дои'ть, type: verb}
@@ -1761,7 +1762,7 @@ cards:
 - {attrs: [m], en: 'passageway, aisle', ru: прохо'д, type: noun}
 - {attrs: [n], en: 'spell, invocation', ru: заклина'ние, type: noun}
 - {attrs: [f], en: stupidity, ru: глу'пость, type: noun}
-- {en: 'poppycock, malarkey, nonsense', ru: чепуха', type: noun}
+- {attrs: [f], en: 'poppycock, malarkey, nonsense', ru: чепуха', type: noun}
 - {attrs: [n], en: mankind, ru: челове'чество, type: noun}
 - {attrs: [n], en: opinion, ru: мне'ние, type: noun}
 - {attrs: [n], en: expectation, rel: [[adverb, неожиданно, unexpectedly]], ru: ожида'ние,
@@ -1769,7 +1770,7 @@ cards:
 - {attrs: [m], en: call, ru: зо'в, type: noun}
 - {attrs: [f], en: crowd, ru: толпа', type: noun}
 - {attrs: [f], en: jail, ru: тюрьма', type: noun}
-- {en: donut, ru: по'нчик, type: noun}
+- {attrs: [m], en: donut, ru: по'нчик, type: noun}
 - {attrs: [m], en: horn, ru: ро'г, type: noun}
 - {attrs: [f], en: stench, ru: во'нь, type: noun}
 - {attrs: [n], en: cloud, ru: о'блако, type: noun}
@@ -1831,13 +1832,13 @@ cards:
 - {attrs: [m], en: fear, ru: стра'х, type: noun}
 - {attrs: [n], en: 'wish, desire', ru: жела'ние, type: noun}
 - {attrs: [f], en: ditch, ru: кана'ва, type: noun}
-- {en: hay, ru: се'но, type: noun}
+- {attrs: [n], en: hay, ru: се'но, type: noun}
 - {attrs: [m], en: 'break, pause, interruption', ru: переры'в, type: noun}
-- {en: childhood, ru: де'тство, type: noun}
+- {attrs: [n], en: childhood, ru: де'тство, type: noun}
 - {en: water polo, ru: во'дное по'ло, type: noun}
 - {en: martial arts, ru: боевы'е иску'сства, type: noun}
 - {attrs: [f], en: self defense, ru: самооборо'на, type: noun}
-- {en: physical culture, ru: физкульту'ра, type: noun}
+- {attrs: [f], en: physical culture, ru: физкульту'ра, type: noun}
 - {attrs: [f], en: section, ru: се'кция, type: noun}
 - {attrs: [m], en: gym, ru: спо'ртзал, type: noun}
 - {attrs: [n], en: state of health, ru: самочу'вствие, type: noun}
@@ -1889,14 +1890,14 @@ cards:
 - {attrs: [n], en: 'being, living thing', rel: [[verb, существовать, to exist]], ru: существо',
   type: noun}
 - {attrs: [m], en: sand, ru: песо'к, type: noun}
-- {en: dust, ru: пы'ль, type: noun}
-- {en: 'cleanliness, purity', ru: чистота', type: noun}
+- {attrs: [indec], en: dust, ru: пы'ль, type: noun}
+- {attrs: [f], en: 'cleanliness, purity', ru: чистота', type: noun}
 - {attrs: [n], en: happiness, ru: сча'стье, type: noun}
 - {attrs: [m], en: favorite; pet, ru: люби'мец, type: noun}
 - {attrs: [n], en: 'management, control', ru: управле'ние, type: noun}
 - {attrs: [m], en: 'feast, banquet', ru: пи'р, type: noun}
 - {attrs: [f], en: 'opportunity, possibility', ru: возмо'жность, type: noun}
-- {en: most, ru: больши'нство, type: noun}
+- {attrs: [n], en: most, ru: больши'нство, type: noun}
 - {attrs: [f], en: bed with two sides, ru: посте'ль, type: noun}
 - {attrs: [m], en: pet, ru: пито'мец, type: noun}
 - {attrs: [m], en: close friend (slang), ru: ко'реш, type: noun}
@@ -1948,7 +1949,7 @@ cards:
 - {attrs: [n], en: 'a memory, recollection', ru: воспомина'ние, type: noun}
 - {attrs: [m], en: 'gathering, collection', ru: сбо'р, type: noun}
 - {attrs: [n], en: confession, ru: призна'ние, type: noun}
-- {en: gate, ru: воро'та, type: noun}
+- {attrs: [f], en: gate, ru: воро'та, type: noun}
 - {attrs: [f], en: chandelier, ru: лю'стра, type: noun}
 - {attrs: [n], en: excitement, ru: волне'ние, type: noun}
 - {attrs: [n], en: 'plant, herb', ru: расте'ние, type: noun}
@@ -2019,13 +2020,13 @@ cards:
 - {en: '19', ru: девятна'дцать, type: noun}
 - {en: '20', ru: два'дцать, type: noun}
 - {en: '30', ru: три'дцать, type: noun}
-- {en: '40', ru: со'рок, type: noun}
+- {attrs: [m], en: '40', ru: со'рок, type: noun}
 - {en: '50', ru: пятьдеся'т, type: noun}
 - {en: '60', ru: шестьдеся'т, type: noun}
 - {en: '70', ru: се'мьдесят, type: noun}
 - {en: '80', ru: во'семьдесят, type: noun}
 - {en: '90', ru: девяно'сто, type: noun}
-- {en: '100', ru: сто', type: noun}
+- {attrs: [n], en: '100', ru: сто', type: noun}
 - {en: '200', ru: две'сти, type: noun}
 - {en: '300', ru: три'ста, type: noun}
 - {en: '400', ru: четы'реста, type: noun}
@@ -2496,14 +2497,14 @@ cards:
 - {attrs: [f], en: surface, rel: [[noun, верх, the top]], ru: пове'рхность, type: noun}
 - {attrs: [f], en: folder, ru: па'пка, type: noun}
 - {attrs: [f], en: 'stack, shot glass', ru: сто'пка, type: noun}
-- {en: 'darkness, gloom, obscurity', rel: [[adjective, тёмный, dark], [verb, темнеть,
-      to darken]], ru: 'темнота'', тьма''', type: noun}
+- {attrs: [f], en: 'darkness, gloom, obscurity', rel: [[adjective, тёмный, dark], [
+      verb, темнеть, to darken]], ru: 'темнота'', тьма''', type: noun}
 - {attrs: [f], en: 'duty, responsibility', rel: [[noun, ответственность, responsibility]],
   ru: обяза'нность, type: noun}
 - {attrs: [n], en: coincidence, ru: совпаде'ние, type: noun}
 - {attrs: [m], en: chin, rel: [[noun, борода, beard]], ru: подборо'док, type: noun}
 - {attrs: [f], en: 'tactic, tactics', ru: та'ктика, type: noun}
-- {en: quietness, rel: [[adjective, тихий, quiet]], ru: тишина', type: noun}
+- {attrs: [f], en: quietness, rel: [[adjective, тихий, quiet]], ru: тишина', type: noun}
 - {attrs: [m], en: groan, rel: [[verb, стонать, 'to moan, groan'], [verb, простонать,
       to say with a groan]], ru: сто'н, type: noun}
 - {en: food, ru: пищевика', type: noun}
@@ -2580,7 +2581,7 @@ cards:
 - {attrs: [n], en: effort, rel: [[adjective, сильный, 'strong, powerful'], [verb, усилить,
       to strengthen]], ru: уси'лие, type: noun}
 - {attrs: [m], en: epic (story), ru: э'пос, type: noun}
-- {en: honor, rel: [[adjective, честный, honest]], ru: че'сть, type: noun}
+- {attrs: [indec], en: honor, rel: [[adjective, честный, honest]], ru: че'сть, type: noun}
 - {en: grief, ru: кручи'на, type: noun}
 - {attrs: [m], en: 'release, issue', rel: [[verb, выпустить, to let out]], ru: вы'пуск,
   type: noun}
@@ -2597,7 +2598,7 @@ cards:
 - {en: 'the rise, rising', ru: подъе'м, type: noun}
 - {attrs: [n], en: the lowering, rel: [[verb, спускаться, 'to go down, descend']], ru: опуска'ние,
   type: noun}
-- {en: 'dusk, twilight', ru: суме'рки, type: noun}
+- {attrs: [indec], en: 'dusk, twilight', ru: суме'рки, type: noun}
 - {en: throne room, ru: тро'нный за'л, type: noun}
 - {attrs: [pf, verb.suffix.nu], en: to leave, ru: поки'нуть, type: verb}
 - {attrs: [pf, verb.suffix.ai], en: to be crowned with success, ru: увенча'ться успе'хом,
@@ -2672,7 +2673,8 @@ cards:
 - {attrs: [n], en: collision, ru: столкнове'ние, type: noun}
 - {attrs: [n], en: contradiction, ru: противоре'чие, type: noun}
 - {attrs: [f], en: 'situation, furnashings', ru: обстано'вка, type: noun}
-- {en: victim, rel: [[adjective, жертвенный, sacrificial]], ru: же'ртва, type: noun}
+- {attrs: [f], en: victim, rel: [[adjective, жертвенный, sacrificial]], ru: же'ртва,
+  type: noun}
 - {en: quicksand (unstable-sand), ru: зыбу'чие пески', type: noun}
 - {attrs: [f], en: feather bead, ru: пери'на, type: noun}
 - {attrs: [f], en: frame, ru: ра'ма, type: noun}
@@ -2742,14 +2744,14 @@ cards:
 - {attrs: [n], en: direction, ru: направле'ние, type: noun}
 - {attrs: [f], en: 'fury, rage', rel: [[adjective, разъярённый, 'furious, enraged']],
   ru: я'рость, type: noun}
-- {en: 'tramp, trot', ru: то'пот, type: noun}
+- {attrs: [m], en: 'tramp, trot', ru: то'пот, type: noun}
 - {en: snort, ru: фы'рканье, type: noun}
 - {attrs: [m], en: unicorn, ru: единоро'г, type: noun}
 - {attrs: [m], en: 'scream, yell', rel: [[verb, вопить, 'to yell loudly, to wail']],
   ru: во'пль, type: noun}
 - {attrs: [f], en: 'mark, grade', rel: [[noun, метка, distinctive mark on smth]], ru: отме'тка,
   type: noun}
-- {en: voice, ru: 'гла''с, го''лос', type: noun}
+- {attrs: [m], en: voice, ru: 'гла''с, го''лос', type: noun}
 - {attrs: [impf, verb.suffix.ova], en: to design, ru: проекти'ровать, type: verb}
 - {attrs: [pf, verb.suffix.ova], en: to design, ru: спроекти'ровать, type: verb}
 - {attrs: [pf], en: to cover up, rel: [[verb, раскрыть, to uncover], [noun, крышка,
@@ -2806,8 +2808,9 @@ cards:
 - {attrs: [m], en: clay pot, ru: горшо'к, type: noun}
 - {attrs: [n], en: potted plant, ru: расте'ние в горшке', type: noun}
 - {attrs: [f], en: 'horizontal gap, slit', ru: ще'ль, type: noun}
-- {en: silver, rel: [[adjective, серебрянный, silver]], ru: серебро', type: noun}
-- {en: gold, rel: [[adjective, золотой, 'golden, made of gold']], ru: зо'лото, type: noun}
+- {attrs: [n], en: silver, rel: [[adjective, серебрянный, silver]], ru: серебро', type: noun}
+- {attrs: [n], en: gold, rel: [[adjective, золотой, 'golden, made of gold']], ru: зо'лото,
+  type: noun}
 - {attrs: [m], en: band of light in unlit space, ru: просве'т, type: noun}
 - {attrs: [n], en: dissapearance, rel: [[verb, исчезнуть, 'to disappear, vanish']],
   ru: исчезнове'ние, type: noun}
@@ -2822,7 +2825,7 @@ cards:
 - {attrs: [f], en: cover, rel: [[verb, раскрыть, to uncover], [verb, прикрыть, to cover
         up]], ru: кры'шка, type: noun}
 - {attrs: [f], en: splinter, ru: ще'пка, type: noun}
-- {en: sawdust, ru: опи'лки, type: noun}
+- {attrs: [indec], en: sawdust, ru: опи'лки, type: noun}
 - {attrs: [m], en: 'hatch, manhole', ru: лю'к, type: noun}
 - {attrs: [n], en: 'fall, drop', rel: [[verb, падать, 'to fall, drop']], ru: пада'ние,
   type: noun}
@@ -2881,7 +2884,7 @@ cards:
 - {attrs: [f], en: cart, ru: теле'жка, type: noun}
 - {attrs: [n], en: consequence, ru: сле'дствие, type: noun}
 - {attrs: [n], en: consequence of something, ru: после'дствие, type: noun}
-- {en: slice-of-life, ru: повседне'вность, type: noun}
+- {attrs: [indec], en: slice-of-life, ru: повседне'вность, type: noun}
 - {attrs: [m], en: threshold, ru: поро'г, type: noun}
 - {attrs: [impf, verb.suffix.ai], en: to take into account, ru: учи'тывать, type: verb}
 - {attrs: [pf], en: 'to avoid, get away from', rel: [[adjective, неизбежный, 'inevitable,
@@ -2922,7 +2925,7 @@ cards:
 - {attrs: [m], en: 'ruin, devestation', ru: разгро'м, type: noun}
 - {attrs: [n], en: destruction, ru: разруше'ние, type: noun}
 - {attrs: [f], en: bakery products, ru: вы'печка, type: noun}
-- {en: crumb, ru: кро'шка, type: noun}
+- {attrs: [f], en: crumb, ru: кро'шка, type: noun}
 - {attrs: [f], en: 'frosting, glaze', ru: глазу'рь, type: noun}
 - {attrs: [m], en: colt (baby horse), ru: жере'бчик, type: noun}
 - {en: 'foal, filly', ru: 'жеребёнок, жеребя''та', type: noun}
@@ -2932,7 +2935,7 @@ cards:
   ru: кра'йность, type: noun}
 - {attrs: [m], en: 'cargo, goods', ru: гру'з, type: noun}
 - {attrs: [n], en: curoisity, ru: любопы'тство, type: noun}
-- {en: 'dust, ash', ru: 'пра''х, пы''ль', type: noun}
+- {attrs: [m], en: 'dust, ash', ru: 'пра''х, пы''ль', type: noun}
 - {attrs: [m], en: wedge, ru: кли'н, type: noun}
 - {attrs: [m], en: 'turn, time', ru: черёд, type: noun}
 - {attrs: [pf, verb.suffix.i], en: to satisfy, ru: удовлетвори'ть, type: verb}
@@ -2988,7 +2991,7 @@ cards:
 - {attrs: [n], en: adventure, ru: 'похожде''ние, приключе''ние', type: noun}
 - {attrs: [m], en: hearing (the sense), rel: [[noun, ухо, ear], [verb, слушать, to listen]],
   ru: слу'х, type: noun}
-- {en: gossip, ru: слу'хи, type: noun}
+- {attrs: [indec], en: gossip, ru: слу'хи, type: noun}
 - {attrs: [n], en: liberation, ru: освобожде'ние, type: noun}
 - {attrs: [m], en: harem, ru: гаре'м, type: noun}
 - {attrs: [n], en: objection, ru: возраже'ние, type: noun}
@@ -3050,7 +3053,7 @@ cards:
 - {attrs: [f], en: register, ru: ка'сса, type: noun}
 - {attrs: [m], en: fan (hand fan), ru: ве'ер, type: noun}
 - {attrs: [f], en: change (money), ru: сда'ча, type: noun}
-- {en: cash, ru: нали'чные (ден'ьги), type: noun}
+- {attrs: [n], en: cash, ru: нали'чные (ден'ьги), type: noun}
 - {en: knowledge, ru: зна'ния, type: noun}
 - {attrs: [n], en: 'education, formation', ru: образова'ние, type: noun}
 - {attrs: [f], en: 'publicity, openness', ru: гла'сность, type: noun}
@@ -3061,7 +3064,7 @@ cards:
 - {attrs: [n], en: attraction, rel: [[noun, развлечение, entertainment]], ru: влече'ние,
   type: noun}
 - {attrs: [f], en: universe, ru: вселе'нная, type: noun}
-- {en: 'guys, children', ru: ребя'та, type: noun}
+- {attrs: [f], en: 'guys, children', ru: ребя'та, type: noun}
 - {attrs: [m], en: pearl, ru: же'мчуг, type: noun}
 - {attrs: [m], en: fur, ru: ме'х, type: noun}
 - {attrs: [n], en: awakening, ru: пробужде'ние, type: noun}
@@ -3168,7 +3171,7 @@ cards:
 - {attrs: [f], en: jaw, ru: че'люсть, type: noun}
 - {attrs: [f], en: detail, ru: дета'ль, type: noun}
 - {attrs: [m], en: interest, ru: интере'с, type: noun}
-- {en: bright spot of light from sunbeam, ru: за'йчик, type: noun}
+- {attrs: [m], en: bright spot of light from sunbeam, ru: за'йчик, type: noun}
 - {attrs: [m], en: 'housing, body, hull', ru: ко'рпус, type: noun}
 - {attrs: [m], en: shine, ru: бле'ск, type: noun}
 - {attrs: [m], en: inch, ru: дю'йм, type: noun}
@@ -3300,7 +3303,7 @@ cards:
 - {en: 'really!, emotional (suprise, doubt, concern)', ru: 'неуже''ли, неу''жто', type: particle}
 - {en: attractive, ru: привлека'тельный, type: adjective}
 - {attrs: [m], en: stage curtain, ru: за'навес, type: noun}
-- {en: celebrity, ru: знамени'тость, type: noun}
+- {attrs: [f], en: celebrity, ru: знамени'тость, type: noun}
 - {en: 'slim, shapely', ru: стро'йный, type: adjective}
 - {en: 'startling, astounding', ru: порази'тельный, type: adjective}
 - {en: 'meticulously, carefully', ru: тща'тельно, type: adverb}
@@ -3336,7 +3339,7 @@ cards:
 - {attrs: [pf, verb.suffix.i], en: to open (same as откры'ть), ru: отвори'ть, type: verb}
 - {attrs: [m], en: 'side street, allyway', ru: переу'лок, type: noun}
 - {attrs: [impf, verb.suffix.ova], en: 'to accompany, attend', ru: сопу'тствовать, type: verb}
-- {en: 'damage, loss', ru: уро'н, type: noun}
+- {attrs: [m], en: 'damage, loss', ru: уро'н, type: noun}
 - {attrs: [pf], en: to kill many, ru: переби'ть, type: verb}
 - {en: innocent, ru: неви'нный, type: adjective}
 - {attrs: [pf, verb.suffix.ai], en: 'to get injured, come to harm', ru: пострада'ть,
@@ -3716,8 +3719,9 @@ cards:
 - {attrs: [impf, verb.suffix.ai], en: to overcome, ru: одолева'ть, type: verb}
 - {attrs: [n], en: 'rescue, salvation', rel: [[verb, спасти, 'to save, rescue']], ru: спасе'ние,
   type: noun}
-- {en: boredome, rel: [[adjective, скучный, boring], [verb, заскучать, to get bored],
-    [verb, скучать, to miss due to absance; to feel bored]], ru: ску'ка, type: noun}
+- {attrs: [f], en: boredome, rel: [[adjective, скучный, boring], [verb, заскучать, to
+        get bored], [verb, скучать, to miss due to absance; to feel bored]], ru: ску'ка,
+  type: noun}
 - {attrs: [n], en: entertainment, rel: [[noun, влечение, attraction], [noun, отвлечение,
       distraction]], ru: развлече'ние, type: noun}
 - {attrs: [impf, verb.suffix.e], en: 'to rattle, thunder', rel: [[adjective, громкий,
@@ -3747,11 +3751,11 @@ cards:
   type: noun}
 - {attrs: [m], en: bleach, ru: отбе'ливатель, type: noun}
 - {attrs: [m], en: powder, ru: порошо'к, type: noun}
-- {en: bravery, ru: хра'брость, type: noun}
+- {attrs: [indec], en: bravery, ru: хра'брость, type: noun}
 - {attrs: [n], en: spear, ru: копьё, type: noun}
 - {en: in a flash, ru: вми'г, type: adverb}
 - {en: one in the same, ru: оди'н и то'т же, type: phrase}
-- {en: horseradish, ru: хре'н, type: noun}
+- {attrs: [m], en: horseradish, ru: хре'н, type: noun}
 - {en: to sensor, ru: цензури'ровать, type: verb}
 - {attrs: [m], en: sin, ru: гре'х, type: noun}
 - {en: tragic, ru: траги'ческий, type: adjective}
@@ -3759,7 +3763,7 @@ cards:
 - {attrs: [m], en: flashlight, ru: фона'рик, type: noun}
 - {attrs: [m], en: 'bag, sack', ru: мешо'к, type: noun}
 - {attrs: [f], en: sleepover, ru: ночёвка, type: noun}
-- {en: mustache; whiskers, ru: усы', type: noun}
+- {attrs: [indec], en: mustache; whiskers, ru: усы', type: noun}
 - {attrs: [n], en: treat (food/drink), rel: [[phrase, угощайся, treat/help yourself]],
   ru: угоще'ние, type: noun}
 - {attrs: [impf, verb.suffix.i], en: to open eyes wide in suprise, rel: [[verb, морщиться,
@@ -3800,7 +3804,8 @@ cards:
   ru: неизбе'жный, type: adjective}
 - {attrs: [n], en: truce, rel: [[noun, мир, world]], ru: переми'рие, type: noun}
 - {attrs: [pf, verb.suffix.ai], en: to justify, ru: оправда'ть, type: verb}
-- {en: 'enmity, feud', rel: [[adjective, враждебный, hostile]], ru: вражда', type: noun}
+- {attrs: [f], en: 'enmity, feud', rel: [[adjective, враждебный, hostile]], ru: вражда',
+  type: noun}
 - {attrs: [n], en: influence, rel: [[verb, влиять, to influence]], ru: влия'ние, type: noun}
 - {en: reasoningg, rel: [[noun, безрассудство, a wreckless act]], ru: рассу'дство, type: noun}
 - {attrs: [n], en: a wreckless act, rel: [[noun, рассудство, reasoningg]], ru: безрассу'дство,
@@ -3815,9 +3820,9 @@ cards:
 - {attrs: [f], en: rapier (fencing weapon), ru: рапи'ра, type: noun}
 - {attrs: [m], en: 'puncture, jab, prick', ru: уко'л, type: noun}
 - {en: here and there, ru: ся'м, type: adverb}
-- {attrs: [f], en: 'throat, pharynx', rel: [[noun, горло, throat], [verb, поглотить,
-      'to absorb, swallow, consume'], [verb, поглощать, 'to absorb, swallow, consume']],
-  ru: гло'тка, type: noun}
+- {attrs: [f], en: 'throat, pharynx', rel: [[verb, поглощать, 'to absorb, swallow, consume'],
+    [noun, горло, throat], [verb, поглотить, 'to absorb, swallow, consume']], ru: гло'тка,
+  type: noun}
 - {attrs: [n], en: action directed at someone to achieve smth, rel: [[noun, 'действие,
         деяние', 'an action, act']], ru: возде'йствие, type: noun}
 - {attrs: [f], en: 'a check, verification', rel: [[verb, проверить, to check]], ru: прове'рка,

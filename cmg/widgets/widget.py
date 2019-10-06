@@ -70,6 +70,9 @@ class Widget(LayoutItem):
             if self.focused:
                 self.get_root_parent().change_focus(None)
             self.parent = parent
+    
+    def show(self):
+        self.set_visible(True)
 
     def close(self):
         self.set_visible(False)

@@ -5,6 +5,7 @@ import cmg
 import cmg.logging
 from cmg import color
 
+app = None
 
 class Config:
     logger = None

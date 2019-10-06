@@ -8,6 +8,7 @@ from cmg.color import Colors
 from cmg.input import Keys
 from cmg.input import MouseButtons
 
+
 class CheckBox(widgets.Widget):
     def __init__(self, text="", checked=False):
         super().__init__()

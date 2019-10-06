@@ -22,6 +22,9 @@ class Noun(Word):
             (Plurality.Plural, Case.Prepositional): AccentedText(""),
             (Plurality.Plural, Case.Instrumental): AccentedText("")}
 
+    def get_gender(self) -> Gender:
+        return self.gender
+
     def classify_gender(self):
         nom_sing = self.declension[(Plurality.Singular, Case.Nominative)].text
         indeclinable = True

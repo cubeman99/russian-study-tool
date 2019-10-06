@@ -154,6 +154,24 @@ ATTRIBUTE_NAMES = {
     CardAttributes.AdjectiveAsNoun: "Adj. Used as Noun"
 }
 
+ATTRIBUTE_SHORT_DISPLAY_NAMES = {
+    CardAttributes.VerbSuffixAi:   "-ай",
+    CardAttributes.VerbSuffixEi:   "-ей",
+    CardAttributes.VerbSuffixOva:  "-ова",
+    CardAttributes.VerbSuffixNu:   "-ну",
+    CardAttributes.VerbSuffixNu2:  "-(ну)",
+    CardAttributes.VerbSuffixA1:   "-а",
+    CardAttributes.VerbSuffixA2:   "-а",
+    CardAttributes.VerbSuffixA3:   "-а",
+    CardAttributes.VerbSuffixAvai: "-авай",
+    CardAttributes.VerbSuffixO:    "-о",
+    CardAttributes.VerbSuffixI:    "-и",
+    CardAttributes.VerbSuffixE:    "-е",
+    CardAttributes.VerbSuffixZha:  "-жа",
+    CardAttributes.ObstruentStem:  "Obstr",
+    CardAttributes.ResonantStem:   "Reson",
+}
+
 ATTRIBUTE_COLORS = {
     CardAttributes.Masculine: Color(255, 0, 0),
     CardAttributes.Femanine: Color(255, 128, 200),

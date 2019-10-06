@@ -66,6 +66,7 @@ class CardDatabase:
         self.card_data_changed = Event(Card)
         self.card_added_to_set = Event(Card, CardSet)
         self.card_removed_from_set = Event(Card, CardSet)
+        self.card_set_created = Event(CardSet)
         
     def is_saving(self) -> bool:
         """Returns True if currently saving the database."""
@@ -87,10 +88,20 @@ class CardDatabase:
         with self.__lock_modify.acquire_read():
             return self.__path_to_card_sets_dict.get(path, [])
 
-    def get_card_by_key(self, word_type: WordType, russian: str, english: str):
+    def get_card_by_key(self, word_type: WordType, russian=None, english=None) -> Card:
+        key = (word_type, russian, english)
+        if russian is None and english is None:
+            key = word_type
         with self.__lock_modify.acquire_read():
-            key = (word_type, russian, english)
             return self.cards.get(key, None)
+
+    def get_card_by_russian_key(self, key: tuple) -> Card:
+        with self.__lock_modify.acquire_read():
+            return self.__russian_key_to_card_dict.get(key, None)
+
+    def get_card_by_english_key(self, key: tuple) -> Card:
+        with self.__lock_modify.acquire_read():
+            return self.__english_key_to_card_dict.get(key, None)
 
     def get_card(self, word_type: WordType, english=None, russian=None) -> Card:
         """
@@ -151,6 +162,20 @@ class CardDatabase:
             self.__russian_key_to_card_dict = {}
             self.__english_key_to_card_dict = {}
             self.__path_to_card_sets_dict = {}
+
+    def create_card_set(self, name, file_name: str, package: CardSetPackage) -> CardSet:
+        """Creates a new card set."""
+        if not file_name.endswith(".yaml"):
+            file_name += ".yaml"
+        path = os.path.join(package.get_path(), file_name)
+        card_set = CardSet(name=name, path=path)
+        with self.__lock_modify.acquire_write():
+            package.add_card_set(card_set)
+            self.__add_card_set_path(card_set, path=path)
+        with self.__lock_dirty:
+            self.__dirty_card_sets.add(card_set)
+        self.card_set_created.emit(card_set)
+        return card_set
 
     def add_card_to_set(self, card: Card, card_set: CardSet):
         """Adds a card to a card set."""
@@ -547,13 +572,16 @@ class CardDatabase:
                     yaml.dump(state, opened_file, encoding="utf8",
                               allow_unicode=True, default_flow_style=False,
                               Dumper=yaml.CDumper)
-                    opened_file.write(b"  cards:\n")
-                    for card_state in cards_state:
-                        opened_file.write(b"    - ")
-                        yaml.dump(
-                            card_state, opened_file, encoding="utf8",
-                            allow_unicode=True, default_flow_style=True,
-                            Dumper=yaml.CDumper)
+                    if not cards_state:
+                        opened_file.write(b"  cards: []")
+                    else:
+                        opened_file.write(b"  cards:\n")
+                        for card_state in cards_state:
+                            opened_file.write(b"    - ")
+                            yaml.dump(
+                                card_state, opened_file, encoding="utf8",
+                                allow_unicode=True, default_flow_style=True,
+                                Dumper=yaml.CDumper)
                 
             card_set.set_fixed_card_set(False)
             card_set.set_file_path(path)
@@ -636,10 +664,10 @@ class CardDatabase:
     def __deserialize_card_set(self, state: dict) -> CardSet:
         """Deserialize card set data."""
         state = state["card_set"]
-        card_set = CardSet()
-        card_set.set_name(state["name"])
+        card_set = CardSet(name=state["name"])
         card_set.key = state["name"].lower().replace(" ", "_")
-        for card_state in state["cards"]:
+
+        for card_state in state.get("cards", []):
             assert 1 <= len(card_state) <= 3
             word_type = parse_word_type(card_state[0])
             if len(card_state) == 3:

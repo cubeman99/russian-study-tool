@@ -4,7 +4,7 @@ from cmg.color import Color
 from cmg.event import Event
 from study_tool.card import Card
 from study_tool.config import Config
-from study_tool.gui.card_list_table import CardListTable
+from study_tool.gui.generic_table_widget import GenericTableWidget
 
 
 class RelatedCardsWidget(widgets.Widget):
@@ -18,7 +18,6 @@ class RelatedCardsWidget(widgets.Widget):
         self.__card = card
         self.__application = application
         self.__card_database = application.card_database
-        self.__search_result_cards = []
         self.updated = Event(Card)
 
         # Create widgets
@@ -28,8 +27,14 @@ class RelatedCardsWidget(widgets.Widget):
         self.__label_type = widgets.Label("<type>")
         self.__button_apply = widgets.Button("Apply")
         self.__button_cancel = widgets.Button("Cancel")
-        self.__table_related_cards = CardListTable(select_text="Remove")
-        self.__table_searched_cards = CardListTable(select_text="Add")
+        self.__table_related_cards = GenericTableWidget()
+        self.__table_related_cards.add_text_column(lambda card: card.get_russian().text)
+        self.__table_related_cards.add_text_column(lambda card: card.get_english().text)
+        self.__table_related_cards.add_button_column("Remove", self.__on_related_card_clicked)
+        self.__table_searched_cards = GenericTableWidget()
+        self.__table_searched_cards.add_text_column(lambda card: card.get_russian().text)
+        self.__table_searched_cards.add_text_column(lambda card: card.get_english().text)
+        self.__table_searched_cards.add_button_column("Add", self.__on_search_card_clicked)
         self.__label_result_count = widgets.Label("<result-count>")
 
         # Create layouts
@@ -55,8 +60,6 @@ class RelatedCardsWidget(widgets.Widget):
         self.__box_search.return_pressed.connect(self.__on_search_return_pressed)
         self.__button_apply.clicked.connect(self.apply)
         self.__button_cancel.clicked.connect(self.__on_click_cancel)
-        self.__table_searched_cards.card_button_clicked.connect(self.__on_search_card_clicked)
-        self.__table_related_cards.card_button_clicked.connect(self.__on_related_card_clicked)
 
         self.select_card(card)
         self.__box_search.focus()
@@ -83,7 +86,7 @@ class RelatedCardsWidget(widgets.Widget):
 
     def apply(self):
         """Applies changes to the the card."""
-        new_related_cards = self.__table_related_cards.get_cards()
+        new_related_cards = self.__table_related_cards.get_items()
         updated_card = Card(copy=self.__card,
                             related_cards=new_related_cards)
         changed = self.__card_database.update_card(
@@ -123,9 +126,12 @@ class RelatedCardsWidget(widgets.Widget):
 
     def __on_search_return_pressed(self):
         """Called when pressing enter in the search box."""
-        if not self.__search_result_cards:
+        results = self.__table_searched_cards.get_items()
+        if not results:
             return
-        card = self.__search_result_cards[0]
+        card = results[0]
+        if card.is_in_fixed_card_set():
+            return
         self.add_related_card(card, save=True)
         self.__box_search.select_all()
 
@@ -137,7 +143,6 @@ class RelatedCardsWidget(widgets.Widget):
         """Refresh the list of card search results."""
         text = self.__box_search.get_text()
         self.__table_searched_cards.clear()
-        self.__search_result_cards = []
         result_count = 0
         
         if text.strip():
@@ -145,7 +150,7 @@ class RelatedCardsWidget(widgets.Widget):
             for index, card in enumerate(self.__card_database.iter_cards()):
                 match_score = self.__matches(card, text)
                 if (match_score is not None and
-                        card not in self.__table_related_cards.get_cards() and
+                        card not in self.__table_related_cards.get_items() and
                         card is not self.__card):
                     matching_cards.append((card, match_score))
 
@@ -153,10 +158,11 @@ class RelatedCardsWidget(widgets.Widget):
             result_count = len(matching_cards)
             for index, (card, _) in enumerate(matching_cards[:20]):
                 enabled = not card.is_in_fixed_card_set()
-                row = self.__table_searched_cards.add(card, enabled=enabled)
-                self.__search_result_cards.append(card)
+                color = None
                 if index == 0:
-                    row.set_color(Color(255, 255, 200))
+                    color = Color(255, 255, 200)
+                row = self.__table_searched_cards.add(
+                    card, enabled=enabled, color=color)
 
         self.__label_result_count.set_text("{} results".format(result_count))
 

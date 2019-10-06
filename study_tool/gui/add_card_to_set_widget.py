@@ -7,6 +7,7 @@ from study_tool.card_set import CardSet
 from study_tool.config import Config
 from study_tool.gui.generic_table_widget import GenericTableWidget
 from study_tool.gui.card_set_browser_widget import CardSetBrowserWidget
+from study_tool.gui.create_card_set_widget import CreateCardSetWidget
 
 
 class AddCardToSetWidget(widgets.Widget):
@@ -110,12 +111,13 @@ class AddCardToSetWidget(widgets.Widget):
             
     def on_close(self):
         """Called when the widget is closed."""
+        self.apply()
         thread = threading.Thread(target=self.__card_database.save_all_changes)
         thread.start()
                     
     def add_card_set(self, card_set: CardSet, save=False):
         """Add a card set to the list of card sets."""
-        self.__table_card_sets.add(card_set)
+        self.__table_card_sets.add(card_set, enabled=not card_set.is_fixed_card_set())
         self.__refresh_search_results()
         if save:
             self.apply()
@@ -128,7 +130,16 @@ class AddCardToSetWidget(widgets.Widget):
 
     def __on_click_create_set(self):
         """Called when Create New Card Set is clicked."""
-        pass
+        widget = CreateCardSetWidget(
+            card_set_package=self.__card_set_browser.get_package(),
+            name=self.__box_search.get_text())
+        Config.app.push_gui_state(widget)
+        widget.card_set_created.connect(self.__on_create_card_set)
+
+    def __on_create_card_set(self, card_set: CardSet):
+        """Called when a new Card Set is created."""
+        self.__card_set_browser.select_package(card_set.get_package())
+        self.add_card_set(card_set)
     
     def __on_search_card_set_clicked(self, card_set: CardSet):
         """Called when a card set in the search results is clicked."""

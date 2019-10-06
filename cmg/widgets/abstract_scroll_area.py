@@ -6,7 +6,7 @@ from cmg.math import Vec2
 from cmg import color
 from cmg.input import MouseButtons, KeyMods, Keys
 from cmg.widgets import widget
-from cmg.widgets.layout import HBoxLayout
+from cmg.widgets.box_layout import HBoxLayout
 
 
 class SubRegionLayout(widgets.Layout):
