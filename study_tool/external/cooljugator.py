@@ -1,7 +1,10 @@
 import requests
 import threading
+import time
 import traceback
 import re
+import queue
+from cmg.event import Event
 from study_tool.russian.types import Aspect
 from study_tool.russian.types import Case
 from study_tool.russian.types import Gender
@@ -19,6 +22,7 @@ from study_tool.config import Config
 
 class Cooljugator404Exception(Exception):
     pass
+
 
 class Cooljugator:
 
@@ -160,10 +164,10 @@ class Cooljugator:
             adj.declension[(gender, Case.Dative)] = self.__get_conjugation(root, "dat_" + letter)
             adj.declension[(gender, Case.Instrumental)] = self.__get_conjugation(root, "instr_" + letter)
             adj.declension[(gender, Case.Prepositional)] = self.__get_conjugation(root, "prep_" + letter)
-        try:
-            adj.short_form[gender] = self.__get_conjugation(root, "short_" + letter)
-        except:
-            adj.short_form[gender] = AccentedText("-")
+            try:
+                adj.short_form[gender] = self.__get_conjugation(root, "short_" + letter)
+            except:
+                adj.short_form[gender] = AccentedText("-")
         return adj
 
     def download_verb_info(self, infinitive) -> Verb:
@@ -320,3 +324,43 @@ class Cooljugator:
                 Config.logger.warning("404 Page not found: " + url)
                 raise Cooljugator404Exception("404 Page not found: " + url)
         return soup
+
+
+class CooljugatorThread:
+    def __init__(self, cooljugator: Cooljugator):
+        self.__cooljugator = cooljugator
+        self.__queue = queue.Queue()
+        self.__thread = threading.Thread(target=self.__run)
+        self.__running = True
+        self.__status = None
+
+    def start(self):
+        self.__thread.start()
+
+    def stop(self):
+        self.__running = False
+        self.__thread.join()
+
+    def get_status(self) -> tuple:
+        return self.__status
+
+    def download_word_info(self, word_type: WordType, name, callback) -> Word:
+        self.__queue.put((word_type, name, callback))
+
+    def __run(self):
+        self.__running = True
+        while self.__running:
+            try:
+                while self.__running:
+                    word_type, name, callback = self.__queue.get_nowait()
+                    self.__status = (word_type, name)
+                    result = self.__cooljugator.download_word_info(
+                        word_type=word_type, name=name)
+                    self.__status = None
+                    if callback:
+                        event = Event(object)
+                        event.connect(callback)
+                        event.emit(result)
+            except queue.Empty:
+                pass
+            time.sleep(0.1)

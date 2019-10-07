@@ -15,11 +15,15 @@ class Widget(LayoutItem):
         self.focused_widget = None
         self.focused = False
         self.focusable = False
-        self.closed = Event()
         self.__window_title = ""
         self.__enabled = True
         self.__visible = True
         self.__key_shortcuts = []
+
+        # Events
+        self.closed = Event()
+        self.focus_lost = Event()
+        self.focus_gained = Event()
 
     def is_focusable(self) -> bool:
         return self.focusable
@@ -87,10 +91,12 @@ class Widget(LayoutItem):
         if self.focused_widget:
             self.focused_widget.focused = False
             self.focused_widget.on_lose_focus()
+            self.focused_widget.focus_lost.emit()
         self.focused_widget = widget
         if self.focused_widget:
             self.focused_widget.focused = True
             self.focused_widget.on_gain_focus()
+            self.focused_widget.focus_gained.emit()
 
     def iter_widgets(self):
         if self.layout:

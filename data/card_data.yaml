@@ -113,7 +113,7 @@ cards:
 - {attrs: [f], en: horse, ru: ло'шадь, type: noun}
 - {attrs: [m], en: goose, ru: гу'сь, type: noun}
 - {attrs: [f], en: duck, ru: у'тка, type: noun}
-- {attrs: [m], en: spider, ru: пау'к, type: noun}
+- {attrs: [m], en: spider, rel: [[noun, паутина, spider web]], ru: пау'к, type: noun}
 - {attrs: [m], en: ant, ru: мураве'й, type: noun}
 - {attrs: [f], en: bee, ru: пчела', type: noun}
 - {attrs: [f], en: wasp, ru: оса', type: noun}
@@ -733,8 +733,8 @@ cards:
 - {en: dumb, ru: стрёмный, type: adjective}
 - {en: happy, ru: счастли'вый, type: adjective}
 - {en: sad, ru: 'гру''стный, печа''льный', type: adjective}
-- {en: 'evil, wicked', rel: [[adjective, злобный, 'mean, wicked, spiteful']], ru: зло'й,
-  type: adjective}
+- {en: 'evil, wicked', rel: [[adjective, злобный, 'mean, wicked, spiteful'], [noun,
+      'злость, гнев', anger]], ru: зло'й, type: adjective}
 - {en: 'strong, powerful', rel: [[noun, усилие, effort], [noun, сила, 'strength, power,
         force']], ru: си'льный, type: adjective}
 - {en: 'calm, peaceful', ru: споко'йный, type: adjective}
@@ -1078,7 +1078,7 @@ cards:
 - {attrs: [f], en: 'problem, task', ru: зада'ча, type: noun}
 - {attrs: [f], en: beauty, ru: красота', type: noun}
 - {attrs: [f], en: 'cartoon, comic', ru: карикату'ра, type: noun}
-- {attrs: [f], en: love, ru: любо'вь, type: noun}
+- {attrs: [f], en: love, rel: [[noun, любовник, lover]], ru: любо'вь, type: noun}
 - {attrs: [m], en: 'view, look', ru: ви'д, type: noun}
 - {attrs: [m], en: success, ru: успе'х, type: noun}
 - {attrs: [n], en: heart, ru: се'рдце, type: noun}
@@ -1387,7 +1387,8 @@ cards:
 - {attrs: [m], en: limit, ru: преде'л, type: noun}
 - {attrs: [f], en: napkin, ru: салфе'тка, type: noun}
 - {attrs: [f], en: 'illness, disease', ru: боле'знь, type: noun}
-- {attrs: [pf, verb.suffix.i], en: 'to calm, soothe, reassure', ru: успоко'ить, type: verb}
+- {attrs: [pf, verb.suffix.i], en: 'to calm, soothe, reassure', rel: [[verb, беспокоить,
+      'to bother, trouble, discomfort, unsettle']], ru: успоко'ить, type: verb}
 - {attrs: [pf, verb.suffix.ai], en: to get hungry, rel: [[adjective, голодный, hungry]],
   ru: проголода'ться, type: verb}
 - {attrs: [impf, verb.suffix.ova], en: to applaud, ru: аплоди'ровать, type: verb}
@@ -1416,7 +1417,8 @@ cards:
 - {attrs: [f], en: culture, ru: культу'ра, type: noun}
 - {attrs: [n], en: generation, ru: поколе'ние, type: noun}
 - {attrs: [indec], en: laziness, rel: [[verb, лениться, to be lazy]], ru: ле'нь, type: noun}
-- {attrs: [f], en: connection, ru: свя'зь, type: noun}
+- {attrs: [f], en: connection, rel: [[adjective, бессвязный, 'rambling, incoherent,
+        disjointed']], ru: свя'зь, type: noun}
 - {attrs: [f], en: weakness, ru: сла'бость, type: noun}
 - {attrs: [impf], en: to sneeze, ru: чиха'ть, type: noun}
 - {attrs: [pf], en: to sneeze, ru: чихну'ть, type: noun}
@@ -1653,7 +1655,8 @@ cards:
 - {attrs: [impf, verb.suffix.ai], en: 'to limit, restrict', ru: ограни'чивать, type: verb}
 - {attrs: [pf, verb.suffix.i], en: 'to get lost, go astray', ru: заблуди'ться, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: 'to call off, cancel', ru: отменя'ться, type: verb}
-- {attrs: [pf, verb.suffix.i], en: 'to call off, cancel', ru: отмени'ться, type: verb}
+- {attrs: [pf, verb.suffix.i], en: 'to call off, cancel', rel: [[verb, применить, 'to
+        apply, implement in practice']], ru: отмени'ться, type: verb}
 - {attrs: [pf, verb.suffix.i], en: to connect, ru: подключи'ть, type: verb}
 - {attrs: [impf, verb.suffix.i], en: 'to bring, carry, drag', ru: тащи'ть, type: verb}
 - {attrs: [impf, verb.suffix.i], en: to be proud, rel: [[noun, гордость, pride]], ru: горди'ться,
@@ -1719,7 +1722,8 @@ cards:
 - {en: personal pronouns, ru: ли'чное местоиме'ние, type: noun}
 - {attrs: [n], en: present tense, ru: настоя'щее вре'мя, type: noun}
 - {en: past tense, ru: проше'дшее вре'мя, type: noun}
-- {attrs: [pf, verb.suffix.a3], en: 'to tie, connect, join', ru: связа'ть, type: verb}
+- {attrs: [pf, verb.suffix.a3], en: 'to tie, connect, join', rel: [[adjective, бессвязный,
+      'rambling, incoherent, disjointed']], ru: связа'ть, type: verb}
 - {attrs: [impf, verb.suffix.i], en: to milk, ru: дои'ть, type: verb}
 - {attrs: [pf, verb.suffix.ai], en: to be frightened, rel: [[noun, испуг, 'fright, startle'],
     [adjective, испуганный, 'frightened, scared']], ru: испуга'ться, type: verb}
@@ -1842,7 +1846,8 @@ cards:
 - {attrs: [f], en: section, ru: се'кция, type: noun}
 - {attrs: [m], en: gym, ru: спо'ртзал, type: noun}
 - {attrs: [n], en: state of health, ru: самочу'вствие, type: noun}
-- {attrs: [impf], en: to howl, ru: вы'ть, type: verb}
+- {attrs: [impf], en: to howl, rel: [[noun, вой, a howl], [verb, взвыть, to suddenly
+        howl]], ru: вы'ть, type: verb}
 - {attrs: [impf, verb.suffix.i], en: 'to happen, occur, take place', ru: происходи'ть,
   type: verb}
 - {attrs: [pf, verb.suffix.i], en: to drop, ru: урони'ть, type: verb}
@@ -1914,7 +1919,8 @@ cards:
 - {en: 'to look after, care for', ru: уха'живать за, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to accomplish, ru: соверша'ть, type: verb}
 - {attrs: [pf, verb.suffix.i], en: to accomplish, ru: соверши'ть, type: verb}
-- {attrs: [impf, verb.suffix.i], en: 'to track, watch, follow', ru: следи'ть, type: verb}
+- {attrs: [impf, verb.suffix.i], en: 'to track, watch, follow', rel: [[adverb, вслед
+        + instr., following...]], ru: следи'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: 'remove, tidy up, clear', ru: убира'ть, type: verb}
 - {en: vacuum cleaner, ru: пылесо'с, type: verb}
 - {attrs: [pf], en: 'to direct, turn, draw', ru: обрати'ть, type: verb}
@@ -2165,7 +2171,8 @@ cards:
 - {attrs: [impf, stem.resonant], en: to rot, ru: гни'ть, type: verb}
 - {attrs: [impf, stem.resonant], en: to sing, ru: пе'ть, type: verb}
 - {attrs: [impf, stem.resonant], en: to shave, ru: бри'ть, type: verb}
-- {attrs: [pf, stem.resonant], en: to take, ru: взя'ть, type: verb}
+- {attrs: [pf, stem.resonant], en: to take, rel: [[verb, развязывать, to untie]], ru: взя'ть,
+  type: verb}
 - {attrs: [impf, stem.resonant], en: 'to press, squeeze', ru: 'жа''ть (жму'', жмёшь,
     … жму''т)', type: verb}
 - {attrs: [impf, stem.resonant], en: to reap, ru: 'жа''ть (жну'', жнёшь, … жну''т)',
@@ -2228,7 +2235,8 @@ cards:
 - {attrs: [impf, irreg], en: to eat, ru: е'сть, type: verb}
 - {attrs: [impf, irreg, uni], en: to go by vehicle, ru: е'хать, type: verb}
 - {attrs: [impf, irreg, uni], en: to go on foot, ru: идти', type: verb}
-- {attrs: [impf, irreg], en: to grow, rel: [[noun, рост, growth]], ru: расти', type: verb}
+- {attrs: [impf, irreg], en: to grow, rel: [[noun, рост, growth], [verb, нарастать,
+      'to build up, accrue']], ru: расти', type: verb}
 - {attrs: [impf, verb.suffix.ai], en: 'to run, jog', ru: бе'гать, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to explain, ru: объясня'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to recall, ru: вспомина'ть, type: verb}
@@ -2329,8 +2337,8 @@ cards:
 - {attrs: [impf, verb.suffix.ova], en: to feel, ru: чу'вствовать, type: verb}
 - {attrs: [impf, verb.suffix.ova], en: to draw, ru: рисова'ть, type: verb}
 - {attrs: [impf, verb.suffix.ova], en: to photograph, ru: фотографи'ровать, type: verb}
-- {attrs: [impf, verb.suffix.ova], en: to follow, rel: [[verb, исследовать, to explore]],
-  ru: сле'довать, type: verb}
+- {attrs: [impf, verb.suffix.ova], en: to follow, rel: [[verb, исследовать, to explore],
+    [adverb, вслед + instr., following...]], ru: сле'довать, type: verb}
 - {attrs: [impf, verb.suffix.ova], en: to export, ru: экспорти'ровать, type: verb}
 - {attrs: [dat, impf, verb.suffix.ova], en: to advise, ru: сове'товать, type: verb}
 - {attrs: [pf, verb.suffix.nu], en: to return, ru: верну'ться, type: verb}
@@ -2352,7 +2360,8 @@ cards:
 - {attrs: [pf, verb.suffix.nu], en: to shout, ru: кри'кнуть, type: verb}
 - {attrs: [pf, verb.suffix.nu], en: to step, ru: шагну'ть, type: verb}
 - {attrs: [impf, verb.suffix.nu], en: to drown, ru: тону'ть, type: verb}
-- {attrs: [impf, verb.suffix.nu], en: to pull, ru: тяну'ть, type: verb}
+- {attrs: [impf, verb.suffix.nu], en: to pull, rel: [[verb, втянуть, 'to draw in, involve']],
+  ru: тяну'ть, type: verb}
 - {attrs: [pf, verb.suffix.nu], en: to mention, ru: помяну'ть, type: verb}
 - {attrs: [impf, verb.suffix.nu2], en: to fade; to wither, ru: блёкнуть, type: verb}
 - {attrs: [impf, verb.suffix.nu2], en: to grow stronger, rel: [[verb, подкрепить, to
@@ -2388,9 +2397,10 @@ cards:
   type: verb}
 - {attrs: [impf, verb.suffix.a3], en: to doze, ru: дрема'ть, type: verb}
 - {attrs: [impf, verb.suffix.a3], en: to sow, ru: се'ять, type: verb}
-- {attrs: [impf, verb.suffix.a3], en: to hope, rel: [[noun, надежда, hope]], ru: наде'яться,
-  type: verb}
-- {attrs: [impf], en: to laugh, rel: [[noun, смех, laughter]], ru: смея'ться, type: verb}
+- {attrs: [impf, verb.suffix.a3], en: to hope, rel: [[noun, надежда, hope], [adjective,
+      безнадежный, hopeless]], ru: наде'яться, type: verb}
+- {attrs: [impf], en: to laugh, rel: [[noun, смех, laughter], [verb, хохотать, to laugh
+        loudly]], ru: смея'ться, type: verb}
 - {attrs: [impf, verb.suffix.a3], en: to bark, ru: ла'ять, type: verb}
 - {attrs: [impf, verb.suffix.a3], en: to melt, ru: та'ять, type: verb}
 - {attrs: [impf, verb.suffix.a3], en: to tell lies (colloquial), ru: вра'ть, type: verb}
@@ -2437,7 +2447,8 @@ cards:
         in], [noun, носительник, 'wearer, bearer']], ru: носи'ть, type: verb}
 - {attrs: [impf, verb.suffix.i], en: to pay, ru: плати'ть, type: verb}
 - {attrs: [impf, verb.suffix.i], en: to clean, ru: чи'стить, type: verb}
-- {attrs: [impf, verb.suffix.i], en: 'to like, love', ru: люби'ть, type: verb}
+- {attrs: [impf, verb.suffix.i], en: 'to like, love', rel: [[noun, любовник, lover]],
+  ru: люби'ть, type: verb}
 - {attrs: [impf, verb.suffix.i], en: to prepare, ru: гото'вить, type: verb}
 - {attrs: [impf, verb.suffix.i], en: to catch, ru: лови'ть, type: verb}
 - {attrs: [impf, verb.suffix.i], en: 'to put, set (upright)', rel: [[verb, расставить,
@@ -2464,7 +2475,8 @@ cards:
 - {attrs: [impf, verb.suffix.e], en: to burn, ru: горе'ть, type: verb}
 - {attrs: [impf, verb.suffix.e], en: 'to look, watch', ru: смотре'ть, type: verb}
 - {attrs: [gen, impf, verb.suffix.zha], en: to be afraid of, ru: боя'ться, type: verb}
-- {attrs: [impf, verb.suffix.zha], en: 'to hold, keep', ru: держа'ть, type: verb}
+- {attrs: [impf, verb.suffix.zha], en: 'to hold, keep', rel: [[verb, поддерживать, 'to
+        support, maintain']], ru: держа'ть, type: verb}
 - {attrs: [impf, verb.suffix.zha], en: to tremble, rel: [[noun, дрожь, 'shiver, shudder,
         tremble']], ru: дрожа'ть, type: verb}
 - {attrs: [impf, verb.suffix.zha], en: to breathe, rel: [[noun, дыхание, breath]], ru: дыша'ть,
@@ -2593,7 +2605,8 @@ cards:
 - {attrs: [n], en: relationship, ru: отноше'ние, type: noun}
 - {attrs: [n], en: the gaining of, ru: обрете'ние, type: noun}
 - {attrs: [f], en: guard (such as the royal guard), ru: гва'рдия, type: noun}
-- {attrs: [f], en: hope, rel: [[verb, надеяться, to hope]], ru: наде'жда, type: noun}
+- {attrs: [f], en: hope, rel: [[verb, надеяться, to hope], [adjective, безнадежный,
+      hopeless]], ru: наде'жда, type: noun}
 - {attrs: [f], en: 'prayer, plea', rel: [[verb, молиться, to pray]], ru: мо'льба, type: noun}
 - {en: 'the rise, rising', ru: подъе'м, type: noun}
 - {attrs: [n], en: the lowering, rel: [[verb, спускаться, 'to go down, descend']], ru: опуска'ние,
@@ -2653,7 +2666,7 @@ cards:
 - {en: 'crushed, squashed', ru: разда'вленный, type: adjective}
 - {en: sacrificial, rel: [[noun, жертва, victim]], ru: же'ртвенный, type: adjective}
 - {en: embarrassed, rel: [[verb, смутиться, to be embarressed]], ru: смущённый, type: adjective}
-- {en: 'angry, wrathy', ru: гне'вный, type: adjective}
+- {en: 'angry, wrathy', rel: [[noun, 'злость, гнев', anger]], ru: гне'вный, type: adjective}
 - {attrs: [f], en: a strand, ru: пря'дь, type: noun}
 - {attrs: [f], en: 'step, stair', ru: 'ступе''нь, ступе''нька', type: noun}
 - {attrs: [m], en: shield, rel: [[verb, защищать, to protect]], ru: щи'т, type: noun}
@@ -2707,13 +2720,15 @@ cards:
 - {attrs: [impf, verb.suffix.ai], en: 'to sparkle, shine brightly', ru: сверка'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to push off, ru: отта'лкиваться, type: verb}
 - {attrs: [pf, verb.suffix.i], en: to roll your eyes, ru: закати'ть глаза', type: verb}
-- {attrs: [pf], en: to burst out laughing, ru: рассмея'ться, type: verb}
+- {attrs: [pf], en: to burst out laughing, rel: [[verb, хохотать, to laugh loudly]],
+  ru: рассмея'ться, type: verb}
 - {attrs: [pf, verb.suffix.i], en: 'to portray, picture', ru: изобрази'ть, type: verb}
 - {attrs: [pf, verb.suffix.ei], en: 'to be in time, have time (to do …)', ru: успе'ть,
   type: verb}
 - {en: to scold, ru: отругать, type: verb}
 - {en: crap!, ru: дерьмо'!, type: interjection}
-- {en: 'in private, alone', ru: наеди'не, type: adverb}
+- {en: 'in private, alone', rel: [[adverb, воедино, 'in one place, together']], ru: наеди'не,
+  type: adverb}
 - {en: 'exclusively, only', ru: исключи'тельно, type: adverb}
 - {en: literally, ru: буква'льно, type: adverb}
 - {en: 'much, much more', ru: гора'здо, type: adverb}
@@ -2767,8 +2782,8 @@ cards:
 - {attrs: [pf], en: to tame, ru: укроти'ть, type: verb}
 - {attrs: [pf, verb.suffix.i], en: to expand, ru: расши'рить, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: to expand, ru: расширя'ть, type: verb}
-- {attrs: [impf, verb.suffix.ai], en: 'to stick to, adhere, abide', ru: приде'рживаться,
-  type: verb}
+- {attrs: [impf, verb.suffix.ai], en: 'to stick to, adhere, abide', rel: [[verb, поддерживать,
+      'to support, maintain']], ru: приде'рживаться, type: verb}
 - {attrs: [pf, verb.suffix.ei], en: to be skillful enough to do smth, ru: суме'ть, type: verb}
 - {attrs: [gen], en: to avoid, ru: уворачиваться от + gen., type: verb}
 - {attrs: [gen], en: 'to evade, dodge', ru: уверну'ться от + gen., type: verb}
@@ -2858,7 +2873,8 @@ cards:
 - {en: to bother, ru: замора'чиваться, type: verb}
 - {attrs: [impf, verb.suffix.ova], en: to react, rel: [[noun, реакция, reaction]], ru: реаги'ровать,
   type: verb}
-- {attrs: [pf], en: 'to convince, urge', ru: убеди'ть, type: verb}
+- {attrs: [pf], en: 'to convince, urge', rel: [[verb, убедиться, 'to make sure, beieve
+        in smth']], ru: убеди'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: 'to convince, urge', ru: убежда'ть, type: verb}
 - {en: obsessed, ru: одержи'мый, type: adjective}
 - {en: depressed, ru: пода'вленный, type: adjective}
@@ -2879,14 +2895,15 @@ cards:
 - {attrs: [f], en: 'smirk, smug grin', ru: ухмы'лка, type: noun}
 - {attrs: [m], en: skill acquired from habit, ru: на'вык, type: noun}
 - {attrs: [n], en: 'preservation, conservation', ru: сохране'ние, type: noun}
-- {attrs: [n], en: evil, ru: зло', type: noun}
+- {attrs: [n], en: evil, rel: [[noun, 'злость, гнев', anger]], ru: зло', type: noun}
 - {attrs: [m], en: 'set, suite, selection', ru: набо'р, type: noun}
 - {attrs: [f], en: cart, ru: теле'жка, type: noun}
 - {attrs: [n], en: consequence, ru: сле'дствие, type: noun}
 - {attrs: [n], en: consequence of something, ru: после'дствие, type: noun}
 - {attrs: [indec], en: slice-of-life, ru: повседне'вность, type: noun}
 - {attrs: [m], en: threshold, ru: поро'г, type: noun}
-- {attrs: [impf, verb.suffix.ai], en: to take into account, ru: учи'тывать, type: verb}
+- {attrs: [impf, verb.suffix.ai], en: to take into account, rel: [[adverb, учитывая...,
+      considering...]], ru: учи'тывать, type: verb}
 - {attrs: [pf], en: 'to avoid, get away from', rel: [[adjective, неизбежный, 'inevitable,
         unavoidable']], ru: избежа'ть, type: verb}
 - {attrs: [pf, verb.suffix.zha], en: 'to withstand, endure, hold out', ru: вы'держать,
@@ -3010,8 +3027,10 @@ cards:
   type: verb}
 - {attrs: [impf, verb.suffix.i], en: to spoil, ru: по'ртить, type: verb}
 - {attrs: [impf, verb.suffix.ai], en: 'to infiltrate, penetrate', ru: проника'ть, type: verb}
-- {attrs: [impf, verb.suffix.ai], en: to cough, ru: кашля'ть, type: verb}
-- {attrs: [pf, verb.suffix.nu], en: to give a cough, ru: кашля'нуть, type: verb}
+- {attrs: [impf, verb.suffix.ai], en: to cough, rel: [[noun, кашель, a cough]], ru: кашля'ть,
+  type: verb}
+- {attrs: [pf, verb.suffix.nu], en: to give a cough, rel: [[noun, кашель, a cough]],
+  ru: кашля'нуть, type: verb}
 - {attrs: [pf], en: to drive out, ru: изгна'ть, type: verb}
 - {attrs: [pf, verb.suffix.nu], en: to cross out, ru: вы'черкнуть, type: verb}
 - {attrs: [pf, verb.suffix.ai], en: to calculate, ru: рассчита'ть, type: verb}
@@ -3073,7 +3092,8 @@ cards:
 - {attrs: [f], en: scene, ru: сце'на, type: noun}
 - {attrs: [n], en: 'purpose, assignment, function', ru: назначе'ние, type: noun}
 - {attrs: [n], en: standoff, ru: противостоя'ние, type: noun}
-- {attrs: [n], en: 'anxiety, concern', ru: беспоко'йство, type: noun}
+- {attrs: [n], en: 'anxiety, concern', rel: [[verb, беспокоить, 'to bother, trouble,
+        discomfort, unsettle']], ru: беспоко'йство, type: noun}
 - {attrs: [f], en: frying pan, ru: сковорода', type: noun}
 - {attrs: [f], en: brush, ru: ки'сть, type: noun}
 - {en: to measure, ru: поме'рить, type: verb}
@@ -3635,7 +3655,8 @@ cards:
 - {attrs: [gen], en: for the sake of, rel: [[preposition, для, for the benefit of]],
   ru: ради, type: preposition}
 - {attrs: [pf, verb.suffix.i], en: 'to decide, solve', rel: [[adjective, решительный,
-      'resolute, decisive, determined']], ru: реши'ть, type: verb}
+      'resolute, decisive, determined'], [verb, разрешить, to permit]], ru: реши'ть,
+  type: verb}
 - {attrs: [pf, verb.suffix.i], en: 'to stop, dwell, stand still', rel: [[noun, остановка,
       'stop, layover']], ru: останови'ться, type: verb}
 - {attrs: [f], en: moon, ru: луна', type: noun}
@@ -3729,7 +3750,9 @@ cards:
 - {attrs: [impf, verb.suffix.ai], en: to dissapoint, rel: [[verb, очаровывать, 'to charm,
         enchant, fascinate']], ru: разочаро'вывать, type: verb}
 - {attrs: [pf], en: to transfer to, rel: [[verb, дать, to give]], ru: переда'ть, type: verb}
-- {attrs: [impf, verb.suffix.ai], en: 'to support, maintain', ru: подде'рживать, type: verb}
+- {attrs: [impf, verb.suffix.ai], en: 'to support, maintain', rel: [[verb, держать,
+      'to hold, keep'], [verb, придерживаться, 'to stick to, adhere, abide']], ru: подде'рживать,
+  type: verb}
 - {en: 'piercing, harsh to hear', ru: пронзи'тельный, type: adjective}
 - {attrs: [n], en: respect, rel: [[verb, уважать, to respect]], ru: уваже'ние, type: noun}
 - {attrs: [f], en: aura, ru: а'ура, type: noun}
@@ -3738,8 +3761,8 @@ cards:
 - {en: speechless, ru: немо'й, type: adjective}
 - {attrs: [pf], en: to entwine, rel: [[verb, развить, 'to develop, expand'], [verb,
       вить, to twist]], ru: обви'ть, type: verb}
-- {attrs: [pf, verb.suffix.i], en: 'to apply, implement in practice', ru: примени'ть,
-  type: verb}
+- {attrs: [pf, verb.suffix.i], en: 'to apply, implement in practice', rel: [[verb, отмениться,
+      'to call off, cancel']], ru: примени'ть, type: verb}
 - {attrs: [pf, verb.suffix.i], en: 'to highlight, pick out', rel: [[verb, делиться,
       to share], [verb, делить, 'to device, divvy']], ru: вы'делить, type: verb}
 - {attrs: [f], en: mucus, ru: сли'зь, type: noun}
@@ -3753,7 +3776,8 @@ cards:
 - {attrs: [m], en: powder, ru: порошо'к, type: noun}
 - {attrs: [indec], en: bravery, ru: хра'брость, type: noun}
 - {attrs: [n], en: spear, ru: копьё, type: noun}
-- {en: in a flash, ru: вми'г, type: adverb}
+- {en: in a flash, rel: [[verb, мигать, 'to blink, flicker'], [verb, мигнуть, to blink
+        involuntarily]], ru: вми'г, type: adverb}
 - {en: one in the same, ru: оди'н и то'т же, type: phrase}
 - {attrs: [m], en: horseradish, ru: хре'н, type: noun}
 - {en: to sensor, ru: цензури'ровать, type: verb}
@@ -3827,46 +3851,65 @@ cards:
         деяние', 'an action, act']], ru: возде'йствие, type: noun}
 - {attrs: [f], en: 'a check, verification', rel: [[verb, проверить, to check]], ru: прове'рка,
   type: noun}
-- {attrs: [pf, verb.suffix.i], en: 'to make sure, beieve in smth', ru: убеди'ться, type: verb}
-- {en: considering..., ru: учи'тывая..., type: adverb}
-- {attrs: [f], en: spider web, ru: паути'на, type: noun}
+- {attrs: [pf, verb.suffix.i], en: 'to make sure, beieve in smth', rel: [[verb, убедить,
+      'to convince, urge']], ru: убеди'ться, type: verb}
+- {en: considering..., rel: [[verb, учитывать, to take into account]], ru: учи'тывая...,
+  type: adverb}
+- {attrs: [f], en: spider web, rel: [[noun, паук, spider]], ru: паути'на, type: noun}
 - {attrs: [pf, verb.suffix.i], en: 'to connect with someone, agree with smth', ru: присоеди'ниться,
   type: verb}
 - {attrs: [n], en: clarification, ru: уточне'ние, type: noun}
-- {attrs: [pf, verb.suffix.i], en: to permit, ru: разреши'ть, type: verb}
-- {attrs: [impf, verb.suffix.a3], en: to laugh loudly, ru: хохота'ть, type: verb}
-- {attrs: [m], en: a cough, ru: ка'шель, type: noun}
-- {attrs: [impf, verb.suffix.ai], en: to untie, ru: развя'зывать, type: verb}
-- {attrs: [pf, verb.suffix.nu], en: 'to draw in, involve', ru: втяну'ть, type: verb}
+- {attrs: [pf, verb.suffix.i], en: to permit, rel: [[verb, решить, 'to decide, solve']],
+  ru: разреши'ть, type: verb}
+- {attrs: [impf, verb.suffix.a3], en: to laugh loudly, rel: [[verb, смеяться, to laugh],
+    [verb, рассмеяться, to burst out laughing]], ru: хохота'ть, type: verb}
+- {attrs: [m], en: a cough, rel: [[verb, кашлять, to cough], [verb, кашлянуть, to give
+        a cough]], ru: ка'шель, type: noun}
+- {attrs: [impf, verb.suffix.ai], en: to untie, rel: [[verb, взять, to take]], ru: развя'зывать,
+  type: verb}
+- {attrs: [pf, verb.suffix.nu], en: 'to draw in, involve', rel: [[verb, тянуть, to pull]],
+  ru: втяну'ть, type: verb}
 - {attrs: [pf, verb.suffix.ai], en: to intervene, ru: вмеша'ться, type: verb}
-- {en: following..., ru: всле'д + instr., type: adverb}
+- {en: following..., rel: [[verb, следить, 'to track, watch, follow'], [verb, следовать,
+      to follow]], ru: всле'д + instr., type: adverb}
 - {attrs: [n], en: mood, ru: настрое'ние, type: noun}
-- {en: hopeless, ru: безнаде'жный, type: adjective}
+- {en: hopeless, rel: [[verb, надеяться, to hope], [noun, надежда, hope]], ru: безнаде'жный,
+  type: adjective}
 - {attrs: [m], en: 'delight, elation', ru: восто'рг, type: noun}
 - {attrs: [m], en: 'root (plant, source, base, math)', ru: ко'рень, type: noun}
 - {attrs: [m], en: fool, ru: 'дура''к (m), дура'' (f)', type: noun}
-- {attrs: [impf, verb.suffix.i], en: 'to bother, trouble, discomfort, unsettle', ru: беспоко'ить,
-  type: verb}
+- {attrs: [impf, verb.suffix.i], en: 'to bother, trouble, discomfort, unsettle', rel: [
+    [verb, успокоить, 'to calm, soothe, reassure'], [noun, беспокойство, 'anxiety,
+        concern']], ru: беспоко'ить, type: verb}
 - {en: 'spare, auxiliary', ru: запасно'й, type: adjective}
 - {en: 'labored, tortured', ru: выму'ченный, type: adjective}
 - {en: albeit reluctantly, ru: хо'ть и нехотя', type: phrase}
 - {attrs: [impf, verb.suffix.zha], en: to crackle, ru: треща'ть, type: verb}
-- {attrs: [impf, verb.suffix.ai], en: 'to blink, flicker', ru: мига'ть, type: verb}
-- {attrs: [pf, verb.suffix.nu], en: to blink involuntarily, ru: мигну'ть, type: verb}
+- {attrs: [impf, verb.suffix.ai], en: 'to blink, flicker', rel: [[adverb, вмиг, in a
+        flash], [verb, мигнуть, to blink involuntarily]], ru: мига'ть, type: verb}
+- {attrs: [pf, verb.suffix.nu], en: to blink involuntarily, rel: [[adverb, вмиг, in
+        a flash], [verb, мигать, 'to blink, flicker']], ru: мигну'ть, type: verb}
 - {attrs: [pf, verb.suffix.i], en: 'to disgrace, bring to shame', ru: опозо'рить, type: verb}
 - {attrs: [f], en: a bunch, ru: ку'чка, type: noun}
 - {attrs: [m], en: ash, ru: пе'пел, type: noun}
-- {en: 'in one place, together', ru: воеди'но, type: adverb}
-- {en: 'rambling, incoherent, disjointed', ru: бессвя'зный, type: adjective}
+- {en: 'in one place, together', rel: [[adverb, наедине, 'in private, alone']], ru: воеди'но,
+  type: adverb}
+- {en: 'rambling, incoherent, disjointed', rel: [[noun, связь, connection], [verb, связать,
+      'to tie, connect, join']], ru: бессвя'зный, type: adjective}
 - {en: mumbling, ru: 'бубне''ние, бормате''ние', type: noun}
 - {en: 'slurred, barely audible, indistinct', ru: невня'тный, type: adjective}
 - {attrs: [n], en: 'an action, act', rel: [[noun, воздействие, action directed at someone
         to achieve smth]], ru: 'де''йствие, дея''ние', type: noun}
-- {attrs: [m], en: lover, ru: любо'вник, type: noun}
+- {attrs: [m], en: lover, rel: [[noun, любовь, love], [verb, любить, 'to like, love']],
+  ru: любо'вник, type: noun}
 - {en: 'quiet, calm, submissive', ru: сми'рный, type: adjective}
 - {en: to roar, ru: ры'кнуть, type: verb}
-- {attrs: [impf, verb.suffix.ai], en: 'to build up, accrue', ru: нараста'ть, type: verb}
-- {attrs: [f], en: anger, ru: 'зло''сть, гне''в', type: noun}
-- {attrs: [pf], en: to suddenly howl, ru: взвы'ть, type: verb}
-- {attrs: [m], en: a howl, ru: во'й, type: noun}
+- {attrs: [impf, verb.suffix.ai], en: 'to build up, accrue', rel: [[verb, расти, to
+        grow]], ru: нараста'ть, type: verb}
+- {attrs: [f], en: anger, rel: [[adjective, злой, 'evil, wicked'], [adjective, гневный,
+      'angry, wrathy'], [noun, зло, evil]], ru: 'зло''сть, гне''в', type: noun}
+- {attrs: [pf], en: to suddenly howl, rel: [[verb, выть, to howl], [noun, вой, a howl]],
+  ru: взвы'ть, type: verb}
+- {attrs: [m], en: a howl, rel: [[verb, выть, to howl], [verb, взвыть, to suddenly howl]],
+  ru: во'й, type: noun}
 - {attrs: [impf, verb.suffix.ei], en: 'to own, possess', ru: владе'ть, type: verb}

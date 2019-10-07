@@ -39,6 +39,7 @@ from study_tool.states.read_text_state import ReadTextState
 from study_tool.states.study_state import StudyParams
 from study_tool.study_database import StudyDatabase
 from study_tool.word_database import WordDatabase
+from study_tool.external.cooljugator import CooljugatorThread
 
 DEAD_ZONE = 0.01
 
@@ -80,6 +81,7 @@ class StudyCardsApp(Application):
         self.card_database = CardDatabase(word_database=self.word_database)
         self.example_database = ExampleDatabase(word_database=self.word_database)
         self.study_database = StudyDatabase(card_database=self.card_database)
+        self.cooljugator_thread = CooljugatorThread(self.word_database.get_cooljugator())
 
         # Load data
         self.load_word_database()
@@ -132,6 +134,10 @@ class StudyCardsApp(Application):
         self.input.mouse_released.connect(self.__on_mouse_released)
 
         #self.get_unknown_words_from_examples()
+        self.cooljugator_thread.start()
+
+    def on_quit(self):
+        self.cooljugator_thread.stop()
 
     @property
     def root(self) -> CardSetPackage:
@@ -385,6 +391,12 @@ class StudyCardsApp(Application):
         if self.word_database.is_saving():
             self.graphics.draw_text(
                 4, y, text="Saving word data...", **kwargs)
+        y += 24
+        cooljugator_status = self.cooljugator_thread.get_status()
+        if cooljugator_status is not None:
+            word_type, name = cooljugator_status
+            self.graphics.draw_text(
+                4, y, text="Downloading {} info: {}".format(word_type, name), **kwargs)
 
         # Draw FPS
         fps = self.get_frame_rate()

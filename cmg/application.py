@@ -1,11 +1,15 @@
 import pygame
+import queue
 import time
+import traceback
 from cmg import color
 from cmg.input import InputManager
 from cmg.input import MouseButtons
 from cmg.input import Keys
 from cmg.input import KeyMods
 from cmg.math import Vec2
+from cmg.event import Event
+
 
 class Application:
     instance = None
@@ -34,6 +38,10 @@ class Application:
 
     def quit(self):
         self.running = False
+        self.on_quit()
+
+    def on_quit(self):
+        pass
 
     def update(self, dt):
         pass
@@ -47,40 +55,53 @@ class Application:
         self.__frame_counter = 0
         self.__frame_count_start_time = time.time()
 
-        while self.running:
-            # Event processing
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    self.quit()
-                elif event.type == pygame.KEYDOWN:
-                    self.input.on_key_down(Keys(event.key), KeyMods(event.mod), event.unicode)
-                elif event.type == pygame.KEYUP:
-                    self.input.on_key_up(Keys(event.key), KeyMods(event.mod))
-                elif event.type == pygame.MOUSEBUTTONDOWN:
-                    self.input.on_mouse_down(Vec2(event.pos), MouseButtons(event.button))
-                elif event.type == pygame.MOUSEBUTTONUP:
-                    self.input.on_mouse_up(Vec2(event.pos), MouseButtons(event.button))
+        try:
+            while self.running:
+                # Event processing
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        self.quit()
+                    elif event.type == pygame.KEYDOWN:
+                        self.input.on_key_down(Keys(event.key), KeyMods(event.mod), event.unicode)
+                    elif event.type == pygame.KEYUP:
+                        self.input.on_key_up(Keys(event.key), KeyMods(event.mod))
+                    elif event.type == pygame.MOUSEBUTTONDOWN:
+                        self.input.on_mouse_down(Vec2(event.pos), MouseButtons(event.button))
+                    elif event.type == pygame.MOUSEBUTTONUP:
+                        self.input.on_mouse_up(Vec2(event.pos), MouseButtons(event.button))
 
-            # Update
-            self.input.update()
-            self.update(dt=1.0 / self.framerate)
+                # Process queued events
+                try:
+                    while True:
+                        event, args, handlers = Event.event_queue.get_nowait()
+                        for handler in handlers:
+                            handler(*args)
+                except queue.Empty:
+                    pass
 
-            # Draw
-            self.screen.fill(tuple(color.WHITE))
-            self.draw()
-            pygame.display.flip()
+                # Update
+                self.input.update()
+                self.update(dt=1.0 / self.framerate)
+
+                # Draw
+                self.screen.fill(tuple(color.WHITE))
+                self.draw()
+                pygame.display.flip()
             
-            # Update FPS counter
-            now = time.time()
-            self.__frame_counter += 1
-            if now - self.__frame_count_start_time >= 1.0:
-                self.__fps = self.__frame_counter
-                self.__frame_counter = 1
-                self.__frame_count_start_time -= 1.0
+                # Update FPS counter
+                now = time.time()
+                self.__frame_counter += 1
                 if now - self.__frame_count_start_time >= 1.0:
-                    self.__frame_count_start_time = now
+                    self.__fps = self.__frame_counter
+                    self.__frame_counter = 1
+                    self.__frame_count_start_time -= 1.0
+                    if now - self.__frame_count_start_time >= 1.0:
+                        self.__frame_count_start_time = now
 
-            # Limit to 20 frames per second
-            self.clock.tick(self.framerate)
+                # Limit to 20 frames per second
+                self.clock.tick(self.framerate)
+        except:
+            traceback.print_exc()
+            self.on_quit()
 
         pygame.quit()

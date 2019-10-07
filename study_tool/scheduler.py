@@ -13,14 +13,16 @@ from study_tool.config import Config
 
 
 def choose(cards):
-    if len(cards) == 0:
+    if not cards:
         return None
+    cards = list(cards)
     return cards[random.randint(0, len(cards) - 1)]
 
 
 def choose_weighted(cards, key=lambda card: 1):
-    if len(cards) == 0:
+    if not cards:
         return None
+    cards = list(cards)
     total_odds = 0
     choices = []
     for index, card in enumerate(cards):

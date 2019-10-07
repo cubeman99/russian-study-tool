@@ -136,6 +136,7 @@ class CardRow(widgets.Widget):
         self.box_english.text_edited.connect(self.__on_english_changed)
         self.box_type.text_edited.connect(self.__on_type_changed)
         self.box_russian.return_pressed.connect(self.__auto_complete)
+        self.box_russian.focus_lost.connect(self.download_word_info)
 
         self.set_card(card)
 
@@ -212,13 +213,10 @@ class CardRow(widgets.Widget):
         return (card_type != self.card.get_word_type() or
                 repr(russian) != repr(self.card.get_russian()) or
                 repr(english) != repr(self.card.get_english()))
-    
-    def auto_set_word_type(self) -> WordType:
-        """
-        Auto generates the word type based on the russian word ending.
-        """
-        russian = self.get_russian().text.lower()
-        
+
+    def predict_word_type(self, russian: AccentedText):
+        russian = AccentedText(russian).text.lower()
+
         word_type_endings_dict = {
             WordType.Adjective: ["ый", "ий", "ой"],
             WordType.Verb: ["ить", "ать", "еть", "ять", "уть", "ться", "сти", "стись"],
@@ -229,12 +227,20 @@ class CardRow(widgets.Widget):
         for word_type, endings in word_type_endings_dict.items():
             for ending in endings:
                 if russian.endswith(ending):
-                    self.box_type.set_text(
-                        get_word_type_short_name(word_type))
                     return word_type
         if " " in russian:
             return WordType.Phrase
         return None
+    
+    def auto_set_word_type(self) -> WordType:
+        """
+        Auto generates the word type based on the russian word ending.
+        """
+        word_type = self.predict_word_type(self.get_russian())
+        if word_type is not None:
+            self.box_type.set_text(
+                get_word_type_short_name(word_type))
+        return word_type
 
     def __auto_complete(self):
         if self.__card_match:
@@ -380,6 +386,38 @@ class CardRow(widgets.Widget):
             return False
         return card_type is not None or russian or english
 
+    def download_word_info(self):
+        if self.__word:
+            return
+        russian = self.get_russian().text.lower()
+        if not russian:
+            return
+        word_type = self.get_word_type()
+        if word_type is None:
+            word_type = self.predict_word_type(russian)
+        if word_type is None:
+            return
+
+        # Check if the word already exists
+        word = Config.app.word_database.get_word(
+            word_type=word_type, name=russian)
+        if word is not None:
+            text = get_word_type_short_name(word.get_word_type())
+            self.box_type.set_text(text)
+            self.__on_modified()
+            return
+
+        # Else, download the word
+        def callback(word):
+            if word:
+                Config.app.word_database.add_word(word, replace=True)
+                text = get_word_type_short_name(word.get_word_type())
+                self.box_type.set_text(text)
+                self.__on_modified()
+
+        Config.app.cooljugator_thread.download_word_info(
+            word_type=word_type, name=russian, callback=callback)
+
 
 class CardSetEditWidget(widgets.Widget):
     """
@@ -516,6 +554,7 @@ class CardSetEditWidget(widgets.Widget):
 
             # Save any changes
             self.__application.save_all_changes()
+            Config.app.word_database.save()
 
         except Exception:
             traceback.print_exc()
