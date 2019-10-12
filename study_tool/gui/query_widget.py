@@ -34,6 +34,7 @@ class QueryWidget(widgets.Widget):
 
     def __init__(self, application, cards_source=None):
         super().__init__()
+        self.set_window_title("Study Query")
         self.__application = application
         if cards_source:
             self.__cards_source = cards_source
@@ -66,18 +67,20 @@ class QueryWidget(widgets.Widget):
         self.__button_back = widgets.Button("Back")
 
         # Create layouts
+        layout_card_filter = widgets.VBoxLayout()
+        layout_card_filter.add(widgets.HBoxLayout(widgets.Label("Max Count:"), self.__box_count))
+        layout_card_filter.add(widgets.HBoxLayout(widgets.Label("Max Level:"), self.__combo_proficiency))
+        layout_card_filter.add(widgets.HBoxLayout(widgets.Label("Max Score:"), self.__box_score))
+        layout_card_filter.add(widgets.HBoxLayout(widgets.Label("Type:"), self.__combo_card_type))
+        layout_card_filter.add(widgets.HBoxLayout(widgets.Label("Sort By:"), self.__combo_sort))
+        layout_study_settings = widgets.VBoxLayout()
+        layout_study_settings.add(widgets.HBoxLayout(widgets.Label("Show Side:"), self.__combo_side))
+        layout_study_settings.add(self.__checkbox_random_forms)
+        layout_study_settings.add(self.__checkbox_only_once)
         layout_left = widgets.VBoxLayout()
         layout_left.add(self.__button_back)
-        layout_left.add(widgets.Label("Card Filter:"))
-        layout_left.add(widgets.HBoxLayout(widgets.Label("Max Count:"), self.__box_count))
-        layout_left.add(widgets.HBoxLayout(widgets.Label("Max Level:"), self.__combo_proficiency))
-        layout_left.add(widgets.HBoxLayout(widgets.Label("Max Score:"), self.__box_score))
-        layout_left.add(widgets.HBoxLayout(widgets.Label("Type:"), self.__combo_card_type))
-        layout_left.add(widgets.HBoxLayout(widgets.Label("Sort By:"), self.__combo_sort))
-        layout_left.add(widgets.Label("Study Settings:"))
-        layout_left.add(widgets.HBoxLayout(widgets.Label("Show Side:"), self.__combo_side))
-        layout_left.add(self.__checkbox_random_forms)
-        layout_left.add(self.__checkbox_only_once)
+        layout_left.add(widgets.GroupBox("Card Filter", layout_card_filter))
+        layout_left.add(widgets.GroupBox("Study Settings", layout_study_settings))
         layout_left.add(self.__button_begin)
         layout_right = widgets.VBoxLayout()
         layout_right.add(self.__label_result_count)

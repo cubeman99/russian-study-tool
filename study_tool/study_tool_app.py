@@ -1,6 +1,6 @@
 import json
 import os
-os.environ["SDL_VIDEO_WINDOW_POS"] = "420,80"  # Set initial window position
+os.environ["SDL_VIDEO_WINDOW_POS"] = "200,80"  # Set initial window position
 import pygame
 import threading
 import time
@@ -26,6 +26,7 @@ from study_tool.gui.add_card_to_set_widget import AddCardToSetWidget
 from study_tool.gui.query_widget import QueryWidget
 from study_tool.gui.card_set_browser_widget import CardSetBrowserWidget
 from study_tool.gui.card_set_browser_widget import CardSetPackageBrowserWidget
+from study_tool.gui.card_search_widget import CardSearchWidget
 from study_tool.query import CardQuery
 from study_tool.russian import conjugation
 from study_tool.russian.word import WordSourceEnum
@@ -49,7 +50,7 @@ class StudyCardsApp(Application):
     def __init__(self):
         Config.app = self
         self.title = "Russian"
-        Application.__init__(self, title=self.title, width=1100, height=900)
+        Application.__init__(self, title=self.title, width=1500, height=900)
 
         pygame.joystick.init()
         self.joystick = pygame.joystick.Joystick(0)
@@ -112,10 +113,10 @@ class StudyCardsApp(Application):
         test_card = list(self.card_database.find_cards_by_word("слушать"))[0]
         #self.push_card_edit_state(None)
         #self.push_card_edit_state(cards[0])
-        #self.push_state(GUIState(widget=CardEditWidget(cards[0]), title="Edit Card"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["verbs"]["verbs_stem_ai"], self), title="Edit Card Set"))
         #self.push_state(GUIState(widget=CardSetEditWidget(self.root["nouns"]["house"], self), title="Edit Card Set"))
         self.push_gui_state(CardSetEditWidget(test_set, self))
+        self.push_gui_state(CardEditWidget(test_card, self))
         #self.push_gui_state(RelatedCardsWidget(test_card, self))
         #self.push_gui_state(AddCardToSetWidget(test_card, self))
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
@@ -123,8 +124,7 @@ class StudyCardsApp(Application):
         #self.push_state(GUIState(widget=QueryWidget(self, test_set.get_cards()), title="Study Query"))
         #self.push_gui_state(CardSetBrowserWidget(self.card_database.get_root_package()))
         #self.push_gui_state(CardSetPackageBrowserWidget(self.card_database.get_root_package()))
-        
-        #self.save_card_set(self.root["nouns"]["house"])
+        #self.push_gui_state(CardSearchWidget())
 
         self.input.bind(pygame.K_ESCAPE, pressed=self.pop_state)
 
@@ -138,6 +138,9 @@ class StudyCardsApp(Application):
 
     def on_quit(self):
         self.cooljugator_thread.stop()
+
+    def on_window_resized(self, size: Vec2):
+        self.graphics = Graphics(self.screen)
 
     @property
     def root(self) -> CardSetPackage:

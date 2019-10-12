@@ -89,6 +89,8 @@ class Graphics:
         rect.left += self.__translation.x
         rect.top += self.__translation.y
         if color.a < 255:
+            if rect.width <= 0 or rect.height <= 0:
+                raise Exception("Invalid rect size: {}x{}".format(rect.width, rect.height))
             s = pygame.Surface((rect.width, rect.height))
             s.set_alpha(color.a) 
             s.fill((color.r, color.g, color.b))

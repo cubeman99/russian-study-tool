@@ -1,0 +1,8 @@
+card_set:
+  name: Sayings
+  version: 1
+  cards:
+    - [phrase, ударить в грязь лицом, to fall into the dirt face first]
+    - [verb, клевать носом, 'to fall asleep, peck with your nose']
+    - [phrase, у чёрта на куличиках, hell knows where]
+    - [phrase, деньги не пахнуть, money doesnt smell (the ends justify the means)]

@@ -24,6 +24,7 @@ from study_tool.card import get_card_word_name
 from study_tool.card_attributes import CardAttributes
 from study_tool.card_set import CardSet
 from study_tool.entities.menu import Menu
+from study_tool.gui.card_search_widget import CardSearchWidget
 from study_tool.states.state import *
 from study_tool.states.sub_menu_state import SubMenuState
 from study_tool.card_database import CardDatabase
@@ -104,6 +105,8 @@ class CardRow(widgets.Widget):
         self.card = card
         self.card_database = card_database
         self.modified = Event()
+        self.russian_modified = Event(AccentedText)
+        self.english_modified = Event(AccentedText)
         self.__card_set = card_set
         self.__is_new_card = True
         self.__card_match = None
@@ -140,8 +143,19 @@ class CardRow(widgets.Widget):
 
         self.set_card(card)
 
+    def get_column(self, column: int):
+        if column == 0:
+            return self.box_type
+        if column == 1:
+            return self.box_russian
+        if column == 2:
+            return self.box_english
+        raise KeyError(column)
+
     def set_card(self, card: Card):
         """Sets the card to edit."""
+        self.russian_modified.block(True)
+        self.english_modified.block(True)
         self.card = card
         self.__is_new_card = not self.card_database.has_card(card)
         fixed = self.card.get_fixed_card_set() is not None
@@ -156,6 +170,8 @@ class CardRow(widgets.Widget):
         self.button_edit.set_enabled(not fixed)
         self.button_delete.set_enabled(not fixed)
         self.__on_modified()
+        self.russian_modified.block(False)
+        self.english_modified.block(False)
 
     def apply(self):
         """Applies changes to the card."""
@@ -201,6 +217,11 @@ class CardRow(widgets.Widget):
     def is_new_in_set(self) -> bool:
         return not self.__card_set.has_card(self.card)
 
+    def is_incomplete(self) -> bool:
+        return (not self.box_type.get_text() or
+                not self.box_russian.get_text() or
+                not self.box_english.get_text())
+
     def is_empty(self) -> bool:
         return (not self.box_type.get_text() and
                 not self.box_russian.get_text() and
@@ -245,16 +266,18 @@ class CardRow(widgets.Widget):
     def __auto_complete(self):
         if self.__card_match:
             self.set_card(self.__card_match)
-    
+
     def __on_russian_changed(self):
         # Convert 'ээ' to an accent mark (for when typing in russian mode)
         russian = self.get_russian()
         if "ээ" in repr(russian).lower():
             russian = re.sub("ээ", "'", repr(russian), flags=re.IGNORECASE)
             self.box_russian.set_text(russian)
+        self.russian_modified.emit(self.get_russian())
         self.__on_modified()
 
     def __on_english_changed(self):
+        self.english_modified.emit(self.get_english())
         self.__on_modified()
 
     def __on_type_changed(self):
@@ -442,19 +465,24 @@ class CardSetEditWidget(widgets.Widget):
         self.__button_convert = widgets.Button("Assimilate to YAML")
         self.__label_card_count = widgets.Label("Cards [{}]:".format(0))
         self.__label_path = widgets.Label("")
+        self.__card_search_widget = CardSearchWidget(
+            visible_func=lambda card: card not in self.get_cards())
         
         self.table = widgets.Widget()
         self.__layout_card_list = widgets.VBoxLayout()
         self.table.set_layout(self.__layout_card_list)
 
         # Create layouts
-        layout = widgets.VBoxLayout()
-        layout.add(widgets.HBoxLayout(widgets.Label("Name:"), self.__box_name))
-        layout.add(widgets.HBoxLayout(widgets.Label("Path:"), self.__label_path))
-        layout.add(self.__button_convert)
-        layout.add(widgets.HBoxLayout(self.__label_card_count, self.__button_add_card))
-        layout.add(widgets.AbstractScrollArea(self.table))
-        layout.add(widgets.HBoxLayout(self.__button_done, self.__button_save))
+        left_layout = widgets.VBoxLayout()
+        left_layout.add(widgets.HBoxLayout(widgets.Label("Name:"), self.__box_name))
+        left_layout.add(widgets.HBoxLayout(widgets.Label("Path:"), self.__label_path))
+        left_layout.add(self.__button_convert)
+        left_layout.add(widgets.HBoxLayout(self.__label_card_count, self.__button_add_card))
+        left_layout.add(widgets.AbstractScrollArea(self.table))
+        left_layout.add(widgets.HBoxLayout(self.__button_done, self.__button_save))
+        layout = widgets.HBoxLayout()
+        layout.add(left_layout, stretch=3)
+        layout.add(self.__card_search_widget, stretch=1)
         self.set_layout(layout)
         
         self.select_card_set(card_set)
@@ -465,9 +493,12 @@ class CardSetEditWidget(widgets.Widget):
         self.__button_add_card.clicked.connect(self.__on_click_add_new_card)
         self.__button_convert.clicked.connect(self.__on_click_convert)
         self.__box_name.text_edited.connect(self.__on_modified)
+        self.__card_search_widget.card_clicked.connect(self.__on_click_searched_card)
         self.add_key_shortcut("Ctrl+S", self.__on_click_save)
 
-        self.__box_name.focus()
+    def get_cards(self) -> list:
+        cards = [row.card for row in self.rows if not row.is_null_card()]
+        return cards
 
     def is_modified(self) -> bool:
         """Returns True if anything is modified."""
@@ -487,26 +518,35 @@ class CardSetEditWidget(widgets.Widget):
 
         return False
 
-    def add_empty_row(self):
-        self.add_card(Card(), fill_empty_row=False)
+    def add_empty_row(self) -> CardRow:
+        return self.add_card(Card(), fill_empty_row=False)
 
-    def add_card(self, card: Card, fill_empty_row=True):
-        # Find the last empty row
-        if fill_empty_row and self.rows and self.rows[-1].is_empty():
+    def add_card(self, card: Card, fill_empty_row=True, row=None) -> CardRow:
+        if row is not None:
+            # Use the specifid row
+            row.set_card(card)
+        elif fill_empty_row and self.rows and self.rows[-1].is_empty():
+            # Re-use the last empty row
             row = self.rows[-1]
             row.set_card(card)
         else:
+            # Create a new row
             row = CardRow(card=card, card_set=self.__card_set, card_database=self.__card_database)
+            row.box_type.return_pressed.connect(lambda: self.next_row(row, 0))
+            row.box_russian.return_pressed.connect(lambda: self.next_row(row, 1))
+            row.box_english.return_pressed.connect(lambda: self.next_row(row, 2))
+            row.button_delete.clicked.connect(lambda: self.remove_row(row))
+            row.button_edit.clicked.connect(lambda: self.__on_click_edit_card(card))
+            row.modified.connect(self.__on_modified)
+            row.english_modified.connect(lambda text: self.__card_search_widget.set_search_text(text))
+            row.russian_modified.connect(lambda text: self.__card_search_widget.set_search_text(text))
+            row.box_russian.add_key_shortcut("Ctrl+Space", lambda: self.__auto_complete(row, 1))
+            row.box_english.add_key_shortcut("Ctrl+Space", lambda: self.__auto_complete(row, 2))
             self.rows.append(row)
             self.__layout_card_list.add(row)
 
-        row.box_type.return_pressed.connect(lambda: self.next_row(row, 0))
-        row.box_russian.return_pressed.connect(lambda: self.next_row(row, 1))
-        row.box_english.return_pressed.connect(lambda: self.next_row(row, 2))
-        row.button_delete.clicked.connect(lambda: self.remove_row(row))
-        row.button_edit.clicked.connect(lambda: self.__on_click_edit_card(card))
-        row.modified.connect(self.__on_modified)
         self.__on_modified()
+        return row
 
     def remove_card(self, card: Card):
         index = [row.card for row in self.rows].index(card)
@@ -583,7 +623,8 @@ class CardSetEditWidget(widgets.Widget):
         self.__layout_card_list.clear()
         for card in self.__card_set.get_cards():
             self.add_card(card)
-        self.add_empty_row()
+        row = self.add_empty_row()
+        row.box_russian.focus()
 
     def __on_click_convert(self):
         self.__application.assimilate_card_set_to_yaml(self.__card_set)
@@ -598,6 +639,26 @@ class CardSetEditWidget(widgets.Widget):
         widget = self.__application.push_card_edit_state(
             card, allow_card_change=False)
         widget.updated.connect(self.__on_card_updated)
+
+    def __auto_complete(self, row, column: int):
+        search_text = self.__card_search_widget.get_search_text()
+        card = self.__card_search_widget.get_first_result()
+        if card:
+            self.__card_search_widget.remove_from_results(card)
+            row.set_card(card)
+            next_row = self.add_empty_row()
+            box = next_row.get_column(column)
+            box.focus()
+        return card
+
+    def __on_click_searched_card(self, card: Card):
+        self.__card_search_widget.remove_from_results(card)
+        row = None
+        if self.rows and self.rows[-1].is_incomplete():
+            row = self.rows[-1]
+        self.add_card(card, row=row)
+        row = self.add_empty_row()
+        row.box_russian.focus()
         
     def __on_click_done(self):
         self.apply()

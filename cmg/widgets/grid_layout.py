@@ -152,6 +152,9 @@ class GridLayout(Layout):
         
     def calc_maximum_size(self) -> Vec2:
         """Calculate and return widget maximum sizes."""
+        if not self.get_children():
+            return super().calc_maximum_size()
+
         max_size = Vec2(0, 0)
 
         for child in self.get_children():
@@ -174,6 +177,9 @@ class GridLayout(Layout):
 
     def calc_minimum_size(self) -> Vec2:
         """Calculate and return widget minimum sizes."""
+        if not self.get_children():
+            return super().calc_minimum_size()
+
         min_size = Vec2(0, 0)
 
         for child in self.get_children():

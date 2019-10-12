@@ -10,8 +10,10 @@ from cmg.application import *
 from cmg.graphics import *
 from cmg.input import *
 from study_tool.config import Config
-from study_tool.card import Card, CardSide
-from study_tool.card_set import CardSet, CardSetPackage
+from study_tool.card import Card
+from study_tool.card_set import CardSide
+from study_tool.card_set import CardSet
+from study_tool.card_set import CardSetPackage
 from study_tool.entities.menu import Menu
 from study_tool.states.read_text_state import ReadTextState
 from study_tool.states.state import *
@@ -20,7 +22,7 @@ from study_tool.states.sub_menu_state import SubMenuState
 from study_tool.scheduler import SchedulerParams
 from study_tool.entities.study_proficiency_bar import StudyProficiencyBar
 from study_tool.gui.query_widget import QueryWidget
-from study_tool.states.gui_state import GUIState
+from study_tool.gui.create_card_set_widget import CreateCardSetWidget
 from study_tool.query import CardQuery
 
 
@@ -109,6 +111,8 @@ class MenuState(State):
             self.__on_card_added_or_removed_to_set)
         self.app.card_database.card_removed_from_set.connect(
             self.__on_card_added_or_removed_to_set)
+        self.app.card_database.card_set_created.connect(
+            self.__on_card_set_created)
 
     def update(self, dt):
         State.update(self, dt)
@@ -207,10 +211,13 @@ class MenuState(State):
                     card_query=CardQuery(max_score=0.9),
                     study_params=StudyParams(random_side=True))),
             ("Query",
-                lambda: self.app.push_state(GUIState(
-                    widget=QueryWidget(self.app, card_set.cards), title="Study Query"))),
+                lambda: self.app.push_gui_state(
+                    QueryWidget(self.app, card_set.cards))),
             ("List", lambda: self.app.push_card_list_state(card_set)),
             ("Edit", lambda: self.app.push_card_set_edit_state(card_set))]
+        if card_set is self.package:
+            options.append(("Create New Set", lambda: self.app.push_gui_state(
+                CreateCardSetWidget(self.package))))
         if isinstance(card_set, CardSet) and card_set.is_fixed_card_set():
             old_file_path = card_set.get_file_path()
             card_sets_in_file = self.app.card_database.get_card_sets_from_path(old_file_path)
@@ -243,17 +250,21 @@ class MenuState(State):
             close_on_apply=False,
             allow_card_change=True)
 
-    def __on_card_study_data_changed(self, card, card_study_data):
+    def __on_card_study_data_changed(self, card: Card, card_study_data):
         """Called when a card's study data changes."""
         for bar in self.__bars:
             if bar.study_set.has_card(card):
                 with self.__lock_dirty:
                     self.__dirty_metrics_set.add(bar)
 
-    def __on_card_added_or_removed_to_set(self, card, card_set):
+    def __on_card_added_or_removed_to_set(self, card: Card, card_set: CardSet):
         """Called when a card is added to a card set."""
         for bar in self.__bars:
             if bar.study_set == card_set:
                 with self.__lock_dirty:
                     self.__dirty_metrics_set.add(bar)
 
+    def __on_card_set_created(self, card_set: CardSet):
+        """Called when a card set is created."""
+
+                    

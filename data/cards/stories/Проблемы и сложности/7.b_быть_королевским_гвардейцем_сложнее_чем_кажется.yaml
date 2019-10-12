@@ -2,7 +2,7 @@ card_set:
   name: 7.b Быть Королевским Гвардейцем...
   version: 1
   cards:
-    - [verb, убедиться, 'to make sure, beieve in smth']
+    - [verb, убедиться, 'to be convinced; to make sure, beieve in smth']
     - [adverb, учитывая..., considering...]
     - [noun, паутина, spider web]
     - [verb, присоединиться, 'to connect with someone, agree with smth']

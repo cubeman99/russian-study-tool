@@ -3,7 +3,8 @@ import pygame
 from pygame import Rect
 from cmg import gui
 from cmg import widgets
-from cmg import color
+from cmg.color import Colors
+from cmg.color import Color
 from cmg.event import Event
 from cmg.input import Keys
 from cmg.input import MouseButtons
@@ -52,16 +53,28 @@ class Button(widgets.Widget):
             self.__surface = self.__font.render(self.__text)
         y = self.rect.top + \
             int((self.get_height() - self.__surface.get_height()) / 2)
-        g.fill_rect(self.get_rect(), color=color.YELLOW)
+        g.fill_rect(self.get_rect(), color=Colors.YELLOW)
         r = Rect(self.get_rect())
         r.height = 4
         r.y = self.get_rect().bottom - r.height
-        
-        c = color.rgb(190, 205, 255)
+
+        # Draw the box background
+        c = Color(190, 205, 255)
         if self.is_focused():
-            c = color.rgb(160, 190, 255)
+            c = Color(160, 190, 255)
         g.fill_rect(self.rect, color=c)
 
+        # Draw the text
         g.draw_image(self.__surface,
                      self.get_rect().centerx - self.__surface.get_width() / 2,
                      self.get_rect().centery - self.__surface.get_height() / 2,)
+
+        # Draw the box border
+        c = Colors.BLACK
+        if self.is_focused():
+            c = Colors.BLUE
+        g.draw_rect(self.rect, color=c)
+
+    def __repr__(self):
+        """Returns a string representation of this object."""
+        return "<{}({})>".format(self.__class__.__name__, repr(self.__text))

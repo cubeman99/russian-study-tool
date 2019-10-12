@@ -56,6 +56,7 @@ class CreateCardSetWidget(widgets.Widget):
         self.__edit_display_name.text_edited.connect(self.__on_display_name_edited)
 
         self.__on_click_auto()
+        self.__edit_display_name.focus()
 
     def get_path(self) -> str:
         """Gets the current package being browsed."""
@@ -78,7 +79,7 @@ class CreateCardSetWidget(widgets.Widget):
 
     def __on_click_create(self):
         card_set = Config.app.card_database.create_card_set(
-            name=self.__edit_file_name.get_text(),
+            name=self.__edit_display_name.get_text(),
             file_name=self.__edit_file_name.get_text(),
             package=self.__package)
         self.card_set_created.emit(card_set)

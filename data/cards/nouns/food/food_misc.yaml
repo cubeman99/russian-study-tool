@@ -4,7 +4,7 @@ card_set:
   cards:
     - [noun, мука, flour]
     - [noun, хлеб, bread]
-    - [noun, блин, pancake]
+    - [noun, блин, pancake; safe version of блять]
     - [noun, белый хлеб, white bread]
     - [noun, чёрный хлеб, black bread (dark rye bread)]
     - [noun, крупа, grain]

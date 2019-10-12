@@ -1,0 +1,22 @@
+card_set:
+  name: Insults and Curses
+  version: 1
+  cards:
+    - [verb, ебать, to fuck]
+    - [interjection, Отвали!, Get lost! Fuck off!]
+    - [interjection, чёрт, hells balls; darn]
+    - [noun, блин, pancake; safe version of блять]
+    - [noun, 'дурак (m), дура (f)', fool]
+    - [noun, зануда, tedious and annoyingly obsessive person]
+    - [noun, урод, freak]
+    - [noun, дебил, moron]
+    - [adjective, проклятый, 'damned, cursed']
+    - [verb, проклинать, to curse]
+    - [verb, проклясть, to curse]
+    - [verb, ругаться, 'to swear, curse']
+    - [phrase, Заткнись!, Shut up!]
+    - [noun, разиня, scatterbrain]
+    - [noun, козёл, goat (male)]
+    - [noun, корова, cow]
+    - [noun, дятел, a woodpecker; a stupid person]
+    - [noun, идиот, idiot]

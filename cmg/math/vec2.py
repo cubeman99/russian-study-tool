@@ -1,12 +1,4 @@
-import pygame
 import math
-
-floor = math.floor
-ceil = math.ceil
-
-
-def lerp(a, b, t):
-    return (a * (1.0 - t)) + (b * t)
 
 
 def add(a, b):
@@ -74,4 +66,3 @@ class Vec2:
     def totuple(self) -> tuple:
         return (self.x, self.y)
 
-Rect = pygame.Rect

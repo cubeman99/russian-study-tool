@@ -1,5 +1,5 @@
 card_set:
-  name: Emotions/Personality
+  name: Personality
   version: 1
   cards:
     - [adjective, счастливый, happy]
@@ -29,3 +29,5 @@ card_set:
     - [adjective, занятой, busy]
     - [adjective, модный, 'fashionable, stylish']
     - [adjective, дружный, amicable]
+    - [adjective, страстный, passionate]
+    - [adjective, возбуждённый, excited]

@@ -31,7 +31,7 @@ class BoxLayout(Layout):
         assert isinstance(layout, Layout)
         self.add(layout, **kwargs)
 
-    def add(self, item, stretch=1):
+    def add(self, item, stretch=0):
         assert item is not None
         assert stretch >= 0
         self.__stretch_factors[item] = stretch
@@ -44,36 +44,45 @@ class BoxLayout(Layout):
     def on_update(self):
         if not self.children:
             return
-        self.update_axis_layout(self.axis)
+        if self.children:
+            self.__update_axis_layout(self.axis)
 
-    def update_axis_layout(self, axis: int):
+    def __update_axis_layout(self, axis: int):
         size = self.get_size()
         child_size = Vec2(self.get_size())
         stretch_space = size[axis]
         stretch_list = []
+        stretch_factors = dict(self.__stretch_factors)
 
-        stretch_factor_total = sum(self.__stretch_factors.values())
+        visible_children = self.get_visible_children()
 
-        for index, child in enumerate(self.children):
-            stretch = self.__stretch_factors[child]
-            if stretch == 0:
+        for child in visible_children:
+            stretch = stretch_factors[child]
+            if stretch > 0:
+                stretch_list.append(child)
+            else:
                 child_size[axis] = max(16, child.get_minimum_size()[axis])
                 stretch_space -= child_size[axis]
                 child.set_size(child_size)
-            else:
+        
+        # If all stretch factors are 0, then make them all 1
+        if not stretch_list or sum(stretch_factors.values()) == 0:
+            stretch_space = size[axis]
+            for child in visible_children:
                 stretch_list.append(child)
+                stretch_factors[child] = 1
         
         fits = False
         while not fits:
             fits = True
             stretch_sum = 0
             for child in stretch_list:
-                stretch_sum += self.__stretch_factors[child]
+                stretch_sum += stretch_factors[child]
 
             if stretch_sum > 0:
                 # Distribute sizes over the stretch space
                 for index, child in enumerate(stretch_list):
-                    stretch = self.__stretch_factors[child]
+                    stretch = stretch_factors[child]
                     if stretch != 0:
                         child_size[axis] = int(round(
                             stretch_space * (stretch / stretch_sum)))
@@ -100,74 +109,31 @@ class BoxLayout(Layout):
         
         # Set final positions
         child_pos = Vec2(self.get_rect().topleft)
-        for index, child in enumerate(self.children):
-            rect = child.get_rect()
-            rect.topleft = child_pos.totuple()
-            child_pos[axis] += child.get_size()[axis]
-
-        return
-
-        child_pos = Vec2(self.get_rect().topleft)
-        for index, child in enumerate(self.children):
-            rect = child.get_rect()
-            rect.topleft = child_pos.totuple()
-            child_pos[axis] += child.get_size()[axis]
-
-
-        fits = False
-        while not fits:
-            fits = True
-            remain_space = stretch_space
-            for index, child in enumerate(stretch_list):
-                remain_count = sum(self.__stretch_factors[x]
-                                   for x in stretch_list[index:])
-                #remain_count = len(stretch_list) - index
-                child_size[axis] = int(round(remain_space / remain_count))
-                child.set_size(child_size)
-                remain_space -= child_size[axis]
-
-            index = 0
-            while index < len(stretch_list):
-                child = stretch_list[index]
-                new_size = None
-                min_size = child.get_minimum_size()[axis]
-                max_size = child.get_maximum_size()[axis]
-                if child.get_size()[axis] < min_size:
-                    new_size = min_size
-                if child.get_size()[axis] > max_size:
-                    new_size = max_size
-                if new_size is not None:
-                    child_size[axis] = new_size
-                    child.set_size(child_size)
-                    del stretch_list[index]
-                    stretch_space -= new_size
-                    fits = False
-                else:
-                    index += 1
-
-        child_pos = Vec2(self.get_rect().topleft)
-        for index, child in enumerate(self.children):
+        for index, child in enumerate(visible_children):
             rect = child.get_rect()
             rect.topleft = child_pos.totuple()
             child_pos[axis] += child.get_size()[axis]
 
     def calc_maximum_size(self) -> Vec2:
         max_size = Vec2(self.DEFAULT_MAX_SIZE, self.DEFAULT_MAX_SIZE)
-        for child in self.children:
+        max_size[self.axis] = 0
+        for child in self.get_visible_children():
             child_max_size = child.calc_maximum_size()
             max_size[self.axis] += child_max_size[self.axis]
             max_size[1 - self.axis] = min(max_size[1 - self.axis],
-                                          child_max_size[1 - self.axis])
+                                            child_max_size[1 - self.axis])
         self.set_maximum_size(max_size)
         return max_size
 
     def calc_minimum_size(self) -> Vec2:
+        if not self.children:
+            return super().calc_minimum_size()
         min_size = Vec2(0, 0)
-        for child in self.children:
+        for child in self.get_visible_children():
             child_min_size = child.calc_minimum_size()
             min_size[self.axis] += child_min_size[self.axis]
             min_size[1 - self.axis] = max(min_size[1 - self.axis],
-                                          child_min_size[1 - self.axis])
+                                            child_min_size[1 - self.axis])
         self.set_minimum_size(min_size)
         return min_size
 

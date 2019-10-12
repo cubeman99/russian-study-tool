@@ -1,0 +1,11 @@
+card_set:
+  name: Materials
+  version: 1
+  cards:
+    - [noun, титан, titanium]
+    - [noun, золото, gold]
+    - [adjective, золотой, 'golden, made of gold']
+    - [adjective, серебрянный, silver]
+    - [noun, серебро, silver]
+    - [adjective, мраморный, marble]
+    - [noun, булыжник, cobblestone]

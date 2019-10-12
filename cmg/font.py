@@ -35,6 +35,8 @@ class Font:
             self.__font = pygame.font.Font(None, self.__font_size)
 
     def measure(self, text: str) -> Vec2:
+        if not isinstance(text, str):
+            raise TypeError(text)
         return Vec2(self.__font.size(text))
 
     def render(self, text: str, color=None):

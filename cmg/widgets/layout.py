@@ -24,6 +24,17 @@ class Layout(LayoutItem):
     def get_children(self):
         pass
 
+    def get_visible_children(self) -> list:
+        return [child for child in self.get_children() if child.is_visible()]
+
+    def is_empty_layout(self) -> bool:
+        """Returns True if this layout has no children."""
+        return not self.get_visible_children()
+
+    def is_visible(self) -> bool:
+        """Returns True if this layout has children."""
+        return not self.is_empty_layout()
+
     def iter_child_widgets(self):
         for child in self.get_children():
             for widget in child.iter_child_widgets():
@@ -37,7 +48,7 @@ class Layout(LayoutItem):
         self.update_children()
 
     def update_children(self):
-        for child in self.get_children():
+        for child in self.get_visible_children():
             child.update()
 
     def draw(self, g):
@@ -46,20 +57,26 @@ class Layout(LayoutItem):
         self.draw_children(g)
 
     def draw_children(self, g):
-        for child in self.get_children():
+        for child in self.get_visible_children():
             child.draw(g)
 
     def calc_maximum_size(self) -> Vec2:
+        children = self._get_layout_item_children()
+        if not children:
+            return Vec2(self.DEFAULT_MAX_SIZE, self.DEFAULT_MAX_SIZE)
         max_size = Vec2(0, 0)
-        for child in self._get_layout_item_children():
+        for child in children:
             child_max_size = child.calc_maximum_size()
             max_size.x = max(max_size.x, child_max_size.x)
             max_size.y = max(max_size.y, child_max_size.y)
         return max_size
 
     def calc_minimum_size(self) -> Vec2:
+        children = self._get_layout_item_children()
+        if not children:
+            return Vec2(0, 0)
         min_size = Vec2(0, 0)
-        for child in self._get_layout_item_children():
+        for child in children:
             child_min_size = child.calc_minimum_size()
             min_size.x = min(min_size.x, child_min_size.x)
             min_size.y = min(min_size.y, child_min_size.y)

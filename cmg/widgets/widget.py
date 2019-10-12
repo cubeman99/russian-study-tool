@@ -1,5 +1,6 @@
-from cmg.graphics import Graphics
+import traceback
 from pygame.rect import Rect
+from cmg.graphics import Graphics
 from cmg import color
 from cmg.widgets.layout_item import LayoutItem
 from cmg.math import Vec2
@@ -35,6 +36,7 @@ class Widget(LayoutItem):
         return self.layout
     
     def is_visible(self) -> bool:
+        """Returns True if this widget is visible."""
         return self.__visible
 
     def get_focused_widget(self):
@@ -184,8 +186,21 @@ class Widget(LayoutItem):
         self.calc_minimum_size()
         self.update()
 
+        # try:
+        #     log = ""
+        #     for child in self.iter_child_widgets():
+        #         log += repr(child) + ", " + repr(child.get_rect()) + "\n"
+        #         if child.get_width() < 0 or child.get_height() < 0:
+        #             raise Exception(child)
+        # except:
+        #     print(log)
+        #     traceback.print_exc()
+
     def update(self):
         self.on_update()
+        self.update_layout()
+
+    def update_layout(self):
         if self.layout:
             self.layout.set_rect(Rect(self.get_rect()))
             self.layout.update()
@@ -193,11 +208,13 @@ class Widget(LayoutItem):
     def draw(self, g):
         if not g.is_rect_in_viewport(self.get_rect()):
             return
+        if self.rect.width <= 0 or self.rect.height <= 0:
+            return
         
         c = color.WHITE
         if self.is_focused():
             c = color.rgb(235, 235, 255)
-        g.fill_rect(self.rect, color=c)
+            g.fill_rect(self.rect, color=c)
 
         self.on_draw(g)
         if self.layout:
@@ -205,11 +222,6 @@ class Widget(LayoutItem):
 
         if not self.is_enabled():
             g.fill_rect(self.rect, color=color.rgba(255, 255, 255, 128))
-
-        c = color.BLACK
-        if self.is_focused():
-            c = color.BLUE
-        g.draw_rect(self.rect, color=c)
 
     def _get_layout_item_children(self):
         if self.layout:

@@ -1,0 +1,18 @@
+card_set:
+  name: Fantasy
+  version: 1
+  cards:
+    - [noun, единорог, unicorn]
+    - [noun, магия, magic]
+    - [noun, заклинание, 'spell, invocation']
+    - [noun, щит, shield]
+    - [noun, король, king]
+    - [noun, королевство, kingdom]
+    - [noun, королева, queen]
+    - [noun, замок, castle]
+    - [noun, дворец, 'palace, castle']
+    - [noun, зло, evil]
+    - [noun, злодей, 'villian, fiend']
+    - [noun, рог, horn]
+    - [adjective, королевский, royal]
+    - [noun, гвардия, guard (such as the royal guard)]

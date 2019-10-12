@@ -1,0 +1,6 @@
+card_set:
+  name: Cars & Automotive
+  version: 1
+  cards:
+    - [noun, колесо, wheel]
+    - [noun, шина, tire]

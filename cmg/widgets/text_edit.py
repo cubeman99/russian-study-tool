@@ -27,7 +27,8 @@ class TextEdit(Widget):
 
         self.text_edited = Event()
         self.return_pressed = Event()
-
+        
+        self.__edited = False
         self.__autocomplete_source = None
         self.__background_text = None
         self.__autocomplete_text = None
@@ -75,7 +76,7 @@ class TextEdit(Widget):
 
     def on_lose_focus(self):
         """Called when the widget loses focus."""
-        self.stop_selecting()
+        self.deselect()
         self.__apply_autocomplete()
 
     def get_text(self) -> str:
@@ -85,6 +86,7 @@ class TextEdit(Widget):
     def set_text(self, text: str) -> str:
         """Sets the text in the text box."""
         assert isinstance(text, str)
+        self.deselect()
         self.__text = text
         self.__cursor_position = len(self.__text)
 
@@ -139,7 +141,7 @@ class TextEdit(Widget):
         state = (self.__text,
                  self.__cursor_position,
                  self.__background_text)
-        if state[0] != self.__prev_state[0]:
+        if state[0] != self.__prev_state[0] and self.__edited:
             self.text_edited.emit()
         if state[:2] != self.__prev_state[:2]:
             self.cursor_ms_counter = 0
@@ -153,11 +155,12 @@ class TextEdit(Widget):
                     color=self.__background_text_color)
 
         self.clock.tick()
+        self.__edited = False
 
     def on_key_pressed(self, key, mod, text):
         """Called when a key is pressed."""
         if key in [Keys.K_ESCAPE, Keys.K_TAB]:
-            return
+            return 
         
         # Enter applies autocompletion
         if key == Keys.K_RETURN:
@@ -172,12 +175,15 @@ class TextEdit(Widget):
         if KeyMods.LSHIFT in mod and KeyMods.LCTRL in mod:
             if key == Keys.K_INSERT:
                 self.paste()
+                self.__edited = True
 
         elif KeyMods.LCTRL in mod:
             if key == Keys.K_V:
                 self.paste()
+                self.__edited = True
             if key == Keys.K_X:
                 self.cut()
+                self.__edited = True
             if key == Keys.K_C:
                 self.copy()
             if key == Keys.K_A:
@@ -191,6 +197,7 @@ class TextEdit(Widget):
             else:
                 self.__text = (self.__text[:max(self.__cursor_position - 1, 0)] +
                                self.__text[self.__cursor_position:])
+            self.__edited = True
             self.__cursor_position = max(self.__cursor_position - 1, 0)
         elif key == Keys.K_DELETE:
             if self.is_selecting():
@@ -198,34 +205,36 @@ class TextEdit(Widget):
             else:
                 self.__text = (self.__text[:self.__cursor_position] +
                                self.__text[self.__cursor_position + 1:])
+            self.__edited = True
         elif key == Keys.K_RIGHT:
             if KeyMods.LSHIFT in mod:
                 self.start_selection()
             else:
-                self.stop_selecting()
+                self.deselect()
             self.__cursor_position = min(
                 self.__cursor_position + 1, len(self.__text))
         elif key == Keys.K_LEFT:
             if KeyMods.LSHIFT in mod:
                 self.start_selection()
             else:
-                self.stop_selecting()
+                self.deselect()
             self.__cursor_position = max(self.__cursor_position - 1, 0)
         elif key == Keys.K_END:
             if KeyMods.LSHIFT in mod:
                 self.start_selection()
             else:
-                self.stop_selecting()
+                self.deselect()
             self.__cursor_position = len(self.__text)
         elif key == Keys.K_HOME:
             if KeyMods.LSHIFT in mod:
                 self.start_selection()
             else:
-                self.stop_selecting()
+                self.deselect()
             self.__cursor_position = 0
         elif len(text) > 0:
             self.delete_selection()
             self.insert_text(text)
+            self.__edited = True
 
     def on_key_released(self, key, mod):
         """Called when a key is released."""
@@ -266,7 +275,7 @@ class TextEdit(Widget):
             self.__cursor_position = start
         self.__select_position = None
 
-    def stop_selecting(self) -> bool:
+    def deselect(self) -> bool:
         """Deselect if selecting."""
         self.__select_position = None
 
@@ -345,6 +354,12 @@ class TextEdit(Widget):
             g.fill_rect(cursor_x_pos, self.rect.top + top_padding,
                         cursor_width, cursor_height,
                         color=self.__font.get_text_color())
+        
+        # Draw the box border
+        c = Colors.BLACK
+        if self.is_focused():
+            c = Colors.BLUE
+        g.draw_rect(self.rect, color=c)
 
     def __get_ctrl_boundary(self, step=1):
         """

@@ -1,0 +1,25 @@
+card_set:
+  name: Senses
+  version: 1
+  cards:
+    - [verb, затрагиваться, to touch upon]
+    - [verb, касаться, 'to touch, mention']
+    - [verb, коснуться, 'to touch, mention']
+    - [verb, тронуть, 'to touch, move (feelings)']
+    - [adjective, трогательный, 'touching, moving (emotion)']
+    - [verb, трогать, 'to touch thoroughly, or many times']
+    - [verb, слушать, to listen]
+    - [verb, слышать, to hear]
+    - [noun, чувство, feeling]
+    - [verb, чувствовать, to feel]
+    - [noun, ощущение, 'feeling, sensation']
+    - [verb, видеть, to see]
+    - [verb, увидеть, to see]
+    - [verb, смотреть, 'to look, watch']
+    - [verb, пахнуть, to smell]
+    - [noun, язык, 'language, tongue']
+    - [noun, ухо, ear]
+    - [noun, нос, nose]
+    - [phrase, шмыгнуть носом, 'to sniff, snuff your nose']
+    - [verb, посматривать, 'to gaze, look at from time to time']
+    - [verb, есть, to eat]

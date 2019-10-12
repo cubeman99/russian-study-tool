@@ -1,0 +1,10 @@
+card_set:
+  name: Nationalities
+  version: 1
+  cards:
+    - [noun, 'россиянин, россиянка', Russian (citizen)]
+    - [noun, 'американец, американка', American]
+    - [noun, 'немец, немка', German]
+    - [adjective, немецкий, German]
+    - [noun, 'славянин, славянка', Slav]
+    - [noun, 'англичанин, англичанка', Englishman/Englishwoman]

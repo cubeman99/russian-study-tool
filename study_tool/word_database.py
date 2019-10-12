@@ -4,7 +4,7 @@ import shutil
 import threading
 import yaml
 from cmg.event import Event
-from cmg.utilities.read_write_lock import ReadWriteLock
+from cmg.utilities import ReadWriteLock
 from study_tool.russian.types import *
 from study_tool.russian.word import *
 from study_tool.russian.word import WordSourceEnum

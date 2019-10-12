@@ -4,7 +4,7 @@ import time
 import yaml
 from datetime import datetime
 from cmg.event import Event
-from cmg.utilities.read_write_lock import ReadWriteLock
+from cmg.utilities import ReadWriteLock
 from study_tool.card import Card
 from study_tool.card_attributes import CardAttributes
 from study_tool.config import Config

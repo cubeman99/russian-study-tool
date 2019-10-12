@@ -170,6 +170,9 @@ ATTRIBUTE_SHORT_DISPLAY_NAMES = {
     CardAttributes.VerbSuffixZha:  "-жа",
     CardAttributes.ObstruentStem:  "Obstr",
     CardAttributes.ResonantStem:   "Reson",
+    CardAttributes.Masculine:      "M",
+    CardAttributes.Neuter:         "N",
+    CardAttributes.Femanine:       "F",
 }
 
 ATTRIBUTE_COLORS = {

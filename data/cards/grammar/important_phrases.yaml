@@ -1,0 +1,15 @@
+card_set:
+  name: Important Phrases
+  version: 1
+  cards:
+    - [phrase, 'на самом деле, ...', 'in actuality, in reality, ...']
+    - [conjunction, 'тем не менее, ...', 'however, ...; nevertheless, ...']
+    - [phrase, вообще-то, 'to be honest, in actuality, by the way']
+    - [other, 'вообще то, ...', 'in general, ...']
+    - [phrase, в общем, 'overall, in general']
+    - [phrase, по крайней мере, at least]
+    - [adverb, учитывая..., considering...]
+    - [phrase, 'что касается ____, то ____', 'when it comes to ____, ____']
+    - [preposition, касательно, 'regarding, concering, over, on']
+    - [phrase, честно говоря, honestly]
+    - [phrase, хоть и нехотя, albeit reluctantly]

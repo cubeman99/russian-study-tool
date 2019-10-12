@@ -26,6 +26,11 @@ class LayoutItem:
     def calc_minimum_size(self) -> Vec2:
         pass
 
+    @abc.abstractclassmethod
+    def is_visible(self) -> bool:
+        """Returns True if this item is visible."""
+        return self.__visible
+
     def get_maximum_size(self) -> Vec2:
         return self.__maximum_size
 
@@ -34,15 +39,6 @@ class LayoutItem:
 
     def get_maximum_height(self) -> int:
         return self.__maximum_size.y
-
-    def set_maximum_size(self, size):
-        self.__maximum_size = Vec2(size)
-
-    def set_maximum_width(self, width):
-        self.__maximum_size.x = width
-
-    def set_maximum_height(self, height):
-        self.__maximum_size.y = height
 
     def get_minimum_size(self) -> Vec2:
         return self.__minimum_size
@@ -53,19 +49,10 @@ class LayoutItem:
     def get_minimum_height(self) -> int:
         return self.__minimum_size.y
 
-    def set_minimum_size(self, size):
-        self.__minimum_size = Vec2(size)
-
-    def set_minimum_width(self, width):
-        self.__minimum_size.x = width
-
-    def set_minimum_height(self, height):
-        self.__minimum_size.y = height
-
     def get_rect(self) -> Rect:
         return self.rect
 
-    def get_widget(self) -> int:
+    def get_width(self) -> int:
         return self.rect.width
 
     def get_height(self) -> int:
@@ -87,6 +74,24 @@ class LayoutItem:
 
     def set_size(self, size):
         self.rect.size = Vec2(size).totuple()
+
+    def set_maximum_size(self, size):
+        self.__maximum_size = Vec2(size)
+
+    def set_maximum_width(self, width):
+        self.__maximum_size.x = width
+
+    def set_maximum_height(self, height):
+        self.__maximum_size.y = height
+
+    def set_minimum_size(self, size):
+        self.__minimum_size = Vec2(size)
+
+    def set_minimum_width(self, width):
+        self.__minimum_size.x = width
+
+    def set_minimum_height(self, height):
+        self.__minimum_size.y = height
 
     def get_parent(self):
         return self.parent

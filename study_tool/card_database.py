@@ -6,7 +6,7 @@ import threading
 import time
 import yaml
 from cmg.event import Event
-from cmg.utilities.read_write_lock import ReadWriteLock
+from cmg.utilities import ReadWriteLock
 from study_tool.card import Card
 from study_tool.card import SourceLocation
 from study_tool.card_set import CardSet

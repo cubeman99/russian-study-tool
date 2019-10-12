@@ -3,9 +3,10 @@ import pygame
 from pygame import Rect
 from cmg import gui
 from cmg import widgets
-from cmg import color
+from cmg.color import Colors
 from cmg.event import Event
 from cmg.input import Keys, MouseButtons
+
 
 class ComboBox(widgets.Widget):
     def __init__(self, options=[], index=0):
@@ -67,8 +68,17 @@ class ComboBox(widgets.Widget):
         self.set_index((self.__index + 1) % len(self.__options))
 
     def on_draw(self, g):
+        # Render the text
         if not self.__surface:
             self.__surface = self.__font.render(self.__text)
+
+        # Draw the text
         y = self.rect.top + \
             int((self.get_height() - self.__surface.get_height()) / 2)
         g.draw_image(self.__surface, self.rect.left + 4, y)
+        
+        # Draw the box border
+        c = Colors.BLACK
+        if self.is_focused():
+            c = Colors.BLUE
+        g.draw_rect(self.rect, color=c)

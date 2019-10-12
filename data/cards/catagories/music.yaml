@@ -1,0 +1,10 @@
+card_set:
+  name: Music
+  version: 1
+  cards:
+    - [noun, музыкальный инструмент, musical instrument]
+    - [verb, играть, to play]
+    - [noun, скрипка, violin]
+    - [noun, пианино, piano]
+    - [noun, гитара, guitar]
+    - [noun, оркестр, orchestra]

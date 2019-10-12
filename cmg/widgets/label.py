@@ -33,3 +33,7 @@ class Label(widgets.Widget):
         y = self.rect.top + \
             int((self.get_height() - self.__surface.get_height()) / 2)
         g.draw_image(self.__surface, self.rect.left + 4, y)
+
+    def __repr__(self):
+        """Returns a string representation of this object."""
+        return "<{}({})>".format(self.__class__.__name__, repr(self.__text))

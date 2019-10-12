@@ -1,0 +1,11 @@
+card_set:
+  name: Office
+  version: 1
+  cards:
+    - [noun, портфель, briefcase]
+    - [noun, здание, building]
+    - [noun, офис, office]
+    - [noun, бумага, paper]
+    - [noun, ручка, pen]
+    - [noun, карандаш, pencil]
+    - [noun, зарплата, salery]

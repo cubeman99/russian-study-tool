@@ -1,0 +1,23 @@
+card_set:
+  name: Media
+  version: 1
+  cards:
+    - [noun, ролик, 'video, roll']
+    - [phrase, снимать видео, to shoot a video]
+    - [noun, книга, book]
+    - [noun, обложка, paper cover for book]
+    - [noun, глава, chapter]
+    - [noun, сюжет, 'plot, story']
+    - [noun, кинотеатр, movie theater]
+    - [noun, эпос, epic (story)]
+    - [noun, стих, 'verse, poetry']
+    - [noun, мультик, cartoon show]
+    - [noun, карикатура, 'cartoon, comic']
+    - [noun, мультфильм, animated film]
+    - [noun, персонаж, character]
+    - [verb, читать, to read]
+    - [verb, прочесть, 'to finish reading, to read through']
+    - [noun, песня, song]
+    - [noun, наушники, headphones]
+    - [noun, телевизор, 'television, TV Set']
+    - [noun, экран, screen]

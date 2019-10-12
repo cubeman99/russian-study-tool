@@ -77,6 +77,10 @@ class CheckBox(widgets.Widget):
                 g.fill_rect(x + p, y + p, w - p * 2, h - p * 2, color=Colors.BLACK)
             x += w + p
             g.draw_image(self.__surface, x, y)
+            
+        # Draw the box border
+        if self.is_focused():
+            g.draw_rect(self.rect, color=Colors.BLUE)
 
     def __update_size(self):
         size = self.__font.measure(self.__text)
@@ -84,5 +88,9 @@ class CheckBox(widgets.Widget):
         self.set_minimum_height(size.y + p)
         self.set_maximum_height(size.y + p)
         self.set_minimum_width(size.x + p + 20 + p + p)
+
+    def __repr__(self):
+        """Returns a string representation of this object."""
+        return "<{}({})>".format(self.__class__.__name__, repr(self.__text))
 
 
