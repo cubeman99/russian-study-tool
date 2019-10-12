@@ -228,12 +228,11 @@ class Cooljugator:
         verb.past[(Plurality.Plural, None)] = self.__get_conjugation(root, "past_plur", required=True)
         verb.imperative[Plurality.Singular] = self.__get_conjugation(root, "imperative2")
         verb.imperative[Plurality.Plural] = self.__get_conjugation(root, "imperative5")
-        verb.active_participles[Tense.Present] = self.__get_conjugation(root, "present_active_participle")
-        verb.active_participles[Tense.Past] = self.__get_conjugation(root, "past_active_participle")
-        verb.passive_participles[Tense.Present] = self.__get_conjugation(root, "present_passive_participle")
-        verb.passive_participles[Tense.Past] = self.__get_conjugation(root, "past_passive_participle")
-        verb.adverbial_participles[Tense.Present] = self.__get_conjugation(root, "present_adverbial_participle")
-        verb.adverbial_participles[Tense.Past] = self.__get_conjugation(root, "past_adverbial_participle")
+        for participle in Participle:
+            for tense in (Tense.Past, Tense.Present):
+                key = "{}_{}_participle".format(tense.name.lower(), participle.name.lower())
+                conjugation = self.__get_conjugation(root, key)
+                verb.set_participle(participle=participle, tense=tense, text=conjugation)
   
         # Parse the examples
         #verb.examples = []

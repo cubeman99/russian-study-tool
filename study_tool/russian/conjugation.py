@@ -1,12 +1,12 @@
 from study_tool.russian.types import *
 from study_tool.russian.word import AccentedText
 
-CONSONANTS = "б,в,г,д,ж,з,к,л,м,н,п,р,с,т,ф,х,ц,ч,ш,щ,й"
-VOWELS = "а,э,ы,у,о,я,е,ё,ю,и".split(",")
+CONSONANTS = list("бвгджзклмнпрстфхцчшщй")
+VOWELS = list("аэыуояеёюи")
 ACCENT_CHAR = "´"
-ACCENT_CHARS = "'´`"
-HARD_VOWELS = "аоуыэ"
-SOFT_VOWELS = "яёюие"
+ACCENT_CHARS = list("'´`")
+HARD_VOWELS = list("аоуыэ")
+SOFT_VOWELS = list("яёюие")
 TO_SOFT = {"а": "я",
            "о": "ё",
            "у": "ю",
@@ -24,17 +24,36 @@ def simplify(word):
     return word, stress
 
 
+def add_reflexive_suffix(self, text: str) -> str:
+    """Add the reflexive suffix to a word."""
+    if text.lower()[-1] in VOWELS:
+        return text + "сь"
+    return text + "ся"
+
+
 def decline_adjective(adj: AccentedText,
                       case=Case.Nominative,
                       gender=Gender.Masculine,
                       plurality=Plurality.Singular,
                       animacy=Animacy.Inanimate,
-                      short=False):
+                      short=False) -> AccentedText:
+    """
+    Auto-declines a Russian adjective.
+    """
+    original = adj
     adj, stress = simplify(repr(adj))
+
+    reflexive = adj.endswith("ся") or adj.endswith("сь")
+    if reflexive:
+        adj = adj[:-2]
+
     end_stressed = stress == len(adj) - 2
+
     if not (adj.endswith("ый") or adj.endswith("ой") or adj.endswith("ий")):
-        return AccentedText(adj)
+        return AccentedText(original)
+
     stem = adj[:-2]
+
     a = "а"
     y = "у"
     s1 = "о"
@@ -127,6 +146,9 @@ def decline_adjective(adj: AccentedText,
                 result = stem + s1 + "й"
             else:
                 result = stem + s2 + "м"
+
+    if reflexive:
+        result = add_reflexive_suffix(result)
     if stress is not None:
         return AccentedText(result[:stress + 1] + ACCENT_CHAR + result[stress + 1:])
     else:

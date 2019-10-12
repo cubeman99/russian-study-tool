@@ -137,9 +137,9 @@ class Word:
     """
     Base class for information about a single word in the target language.
     """
-    def __init__(self, source_type=WordSourceEnum.Unknown):
+    def __init__(self, name=None, source_type=WordSourceEnum.Unknown):
         self.word_type = WordType.Noun
-        self.name = AccentedText()
+        self.name = AccentedText(name if name is not None else "")
         self.meaning = None
         self.examples = []
         self.__complete = False

@@ -4,8 +4,8 @@ from study_tool.russian import conjugation
 
 
 class Adjective(Word):
-    def __init__(self):
-        Word.__init__(self)
+    def __init__(self, name=None):
+        Word.__init__(self, name=name)
         self.word_type = WordType.Adjective
         self.declension = {}
         self.short_form = {}

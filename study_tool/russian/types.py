@@ -62,6 +62,12 @@ class Gender(IntEnum):
 class Plurality(IntEnum):
     Singular = 0
     Plural = 1
+    
+
+class Participle(IntEnum):
+    Active = 0
+    Passive = 1
+    Adverbial = 2
 
 
 class Person(IntEnum):

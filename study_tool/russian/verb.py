@@ -1,5 +1,6 @@
 from study_tool.russian.types import *
 from study_tool.russian.word import *
+from study_tool.russian.adjective import Adjective
 
 NON_PAST_ORDER = [(Plurality.Singular, Person.First),
                   (Plurality.Singular, Person.Second),
@@ -54,15 +55,13 @@ class Verb(Word):
         self.imperative = {
             Plurality.Singular: AccentedText(),
             Plurality.Plural: AccentedText()}
-        self.active_participles = {
-            Tense.Present: AccentedText(),
-            Tense.Past: AccentedText()}
-        self.passive_participles = {
-            Tense.Present: AccentedText(),
-            Tense.Past: AccentedText()}
-        self.adverbial_participles = {
-            Tense.Present: AccentedText(),
-            Tense.Past: AccentedText()}
+
+        self.__participles = {}
+        self.__participle_words = {}
+        for participle in Participle:
+            for tense in (Tense.Past, Tense.Present):
+                self.__participles[(participle, tense)] = AccentedText()
+                self.__participle_words[(participle, tense)] = None
 
     def get_info(self) -> AccentedText:
         return self.info
@@ -77,19 +76,34 @@ class Verb(Word):
         return self.aspect
 
     def get_all_forms(self):
-        return ([self.infinitive] +
+        forms = ([self.infinitive] +
                 [x for x in self.past.values()] +
                 [x for x in self.non_past.values()] +
-                [x for x in self.imperative.values()] +
-                [x for x in self.active_participles.values()] +
-                [x for x in self.passive_participles.values()] +
-                [x for x in self.adverbial_participles.values()])
+                [x for x in self.imperative.values()])
+        for _, participle in self.__participles.items():
+             forms += participle.get_all_forms()
+        return forms
 
     def remove_reflexive_suffix(self, word) -> AccentedText:
         if word.text.endswith("ся") or word.text.endswith("сь"):
             return AccentedText(word.text[:-2], word.accents)
         else:
             return word
+
+    def get_participle(self, participle: Participle, tense: Tense) -> AccentedText:
+        """Get a participle of the verb."""
+        return self.__participles[(plurality, person)]
+
+    def get_participle_word(self, participle: Participle, tense: Tense) -> Adjective:
+        """Get a participle of the verb."""
+        return self.__participle_words[(plurality, person)]
+
+    def set_participle(self, participle: Participle, tense: Tense, text: AccentedText):
+        """Sets a participle of the verb."""
+        self.__participles[(plurality, person)] = AccentedText(text)
+        adjective = Adjective(text)
+        adjective.auto_generate_forms()
+        self.__participle_words[(plurality, person)] = adjective
 
     def get_non_past(self, plurality: Plurality, person: Person) -> AccentedText:
         """Get a non-past conjugation of the verb."""
@@ -248,22 +262,19 @@ class Verb(Word):
             "imperative": {
                 "Singular": str(self.imperative[Plurality.Singular]),
                 "Plural": str(self.imperative[Plurality.Plural])
-            },
-            "participles": {
-                "Active": {
-                    "Present": str(self.active_participles[Tense.Present]),
-                    "Past": str(self.active_participles[Tense.Past])
-                },
-                "Passive": {
-                    "Present": str(self.passive_participles[Tense.Present]),
-                    "Past": str(self.passive_participles[Tense.Past])
-                },
-                "Adverbial": {
-                    "Present": str(self.adverbial_participles[Tense.Present]),
-                    "Past": str(self.adverbial_participles[Tense.Past])
-                }
             }
         }
+
+        # Serialize participles
+        data["participles"] = {}
+        for participle in Participle:
+            participle_key = participle.name.lower()
+            data["participles"][participle_key] = {}
+            for tense in (Tense.Past, Tense.Present):
+                tense_key = tense.name.lower()
+                data["participles"][participle_key][tense_key] = self.get_participle(
+                    participle=participle, tense=tense)
+
         return data
 
     def deserialize(self, data):
@@ -330,16 +341,11 @@ class Verb(Word):
             self.imperative[Plurality.Singular] = AccentedText(data["imperative"]["Singular"])
             self.imperative[Plurality.Plural] = AccentedText(data["imperative"]["Plural"])
         
-        self.active_participles[Tense.Present] = AccentedText(
-            data["participles"]["Active"]["Present"])
-        self.active_participles[Tense.Past] = AccentedText(
-            data["participles"]["Active"]["Past"])
-        self.passive_participles[Tense.Present] = AccentedText(
-            data["participles"]["Passive"]["Present"])
-        self.passive_participles[Tense.Past] = AccentedText(
-            data["participles"]["Passive"]["Past"])
-        self.adverbial_participles[Tense.Present] = AccentedText(
-            data["participles"]["Adverbial"]["Present"])
-        self.adverbial_participles[Tense.Past] = AccentedText(
-            data["participles"]["Adverbial"]["Past"])
+        # Deserialize participles
+        for participle in Participle:
+            participle_key = participle.name.lower()
+            for tense in (Tense.Past, Tense.Present):
+                tense_key = tense.name.lower()
+                text = data["participles"][participle_key][tense_key]
+                self.set_participle(participle=participle, tense=tense, text=text)
 
