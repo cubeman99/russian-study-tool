@@ -172,6 +172,7 @@ class CardEditWidget(widgets.Widget):
         self.__box_add_related_word.return_pressed.connect(self.__on_click_add_related_card)
         self.__button_add_related_word.clicked.connect(self.__on_click_add_related_card)
         self.__button_apply.clicked.connect(self.apply)
+        self.add_key_shortcut("Ctrl+S", self.apply)
         self.__button_delete.clicked.connect(self.delete_card)
         self.__button_cancel.clicked.connect(self.__on_click_cancel)
         self.__button_new_card.clicked.connect(

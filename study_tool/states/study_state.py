@@ -720,12 +720,12 @@ class StudyState(State):
             self.__table_verb_past.set_text(6, 1, verb.imperative[Plurality.Plural])
 
             # Participles
-            self.__table_verb_participles.set_text(1, 1, verb.active_participles[Tense.Present])
-            self.__table_verb_participles.set_text(1, 2, verb.active_participles[Tense.Past])
-            self.__table_verb_participles.set_text(2, 1, verb.adverbial_participles[Tense.Present])
-            self.__table_verb_participles.set_text(2, 2, verb.adverbial_participles[Tense.Past])
-            self.__table_verb_participles.set_text(3, 1, verb.passive_participles[Tense.Present])
-            self.__table_verb_participles.set_text(3, 2, verb.passive_participles[Tense.Past])
+            self.__table_verb_participles.set_text(1, 1, verb.get_participle(Participle.Active, Tense.Present))
+            self.__table_verb_participles.set_text(1, 2, verb.get_participle(Participle.Active, Tense.Past))
+            self.__table_verb_participles.set_text(2, 1, verb.get_participle(Participle.Adverbial, Tense.Present))
+            self.__table_verb_participles.set_text(2, 2, verb.get_participle(Participle.Adverbial, Tense.Past))
+            self.__table_verb_participles.set_text(3, 1, verb.get_participle(Participle.Passive, Tense.Present))
+            self.__table_verb_participles.set_text(3, 2, verb.get_participle(Participle.Passive, Tense.Past))
 
         self.__on_revealed_changed()
         Config.logger.info("Showing card: " + repr(self.prompt_text))

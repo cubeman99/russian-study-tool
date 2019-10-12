@@ -8738,6 +8738,54 @@
       "type": "Noun"
     },
     {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [],
+        "imperative": {
+          "Plural": "води'те",
+          "Singular": "води'"
+        },
+        "infinitive": "водить",
+        "info": "This verb can also mean the following: move, guide, drive, conduct, breed.",
+        "non_past": {
+          "Plural": {
+            "First": "во'дим",
+            "Second": "во'дите",
+            "Third": "во'дят"
+          },
+          "Singular": {
+            "First": "вожу'",
+            "Second": "во'дишь",
+            "Third": "во'дит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "води'вший",
+            "Present": "водя'щий"
+          },
+          "Adverbial": {
+            "Past": "води'в",
+            "Present": "водя'"
+          },
+          "Passive": {
+            "Past": "во'женный",
+            "Present": "води'мый"
+          }
+        },
+        "past": {
+          "Femanine": "води'ла",
+          "Masculine": "води'л",
+          "Neuter": "води'ло",
+          "Plural": "води'ли"
+        },
+        "translation": "to drive a car"
+      },
+      "examples": [],
+      "name": "водить",
+      "type": "Verb"
+    },
+    {
       "Noun": {
         "declension": {
           "Plural": {
@@ -15587,6 +15635,57 @@
       "type": "Adjective"
     },
     {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "погнать",
+          "загнать"
+        ],
+        "imperative": {
+          "Plural": "гони'те",
+          "Singular": "гони'"
+        },
+        "infinitive": "гнать",
+        "info": "This verb can also mean the following: distill, pursue, chase, speed along, speed, lie.",
+        "non_past": {
+          "Plural": {
+            "First": "го'ним",
+            "Second": "го'ните",
+            "Third": "го'нят"
+          },
+          "Singular": {
+            "First": "гоню'",
+            "Second": "го'нишь",
+            "Third": "го'нит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "гна'вший",
+            "Present": "гоня'щий"
+          },
+          "Adverbial": {
+            "Past": "гна'в",
+            "Present": "гоня'"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "гони'мый"
+          }
+        },
+        "past": {
+          "Femanine": "гнала'",
+          "Masculine": "гна'л",
+          "Neuter": "гна'ло",
+          "Plural": "гна'ли"
+        },
+        "translation": "to drive"
+      },
+      "examples": [],
+      "name": "гнать",
+      "type": "Verb"
+    },
+    {
       "Noun": {
         "declension": {
           "Plural": {
@@ -16257,6 +16356,56 @@
       "examples": [],
       "name": "гонка",
       "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "погонять"
+        ],
+        "imperative": {
+          "Plural": "гоня'йте",
+          "Singular": "гоня'й"
+        },
+        "infinitive": "гонять",
+        "info": "This verb can also mean the following: chase, speed, distill, speed along, pursue.",
+        "non_past": {
+          "Plural": {
+            "First": "гоня'ем",
+            "Second": "гоня'ете",
+            "Third": "гоня'ют"
+          },
+          "Singular": {
+            "First": "гоня'ю",
+            "Second": "гоня'ешь",
+            "Third": "гоня'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "гоня'вший",
+            "Present": "гоня'ющий"
+          },
+          "Adverbial": {
+            "Past": "гоня'в",
+            "Present": "гоня'я"
+          },
+          "Passive": {
+            "Past": "—",
+            "Present": "гоня'емый"
+          }
+        },
+        "past": {
+          "Femanine": "гоня'ла",
+          "Masculine": "гоня'л",
+          "Neuter": "гоня'ло",
+          "Plural": "гоня'ли"
+        },
+        "translation": "to drive"
+      },
+      "examples": [],
+      "name": "гонять",
+      "type": "Verb"
     },
     {
       "Noun": {
@@ -22324,6 +22473,56 @@
       "examples": [],
       "name": "ёжик",
       "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "поездить"
+        ],
+        "imperative": {
+          "Plural": "е'здите",
+          "Singular": "е'зди"
+        },
+        "infinitive": "ездить",
+        "info": "This verb can also mean the following: travel, come, visit.",
+        "non_past": {
+          "Plural": {
+            "First": "е'здим",
+            "Second": "е'здите",
+            "Third": "е'здят"
+          },
+          "Singular": {
+            "First": "е'зжу",
+            "Second": "е'здишь",
+            "Third": "е'здит"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "е'здивший",
+            "Present": "е'здящий"
+          },
+          "Adverbial": {
+            "Past": "е'здив",
+            "Present": "е'здя"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "е'здила",
+          "Masculine": "е'здил",
+          "Neuter": "е'здило",
+          "Plural": "е'здили"
+        },
+        "translation": "to go by car"
+      },
+      "examples": [],
+      "name": "ездить",
+      "type": "Verb"
     },
     {
       "Noun": {
@@ -61103,6 +61302,56 @@
       "Verb": {
         "aspect": "Imperfective",
         "counterparts": [
+          "поплавать"
+        ],
+        "imperative": {
+          "Plural": "пла'вайте",
+          "Singular": "пла'вай"
+        },
+        "infinitive": "плавать",
+        "info": "This verb can also mean the following: sail, float.",
+        "non_past": {
+          "Plural": {
+            "First": "пла'ваем",
+            "Second": "пла'ваете",
+            "Third": "пла'вают"
+          },
+          "Singular": {
+            "First": "пла'ваю",
+            "Second": "пла'ваешь",
+            "Third": "пла'вает"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "пла'вавший",
+            "Present": "пла'вающий"
+          },
+          "Adverbial": {
+            "Past": "пла'вав",
+            "Present": "пла'вая"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "пла'вала",
+          "Masculine": "пла'вал",
+          "Neuter": "пла'вало",
+          "Plural": "пла'вали"
+        },
+        "translation": "to swim"
+      },
+      "examples": [],
+      "name": "плавать",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
           "заплакать",
           "поплакать"
         ],
@@ -64961,6 +65210,56 @@
       "examples": [],
       "name": "полёт",
       "type": "Noun"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "поползать"
+        ],
+        "imperative": {
+          "Plural": "по'лзайте",
+          "Singular": "по'лзай"
+        },
+        "infinitive": "ползать",
+        "info": "This verb can also mean the following: crawl.",
+        "non_past": {
+          "Plural": {
+            "First": "по'лзаем",
+            "Second": "по'лзаете",
+            "Third": "по'лзают"
+          },
+          "Singular": {
+            "First": "по'лзаю",
+            "Second": "по'лзаешь",
+            "Third": "по'лзает"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "по'лзавший",
+            "Present": "по'лзающий"
+          },
+          "Adverbial": {
+            "Past": "по'лзав",
+            "Present": "по'лзая"
+          },
+          "Passive": {
+            "Past": "",
+            "Present": "—"
+          }
+        },
+        "past": {
+          "Femanine": "по'лзала",
+          "Masculine": "по'лзал",
+          "Neuter": "по'лзало",
+          "Plural": "по'лзали"
+        },
+        "translation": "to creep"
+      },
+      "examples": [],
+      "name": "ползать",
+      "type": "Verb"
     },
     {
       "Verb": {
@@ -94375,6 +94674,56 @@
       },
       "examples": [],
       "name": "таращиться",
+      "type": "Verb"
+    },
+    {
+      "Verb": {
+        "aspect": "Imperfective",
+        "counterparts": [
+          "потаскать"
+        ],
+        "imperative": {
+          "Plural": "таска'йте",
+          "Singular": "таска'й"
+        },
+        "infinitive": "таскать",
+        "info": "This verb can also mean the following: wear, drag, pull.",
+        "non_past": {
+          "Plural": {
+            "First": "таска'ем",
+            "Second": "таска'ете",
+            "Third": "таска'ют"
+          },
+          "Singular": {
+            "First": "таска'ю",
+            "Second": "таска'ешь",
+            "Third": "таска'ет"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "таска'вший",
+            "Present": "таска'ющий"
+          },
+          "Adverbial": {
+            "Past": "таска'в",
+            "Present": "таска'я"
+          },
+          "Passive": {
+            "Past": "та'сканный",
+            "Present": "таска'емый"
+          }
+        },
+        "past": {
+          "Femanine": "таска'ла",
+          "Masculine": "таска'л",
+          "Neuter": "таска'ло",
+          "Plural": "таска'ли"
+        },
+        "translation": "to carry"
+      },
+      "examples": [],
+      "name": "таскать",
       "type": "Verb"
     },
     {

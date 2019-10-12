@@ -211,8 +211,7 @@ class MenuState(State):
                     card_query=CardQuery(max_score=0.9),
                     study_params=StudyParams(random_side=True))),
             ("Query",
-                lambda: self.app.push_gui_state(
-                    QueryWidget(self.app, card_set.cards))),
+                lambda: self.app.push_gui_state(QueryWidget(self.app, card_set))),
             ("List", lambda: self.app.push_card_list_state(card_set)),
             ("Edit", lambda: self.app.push_card_set_edit_state(card_set))]
         if card_set is self.package:

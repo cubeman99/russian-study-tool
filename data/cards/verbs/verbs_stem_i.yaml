@@ -2,7 +2,7 @@ card_set:
   name: 8. Verbs with Stem - И
   version: 1
   cards:
-    - [verb, ходить, to walk]
+    - [verb, ходить, 'to walk, go on foot']
     - [verb, возить, to transport]
     - [verb, носить, to carry]
     - [verb, платить, to pay]

@@ -58,7 +58,7 @@ class Verb(Word):
 
         self.__participles = {}
         self.__participle_words = {}
-        for participle in Participle:
+        for participle in (Participle.Active, Participle.Passive):
             for tense in (Tense.Past, Tense.Present):
                 self.__participles[(participle, tense)] = AccentedText()
                 self.__participle_words[(participle, tense)] = None
@@ -80,8 +80,8 @@ class Verb(Word):
                 [x for x in self.past.values()] +
                 [x for x in self.non_past.values()] +
                 [x for x in self.imperative.values()])
-        for _, participle in self.__participles.items():
-             forms += participle.get_all_forms()
+        for _, adjective in self.__participle_words.items():
+             forms += adjective.get_all_forms()
         return forms
 
     def remove_reflexive_suffix(self, word) -> AccentedText:
@@ -90,20 +90,24 @@ class Verb(Word):
         else:
             return word
 
+    def get_participles_words(self) -> list:
+        return list(self.__participle_words.values())
+
     def get_participle(self, participle: Participle, tense: Tense) -> AccentedText:
         """Get a participle of the verb."""
-        return self.__participles[(plurality, person)]
+        return self.__participles[(participle, tense)]
 
     def get_participle_word(self, participle: Participle, tense: Tense) -> Adjective:
         """Get a participle of the verb."""
-        return self.__participle_words[(plurality, person)]
+        return self.__participle_words[(participle, tense)]
 
     def set_participle(self, participle: Participle, tense: Tense, text: AccentedText):
         """Sets a participle of the verb."""
-        self.__participles[(plurality, person)] = AccentedText(text)
+        self.__participles[(participle, tense)] = AccentedText(text)
         adjective = Adjective(text)
         adjective.auto_generate_forms()
-        self.__participle_words[(plurality, person)] = adjective
+        if participle in (Participle.Active, Participle.Passive):
+            self.__participle_words[(participle, tense)] = adjective
 
     def get_non_past(self, plurality: Plurality, person: Person) -> AccentedText:
         """Get a non-past conjugation of the verb."""
@@ -268,12 +272,12 @@ class Verb(Word):
         # Serialize participles
         data["participles"] = {}
         for participle in Participle:
-            participle_key = participle.name.lower()
+            participle_key = participle.name
             data["participles"][participle_key] = {}
             for tense in (Tense.Past, Tense.Present):
-                tense_key = tense.name.lower()
-                data["participles"][participle_key][tense_key] = self.get_participle(
-                    participle=participle, tense=tense)
+                tense_key = tense.name
+                data["participles"][participle_key][tense_key] = str(
+                    self.get_participle(participle=participle, tense=tense))
 
         return data
 
@@ -343,9 +347,9 @@ class Verb(Word):
         
         # Deserialize participles
         for participle in Participle:
-            participle_key = participle.name.lower()
+            participle_key = participle.name
             for tense in (Tense.Past, Tense.Present):
-                tense_key = tense.name.lower()
+                tense_key = tense.name
                 text = data["participles"][participle_key][tense_key]
                 self.set_participle(participle=participle, tense=tense, text=text)
 

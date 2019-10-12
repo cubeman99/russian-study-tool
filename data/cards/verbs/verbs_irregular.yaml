@@ -3,10 +3,10 @@ card_set:
   version: 1
   cards:
     - [verb, хотеть, to want]
-    - [verb, бежать, to run]
+    - [verb, бежать, 'to run, jog']
     - [verb, быть, to be]
     - [verb, дать, to give]
     - [verb, есть, to eat]
     - [verb, ехать, to go by vehicle]
-    - [verb, идти, to go on foot]
+    - [verb, идти, 'to walk, go on foot']
     - [verb, расти, to grow]

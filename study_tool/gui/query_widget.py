@@ -131,10 +131,11 @@ class QueryWidget(widgets.Widget):
                 query.card_type = getattr(WordType, self.__combo_card_type.get_text())
         except:
            cards = []
+           traceback.print_exc()
         else:
             # Query the cards
             cards = []
-            for card in self.__cards_source:
+            for card in self.__cards_source.get_cards():
                 study_data = self.__study_database.get_card_study_data(card)
                 if query.matches(card, study_data):
                     cards.append((card, study_data))

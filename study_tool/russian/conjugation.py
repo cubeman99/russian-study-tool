@@ -24,9 +24,10 @@ def simplify(word):
     return word, stress
 
 
-def add_reflexive_suffix(self, text: str) -> str:
+def add_reflexive_suffix(text: str) -> str:
     """Add the reflexive suffix to a word."""
-    if text.lower()[-1] in VOWELS:
+    last_letter = text[-1].lower()
+    if last_letter in VOWELS or last_letter == "й":
         return text + "сь"
     return text + "ся"
 
