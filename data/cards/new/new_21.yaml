@@ -1,0 +1,12 @@
+card_set:
+  name: New 21
+  version: 1
+  cards:
+    - [noun, надпись, 'a writing, inscripture (large scale)']
+    - [noun, запись, a written note; a recording]
+    - [verb, записать, to take a note; to record]
+    - [noun, переписка, a correspondence between two people]
+    - [verb, переписываться, 'to chat, text someone, correspond']
+    - [verb, дописать, to finish writing something]
+    - [noun, список, a list]
+    - [noun, подпись, a signature]

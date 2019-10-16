@@ -42,8 +42,8 @@ from study_tool.study_database import StudyDatabase
 from study_tool.word_database import WordDatabase
 from study_tool.external.cooljugator import CooljugatorThread
 
-DEAD_ZONE = 0.01
-
+PRESS_THRESHOLD = 0.05
+DEAD_ZONE = 0.002
 
 class StudyCardsApp(Application):
 
@@ -120,7 +120,7 @@ class StudyCardsApp(Application):
         #self.push_gui_state(RelatedCardsWidget(test_card, self))
         #self.push_gui_state(AddCardToSetWidget(test_card, self))
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
-        self.push_study_state(test_set, study_params=StudyParams(random_side=True))
+        #self.push_study_state(test_set, study_params=StudyParams(random_side=True))
         #self.push_study_state(test_set, study_params=StudyParams(random_side=True), scheduler_params=SchedulerParams(max_repetitions=1))
         #self.push_state(GUIState(widget=QueryWidget(self, test_set.get_cards()), title="Study Query"))
         #self.push_gui_state(CardSetBrowserWidget(self.card_database.get_root_package()))
@@ -355,11 +355,14 @@ class StudyCardsApp(Application):
                     self.joystick_ready = True
         if self.joystick_ready:
             for index, input in enumerate(self.inputs):
-                input.update(self.joystick.get_axis(input.index))
+                amount = self.joystick.get_axis(input.index)
+                if amount < DEAD_ZONE:
+                    amount = 0.0
+                input.update(amount)
                 self.state.buttons[index].update(
                     dt=dt,
-                    is_down=input.amount > DEAD_ZONE,
-                    is_pressed=input.amount > DEAD_ZONE and input.prev_amount <= DEAD_ZONE)
+                    is_down=input.amount > PRESS_THRESHOLD,
+                    is_pressed=input.amount > PRESS_THRESHOLD and input.prev_amount <= PRESS_THRESHOLD)
 
         self.state.process_input()
         self.state.update(dt)

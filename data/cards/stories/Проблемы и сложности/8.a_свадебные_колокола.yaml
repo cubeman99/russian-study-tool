@@ -1,5 +1,5 @@
 card_set:
-  name: 7.c Свадебные колокола
+  name: 8.a Свадебные колокола
   version: 1
   cards:
     - [verb, относиться, to relate]
@@ -18,7 +18,7 @@ card_set:
     - [verb, кувыркаться, 'to tumble, somersault']
     - [adjective, усиленный, 'strengthened, reinforced']
     - [noun, титан, titanium]
-    - [noun, ободрение, 'the "okay", approval']
+    - [noun, одобрение, 'the "okay", approval']
     - [verb, выяснять, 'to find out, clear up']
     - [adjective, невинный, innocent]
     - [adjective, неудачный, 'unsuccessful, unlucky']
@@ -39,3 +39,27 @@ card_set:
     innattentive']
     - [verb, листать, 'to flip through, leaf through']
     - [preposition, вдоль + gen., along]
+    - [verb, рыться, 'to rummage, burrow']
+    - [adjective, набранный, 'collected, typed, gathered']
+    - [verb, сотрясать, 'to shake, jar']
+    - [noun, взрыв, explosion]
+    - [adjective, встревоженный, alarmed]
+    - [verb, снести, to tear down]
+    - [noun, этаж, 'floor, story, level']
+    - [adverb, добровольно, voluntarily]
+    - [noun, вторжение, invasion]
+    - [verb, копаться, 'to delve, rummage in, bury yourself in']
+    - [noun, ласка, affection]
+    - [verb, перевить, 'to weave, cross']
+    - [verb, подавить, 'to suppress, crush']
+    - [verb, удерживать себя, to hold back]
+    - [verb, расстаться, to break up with someone]
+    - [verb, распутывать, 'to unravel, untangle']
+    - [noun, просьба, a request to satisfy some needs]
+    - [noun, беседа, 'a chat, conversation']
+    - [adverb, вглубь, 'deep, into the depths of']
+    - [noun, услуга, service]
+    - [verb, ненависть, hatred]
+    - [noun, взвизг, a screech]
+    - [noun, узы, 'bonds, ties, links']
+    - [adverb, вряд ли..., its unlikely that...]
