@@ -139,6 +139,7 @@ class StudyState(State):
         self.__table_verb_past = None
         self.__table_verb_present = None
         self.__table_verb_participles = None
+        self.__table_card_sets = None
         self.__proficiency_bar = None
 
         # Internal state
@@ -220,6 +221,23 @@ class StudyState(State):
                 align=Align.TopCenter),
             pos=Vec2(screen_center_x, self.margin_top + 32 + 16))
         
+        # Card Set list
+        card_sets = []
+        for card_set in Config.app.card_database.iter_card_sets():
+            if card_set.has_card(self.card):
+                card_sets.append(card_set)
+        x = screen_width - 16 - 400
+        y = screen_height - self.margin_bottom - 16 - self.__line_spacing
+        self.__table_card_sets = ConjugationTable(
+            font=self.__font_details,
+            row_count=1,
+            column_header_count=0,
+            column_count=1,
+            column_widths=[400],
+            row_height=self.__table_row_height)
+        self.__table_card_sets.set_text(0, 0, "Found in Card Sets")
+        self.__entity_reveal_root.add_child(self.__table_card_sets, pos=Vec2(x, y))
+
         y = screen_height - self.margin_bottom - 20 - (22 * 8) - 12 - (25 * 2)
         self.__entity_related_cards = self.__entity_reveal_root.add_child(
             TextLabel("Related cards:", font=self.__font_details),
@@ -240,6 +258,7 @@ class StudyState(State):
         table_bottom = screen_height - self.margin_bottom - self.__bottom_margin
 
         # Create the Verb Non-Past Tense conjugation table
+        table_x = self.__left_margin
         self.__table_verb_present = ConjugationTable(
             font=self.__font_details,
             row_count=7,
@@ -255,7 +274,8 @@ class StudyState(State):
         self.__table_verb_present.set_text(6, 0, "они")
         self.__entity_verb_root.add_child(
             self.__table_verb_present,
-            pos=Vec2(self.__left_margin, table_bottom - (self.__table_row_height * 7)))
+            pos=Vec2(table_x, table_bottom - (self.__table_row_height * 7)))
+        table_x += self.__table_verb_present.get_width() + 16
 
         # Create the Verb Past Tense conjugation table
         self.__table_verb_past = ConjugationTable(
@@ -273,7 +293,8 @@ class StudyState(State):
         self.__table_verb_past.set_text(6, 0, "imp2")
         self.__entity_verb_root.add_child(
             self.__table_verb_past,
-            pos=Vec2(240, table_bottom - (self.__table_row_height * 7)))
+            pos=Vec2(table_x, table_bottom - (self.__table_row_height * 7)))
+        table_x += self.__table_verb_past.get_width() + 16
         
         # Create the Verb Participle conjugation table
         self.__table_verb_participles = ConjugationTable(
@@ -289,7 +310,7 @@ class StudyState(State):
         self.__table_verb_participles.set_text(3, 0, "Passive")
         self.__entity_verb_root.add_child(
             self.__table_verb_participles,
-            pos=Vec2(640, table_bottom - (self.__table_row_height * 4)))
+            pos=Vec2(table_x, table_bottom - (self.__table_row_height * 4)))
         
         # Create the Adjective conjugation table
         self.__table_adjective = ConjugationTable(
@@ -617,6 +638,18 @@ class StudyState(State):
                 else:
                     box.set_y(y)
                 x += box.get_width() + attr_spacing
+                
+        # Card Set list
+        card_sets = []
+        for card_set in Config.app.card_database.iter_card_sets():
+            if card_set.has_card(self.card):
+                card_sets.append(card_set)
+        self.__table_card_sets.set_row_count(1 + len(card_sets))
+        for index, card_set in enumerate(card_sets):
+            self.__table_card_sets.set_text(index + 1, 0, card_set.get_name())
+        self.__table_card_sets.set_y(
+            screen_height - self.margin_bottom - 16 -
+            self.__table_card_sets.get_height())
 
         # Reset conjugation tables
         for table in self.__tables:

@@ -16,6 +16,8 @@ class ConjugationTable(Entity):
                  column_count=1,
                  column_widths=None,
                  row_height=22,
+                 row_header_count=1,
+                 column_header_count=1,
                  outline_color=Colors.BLACK,
                  background_color=Colors.WHITE,
                  header_background_color=Color(220),
@@ -24,6 +26,9 @@ class ConjugationTable(Entity):
         """Entity constructor."""
         super().__init__()
         self.__row_height = row_height
+        self.__column_count = column_count
+        self.__row_header_count = row_header_count
+        self.__column_header_count = column_header_count
         self.__table = []
         self.__column_widths = column_widths
         for row in range(row_count):
@@ -35,7 +40,22 @@ class ConjugationTable(Entity):
         self.__header_background_color = header_background_color
         self.__highlight_color = Color(highlight_color)
         self.__highlighted_text = None
-        self.set_size(sum(self.__column_widths), row_height * row_count)
+        self.__refresh_size()
+
+    def set_row_count(self, row_count: int):
+        if row_count < len(self.__table):
+            self.__table = self.__table[:row_count]
+        while len(self.__table) < row_count:
+            self.__table.append([""] * self.__column_count)
+        self.__refresh_size()
+
+    def add_row(self, column_text: list):
+        self.__table.append(list(column_text))
+        self.__refresh_size()
+
+    def __refresh_size(self):
+        self.set_size(sum(self.__column_widths),
+                      self.__row_height * len(self.__table))
 
     def set_highlighted_text(self, text):
         self.__highlighted_text = AccentedText(text)
@@ -63,7 +83,8 @@ class ConjugationTable(Entity):
             for column_index, text in enumerate(row):
                 w = self.__column_widths[column_index]
                 back_color = self.__background_color
-                header = row_index == 0 or column_index == 0
+                header = (row_index < self.__row_header_count or
+                          column_index < self.__column_header_count)
                 if header:
                     back_color = self.__header_background_color
                 elif self.__highlighted_text and text == self.__highlighted_text:

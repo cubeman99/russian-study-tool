@@ -14,7 +14,7 @@ card_set:
     - [adjective, взаимный, mutual]
     - [verb, печатать, to print]
     - [verb, впечатать, to imprint]
-    - [verb, шататься, 'to stagger, swing, hesitate']
+    - [noun, шататься, 'to stagger, swing, hesitate']
     - [verb, отшатнуться, 'to recoil, swing to the side']
     - [adjective, ошеломлённый, 'stunned, perplexed, dumbfounded']
     - [verb, шевелиться, 'to stir, budge, move']
@@ -61,4 +61,3 @@ card_set:
     - [noun, разум, 'mind, reason']
     - [verb, лениться, to be lazy]
     - [adverb, поблизости, 'nearby, close to smth']
-    

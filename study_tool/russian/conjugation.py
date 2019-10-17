@@ -149,7 +149,7 @@ def decline_adjective(adj: AccentedText,
                 result = stem + s2 + "м"
 
     if reflexive:
-        result = add_reflexive_suffix(result)
+        result += "ся"  # reflexive participles always use "ся"
     if stress is not None:
         return AccentedText(result[:stress + 1] + ACCENT_CHAR + result[stress + 1:])
     else:

@@ -244,6 +244,7 @@
         "специи",
         "спортивный",
         "средный",
+        "става",
         "сторожиха",
         "судба",
         "счастливица",
@@ -254,6 +255,7 @@
         "тридцать",
         "тринадцать",
         "триста",
+        "трога",
         "тронный",
         "трутень",
         "туфли",
@@ -273,6 +275,7 @@
         "чихать",
         "чихнуть",
         "чуточка",
+        "шататься",
         "шестнадцать",
         "шесть",
         "шестьдесят",
@@ -46740,6 +46743,56 @@
       "type": "Verb"
     },
     {
+      "Verb": {
+        "aspect": "Perfective",
+        "counterparts": [
+          "надоедать"
+        ],
+        "imperative": {
+          "Plural": "надое'шьте",
+          "Singular": "надое'шь"
+        },
+        "infinitive": "надоесть",
+        "info": "This verb can also mean the following: annoy, worry, bother, pester, plague, molest.",
+        "non_past": {
+          "Plural": {
+            "First": "надоеди'м",
+            "Second": "надоеди'те",
+            "Third": "надоедя'т"
+          },
+          "Singular": {
+            "First": "надое'м",
+            "Second": "надое'шь",
+            "Third": "надое'ст"
+          }
+        },
+        "participles": {
+          "Active": {
+            "Past": "надое'вший",
+            "Present": "—"
+          },
+          "Adverbial": {
+            "Past": "надое'в",
+            "Present": ""
+          },
+          "Passive": {
+            "Past": "",
+            "Present": ""
+          }
+        },
+        "past": {
+          "Femanine": "надое'ла",
+          "Masculine": "надое'л",
+          "Neuter": "надое'ло",
+          "Plural": "надое'ли"
+        },
+        "translation": "to bore"
+      },
+      "examples": [],
+      "name": "надоесть",
+      "type": "Verb"
+    },
+    {
       "Noun": {
         "declension": {
           "Plural": {
@@ -91832,6 +91885,33 @@
       "Noun": {
         "declension": {
           "Plural": {
+            "Accusative": "сокраще'ния",
+            "Dative": "сокраще'ниям",
+            "Genetive": "сокраще'ний",
+            "Instrumental": "сокраще'ниями",
+            "Nominative": "сокраще'ния",
+            "Prepositional": "сокраще'ниях"
+          },
+          "Singular": {
+            "Accusative": "сокраще'ние",
+            "Dative": "сокраще'нию",
+            "Genetive": "сокраще'ния",
+            "Instrumental": "сокраще'нием",
+            "Nominative": "сокраще'ние",
+            "Prepositional": "сокраще'нии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "сокращение",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
             "Accusative": "сокры'тия",
             "Dative": "сокры'тиям",
             "Genetive": "сокры'тий",
@@ -95381,6 +95461,33 @@
       },
       "examples": [],
       "name": "столб",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "столе'тия",
+            "Dative": "столе'тиям",
+            "Genetive": "столе'тий",
+            "Instrumental": "столе'тиями",
+            "Nominative": "столе'тия",
+            "Prepositional": "столе'тиях"
+          },
+          "Singular": {
+            "Accusative": "столе'тие",
+            "Dative": "столе'тию",
+            "Genetive": "столе'тия",
+            "Instrumental": "столе'тием",
+            "Nominative": "столе'тие",
+            "Prepositional": "столе'тии"
+          }
+        },
+        "gender": "Neuter",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "столетие",
       "type": "Noun"
     },
     {
@@ -110880,6 +110987,33 @@
       },
       "examples": [],
       "name": "шарф",
+      "type": "Noun"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "ша'ты",
+            "Dative": "ша'там",
+            "Genetive": "ша'т",
+            "Instrumental": "ша'тами",
+            "Nominative": "ша'ты",
+            "Prepositional": "ша'тах"
+          },
+          "Singular": {
+            "Accusative": "ша'ту",
+            "Dative": "ша'те",
+            "Genetive": "ша'ты",
+            "Instrumental": "ша'той",
+            "Nominative": "ша'та",
+            "Prepositional": "ша'те"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "шата",
       "type": "Noun"
     },
     {
