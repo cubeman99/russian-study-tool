@@ -467,8 +467,11 @@ class CardDatabase:
         self.card_data_changed.emit(a)
         self.card_data_changed.emit(b)
 
-    def update_card_set(self, card_set: CardSet,
-                        name: AccentedText, cards: list) -> bool:
+    def update_card_set(self,
+                        card_set: CardSet,
+                        name: AccentedText,
+                        cards: list,
+                        card_set_type: CardSetType) -> bool:
         """
         Applies updates to a card set.
 
@@ -483,6 +486,11 @@ class CardDatabase:
                 card_set.set_name(name)
                 is_changed = True
                 is_renamed = True
+
+            # Update card set type
+            if card_set_type != card_set.get_card_set_type():
+                card_set.set_card_set_type(card_set_type)
+                is_changed = True
 
             # Update card list
             old_cards = card_set.get_cards()
@@ -706,7 +714,7 @@ class CardDatabase:
         card_set = CardSet(name=state["name"])
         card_set.key = state["name"].lower().replace(" ", "_")
         if "type" in state:
-            card_set.set_card_set_type(gatrattr(CardSetType, state["type"]))
+            card_set.set_card_set_type(getattr(CardSetType, state["type"]))
 
         for card_state in state.get("cards", []):
             assert 1 <= len(card_state) <= 3

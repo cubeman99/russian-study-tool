@@ -1,5 +1,6 @@
 card_set:
   name: Face
+  type: Categorical
   version: 1
   cards:
     - [verb, нахмуриться, to frown]

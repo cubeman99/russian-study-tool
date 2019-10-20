@@ -1,5 +1,6 @@
 card_set:
   name: Emotion
+  type: Categorical
   version: 1
   cards:
     - [adjective, счастливый, happy]

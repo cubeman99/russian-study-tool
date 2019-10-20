@@ -23,6 +23,7 @@ from study_tool.card import get_card_russian_key
 from study_tool.card import get_card_word_name
 from study_tool.card_attributes import CardAttributes
 from study_tool.card_set import CardSet
+from study_tool.card_set import CardSetType
 from study_tool.entities.menu import Menu
 from study_tool.gui.card_search_widget import CardSearchWidget
 from study_tool.states.state import *
@@ -459,6 +460,7 @@ class CardSetEditWidget(widgets.Widget):
 
         # Create widgets
         self.__box_name = widgets.TextEdit()
+        self.__combo_type = widgets.ComboBox(options=CardSetType)
         self.__button_add_card = widgets.Button("Add New Card")
         self.__button_save = widgets.Button("Save")
         self.__button_done = widgets.Button("Done")
@@ -475,6 +477,7 @@ class CardSetEditWidget(widgets.Widget):
         # Create layouts
         left_layout = widgets.VBoxLayout()
         left_layout.add(widgets.HBoxLayout(widgets.Label("Name:"), self.__box_name))
+        left_layout.add(widgets.HBoxLayout(widgets.Label("Type:"), self.__combo_type))
         left_layout.add(widgets.HBoxLayout(widgets.Label("Path:"), self.__label_path))
         left_layout.add(self.__button_convert)
         left_layout.add(widgets.HBoxLayout(self.__label_card_count, self.__button_add_card))
@@ -588,6 +591,7 @@ class CardSetEditWidget(widgets.Widget):
             self.__card_database.update_card_set(
                 card_set=self.__card_set,
                 name=name,
+                card_set_type=self.__combo_type.get_option(),
                 cards=cards)
 
             self.select_card_set(self.__card_set)
@@ -609,6 +613,7 @@ class CardSetEditWidget(widgets.Widget):
         self.__label_card_count.set_text(
             "Cards [{}]:".format(self.__card_set.get_card_count()))
         self.__box_name.set_text(repr(self.__card_set.get_name()))
+        self.__combo_type.set_option(self.__card_set.get_card_set_type())
         
         self.__button_convert.set_text("Assimilate set to YAML")
         self.__button_convert.set_enabled(self.__card_set.is_fixed_card_set())

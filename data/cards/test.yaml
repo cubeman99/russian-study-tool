@@ -1,5 +1,6 @@
 card_set:
   name: Test Set
+  type: Categorical
   version: 1
   cards:
     - [noun, стол, table]
@@ -12,7 +13,7 @@ card_set:
     - [conjunction, до того как ..., before ...; before the fact that ...]
     - [noun, подушка, pillow]
     - [noun, измена, treason]
-    - [noun, столл, tablesjfghtest]
+    - [noun, столл, tablesjfgtest]
     - [verb, думать, to think]
     - [noun, спор, 'dispute, argument']
     - [verb, спорить, to argue]

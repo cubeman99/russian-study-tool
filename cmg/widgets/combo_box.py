@@ -1,3 +1,4 @@
+from enum import IntEnum
 import os
 import pygame
 from pygame import Rect
@@ -18,12 +19,14 @@ class ComboBox(widgets.Widget):
         self.__text = ""
         self.__font = gui.Font(32)
         self.__surface = None
-        self.__options = list(options)
+        self.__options = []
+        for option in options:
+            self.__options.append(option)
 
         self.__index = 0
         if index < len(self.__options):
             self.__index = index
-            self.__text = str(self.__options[index])
+            self.__text = self.__get_option_text(self.__options[index])
 
         size = self.__font.measure(self.__text)
         self.set_minimum_height(size.y + 4)
@@ -44,13 +47,13 @@ class ComboBox(widgets.Widget):
             assert index >= 0
             assert index < len(self.__options)
             self.__index = index
-            self.__text = str(self.__options[self.__index])
+            self.__text = self.__get_option_text(self.__options[self.__index])
             self.__surface = None
             self.index_changed.emit()
 
     def set_option(self, option) -> str:
-        if text in self.__options:
-            self.set_index(self.__options.index(text))
+        if option in self.__options:
+            self.set_index(self.__options.index(option))
 
     def on_key_pressed(self, key, mod, text):
         if key in [Keys.K_RIGHT, Keys.K_DOWN]:
@@ -82,3 +85,8 @@ class ComboBox(widgets.Widget):
         if self.is_focused():
             c = Colors.BLUE
         g.draw_rect(self.rect, color=c)
+
+    def __get_option_text(self, option) -> str:
+        if isinstance(option, IntEnum):
+            return option.name
+        return str(option)

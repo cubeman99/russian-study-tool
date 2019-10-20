@@ -30,6 +30,7 @@ class CreateCardSetWidget(widgets.Widget):
         self.__edit_path = widgets.TextEdit(self.get_path())
         self.__checkbox_auto_file_name = widgets.CheckBox("Auto", checked=True)
         self.__button_browse = widgets.Button("Browse")
+        self.__combo_type = widgets.ComboBox(options=CardSetType)
         self.__button_create = widgets.Button("Create")
         self.__button_cancel = widgets.Button("Cancel")
 
@@ -44,6 +45,8 @@ class CreateCardSetWidget(widgets.Widget):
         layout.add(widgets.HBoxLayout(widgets.Label("Path:"),
                                       self.__edit_path,
                                       self.__button_browse))
+        layout.add(widgets.HBoxLayout(widgets.Label("Type:"),
+                                      self.__combo_type))
         layout.add(widgets.HBoxLayout(self.__button_create,
                                       self.__button_cancel))
         self.set_layout(layout)
@@ -81,7 +84,8 @@ class CreateCardSetWidget(widgets.Widget):
         card_set = Config.app.card_database.create_card_set(
             name=self.__edit_display_name.get_text(),
             file_name=self.__edit_file_name.get_text(),
-            package=self.__package)
+            package=self.__package,
+            card_set_type=self.__combo_type.get_option())
         self.card_set_created.emit(card_set)
         self.close()
 

@@ -4864,7 +4864,7 @@ cards:
 - {attrs: [pf, verb.suffix.i], crtd: 1571599089.86707, en: 'to pounce, to throw yourself',
   rel: [[verb, броситься, 'to throw oneself, rush quickly']], ru: набро'ситься, type: verb}
 - {attrs: [pf, verb.suffix.ai], crtd: 1571599089.86707, en: to scare someone, rel: [
-    [verb, пугаться, to be frightened of], [verb, испугаться, to be frightened]],
+    [verb, испугаться, to be frightened], [verb, пугаться, to be frightened of]],
   ru: напуга'ть, type: verb}
 - {crtd: 1571599089.86707, en: spicy, ru: пря'ный, type: adjective}
 - {crtd: 1571599089.86707, en: to close a dispute, ru: перекрыва'ть спо'р, type: phrase}
@@ -5445,7 +5445,6 @@ cards:
     hesitate', ru: шата'ться, type: noun}
 - {attrs: [impf, verb.suffix.ai], crtd: 1571599089.9150205, en: to warn, ru: предупрежда'ть,
   type: verb}
-- {crtd: 1571599089.9150205, en: tablesjfghtest, ru: столл, type: noun}
 - {attrs: [pf, stem.resonant], crtd: 1571599089.6468072, en: 'to take (smth), to admit,
     accept', ru: приня'ть, type: verb}
 - {crtd: 1571600903.161242, en: nimble, ru: шу'стрый, type: adjective}
@@ -5486,7 +5485,7 @@ cards:
 - {crtd: 1571604472.559082, en: 'to smear, get dirty, apply smth to face', ru: ма'заться,
   type: verb}
 - {attrs: [pf, verb.suffix.a3], crtd: 1571605074.9974043, en: to find after searching,
-  rel: [[verb, рыскать, 'to scour, prowl'], [verb, искать, to look for], [verb, найти,
+  rel: [[verb, искать, to look for], [verb, рыскать, 'to scour, prowl'], [verb, найти,
       to find]], ru: отыска'ть, type: verb}
 - {attrs: [m], crtd: 1571605074.9993663, en: beak, rel: [[verb, клевать носом, 'to fall
         asleep, peck with your nose']], ru: клю'в, type: noun}
@@ -5499,3 +5498,4 @@ cards:
     pinpointing a sound', ru: навостри'ть у'ши, type: phrase}
 - {attrs: [idiom], crtd: 1571601784.0032938, en: 'much attention, eyes at all times',
   rel: [[noun, глаз, eye]], ru: гла'з да гла'з, type: phrase}
+- {crtd: 1571599089.9150205, en: tablesjfgtest, ru: столл, type: noun}

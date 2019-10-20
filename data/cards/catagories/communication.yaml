@@ -1,5 +1,6 @@
 card_set:
   name: Communication
+  type: Categorical
   version: 1
   cards:
     - [verb, связываться, 'to contact, get in contact with']
