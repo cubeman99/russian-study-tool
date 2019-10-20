@@ -1,4 +1,4 @@
-save_time: 1571358899.4078727
+save_time: 1571599112.3289878
 cards:
   - [noun, абрикос, apricot, 4, 1554250410.845265, TTTT]
   - [noun, абрикосовый, apricot juice, 1, 1548521307.1751826, F]
@@ -1247,7 +1247,7 @@ cards:
   - [noun, стол, table, 4, 1571347411.282803, TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]
   - [noun, столб, 'pole, post, column', 4, 1567643867.7570348, TTTTTTTTTT]
   - [noun, столкновение, collision, 4, 1568338931.4612346, TTTFFTTTTTTTTFF]
-  - [noun, столл, tablesj, 0, null, '']
+  - [noun, столл, tablesjfghtest, 0, null, '']
   - [noun, столовая (комната), dining (room), 4, 1554947913.7968972, TTTFTTTTT]
   - [noun, стон, groan, 4, 1568240669.608007, TTTTTTTTTT]
   - [noun, стопа, foot, 4, 1553032777.8620496, TTTTT]
@@ -5235,6 +5235,19 @@ metrics:
       9, 8, 4, 25, 1054]}, all: {history_score: 2658.353112898472, proficiency_counts: [
       24, 180, 15, 199, 3239]}}
   2019/10/17: {Adjective: {history_score: 430.13571740270044, proficiency_counts: [0, 7, 5, 26,
+      507]}, Adverb: {history_score: 157.2575823235297, proficiency_counts: [0, 1,
+      0, 3, 200]}, Conjunction: {history_score: 24.33058621933621, proficiency_counts: [
+      0, 10, 1, 1, 43]}, Interjection: {history_score: 9.831349206349206, proficiency_counts: [
+      0, 0, 0, 3, 10]}, Noun: {history_score: 1002.9458815520618, proficiency_counts: [
+      6, 146, 4, 118, 1230]}, Other: {history_score: 29.614262126762124, proficiency_counts: [
+      0, 0, 0, 1, 37]}, Particle: {history_score: 5.25, proficiency_counts: [0, 0,
+      0, 0, 6]}, Phrase: {history_score: 70.03440473999686, proficiency_counts: [
+      0, 6, 1, 24, 85]}, Preposition: {history_score: 36.9422619047619, proficiency_counts: [
+      0, 1, 0, 3, 44]}, Pronoun: {history_score: 28.044871794871792, proficiency_counts: [
+      0, 0, 0, 0, 31]}, Verb: {history_score: 890.5573491227913, proficiency_counts: [
+      3, 9, 4, 29, 1054]}, all: {history_score: 2684.9442663931595, proficiency_counts: [
+      9, 180, 15, 208, 3247]}}
+  2019/10/20: {Adjective: {history_score: 430.13571740270044, proficiency_counts: [0, 7, 5, 26,
       507]}, Adverb: {history_score: 157.2575823235297, proficiency_counts: [0, 1,
       0, 3, 200]}, Conjunction: {history_score: 24.33058621933621, proficiency_counts: [
       0, 10, 1, 1, 43]}, Interjection: {history_score: 9.831349206349206, proficiency_counts: [
