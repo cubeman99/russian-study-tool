@@ -202,10 +202,12 @@ class CardSetPackage(StudySet):
             yield card_set
 
     @property
-    def cards(self):
+    def cards(self) -> list:
+        unique_cards = set()
         for card_set in self.all_card_sets():
             for card in card_set.cards:
-                yield card
+                unique_cards.add(card)
+        return list(unique_cards)
 
     def add_card_set(self, card_set: CardSet):
         """Adds a new card set to the package."""

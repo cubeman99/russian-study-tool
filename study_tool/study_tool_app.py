@@ -120,7 +120,7 @@ class StudyCardsApp(Application):
         #self.push_gui_state(RelatedCardsWidget(test_card, self))
         #self.push_gui_state(AddCardToSetWidget(test_card, self))
         #self.push_card_edit_state(card, close_on_apply=False, allow_card_change=True)
-        self.push_study_state(test_set, study_params=StudyParams(random_side=True))
+        #self.push_study_state(test_set, study_params=StudyParams(random_side=True))
         #self.push_study_state(test_set, study_params=StudyParams(random_side=True), scheduler_params=SchedulerParams(max_repetitions=1))
         #self.push_state(GUIState(widget=QueryWidget(self, test_set.get_cards()), title="Study Query"))
         #self.push_gui_state(CardSetBrowserWidget(self.card_database.get_root_package()))

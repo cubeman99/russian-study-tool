@@ -29,6 +29,9 @@ class SubMenuState(State):
         self.window_margin_top = 100
         self.window_margin_sides = 24
 
+    def add_option(self, name: str, action):
+        self.options.append((name, action))
+
     def begin(self):
         self.buttons[0] = Button("Up")
         self.buttons[1] = Button("Select", self.select)

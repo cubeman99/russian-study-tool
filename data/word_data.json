@@ -245,6 +245,7 @@
         "спортивный",
         "средный",
         "става",
+        "столл",
         "сторожиха",
         "судба",
         "счастливица",
@@ -22273,6 +22274,33 @@
       "examples": [],
       "name": "дру'жный",
       "type": "Adjective"
+    },
+    {
+      "Noun": {
+        "declension": {
+          "Plural": {
+            "Accusative": "ду'мы",
+            "Dative": "ду'мам",
+            "Genetive": "ду'м",
+            "Instrumental": "ду'мами",
+            "Nominative": "ду'мы",
+            "Prepositional": "ду'мах"
+          },
+          "Singular": {
+            "Accusative": "ду'му",
+            "Dative": "ду'ме",
+            "Genetive": "ду'мы",
+            "Instrumental": "ду'мой",
+            "Nominative": "ду'ма",
+            "Prepositional": "ду'ме"
+          }
+        },
+        "gender": "Femanine",
+        "indeclinable": false
+      },
+      "examples": [],
+      "name": "дума",
+      "type": "Noun"
     },
     {
       "Verb": {

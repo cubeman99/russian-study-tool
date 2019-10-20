@@ -155,7 +155,7 @@ class GUIState(State):
         speed = 20.0
         if abs(move) > 0.001:
             if self.__cursor_item is None:
-                self.__cursor_pos = 0.0
+                self.__cursor_pos = 0.5
             self.__cursor_pos += move * dt * speed
             self.__cursor_item = self.__widget.get_focused_widget()
 

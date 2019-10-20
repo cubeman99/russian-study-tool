@@ -90,7 +90,7 @@ class Card:
 
     def __init__(self, russian=None, english=None, word_type=None,
                  related_cards=None, attributes=None, examples=None,
-                 copy=None):
+                 copy=None, creation_timestamp=None):
         """
         Constructs a new card.
         """
@@ -104,6 +104,7 @@ class Card:
             self.__card_attributes = []
             self.__examples = []
             self.__related_cards = []
+            self.__creation_timestamp = None
 
         if word_type is not None:
             self.__word_type = word_type
@@ -117,6 +118,8 @@ class Card:
             self.__examples = list(examples)
         if related_cards is not None:
             self.__related_cards = list(related_cards)
+        if creation_timestamp is not None:
+            self.__creation_timestamp = creation_timestamp
 
         # Cached data
         self.source = None
@@ -134,11 +137,18 @@ class Card:
         self.__card_attributes = list(other.get_attributes())
         self.__examples = list(other.get_examples())
         self.__related_cards = list(other.get_related_cards())
+        self.__creation_timestamp = other.get_creation_timestamp()
 
     def clone(self):
         """Returns a copy of this card."""
         return Card(copy=self)
 
+    def get_creation_timestamp(self) -> float:
+        return self.__creation_timestamp
+
+    def set_creation_timestamp(self, timestamp: float):
+        self.__creation_timestamp = timestamp
+    
     def get_word(self):
         return self.word
 
@@ -303,6 +313,8 @@ class Card:
         state["type"] = self.__word_type.name.lower()
         state["en"] = repr(self.__english)
         state["ru"] = repr(self.__russian)
+        if self.__creation_timestamp is not None:
+            state["crtd"] = self.__creation_timestamp
         if self.__card_attributes:
             state["attrs"] = [x.value for x in self.__card_attributes]
         if self.__examples:
@@ -330,6 +342,7 @@ class Card:
             for attr_short in state["attrs"]:
                 attr = CardAttributes(attr_short)
                 self.add_attribute(attr)
+        self.__creation_timestamp = state.get("crtd", None)
         self.__related_cards = []  # Card database deserializes these
                
     def __repr__(self):

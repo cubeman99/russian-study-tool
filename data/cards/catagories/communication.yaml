@@ -1,0 +1,7 @@
+card_set:
+  name: Communication
+  version: 1
+  cards:
+    - [verb, связываться, 'to contact, get in contact with']
+    - [noun, беседа, 'a chat, conversation']
+    - [noun, просьба, a request to satisfy some needs]

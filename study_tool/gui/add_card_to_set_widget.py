@@ -80,11 +80,14 @@ class AddCardToSetWidget(widgets.Widget):
         # Initialize with card data
         self.__card = card
         if self.__card.get_word_type() is not None:
-            self.__label_type.set_text(self.__card.get_word_type().name)
+            self.__label_type.set_text(
+                "Type: " + self.__card.get_word_type().name)
         else:
-            self.__label_type.set_text("")
-        self.__label_russian.set_text(repr(self.__card.get_russian()))
-        self.__label_english.set_text(repr(self.__card.get_english()))
+            self.__label_type.set_text("Type:")
+        self.__label_russian.set_text(
+            "Russian: " + repr(self.__card.get_russian()))
+        self.__label_english.set_text(
+            "English: " + repr(self.__card.get_english()))
         
         self.__table_card_sets.clear()
         for card_set in self.__card_database.iter_card_sets():

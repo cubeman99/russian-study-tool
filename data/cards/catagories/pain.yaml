@@ -1,0 +1,5 @@
+card_set:
+  name: Pain
+  version: 1
+  cards:
+    - [adjective, раненый, wounded]

@@ -1,7 +1,7 @@
 card_set:
   name: Movements
   version: 1
-  cards: 
+  cards:
     - [verb, скользнуть, 'to move quickly, quietly, to slip']
     - [noun, скольжение, 'a glide, slip, slide']
     - [verb, бегать, 'to run, jog']
@@ -66,3 +66,4 @@ card_set:
     - [verb, подсесть, to sit next to something/someone]
     - [verb, усесться, 'to sit comfortably, or for a while']
     - [verb, присесть, to crouch down; sit for a while]
+    - [verb, гнуть, 'to bend, flex']

@@ -690,7 +690,7 @@ cards:
 - {en: desirable, ru: жела'тельный, type: adjective}
 - {en: 'tall, high', ru: высо'кий, type: adjective}
 - {en: short, ru: коро'ткий, type: adjective}
-- {en: 'frequent, close together, dense', ru: ча'стый, type: adjective}
+- {en: 'frequent, close together, dense', rel: [[noun, часть, part]], ru: ча'стый, type: adjective}
 - {en: 'near, close', ru: бли'зкий, type: adjective}
 - {en: similar, ru: похо'жий, type: adjective}
 - {en: each, ru: ка'ждый, type: adjective}
@@ -1948,7 +1948,8 @@ cards:
 - {attrs: [m], en: 'outfit, attire', ru: наря'д, type: noun}
 - {attrs: [f], en: 'blizzard, snowstorm', ru: мете'ль, type: noun}
 - {attrs: [m], en: hurricane, ru: урага'н, type: noun}
-- {attrs: [n], en: attention, ru: внима'ние, type: noun}
+- {attrs: [n], en: attention, rel: [[verb, манить, 'to call, beckon; to hand signal']],
+  ru: внима'ние, type: noun}
 - {attrs: [f], en: responsibility, rel: [[noun, обязанность, 'duty, responsibility']],
   ru: отве'тственность, type: noun}
 - {attrs: [f], en: 'walk, stroll', ru: прогу'лка, type: noun}
@@ -2177,7 +2178,8 @@ cards:
 - {en: who, ru: кто', type: pronoun}
 - {en: what sort of, ru: како'й, type: pronoun}
 - {en: what, ru: что', type: pronoun}
-- {attrs: [acc], en: each other, ru: дру'г дру'га, type: pronoun}
+- {attrs: [acc], en: each other, rel: [[adjective, другой, other]], ru: дру'г дру'га,
+  type: pronoun}
 - {attrs: [acc, gen], en: self, ru: себя', type: pronoun}
 - {en: 'the whole, all the', ru: ве'сь, type: pronoun}
 - {en: all, ru: все', type: pronoun}
@@ -2413,7 +2415,8 @@ cards:
 - {attrs: [impf, verb.suffix.ova], en: to advertise, ru: реклами'ровать, type: verb}
 - {attrs: [impf, verb.suffix.ova], en: to demand, ru: тре'бовать, type: verb}
 - {attrs: [impf, verb.suffix.ova], en: to recommend, ru: рекомендова'ть, type: verb}
-- {attrs: [impf, verb.suffix.ova], en: to take part in, ru: уча'ствовать, type: verb}
+- {attrs: [impf, verb.suffix.ova], en: to take part in, rel: [[noun, часть, part]],
+  ru: уча'ствовать, type: verb}
 - {attrs: [impf, verb.suffix.ova], en: to repair, rel: [[verb, чинить, 'to fix, repair,
         mend']], ru: ремонти'ровать, type: verb}
 - {attrs: [impf, verb.suffix.ova], en: to feel, ru: чу'вствовать, type: verb}
@@ -2475,7 +2478,7 @@ cards:
 - {attrs: [impf, verb.suffix.a3], en: to whisper, ru: шепта'ть, type: verb}
 - {attrs: [impf, verb.suffix.a3], en: to tickle, ru: щекота'ть, type: verb}
 - {attrs: [impf, verb.suffix.a3], en: to look for, rel: [[verb, рыскать, 'to scour,
-        prowl']], ru: иска'ть, type: verb}
+        prowl'], [verb, найти, to find]], ru: иска'ть, type: verb}
 - {attrs: [impf, verb.suffix.a3], en: to sprinkle, ru: сы'пать, type: verb}
 - {attrs: [impf, verb.suffix.a3], en: 'to sway, wobble; hesitate, waver', ru: колеба'ться,
   type: verb}
@@ -3245,8 +3248,8 @@ cards:
 - {en: wherever you are, ru: где бы ты не был, type: phrase}
 - {en: 'really, (suprise, doubt, concern)', ru: ра'зве, type: particle}
 - {en: 'concerning, about', ru: насчёт, type: preposition}
-- {attrs: [impf, verb.suffix.i], en: 'to call, beckon; to hand signal', ru: мани'ть,
-  type: verb}
+- {attrs: [impf, verb.suffix.i], en: 'to call, beckon; to hand signal', rel: [[noun,
+      внимание, attention]], ru: мани'ть, type: verb}
 - {en: It would be great if ..., ru: 'во''т бы [бы''ло хорошо''] ...', type: phrase}
 - {en: wedding (adj.), ru: сва'дебный, type: adjective}
 - {attrs: [m], en: bell, ru: ко'локол, type: noun}
@@ -3771,18 +3774,20 @@ cards:
 - {attrs: [instr], en: between, ru: ме'жду, type: preposition}
 - {en: straight, rel: [[adjective, упрямый, stubborn], [phrase, и впрямь, 'really, indeed'],
     [verb, выпрямлять, 'to straighten, rectify']], ru: пря'мо, type: adverb}
-- {en: other, rel: [[adjective, иной, 'different, otherwise']], ru: друго'й, type: adjective}
-- {attrs: [pf], en: to find, ru: найти', type: verb}
+- {en: other, rel: [[pronoun, друг друга, each other], [adjective, иной, 'different,
+        otherwise']], ru: друго'й, type: adjective}
+- {attrs: [pf], en: to find, rel: [[verb, искать, to look for]], ru: найти', type: verb}
 - {attrs: [pf, verb.suffix.zha], en: 'to fall silent, to shut up', rel: [[verb, замолкнуть,
       to fall silent], [verb, молчать, to be silent]], ru: замолча'ть, type: verb}
 - {en: 'difficult, hard', rel: [[adjective, трудный, difficult]], ru: сло'жный, type: adjective}
-- {attrs: [f], en: part, rel: [[adverb, частично, 'partly, partially']], ru: ча'сть,
-  type: noun}
+- {attrs: [f], en: part, rel: [[adjective, частый, 'frequent, close together, dense'],
+    [verb, участвовать, to take part in], [adverb, частично, 'partly, partially']],
+  ru: ча'сть, type: noun}
 - {attrs: [pf, verb.suffix.e], en: to see, ru: уви'деть, type: verb}
 - {attrs: [impf, verb.suffix.a3], en: to seem, ru: каза'ться, type: verb}
 - {attrs: [pf, verb.suffix.ai], en: to think, ru: поду'мать, type: verb}
 - {attrs: [gen], en: for the sake of, rel: [[preposition, для, for the benefit of]],
-  ru: ради, type: preposition}
+  ru: ра'ди, type: preposition}
 - {attrs: [pf, verb.suffix.i], en: 'to decide, solve', rel: [[adjective, решительный,
       'resolute, decisive, determined'], [verb, разрешить, to permit]], ru: реши'ть,
   type: verb}
@@ -4422,3 +4427,4 @@ cards:
 - {attrs: [impf, verb.suffix.ai], en: 'to stagger, swing, hesitate', ru: шата'ться,
   type: noun}
 - {attrs: [impf, verb.suffix.ai], en: to warn, ru: предупрежда'ть, type: verb}
+- {en: tablesj, ru: столл, type: noun}

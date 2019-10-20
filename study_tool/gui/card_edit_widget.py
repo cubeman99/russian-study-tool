@@ -252,40 +252,44 @@ class CardEditWidget(widgets.Widget):
 
     def apply(self):
         """Apply card changes or create a new card."""
-        assert self.__is_valid_key()
+        try:
+            assert self.__is_valid_key()
 
-        created = not self.__card_database.has_card(self.__card)
+            created = not self.__card_database.has_card(self.__card)
         
-        # Create the card representing the widget state
-        new_card = Card(copy=self.__card,
-                        russian=self.get_russian(),
-                        english=self.get_english(),
-                        word_type=self.get_card_type(),
-                        attributes=self.get_attributes(),
-                        related_cards=self.get_related_cards(),
-                        examples=self.__card.get_examples())
+            # Create the card representing the widget state
+            new_card = Card(copy=self.__card,
+                            russian=self.get_russian(),
+                            english=self.get_english(),
+                            word_type=self.get_card_type(),
+                            attributes=self.get_attributes(),
+                            related_cards=self.get_related_cards(),
+                            examples=self.__card.get_examples())
 
-        if created:
-            # Create a new card
-            self.__card = new_card
-            self.__card_database.add_card(self.__card)
-            self.__application.save_card_data()
-            self.select_card(self.__card)
-        else:
-            # Apply the card updates
-            self.__card_database.update_card(
-                original=self.__card, modified=new_card)
+            if created:
+                # Create a new card
+                self.__card = new_card
+                self.__card_database.add_card(self.__card)
+                self.__application.save_card_data()
+                self.select_card(self.__card)
+            else:
+                # Apply the card updates
+                self.__card_database.update_card(
+                    original=self.__card, modified=new_card)
 
-            # Save changes
-            self.__application.save_all_changes()
+                # Save changes
+                self.__application.save_all_changes()
 
-        self.updated.emit(self.__card)
-        Config.logger.info("Success!")
-        if self.__close_on_apply:
-            self.close()
-        elif created:
-            self.select_card(None)
-            self.__box_russian.focus()
+            self.updated.emit(self.__card)
+            Config.logger.info("Success!")
+            if self.__close_on_apply:
+                self.close()
+            elif created:
+                self.select_card(None)
+                self.__box_russian.focus()
+        except Exception:
+            traceback.print_exc()
+            return
 
     def delete_card(self):
         return

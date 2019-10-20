@@ -13,6 +13,7 @@ from study_tool.config import Config
 from study_tool.card import Card
 from study_tool.card_set import CardSide
 from study_tool.card_set import CardSet
+from study_tool.card_set import StudySet
 from study_tool.card_set import CardSetPackage
 from study_tool.entities.menu import Menu
 from study_tool.states.read_text_state import ReadTextState
@@ -80,17 +81,22 @@ class MenuState(State):
             bar.init(None, self.app)
             self.__bars.append(bar)
             self.menu.options.append(
-                ("[...] {}".format(package.name), package, bar))
-        for card_set in self.package.card_sets:
-            name = card_set.name
-            if card_set.is_fixed_card_set():
+                ("[...] {}".format(package.get_name()), package, bar))
+        card_sets = list(self.package.get_card_sets())
+        if self.top_level:
+            orphan_cards = Config.app.card_database.get_orphan_cards()
+            orphan_set = StudySet("orphans", cards=orphan_cards)
+            card_sets.append(orphan_set)
+        for card_set in card_sets:
+            name = card_set.get_name()
+            if isinstance(card_set, CardSet) and card_set.is_fixed_card_set():
                 name += " [txt]"
             bar = StudyProficiencyBar(card_set)
             bar.init(None, self.app)
             self.__bars.append(bar)
             self.menu.options.append((name, card_set, bar))
         self.menu.options.append(
-            ("Study all " + self.package.name, self.package))
+            ("Study all " + self.package.get_name(), self.package))
         
         # Create proficiency bar
         title_left = self.option_margin
@@ -112,7 +118,9 @@ class MenuState(State):
         self.app.card_database.card_removed_from_set.connect(
             self.__on_card_added_or_removed_to_set)
         self.app.card_database.card_set_created.connect(
-            self.__on_card_set_created)
+            self.__on_card_set_changed)
+        self.app.card_database.card_set_renamed.connect(
+            self.__on_card_set_changed)
 
     def update(self, dt):
         State.update(self, dt)
@@ -181,42 +189,60 @@ class MenuState(State):
         self.app.push_state(ReadTextState())
 
     def __open_set(self, card_set):
-        options = [
-            ("Quiz Random Sides",
-             lambda: self.app.push_study_state(
-                 card_set=card_set,
-                 study_params=StudyParams(random_side=True))),
-            ("Quiz Random Forms",
-                lambda: self.app.push_study_state(
-                    card_set=card_set,
-                    study_params=StudyParams(random_side=True,
-                                             random_form=True))),
-            ("Quiz English",
-                lambda: self.app.push_study_state(
-                    card_set=card_set,
-                    study_params=StudyParams(shown_side=CardSide.English))),
-            ("Quiz Russian",
-                lambda: self.app.push_study_state(
-                    card_set=card_set,
-                    study_params=StudyParams(shown_side=CardSide.Russian))),
-            ("Quiz New Cards",
-                lambda: self.app.push_study_state(
-                    card_set=card_set,
-                    card_query=CardQuery(max_proficiency=0),
-                    study_params=StudyParams(random_side=True),
-                    scheduler_params=SchedulerParams(max_repetitions=1))),
-            ("Quiz Problem Cards",
-                lambda: self.app.push_study_state(
-                    card_set=card_set,
-                    card_query=CardQuery(max_score=0.9),
-                    study_params=StudyParams(random_side=True))),
-            ("Query",
-                lambda: self.app.push_gui_state(QueryWidget(self.app, card_set))),
-            ("List", lambda: self.app.push_card_list_state(card_set)),
-            ("Edit", lambda: self.app.push_card_set_edit_state(card_set))]
+        sub_menu = SubMenuState(card_set.name)
+        options = []
+        sub_menu.add_option(
+            "Quiz Random Sides",
+            lambda: self.app.push_study_state(
+                card_set=card_set,
+                study_params=StudyParams(random_side=True)))
+        sub_menu.add_option(
+            "Quiz Random Forms",
+            lambda: self.app.push_study_state(
+                card_set=card_set,
+                study_params=StudyParams(random_side=True,
+                                         random_form=True)))
+        sub_menu.add_option(
+            "Quiz English",
+            lambda: self.app.push_study_state(
+                card_set=card_set,
+                study_params=StudyParams(shown_side=CardSide.English)))
+        sub_menu.add_option(
+            "Quiz Russian",
+            lambda: self.app.push_study_state(
+                card_set=card_set,
+                study_params=StudyParams(shown_side=CardSide.Russian)))
+        sub_menu.add_option(
+            "Quiz New Cards",
+            lambda: self.app.push_study_state(
+                card_set=card_set,
+                card_query=CardQuery(max_proficiency=0),
+                study_params=StudyParams(random_side=True),
+                scheduler_params=SchedulerParams(max_repetitions=1)))
+        sub_menu.add_option(
+            "Quiz Problem Cards",
+            lambda: self.app.push_study_state(
+                card_set=card_set,
+                card_query=CardQuery(max_score=0.9),
+                study_params=StudyParams(random_side=True)))
+        sub_menu.add_option(
+            "Query",
+            lambda: self.app.push_gui_state(
+                QueryWidget(self.app, card_set)))
+        sub_menu.add_option(
+            "List",
+            lambda: self.app.push_card_list_state(card_set))
+
+        if isinstance(card_set, CardSet) and not card_set.is_fixed_card_set():
+            sub_menu.add_option(
+                "Edit", lambda: self.app.push_card_set_edit_state(card_set))
+
         if card_set is self.package:
-            options.append(("Create New Set", lambda: self.app.push_gui_state(
-                CreateCardSetWidget(self.package))))
+            sub_menu.add_option(
+                "Create New Set",
+                lambda: self.app.push_gui_state(
+                    CreateCardSetWidget(self.package)))
+
         if isinstance(card_set, CardSet) and card_set.is_fixed_card_set():
             old_file_path = card_set.get_file_path()
             card_sets_in_file = self.app.card_database.get_card_sets_from_path(old_file_path)
@@ -224,10 +250,11 @@ class MenuState(State):
                 text = "Assimilate {} sets to YAML".format(len(card_sets_in_file))
             else:
                 text = "Assimilate to YAML"
-            options.append((text, lambda: self.app.assimilate_card_set_to_yaml(card_set)))
+            sub_menu.add_option(
+                text, lambda: self.app.assimilate_card_set_to_yaml(card_set))
 
-        options += [("Cancel", None)]
-        self.app.push_state(SubMenuState(card_set.name, options))
+        sub_menu.add_option("Cancel", None)
+        self.app.push_state(sub_menu)
 
     def __select(self):
         values = self.menu.selected_option()
@@ -239,6 +266,8 @@ class MenuState(State):
             else:
                 self.app.push_state(MenuState(action))
         elif isinstance(action, CardSet):
+            self.__open_set(action)
+        elif isinstance(action, StudySet):
             self.__open_set(action)
         else:
             action()
@@ -263,7 +292,12 @@ class MenuState(State):
                 with self.__lock_dirty:
                     self.__dirty_metrics_set.add(bar)
 
-    def __on_card_set_created(self, card_set: CardSet):
+    def __on_card_set_changed(self, card_set: CardSet):
         """Called when a card set is created."""
+        if card_set in self.package.all_card_sets():
+            with self.__lock_dirty:
+                for bar in self.__bars:
+                    self.__dirty_metrics_set.add(bar)
+
 
                     

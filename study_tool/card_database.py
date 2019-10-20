@@ -67,6 +67,7 @@ class CardDatabase:
         self.card_added_to_set = Event(Card, CardSet)
         self.card_removed_from_set = Event(Card, CardSet)
         self.card_set_created = Event(CardSet)
+        self.card_set_renamed = Event(CardSet)
         
     def is_saving(self) -> bool:
         """Returns True if currently saving the database."""
@@ -83,6 +84,19 @@ class CardDatabase:
     def has_card(self, card: Card) -> bool:
         with self.__lock_modify.acquire_read():
             return card in self.cards.values()
+
+    def get_orphan_cards(self) -> list:
+        card_sets = list(self.__root_package.all_card_sets())
+        orphan_cards = []
+        for _, card in self.cards.items():
+            orphan = True
+            for card_set in card_sets:
+                if card_set.has_card(card):
+                    orphan = False
+                    break
+            if orphan:
+                orphan_cards.append(card)
+        return orphan_cards
 
     def get_card_sets_from_path(self, path: str) -> list:
         with self.__lock_modify.acquire_read():
@@ -202,6 +216,8 @@ class CardDatabase:
         with self.__lock_modify.acquire_write():
             if verbose:
                 Config.logger.info("Creating new card: " + repr(card))
+            if card.get_creation_timestamp() is None:
+                card.set_creation_timestamp(time.time())
             word_type = card.get_word_type()
 
             # Register the card's english and russian identifiers
@@ -305,7 +321,7 @@ class CardDatabase:
         :param modified: Card object with the data to apply to the original
                          card.
 
-        :returns: True if there were updates to the card set.
+        :returns: True if there were updates to the card.
         """
         assert original is not modified
         assert not original.is_in_fixed_card_set()
@@ -313,13 +329,11 @@ class CardDatabase:
         is_key_changed = False
 
         with self.__lock_modify.acquire_write():
-            # Check for a key change
-            old_key = original.get_key()
-            new_key = modified.get_key()
-            if new_key != old_key:
-                self.__apply_card_key_change(original=original, modified=modified)
-                is_changed = True
-                is_key_changed = True
+            # Apply any key changes
+            key_change_result = self.__apply_card_key_change(
+                original=original, modified=modified)
+            is_changed = is_changed or key_change_result[0]
+            is_key_changed = is_key_changed or key_change_result[1]
 
             # Update word type
             original.set_word_type(modified.get_word_type())
@@ -373,44 +387,58 @@ class CardDatabase:
             self.card_data_changed.emit(original)
         return is_changed
             
-    def __apply_card_key_change(self, original: Card, modified: Card):
+    def __apply_card_key_change(self, original: Card, modified: Card) -> tuple:
         """
         Called when a card's key has changed.
 
         :param card: The Card with the updated key.
         """
-        # Update russian key dict
+        changed = False
+        key_changed = False
         old_ru_key = original.get_russian_key()
         new_ru_key = modified.get_russian_key()
+        old_en_key = original.get_english_key()
+        new_en_key = modified.get_english_key()
+        old_key = original.get_key()
+        new_key = modified.get_key()
+
+        # Check russian key change
         if old_ru_key != new_ru_key:
             Config.logger.info("Applying card Russian key change: {} -> {}"
                                 .format(old_ru_key, new_ru_key))
             if new_ru_key in self.__russian_key_to_card_dict:
                 raise KeyError("Duplicate card Russian key: {}".format(new_ru_key))
-            del self.__russian_key_to_card_dict[old_ru_key]
-            self.__russian_key_to_card_dict[new_ru_key] = original
+            changed = True
 
-        # Update english key dict
-        old_en_key = original.get_english_key()
-        new_en_key = modified.get_english_key()
+        # Check english key change
         if old_en_key != new_en_key:
             Config.logger.info("Applying card English key change: {} -> {}"
                                 .format(old_en_key, new_en_key))
             if new_en_key in self.__english_key_to_card_dict:
                 raise KeyError("Duplicate card English key: {}".format(new_en_key))
-            del self.__english_key_to_card_dict[old_en_key]
-            self.__english_key_to_card_dict[new_en_key] = original
+            changed = True
 
-        # Update key dict
-        old_key = original.get_key()
-        new_key = modified.get_key()
+        # Check key change
         if old_key != new_key:
             Config.logger.info("Applying card key change: {} -> {}"
                                 .format(old_key, new_key))
             if new_key in self.cards:
                 raise KeyError("Duplicate card key: {}".format(new_key))
+            changed = True
+            key_changed = True
+           
+        # Apply key changes to key dictionaries
+        if old_ru_key != new_ru_key:
+            del self.__russian_key_to_card_dict[old_ru_key]
+            self.__russian_key_to_card_dict[new_ru_key] = original
+        if old_en_key != new_en_key:
+            del self.__english_key_to_card_dict[old_en_key]
+            self.__english_key_to_card_dict[new_en_key] = original
+        if old_key != new_key:
             del self.cards[old_key]
             self.cards[new_key] = original
+        
+        return (changed, key_changed)
 
     def link_related_cards(self, a: Card, b: Card):
         """Links two cards as related."""
@@ -446,22 +474,32 @@ class CardDatabase:
         :returns: True if there were updates to the card set.
         """
         is_changed = False
+        is_renamed = False
         
         with self.__lock_modify.acquire_write():
             # Update name
             if repr(name) != card_set.get_name():
                 card_set.set_name(name)
                 is_changed = True
+                is_renamed = True
 
             # Update card list
             old_cards = card_set.get_cards()
-            if len(old_cards) != len(cards) or any(a is not b for a, b in zip(old_cards, cards)):
+            removed_cards = [x for x in old_cards if x not in cards]
+            added_cards = [x for x in cards if x not in old_cards]
+            if removed_cards or removed_cards or old_cards != cards:
                 is_changed = True
             card_set.set_cards(cards)
 
             if is_changed:
                 with self.__lock_dirty:
                     self.__dirty_card_sets.add(card_set)
+        if is_renamed:
+            self.card_set_renamed.emit(card_set)
+        for card in removed_cards:
+            self.card_removed_from_set.emit(card, card_set)
+        for card in added_cards:
+            self.card_added_to_set.emit(card, card_set)
         return is_changed
 
     def save_all_changes(self):
