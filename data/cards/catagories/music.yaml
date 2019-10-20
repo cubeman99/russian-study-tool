@@ -1,5 +1,6 @@
 card_set:
   name: Music
+  type: Categorical
   version: 1
   cards:
     - [noun, музыкальный инструмент, musical instrument]

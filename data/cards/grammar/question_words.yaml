@@ -1,5 +1,6 @@
 card_set:
   name: Question Words
+  type: Grammatical
   version: 1
   cards:
     - [adverb, сколько, how much]

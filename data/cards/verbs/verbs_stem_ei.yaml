@@ -1,5 +1,6 @@
 card_set:
   name: 2. Verbs with Stem - ЕЙ
+  type: Grammatical
   version: 1
   cards:
     - [verb, беднеть, to grow poor]

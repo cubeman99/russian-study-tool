@@ -1,5 +1,6 @@
 card_set:
   name: Misc Food
+  type: Categorical
   version: 1
   cards:
     - [noun, мука, flour]

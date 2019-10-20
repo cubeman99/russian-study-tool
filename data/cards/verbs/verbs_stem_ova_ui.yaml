@@ -1,5 +1,6 @@
 card_set:
   name: 3. Verbs with Stem - ОВА/УЙ
+  type: Grammatical
   version: 1
   cards:
     - [verb, рисковать, to risk]

@@ -1,5 +1,6 @@
 card_set:
   name: Obstruent Stems (б, п, д, т, з, с, г, к, х)
+  type: Grammatical
   version: 1
   cards:
     - [verb, везти, to transport]

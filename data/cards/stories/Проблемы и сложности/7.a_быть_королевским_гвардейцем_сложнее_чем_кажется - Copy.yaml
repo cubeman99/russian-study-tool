@@ -1,5 +1,6 @@
 card_set:
   name: 7.a Быть Королевским Гвардейцем...
+  type: Media
   version: 1
   cards:
     - [verb, взбодриться, to cheer up (yourself)]

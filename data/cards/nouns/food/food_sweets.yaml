@@ -1,5 +1,6 @@
 card_set:
   name: Sweets/Deserts
+  type: Categorical
   version: 1
   cards:
     - [noun, булочка, sweet roll]

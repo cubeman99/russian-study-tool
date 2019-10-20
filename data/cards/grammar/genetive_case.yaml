@@ -1,5 +1,6 @@
 card_set:
   name: Genetive Case
+  type: Grammatical
   version: 1
   cards:
     - [preposition, вдоль + gen., along]

@@ -1,5 +1,6 @@
 card_set:
   name: Media
+  type: Categorical
   version: 1
   cards:
     - [noun, ролик, 'video, roll']

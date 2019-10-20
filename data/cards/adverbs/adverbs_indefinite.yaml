@@ -1,5 +1,6 @@
 card_set:
   name: Indefinite Adverbs
+  type: Categorical
   version: 1
   cards:
     - [adverb, где-то, somewhere]

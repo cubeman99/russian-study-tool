@@ -1,5 +1,6 @@
 card_set:
   name: 6.a Меняющиеся союзники
+  type: Media
   version: 1
   cards:
     - [verb, трогать, 'to touch thoroughly, or many times']

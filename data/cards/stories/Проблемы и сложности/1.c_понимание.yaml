@@ -1,5 +1,6 @@
 card_set:
   name: 1.c Понимание
+  type: Media
   version: 1
   cards:
     - [adverb, через мгновенье, in a moment]

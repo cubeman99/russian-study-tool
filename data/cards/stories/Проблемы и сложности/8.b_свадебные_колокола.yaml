@@ -1,5 +1,6 @@
 card_set:
   name: 8.b Свадебные колокола
+  type: Media
   version: 1
   cards:
     - [noun, забота, 'care, attention']

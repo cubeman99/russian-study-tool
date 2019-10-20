@@ -1,5 +1,6 @@
 card_set:
   name: Prepositional Case
+  type: Grammatical
   version: 1
   cards:
     - [preposition, в + prep., 'in, at (location)']

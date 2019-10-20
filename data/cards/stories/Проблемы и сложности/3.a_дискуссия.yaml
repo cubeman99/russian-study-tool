@@ -1,5 +1,6 @@
 card_set:
   name: 3.a Дискуссия
+  type: Media
   version: 1
   cards:
     - [adverb, дважды, twice]

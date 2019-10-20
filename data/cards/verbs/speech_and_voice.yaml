@@ -1,5 +1,6 @@
 card_set:
   name: Speech and Voice
+  type: Grammatical
   version: 1
   cards:
     - [verb, сказать, to say]

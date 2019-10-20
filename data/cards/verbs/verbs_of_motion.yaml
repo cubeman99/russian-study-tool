@@ -1,5 +1,6 @@
 card_set:
   name: Verbs of Motion
+  type: Grammatical
   version: 1
   cards:
     - [verb, ходить, 'to walk, go on foot']

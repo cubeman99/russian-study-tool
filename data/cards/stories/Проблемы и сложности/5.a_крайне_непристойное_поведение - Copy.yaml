@@ -1,5 +1,6 @@
 card_set:
   name: 5.a Крайне непристойное поведение
+  type: Media
   version: 1
   cards:
     - [adjective, непристойный, obscene]

@@ -1,5 +1,6 @@
 card_set:
   name: 1. Verbs with Stem - АЙ
+  type: Grammatical
   version: 1
   cards:
     - [verb, бегать, 'to run, jog']

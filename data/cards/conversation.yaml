@@ -1,5 +1,6 @@
 card_set:
   name: Conversation
+  type: Categorical
   version: 1
   cards:
     - [other, извините, excuse me; Im sorry]

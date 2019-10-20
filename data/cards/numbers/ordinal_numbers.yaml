@@ -1,5 +1,6 @@
 card_set:
   name: Ordinal Numbers
+  type: Categorical
   version: 1
   cards:
     - [adjective, первый, 1st]

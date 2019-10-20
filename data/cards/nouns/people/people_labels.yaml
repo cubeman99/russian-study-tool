@@ -1,5 +1,6 @@
 card_set:
   name: People Labels
+  type: Categorical
   version: 1
   cards:
     - [noun, князь, prince]

@@ -1,5 +1,6 @@
 card_set:
   name: Birds
+  type: Categorical
   version: 1
   cards:
     - [noun, птица, bird]

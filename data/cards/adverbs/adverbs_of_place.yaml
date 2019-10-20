@@ -1,5 +1,6 @@
 card_set:
   name: Adverbs of Place
+  type: Categorical
   version: 1
   cards:
     - [adverb, где, where]

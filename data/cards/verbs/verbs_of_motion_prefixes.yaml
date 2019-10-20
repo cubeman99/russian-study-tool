@@ -1,5 +1,6 @@
 card_set:
   name: Verbs of Motion Prefixes
+  type: Grammatical
   version: 1
   cards:
     - [other, при-, 'coming motion, arriving motion']

@@ -1,5 +1,6 @@
 card_set:
   name: 8.a Свадебные колокола
+  type: Media
   version: 1
   cards:
     - [verb, относиться, to relate]

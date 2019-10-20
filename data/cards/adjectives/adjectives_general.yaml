@@ -1,5 +1,6 @@
 card_set:
   name: General Adjectives
+  type: Categorical
   version: 1
   cards:
     - [adjective, хороший, 'good, nice']

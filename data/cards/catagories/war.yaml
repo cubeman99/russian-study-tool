@@ -1,5 +1,6 @@
 card_set:
   name: War
+  type: Categorical
   version: 1
   cards:
     - [phrase, Шагом марш!, March forward!]

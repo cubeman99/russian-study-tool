@@ -1,5 +1,6 @@
 card_set:
   name: Conjuction Phrases
+  type: Grammatical
   version: 1
   cards:
     - [conjunction, до того как ..., before ...; before the fact that ...]

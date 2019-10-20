@@ -1,5 +1,6 @@
 card_set:
   name: School
+  type: Categorical
   version: 1
   cards:
     - [noun, школа, school]

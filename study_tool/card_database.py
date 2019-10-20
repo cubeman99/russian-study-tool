@@ -469,9 +469,9 @@ class CardDatabase:
 
     def update_card_set(self,
                         card_set: CardSet,
-                        name: AccentedText,
-                        cards: list,
-                        card_set_type: CardSetType) -> bool:
+                        name: AccentedText=None,
+                        cards: list=None,
+                        card_set_type: CardSetType=None) -> bool:
         """
         Applies updates to a card set.
 
@@ -479,26 +479,29 @@ class CardDatabase:
         """
         is_changed = False
         is_renamed = False
+        removed_cards = []
+        added_cards = []
         
         with self.__lock_modify.acquire_write():
             # Update name
-            if repr(name) != card_set.get_name():
+            if name is not None and repr(name) != card_set.get_name():
                 card_set.set_name(name)
                 is_changed = True
                 is_renamed = True
 
             # Update card set type
-            if card_set_type != card_set.get_card_set_type():
+            if card_set_type is not None and card_set_type != card_set.get_card_set_type():
                 card_set.set_card_set_type(card_set_type)
                 is_changed = True
 
             # Update card list
-            old_cards = card_set.get_cards()
-            removed_cards = [x for x in old_cards if x not in cards]
-            added_cards = [x for x in cards if x not in old_cards]
-            if removed_cards or removed_cards or old_cards != cards:
-                is_changed = True
-            card_set.set_cards(cards)
+            if cards is not None:
+                old_cards = card_set.get_cards()
+                removed_cards = [x for x in old_cards if x not in cards]
+                added_cards = [x for x in cards if x not in old_cards]
+                if removed_cards or removed_cards or old_cards != cards:
+                    is_changed = True
+                card_set.set_cards(cards)
 
             if is_changed:
                 with self.__lock_dirty:

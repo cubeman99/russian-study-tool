@@ -1,5 +1,6 @@
 card_set:
   name: Conjuctions
+  type: Grammatical
   version: 1
   cards:
     - [conjunction, и, and]

@@ -1,5 +1,6 @@
 card_set:
   name: Spices
+  type: Categorical
   version: 1
   cards:
     - [noun, специи, spice]

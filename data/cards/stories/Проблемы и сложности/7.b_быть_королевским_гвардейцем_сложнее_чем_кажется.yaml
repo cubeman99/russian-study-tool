@@ -1,5 +1,6 @@
 card_set:
   name: 7.b Быть Королевским Гвардейцем...
+  type: Media
   version: 1
   cards:
     - [verb, убедиться, 'to be convinced; to make sure, beieve in smth']

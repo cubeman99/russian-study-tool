@@ -1,5 +1,6 @@
 card_set:
   name: Спокойной ночи, шмяк!
+  type: Media
   version: 1
   cards:
     - [noun, палатка, tent]

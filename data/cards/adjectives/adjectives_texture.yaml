@@ -1,5 +1,6 @@
 card_set:
   name: Texture
+  type: Categorical
   version: 1
   cards:
     - [adjective, густой, 'dense, thick']

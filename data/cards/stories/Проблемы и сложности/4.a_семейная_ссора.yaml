@@ -1,5 +1,6 @@
 card_set:
   name: 4.a Семейная ссора
+  type: Media
   version: 1
   cards:
     - [adjective, семейный, family (adj.)]

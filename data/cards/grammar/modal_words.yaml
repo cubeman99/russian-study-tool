@@ -1,5 +1,6 @@
 card_set:
   name: Modal Words
+  type: Grammatical
   version: 1
   cards:
     - [other, 'надо, нужно', 'it is necessary, one must']

@@ -1,5 +1,6 @@
 card_set:
   name: Adverbs of Measure/Degree
+  type: Categorical
   version: 1
   cards:
     - [adverb, очень, 'very, very much']

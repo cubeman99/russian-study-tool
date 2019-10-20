@@ -1,5 +1,6 @@
 card_set:
   name: Clothes
+  type: Categorical
   version: 1
   cards:
     - [noun, одежда, clothes]

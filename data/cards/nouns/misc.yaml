@@ -1,5 +1,6 @@
 card_set:
   name: Misc
+  type: Categorical
   version: 1
   cards:
     - [noun, чушь, nonsense]

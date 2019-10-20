@@ -1,5 +1,6 @@
 card_set:
   name: Pony
+  type: Media
   version: 1
   cards:
     - [noun, грива, mane]

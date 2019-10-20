@@ -1,5 +1,6 @@
 card_set:
   name: Drinks
+  type: Categorical
   version: 1
   cards:
     - [noun, напитки, drinks]

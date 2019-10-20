@@ -1,5 +1,6 @@
 card_set:
   name: 10. Verbs with Stem - ЖА
+  type: Grammatical
   version: 1
   cards:
     - [verb, бояться, to be afraid of]

@@ -1,5 +1,6 @@
 card_set:
   name: Core
+  type: Categorical
   version: 1
   cards:
     - [noun, карандаш, pencil]

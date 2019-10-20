@@ -1,5 +1,6 @@
 card_set:
   name: 7. Verbs with Stem - О
+  type: Grammatical
   version: 1
   cards:
     - [verb, бороться, 'to fight, struggle, combat']

@@ -1,5 +1,6 @@
 card_set:
   name: 5.b Крайне непристойное поведение
+  type: Media
   version: 1
   cards:
     - [verb, представить, 'to imagine, present, introduce']

@@ -1,5 +1,6 @@
 card_set:
   name: Movements
+  type: Categorical
   version: 1
   cards:
     - [verb, скользнуть, 'to move quickly, quietly, to slip']

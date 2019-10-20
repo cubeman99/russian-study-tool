@@ -1,5 +1,6 @@
 card_set:
   name: Misc Verbs
+  type: Grammatical
   version: 1
   cards:
     - [verb, разговарывать, to converse]

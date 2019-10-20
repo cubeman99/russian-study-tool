@@ -127,6 +127,16 @@ class StudyCardsApp(Application):
         #self.push_gui_state(CardSetPackageBrowserWidget(self.card_database.get_root_package()))
         #self.push_gui_state(CardSearchWidget())
 
+        for card_set in self.root["nouns"].all_card_sets():
+            self.card_database.update_card_set(card_set, card_set_type=CardSetType.Categorical)
+        for card_set in self.root["stories"].all_card_sets():
+            self.card_database.update_card_set(card_set, card_set_type=CardSetType.Media)
+        for card_set in self.root["grammar"].all_card_sets():
+            self.card_database.update_card_set(card_set, card_set_type=CardSetType.Grammatical)
+        for card_set in self.root["verbs"].all_card_sets():
+            self.card_database.update_card_set(card_set, card_set_type=CardSetType.Grammatical)
+        self.card_database.save_all_changes()
+
         self.input.bind(pygame.K_ESCAPE, pressed=self.pop_state)
 
         self.input.key_pressed.connect(self.__on_key_pressed)

@@ -1,5 +1,6 @@
 card_set:
   name: Interpersonal Actions
+  type: Categorical
   version: 1
   cards:
     - [verb, хвалить, to praise]

@@ -1,5 +1,6 @@
 card_set:
   name: Farm Animals
+  type: Categorical
   version: 1
   cards:
     - [noun, курица, chicken]

@@ -1,5 +1,6 @@
 card_set:
   name: 'Adjectives: -ж, -ч, -ш, or -щ'
+  type: Grammatical
   version: 1
   cards:
     - [adjective, общий, common]

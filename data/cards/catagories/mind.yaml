@@ -1,5 +1,6 @@
 card_set:
   name: Mind
+  type: Categorical
   version: 1
   cards:
     - [verb, подумать, to think]

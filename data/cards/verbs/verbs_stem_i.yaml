@@ -1,5 +1,6 @@
 card_set:
   name: 8. Verbs with Stem - И
+  type: Grammatical
   version: 1
   cards:
     - [verb, ходить, 'to walk, go on foot']

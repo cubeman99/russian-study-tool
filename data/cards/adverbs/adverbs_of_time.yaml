@@ -1,5 +1,6 @@
 card_set:
   name: Adverbs of Time
+  type: Categorical
   version: 1
   cards:
     - [adverb, сначала, (at) first]

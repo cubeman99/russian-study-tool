@@ -1,5 +1,6 @@
 card_set:
   name: Irregular Verbs
+  type: Grammatical
   version: 1
   cards:
     - [verb, хотеть, to want]

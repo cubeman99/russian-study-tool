@@ -1,5 +1,6 @@
 card_set:
   name: Insults and Curses
+  type: Categorical
   version: 1
   cards:
     - [verb, ебать, to fuck]

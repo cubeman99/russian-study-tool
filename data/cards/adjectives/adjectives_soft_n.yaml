@@ -1,5 +1,6 @@
 card_set:
   name: 'Adjectives: Soft -н'
+  type: Grammatical
   version: 1
   cards:
     - [adjective, весенний, spring]

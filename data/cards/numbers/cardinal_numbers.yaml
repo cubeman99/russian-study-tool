@@ -1,5 +1,6 @@
 card_set:
   name: Cardinal Numbers
+  type: Categorical
   version: 1
   cards:
     - [noun, ноль/нуль, '0']

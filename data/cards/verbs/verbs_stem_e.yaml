@@ -1,5 +1,6 @@
 card_set:
   name: 9. Verbs with Stem - Е
+  type: Grammatical
   version: 1
   cards:
     - [verb, видеть, to see]

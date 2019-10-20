@@ -1,5 +1,6 @@
 card_set:
   name: 6.b Меняющиеся союзники
+  type: Media
   version: 1
   cards:
     - [verb, подкрепить, to reinforce]

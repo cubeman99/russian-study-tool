@@ -1,5 +1,6 @@
 card_set:
   name: Seafood
+  type: Categorical
   version: 1
   cards:
     - [noun, морепродукты, seafood]

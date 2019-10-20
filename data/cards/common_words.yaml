@@ -1,5 +1,6 @@
 card_set:
   name: Common Words
+  type: Categorical
   version: 1
   cards:
     - [adjective, только, only]

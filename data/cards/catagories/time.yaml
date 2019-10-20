@@ -1,5 +1,6 @@
 card_set:
   name: Time
+  type: Categorical
   version: 1
   cards:
     - [noun, век; столетие, century]

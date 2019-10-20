@@ -1,5 +1,6 @@
 card_set:
   name: People (Age/Geneder)
+  type: Categorical
   version: 1
   cards:
     - [noun, человек, person]

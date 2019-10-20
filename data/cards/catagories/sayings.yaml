@@ -1,5 +1,6 @@
 card_set:
   name: Sayings
+  type: Categorical
   version: 1
   cards:
     - [phrase, ударить в грязь лицом, to fall into the dirt face first]

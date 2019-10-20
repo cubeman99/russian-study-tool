@@ -1,5 +1,6 @@
 card_set:
   name: Nationalities
+  type: Categorical
   version: 1
   cards:
     - [noun, 'россиянин, россиянка', Russian (citizen)]

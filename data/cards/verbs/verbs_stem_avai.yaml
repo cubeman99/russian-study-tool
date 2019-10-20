@@ -1,5 +1,6 @@
 card_set:
   name: 6. Verbs with Stem - А-ВАЙ
+  type: Grammatical
   version: 1
   cards:
     - [verb, давать, to give]

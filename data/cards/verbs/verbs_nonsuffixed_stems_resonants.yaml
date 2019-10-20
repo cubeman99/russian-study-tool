@@ -1,5 +1,6 @@
 card_set:
   name: Resonant Stems (в, й, м, н, р)
+  type: Grammatical
   version: 1
   cards:
     - [verb, жить, to live]

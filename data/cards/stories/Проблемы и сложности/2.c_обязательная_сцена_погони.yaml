@@ -1,5 +1,6 @@
 card_set:
   name: 2.c Обязательная сцена погони
+  type: Media
   version: 1
   cards:
     - [adjective, одержимый, obsessed]

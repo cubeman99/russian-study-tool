@@ -1,5 +1,6 @@
 card_set:
   name: 1.a Понимание
+  type: Media
   version: 1
   cards:
     - [adverb, равноценно, equivilant to]

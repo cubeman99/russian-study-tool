@@ -1,5 +1,6 @@
 card_set:
   name: Colors
+  type: Categorical
   version: 1
   cards:
     - [adjective, белый, white]

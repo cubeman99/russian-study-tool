@@ -1,5 +1,6 @@
 card_set:
   name: Meat
+  type: Categorical
   version: 1
   cards:
     - [noun, мясо, meat]

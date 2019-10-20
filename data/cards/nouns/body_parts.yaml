@@ -1,5 +1,6 @@
 card_set:
   name: Body Parts
+  type: Categorical
   version: 1
   cards:
     - [noun, тело, body]

@@ -1,5 +1,6 @@
 card_set:
   name: 1.b Понимание
+  type: Media
   version: 1
   cards:
     - [adverb, очевидно, 'obviously, apparently']

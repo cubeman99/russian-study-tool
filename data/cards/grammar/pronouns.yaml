@@ -1,5 +1,6 @@
 card_set:
   name: Pronouns
+  type: Grammatical
   version: 1
   cards:
     - [pronoun, кто, who]

@@ -1,5 +1,6 @@
 card_set:
   name: Computer
+  type: Categorical
   version: 1
   cards:
     - [noun, компьютер, computer]

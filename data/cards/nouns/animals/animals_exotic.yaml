@@ -1,5 +1,6 @@
 card_set:
   name: Exotic Animals
+  type: Categorical
   version: 1
   cards:
     - [noun, антилопа, antelope]

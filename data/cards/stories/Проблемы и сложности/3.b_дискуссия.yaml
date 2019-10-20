@@ -1,5 +1,6 @@
 card_set:
   name: 3.b Дискуссия
+  type: Media
   version: 1
   cards:
     - [adverb, беспечно, carelessly]

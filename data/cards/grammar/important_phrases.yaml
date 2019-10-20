@@ -1,5 +1,6 @@
 card_set:
   name: Important Phrases
+  type: Grammatical
   version: 1
   cards:
     - [phrase, 'на самом деле, ...', 'in actuality, in reality, ...']

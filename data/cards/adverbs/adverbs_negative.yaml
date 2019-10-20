@@ -1,5 +1,6 @@
 card_set:
   name: Negative Adverbs
+  type: Categorical
   version: 1
   cards:
     - [adverb, нигде, nowhere]

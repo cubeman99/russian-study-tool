@@ -1,5 +1,6 @@
 card_set:
   name: Marraige
+  type: Categorical
   version: 1
   cards:
     - [noun, жена, wife]

@@ -1,5 +1,6 @@
 card_set:
   name: Personal Pronoun Cases
+  type: Grammatical
   version: 1
   cards:
     - [pronoun, я, I]

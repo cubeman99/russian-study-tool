@@ -1,5 +1,6 @@
 card_set:
   name: Gendered Professions
+  type: Categorical
   version: 1
   cards:
     - [noun, 'журналист, журналистка', journalist]
