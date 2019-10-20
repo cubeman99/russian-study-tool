@@ -10,6 +10,7 @@ from cmg.utilities import ReadWriteLock
 from study_tool.card import Card
 from study_tool.card import SourceLocation
 from study_tool.card_set import CardSet
+from study_tool.card_set import CardSetType
 from study_tool.card_set import CardSetPackage
 from study_tool.card_set import CardGroupMetrics
 from study_tool.card_set import StudySet
@@ -704,6 +705,8 @@ class CardDatabase:
         state = state["card_set"]
         card_set = CardSet(name=state["name"])
         card_set.key = state["name"].lower().replace(" ", "_")
+        if "type" in state:
+            card_set.set_card_set_type(gatrattr(CardSetType, state["type"]))
 
         for card_state in state.get("cards", []):
             assert 1 <= len(card_state) <= 3

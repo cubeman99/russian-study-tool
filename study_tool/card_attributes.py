@@ -60,6 +60,7 @@ class CardAttributes(Enum):
     AdjectiveAsNoun = "adjasnoun"
     VerbOfMotion = "verb_of_motion"
     Curse = "curse"
+    Idiom = "idiom"
 
 
 # Attributes that must be shown in order to translate from english to russian

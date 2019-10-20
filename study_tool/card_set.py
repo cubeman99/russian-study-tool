@@ -1,4 +1,5 @@
 import os
+from enum import IntEnum
 import random
 import re
 import time
@@ -8,6 +9,16 @@ from study_tool.external import googledocs
 from study_tool.russian.types import *
 from study_tool.russian.word import *
 from study_tool.config import Config
+
+
+class CardSetType(IntEnum):
+    """
+    Types of card set groupings.
+    """
+    Other = 0
+    Categorical = 1  # Has a common category of meaning or usage
+    Grammatical = 2  # Has common grammatical structures or usages.
+    Media = 3  # Found in some media: story, video, cartoon, etc.
 
 
 class CardGroupMetrics:
@@ -104,13 +115,15 @@ class StudySet:
 
 
 class CardSet(StudySet):
-    def __init__(self, cards=(), fixed_card_set=False, name="Untitled", path=None):
+    def __init__(self, cards=(), fixed_card_set=False, name="Untitled", path=None,
+                 card_set_type=CardSetType.Other):
         StudySet.__init__(self, name=name, cards=cards)
         self.key = None
         self.path = ""
         self.info = ""
         self.side = CardSide.English
         self.source = None
+        self.__card_set_type = card_set_type
         self.__package = None
         self.__file_path = None
         self.__is_fixed_card_set = fixed_card_set
@@ -118,8 +131,14 @@ class CardSet(StudySet):
     def get_package(self):
         return self.__package
 
+    def get_card_set_type(self) -> CardSetType:
+        return self.__card_set_type
+
     def get_file_path(self) -> str:
         return self.__file_path
+
+    def set_card_set_type(self, card_set_type: CardSetType):
+        self.__card_set_type = card_set_type
 
     def set_package(self, package):
         self.__package = package
@@ -148,7 +167,8 @@ class CardSet(StudySet):
         state = {
             "name": repr(self.name),
             "version": 1,
-            "cards": []
+            "cards": [],
+            "type": self.__card_set_type.name,
         }
         for card in self.cards:
             state["cards"].append(

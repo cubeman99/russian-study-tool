@@ -35,6 +35,7 @@ class AddCardToSetWidget(widgets.Widget):
         self.__table_card_sets.add_button_column("Remove", self.__on_card_set_clicked, stretch=0)
         self.__table_search_results = GenericTableWidget()
         self.__table_search_results.add_text_column(lambda item: item.get_name())
+        self.__table_search_results.add_text_column(lambda item: len(item.get_cards()))
         self.__table_search_results.add_button_column("Add", self.__on_search_card_set_clicked)
         self.__label_result_count = widgets.Label("<result-count>")
         self.__card_set_browser = CardSetBrowserWidget(

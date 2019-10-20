@@ -1,0 +1,6 @@
+card_set:
+  name: War
+  version: 1
+  cards:
+    - [phrase, Шагом марш!, March forward!]
+    - [noun, отряд, squad]

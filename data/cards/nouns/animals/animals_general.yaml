@@ -23,3 +23,8 @@ card_set:
     - [noun, белка, squirrel]
     - [noun, енот, raccoon]
     - [noun, бурундук, chipmunk]
+    - [adjective, кошачий, feline]
+    - [noun, живой уголок, pets corner]
+    - [noun, питомец, pet]
+    - [noun, лапа, paw]
+    - [noun, усы, mustache; whiskers]

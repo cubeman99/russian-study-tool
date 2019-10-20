@@ -65,8 +65,10 @@ cards:
 - {attrs: [impf, verb.suffix.ai], crtd: 1571599089.3730893, en: to put on, ru: надева'ть,
   type: verb}
 - {attrs: [adjasnoun, n], crtd: 1571599089.3730893, en: animal, ru: живо'тное, type: noun}
-- {attrs: [m], crtd: 1571599089.3730893, en: cat (male), ru: ко'т, type: noun}
-- {attrs: [f], crtd: 1571599089.3730893, en: cat (female), ru: ко'шка, type: noun}
+- {attrs: [m], crtd: 1571599089.3730893, en: cat (male), rel: [[adjective, кошачий,
+      feline]], ru: ко'т, type: noun}
+- {attrs: [f], crtd: 1571599089.3730893, en: cat (female), rel: [[adjective, кошачий,
+      feline]], ru: ко'шка, type: noun}
 - {attrs: [f], crtd: 1571599089.3730893, en: dog (female), ru: соба'ка, type: noun}
 - {attrs: [m], crtd: 1571599089.3730893, en: bear, ru: медве'дь, type: noun}
 - {attrs: [m], crtd: 1571599089.3730893, en: rabbit, ru: кро'лик, type: noun}
@@ -163,7 +165,8 @@ cards:
         head]], ru: голова', type: noun}
 - {attrs: [indec, pluronly], crtd: 1571599089.3830786, en: hair, ru: во'лосы, type: noun}
 - {attrs: [n], crtd: 1571599089.3830786, en: face, ru: лицо', type: noun}
-- {attrs: [m], crtd: 1571599089.3830786, en: eye, ru: гла'з, type: noun}
+- {attrs: [m], crtd: 1571599089.3830786, en: eye, rel: [[phrase, глаз да глаз, 'much
+        attention, eyes at all times']], ru: гла'з, type: noun}
 - {attrs: [n], crtd: 1571599089.3830786, en: ear, rel: [[noun, слух, hearing (the sense)]],
   ru: у'хо, type: noun}
 - {attrs: [m], crtd: 1571599089.3830786, en: nose, ru: но'с, type: noun}
@@ -494,7 +497,8 @@ cards:
 - {attrs: [n], crtd: 1571599089.4180427, en: millet, ru: пшено, type: noun}
 - {attrs: [m], crtd: 1571599089.4180427, en: rice, ru: рис, type: noun}
 - {attrs: [m], crtd: 1571599089.4180427, en: cheese, ru: сыр, type: noun}
-- {attrs: [n], crtd: 1571599089.4180427, en: egg, ru: яйцо, type: noun}
+- {attrs: [n], crtd: 1571599089.4180427, en: egg, rel: [[noun, скорлупка, shell]], ru: яйцо,
+  type: noun}
 - {attrs: [n], crtd: 1571599089.4190419, en: butter, ru: масло, type: noun}
 - {crtd: 1571599089.4190419, en: french fries, ru: картофель фри, type: noun}
 - {attrs: [n], crtd: 1571599089.4190419, en: jam, ru: варенье, type: noun}
@@ -1058,7 +1062,6 @@ cards:
 - {crtd: 1571599089.476982, en: 'and, but (rather), whereas', ru: а, type: conjunction}
 - {crtd: 1571599089.476982, en: but, ru: но, type: conjunction}
 - {crtd: 1571599089.476982, en: or, ru: и'ли, type: conjunction}
-- {crtd: 1571599089.476982, en: 'but, however', ru: одна'ко, type: conjunction}
 - {crtd: 1571599089.476982, en: both … and …, ru: и … и …, type: conjunction}
 - {crtd: 1571599089.476982, en: neither … nor …, ru: ни … ни …, type: conjunction}
 - {crtd: 1571599089.476982, en: either … or …, ru: и'ли … и'ли …, type: conjunction}
@@ -1114,7 +1117,8 @@ cards:
 - {crtd: 1571599089.4839826, en: 'perfect, excellent', rel: [[verb, отличаться от, to
         differ from]], ru: отли'чно, type: adverb}
 - {crtd: 1571599089.4839826, en: correct, ru: пра'вильно, type: adverb}
-- {crtd: 1571599089.4839826, en: better, ru: лу'чше, type: adverb}
+- {crtd: 1571599089.4839826, en: better, rel: [[adverb, получше, a little better]],
+  ru: лу'чше, type: adverb}
 - {crtd: 1571599089.4839826, en: worse, ru: ху'же, type: adverb}
 - {crtd: 1571599089.4839826, en: more often, ru: ча'ще, type: adverb}
 - {crtd: 1571599089.4839826, en: same, ru: одина'ковый, type: adverb}
@@ -1297,7 +1301,8 @@ cards:
 - {crtd: 1571599089.5019574, en: strange, ru: стра'нный, type: adjective}
 - {crtd: 1571599089.5019574, en: amazing, ru: удиви'тельный, type: adjective}
 - {crtd: 1571599089.5019574, en: wise, ru: му'дрый, type: adjective}
-- {crtd: 1571599089.5019574, en: best, ru: лу'чший, type: adjective}
+- {crtd: 1571599089.5019574, en: best, rel: [[adverb, получше, a little better]], ru: лу'чший,
+  type: adjective}
 - {crtd: 1571599089.5029552, en: salty, ru: солёный, type: adjective}
 - {crtd: 1571599089.5029552, en: 'sure, certain, confident', ru: уве'ренный, type: adjective}
 - {crtd: 1571599089.5029552, en: sleepy, ru: со'нный, type: adjective}
@@ -1535,7 +1540,8 @@ cards:
 - {attrs: [f], crtd: 1571599089.5279303, en: stairs, ru: ле'стница, type: noun}
 - {attrs: [n], crtd: 1571599089.5279303, en: 'shelter, refuge, asylum', ru: убе'жище,
   type: noun}
-- {attrs: [f], crtd: 1571599089.5279303, en: joy, ru: ра'дость, type: noun}
+- {attrs: [f], crtd: 1571599089.5279303, en: joy, rel: [[verb, обрадоваться, to rejoice]],
+  ru: ра'дость, type: noun}
 - {attrs: [m], crtd: 1571599089.5279303, en: noise, ru: шу'м, type: noun}
 - {attrs: [m], crtd: 1571599089.5289292, en: barn, ru: сара'й, type: noun}
 - {attrs: [m], crtd: 1571599089.5289292, en: drawing, ru: рису'нок, type: noun}
@@ -1573,7 +1579,8 @@ cards:
   type: verb}
 - {attrs: [pf, verb.suffix.i], crtd: 1571599089.5319266, en: to ask (about something),
   rel: [[noun, просьба, a request to satisfy some needs]], ru: спроси'ть, type: verb}
-- {attrs: [impf], crtd: 1571599089.5319266, en: to sleep, ru: спа'ть, type: verb}
+- {attrs: [impf], crtd: 1571599089.5319266, en: to sleep, rel: [[verb, прикорнуть, to
+        take a nap]], ru: спа'ть, type: verb}
 - {attrs: [pf, verb.suffix.nu], crtd: 1571599089.5319266, en: to shout out loudly, ru: вскри'кнуть,
   type: verb}
 - {crtd: 1571599089.532925, en: Thank God, ru: слава богу, type: phrase}
@@ -1724,7 +1731,8 @@ cards:
   ru: обеща'ние, type: noun}
 - {attrs: [n], crtd: 1571599089.5459106, en: silence, rel: [[verb, смолкать, 'to grow
         silent, to shut up']], ru: молча'ние, type: noun}
-- {attrs: [f], crtd: 1571599089.5459106, en: 'wool, fur, coat', ru: ше'рсть, type: noun}
+- {attrs: [f], crtd: 1571599089.5459106, en: 'wool, fur, coat', rel: [[adjective, шерстяный,
+      woolen]], ru: ше'рсть, type: noun}
 - {attrs: [m], crtd: 1571599089.5469098, en: 'sidewalk, pavement', ru: тротуа'р, type: noun}
 - {attrs: [f], crtd: 1571599089.5469098, en: criticism, ru: кри'тика, type: noun}
 - {attrs: [m], crtd: 1571599089.5469098, en: 'people, nation', ru: наро'д, type: noun}
@@ -1786,7 +1794,8 @@ cards:
 - {attrs: [pf], crtd: 1571599089.551907, en: to create, rel: [[verb, дать, to give]],
   ru: созда'ть, type: verb}
 - {attrs: [impf, verb.suffix.ai], crtd: 1571599089.551907, en: to lose (something),
-  ru: теря'ть, type: verb}
+  rel: [[verb, растеряться, to not know what to do; to lose oneself]], ru: теря'ть,
+  type: verb}
 - {attrs: [impf, verb.suffix.ai], crtd: 1571599089.551907, en: to attract, ru: привлека'ть,
   type: verb}
 - {attrs: [impf, verb.suffix.avai], crtd: 1571599089.551907, en: 'to give, distribute',
@@ -2048,8 +2057,8 @@ cards:
 - {attrs: [impf, verb.suffix.i], crtd: 1571599089.5798764, en: to milk, ru: дои'ть,
   type: verb}
 - {attrs: [pf, verb.suffix.ai], crtd: 1571599089.5798764, en: to be frightened, rel: [
-    [noun, испуг, 'fright, startle'], [adjective, испуганный, 'frightened, scared']],
-  ru: испуга'ться, type: verb}
+    [noun, испуг, 'fright, startle'], [adjective, испуганный, 'frightened, scared'],
+    [verb, напугать, to scare someone]], ru: испуга'ться, type: verb}
 - {attrs: [impf, verb.suffix.ai], crtd: 1571599089.5798764, en: 'to delete, remove',
   ru: удаля'ть, type: verb}
 - {attrs: [pf, verb.suffix.i], crtd: 1571599089.5798764, en: 'to delete, remove', ru: удали'ть,
@@ -2400,8 +2409,8 @@ cards:
   type: verb}
 - {attrs: [impf, verb.suffix.ai], crtd: 1571599089.6158395, en: to bring together, ru: сближа'ть,
   type: verb}
-- {attrs: [pf, verb.suffix.ova], crtd: 1571599089.6158395, en: to rejoice, ru: обра'доваться,
-  type: verb}
+- {attrs: [pf, verb.suffix.ova], crtd: 1571599089.6158395, en: to rejoice, rel: [[noun,
+      радость, joy]], ru: обра'доваться, type: verb}
 - {crtd: 1571599089.6158395, en: treat/help yourself, rel: [[noun, угощение, treat (food/drink)]],
   ru: угощайся, type: phrase}
 - {crtd: 1571599089.6168385, en: at any moment, ru: с мин'уты на мину'ту, type: phrase}
@@ -2541,7 +2550,7 @@ cards:
 - {attrs: [gen, impf, verb.suffix.ai], crtd: 1571599089.636817, en: to achieve, rel: [
     [noun, достижение, achievement]], ru: достига'ть, type: verb}
 - {attrs: [gen, impf, verb.suffix.ai], crtd: 1571599089.636817, en: to be frightened
-    of, ru: пуга'ться, type: verb}
+    of, rel: [[verb, напугать, to scare someone]], ru: пуга'ться, type: verb}
 - {attrs: [gen, impf, multi, verb.suffix.ai], crtd: 1571599089.636817, en: to avoid,
   rel: [[verb, бегать, 'to run, jog']], ru: избега'ть, type: verb}
 - {attrs: [dat, impf, verb.suffix.i], crtd: 1571599089.637817, en: to appeal to, ru: нра'виться,
@@ -2625,8 +2634,6 @@ cards:
 - {attrs: [pf, stem.resonant], crtd: 1571599089.645809, en: 'to raise, lift', ru: подня'ть,
   type: verb}
 - {attrs: [pf, stem.resonant], crtd: 1571599089.645809, en: to take off, ru: сня'ть,
-  type: verb}
-- {attrs: [pf, stem.resonant], crtd: 1571599089.6468072, en: to accept, ru: приня'ть,
   type: verb}
 - {attrs: [impf, stem.resonant], crtd: 1571599089.6468072, en: 'to rub, grate', ru: тере'ть,
   type: verb}
@@ -2905,7 +2912,8 @@ cards:
 - {attrs: [pf, verb.suffix.nu], crtd: 1571599089.6687841, en: to sigh; to take a breath,
   rel: [[noun, воздух, air]], ru: вздохну'ть, type: verb}
 - {attrs: [pf, verb.suffix.nu], crtd: 1571599089.6687841, en: to wake up, rel: [[verb,
-      перепробудить, to reawaken]], ru: просну'ться, type: verb}
+      перепробудить, to reawaken], [verb, разбудить, to wake (someone)]], ru: просну'ться,
+  type: verb}
 - {attrs: [pf, verb.suffix.nu], crtd: 1571599089.669783, en: to throw out, ru: вы'кинуть,
   type: verb}
 - {attrs: [pf, verb.suffix.nu], crtd: 1571599089.669783, en: to jump, ru: пры'гнуть,
@@ -2978,7 +2986,8 @@ cards:
 - {attrs: [impf, verb.suffix.a3], crtd: 1571599089.6747777, en: to tickle, ru: щекота'ть,
   type: verb}
 - {attrs: [impf, verb.suffix.a3], crtd: 1571599089.6757767, en: to look for, rel: [
-    [verb, рыскать, 'to scour, prowl'], [verb, найти, to find]], ru: иска'ть, type: verb}
+    [verb, рыскать, 'to scour, prowl'], [verb, найти, to find], [verb, отыскать, to
+        find after searching]], ru: иска'ть, type: verb}
 - {attrs: [impf, verb.suffix.a3], crtd: 1571599089.6757767, en: to sprinkle, ru: сы'пать,
   type: verb}
 - {attrs: [impf, verb.suffix.a3], crtd: 1571599089.6757767, en: 'to sway, wobble; hesitate,
@@ -3519,7 +3528,8 @@ cards:
 - {attrs: [impf, verb.suffix.ai], crtd: 1571599089.7302258, en: 'to detect, pick up,
     locate', ru: ула'вливать, type: verb}
 - {attrs: [impf, verb.suffix.a3], crtd: 1571599089.7302258, en: 'to scour, prowl', rel: [
-    [verb, искать, to look for]], ru: ры'скать, type: verb}
+    [verb, искать, to look for], [verb, отыскать, to find after searching]], ru: ры'скать,
+  type: verb}
 - {attrs: [impf, verb.suffix.ai], crtd: 1571599089.7302258, en: 'to track, hunt down',
   ru: высле'живать, type: verb}
 - {attrs: [pf, verb.suffix.i], crtd: 1571599089.7302258, en: 'to become necessary, will
@@ -3673,8 +3683,8 @@ cards:
     [verb, зевать, to yawn]], ru: зевну'ть, type: verb}
 - {attrs: [impf, uni], crtd: 1571599089.7442112, en: to move forward at high speed,
   ru: нести'сь, type: verb}
-- {crtd: 1571599089.7452104, en: 'to fall asleep, peck with your nose', ru: клева'ть
-    но'сом, type: verb}
+- {crtd: 1571599089.7452104, en: 'to fall asleep, peck with your nose', rel: [[noun,
+      клюв, beak]], ru: клева'ть но'сом, type: verb}
 - {attrs: [pf, verb.suffix.nu], crtd: 1571599089.7452104, en: to look back, ru: огляну'ться,
   type: verb}
 - {attrs: [pf, verb.suffix.nu], crtd: 1571599089.7452104, en: to turn around, ru: оберну'ться,
@@ -4160,7 +4170,8 @@ cards:
 - {attrs: [impf, verb.suffix.ai], crtd: 1571599089.7971566, en: 'to intend, to mean',
   rel: [[adjective, намеренный, intentional]], ru: намерева'ться, type: verb}
 - {attrs: [pf, verb.suffix.i], crtd: 1571599089.7971566, en: 'to throw oneself, rush
-    quickly', ru: бро'ситься, type: verb}
+    quickly', rel: [[verb, наброситься, 'to pounce, to throw yourself']], ru: бро'ситься,
+  type: verb}
 - {crtd: 1571599089.7971566, en: out there, ru: вон там, type: phrase}
 - {crtd: 1571599089.7971566, en: 'will happen, take place', ru: произойдёт, type: phrase}
 - {crtd: 1571599089.7981558, en: '... tend to be ...', ru: '... скло''нны бы''ть ...',
@@ -4343,7 +4354,8 @@ cards:
 - {attrs: [impf, verb.suffix.ai], crtd: 1571599089.8171356, en: to nibble, rel: [[verb,
       кусать, to bite], [verb, закусывать, 'to have a bite to eat, snack']], ru: поку'сывать,
   type: verb}
-- {crtd: 1571599089.8171356, en: 'bewildered, helpless from excitement/shock', ru: расте'рянный,
+- {crtd: 1571599089.8171356, en: 'bewildered, helpless from excitement/shock', rel: [
+    [verb, растеряться, to not know what to do; to lose oneself]], ru: расте'рянный,
   type: adjective}
 - {crtd: 1571599089.8171356, en: helpless, ru: беспо'мощный, type: adjective}
 - {attrs: [pf, verb.suffix.i], crtd: 1571599089.8171356, en: to wait a little, ru: погоди'ть,
@@ -4637,7 +4649,7 @@ cards:
 - {crtd: 1571599089.8460915, en: other, rel: [[pronoun, друг друга, each other], [adjective,
       иной, 'different, otherwise']], ru: друго'й, type: adjective}
 - {attrs: [pf], crtd: 1571599089.8470907, en: to find, rel: [[verb, искать, to look
-        for]], ru: найти', type: verb}
+        for], [verb, отыскать, to find after searching]], ru: найти', type: verb}
 - {attrs: [pf, verb.suffix.zha], crtd: 1571599089.8470907, en: 'to fall silent, to shut
     up', rel: [[verb, замолкнуть, to fall silent], [verb, молчать, to be silent]],
   ru: замолча'ть, type: verb}
@@ -4813,7 +4825,8 @@ cards:
 - {crtd: 1571599089.863074, en: tragic, ru: траги'ческий, type: adjective}
 - {attrs: [f], crtd: 1571599089.863074, en: tent, ru: пала'тка, type: noun}
 - {attrs: [m], crtd: 1571599089.863074, en: flashlight, ru: фона'рик, type: noun}
-- {attrs: [m], crtd: 1571599089.863074, en: 'bag, sack', ru: мешо'к, type: noun}
+- {attrs: [m], crtd: 1571599089.863074, en: 'bag, sack', rel: [[noun, спальный мешок,
+      sleeping bag]], ru: мешо'к, type: noun}
 - {attrs: [f], crtd: 1571599089.863074, en: sleepover, ru: ночёвка, type: noun}
 - {attrs: [indec], crtd: 1571599089.864073, en: mustache; whiskers, ru: усы', type: noun}
 - {attrs: [n], crtd: 1571599089.864073, en: treat (food/drink), rel: [[phrase, угощайся,
@@ -4829,11 +4842,12 @@ cards:
 - {crtd: 1571599089.865072, en: gradually, ru: постепе'нно, type: adverb}
 - {attrs: [impf, verb.suffix.ai], crtd: 1571599089.865072, en: to stick together, ru: слипа'ться,
   type: verb}
-- {crtd: 1571599089.865072, en: sleeping bag, ru: спа'льный мешо'к, type: noun}
+- {crtd: 1571599089.865072, en: sleeping bag, rel: [[noun, мешок, 'bag, sack']], ru: спа'льный
+    мешо'к, type: noun}
 - {attrs: [pf, verb.suffix.i], crtd: 1571599089.865072, en: 'to pop out, jump out',
   rel: [[verb, соскочить, 'to get off, jump off']], ru: вы'скочить, type: verb}
-- {crtd: 1571599089.865072, en: We don't give eachother a hard time., ru: Мы не дадим
-    друг друга в обиду., type: phrase}
+- {attrs: [idiom], crtd: 1571599089.865072, en: We don't give eachother a hard time.,
+  ru: Мы' не да'дим друг дру'га в оби'ду., type: phrase}
 - {crtd: 1571599089.866071, en: 'to sniff, snuff your nose', ru: шмы'гнуть но'сом, type: phrase}
 - {crtd: 1571599089.866071, en: You have my word., rel: [[noun, слово, word], [adjective,
       честный, honest]], ru: Че'стное сло'во., type: phrase}
@@ -4845,11 +4859,13 @@ cards:
   ru: нетерпе'ние, type: noun}
 - {attrs: [pf, verb.suffix.ai], crtd: 1571599089.866071, en: to say hello, rel: [[adverb,
       здорово, 'very good, perfect']], ru: поздоро'ваться, type: verb}
-- {crtd: 1571599089.86707, en: a little better, ru: полу'чше, type: adverb}
+- {crtd: 1571599089.86707, en: a little better, rel: [[adverb, лучше, better], [adjective,
+      лучший, best]], ru: полу'чше, type: adverb}
 - {attrs: [pf, verb.suffix.i], crtd: 1571599089.86707, en: 'to pounce, to throw yourself',
-  ru: набро'ситься, type: verb}
-- {attrs: [pf, verb.suffix.ai], crtd: 1571599089.86707, en: to scare someone, ru: напуга'ть,
-  type: verb}
+  rel: [[verb, броситься, 'to throw oneself, rush quickly']], ru: набро'ситься, type: verb}
+- {attrs: [pf, verb.suffix.ai], crtd: 1571599089.86707, en: to scare someone, rel: [
+    [verb, пугаться, to be frightened of], [verb, испугаться, to be frightened]],
+  ru: напуга'ть, type: verb}
 - {crtd: 1571599089.86707, en: spicy, ru: пря'ный, type: adjective}
 - {crtd: 1571599089.86707, en: to close a dispute, ru: перекрыва'ть спо'р, type: phrase}
 - {attrs: [pf], crtd: 1571599089.86707, en: to be embarressed, rel: [[adjective, смущённый,
@@ -5006,7 +5022,8 @@ cards:
 - {crtd: 1571599089.8800566, en: 'unsuccessful, unlucky', rel: [[adjective, удачный,
       successful]], ru: неуда'чный, type: adjective}
 - {crtd: 1571599089.8800566, en: to reawaken, rel: [[verb, проснуться, to wake up],
-    [noun, пробуждение, awakening]], ru: перепробу'дить, type: verb}
+    [noun, пробуждение, awakening], [verb, разбудить, to wake (someone)]], ru: перепробу'дить,
+  type: verb}
 - {crtd: 1571599089.8800566, en: 'audible, can be heard', rel: [[verb, слышать, to hear]],
   ru: слы'шный, type: adjective}
 - {attrs: [pf, verb.suffix.i], crtd: 1571599089.8800566, en: 'to employ, apply smth
@@ -5429,3 +5446,56 @@ cards:
 - {attrs: [impf, verb.suffix.ai], crtd: 1571599089.9150205, en: to warn, ru: предупрежда'ть,
   type: verb}
 - {crtd: 1571599089.9150205, en: tablesjfghtest, ru: столл, type: noun}
+- {attrs: [pf, stem.resonant], crtd: 1571599089.6468072, en: 'to take (smth), to admit,
+    accept', ru: приня'ть, type: verb}
+- {crtd: 1571600903.161242, en: nimble, ru: шу'стрый, type: adjective}
+- {attrs: [m], crtd: 1571600903.1622427, en: chick (baby chicken), ru: цыплёнок, type: noun}
+- {crtd: 1571601128.501781, en: pet's corner, ru: живо'й уголо'к, type: noun}
+- {attrs: [idiom], crtd: 1571601449.390488, en: 'to be born, appear in the light', ru: появи'ться
+    на све'т, type: phrase}
+- {crtd: 1571601743.8615618, en: feline, rel: [[noun, кот, cat (male)], [noun, кошка,
+      cat (female)]], ru: коша'чий, type: adjective}
+- {crtd: 1571601851.0964787, en: exactly; quickly, ru: вот-вот, type: phrase}
+- {attrs: [pf, verb.suffix.ai], crtd: 1571602002.0170515, en: to not know what to do;
+    to lose oneself, rel: [[verb, терять, to lose (something)], [adjective, растерянный,
+      'bewildered, helpless from excitement/shock']], ru: растеря'ться, type: verb}
+- {attrs: [idiom], crtd: 1571602169.2440577, en: to draw straws, ru: тяну'ть жре'бий,
+  type: phrase}
+- {attrs: [f], crtd: 1571602229.312951, en: shell, rel: [[noun, яйцо, egg]], ru: скорлу'пка,
+  type: noun}
+- {attrs: [idiom], crtd: 1571602434.207557, en: with ease, ru: на ра'з, type: adverb}
+- {attrs: [n], crtd: 1571602966.6720476, en: a nest, ru: гнездо', type: noun}
+- {attrs: [m], crtd: 1571603014.1103077, en: dresser (for clothes), ru: комо'д, type: noun}
+- {attrs: [f], crtd: 1571603152.4767191, en: heel, ru: пя'тка, type: noun}
+- {crtd: 1571603179.4409337, en: 'to pinch, pluck', ru: щипа'ть, type: verb}
+- {attrs: [idiom], crtd: 1571603255.8115056, en: 'Woah, ah! (something said in suprise)',
+  ru: Ничего' себе'!, type: interjection}
+- {attrs: [pf, verb.suffix.i], crtd: 1571603456.581539, en: to wake (someone), rel: [
+    [verb, проснуться, to wake up], [verb, перепробудить, to reawaken], [noun, будильник,
+      alarm clock]], ru: разбуди'ть, type: verb}
+- {crtd: 1571603776.52034, en: woolen, rel: [[noun, шерсть, 'wool, fur, coat']], ru: шерстя'ный,
+  type: adjective}
+- {crtd: 1571603776.523337, en: to take a nap, rel: [[verb, спать, to sleep]], ru: прикорну'ть,
+  type: verb}
+- {attrs: [m], crtd: 1571603809.6503952, en: alarm clock, rel: [[verb, разбудить, to
+        wake (someone)]], ru: буди'льник, type: noun}
+- {attrs: [pf, verb.suffix.i], crtd: 1571603958.511932, en: to put to sleep, ru: усыпи'ть,
+  type: verb}
+- {attrs: [m], crtd: 1571604075.4273083, en: truck, ru: грузови'к, type: noun}
+- {attrs: [f], crtd: 1571604354.6617165, en: watercolor, ru: гуа'шь, type: noun}
+- {crtd: 1571604472.559082, en: 'to smear, get dirty, apply smth to face', ru: ма'заться,
+  type: verb}
+- {attrs: [pf, verb.suffix.a3], crtd: 1571605074.9974043, en: to find after searching,
+  rel: [[verb, рыскать, 'to scour, prowl'], [verb, искать, to look for], [verb, найти,
+      to find]], ru: отыска'ть, type: verb}
+- {attrs: [m], crtd: 1571605074.9993663, en: beak, rel: [[verb, клевать носом, 'to fall
+        asleep, peck with your nose']], ru: клю'в, type: noun}
+- {attrs: [idiom], crtd: 1571605450.8738756, en: 'to start off, running (lit.)', ru: пусти'ться
+    наутёк, type: phrase}
+- {crtd: 1571606276.2214558, en: March forward!, ru: Ша'гом ма'рш!, type: phrase}
+- {attrs: [m], crtd: 1571606456.8346698, en: squad, ru: отря'д, type: noun}
+- {crtd: 1571599089.476982, en: 'but, however', ru: одна'ко; впро'чем, type: conjunction}
+- {attrs: [idiom], crtd: 1571603776.5183413, en: 'to perk your ears, intently listen,
+    pinpointing a sound', ru: навостри'ть у'ши, type: phrase}
+- {attrs: [idiom], crtd: 1571601784.0032938, en: 'much attention, eyes at all times',
+  rel: [[noun, глаз, eye]], ru: гла'з да гла'з, type: phrase}

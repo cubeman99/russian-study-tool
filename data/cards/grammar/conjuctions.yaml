@@ -6,7 +6,7 @@ card_set:
     - [conjunction, а, 'and, but (rather), whereas']
     - [conjunction, но, but]
     - [conjunction, или, or]
-    - [conjunction, однако, 'but, however']
+    - [conjunction, однако; впрочем, 'but, however']
     - [conjunction, и … и …, both … and …]
     - [conjunction, ни … ни …, neither … nor …]
     - [conjunction, или … или …, either … or …]
