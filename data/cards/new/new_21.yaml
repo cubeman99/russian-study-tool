@@ -1,5 +1,6 @@
 card_set:
   name: New 21
+  type: Other
   version: 1
   cards:
     - [noun, надпись, 'a writing, inscripture (large scale)']
@@ -10,3 +11,15 @@ card_set:
     - [verb, дописать, to finish writing something]
     - [noun, список, a list]
     - [noun, подпись, a signature]
+    - [verb, воссоздать, to recreate]
+    - [verb, воссоздавать, to recreate 2]
+    - [verb, овладеть, to take possession of]
+    - [noun, восхождение, 'ascent, rise, ascention, climb']
+    - [noun, рассредоточение, dispersal]
+    - [noun, Париж, Paris]
+    - [adjective, военный, 'military, war (adj.)']
+    - [verb, уменьшить, to reduce]
+    - [noun, устройство, a device]
+    - [noun, обновление, an update]
+    - [noun, уведомление, 'a notification, notice']
+    - [noun, гипотеза, a hypothesis]

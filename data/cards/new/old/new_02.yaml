@@ -1,5 +1,6 @@
 card_set:
   name: New 02
+  type: Other
   version: 1
   cards:
     - [adjective, родной, native]
@@ -29,7 +30,7 @@ card_set:
     - [noun, призрак, ghost]
     - [noun, гость, guest]
     - [noun, жаль, pity]
-    - [noun, жара, heat]
+    - [noun, жара; жар, heat]
     - [noun, победа, victory]
     - [noun, подарок, gift]
     - [noun, душа, soul]

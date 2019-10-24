@@ -1,5 +1,6 @@
 card_set:
   name: New 13
+  type: Other
   version: 1
   cards:
     - [adjective, тупенький, 'dumb, stupid']
@@ -32,7 +33,7 @@ card_set:
     - [noun, век; столетие, century]
     - [noun, ролик, 'video, roll']
     - [noun, ластик, eraser]
-    - [noun, преступление, 'crime, offense']
+    - [noun, преступление, 'a crime, offense']
     - [noun, имя существительное, noun]
     - [noun, имя прилагательное, adjective]
     - [noun, буква, 'letter, character']

@@ -1,5 +1,6 @@
 card_set:
   name: New 01
+  type: Other
   version: 1
   cards:
     - [adjective, богатый, rich]
@@ -54,7 +55,7 @@ card_set:
     - [verb, побеждать, to win]
     - [verb, значить, 'to mean, signify']
     - [verb, учиться, to study at educational institution; to learn something by yourself]
-    - [verb, обучать, to learn something by yourself systimatically]
+    - [verb, обучать, 'to teach, instruct, train']
     - [verb, изучать, to study something (with in depth approach)]
     - [verb, обожать, to adore]
     - [verb, уважать, to respect]

@@ -178,12 +178,13 @@ class CardDatabase:
             self.__english_key_to_card_dict = {}
             self.__path_to_card_sets_dict = {}
 
-    def create_card_set(self, name, file_name: str, package: CardSetPackage) -> CardSet:
+    def create_card_set(self, name, file_name: str, package: CardSetPackage,
+                        card_set_type=CardSetType.Other) -> CardSet:
         """Creates a new card set."""
         if not file_name.endswith(".yaml"):
             file_name += ".yaml"
         path = os.path.join(package.get_path(), file_name)
-        card_set = CardSet(name=name, path=path)
+        card_set = CardSet(name=name, path=path, card_set_type=card_set_type)
         with self.__lock_modify.acquire_write():
             package.add_card_set(card_set)
             self.__add_card_set_path(card_set, path=path)

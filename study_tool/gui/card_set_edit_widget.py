@@ -239,14 +239,14 @@ class CardRow(widgets.Widget):
     def predict_word_type(self, russian: AccentedText):
         russian = AccentedText(russian).text.lower()
 
-        word_type_endings_dict = {
-            WordType.Adjective: ["ый", "ий", "ой"],
-            WordType.Verb: ["ить", "ать", "еть", "ять", "уть", "ться", "сти", "стись"],
-            WordType.Noun: ["ие", "ость", "а"],
-            WordType.Adverb: ["о"],
-        }
+        word_type_endings = [
+            (WordType.Adjective, ["ый", "ий", "ой"]),
+            (WordType.Verb, ["ить", "ать", "еть", "ять", "уть", "ться", "сти", "стись"]),
+            (WordType.Noun, ["ство", "ие", "ость", "а", "к", "ц", "г", "з"]),
+            (WordType.Adverb, ["о"]),
+        ]
 
-        for word_type, endings in word_type_endings_dict.items():
+        for word_type, endings in word_type_endings:
             for ending in endings:
                 if russian.endswith(ending):
                     return word_type

@@ -1,0 +1,11 @@
+card_set:
+  name: Law and Crime
+  type: Categorical
+  version: 1
+  cards:
+    - [noun, свидетель, witness]
+    - [verb, свидетельствовать, to testify]
+    - [noun, улика, evidence (incriminating)]
+    - [noun, преступность, crime (in general)]
+    - [noun, обвинение, an accusation]
+    - [noun, авторитет, authority]

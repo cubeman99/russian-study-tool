@@ -5,3 +5,7 @@ card_set:
   cards:
     - [phrase, Шагом марш!, March forward!]
     - [noun, отряд, squad]
+    - [adjective, военный, 'military, war (adj.)']
+    - [verb, овладеть, to take possession of]
+    - [verb, испарить, to vaporize]
+    - [adjective, насильственный, violent]

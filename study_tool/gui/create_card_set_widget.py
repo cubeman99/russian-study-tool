@@ -4,6 +4,7 @@ from cmg.color import Color
 from cmg.event import Event
 from study_tool.card import Card
 from study_tool.card_set import CardSet
+from study_tool.card_set import CardSetType
 from study_tool.card_set import CardSetPackage
 from study_tool.config import Config
 from study_tool.gui.card_set_browser_widget import CardSetPackageBrowserWidget

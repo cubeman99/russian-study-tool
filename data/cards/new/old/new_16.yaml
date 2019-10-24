@@ -1,5 +1,6 @@
 card_set:
   name: New 16
+  type: Other
   version: 1
   cards:
     - [adjective, безмолвный, 'silent, speechless']
@@ -28,11 +29,11 @@ card_set:
     - [noun, управление, 'management, control']
     - [noun, пир, 'feast, banquet']
     - [noun, возможность, 'opportunity, possibility']
-    - [noun, большинство, most]
+    - [noun, большинство, 'the majority, most']
     - [noun, постель, bed with two sides]
     - [noun, питомец, pet]
     - [noun, кореш, close friend (slang)]
-    - [noun, кнопка, button]
+    - [noun, кнопка, 'button, switch']
     - [verb, скачать, to download]
     - [verb, скачивать, to download]
     - [verb, пропустить, 'to skip, miss']
