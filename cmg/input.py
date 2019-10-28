@@ -296,23 +296,24 @@ class KeyShortcut:
 
 
 class Input:
-    def __init__(self, index, name, reversed=False, min=0, max=1):
-        self.amount = 0
-        self.prev_amount = 0
+    def __init__(self, index: int, name: str, min=0.0, max=1.0, dead_zone=0.0):
+        self.amount = 0.0
+        self.prev_amount = 0.0
         self.index = index
         self.name = name
-        self.reversed = reversed
         self.min = min
         self.max = max
+        self.dead_zone = dead_zone
 
-    def get_amount(self):
+    def get_amount(self) -> float:
         return self.amount
 
-    def update(self, amount):
+    def update(self, amount: float):
         self.prev_amount = self.amount
         self.amount = (amount - self.min) / (self.max - self.min)
-        if self.reversed:
-            self.amount = 1 - self.amount
+        self.amount = max(min(self.amount, 1.0), 0.0)
+        if self.amount < self.dead_zone:
+            self.amount = 0.0
 
 
 class Condition:

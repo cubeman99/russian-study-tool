@@ -39,6 +39,8 @@ class Config:
     card_front_text_color = color.BLACK
     card_back_text_color = color.BLACK
 
+    menu_cursor_speed = 10.0  # menu items per second
+
     max_card_history_size = 100
 
     min_repeat_interval = 4

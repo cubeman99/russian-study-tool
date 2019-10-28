@@ -5,6 +5,7 @@ import pygame
 import threading
 import time
 import shutil
+import sys
 import yaml
 import cmg
 from cmg import color
@@ -64,9 +65,9 @@ class StudyCardsApp(Application):
         self.graphics = Graphics(self.screen)
         self.joystick_ready = False
         self.inputs = [
-            Input(index=2, name="Middle", reversed=True, max=1, min=-1),
-            Input(index=1, name="Left", reversed=True, max=1, min=-1),
-            Input(index=3, name="Right", reversed=True, max=1, min=-1)]
+            Input(index=2, name="Middle", min=1, max=-1, dead_zone=DEAD_ZONE),
+            Input(index=1, name="Left", min=1, max=-1, dead_zone=DEAD_ZONE),
+            Input(index=3, name="Right", min=1, max=-1, dead_zone=DEAD_ZONE)]
 
         # Filenames
         self.root_path = "data"
@@ -339,31 +340,30 @@ class StudyCardsApp(Application):
         self.example_database.save(path)
 
     def load_example_database(self):
-        #path = os.path.join(self.root_path, self.example_data_file_name)
-        # if os.path.isfile(path):
-        #  Config.logger.info("Loading example data from: " + path)
-        #  self.example_database.load(path)
         for story_filename in os.listdir(self.root_path + "/examples/stories"):
             Config.logger.info("Loading example story " + story_filename)
             story_path = self.root_path + "/examples/stories/" + story_filename
             self.example_database.load_story_text_file(story_path)
 
     def update(self, dt):
+        # Check if the joystick is ready. Seems to happen
+        # upon the first button press or axis movement
         if not self.joystick_ready:
             for axis in range(self.joystick.get_numaxes()):
                 if self.joystick.get_axis(axis) != 0:
                     self.joystick_ready = True
+
+        # Update joystick pedal inputs
         if self.joystick_ready:
             for index, input in enumerate(self.inputs):
                 amount = self.joystick.get_axis(input.index)
-                if amount < DEAD_ZONE:
-                    amount = 0.0
                 input.update(amount)
                 self.state.buttons[index].update(
                     dt=dt,
                     is_down=input.amount > PRESS_THRESHOLD,
                     is_pressed=input.amount > PRESS_THRESHOLD and input.prev_amount <= PRESS_THRESHOLD)
 
+        # Update the current state
         self.state.process_input()
         self.state.update(dt)
 
@@ -413,6 +413,19 @@ class StudyCardsApp(Application):
             font=self.__font_fps,
             align=Align.TopLeft,
             color=Colors.RED)
+
+        # Draw pedal inputs
+        fps = self.get_frame_rate()
+        input_str = []
+        for input in self.inputs:
+            input_str.append("{:.3f}".format(input.get_amount()))
+        input_str = " | ".join(input_str)
+        self.graphics.draw_text(
+            screen_width - 4, screen_height - 4,
+            text=input_str.format(int(round(fps))),
+            font=self.__font_fps,
+            align=Align.BottomRight,
+            color=Colors.GRAY)
 
     def __on_key_pressed(self, key, mod, text):
         self.state.on_key_pressed(key, mod, text)

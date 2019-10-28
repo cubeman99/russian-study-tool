@@ -53,9 +53,12 @@ class Menu(Entity):
 
     def update(self, dt):
         app = self.context
+
+        # Update cursor movement
         move = app.inputs[2].get_amount() - app.inputs[0].get_amount()
-        speed = 10.0
-        self.cursor += move * dt * speed
+        sign = cmg.math.sign(move)
+        speed = Config.menu_cursor_speed
+        self.cursor += cmg.math.pow(abs(move), 1.5) * sign * dt * speed
         if self.cursor < 0.5:
             self.cursor += len(self.options)
         if self.cursor > len(self.options) - 0.5:

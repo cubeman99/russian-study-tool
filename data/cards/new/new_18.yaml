@@ -1,8 +1,9 @@
 card_set:
   name: New 18
+  type: Other
   version: 1
   cards:
-    - [adjective, бездомный, homeless]
+    - [adjective, 'бездомный, беспризорный', homeless]
     - [adjective, достойный, worthy]
     - [adjective, застенчивый; стеснительный, shy]
     - [adjective, вслух, aloud]

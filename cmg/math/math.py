@@ -24,6 +24,12 @@ cosh = math.cosh
 sinh = math.sinh
 tanh = math.tanh
 
+def sign(x):
+    if x > 0:
+        return 1
+    if x < 0:
+        return -1
+    return 0
 
 def lerp(a, b, t):
     return (a * (1.0 - t)) + (b * t)

@@ -37,7 +37,6 @@ card_set:
     - [noun, преимущество, advantage]
     - [noun, имущество, 'property, possessions']
     - [adverb, относительно; касаемо, regardingg]
-    - [verb, склонить, 'to bend, lower']
     - [verb, вымотать, to exhaust]
     - [phrase, в данный момент, at the moment]
     - [verb, ахнуть, to gasp]
@@ -55,3 +54,5 @@ card_set:
     - [noun, подонок, scumbag]
     - [noun, перо, feather]
     - [adjective, годный, 'handy, suitable']
+    - [verb, склонить голову, to bow your head]
+    - [noun, произведение искусства, a work of art]

@@ -30,3 +30,7 @@ card_set:
     - [noun, подпись, a signature]
     - [noun, лист, a sheet]
     - [noun, корешок, spine of a book]
+    - [noun, правописание, spelling]
+    - [noun, соченение, an essay]
+    - [noun, полнометражка, feature film]
+    - [noun, почерк, handwriting]

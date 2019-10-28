@@ -4,3 +4,11 @@ card_set:
   version: 1
   cards:
     - [adverb, сколько, how much]
+    - [conjunction, что, that]
+    - [pronoun, кто, who]
+    - [adverb, где, where]
+    - [conjunction, когда, when]
+    - [adverb, куда, where to]
+    - [adverb, откуда, from where]
+    - [adverb, зачем, what for]
+    - [adverb, почему, why]

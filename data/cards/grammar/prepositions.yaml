@@ -12,7 +12,7 @@ card_set:
     - [preposition, за + instr., 'behind, beyond (location)']
     - [preposition, под + instr., under (location)]
     - [preposition, для, for the benefit of]
-    - [preposition, с; со, from a place]
+    - [preposition, с; со + gen., from a place; since a time period]
     - [preposition, у, 'by, at a place']
     - [preposition, из, 'from, out of']
     - [preposition, о; об; обо, 'about, concerning']
@@ -32,3 +32,4 @@ card_set:
     - [preposition, ради, for the sake of]
     - [preposition, сквозь, through]
     - [preposition, вдоль + gen., along]
+    - [preposition, с; со + instr., with something]

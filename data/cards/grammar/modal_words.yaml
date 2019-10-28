@@ -3,10 +3,15 @@ card_set:
   type: Grammatical
   version: 1
   cards:
-    - [other, 'надо, нужно', 'it is necessary, one must']
-    - [other, должен, 'one should, one is supposed to']
-    - [other, можно, it is allowed]
-    - [other, нельзя, 'it is not possible (pf.), it is not allowed (imp.)']
-    - [other, обязательно, has to]
-    - [other, желательно, it is desireable]
-    - [other, важно, it is important]
+    - [adverb, 'надо, нужно', 'it is necessary, one must']
+    - [adverb, должен, 'one should, one is supposed to']
+    - [adverb, можно, it is allowed]
+    - [adverb, нельзя, 'it is not possible (pf.), it is not allowed (imp.)']
+    - [adverb, обязательно, has to]
+    - [adverb, желательно, it is desireable]
+    - [adverb, важно, it is important]
+    - [adjective, намеренный, intentional]
+    - [verb, тошнить, 'to cause nausia, to make sick']
+    - [phrase, так нельзя, you cant do it in this way]
+    - [verb, удаваться, 'to pan out, work out']
+    - [phrase, у + gen. + получилось + verb, to manage to do something]
