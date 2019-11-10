@@ -14,6 +14,8 @@ words:
   - {type: Pronoun, name: "с", forms: ["со"]}
   - {type: Pronoun, name: "к", forms: ["ко"]}
   - {type: Pronoun, name: "в", forms: ["во"]}
+  - {type: Pronoun, name: "о'ба", forms: ["обоих", "обоим", "обоими"]}
+  - {type: Pronoun, name: "о'бе", forms: ["обеих", "обеим", "обеими"]}
   - {type: Pronoun, name: "свой'", forms: [
       "сво'й'", "своя'", "своё", "свои'",
       "своего'", "свою'", "своё", "свои'х",

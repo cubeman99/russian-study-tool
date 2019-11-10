@@ -1,5 +1,6 @@
 card_set:
   name: New 04
+  type: Other
   version: 1
   cards:
     - [adjective, грозный, 'fearsome, terrible']
@@ -39,7 +40,7 @@ card_set:
     - [noun, разница, difference]
     - [noun, маскировка, disguise]
     - [noun, кровь, blood]
-    - [noun, замок, castle]
+    - [noun, замок; замок, a castle; a lock]
     - [verb, отвлекаться, 'to digress, be distracted']
     - [verb, рассматривать, 'to consider, view, regard, review']
     - [verb, ошибаться, 'to be wrong, mistaken, to err']

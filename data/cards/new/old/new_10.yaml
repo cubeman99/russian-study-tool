@@ -1,5 +1,6 @@
 card_set:
   name: New 10
+  type: Other
   version: 1
   cards:
     - [adjective, робкий, timid]
@@ -64,7 +65,7 @@ card_set:
     - [phrase, 'я считаю, что...', 'I think that, I believe that...']
     - [phrase, 'как оказалось, ...', 'as it turned out, ...']
     - [phrase, 'на самом деле, ...', 'in actuality, in reality, ...']
-    - [phrase, к сложолению, unfortunately]
+    - [phrase, к сложолению DELETEME, unfortunately]
     - [phrase, 'в любом случае, ...', 'in any case, ...']
     - [phrase, 'что касается ____, то ____', 'when it comes to ____, ____']
     - [preposition, над, over]

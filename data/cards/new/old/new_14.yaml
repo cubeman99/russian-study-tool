@@ -1,5 +1,6 @@
 card_set:
   name: New 14
+  type: Other
   version: 1
   cards:
     - [adjective, физический, physical]
@@ -22,7 +23,7 @@ card_set:
     - [noun, мнение, opinion]
     - [noun, ожидание, expectation]
     - [noun, зов, call]
-    - [noun, толпа, crowd]
+    - [noun, толпа, a crowd]
     - [noun, тюрьма, jail]
     - [noun, пончик, donut]
     - [noun, рог, horn]

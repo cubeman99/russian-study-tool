@@ -1,0 +1,27 @@
+card_set:
+  name: New 22
+  type: Other
+  version: 1
+  cards:
+    - [adjective, множественный, plural]
+    - [noun, окончение, 'the ending, suffix']
+    - [noun, имя числительное, numeral (part of speech)]
+    - [verb, нарушать, to violate]
+    - [verb, заблуждаться, 'to be wrong, to err']
+    - [phrase, '...не так ли?', '...isnt it? didnt it?']
+    - [phrase, Просто так., Just because.]
+    - [phrase, Это не так просто., Its not that simple.]
+    - [phrase, 'Что не так?', 'Whats wrong?']
+    - [verb, оказаться, to turn out to be]
+    - [phrase, 'как оказалось, ...', 'as it turned out, ...']
+    - [verb, оставить, 'to leave, drop, abandon']
+    - [verb, оставлять, 'to leave, drop, abandon']
+    - [adjective, членораздельный, articulate (about speech)]
+    - [noun, палочка, a wand]
+    - [verb, сбываться, to come true]
+    - [verb, сбыться, to come true]
+    - [noun, воля, 'a will, wish, desire']
+    - [noun, валеизъявление, 'an expression of will, wish, desire']
+    - [adjective, просторечный, '"simple spech", vernacular']
+    - [noun, гласный (звук), a vowel]
+    - [noun, cогласный (звук), a consonant]

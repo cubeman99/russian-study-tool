@@ -1,5 +1,6 @@
 card_set:
   name: New 03
+  type: Other
   version: 1
   cards:
     - [adjective, худой, 'slim, skinny, thin']
@@ -50,7 +51,7 @@ card_set:
     - [verb, помнить, to remember]
     - [verb, считать, 'to count, consider']
     - [verb, получить, 'to receive, get, obtain']
-    - [verb, оказаться, 'find oneself, turn out']
+    - [verb, оказаться, to turn out to be]
     - [verb, становиться, 'to become, begin, come']
     - [verb, заметить, 'to notice, observe']
     - [verb, доставить, to deliver]

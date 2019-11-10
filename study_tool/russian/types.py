@@ -13,6 +13,7 @@ class WordType(IntEnum):
     Phrase = 9
     Interjection = 10
     Particle = 11
+    Numeral = 12
 
 __WORD_TYPE_TO_SHORT_NAME_DICT = {
     WordType.Noun: "n",
@@ -26,6 +27,7 @@ __WORD_TYPE_TO_SHORT_NAME_DICT = {
     WordType.Other: "oth",
     WordType.Interjection: "int",
     WordType.Particle: "part",
+    WordType.Numeral: "num",
 }
 
 ___SHORT_NAME_TO_WORD_TYPE_DICT = dict(
@@ -84,6 +86,21 @@ class Case(IntEnum):
     Instrumental = 4
     Prepositional = 5
 
+def parse_case(text: str):
+    text = text.lower()
+    if text in ["nominative", "nom"]:
+        return Case.Nominative
+    if text in ["accusative", "acc"]:
+        return Case.Accusative
+    if text in ["genetive", "genitive", "gen"]:
+        return Case.Genetive
+    if text in ["dative", "dat"]:
+        return Case.Dative
+    if text in ["instrumental", "instr"]:
+        return Case.Instrumental
+    if text in ["prepositional", "prep"]:
+        return Case.Prepositional
+    raise ValueError(text)
 
 class Aspect(IntEnum):
     Imperfective = 0

@@ -1,0 +1,27 @@
+card_set:
+  name: Root знать
+  type: Grammatical
+  version: 1
+  cards:
+    - [verb, знать, to know]
+    - [verb, разузнать, to find out from various sources]
+    - [verb, признаться, to confess]
+    - [verb, распознать, to recognize]
+    - [verb, узнавать, to recognize; to find out]
+    - [verb, сознавать, 'to be conscious of, realize']
+    - [verb, признавать, 'to admit, acknowledge']
+    - [verb, осознавать, 'to be aware, recognize']
+    - [verb, признаваться, to confess]
+    - [noun, знания, knowledge]
+    - [noun, признание, confession]
+    - [noun, подсознание, subconcious]
+    - [adjective, неосознанный, unconsious]
+    - [noun, знак, sign]
+    - [verb, значить, 'to mean, signify']
+    - [adjective, знакомый, 'familiar, acquainted']
+    - [noun, значение, 'meaning, value']
+    - [verb, назначить, to schedule]
+    - [noun, назначение, 'purpose, assignment, function']
+    - [adjective, значительный, 'significant, considerable']
+    - [noun, знаменитость, celebrity]
+    - [adverb, подсознательно, unconciously]

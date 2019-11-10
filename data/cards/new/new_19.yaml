@@ -1,5 +1,6 @@
 card_set:
   name: New 19
+  type: Other
   version: 1
   cards:
     - [adjective, неприличный, indecent]
@@ -51,7 +52,7 @@ card_set:
     - [verb, шпионить, to spy]
     - [verb, задремать, to doze off]
     - [verb, дралить, to tear up (teardrops)]
-    - [verb, набрать, to dial]
+    - [verb, набрать, 'to dial; to gather, assemble']
     - [verb, огорчить, to upset (cause grief)]
     - [verb, расколоть, to split]
     - [verb, беда, trouble]

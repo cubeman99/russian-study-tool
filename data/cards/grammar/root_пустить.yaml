@@ -1,0 +1,20 @@
+card_set:
+  name: Root пустить
+  type: Grammatical
+  version: 1
+  cards:
+    - [other, пусть, let]
+    - [conjunction, допустим, 'lets say, supposably']
+    - [verb, отпустить, to let go]
+    - [verb, выпустить, to let out]
+    - [verb, пропустить, 'to skip, miss']
+    - [verb, перезапустить, to restart]
+    - [phrase, пуститься наутёк, 'to start off, running (lit.)']
+    - [noun, отпуск, vacation]
+    - [noun, выпуск, 'release, issue']
+    - [noun, пропуск, 'pass, permit']
+    - [verb, пускать, to let go]
+    - [verb, опускать, 'to lower, let down, let fall']
+    - [verb, запускать, 'to launch, run']
+    - [noun, опускание, the lowering]
+    - [verb, спускаться, 'to go down, descend']

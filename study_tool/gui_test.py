@@ -16,7 +16,8 @@ from enum import IntEnum
 from study_tool.states.gui_state import GUIState
 
 
-DEAD_ZONE = 0.01
+PRESS_THRESHOLD = 0.05
+DEAD_ZONE = 0.005
 
 
 class GUITesterApp(Application):
@@ -25,14 +26,26 @@ class GUITesterApp(Application):
         self.title = "GUI Test"
         Application.__init__(self, title=self.title, width=1100, height=900)
         
+        name = "знать"
+        path = "data/sounds/{}.ogg".format(name)
+        pygame.mixer.init()
+        import requests
+        url = "https://upload.wikimedia.org/wikipedia/commons/9/9e/Ru-{}.ogg".format(name)
+        r = requests.get(url, allow_redirects=True)
+        with open(path, "wb") as f:
+            f.write(r.content)
+        #sound = pygame.mixer.Sound(buffer=r.content)
+        sound = pygame.mixer.Sound(path)
+        sound.play()
+        
         pygame.joystick.init()
         self.joystick = pygame.joystick.Joystick(0)
         self.joystick.init()
         self.joystick_ready = False
         self.inputs = [
-            Input(index=2, name="Middle", reversed=True, max=1, min=-1),
-            Input(index=1, name="Left", reversed=True, max=1, min=-1),
-            Input(index=3, name="Right", reversed=True, max=1, min=-1)]
+            Input(index=2, name="Middle", min=1, max=-1, dead_zone=DEAD_ZONE),
+            Input(index=1, name="Left", min=1, max=-1, dead_zone=DEAD_ZONE),
+            Input(index=3, name="Right", min=1, max=-1, dead_zone=DEAD_ZONE)]
 
 
         self.input.bind(pygame.K_ESCAPE, pressed=self.quit)

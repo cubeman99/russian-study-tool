@@ -4,7 +4,7 @@ card_set:
   version: 1
   cards:
     - [noun, карандаш, pencil]
-    - [noun, ручка, pen]
+    - [noun, ручка, 'pen; handle, knob, grib']
     - [noun, бумага, paper]
     - [noun, книга, book]
     - [noun, тетрадь, notebook]

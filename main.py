@@ -8,8 +8,8 @@ import sys
 if len(sys.argv) > 1:
     which = sys.argv[1]
 else:
-    which = "study_tool"
-    #which = "gui_test"
+    #which = "study_tool"
+    which = "gui_test"
 
 if which == "study_tool":
     from study_tool.study_tool_app import StudyCardsApp

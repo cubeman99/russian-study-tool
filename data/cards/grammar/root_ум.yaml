@@ -1,0 +1,22 @@
+card_set:
+  name: Root ум
+  type: Grammatical
+  version: 1
+  cards:
+    - [adjective, умный, 'clever, smart, intelligent']
+    - [noun, умница, clever person]
+    - [adjective, безумный, 'crazy, insane']
+    - [adjective, разумный, reasonable]
+    - [adjective, остроумный, witty]
+    - [noun, ум, 'mind, wit, intelligence']
+    - [verb, уметь, to know how]
+    - [verb, суметь, to be skillful enough to do smth]
+    - [verb, обезуметь, to go crazy]
+    - [noun, умение, skill]
+    - [adjective, умелый, skillfull]
+    - [noun, разум, 'mind, reason']
+    - [noun, изумление, amazement]
+    - [phrase, контроль разума, mind control]
+    - [adjective, изумительный, 'delightful, leading to amazement']
+    - [adjective, умственный, mental]
+    - [noun, остроумие, wit]

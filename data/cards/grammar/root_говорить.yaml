@@ -1,0 +1,19 @@
+card_set:
+  name: Root говорить
+  type: Grammatical
+  version: 1
+  cards:
+    - [verb, говорить, to speak]
+    - [verb, наговорить, 'to talk on, tell lies about']
+    - [verb, выговорить, to annunciate]
+    - [verb, заговорить, to talk someones head off]
+    - [verb, приговорить, to sentence someone to something (in court)]
+    - [verb, подговорить, 'to talk someone into something, to pursue someone']
+    - [noun, разговор, 'conversation, talk']
+    - [adjective, разговорчивый, talkative]
+    - [phrase, честно говоря, honestly]
+    - [verb, разговарывать, to converse]
+    - [noun, сказка, fairy-tale]
+    - [verb, сказать, to say]
+    - [verb, высказать, to express]
+    - [verb, рассказывать, 'to narrate, to tell']

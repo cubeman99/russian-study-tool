@@ -16,7 +16,7 @@ card_set:
     - [verb, купить, to buy]
     - [verb, варить, to boil]
     - [verb, говорить, to speak]
-    - [verb, жениться, to get married]
+    - [verb, жениться DELETEME, to get married]
     - [verb, курить, to smoke]
     - [verb, учить, to teach; to study]
     - [verb, хвалить, to praise]

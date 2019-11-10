@@ -44,7 +44,7 @@ from study_tool.word_database import WordDatabase
 from study_tool.external.cooljugator import CooljugatorThread
 
 PRESS_THRESHOLD = 0.05
-DEAD_ZONE = 0.002
+DEAD_ZONE = 0.005
 
 class StudyCardsApp(Application):
 

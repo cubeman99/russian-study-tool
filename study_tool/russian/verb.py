@@ -39,6 +39,9 @@ class Verb(Word):
         self.translation = AccentedText()
         self.aspect = Aspect.Imperfective
         self.info = AccentedText()
+        self.reflexive = False
+        self.transitive = False
+        self.conjugation_class = None
         self.counterparts = []
         self.past = {
             (Plurality.Singular, Gender.Masculine): AccentedText(),
@@ -58,7 +61,7 @@ class Verb(Word):
 
         self.__participles = {}
         self.__participle_words = {}
-        for participle in (Participle.Active, Participle.Passive):
+        for participle in (Participle.Active, Participle.Passive, Participle.Adverbial):
             for tense in (Tense.Past, Tense.Present):
                 self.__participles[(participle, tense)] = AccentedText()
                 self.__participle_words[(participle, tense)] = None
@@ -132,6 +135,18 @@ class Verb(Word):
         if exclude_reflexive:
             conjugation = self.remove_reflexive_suffix(conjugation)
         return conjugation
+
+    def set_non_past(self, plurality: Plurality, person: Person, text: AccentedText):
+        """Sets a non-past conjugation of the verb."""
+        self.non_past[(plurality, person)] = AccentedText(text)
+
+    def set_past(self, plurality: Plurality, gender: Gender, text: AccentedText):
+        """Sets a past conjugation of the verb."""
+        if plurality is None:
+            plurality = Plurality.Singular
+        if plurality == Plurality.Plural:
+            gender = None
+        self.past[(plurality, gender)] = AccentedText(text)
 
     def mutate(self, stem):
         for a, b in CONSONANT_MUTATIONS:
@@ -353,3 +368,14 @@ class Verb(Word):
                 text = data["participles"][participle_key][tense_key]
                 self.set_participle(participle=participle, tense=tense, text=text)
 
+    def __str__(self):
+        import yaml
+        data = self.serialize()
+        return yaml.dump(data, default_flow_style=False, allow_unicode=True)[:-1]
+        result = ""
+        for case in Case:
+            result += case.name.lower() + ":\n"
+            for plurality in Plurality:
+                form = self.get_declension(case=case, plurality=plurality)
+                result += "  " + plurality.name.lower() + ": " + repr(form) + "\n"
+        return result[:-1]

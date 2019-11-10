@@ -52,11 +52,15 @@ class Noun(Word):
 
     def get_all_forms(self):
         return [x for x in self.declension.values()]
-
+    
     def get_declension(self,
                        plurality=Plurality.Singular,
                        case=Case.Nominative):
         return self.declension[(plurality, case)]
+    
+    def set_declension(self, plurality: Plurality, case: Case,
+                       declension: AccentedText):
+        self.declension[(plurality, case)] = AccentedText(declension)
 
     def serialize(self):
         data = {"declension": {},
@@ -77,3 +81,12 @@ class Noun(Word):
             for case in Case:
                 self.declension[(plurality, case)] = AccentedText(
                     data["declension"][plurality.name][case.name])
+                
+    def __str__(self):
+        result = ""
+        for case in Case:
+            result += case.name.lower() + ":\n"
+            for plurality in Plurality:
+                form = self.get_declension(case=case, plurality=plurality)
+                result += "  " + plurality.name.lower() + ": " + repr(form) + "\n"
+        return result[:-1]

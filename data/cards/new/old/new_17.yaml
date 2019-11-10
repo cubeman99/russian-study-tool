@@ -1,5 +1,6 @@
 card_set:
   name: New 17
+  type: Other
   version: 1
   cards:
     - [adjective, отвратительный, disgusting]
@@ -16,12 +17,12 @@ card_set:
     - [noun, воспоминание, 'a memory, recollection']
     - [noun, сбор, 'gathering, collection']
     - [noun, признание, confession]
-    - [noun, ворота, gate]
+    - [noun, ворот, gate; shirt collar]
     - [noun, люстра, chandelier]
     - [noun, волнение, excitement]
     - [noun, растение, 'plant, herb']
     - [noun, возвращение, return]
-    - [noun, драка, 'fight, tussle']
+    - [noun, драка, 'a fight, tussle']
     - [noun, бок, side of torso]
     - [noun, остановка, 'stop, layover']
     - [noun, присмотра, supervision]

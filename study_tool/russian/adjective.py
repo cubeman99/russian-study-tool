@@ -51,6 +51,23 @@ class Adjective(Word):
                 case = Case.Nominative
             return self.declension[(gender, case)]
 
+    def set_declension(self,
+                       text: AccentedText,
+                       gender=Gender.Masculine,
+                       plurality=Plurality.Singular,
+                       case=Case.Nominative,
+                       short=False):
+        """
+        Sets a declension of the adjective.
+        Assumes animate for genitive.
+        """
+        if plurality == Plurality.Plural:
+            gender = None
+        if short:
+            self.short_form[gender] = AccentedText(text)
+        else:
+            self.declension[(gender, case)] = AccentedText(text)
+
     def has_short_form(self) -> bool:
         """Returns True if the adjective has a short form."""
         return has_russian_letters(self.short_form[Gender.Masculine])

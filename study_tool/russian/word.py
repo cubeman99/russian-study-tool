@@ -47,6 +47,10 @@ class AccentedText:
                 self.text = text
                 self.accents = tuple(accents)
 
+    @property
+    def raw(self):
+        return repr(self)
+
     def __getitem__(self, index):
         return (self.text[index], index in self.accents)
 
@@ -131,6 +135,10 @@ class WordSourceEnum:
     Custom = 2
     # Downloaded from Cooljugator website
     Cooljugator = 3
+    # Downloaded from Wiktionary website
+    Wiktionary = 4
+    # Downloaded from Russian Wiktionary website
+    RussianWiktionary = 5
 
 
 class Word:

@@ -70,7 +70,7 @@ card_set:
     - [adjective, долгий, long (time)]
     - [adjective, длинный, long (distance)]
     - [adjective, широкий, wide]
-    - [adjective, светлый, light (of color)]
+    - [adjective, светлый, light-colored]
     - [adjective, городской, city]
     - [adjective, мужской, 'masculine, male']
     - [adjective, жуткий, creepy]
@@ -79,3 +79,4 @@ card_set:
     - [adjective, другой, other]
     - [adjective, идеальный, 'ideal, perfect']
     - [adjective, сложный, 'difficult, hard']
+    - [adjective, крошечный, 'tiny, itty-bitty']
