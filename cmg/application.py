@@ -17,6 +17,7 @@ class Application:
     def __init__(self, title="New CMG Application", width=800, height=600):
         Application.instance = self
         pygame.init()
+        pygame.mixer.init()
 
         # Create the window
         self.screen = pygame.display.set_mode(
@@ -112,5 +113,6 @@ class Application:
         except:
             traceback.print_exc()
             self.on_quit()
-
+            
+        pygame.mixer.quit()
         pygame.quit()

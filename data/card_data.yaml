@@ -311,7 +311,8 @@ cards:
 - {attrs: [f], crtd: 1571599089.3960652, en: lie, ru: ло'жь, type: noun}
 - {attrs: [m], crtd: 1571599089.3960652, en: step, ru: ша'г, type: noun}
 - {attrs: [m], crtd: 1571599089.3970642, en: ticket, ru: биле'т, type: noun}
-- {attrs: [f], crtd: 1571599089.3970642, en: party, ru: вечери'нка, type: noun}
+- {attrs: [f], crtd: 1571599089.3970642, en: party, rel: [[noun, вечер, evening]], ru: вечери'нка,
+  type: noun}
 - {attrs: [indec], crtd: 1571599089.3970642, en: money, ru: де'ньги, type: noun}
 - {attrs: [f], crtd: 1571599089.3970642, en: 'map, card', ru: ка'рта, type: noun}
 - {attrs: [f], crtd: 1571599089.3970642, en: problem, ru: пробле'ма, type: noun}
@@ -360,12 +361,15 @@ cards:
 - {attrs: [f], crtd: 1571599089.40106, en: second (1/60 minute), ru: секу'нда, type: noun}
 - {crtd: 1571599089.40106, en: today, ru: сего'дня, type: noun}
 - {attrs: [indec], crtd: 1571599089.40106, en: tomorrow, ru: за'втра, type: noun}
-- {attrs: [indec], crtd: 1571599089.402059, en: yesterday, ru: вчера', type: noun}
+- {attrs: [indec], crtd: 1571599089.402059, en: yesterday, rel: [[noun, вечер, evening]],
+  ru: вчера', type: noun}
 - {attrs: [indec], crtd: 1571599089.402059, en: day after tomorrow, ru: послеза'втра,
   type: noun}
 - {crtd: 1571599089.402059, en: day before yesterday, ru: позавчера', type: noun}
 - {attrs: [n], crtd: 1571599089.402059, en: morning, ru: у'тро, type: noun}
-- {attrs: [m], crtd: 1571599089.4030583, en: evening, ru: ве'чер, type: noun}
+- {attrs: [m], crtd: 1571599089.4030583, en: evening, rel: [[adverb, вечером, in the
+        evening], [adjective, вечерний, evening], [noun, вечеринка, party], [noun,
+      вчера, yesterday]], ru: ве'чер, type: noun}
 - {attrs: [f], crtd: 1571599089.4030583, en: night, rel: [[noun, ночёвка, sleepover]],
   ru: но'чь, type: noun}
 - {crtd: 1571599089.4030583, en: drinks, ru: напи'тки, type: noun}
@@ -906,7 +910,8 @@ cards:
 - {crtd: 1571599089.4570017, en: today's, ru: сего'дняшний, type: adjective}
 - {crtd: 1571599089.4570017, en: early, ru: ра'нний, type: adjective}
 - {crtd: 1571599089.4570017, en: late, ru: по'здний, type: adjective}
-- {crtd: 1571599089.4570017, en: evening, ru: вече'рний, type: adjective}
+- {crtd: 1571599089.4570017, en: evening, rel: [[noun, вечер, evening]], ru: вече'рний,
+  type: adjective}
 - {crtd: 1571599089.4570017, en: morning, ru: у'тренний, type: adjective}
 - {crtd: 1571599089.458001, en: present-day, ru: ны'нешний, type: adjective}
 - {crtd: 1571599089.458001, en: present-day (nowadays), ru: тепе'решний, type: adjective}
@@ -967,7 +972,8 @@ cards:
 - {crtd: 1571599089.462996, en: on time, ru: во'время, type: adverb}
 - {crtd: 1571599089.462996, en: in the morning, ru: у'тром, type: adverb}
 - {crtd: 1571599089.462996, en: during the day, ru: днём, type: adverb}
-- {crtd: 1571599089.462996, en: in the evening, ru: ве'чером, type: adverb}
+- {crtd: 1571599089.462996, en: in the evening, rel: [[noun, вечер, evening]], ru: ве'чером,
+  type: adverb}
 - {crtd: 1571599089.462996, en: in the night, ru: но'чью, type: adverb}
 - {crtd: 1571599089.462996, en: in the spring, ru: весно'й, type: adverb}
 - {crtd: 1571599089.462996, en: in the summer, ru: ле'том, type: adverb}

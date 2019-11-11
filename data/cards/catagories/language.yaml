@@ -43,3 +43,5 @@ card_set:
     - [noun, гласный (звук), a vowel]
     - [noun, окончение, 'the ending, suffix']
     - [noun, имя числительное, numeral (part of speech)]
+    - [noun, имя, name]
+    - [noun, знак, sign]

@@ -1,3 +1,4 @@
+from study_tool.russian import types
 from study_tool.russian.types import *
 from study_tool.russian.word import *
 from study_tool.russian.adjective import Adjective
@@ -29,6 +30,124 @@ CONSONANT_MUTATIONS = [
     ("ф", "фл")]
 
 LABIAL_CONSONANTS = "бпмвф"
+
+
+class VerbConjugation:
+    """
+    Contains verb conjugation information.
+    """
+    def __init__(self):
+        Word.__init__(self)
+        self.infinitive = AccentedText()
+        self.aspect = Aspect.Imperfective
+        self.__past = {
+            (Plurality.Singular, Gender.Masculine): AccentedText(),
+            (Plurality.Singular, Gender.Femanine): AccentedText(),
+            (Plurality.Singular, Gender.Neuter): AccentedText(),
+            (Plurality.Plural, None): AccentedText()}
+        self.__non_past = {
+            (Plurality.Singular, Person.First): AccentedText(),
+            (Plurality.Singular, Person.Second): AccentedText(),
+            (Plurality.Singular, Person.Third): AccentedText(),
+            (Plurality.Plural, Person.First): AccentedText(),
+            (Plurality.Plural, Person.Second): AccentedText(),
+            (Plurality.Plural, Person.Third): AccentedText()}
+        self.__imperative = {
+            Plurality.Singular: AccentedText(),
+            Plurality.Plural: AccentedText()}
+        self.__participles = {}
+        for participle in (Participle.Active, Participle.Passive, Participle.Adverbial):
+            for tense in (Tense.Past, Tense.Present):
+                self.__participles[(participle, tense)] = AccentedText()
+
+    def get_aspect(self) -> Aspect:
+        return self.aspect
+
+    def get_non_past(self, plural: Plurality, person: Person) -> AccentedText:
+        """Get a non-past conjugation of the verb."""
+        return self.__non_past[(Plurality(plural), person)]
+
+    def get_past(self, plural=None, gender=None) -> AccentedText:
+        """Get a past conjugation of the verb."""
+        if plural is None:
+            plural = plural.Singular
+        else:
+            plural = Plurality(plural)
+        if plural == plural.Plural:
+            gender = None
+        return self.__past[(plural, gender)]
+
+    def get_imperative(self, plural: Plurality):
+        """Gets a imperative form of the verb."""
+        return self.__imperative[Plurality(plural)]
+
+    def get_participle(self, participle: Participle, tense: Tense) -> AccentedText:
+        """Gets a participle form of the verb."""
+        return self.__participles[(participle, tense)]
+
+    def set_non_past(self, plural: Plurality, person: Person, text: AccentedText):
+        """Sets a non-past conjugation of the verb."""
+        self.__non_past[(Plurality(plural), person)] = AccentedText(text)
+
+    def set_past(self, plural: Plurality, gender: Gender, text: AccentedText):
+        """Sets a past conjugation of the verb."""
+        if plural is None:
+            plural = Plurality.Singular
+        else:
+            plural = Plurality(plural)
+        if plural == Plurality.Plural:
+            gender = None
+        self.__past[(plural, gender)] = AccentedText(text)
+
+    def set_participle(self, participle: Participle, tense: Tense, text: AccentedText):
+        """Sets a participle of the verb."""
+        self.__participles[(participle, tense)] = AccentedText(text)
+
+    def set_imperative(self, plural: Plurality, text: AccentedText):
+        """Sets a imperative form of the verb."""
+        self.__imperative[Plurality(plural)] = AccentedText(text)
+
+    def serialize(self):
+        """Serialize the state of this object into a dictionary."""
+        data = {
+            "infinitive": self.infinitive.raw,
+            "aspect": types.get_aspect_short_form_name(self.aspect),
+            "non_past": {
+                "sing": {
+                    "1st": self.get_non_past(plural=Plurality.Singular, person=Person.First).raw,
+                    "2nd": self.get_non_past(plural=Plurality.Singular, person=Person.Second).raw,
+                    "3rd": self.get_non_past(plural=Plurality.Singular, person=Person.Third).raw,
+                },
+                "pl": {
+                    "1st": self.get_non_past(plural=Plurality.Plural, person=Person.First).raw,
+                    "2nd": self.get_non_past(plural=Plurality.Plural, person=Person.Second).raw,
+                    "3rd": self.get_non_past(plural=Plurality.Plural, person=Person.Third).raw,
+                }
+            },
+            "past": {
+                "m": self.get_past(plural=Plurality.Singular, gender=Gender.Masculine).raw,
+                "n": self.get_past(plural=Plurality.Singular, gender=Gender.Neuter).raw,
+                "f": self.get_past(plural=Plurality.Singular, gender=Gender.Femanine).raw,
+                "pl": self.get_past(plural=Plurality.Plural, gender=None).raw,
+            },
+            "imperative": {
+                "sing": self.get_imperative(Plurality.Singular).raw,
+                "pl": self.get_imperative(Plurality.Plural).raw,
+            }
+        }
+
+        # Serialize participles
+        data["participles"] = {}
+        for participle in Participle:
+            participle_key = participle.name.lower()
+            data["participles"][participle_key] = {}
+            for tense in (Tense.Past, Tense.Present):
+                tense_key = tense.name.lower()
+                form = self.get_participle(participle=participle, tense=tense)
+                data["participles"][participle_key][tense_key] = form.raw
+
+        return data
+
 
 
 class Verb(Word):
@@ -64,7 +183,8 @@ class Verb(Word):
         for participle in (Participle.Active, Participle.Passive, Participle.Adverbial):
             for tense in (Tense.Past, Tense.Present):
                 self.__participles[(participle, tense)] = AccentedText()
-                self.__participle_words[(participle, tense)] = None
+                if participle in (Participle.Active, Participle.Passive):
+                    self.__participle_words[(participle, tense)] = None
 
     def get_info(self) -> AccentedText:
         return self.info

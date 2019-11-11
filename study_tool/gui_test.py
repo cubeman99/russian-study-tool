@@ -25,19 +25,7 @@ class GUITesterApp(Application):
     def __init__(self):
         self.title = "GUI Test"
         Application.__init__(self, title=self.title, width=1100, height=900)
-        
-        name = "знать"
-        path = "data/sounds/{}.ogg".format(name)
-        pygame.mixer.init()
-        import requests
-        url = "https://upload.wikimedia.org/wikipedia/commons/9/9e/Ru-{}.ogg".format(name)
-        r = requests.get(url, allow_redirects=True)
-        with open(path, "wb") as f:
-            f.write(r.content)
-        #sound = pygame.mixer.Sound(buffer=r.content)
-        sound = pygame.mixer.Sound(path)
-        sound.play()
-        
+                
         pygame.joystick.init()
         self.joystick = pygame.joystick.Joystick(0)
         self.joystick.init()

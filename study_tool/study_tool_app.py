@@ -42,6 +42,7 @@ from study_tool.states.study_state import StudyParams
 from study_tool.study_database import StudyDatabase
 from study_tool.word_database import WordDatabase
 from study_tool.external.cooljugator import CooljugatorThread
+from study_tool.external.wiktionary import Wiktionary
 
 PRESS_THRESHOLD = 0.05
 DEAD_ZONE = 0.005
@@ -84,6 +85,7 @@ class StudyCardsApp(Application):
         self.example_database = ExampleDatabase(word_database=self.word_database)
         self.study_database = StudyDatabase(card_database=self.card_database)
         self.cooljugator_thread = CooljugatorThread(self.word_database.get_cooljugator())
+        self.wiktionary = Wiktionary()
 
         # Load data
         self.load_word_database()
@@ -333,6 +335,7 @@ class StudyCardsApp(Application):
             Config.logger.info("Loading custom word data from: " + path)
             self.word_database.load(path, source_type=WordSourceEnum.Custom)
         Config.logger.info("Loading {} words".format(len(self.word_database.words)))
+        self.wiktionary.load("data/wiktionary.yaml")
 
     def save_example_database(self):
         path = os.path.join(self.root_path, self.example_data_file_name)

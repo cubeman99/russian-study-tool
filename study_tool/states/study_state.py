@@ -144,6 +144,8 @@ class StudyState(State):
 
         # Internal state
         self.card = None
+        self.__wiktionary_term = None
+        self.__sound = None
         self.__example_thread = None
         self.__study_data = None
         self.__study_metrics = None
@@ -524,9 +526,9 @@ class StudyState(State):
         """Shows a new card."""
 
         self.card = card
-        self.__study_data = self.app.study_database.get_card_study_data(card)
+        self.__study_data = Config.app.study_database.get_card_study_data(card)
         self.__proficiency_bar.recalculate()
-        self.__study_metrics = self.app.study_database.get_group_study_metrics(self.card_set)
+        self.__study_metrics = Config.app.study_database.get_group_study_metrics(self.card_set)
         self.revealed = False
         self.buttons[0] = Button("Reveal", self.reveal)
 
@@ -546,6 +548,19 @@ class StudyState(State):
             forms = word.get_all_forms()
         else:
             forms = self.card.get_russian().text
+        self.__wiktionary_term = None
+        self.__sound = None
+        term_name = self.card.get_russian()
+        if word:
+            term_name = word.get_name()
+        self.__wiktionary_term = Config.app.wiktionary.get_term(term_name)
+        self.__sound = Config.app.wiktionary.get_sound(term_name)
+        if not self.__sound:
+            Config.app.wiktionary.download_sound(term_name)
+            self.__sound = Config.app.wiktionary.get_sound(term_name)
+        if self.__sound:
+            self.__sound.play()
+        print(term_name, self.__wiktionary_term, self.__sound)
 
         # Get the card text and attributes
         self.prompt_attributes = []

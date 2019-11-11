@@ -1,5 +1,37 @@
-from study_tool.russian.types import *
-from study_tool.russian.word import *
+from study_tool.russian import types
+from study_tool.russian.types import Plurality
+from study_tool.russian.types import Case
+from study_tool.russian.types import Gender
+from study_tool.russian.types import WordType
+from study_tool.russian.word import AccentedText
+from study_tool.russian.word import Word
+
+
+class NounDeclension:
+    def __init__(self):
+        self.__declension = {}
+        for case in Case:
+            for plural in Plurality:
+                self.set_declension(case=case, plural=plural, text="")
+
+    def get_declension(self, plural: Plurality, case: Case) -> AccentedText:
+        plural = Plurality(plural)
+        return self.__declension[(plural, case)]
+    
+    def set_declension(self, plural: Plurality, case: Case,
+                       text: AccentedText):
+        plural = Plurality(plural)
+        self.__declension[(plural, case)] = AccentedText(text)
+
+    def serialize(self) -> dict:
+        """Serialize the state of this object into a dictionary."""
+        data = {}
+        for case in Case:
+            data[types.get_case_short_form_name(case)] = {
+                "sing": self.get_declension(case=case, plural=Plurality.Singular).raw,
+                "pl": self.get_declension(case=case, plural=Plurality.Plural).raw,
+            }
+        return data
 
 
 class Noun(Word):
