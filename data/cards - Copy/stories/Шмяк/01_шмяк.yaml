@@ -1,0 +1,369 @@
+{
+  "card_set": {
+    "name": "01 \u0428\u043c\u044f\u043a",
+    "version": 1,
+    "cards": [
+      [
+        "noun",
+        "\u043f\u0430\u043b\u0430\u0442\u043a\u0430",
+        "tent"
+      ],
+      [
+        "noun",
+        "\u0444\u043e\u043d\u0430\u0440\u0438\u043a",
+        "flashlight"
+      ],
+      [
+        "noun",
+        "\u043c\u0435\u0448\u043e\u043a",
+        "bag, sack"
+      ],
+      [
+        "noun",
+        "\u043d\u043e\u0447\u0451\u0432\u043a\u0430",
+        "sleepover"
+      ],
+      [
+        "noun",
+        "\u0443\u0441\u044b",
+        "mustache; whiskers"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u043e\u0433\u043e\u043b\u043e\u0434\u0430\u0442\u044c\u0441\u044f",
+        "to get hungry"
+      ],
+      [
+        "noun",
+        "\u0443\u0433\u043e\u0449\u0435\u043d\u0438\u0435",
+        "treat (food/drink)"
+      ],
+      [
+        "verb",
+        "\u0442\u0430\u0440\u0430\u0449\u0438\u0442\u044c\u0441\u044f",
+        "to open eyes wide in suprise"
+      ],
+      [
+        "adverb",
+        "\u0442\u0435\u0441\u043d\u043e",
+        "closely, tightly"
+      ],
+      [
+        "phrase",
+        "\u041c\u043d\u0435 \u043d\u0435 \u0441\u043f\u0438\u0442\u0441\u044f",
+        "I cant sleep"
+      ],
+      [
+        "phrase",
+        "\u0441 \u0431\u043e\u043a\u0443 \u043d\u0430 \u0431\u043e\u043a",
+        "from side to side"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u043f\u0438\u0442\u044c",
+        "to yell loudly, to wail"
+      ],
+      [
+        "adverb",
+        "\u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u043e",
+        "gradually"
+      ],
+      [
+        "verb",
+        "\u0441\u043b\u0438\u043f\u0430\u0442\u044c\u0441\u044f",
+        "to stick together"
+      ],
+      [
+        "noun",
+        "\u0441\u043f\u0430\u043b\u044c\u043d\u044b\u0439 \u043c\u0435\u0448\u043e\u043a",
+        "sleeping bag"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0441\u043a\u043e\u0447\u0438\u0442\u044c",
+        "to pop out, jump out"
+      ],
+      [
+        "phrase",
+        "\u041c\u044b \u043d\u0435 \u0434\u0430\u0434\u0438\u043c \u0434\u0440\u0443\u0433 \u0434\u0440\u0443\u0433\u0430 \u0432 \u043e\u0431\u0438\u0434\u0443.",
+        "We dont give eachother a hard time."
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u0435\u0449\u0430\u0442\u044c",
+        "to promise"
+      ],
+      [
+        "phrase",
+        "\u0448\u043c\u044b\u0433\u043d\u0443\u0442\u044c \u043d\u043e\u0441\u043e\u043c",
+        "to sniff, snuff your nose"
+      ],
+      [
+        "phrase",
+        "\u0427\u0435\u0441\u0442\u043d\u043e\u0435 \u0441\u043b\u043e\u0432\u043e.",
+        "You have my word."
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0440\u043e\u0447\u0430\u0442\u044c\u0441\u044f",
+        "to toss and turn"
+      ],
+      [
+        "verb",
+        "\u043e\u043f\u0440\u043e\u043a\u0438\u043d\u0443\u0442\u044c",
+        "to knock over"
+      ],
+      [
+        "noun",
+        "\u043d\u0435\u0442\u0435\u0440\u043f\u0435\u043d\u0438\u0435",
+        "impatience"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0441\u0441\u043c\u0435\u044f\u0442\u044c\u0441\u044f",
+        "to burst out laughing"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0441\u043a\u043b\u0438\u043a\u043d\u0443\u0442\u044c",
+        "to exclaim"
+      ],
+      [
+        "noun",
+        "\u043b\u0430\u043f\u0430",
+        "paw"
+      ],
+      [
+        "verb",
+        "\u0438\u0441\u043f\u0443\u0433\u0430\u0442\u044c\u0441\u044f",
+        "to be frightened"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0437\u0434\u043e\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to say hello"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0438\u0433\u043b\u0430\u0441\u0438\u0442\u044c",
+        "to invite"
+      ],
+      [
+        "verb",
+        "\u0434\u0440\u043e\u0436\u0430\u0442\u044c",
+        "to tremble"
+      ],
+      [
+        "adverb",
+        "\u043f\u043e\u043b\u0443\u0447\u0448\u0435",
+        "a little better"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0431\u0440\u043e\u0441\u0438\u0442\u044c\u0441\u044f",
+        "to pounce, to throw yourself"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u043f\u0443\u0433\u0430\u0442\u044c",
+        "to scare someone"
+      ],
+      [
+        "adjective",
+        "\u0448\u0443\u0441\u0442\u0440\u044b\u0439",
+        "nimble"
+      ],
+      [
+        "noun",
+        "\u0446\u044b\u043f\u043b\u0451\u043d\u043e\u043a",
+        "chick (baby chicken)"
+      ],
+      [
+        "noun",
+        "\u0436\u0438\u0432\u043e\u0439 \u0443\u0433\u043e\u043b\u043e\u043a",
+        "pets corner"
+      ],
+      [
+        "noun",
+        "\u043f\u0438\u0442\u043e\u043c\u0435\u0446",
+        "pet"
+      ],
+      [
+        "phrase",
+        "\u043f\u043e\u044f\u0432\u0438\u0442\u044c\u0441\u044f \u043d\u0430 \u0441\u0432\u0435\u0442",
+        "to be born, appear in the light"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0438\u0441\u043c\u043e\u0442\u0440\u0430",
+        "supervision"
+      ],
+      [
+        "adjective",
+        "\u043a\u043e\u0448\u0430\u0447\u0438\u0439",
+        "feline"
+      ],
+      [
+        "phrase",
+        "\u0433\u043b\u0430\u0437 \u0434\u0430 \u0433\u043b\u0430\u0437",
+        "much attention, eyes at all times"
+      ],
+      [
+        "phrase",
+        "\u0432\u043e\u0442-\u0432\u043e\u0442",
+        "exactly; quickly"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0441\u0442\u0435\u0440\u044f\u0442\u044c\u0441\u044f",
+        "to not know what to do; to lose oneself"
+      ],
+      [
+        "phrase",
+        "\u0442\u044f\u043d\u0443\u0442\u044c \u0436\u0440\u0435\u0431\u0438\u0439",
+        "to draw straws"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0442\u044c",
+        "to observe (empirically)"
+      ],
+      [
+        "noun",
+        "\u0441\u043a\u043e\u0440\u043b\u0443\u043f\u043a\u0430",
+        "shell"
+      ],
+      [
+        "adverb",
+        "\u043d\u0430 \u0440\u0430\u0437",
+        "with ease"
+      ],
+      [
+        "adverb",
+        "\u0432\u043f\u0440\u0438\u043f\u0440\u044b\u0436\u043a\u0443",
+        "skipping"
+      ],
+      [
+        "verb",
+        "\u043d\u0435\u0441\u0442\u0438",
+        "to carry"
+      ],
+      [
+        "noun",
+        "\u0433\u043d\u0435\u0437\u0434\u043e",
+        "a nest"
+      ],
+      [
+        "noun",
+        "\u043a\u043e\u043c\u043e\u0434",
+        "dresser (for clothes)"
+      ],
+      [
+        "noun",
+        "\u043f\u044f\u0442\u043a\u0430",
+        "heel"
+      ],
+      [
+        "verb",
+        "\u0449\u0438\u043f\u0430\u0442\u044c",
+        "to pinch, pluck"
+      ],
+      [
+        "interjection",
+        "\u041d\u0438\u0447\u0435\u0433\u043e \u0441\u0435\u0431\u0435!",
+        "Woah, ah! (something said in suprise)"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0437\u0431\u0443\u0434\u0438\u0442\u044c",
+        "to wake (someone)"
+      ],
+      [
+        "phrase",
+        "\u043d\u0430\u0432\u043e\u0441\u0442\u0440\u0438\u0442\u044c \u0443\u0448\u0438",
+        "to perk your ears, intently listen, pinpointing a sound"
+      ],
+      [
+        "adjective",
+        "\u0448\u0435\u0440\u0441\u0442\u044f\u043d\u044b\u0439",
+        "woolen"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0438\u043a\u043e\u0440\u043d\u0443\u0442\u044c",
+        "to take a nap"
+      ],
+      [
+        "noun",
+        "\u0431\u0443\u0434\u0438\u043b\u044c\u043d\u0438\u043a",
+        "alarm clock"
+      ],
+      [
+        "verb",
+        "\u0443\u0441\u044b\u043f\u0438\u0442\u044c",
+        "to put to sleep"
+      ],
+      [
+        "noun",
+        "\u0433\u0440\u0443\u0437\u043e\u0432\u0438\u043a",
+        "truck"
+      ],
+      [
+        "noun",
+        "\u0433\u0443\u0430\u0448\u044c",
+        "watercolor"
+      ],
+      [
+        "verb",
+        "\u043c\u0430\u0437\u0430\u0442\u044c\u0441\u044f",
+        "to smear, get dirty, apply smth to face"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u044b\u0441\u043a\u0430\u0442\u044c",
+        "to find after searching"
+      ],
+      [
+        "noun",
+        "\u043a\u043b\u044e\u0432",
+        "beak"
+      ],
+      [
+        "phrase",
+        "\u043f\u0443\u0441\u0442\u0438\u0442\u044c\u0441\u044f \u043d\u0430\u0443\u0442\u0451\u043a",
+        "to start off, running (lit.)"
+      ],
+      [
+        "noun",
+        "\u043b\u0443\u0436\u0430",
+        "puddle"
+      ],
+      [
+        "phrase",
+        "\u0428\u0430\u0433\u043e\u043c \u043c\u0430\u0440\u0448!",
+        "March forward!"
+      ],
+      [
+        "noun",
+        "\u043e\u0442\u0440\u044f\u0434",
+        "squad"
+      ],
+      [
+        "conjunction",
+        "\u043e\u0434\u043d\u0430\u043a\u043e; \u0432\u043f\u0440\u043e\u0447\u0435\u043c",
+        "but, however"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u0440\u0430\u0434\u043e\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to rejoice"
+      ],
+      [
+        "verb",
+        "\u043a\u043b\u0435\u0432\u0430\u0442\u044c",
+        "to peck"
+      ]
+    ],
+    "type": "Media"
+  }
+}

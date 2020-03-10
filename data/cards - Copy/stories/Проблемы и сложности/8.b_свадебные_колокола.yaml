@@ -1,0 +1,349 @@
+{
+  "card_set": {
+    "name": "8.b \u0421\u0432\u0430\u0434\u0435\u0431\u043d\u044b\u0435 \u043a\u043e\u043b\u043e\u043a\u043e\u043b\u0430",
+    "version": 1,
+    "cards": [
+      [
+        "noun",
+        "\u0437\u0430\u0431\u043e\u0442\u0430",
+        "care, attention"
+      ],
+      [
+        "adverb",
+        "\u0433\u0440\u0430\u0436\u0434\u0430\u043d\u0441\u0442\u0432\u043e",
+        "citizenship"
+      ],
+      [
+        "noun",
+        "\u0433\u0440\u0430\u0436\u0434\u0430\u043d\u0438\u043d",
+        "citizen"
+      ],
+      [
+        "adjective",
+        "\u043f\u0440\u0438\u043c\u0438\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439",
+        "apologetic, reconciliatory"
+      ],
+      [
+        "adjective",
+        "\u043d\u0435\u0443\u0432\u0430\u0436\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439",
+        "disrespectful"
+      ],
+      [
+        "adjective",
+        "\u0443\u0432\u0430\u0436\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439",
+        "respectful, good"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0442",
+        "sweat"
+      ],
+      [
+        "adjective",
+        "\u043f\u043e\u0442\u043d\u044b\u0439",
+        "sweaty"
+      ],
+      [
+        "adjective",
+        "\u043e\u0441\u043d\u043e\u0432\u043d\u043e\u0439",
+        "the most important, main, basic"
+      ],
+      [
+        "noun",
+        "\u0434\u043e\u043c\u044b\u0441\u0435\u043b",
+        "a speculation"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u043b\u0438\u0447\u0430\u0442\u044c\u0441\u044f \u043e\u0442",
+        "to differ from"
+      ],
+      [
+        "noun",
+        "\u0432\u0437\u0430\u0438\u043c\u043d\u043e\u0441\u0442\u044c",
+        "mutuality, reciprocity"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u0437\u0434\u0430\u0442\u044c",
+        "to create"
+      ],
+      [
+        "adjective",
+        "\u0437\u0430\u043c\u043a\u043d\u0443\u0442\u044b\u0439",
+        "isolated, closed-mouthed"
+      ],
+      [
+        "noun",
+        "\u043f\u0435\u0442\u043b\u044f",
+        "a loop, hinge; a noose"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043d\u044f\u0442\u0438\u0435",
+        "notion, idea, concept"
+      ],
+      [
+        "verb",
+        "\u0441\u0432\u044f\u0437\u044b\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to contact, get in contact with"
+      ],
+      [
+        "adjective",
+        "\u0441\u043c\u0435\u0440\u0442\u043d\u044b\u0439",
+        "mortal"
+      ],
+      [
+        "phrase",
+        "\u0434\u043e \u043a\u0430\u043a\u043e\u0439-\u0442\u043e \u0441\u0442\u0435\u043f\u0435\u043d\u0438",
+        "to some extent"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0434\u0438\u0442\u044c",
+        "to warn"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0430\u0442\u044c",
+        "to warn"
+      ],
+      [
+        "verb",
+        "\u043e\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c",
+        "to stop someone/smth"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u0442\u044c",
+        "to educate; to form"
+      ],
+      [
+        "noun",
+        "\u0440\u043e\u0434",
+        "gender, kin"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043b",
+        "floor; gender/sex"
+      ],
+      [
+        "noun",
+        "\u043f\u0442\u0435\u043d\u0435\u0446",
+        "baby bird"
+      ],
+      [
+        "noun",
+        "\u0432\u044b\u043b\u0443\u043f\u0435\u043d\u0438\u0435",
+        "hatching"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u043b\u0443\u043f\u0435\u044f\u0442\u044c\u0441\u044f",
+        "to hatch"
+      ],
+      [
+        "noun",
+        "\u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a",
+        "source, spring, fount"
+      ],
+      [
+        "noun",
+        "\u0431\u043b\u0430\u0433\u043e",
+        "the good, well-being"
+      ],
+      [
+        "adjective",
+        "\u0437\u0430\u0431\u043e\u0442\u044f\u0449\u0438\u0439\u0441\u044f",
+        "caring"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0441\u0445\u0432\u0430\u043b\u044f\u0442\u044c",
+        "to preach up, praise"
+      ],
+      [
+        "noun",
+        "\u0432\u043e\u0441\u0445\u0438\u0449\u0435\u043d\u0438\u0435",
+        "admiration, delight"
+      ],
+      [
+        "noun",
+        "\u0433\u043b\u0430\u0434\u043a\u043e\u0441\u0442\u044c",
+        "smoothness"
+      ],
+      [
+        "adjective",
+        "\u0440\u043e\u0441\u043a\u043e\u0448\u043d\u044b\u0439",
+        "luxurious"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0434\u043e\u0435\u0434\u0430\u0442\u044c",
+        "to bother, bore, tire"
+      ],
+      [
+        "adjective",
+        "\u043d\u0435\u043c\u044b\u0441\u043b\u0438\u043c\u044b\u0439",
+        "unthinkable"
+      ],
+      [
+        "noun",
+        "\u043e\u0441\u0442\u0440\u043e\u0443\u043c\u0438\u0435",
+        "wit"
+      ],
+      [
+        "adjective",
+        "\u043e\u0441\u0442\u0440\u043e\u0443\u043c\u043d\u044b\u0439",
+        "witty"
+      ],
+      [
+        "adjective",
+        "\u043d\u0435\u043e\u043f\u0438\u0441\u0443\u0435\u043c\u044b\u0439",
+        "indescribable"
+      ],
+      [
+        "adjective",
+        "\u043b\u0435\u0441\u0442\u043d\u044b\u0439",
+        "flattering"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0445\u0438\u0442\u0438\u0442\u044c",
+        "to abduct"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0434\u0447\u0438\u043d\u0438\u0442\u044c",
+        "to subdue"
+      ],
+      [
+        "noun",
+        "\u0438\u0437\u0432\u0438\u043d\u0435\u043d\u0438\u0435",
+        "an apology"
+      ],
+      [
+        "adjective",
+        "\u0440\u0430\u043d\u0435\u043d\u044b\u0439",
+        "wounded"
+      ],
+      [
+        "adjective",
+        "\u043e\u0437\u0430\u0431\u043e\u0447\u0435\u043d\u043d\u044b\u0439",
+        "preoccupied"
+      ],
+      [
+        "noun",
+        "\u0431\u043b\u0430\u0433\u043e\u0441\u043e\u0441\u0442\u0430\u044f\u043d\u0438\u0435",
+        "welfare, prosperity"
+      ],
+      [
+        "noun",
+        "\u0441\u043a\u043e\u0442",
+        "livestock, cattle"
+      ],
+      [
+        "adjective",
+        "\u043f\u0440\u043e\u0442\u044f\u0436\u043d\u044b\u0439",
+        "lingering, slow, lasting a for long time"
+      ],
+      [
+        "verb",
+        "\u043e\u0434\u043e\u0431\u0440\u044f\u0442\u044c",
+        "to approve, give the \"okay\""
+      ],
+      [
+        "verb",
+        "\u043e\u0434\u043e\u0431\u0440\u0438\u0442\u044c",
+        "to approve, give the \"okay\""
+      ],
+      [
+        "noun",
+        "\u043e\u0434\u043e\u0431\u0440\u0435\u043d\u0438\u0435",
+        "the \"okay\", approval"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u043e\u0434\u0440\u0435\u043d\u0438\u0435",
+        "encouragement"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u043e\u0434\u0440\u044f\u0442\u044c",
+        "to give encouragement"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u044a\u044f\u0442\u0438\u0435",
+        "hug, embrace"
+      ],
+      [
+        "verb",
+        "\u0436\u0443\u0436\u0436\u0430\u0442\u044c",
+        "to buzz"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0442\u0435\u043f\u043b\u0435\u0442\u044c",
+        "to grow warmer"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u0449\u0435\u043d\u0438\u0435",
+        "forgiveness"
+      ],
+      [
+        "noun",
+        "\u0443\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u0435",
+        "mention"
+      ],
+      [
+        "noun",
+        "\u0432\u044b\u0441\u0442\u0430\u0432\u043a\u0430",
+        "exhibition"
+      ],
+      [
+        "noun",
+        "\u0445\u043e\u0440",
+        "a choir"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u044c",
+        "to investigate"
+      ],
+      [
+        "noun",
+        "\u0440\u0430\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u0435",
+        "investigation"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u0438\u0442\u0430\u0442\u0435\u043b\u044c",
+        "inhabitant, permanent resident"
+      ],
+      [
+        "adjective",
+        "\u043f\u043e\u0434\u0434\u0435\u043b\u044c\u043d\u044b\u0439",
+        "fake, counterfit, forged"
+      ],
+      [
+        "noun",
+        "\u0432\u0435\u043a; \u0441\u0442\u043e\u043b\u0435\u0442\u0438\u0435",
+        "century"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u0441\u0442\u043e\u044f\u0442\u044c",
+        "to consist"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0434\u043e\u0435\u0441\u0442\u044c",
+        "to bother, bore, tire"
+      ]
+    ],
+    "type": "Media"
+  }
+}

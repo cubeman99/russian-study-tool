@@ -1,0 +1,79 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Colors",
+		"type": "categorical",
+		"cards": [
+			[
+				"adjective",
+				"белый",
+				"white"
+			],
+			[
+				"adjective",
+				"чёрный",
+				"black"
+			],
+			[
+				"adjective",
+				"красный",
+				"red"
+			],
+			[
+				"adjective",
+				"зелёный",
+				"green"
+			],
+			[
+				"adjective",
+				"жёлтый",
+				"yellow"
+			],
+			[
+				"adjective",
+				"синий",
+				"dark blue"
+			],
+			[
+				"adjective",
+				"голубой",
+				"light blue"
+			],
+			[
+				"adjective",
+				"оранжевый",
+				"orange (color)"
+			],
+			[
+				"adjective",
+				"коричневый",
+				"brown"
+			],
+			[
+				"adjective",
+				"серый",
+				"grey"
+			],
+			[
+				"adjective",
+				"розовый",
+				"pink"
+			],
+			[
+				"adjective",
+				"пурпурный",
+				"purple"
+			],
+			[
+				"adjective",
+				"серебриистый",
+				"golden (color)"
+			],
+			[
+				"adjective",
+				"золотистый",
+				"silver (color)"
+			]
+		]
+	}
+}

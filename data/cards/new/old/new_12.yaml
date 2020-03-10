@@ -1,66 +1,257 @@
-card_set:
-  name: New 12
-  version: 1
-  cards:
-    - [adjective, постоянный, 'constant, continuous, permanent']
-    - [adjective, креативный, creative]
-    - [adjective, криминальный, criminal]
-    - [adjective, мобильный, mobile]
-    - [adjective, прозрачный, 'transparent, clear']
-    - [adjective, солнечный, 'sunny, solar, sun']
-    - [adjective, обреченный, doomed]
-    - [adjective, глобальный, global]
-    - [adjective, политический, political]
-    - [adjective, личный, 'personal, private']
-    - [adverb, потихоньку, 'little by little, silently']
-    - [noun, впечатление, impression]
-    - [noun, эмоция, emotion]
-    - [noun, тема, topic]
-    - [noun, спешка, 'rush, hurry, haste']
-    - [noun, энергия, energy]
-    - [noun, забор, fence]
-    - [noun, свобода, freedom]
-    - [noun, борода, beard]
-    - [noun, колесо, wheel]
-    - [noun, космос, 'outer space, cosmos']
-    - [noun, нефть, oil (petroleum)]
-    - [noun, поведение, 'behavior, conduct']
-    - [noun, шина, tire]
-    - [noun, разговор, 'conversation, talk']
-    - [noun, шрам, scar]
-    - [noun, солдат, soldier]
-    - [noun, дворец, 'palace, castle']
-    - [noun, дневник, diary]
-    - [noun, воображение, imagination]
-    - [noun, ум, 'mind, wit, intelligence']
-    - [noun, королевство, kingdom]
-    - [noun, похищение, abduction]
-    - [noun, башня, tower]
-    - [noun, общество, society]
-    - [noun, выбор, 'choice, selection']
-    - [noun, итог, summary]
-    - [verb, перестать, 'to stop, quit something in progress']
-    - [verb, устать от, to get tired of]
-    - [verb, захватывать, 'to grab, grip, capture, captivate']
-    - [verb, ограничить, 'to limit, restrict']
-    - [verb, ограничивать, 'to limit, restrict']
-    - [verb, заблудиться, 'to get lost, go astray']
-    - [verb, отменяться, 'to call off, cancel']
-    - [verb, отмениться, 'to call off, cancel']
-    - [verb, подключить, to connect]
-    - [verb, тащить, 'to drag, to pull']
-    - [verb, гордиться, to be proud]
-    - [verb, украсть, to steal]
-    - [verb, справиться, 'to cope, deal, manage']
-    - [verb, раздражать, 'to annoy, irritate, provoke']
-    - [verb, окупаться, to pay off]
-    - [verb, дождаться, to wait for a long time]
-    - [phrase, в общем, 'overall, in general']
-    - [phrase, вести себя, 'to behave, conduct oneself']
-    - [phrase, Мне везёт!, Im in luck!]
-    - [phrase, что бы не случилось, whatever happens]
-    - [phrase, веская причина, good reason]
-    - [phrase, так далее, etc.]
-    - [phrase, "вот это да\uFEFF!", Woah!]
-    - [other, пошли, lets go]
-    - [interjection, увы, alas]
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 12",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"постоянный"
+			],
+			[
+				"adjective",
+				"креативный"
+			],
+			[
+				"adjective",
+				"криминальный"
+			],
+			[
+				"adjective",
+				"мобильный"
+			],
+			[
+				"adjective",
+				"прозрачный"
+			],
+			[
+				"adjective",
+				"солнечный"
+			],
+			[
+				"adjective",
+				"обреченный"
+			],
+			[
+				"adjective",
+				"глобальный"
+			],
+			[
+				"adjective",
+				"политический"
+			],
+			[
+				"adjective",
+				"личный"
+			],
+			[
+				"adverb",
+				"потихоньку"
+			],
+			[
+				"noun",
+				"впечатление"
+			],
+			[
+				"noun",
+				"эмоция"
+			],
+			[
+				"noun",
+				"тема"
+			],
+			[
+				"noun",
+				"спешка"
+			],
+			[
+				"noun",
+				"энергия"
+			],
+			[
+				"noun",
+				"забор"
+			],
+			[
+				"noun",
+				"свобода"
+			],
+			[
+				"noun",
+				"борода"
+			],
+			[
+				"noun",
+				"колесо"
+			],
+			[
+				"noun",
+				"космос"
+			],
+			[
+				"noun",
+				"нефть"
+			],
+			[
+				"noun",
+				"поведение"
+			],
+			[
+				"noun",
+				"шина"
+			],
+			[
+				"noun",
+				"разговор"
+			],
+			[
+				"noun",
+				"шрам"
+			],
+			[
+				"noun",
+				"солдат"
+			],
+			[
+				"noun",
+				"дворец"
+			],
+			[
+				"noun",
+				"дневник"
+			],
+			[
+				"noun",
+				"воображение"
+			],
+			[
+				"noun",
+				"ум"
+			],
+			[
+				"noun",
+				"королевство"
+			],
+			[
+				"noun",
+				"похищение"
+			],
+			[
+				"noun",
+				"башня"
+			],
+			[
+				"noun",
+				"общество"
+			],
+			[
+				"noun",
+				"выбор"
+			],
+			[
+				"noun",
+				"итог"
+			],
+			[
+				"verb",
+				"перестать"
+			],
+			[
+				"verb",
+				"устать от"
+			],
+			[
+				"verb",
+				"захватывать"
+			],
+			[
+				"verb",
+				"ограничить"
+			],
+			[
+				"verb",
+				"ограничивать"
+			],
+			[
+				"verb",
+				"заблудиться"
+			],
+			[
+				"verb",
+				"отменяться"
+			],
+			[
+				"verb",
+				"отмениться"
+			],
+			[
+				"verb",
+				"подключить"
+			],
+			[
+				"verb",
+				"тащить"
+			],
+			[
+				"verb",
+				"гордиться"
+			],
+			[
+				"verb",
+				"украсть"
+			],
+			[
+				"verb",
+				"справиться"
+			],
+			[
+				"verb",
+				"раздражать"
+			],
+			[
+				"verb",
+				"окупаться"
+			],
+			[
+				"verb",
+				"дождаться"
+			],
+			[
+				"phrase",
+				"в общем"
+			],
+			[
+				"phrase",
+				"вести себя"
+			],
+			[
+				"phrase",
+				"мне везет!"
+			],
+			[
+				"phrase",
+				"что бы не случилось"
+			],
+			[
+				"phrase",
+				"веская причина"
+			],
+			[
+				"phrase",
+				"так далее"
+			],
+			[
+				"phrase",
+				"вот это да﻿!"
+			],
+			[
+				"other",
+				"пошли"
+			],
+			[
+				"interjection",
+				"увы"
+			]
+		]
+	}
+}

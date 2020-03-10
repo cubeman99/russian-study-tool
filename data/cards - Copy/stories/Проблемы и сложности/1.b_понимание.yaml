@@ -1,0 +1,349 @@
+{
+  "card_set": {
+    "name": "1.b \u041f\u043e\u043d\u0438\u043c\u0430\u043d\u0438\u0435",
+    "version": 1,
+    "cards": [
+      [
+        "adverb",
+        "\u043e\u0447\u0435\u0432\u0438\u0434\u043d\u043e",
+        "obviously, apparently"
+      ],
+      [
+        "adverb",
+        "\u043f\u0440\u0430\u043a\u0442\u0438\u0447\u0435\u0441\u043a\u0438",
+        "practically"
+      ],
+      [
+        "adverb",
+        "\u0441\u0431\u043e\u043a\u0443",
+        "at the side of"
+      ],
+      [
+        "adjective",
+        "\u0443\u043d\u044b\u043b\u044b\u0439",
+        "mopey"
+      ],
+      [
+        "adjective",
+        "\u0436\u0438\u0437\u043d\u0435\u0440\u0430\u0434\u043e\u0441\u0442\u043d\u044b\u0439",
+        "cheerful (life-happy)"
+      ],
+      [
+        "adjective",
+        "\u0440\u0430\u0437\u0431\u0438\u0442\u044b\u0439",
+        "broken, beaten to peaces"
+      ],
+      [
+        "adjective",
+        "\u0441\u043a\u0435\u043f\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439",
+        "skeptical"
+      ],
+      [
+        "adjective",
+        "\u0434\u043e\u0431\u0440\u043e\u0441\u0435\u0440\u0434\u0435\u043d\u043d\u044b\u0439",
+        "kind-hearted"
+      ],
+      [
+        "adjective",
+        "\u043a\u043e\u0440\u043e\u043b\u0435\u0432\u0441\u043a\u0438\u0439",
+        "royal"
+      ],
+      [
+        "adjective",
+        "\u0431\u0435\u0433\u043b\u044b\u0439",
+        "runaway"
+      ],
+      [
+        "adjective",
+        "\u0443\u043f\u0440\u044f\u043c\u044b\u0439",
+        "stubborn"
+      ],
+      [
+        "adjective",
+        "\u0441\u0436\u0430\u0442\u044b\u0439",
+        "compressed"
+      ],
+      [
+        "adjective",
+        "\u0437\u0430\u0432\u0441\u0442\u0440\u0451\u043d\u043d\u044b\u0439",
+        "pointed"
+      ],
+      [
+        "noun",
+        "\u043a\u043e\u043d\u0447\u0438\u043a",
+        "tip"
+      ],
+      [
+        "noun",
+        "\u0445\u0430\u043e\u0441",
+        "chaos"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0434\u0434\u0430\u043d\u043d\u044b\u0439",
+        "subject (person)"
+      ],
+      [
+        "noun",
+        "\u0431\u0435\u0437\u0443\u0442\u0435\u0448\u043d\u043e\u0441\u0442\u044c",
+        "inconsolableness"
+      ],
+      [
+        "noun",
+        "\u0443\u0441\u0438\u043b\u0438\u0435",
+        "effort"
+      ],
+      [
+        "noun",
+        "\u044d\u043f\u043e\u0441",
+        "epic (story)"
+      ],
+      [
+        "noun",
+        "\u0447\u0435\u0441\u0442\u044c",
+        "honor"
+      ],
+      [
+        "noun",
+        "\u043a\u0440\u0443\u0447\u0438\u043d\u0430",
+        "grief"
+      ],
+      [
+        "noun",
+        "\u0432\u044b\u043f\u0443\u0441\u043a",
+        "release, issue"
+      ],
+      [
+        "noun",
+        "\u0433\u043b\u0443\u0431\u0438\u043d\u0430",
+        "depth, intensity"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043f\u044b\u0442\u043a\u0430",
+        "an attempt"
+      ],
+      [
+        "noun",
+        "\u043d\u0435\u0445\u0432\u0430\u0442\u043a\u0430",
+        "insuffency, lack of"
+      ],
+      [
+        "noun",
+        "\u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u0435",
+        "relationship"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u0440\u0435\u0442\u0435\u043d\u0438\u0435",
+        "the gaining of"
+      ],
+      [
+        "noun",
+        "\u0433\u0432\u0430\u0440\u0434\u0438\u044f",
+        "guard (such as the royal guard)"
+      ],
+      [
+        "noun",
+        "\u043d\u0430\u0434\u0435\u0436\u0434\u0430",
+        "hope"
+      ],
+      [
+        "noun",
+        "\u043c\u043e\u043b\u044c\u0431\u0430",
+        "prayer, plea"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0434\u044a\u0435\u043c",
+        "the rise, rising"
+      ],
+      [
+        "noun",
+        "\u043e\u043f\u0443\u0441\u043a\u0430\u043d\u0438\u0435",
+        "the lowering"
+      ],
+      [
+        "noun",
+        "\u0441\u0443\u043c\u0435\u0440\u043a\u0438",
+        "dusk, twilight"
+      ],
+      [
+        "noun",
+        "\u0442\u0440\u043e\u043d\u043d\u044b\u0439 \u0437\u0430\u043b",
+        "throne room"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043a\u0438\u043d\u0443\u0442\u044c",
+        "to leave"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u043e\u0434\u0440\u0438\u0442\u044c",
+        "to encourage, cheer up"
+      ],
+      [
+        "verb",
+        "\u0443\u0432\u0435\u043d\u0447\u0430\u0442\u044c\u0441\u044f \u0443\u0441\u043f\u0435\u0445\u043e\u043c",
+        "to be crowned with success"
+      ],
+      [
+        "verb",
+        "\u0438\u0441\u043f\u043e\u043b\u043d\u044f\u0442\u044c",
+        "to carry out, execute"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0437\u0432\u0435\u0441\u0435\u043b\u0438\u0442\u044c",
+        "to liven up"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u043f\u0443\u0441\u0442\u0438\u0442\u044c",
+        "to let out"
+      ],
+      [
+        "verb",
+        "\u0443\u0441\u043b\u0443\u0436\u0438\u0442\u044c",
+        "to serve"
+      ],
+      [
+        "verb",
+        "\u0442\u0432\u043e\u0440\u0438\u0442\u044c",
+        "to create (creatively)"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043c\u044b\u0441\u043b\u0438\u0442\u044c",
+        "to think, be in thought"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u0441\u043b\u0430\u0442\u044c",
+        "to banish"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0442\u0435\u0448\u0430\u0442\u044c\u0441\u044f (+ \u043d\u0430\u0434)",
+        "to make fun of"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0435\u0434\u0430\u0442\u044c",
+        "to betray"
+      ],
+      [
+        "verb",
+        "\u0438\u0437\u0431\u0430\u0432\u0438\u0442\u044c\u0441\u044f",
+        "to get rid of"
+      ],
+      [
+        "verb",
+        "\u0441\u043f\u0435\u0448\u0438\u0442\u044c; \u0442\u043e\u0440\u043e\u043f\u0438\u0442\u044c\u0441\u044f",
+        "to hurry"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0441\u043f\u0435\u0448\u0438\u0442\u044c",
+        "to hurry"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0441\u043a\u0440\u044b\u0442\u044c",
+        "to uncover"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0438\u0442\u044c",
+        "to discover, find out"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u0435\u0437\u0443\u043c\u0435\u0442\u044c",
+        "to go crazy"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u0432\u0435\u0440\u0433\u0430\u0442\u044c",
+        "to reject"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u0440\u0432\u0430\u0442\u044c",
+        "to rip off"
+      ],
+      [
+        "verb",
+        "\u043c\u0435\u0442\u043d\u0443\u0442\u044c",
+        "to chunk, throw"
+      ],
+      [
+        "verb",
+        "\u043d\u0435\u0441\u043e\u043c\u0430\u0442\u044c",
+        "to bear, carry"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c",
+        "to refuse"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u0440\u0438\u0446\u0430\u0442\u044c",
+        "to deny, negate"
+      ],
+      [
+        "verb",
+        "\u043e\u0441\u043a\u0430\u043b\u0438\u0442\u044c\u0441\u044f",
+        "to bare ones teeth (of animals)"
+      ],
+      [
+        "verb",
+        "\u0441\u043f\u0443\u0441\u043a\u0430\u0442\u044c\u0441\u044f",
+        "to go down, descend"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0441\u0442\u044b\u0442\u044c",
+        "to harden, freeze"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0441\u0442\u0443\u043f\u0438\u0442\u044c",
+        "to stand out"
+      ],
+      [
+        "conjunction",
+        "\u0434\u043e \u0442\u0435\u0445 \u043f\u043e\u0440",
+        "until, as long as"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u0432\u043b\u0435\u0447\u044c",
+        "to distract"
+      ],
+      [
+        "verb",
+        "\u0441\u0442\u0440\u0430\u0434\u0430\u0442\u044c",
+        "to suffer"
+      ],
+      [
+        "verb",
+        "\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u0442\u044c",
+        "to leave, drop, abandon"
+      ],
+      [
+        "verb",
+        "\u043a\u0438\u0432\u043d\u0443\u0442\u044c",
+        "to nod"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0441\u043f\u0430\u0445\u043d\u0443\u0442\u044c",
+        "to open wide, throw open"
+      ]
+    ],
+    "type": "Media"
+  }
+}

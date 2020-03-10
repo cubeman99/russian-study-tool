@@ -1,25 +1,89 @@
-card_set:
-  name: Root казать
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, сказать, to say]
-    - [verb, указать, 'to specify, indicate, point out']
-    - [verb, заказать, to order]
-    - [verb, показать, to show]
-    - [verb, наказать, to punish]
-    - [verb, казаться, to seem]
-    - [verb, высказать, to express]
-    - [verb, оказаться, to turn out to be]
-    - [verb, заказывать, to order]
-    - [verb, показывать, to show]
-    - [verb, отказывать, to refuse]
-    - [verb, рассказывать, 'to narrate, to tell']
-    - [noun, заказ, order]
-    - [noun, отказ, a refusal]
-    - [noun, сказка, fairy-tale]
-    - [noun, приказ, 'order, command']
-    - [noun, указка, a pointer stick]
-    - [noun, наказание, punishment]
-    - [phrase, 'как оказалось, ...', 'as it turned out, ...']
-    - [adjective, противопоказенный, 'contradictive, conter-indicative']
+{
+	"card_set": {
+		"version": 1,
+		"name": "Root казать",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"сказать"
+			],
+			[
+				"verb",
+				"указать"
+			],
+			[
+				"verb",
+				"заказать"
+			],
+			[
+				"verb",
+				"показать"
+			],
+			[
+				"verb",
+				"наказать"
+			],
+			[
+				"verb",
+				"казаться"
+			],
+			[
+				"verb",
+				"высказать"
+			],
+			[
+				"verb",
+				"оказаться"
+			],
+			[
+				"verb",
+				"заказывать"
+			],
+			[
+				"verb",
+				"показывать"
+			],
+			[
+				"verb",
+				"отказывать"
+			],
+			[
+				"verb",
+				"рассказывать"
+			],
+			[
+				"noun",
+				"заказ"
+			],
+			[
+				"noun",
+				"отказ"
+			],
+			[
+				"noun",
+				"сказка"
+			],
+			[
+				"noun",
+				"приказ"
+			],
+			[
+				"noun",
+				"указка"
+			],
+			[
+				"noun",
+				"наказание"
+			],
+			[
+				"phrase",
+				"как оказалось, ..."
+			],
+			[
+				"adjective",
+				"противопоказенный"
+			]
+		]
+	}
+}

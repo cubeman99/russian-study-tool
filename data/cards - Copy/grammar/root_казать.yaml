@@ -1,0 +1,109 @@
+{
+  "card_set": {
+    "name": "Root \u043a\u0430\u0437\u0430\u0442\u044c",
+    "version": 1,
+    "cards": [
+      [
+        "verb",
+        "\u0441\u043a\u0430\u0437\u0430\u0442\u044c",
+        "to say"
+      ],
+      [
+        "verb",
+        "\u0443\u043a\u0430\u0437\u0430\u0442\u044c",
+        "to specify, indicate, point out"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043a\u0430\u0437\u0430\u0442\u044c",
+        "to order"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u044c",
+        "to show"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u043a\u0430\u0437\u0430\u0442\u044c",
+        "to punish"
+      ],
+      [
+        "verb",
+        "\u043a\u0430\u0437\u0430\u0442\u044c\u0441\u044f",
+        "to seem"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0441\u043a\u0430\u0437\u0430\u0442\u044c",
+        "to express"
+      ],
+      [
+        "verb",
+        "\u043e\u043a\u0430\u0437\u0430\u0442\u044c\u0441\u044f",
+        "to turn out to be"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c",
+        "to order"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c",
+        "to show"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c",
+        "to refuse"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0441\u0441\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c",
+        "to narrate, to tell"
+      ],
+      [
+        "noun",
+        "\u0437\u0430\u043a\u0430\u0437",
+        "an order"
+      ],
+      [
+        "noun",
+        "\u043e\u0442\u043a\u0430\u0437",
+        "a refusal"
+      ],
+      [
+        "noun",
+        "\u0441\u043a\u0430\u0437\u043a\u0430",
+        "fairy-tale"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0438\u043a\u0430\u0437",
+        "order, command"
+      ],
+      [
+        "noun",
+        "\u0443\u043a\u0430\u0437\u043a\u0430",
+        "a pointer stick"
+      ],
+      [
+        "noun",
+        "\u043d\u0430\u043a\u0430\u0437\u0430\u043d\u0438\u0435",
+        "punishment"
+      ],
+      [
+        "phrase",
+        "\u043a\u0430\u043a \u043e\u043a\u0430\u0437\u0430\u043b\u043e\u0441\u044c, ...",
+        "as it turned out, ..."
+      ],
+      [
+        "adjective",
+        "\u043f\u0440\u043e\u0442\u0438\u0432\u043e\u043f\u043e\u043a\u0430\u0437\u0435\u043d\u043d\u044b\u0439",
+        "contradictive, conter-indicative"
+      ]
+    ],
+    "type": "Grammatical"
+  }
+}

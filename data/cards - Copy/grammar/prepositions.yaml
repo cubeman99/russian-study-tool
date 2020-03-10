@@ -1,0 +1,169 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Prepositions",
+		"type": "grammatical",
+		"cards": [
+			[
+				"preposition",
+				"в + acc.",
+				"to, into, in (motion)"
+			],
+			[
+				"preposition",
+				"на + acc.",
+				"to, into, onto, on (motion)"
+			],
+			[
+				"preposition",
+				"в + prep.",
+				"in, at (location)"
+			],
+			[
+				"preposition",
+				"на + prep.",
+				"on, at, in (location)"
+			],
+			[
+				"preposition",
+				"за + acc.",
+				"behind, beyond (motion)"
+			],
+			[
+				"preposition",
+				"под + acc.",
+				"under (motion)"
+			],
+			[
+				"preposition",
+				"за + instr.",
+				"behind, beyond (location)"
+			],
+			[
+				"preposition",
+				"под + instr.",
+				"under (location)"
+			],
+			[
+				"preposition",
+				"для",
+				"for the benefit of"
+			],
+			[
+				"preposition",
+				"с; со + gen.",
+				"from a place; since a time period"
+			],
+			[
+				"preposition",
+				"у",
+				"by, at a place"
+			],
+			[
+				"preposition",
+				"из",
+				"from, out of"
+			],
+			[
+				"preposition",
+				"о; об; обо",
+				"about, concerning"
+			],
+			[
+				"preposition",
+				"к",
+				"toward, up to a point; toward, by point in time, to a persion"
+			],
+			[
+				"preposition",
+				"от",
+				"from"
+			],
+			[
+				"preposition",
+				"против",
+				"against, opposed to"
+			],
+			[
+				"preposition",
+				"напротив",
+				"opposite of, across from"
+			],
+			[
+				"preposition",
+				"вместо",
+				"instead of"
+			],
+			[
+				"preposition",
+				"без",
+				"without"
+			],
+			[
+				"preposition",
+				"около",
+				"around, near"
+			],
+			[
+				"preposition",
+				"близ",
+				"near"
+			],
+			[
+				"preposition",
+				"после",
+				"after"
+			],
+			[
+				"preposition",
+				"до",
+				"before, until"
+			],
+			[
+				"preposition",
+				"по + dat.",
+				"by, in the way of"
+			],
+			[
+				"preposition",
+				"по + acc.",
+				"against, striking"
+			],
+			[
+				"preposition",
+				"между",
+				"between"
+			],
+			[
+				"preposition",
+				"ради",
+				"for the sake of"
+			],
+			[
+				"preposition",
+				"сквозь",
+				"through"
+			],
+			[
+				"preposition",
+				"вдоль + gen.",
+				"along"
+			],
+			[
+				"preposition",
+				"с; со + instr.",
+				"with something"
+			],
+			[
+				"preposition",
+				"помимо",
+				"besides, beside, aside from"
+			],
+			[
+				"preposition",
+				"насчёт",
+				"concerning, about"
+			]
+		]
+	}
+}

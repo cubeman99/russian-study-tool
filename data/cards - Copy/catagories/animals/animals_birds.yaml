@@ -1,0 +1,104 @@
+{
+  "card_set": {
+    "name": "Birds",
+    "version": 1,
+    "cards": [
+      [
+        "noun",
+        "\u043f\u0442\u0438\u0446\u0430",
+        "bird"
+      ],
+      [
+        "noun",
+        "\u0434\u044f\u0442\u0435\u043b",
+        "a woodpecker; a stupid person"
+      ],
+      [
+        "noun",
+        "\u0432\u043e\u0440\u043e\u0431\u0435\u0439",
+        "sparrow"
+      ],
+      [
+        "noun",
+        "\u0432\u043e\u0440\u043e\u043d\u0430",
+        "crow"
+      ],
+      [
+        "noun",
+        "\u0441\u043e\u0432\u0430",
+        "owl"
+      ],
+      [
+        "noun",
+        "\u043f\u0438\u043d\u0433\u0432\u0438\u043d",
+        "penguin"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043f\u0443\u0433\u0430\u0439",
+        "parrot"
+      ],
+      [
+        "noun",
+        "\u043c\u0430\u043b\u0438\u043d\u043e\u0432\u043a\u0430",
+        "robin"
+      ],
+      [
+        "noun",
+        "\u0433\u043e\u043b\u0443\u0431\u044c",
+        "pigeon"
+      ],
+      [
+        "noun",
+        "\u043f\u0430\u0432\u043b\u0438\u043d",
+        "peacock"
+      ],
+      [
+        "noun",
+        "\u0444\u043b\u0430\u043c\u0438\u043d\u0433\u043e",
+        "flamingo"
+      ],
+      [
+        "noun",
+        "\u0441\u0442\u0440\u0430\u0443\u0441",
+        "ostrich"
+      ],
+      [
+        "noun",
+        "\u043f\u0442\u0435\u043d\u0435\u0446",
+        "baby bird"
+      ],
+      [
+        "noun",
+        "\u0432\u044b\u043b\u0443\u043f\u0435\u043d\u0438\u0435",
+        "hatching"
+      ],
+      [
+        "noun",
+        "\u043a\u043b\u044e\u0432",
+        "beak"
+      ],
+      [
+        "noun",
+        "\u0433\u043d\u0435\u0437\u0434\u043e",
+        "a nest"
+      ],
+      [
+        "noun",
+        "\u0441\u043a\u043e\u0440\u043b\u0443\u043f\u043a\u0430",
+        "shell"
+      ],
+      [
+        "noun",
+        "\u043f\u0435\u0440\u043e",
+        "feather"
+      ],
+      [
+        "verb",
+        "\u043a\u043b\u0435\u0432\u0430\u0442\u044c",
+        "to peck"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "card_set": {
+    "name": "7. Verbs with Stem - \u041e",
+    "version": 1,
+    "cards": [
+      [
+        "verb",
+        "\u0431\u043e\u0440\u043e\u0442\u044c\u0441\u044f",
+        "to fight, struggle, combat"
+      ],
+      [
+        "verb",
+        "\u043a\u043e\u043b\u043e\u0442\u044c",
+        "to chop, split; to prick"
+      ],
+      [
+        "verb",
+        "\u043c\u043e\u043b\u043e\u0442\u044c",
+        "to grind"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043b\u043e\u0442\u044c",
+        "to weed"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0440\u043e\u0442\u044c",
+        "to undo, rip at the seams"
+      ]
+    ],
+    "type": "Grammatical"
+  }
+}

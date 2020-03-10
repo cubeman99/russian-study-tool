@@ -1,71 +1,273 @@
-card_set:
-  name: 10.b Ограбление
-  type: Media
-  version: 1
-  cards:
-    - [noun, ресница, an eyelash]
-    - [adjective, злопамятный, 'vindicative, not forgetting the evil done']
-    - [noun, добыча, prey]
-    - [adjective, знойный, 'sultry, hot, full of heat']
-    - [adjective, нейтральный, neutral]
-    - [adjective, жадный, greedy]
-    - [noun, предостережение, 'an admonishment, warning, caution']
-    - [verb, распознать, to recognize]
-    - [noun, уборная (комната), restroom]
-    - [adjective, игривый, playful]
-    - [noun, прилив, tide; a rush]
-    - [noun, гормон, hormone]
-    - [verb, попасть в ..., to get into ...]
-    - [noun, морда, 'muzzle, snout']
-    - [conjunction, как только ..., as soon as ...]
-    - [verb, развлекаться, to have a good time]
-    - [adjective, сочный, 'juicy, rich, lush']
-    - [verb, нырнуть, to take a dive]
-    - [noun, колонна, 'a column, piller']
-    - [noun, напарник, a partner in work]
-    - [noun, дубинка, 'a club, bludgeon']
-    - [noun, ограбление, 'a robbery, heist']
-    - [noun, слухи; сплетня, gossip]
-    - [verb, сместиться, 'to shift, change positions']
-    - [verb, рубить, to chop]
-    - [noun, разведчик, 'a scout, lookout']
-    - [noun, разведка, 'reconnaissance, scouting']
-    - [adjective, гордый, proud]
-    - [noun, обнаружение, detection]
-    - [verb, разработать, to develop (through reasearch)]
-    - [noun, воротник, fabric around shirt collar]
-    - [noun, ворот, gate; shirt collar]
-    - [verb, блестеть, 'to glisten, shine']
-    - [noun, невидимость, invisibility]
-    - [adjective, чёткий, 'clear, crisp, well defined']
-    - [noun, спектр, spectrum]
-    - [adjective, видимый, visible]
-    - [noun, замок; замок, a castle; a lock]
-    - [noun, рукоятка; рукоять, a handle of a tool]
-    - [noun, кодовый замок, a combination lock]
-    - [noun, чувствительность, sensitivity]
-    - [adjective, чувствительный, sensitive]
-    - [noun, обоняние, sense of smell]
-    - [noun, посещение, a visit]
-    - [adjective, противопоказенный, 'contradictive, conter-indicative']
-    - [phrase, прямо сейчас, right now]
-    - [adjective, болезненный, painful]
-    - [noun, головная поязка, a headband]
-    - [noun, цифра, 'a digit, number, numeral']
-    - [noun, близорукость, short-sightedness]
-    - [noun, польза, 'benefit, favor']
-    - [verb, оглушать, 'to stun, deafen, knock out']
-    - [adjective, оглушенный, 'stunned, deafened']
-    - [verb, стесняться, to hesitate]
-    - [noun, щелчок, a click]
-    - [noun, благоговение, awe]
-    - [verb, завидовать, to envy]
-    - [noun, холст, canvas (art)]
-    - [verb, вешать, to hang smth; to weigh]
-    - [noun, отказ, a refusal]
-    - [noun, изображение, an invention]
-    - [noun, восхищение, 'admiration, delight']
-    - [noun, сокровище, treasure]
-    - [adjective, доступный, 'available, accessible']
-    - [verb, изваять, to sculpt (out of stone)]
-    - [adverb, ныне, 'now, at present']
+{
+	"card_set": {
+		"version": 1,
+		"name": "10.b Ограбление",
+		"type": "media",
+		"cards": [
+			[
+				"noun",
+				"ресница"
+			],
+			[
+				"adjective",
+				"злопамятный"
+			],
+			[
+				"noun",
+				"добыча"
+			],
+			[
+				"adjective",
+				"знойный"
+			],
+			[
+				"adjective",
+				"нейтральный"
+			],
+			[
+				"adjective",
+				"жадный"
+			],
+			[
+				"noun",
+				"предостережение"
+			],
+			[
+				"verb",
+				"распознать"
+			],
+			[
+				"noun",
+				"уборная (комната)"
+			],
+			[
+				"adjective",
+				"игривый"
+			],
+			[
+				"noun",
+				"прилив"
+			],
+			[
+				"noun",
+				"гормон"
+			],
+			[
+				"verb",
+				"попасть в ..."
+			],
+			[
+				"noun",
+				"морда"
+			],
+			[
+				"conjunction",
+				"как только ..."
+			],
+			[
+				"verb",
+				"развлекаться"
+			],
+			[
+				"adjective",
+				"сочный"
+			],
+			[
+				"verb",
+				"нырнуть"
+			],
+			[
+				"noun",
+				"колонна"
+			],
+			[
+				"noun",
+				"напарник"
+			],
+			[
+				"noun",
+				"дубинка"
+			],
+			[
+				"noun",
+				"ограбление"
+			],
+			[
+				"noun",
+				"слухи; сплетня"
+			],
+			[
+				"verb",
+				"сместиться"
+			],
+			[
+				"verb",
+				"рубить"
+			],
+			[
+				"noun",
+				"разведчик"
+			],
+			[
+				"noun",
+				"разведка"
+			],
+			[
+				"adjective",
+				"гордый"
+			],
+			[
+				"noun",
+				"обнаружение"
+			],
+			[
+				"verb",
+				"разработать"
+			],
+			[
+				"noun",
+				"воротник"
+			],
+			[
+				"noun",
+				"ворот"
+			],
+			[
+				"verb",
+				"блестеть"
+			],
+			[
+				"noun",
+				"невидимость"
+			],
+			[
+				"adjective",
+				"четкий"
+			],
+			[
+				"noun",
+				"спектр"
+			],
+			[
+				"adjective",
+				"видимый"
+			],
+			[
+				"noun",
+				"замок; замок"
+			],
+			[
+				"noun",
+				"рукоятка; рукоять"
+			],
+			[
+				"noun",
+				"кодовый замок"
+			],
+			[
+				"noun",
+				"чувствительность"
+			],
+			[
+				"adjective",
+				"чувствительный"
+			],
+			[
+				"noun",
+				"обоняние"
+			],
+			[
+				"noun",
+				"посещение"
+			],
+			[
+				"adjective",
+				"противопоказенный"
+			],
+			[
+				"phrase",
+				"прямо сейчас"
+			],
+			[
+				"adjective",
+				"болезненный"
+			],
+			[
+				"noun",
+				"головная поязка"
+			],
+			[
+				"noun",
+				"цифра"
+			],
+			[
+				"noun",
+				"близорукость"
+			],
+			[
+				"noun",
+				"польза"
+			],
+			[
+				"verb",
+				"оглушать"
+			],
+			[
+				"adjective",
+				"оглушенный"
+			],
+			[
+				"verb",
+				"стесняться"
+			],
+			[
+				"noun",
+				"щелчок"
+			],
+			[
+				"noun",
+				"благоговение"
+			],
+			[
+				"verb",
+				"завидовать"
+			],
+			[
+				"noun",
+				"холст"
+			],
+			[
+				"verb",
+				"вешать"
+			],
+			[
+				"noun",
+				"отказ"
+			],
+			[
+				"noun",
+				"изображение"
+			],
+			[
+				"noun",
+				"восхищение"
+			],
+			[
+				"noun",
+				"сокровище"
+			],
+			[
+				"adjective",
+				"доступный"
+			],
+			[
+				"verb",
+				"изваять"
+			],
+			[
+				"adverb",
+				"ныне"
+			]
+		]
+	}
+}

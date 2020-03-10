@@ -1,0 +1,124 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Time",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"век; столетие",
+				"a century"
+			],
+			[
+				"noun",
+				"получаса",
+				"half an hour"
+			],
+			[
+				"adjective",
+				"текущий",
+				"current"
+			],
+			[
+				"adverb",
+				"теперь",
+				"now, nowadays"
+			],
+			[
+				"adjective",
+				"теперешний",
+				"present-day (nowadays)"
+			],
+			[
+				"adverb",
+				"сейчас",
+				"now, at the moment"
+			],
+			[
+				"phrase",
+				"прямо сейчас",
+				"right now"
+			],
+			[
+				"adjective",
+				"прошлый",
+				"last, past, previous"
+			],
+			[
+				"adjective",
+				"будущий",
+				"future"
+			],
+			[
+				"phrase",
+				"в ближайшее время",
+				"soon, in the near future"
+			],
+			[
+				"noun",
+				"день",
+				"day"
+			],
+			[
+				"noun",
+				"месяц",
+				"month"
+			],
+			[
+				"noun",
+				"минута",
+				"minute"
+			],
+			[
+				"interjection",
+				"минуточку",
+				"just a minute"
+			],
+			[
+				"noun",
+				"секунда",
+				"second (1/60 minute)"
+			],
+			[
+				"noun",
+				"год",
+				"year"
+			],
+			[
+				"noun",
+				"полгода",
+				"half-year"
+			],
+			[
+				"noun",
+				"квартал",
+				"quarter (of year); city block"
+			],
+			[
+				"phrase",
+				"прошлом году",
+				"last year"
+			],
+			[
+				"noun",
+				"будильник",
+				"alarm clock"
+			],
+			[
+				"noun",
+				"часы",
+				"clock, watch"
+			],
+			[
+				"noun",
+				"тысячелетие",
+				"a millenium"
+			],
+			[
+				"verb",
+				"продлить",
+				"to prolong, extend"
+			]
+		]
+	}
+}

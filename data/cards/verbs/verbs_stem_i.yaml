@@ -1,22 +1,77 @@
-card_set:
-  name: 8. Verbs with Stem - И
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, ходить, 'to walk, go on foot']
-    - [verb, возить, to transport]
-    - [verb, носить, to carry]
-    - [verb, платить, to pay]
-    - [verb, чистить, to clean]
-    - [verb, любить, 'to like, love']
-    - [verb, готовить, to prepare]
-    - [verb, ловить, to catch]
-    - [verb, ставить, 'to put, set (upright)']
-    - [verb, кормить, to feed]
-    - [verb, купить, to buy]
-    - [verb, варить, to boil]
-    - [verb, говорить, to speak]
-    - [verb, жениться DELETEME, to get married]
-    - [verb, курить, to smoke]
-    - [verb, учить, to teach; to study]
-    - [verb, хвалить, to praise]
+{
+	"card_set": {
+		"version": 1,
+		"name": "8. Verbs with Stem - И",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"ходить"
+			],
+			[
+				"verb",
+				"возить"
+			],
+			[
+				"verb",
+				"носить"
+			],
+			[
+				"verb",
+				"платить"
+			],
+			[
+				"verb",
+				"чистить"
+			],
+			[
+				"verb",
+				"любить"
+			],
+			[
+				"verb",
+				"готовить"
+			],
+			[
+				"verb",
+				"ловить"
+			],
+			[
+				"verb",
+				"ставить"
+			],
+			[
+				"verb",
+				"кормить"
+			],
+			[
+				"verb",
+				"купить"
+			],
+			[
+				"verb",
+				"варить"
+			],
+			[
+				"verb",
+				"говорить"
+			],
+			[
+				"verb",
+				"жениться deleteme"
+			],
+			[
+				"verb",
+				"курить"
+			],
+			[
+				"verb",
+				"учить"
+			],
+			[
+				"verb",
+				"хвалить"
+			]
+		]
+	}
+}

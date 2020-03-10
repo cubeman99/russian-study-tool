@@ -1,38 +1,149 @@
-card_set:
-  name: Adverbs of Place
-  type: Categorical
-  version: 1
-  cards:
-    - [adverb, где, where]
-    - [adverb, куда, where to]
-    - [adverb, откуда, from where]
-    - [adverb, здесь, here]
-    - [adverb, сюда, to here]
-    - [adverb, отсюда, from here]
-    - [adverb, там, there]
-    - [adverb, туда, to there]
-    - [adverb, оттуда, from there]
-    - [adverb, везде; всюду, everywhere]
-    - [adverb, отовсюду, from everywhere]
-    - [adverb, дома, at home]
-    - [adverb, домой, to home]
-    - [adverb, слева, on the left]
-    - [adverb, налево, to the left]
-    - [adverb, справа, on the right]
-    - [adverb, направо, to the right]
-    - [adverb, впереди, 'in front, ahead']
-    - [adverb, вперёд, 'forward, ahead']
-    - [adverb, 'позади, сзади', behind]
-    - [adverb, назад, 'back(ward), ago']
-    - [adverb, наверху, above]
-    - [adverb, наверх, up(ward)]
-    - [adverb, сверху, 'from above, on top of']
-    - [adverb, внизу, below]
-    - [adverb, вниз, down(ward)]
-    - [adverb, снизу, from below]
-    - [adverb, внутри, inside]
-    - [adverb, внутрь, to inside]
-    - [adverb, изнутри, from inside]
-    - [adverb, снаружи, on the outside]
-    - [adverb, наружу, to outside]
-    - [adverb, прямо, straight]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Adverbs of Place",
+		"type": "categorical",
+		"cards": [
+			[
+				"adverb",
+				"где"
+			],
+			[
+				"adverb",
+				"куда"
+			],
+			[
+				"adverb",
+				"откуда"
+			],
+			[
+				"adverb",
+				"здесь"
+			],
+			[
+				"adverb",
+				"сюда"
+			],
+			[
+				"adverb",
+				"отсюда"
+			],
+			[
+				"adverb",
+				"там"
+			],
+			[
+				"adverb",
+				"туда"
+			],
+			[
+				"adverb",
+				"оттуда"
+			],
+			[
+				"adverb",
+				"везде; всюду"
+			],
+			[
+				"adverb",
+				"отовсюду"
+			],
+			[
+				"adverb",
+				"дома"
+			],
+			[
+				"adverb",
+				"домой"
+			],
+			[
+				"adverb",
+				"слева"
+			],
+			[
+				"adverb",
+				"налево"
+			],
+			[
+				"adverb",
+				"справа"
+			],
+			[
+				"adverb",
+				"направо"
+			],
+			[
+				"adverb",
+				"впереди"
+			],
+			[
+				"adverb",
+				"вперед"
+			],
+			[
+				"adverb",
+				"позади, сзади"
+			],
+			[
+				"adverb",
+				"назад"
+			],
+			[
+				"adverb",
+				"наверху"
+			],
+			[
+				"adverb",
+				"наверх"
+			],
+			[
+				"adverb",
+				"сверху"
+			],
+			[
+				"adverb",
+				"внизу"
+			],
+			[
+				"adverb",
+				"вниз"
+			],
+			[
+				"adverb",
+				"снизу"
+			],
+			[
+				"adverb",
+				"внутри"
+			],
+			[
+				"adverb",
+				"внутрь"
+			],
+			[
+				"adverb",
+				"изнутри"
+			],
+			[
+				"adverb",
+				"снаружи"
+			],
+			[
+				"adverb",
+				"наружу"
+			],
+			[
+				"adverb",
+				"прямо"
+			],
+			[
+				"adverb",
+				"следом"
+			],
+			[
+				"adverb",
+				"вслед + instr."
+			]
+		]
+	}
+}

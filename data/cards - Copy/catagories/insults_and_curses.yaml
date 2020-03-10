@@ -1,0 +1,129 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Insults and Curses",
+		"type": "categorical",
+		"cards": [
+			[
+				"verb",
+				"ебать",
+				"to fuck"
+			],
+			[
+				"interjection",
+				"отвали!",
+				"get lost! fuck off!"
+			],
+			[
+				"interjection",
+				"чёрт",
+				"hells balls; darn"
+			],
+			[
+				"noun",
+				"блин",
+				"pancake; safe version of блять"
+			],
+			[
+				"noun",
+				"дурак (m), дура (f)",
+				"fool"
+			],
+			[
+				"noun",
+				"зануда",
+				"tedious and annoyingly obsessive person"
+			],
+			[
+				"noun",
+				"урод",
+				"freak"
+			],
+			[
+				"noun",
+				"дебил",
+				"moron"
+			],
+			[
+				"adjective",
+				"проклятый",
+				"damned, cursed"
+			],
+			[
+				"verb",
+				"проклинать",
+				"to curse"
+			],
+			[
+				"verb",
+				"проклясть",
+				"to curse"
+			],
+			[
+				"verb",
+				"ругаться",
+				"to swear, curse"
+			],
+			[
+				"phrase",
+				"заткнись!",
+				"shut up!"
+			],
+			[
+				"noun",
+				"разиня",
+				"scatterbrain"
+			],
+			[
+				"noun",
+				"козёл",
+				"goat (male)"
+			],
+			[
+				"noun",
+				"корова",
+				"cow"
+			],
+			[
+				"noun",
+				"дятел",
+				"a woodpecker; a stupid person"
+			],
+			[
+				"noun",
+				"идиот",
+				"idiot"
+			],
+			[
+				"noun",
+				"мудак",
+				"asshole"
+			],
+			[
+				"noun",
+				"подонок",
+				"scumbag"
+			],
+			[
+				"noun",
+				"бардак",
+				"a complete mess"
+			],
+			[
+				"noun",
+				"головорез",
+				"a desparate man (mischievous, bandit, etc.)"
+			],
+			[
+				"phrase",
+				"валять дурака",
+				"to make a fool of oneself"
+			],
+			[
+				"noun",
+				"зазнайка",
+				"a know-it-all, arrogent person"
+			]
+		]
+	}
+}

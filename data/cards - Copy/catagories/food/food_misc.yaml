@@ -1,0 +1,154 @@
+{
+  "card_set": {
+    "name": "Misc Food",
+    "version": 1,
+    "cards": [
+      [
+        "noun",
+        "\u043c\u0443\u043a\u0430",
+        "flour"
+      ],
+      [
+        "noun",
+        "\u0445\u043b\u0435\u0431",
+        "bread"
+      ],
+      [
+        "noun",
+        "\u0431\u043b\u0438\u043d",
+        "pancake; safe version of \u0431\u043b\u044f\u0442\u044c"
+      ],
+      [
+        "noun",
+        "\u0431\u0435\u043b\u044b\u0439 \u0445\u043b\u0435\u0431",
+        "white bread"
+      ],
+      [
+        "noun",
+        "\u0447\u0451\u0440\u043d\u044b\u0439 \u0445\u043b\u0435\u0431",
+        "black bread (dark rye bread)"
+      ],
+      [
+        "noun",
+        "\u043a\u0440\u0443\u043f\u0430",
+        "grain"
+      ],
+      [
+        "noun",
+        "\u043e\u0432\u0451\u0441",
+        "oats"
+      ],
+      [
+        "noun",
+        "\u0433\u0440\u0435\u0447\u043a\u0430",
+        "buckwheat"
+      ],
+      [
+        "noun",
+        "\u044f\u0447\u043c\u0435\u043d\u044c",
+        "barley"
+      ],
+      [
+        "noun",
+        "\u043f\u0448\u0435\u043d\u043e",
+        "millet"
+      ],
+      [
+        "noun",
+        "\u0440\u0438\u0441",
+        "rice"
+      ],
+      [
+        "noun",
+        "\u0441\u044b\u0440",
+        "cheese"
+      ],
+      [
+        "noun",
+        "\u044f\u0439\u0446\u043e",
+        "egg"
+      ],
+      [
+        "noun",
+        "\u043c\u0430\u0441\u043b\u043e",
+        "butter"
+      ],
+      [
+        "noun",
+        "\u043a\u0430\u0440\u0442\u043e\u0444\u0435\u043b\u044c \u0444\u0440\u0438",
+        "french fries"
+      ],
+      [
+        "noun",
+        "\u0432\u0430\u0440\u0435\u043d\u044c\u0435",
+        "jam"
+      ],
+      [
+        "noun",
+        "\u043f\u0438\u0446\u0446\u0430",
+        "pizza"
+      ],
+      [
+        "noun",
+        "\u0441\u043e\u0441\u0438\u0441\u043a\u0430",
+        "hotdog"
+      ],
+      [
+        "noun",
+        "\u0433\u0430\u043c\u0431\u0443\u0440\u0433\u0435\u0440",
+        "hamburger"
+      ],
+      [
+        "noun",
+        "\u0442\u043e\u043c\u0430\u0442\u043d\u044b\u0439 \u0441\u043e\u0443\u0441",
+        "ketchup"
+      ],
+      [
+        "noun",
+        "\u0441\u043e\u0443\u0441",
+        "sauce"
+      ],
+      [
+        "noun",
+        "\u0431\u0443\u0442\u0435\u0440\u0431\u0440\u043e\u0434",
+        "sandwich"
+      ],
+      [
+        "noun",
+        "\u0441\u0443\u043f",
+        "soup"
+      ],
+      [
+        "noun",
+        "\u0441\u043c\u0435\u0442\u0430\u043d\u0430",
+        "sour cream"
+      ],
+      [
+        "noun",
+        "\u043f\u0438\u0449\u0430",
+        "meals"
+      ],
+      [
+        "noun",
+        "\u0437\u0430\u0432\u0442\u0440\u0430\u043a",
+        "breakfast"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u0435\u0434",
+        "lunch"
+      ],
+      [
+        "noun",
+        "\u0443\u0436\u0438\u043d",
+        "dinner"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043b\u0434\u043d\u0438\u043a",
+        "supper"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

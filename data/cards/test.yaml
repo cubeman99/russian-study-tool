@@ -1,20 +1,85 @@
-card_set:
-  name: Test Set
-  type: Categorical
-  version: 1
-  cards:
-    - [noun, стол, table]
-    - [verb, родить, to give birth]
-    - [adjective, умелый, skillfull]
-    - [verb, уметь, to know how]
-    - [verb, заметить, 'to notice, observe']
-    - [verb, замечать, to notice]
-    - [conjunction, 'прежде, чем ...', before ... (implies intent)]
-    - [conjunction, до того как ..., before ...; before the fact that ...]
-    - [noun, подушка, pillow]
-    - [noun, измена, treason]
-    - [noun, столл, tablesjfgtest]
-    - [verb, думать, to think]
-    - [noun, спор, 'dispute, argument']
-    - [verb, спорить, to argue]
-    - [phrase, или нет, '... or not']
+{
+	"card_set": {
+		"version": 1,
+		"name": "Test Set",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"стол"
+			],
+			[
+				"verb",
+				"родить"
+			],
+			[
+				"adjective",
+				"умелый"
+			],
+			[
+				"verb",
+				"уметь"
+			],
+			[
+				"verb",
+				"заметить"
+			],
+			[
+				"verb",
+				"замечать"
+			],
+			[
+				"conjunction",
+				"прежде, чем"
+			],
+			[
+				"conjunction",
+				"до того как"
+			],
+			[
+				"noun",
+				"подушка"
+			],
+			[
+				"noun",
+				"измена"
+			],
+			[
+				"noun",
+				"столл"
+			],
+			[
+				"verb",
+				"думать"
+			],
+			[
+				"noun",
+				"спор"
+			],
+			[
+				"verb",
+				"спорить"
+			],
+			[
+				"phrase",
+				"или нет"
+			],
+			[
+				"phrase",
+				"test card 1 deleteme"
+			],
+			[
+				"verb",
+				"воспрещать"
+			],
+			[
+				"phrase",
+				"к сложолению deleteme"
+			],
+			[
+				"noun",
+				"холостой"
+			]
+		]
+	}
+}

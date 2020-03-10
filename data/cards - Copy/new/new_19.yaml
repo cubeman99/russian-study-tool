@@ -1,0 +1,324 @@
+{
+  "card_set": {
+    "name": "New 19",
+    "version": 1,
+    "cards": [
+      [
+        "adjective",
+        "\u043d\u0435\u043f\u0440\u0438\u043b\u0438\u0447\u043d\u044b\u0439",
+        "indecent"
+      ],
+      [
+        "adjective",
+        "\u043f\u0440\u0438\u043b\u0438\u0447\u043d\u044b\u0439",
+        "decent"
+      ],
+      [
+        "adjective",
+        "\u0438\u0437\u0440\u044f\u0434\u043d\u044b\u0439",
+        "fair, hefty, significant in quantity"
+      ],
+      [
+        "adjective",
+        "\u043f\u0440\u0435\u0441\u0442\u0443\u043f\u043d\u044b\u0439",
+        "criminal, felonious"
+      ],
+      [
+        "adjective",
+        "\u0436\u0438\u0432\u043e\u043f\u0438\u0441\u043d\u044b\u0439",
+        "scenic, picturesque"
+      ],
+      [
+        "adjective",
+        "\u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439",
+        "free (without pay)"
+      ],
+      [
+        "adjective",
+        "\u0431\u0435\u0441\u043a\u0440\u0430\u0439\u043d\u044b\u0439",
+        "immense, boundless"
+      ],
+      [
+        "adverb",
+        "\u0412\u043a\u0440\u0430\u0442\u0446\u0435, ...",
+        "In short, ..."
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0438\u0437\u0432\u0430\u043d\u0438\u0435",
+        "calling, vocation"
+      ],
+      [
+        "noun",
+        "\u0438\u0437\u0443\u043c\u0440\u0443\u0434",
+        "emerald"
+      ],
+      [
+        "noun",
+        "\u043e\u043f\u0435\u0447\u0430\u0442\u043a\u0430",
+        "typo"
+      ],
+      [
+        "noun",
+        "\u0437\u0430\u0440\u043f\u043b\u0430\u0442\u0430",
+        "salery"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u0440\u0430\u0437\u0435\u0446",
+        "sample"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0438\u0432\u0430\u043b",
+        "a stop along the way"
+      ],
+      [
+        "noun",
+        "\u0440\u0430\u0441\u043f\u043e\u0440\u044f\u0436\u0435\u043d\u0438\u0435",
+        "disposition, order, command"
+      ],
+      [
+        "noun",
+        "\u0431\u0430\u0440\u0434\u0430\u043a",
+        "a complete mess"
+      ],
+      [
+        "noun",
+        "\u0437\u0430\u0432\u043e\u0435\u0432\u0430\u043d\u0438\u0435",
+        "conquest"
+      ],
+      [
+        "noun",
+        "\u043d\u0430\u0433\u0440\u0430\u0434\u0430",
+        "reward"
+      ],
+      [
+        "noun",
+        "\u0443\u0440\u043e\u0434",
+        "freak"
+      ],
+      [
+        "noun",
+        "\u0434\u0435\u0431\u0438\u043b",
+        "moron"
+      ],
+      [
+        "noun",
+        "\u0441\u0445\u043e\u0434\u043a\u0430",
+        "gathering"
+      ],
+      [
+        "noun",
+        "\u043c\u0430\u0440\u0448\u0440\u0443\u0442",
+        "route"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0435\u0434\u0430\u043d\u043d\u043e\u0441\u0442\u044c",
+        "devotion, dedication"
+      ],
+      [
+        "noun",
+        "\u0430\u043c\u0435\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0438\u0439 \u0433\u043e\u0440\u043a\u0438",
+        "roller coaster"
+      ],
+      [
+        "noun",
+        "\u043e\u0449\u0443\u0449\u0435\u043d\u0438\u0435",
+        "feeling, sensation"
+      ],
+      [
+        "noun",
+        "\u043d\u0430\u0443\u043a\u0430",
+        "science"
+      ],
+      [
+        "noun",
+        "\u0441\u0441\u044b\u043b\u043a\u0430",
+        "link, reference"
+      ],
+      [
+        "noun",
+        "\u043a\u0443\u0437\u043d\u0438\u0446\u0430",
+        "forge"
+      ],
+      [
+        "noun",
+        "\u044d\u043f\u043e\u0445\u0430",
+        "era, age"
+      ],
+      [
+        "noun",
+        "\u0430\u043b\u043c\u0430\u0437",
+        "diamond"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0432\u044b\u0441\u0438\u0442\u044c",
+        "to increase, raise"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0432\u044b\u0448\u0430\u0442\u044c",
+        "to increase, raise"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u043f\u043e\u043b\u043d\u044f\u0442\u044c",
+        "to accomplish, execute, perform"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u043f\u043e\u043b\u043d\u0438\u0442\u044c",
+        "to accomplish, execute, perform"
+      ],
+      [
+        "verb",
+        "\u043b\u044e\u0431\u043e\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to look at in pleasure"
+      ],
+      [
+        "verb",
+        "\u043f\u044f\u043b\u0438\u0442\u044c\u0441\u044f",
+        "to stare"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0442\u044c",
+        "to observe (empirically)"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0433\u043b\u044f\u0434\u0435\u0442\u044c",
+        "to look (appearance)"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0441\u043f\u0430\u043a\u043e\u0432\u0430\u0442\u044c",
+        "to unpack"
+      ],
+      [
+        "verb",
+        "\u0445\u043e\u0440\u043e\u043d\u0438\u0442\u044c",
+        "to bury, tomb, lay to rest"
+      ],
+      [
+        "verb",
+        "\u0441\u043b\u0438\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to flow together, merge, fuse"
+      ],
+      [
+        "verb",
+        "\u0441\u043b\u0438\u0442\u044c\u0441\u044f",
+        "to flow together, merge, fuse"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0449\u0438\u0449\u0430\u0442\u044c",
+        "to protect"
+      ],
+      [
+        "verb",
+        "\u0441\u0443\u0434\u0438\u0442\u044c",
+        "to judge"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0436\u0430\u043b\u043e\u0432\u0430\u0442\u044c",
+        "to welcome"
+      ],
+      [
+        "verb",
+        "\u0441\u043a\u0443\u0447\u0430\u0442\u044c",
+        "to miss due to absance; to feel bored"
+      ],
+      [
+        "verb",
+        "\u0448\u043f\u0438\u043e\u043d\u0438\u0442\u044c",
+        "to spy"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0434\u0440\u0435\u043c\u0430\u0442\u044c",
+        "to doze off"
+      ],
+      [
+        "verb",
+        "\u0434\u0440\u0430\u043b\u0438\u0442\u044c",
+        "to tear up (teardrops)"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0431\u0440\u0430\u0442\u044c",
+        "to dial; to gather, assemble"
+      ],
+      [
+        "verb",
+        "\u043e\u0433\u043e\u0440\u0447\u0438\u0442\u044c",
+        "to upset (cause grief)"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0441\u043a\u043e\u043b\u043e\u0442\u044c",
+        "to split"
+      ],
+      [
+        "verb",
+        "\u0431\u0435\u0434\u0430",
+        "trouble"
+      ],
+      [
+        "phrase",
+        "\u043d\u0438\u043a\u043e\u0433\u0434\u0430 \u0435\u0449\u0451 \u043d\u0435 \u0431\u044b\u043b\u043e \u043d\u0438\u0447\u0435\u0433\u043e \u0438 \u043d\u0438\u043a\u043e\u0433\u043e \u043f\u043e\u0434\u043e\u0431\u043d\u043e\u0433\u043e",
+        "there has never been anything or anyone like this"
+      ],
+      [
+        "phrase",
+        "\u0442\u0430\u043a \u043d\u0435\u043b\u044c\u0437\u044f",
+        "you cant do it in this way"
+      ],
+      [
+        "phrase",
+        "\u0427\u0442\u043e \u0442\u044b \u0445\u043e\u0447\u0435\u0448\u044c, \u0447\u0442\u043e\u0431\u044b \u044f \u0441\u043a\u0430\u0437\u0430\u043b?",
+        "What do you want me to say?"
+      ],
+      [
+        "phrase",
+        "\u0434\u0435\u043d\u044c\u0433\u0438 \u043d\u0435 \u043f\u0430\u0445\u043d\u0443\u0442\u044c",
+        "money doesnt smell (the ends justify the means)"
+      ],
+      [
+        "phrase",
+        "\u0443\u0434\u0430\u0440\u0438\u0442\u044c \u0432 \u0433\u0440\u044f\u0437\u044c \u043b\u0438\u0446\u043e\u043c",
+        "to fall into the dirt face first"
+      ],
+      [
+        "phrase",
+        "\u0443 \u0447\u0451\u0440\u0442\u0430 \u043d\u0430 \u043a\u0443\u043b\u0438\u0447\u0438\u043a\u0430\u0445",
+        "hell knows where"
+      ],
+      [
+        "phrase",
+        "\u0443\u0442\u0440\u0430 \u0432\u0435\u0447\u0435\u0440\u0430 \u043c\u0443\u0434\u0440\u0435\u043d\u0435\u0435",
+        "morning is wiser than the evening (lets sleep on it)"
+      ],
+      [
+        "phrase",
+        "\u043d\u0438 \u0441 \u043c\u0435\u0441\u0442\u0430",
+        "Dont move!"
+      ],
+      [
+        "phrase",
+        "\u044f \u0438\u043c\u0435\u044e \u0432 \u0432\u0438\u0434\u0443, ...",
+        "I mean, ..."
+      ],
+      [
+        "phrase",
+        "\u043a\u0430\u043a \u0442\u0435\u0431\u0435 \u0443\u0433\u043e\u0434\u043d\u043e",
+        "as you please"
+      ]
+    ],
+    "type": "Other"
+  }
+}

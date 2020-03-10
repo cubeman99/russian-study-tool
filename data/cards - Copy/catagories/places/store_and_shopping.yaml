@@ -1,0 +1,109 @@
+{
+  "card_set": {
+    "name": "Store & Shopping",
+    "version": 1,
+    "cards": [
+      [
+        "noun",
+        "\u0446\u0435\u043d\u0430",
+        "price"
+      ],
+      [
+        "noun",
+        "\u0437\u0430\u043a\u0430\u0437",
+        "an order"
+      ],
+      [
+        "verb",
+        "\u0441\u0442\u043e\u0438\u0442\u044c",
+        "to cost"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u0434\u0430\u0432\u0435\u0446, \u043f\u0440\u043e\u0434\u0430\u0432\u0449\u0438\u0446\u0430",
+        "salesperson"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u0434\u0430\u0432\u0435\u0446",
+        "sales person, seller"
+      ],
+      [
+        "noun",
+        "\u043d\u0430\u043b\u0438\u0447\u043d\u044b\u0435 (\u0434\u0435\u043d\u044c\u0433\u0438)",
+        "cash"
+      ],
+      [
+        "noun",
+        "\u043a\u0430\u0441\u0441\u0438\u0440",
+        "cashier"
+      ],
+      [
+        "noun",
+        "\u043c\u0430\u0433\u0430\u0437\u0438\u043d",
+        "store"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0438\u043b\u0430\u0432\u043a\u0430",
+        "store counter"
+      ],
+      [
+        "noun",
+        "\u043b\u0430\u0432\u043a\u0430",
+        "shop, small store"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043a\u0443\u043f\u0430\u0442\u0435\u043b\u044c",
+        "shopper"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043a\u0443\u043f\u043a\u0430",
+        "purchase"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043a\u0443\u043f\u0430\u0442\u044c",
+        "to buy"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c",
+        "to order"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043a\u0430\u0437\u0430\u0442\u044c",
+        "to order"
+      ],
+      [
+        "verb",
+        "\u043a\u0443\u043f\u0438\u0442\u044c",
+        "to buy"
+      ],
+      [
+        "verb",
+        "\u0442\u0440\u0430\u0442\u0438\u0442\u044c",
+        "to spend"
+      ],
+      [
+        "noun",
+        "\u0441\u0442\u043e\u0439\u043a\u0430",
+        "a rack, stand, support beam"
+      ],
+      [
+        "noun",
+        "\u0434\u0435\u043d\u044c\u0433\u0438",
+        "money"
+      ],
+      [
+        "noun",
+        "\u0441\u0434\u0430\u0447\u0430",
+        "change (money)"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

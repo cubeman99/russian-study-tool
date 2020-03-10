@@ -1,21 +1,77 @@
-card_set:
-  name: Conjuction Phrases
-  type: Grammatical
-  version: 1
-  cards:
-    - [conjunction, до того как ..., before ...; before the fact that ...]
-    - [conjunction, перед тем как ..., (right) before the fact that ...]
-    - [conjunction, после того как ..., after the fact that ...]
-    - [conjunction, в то время как, 'while, whilst']
-    - [conjunction, с тех пор как, since]
-    - [conjunction, до тех пор; пока … не, 'until, so long as']
-    - [conjunction, 'несмотря на то, что ...', despite the fact that]
-    - [conjunction, как будто; будто бы; как будто бы; словно, 'as though, as if']
-    - [conjunction, 'с тем, чтобы ...', 'with the purpose of, so that']
-    - [conjunction, благодаря тому что ..., thanks to the fact that ...]
-    - [conjunction, 'из-за того, что ...', on account of ...]
-    - [conjunction, поскольку, 'as long as, in so far as, since']
-    - [conjunction, 'ввиду того, что ...', in view of (the fact that)]
-    - [conjunction, 'вследствие того, что ...', in consequence of (the fact that)]
-    - [conjunction, 'в силу того, что ...', 'because of, on the strength of (the fact that)']
-    - [conjunction, 'прежде, чем ...', before ... (implies intent)]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Conjuction Phrases",
+		"type": "categorical",
+		"cards": [
+			[
+				"conjunction",
+				"до того как"
+			],
+			[
+				"conjunction",
+				"перед тем как"
+			],
+			[
+				"conjunction",
+				"после того как ..."
+			],
+			[
+				"conjunction",
+				"в то время как"
+			],
+			[
+				"conjunction",
+				"с тех пор как"
+			],
+			[
+				"conjunction",
+				"до тех пор; пока … не"
+			],
+			[
+				"conjunction",
+				"несмотря на то, что ..."
+			],
+			[
+				"conjunction",
+				"как будто; будто бы; как будто бы; словно"
+			],
+			[
+				"conjunction",
+				"с тем, чтобы ..."
+			],
+			[
+				"conjunction",
+				"благодаря тому что ..."
+			],
+			[
+				"conjunction",
+				"из-за того, что ..."
+			],
+			[
+				"conjunction",
+				"поскольку"
+			],
+			[
+				"conjunction",
+				"ввиду того, что ..."
+			],
+			[
+				"conjunction",
+				"вследствие того, что ..."
+			],
+			[
+				"conjunction",
+				"в силу того, что ..."
+			],
+			[
+				"conjunction",
+				"прежде, чем"
+			],
+			[
+				"conjunction",
+				"до тех пор"
+			]
+		]
+	}
+}

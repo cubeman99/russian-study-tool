@@ -1,71 +1,273 @@
-card_set:
-  name: New 02
-  type: Other
-  version: 1
-  cards:
-    - [adjective, родной, native]
-    - [adjective, шикарный, 'chic, posh, stylish']
-    - [adjective, шикарен, gorgeous]
-    - [adjective, удачный, successful]
-    - [adverb, вместе; дружно, together]
-    - [adverb, наверное, probably]
-    - [adverb, ненадолго, 'briefly, for a short time']
-    - [adverb, особенно, especially]
-    - [noun, цель, 'goal, target']
-    - [noun, конкурс, competition]
-    - [noun, отпуск, vacation]
-    - [noun, терпение, patience]
-    - [noun, хозяин, master]
-    - [noun, торговец, merchant]
-    - [noun, корзина, basket]
-    - [noun, марка, stamp]
-    - [noun, задача, 'problem, task']
-    - [noun, красота, beauty]
-    - [noun, карикатура, 'cartoon, comic']
-    - [noun, любовь, love]
-    - [noun, вид, 'view, look']
-    - [noun, успех, success]
-    - [noun, сердце, heart]
-    - [noun, взгляд, 'sight, view']
-    - [noun, призрак; привидение, a ghost]
-    - [noun, гость, guest]
-    - [noun, жаль, pity]
-    - [noun, жара; жар, heat]
-    - [noun, победа, victory]
-    - [noun, подарок, gift]
-    - [noun, душа, soul]
-    - [noun, дикарка, savage (person)]
-    - [noun, слеза, 'tear, teardrop']
-    - [noun, исполнение, performance]
-    - [noun, чеснок, garlic]
-    - [noun, автор, author]
-    - [noun, чувак, dude]
-    - [noun, мультфильм, animated film]
-    - [noun, песня, song]
-    - [noun, шедевр, masterpiece]
-    - [verb, заказывать, to order]
-    - [verb, заказать, to order]
-    - [verb, показывать, to show]
-    - [verb, показать, to show]
-    - [verb, стараться, to try]
-    - [verb, постараться, to try]
-    - [verb, стыдиться, to be ashamed]
-    - [verb, задумать, 'to conceive, plan']
-    - [verb, отличаться от, to differ from]
-    - [verb, желать, 'to wish, desire']
-    - [verb, скромничать, to be shy]
-    - [verb, спрятать, to hide]
-    - [verb, напоминать, to remind]
-    - [verb, почитать, 'to revere, honor']
-    - [verb, охранять, to gaurd]
-    - [verb, закончить, 'to finish, be done with']
-    - [verb, планировать, to plan]
-    - [verb, молиться, to pray]
-    - [verb, растить, to raise]
-    - [verb, заплакать, to begin to cry]
-    - [phrase, как же это ___!, how ___ is that!]
-    - [other, ладно, okay]
-    - [other, конечно, of course]
-    - [other, тоже (я тоже), 'too, also (me too)']
-    - [other, простите, sorry]
-    - [other, 'вообще то, ...', 'in general, ...']
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 02",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"родной"
+			],
+			[
+				"adjective",
+				"шикарный"
+			],
+			[
+				"adjective",
+				"шикарен"
+			],
+			[
+				"adjective",
+				"удачный"
+			],
+			[
+				"adverb",
+				"вместе; дружно"
+			],
+			[
+				"adverb",
+				"наверное"
+			],
+			[
+				"adverb",
+				"ненадолго"
+			],
+			[
+				"adverb",
+				"особенно"
+			],
+			[
+				"noun",
+				"цель"
+			],
+			[
+				"noun",
+				"конкурс"
+			],
+			[
+				"noun",
+				"отпуск"
+			],
+			[
+				"noun",
+				"терпение"
+			],
+			[
+				"noun",
+				"хозяин"
+			],
+			[
+				"noun",
+				"торговец"
+			],
+			[
+				"noun",
+				"корзина"
+			],
+			[
+				"noun",
+				"марка"
+			],
+			[
+				"noun",
+				"задача"
+			],
+			[
+				"noun",
+				"красота"
+			],
+			[
+				"noun",
+				"карикатура"
+			],
+			[
+				"noun",
+				"любовь"
+			],
+			[
+				"noun",
+				"вид"
+			],
+			[
+				"noun",
+				"успех"
+			],
+			[
+				"noun",
+				"сердце"
+			],
+			[
+				"noun",
+				"взгляд"
+			],
+			[
+				"noun",
+				"призрак; привидение"
+			],
+			[
+				"noun",
+				"гость"
+			],
+			[
+				"noun",
+				"жаль"
+			],
+			[
+				"noun",
+				"жара; жар"
+			],
+			[
+				"noun",
+				"победа"
+			],
+			[
+				"noun",
+				"подарок"
+			],
+			[
+				"noun",
+				"душа"
+			],
+			[
+				"noun",
+				"дикарка"
+			],
+			[
+				"noun",
+				"слеза"
+			],
+			[
+				"noun",
+				"исполнение"
+			],
+			[
+				"noun",
+				"чеснок"
+			],
+			[
+				"noun",
+				"автор"
+			],
+			[
+				"noun",
+				"чувак"
+			],
+			[
+				"noun",
+				"мультфильм"
+			],
+			[
+				"noun",
+				"песня"
+			],
+			[
+				"noun",
+				"шедевр"
+			],
+			[
+				"verb",
+				"заказывать"
+			],
+			[
+				"verb",
+				"заказать"
+			],
+			[
+				"verb",
+				"показывать"
+			],
+			[
+				"verb",
+				"показать"
+			],
+			[
+				"verb",
+				"стараться"
+			],
+			[
+				"verb",
+				"постараться"
+			],
+			[
+				"verb",
+				"стыдиться"
+			],
+			[
+				"verb",
+				"задумать"
+			],
+			[
+				"verb",
+				"отличаться от"
+			],
+			[
+				"verb",
+				"желать"
+			],
+			[
+				"verb",
+				"скромничать"
+			],
+			[
+				"verb",
+				"спрятать"
+			],
+			[
+				"verb",
+				"напоминать"
+			],
+			[
+				"verb",
+				"почитать"
+			],
+			[
+				"verb",
+				"охранять"
+			],
+			[
+				"verb",
+				"закончить"
+			],
+			[
+				"verb",
+				"планировать"
+			],
+			[
+				"verb",
+				"молиться"
+			],
+			[
+				"verb",
+				"растить"
+			],
+			[
+				"verb",
+				"заплакать"
+			],
+			[
+				"phrase",
+				"как же это ___!"
+			],
+			[
+				"interjection",
+				"ладно"
+			],
+			[
+				"adverb",
+				"конечно"
+			],
+			[
+				"adverb",
+				"тоже"
+			],
+			[
+				"other",
+				"простите"
+			],
+			[
+				"adverb",
+				"вообще-то"
+			]
+		]
+	}
+}

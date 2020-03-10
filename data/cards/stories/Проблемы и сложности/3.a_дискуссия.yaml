@@ -1,66 +1,253 @@
-card_set:
-  name: 3.a Дискуссия
-  type: Media
-  version: 1
-  cards:
-    - [adverb, дважды, twice]
-    - [adverb, множество, 'many, very large quantity of']
-    - [adjective, долгосрочный, long-term]
-    - [adjective, неизмеримый, immeasurable]
-    - [adjective, удовлетворённый, satisfied]
-    - [adjective, унизительный, humiliating]
-    - [adjective, обманутый, 'cheated, deceived']
-    - [adjective, текущий, current]
-    - [adjective, задетый, 'hurt, affected']
-    - [adjective, незримый, 'imperceptable, invisible']
-    - [adjective, изящный, graceful]
-    - [adjective, разделённый, divided]
-    - [adjective, неразделённый, undivided]
-    - [adjective, смутный, 'vague, unclear']
-    - [noun, разгром, 'ruin, devestation']
-    - [noun, разрушение, destruction]
-    - [noun, выпечка, bakery products]
-    - [noun, крошка; кроха, 'little baby, crumb']
-    - [noun, глазурь, 'frosting, glaze']
-    - [noun, жеребчик, colt (baby horse)]
-    - [noun, 'жеребёнок, жеребята', 'foal, filly']
-    - [noun, мера, measure]
-    - [noun, склонность, constant attraction to smth]
-    - [noun, крайность, the extreme]
-    - [noun, груз, 'cargo, goods']
-    - [noun, любопытство, curoisity]
-    - [noun, 'действие, деяние', 'an action, act']
-    - [noun, 'прах, пыль', 'dust, ash']
-    - [noun, клин, wedge]
-    - [noun, черёд, 'turn, time']
-    - [verb, удовлетворить, to satisfy]
-    - [verb, удовлетворять, to satisfy]
-    - [verb, откусить, to take a bite]
-    - [verb, прекращать, 'to cease, discontinue, stop']
-    - [verb, восхищаться, to admire]
-    - [verb, восхититься, to admire]
-    - [verb, причинить, 'to produce, cause smth']
-    - [verb, втащить, to drag in]
-    - [verb, мурлыкать, to purr]
-    - [verb, ударить, 'to bump, hit']
-    - [verb, унизить, to humiliate]
-    - [verb, увиливать, to wriggle out]
-    - [verb, свалить, 'to knock down; go away, emigrate']
-    - [verb, хмуриться, to frown]
-    - [verb, предпринять, 'to undertake, start to do smth']
-    - [verb, грузить, 'to ship, load']
-    - [verb, расстроить, 'to upset, break the order of smth']
-    - [verb, обратиться, to turn to the direction of smth]
-    - [verb, превзойти, to surpass]
-    - [verb, обвинять, 'to blame, accuse']
-    - [verb, указать, 'to specify, indicate, point out']
-    - [verb, подогреть, to heat up a little]
-    - [verb, испепелить, to incinerate]
-    - [verb, вбить, 'to drive in, hammer']
-    - [verb, подтолкнуть, to lightly push]
-    - [verb, пересекать, 'to cross, traverse']
-    - [verb, повредить, 'to hurt, damage']
-    - [verb, представить, 'to imagine, present, introduce']
-    - [phrase, в свою очередь, in turn]
-    - [phrase, и впрямь, 'really, indeed']
-    - [verb, выкинуть, to throw out]
+{
+	"card_set": {
+		"version": 1,
+		"name": "3.a Дискуссия",
+		"type": "media",
+		"cards": [
+			[
+				"adverb",
+				"дважды"
+			],
+			[
+				"adverb",
+				"множество"
+			],
+			[
+				"adjective",
+				"долгосрочный"
+			],
+			[
+				"adjective",
+				"неизмеримый"
+			],
+			[
+				"adjective",
+				"удовлетворенный"
+			],
+			[
+				"adjective",
+				"унизительный"
+			],
+			[
+				"adjective",
+				"обманутый"
+			],
+			[
+				"adjective",
+				"текущий"
+			],
+			[
+				"adjective",
+				"задетый"
+			],
+			[
+				"adjective",
+				"незримый"
+			],
+			[
+				"adjective",
+				"изящный"
+			],
+			[
+				"adjective",
+				"разделенный"
+			],
+			[
+				"adjective",
+				"неразделенный"
+			],
+			[
+				"adjective",
+				"смутный"
+			],
+			[
+				"noun",
+				"разгром"
+			],
+			[
+				"noun",
+				"разрушение"
+			],
+			[
+				"noun",
+				"выпечка"
+			],
+			[
+				"noun",
+				"крошка; кроха"
+			],
+			[
+				"noun",
+				"глазурь"
+			],
+			[
+				"noun",
+				"жеребчик"
+			],
+			[
+				"noun",
+				"жеребенок, жеребята"
+			],
+			[
+				"noun",
+				"мера"
+			],
+			[
+				"noun",
+				"склонность"
+			],
+			[
+				"noun",
+				"крайность"
+			],
+			[
+				"noun",
+				"груз"
+			],
+			[
+				"noun",
+				"любопытство"
+			],
+			[
+				"noun",
+				"действие; деяние"
+			],
+			[
+				"noun",
+				"прах; пыль"
+			],
+			[
+				"noun",
+				"клин"
+			],
+			[
+				"noun",
+				"черед"
+			],
+			[
+				"verb",
+				"удовлетворить"
+			],
+			[
+				"verb",
+				"удовлетворять"
+			],
+			[
+				"verb",
+				"откусить"
+			],
+			[
+				"verb",
+				"прекращать"
+			],
+			[
+				"verb",
+				"восхищаться"
+			],
+			[
+				"verb",
+				"восхититься"
+			],
+			[
+				"verb",
+				"причинить"
+			],
+			[
+				"verb",
+				"втащить"
+			],
+			[
+				"verb",
+				"мурлыкать"
+			],
+			[
+				"verb",
+				"ударить"
+			],
+			[
+				"verb",
+				"унизить"
+			],
+			[
+				"verb",
+				"увиливать"
+			],
+			[
+				"verb",
+				"свалить"
+			],
+			[
+				"verb",
+				"хмуриться"
+			],
+			[
+				"verb",
+				"предпринять"
+			],
+			[
+				"verb",
+				"грузить"
+			],
+			[
+				"verb",
+				"расстроить"
+			],
+			[
+				"verb",
+				"обратиться"
+			],
+			[
+				"verb",
+				"превзойти"
+			],
+			[
+				"verb",
+				"обвинять"
+			],
+			[
+				"verb",
+				"указать"
+			],
+			[
+				"verb",
+				"подогреть"
+			],
+			[
+				"verb",
+				"испепелить"
+			],
+			[
+				"verb",
+				"вбить"
+			],
+			[
+				"verb",
+				"подтолкнуть"
+			],
+			[
+				"verb",
+				"пересекать"
+			],
+			[
+				"verb",
+				"повредить"
+			],
+			[
+				"verb",
+				"представить"
+			],
+			[
+				"phrase",
+				"в свою очередь"
+			],
+			[
+				"phrase",
+				"и впрямь"
+			],
+			[
+				"verb",
+				"выкинуть"
+			]
+		]
+	}
+}

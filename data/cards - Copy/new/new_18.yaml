@@ -1,0 +1,319 @@
+{
+  "card_set": {
+    "name": "New 18",
+    "version": 1,
+    "cards": [
+      [
+        "adjective",
+        "\u0431\u0435\u0437\u0434\u043e\u043c\u043d\u044b\u0439, \u0431\u0435\u0441\u043f\u0440\u0438\u0437\u043e\u0440\u043d\u044b\u0439",
+        "homeless"
+      ],
+      [
+        "adjective",
+        "\u0434\u043e\u0441\u0442\u043e\u0439\u043d\u044b\u0439",
+        "worthy"
+      ],
+      [
+        "adjective",
+        "\u0437\u0430\u0441\u0442\u0435\u043d\u0447\u0438\u0432\u044b\u0439; \u0441\u0442\u0435\u0441\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439",
+        "shy"
+      ],
+      [
+        "adjective",
+        "\u0432\u0441\u043b\u0443\u0445",
+        "aloud"
+      ],
+      [
+        "adjective",
+        "\u044f\u0432\u043d\u044b\u0439",
+        "obvious"
+      ],
+      [
+        "adjective",
+        "\u0442\u043e\u043a\u0441\u0438\u0447\u043d\u044b\u0439",
+        "toxic"
+      ],
+      [
+        "adverb",
+        "\u0437\u0434\u043e\u0440\u043e\u0432\u043e",
+        "very good, perfect"
+      ],
+      [
+        "adverb",
+        "\u043e\u0431\u0440\u0430\u0442\u043d\u043e",
+        "back, return, inverse, opposite"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u0434\u0430\u0436\u0430",
+        "sale (purchase)"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0438\u043c\u0435\u0440\u043e\u0447\u043d\u0430\u044f",
+        "fitting room"
+      ],
+      [
+        "noun",
+        "\u043a\u0430\u0441\u0441\u0430",
+        "register"
+      ],
+      [
+        "noun",
+        "\u0432\u0435\u0435\u0440",
+        "fan (hand fan)"
+      ],
+      [
+        "noun",
+        "\u0441\u0434\u0430\u0447\u0430",
+        "change (money)"
+      ],
+      [
+        "noun",
+        "\u043d\u0430\u043b\u0438\u0447\u043d\u044b\u0435 (\u0434\u0435\u043d\u044c\u0433\u0438)",
+        "cash"
+      ],
+      [
+        "noun",
+        "\u0437\u043d\u0430\u043d\u0438\u044f",
+        "knowledge"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435",
+        "education, formation"
+      ],
+      [
+        "noun",
+        "\u0433\u043b\u0430\u0441\u043d\u043e\u0441\u0442\u044c",
+        "publicity, openness"
+      ],
+      [
+        "noun",
+        "\u043f\u0435\u0440\u0435\u0441\u0442\u0440\u043e\u0439\u043a\u0430",
+        "reconstruction"
+      ],
+      [
+        "noun",
+        "\u0432\u043e\u0440",
+        "theif"
+      ],
+      [
+        "noun",
+        "\u0437\u0430\u043c\u043a\u0430 \u0438\u0437 \u043f\u0435\u0441\u043a\u0430",
+        "sand castle"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435",
+        "position, location, situation"
+      ],
+      [
+        "noun",
+        "\u0432\u043b\u0435\u0447\u0435\u043d\u0438\u0435",
+        "attraction"
+      ],
+      [
+        "noun",
+        "\u0440\u0435\u0431\u044f\u0442\u0430",
+        "guys, children"
+      ],
+      [
+        "noun",
+        "\u043c\u0435\u0445",
+        "fur"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u0431\u0443\u0436\u0434\u0435\u043d\u0438\u0435",
+        "awakening"
+      ],
+      [
+        "noun",
+        "\u0431\u0440\u043e\u0432\u044c",
+        "eyebrow"
+      ],
+      [
+        "noun",
+        "\u0440\u044b\u043d\u043e\u043a",
+        "market, mart"
+      ],
+      [
+        "noun",
+        "\u0441\u0446\u0435\u043d\u0430",
+        "scene"
+      ],
+      [
+        "noun",
+        "\u043d\u0430\u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435",
+        "purpose, assignment, function"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u0442\u0438\u0432\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435",
+        "standoff"
+      ],
+      [
+        "noun",
+        "\u0431\u0435\u0441\u043f\u043e\u043a\u043e\u0439\u0441\u0442\u0432\u043e",
+        "anxiety, concern"
+      ],
+      [
+        "noun",
+        "\u0441\u043a\u043e\u0432\u043e\u0440\u043e\u0434\u0430",
+        "frying pan"
+      ],
+      [
+        "noun",
+        "\u043a\u0438\u0441\u0442\u044c",
+        "brush"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043c\u0435\u0440\u0438\u0442\u044c",
+        "to measure"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u043e\u0441\u0442\u0430\u0438\u0432\u0430\u0442\u044c",
+        "to stand idle"
+      ],
+      [
+        "verb",
+        "\u0432\u043b\u043e\u0436\u0438\u0442\u044c",
+        "to invest"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u043b\u043e\u0436\u0438\u0442\u044c",
+        "to take something out and put it"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0438\u043b\u043e\u0436\u0438\u0442\u044c",
+        "to put and hold in place"
+      ],
+      [
+        "verb",
+        "\u043f\u0435\u0440\u0435\u043b\u043e\u0436\u0438\u0442\u044c",
+        "to move something from one place to another"
+      ],
+      [
+        "verb",
+        "\u0441\u0442\u0440\u0435\u043c\u0438\u0442\u044c\u0441\u044f",
+        "to aspire, aim, seek"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0435\u0434\u0430\u0432\u0430\u0442\u044c",
+        "to betray"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u0438\u0434\u0435\u0442\u044c",
+        "to offend"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u0438\u0436\u0430\u0442\u044c",
+        "to offend"
+      ],
+      [
+        "verb",
+        "\u043f\u0435\u0440\u0435\u0436\u0438\u0432\u0430\u0442\u044c",
+        "to worry, relive"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u043c\u043d\u0435\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to doubt"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0438\u043b\u044c\u043d\u0443\u0442\u044c",
+        "to snuggle, nestle"
+      ],
+      [
+        "verb",
+        "\u0445\u0438\u0445\u0438\u043a\u0430\u0442\u044c",
+        "to giggle"
+      ],
+      [
+        "verb",
+        "\u0445\u0438\u0445\u0438\u043a\u043d\u0443\u0442\u044c",
+        "to giggle"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0441\u0441\u043b\u0430\u0431\u043b\u044f\u0442\u044c\u0441\u044f",
+        "to relax, loosen up"
+      ],
+      [
+        "verb",
+        "\u0441\u0440\u0430\u0436\u0430\u0442\u044c\u0441\u044f",
+        "to battle"
+      ],
+      [
+        "phrase",
+        "\u0443 + gen. + \u043f\u043e\u043b\u0443\u0447\u0438\u043b\u043e\u0441\u044c + verb",
+        "to manage to do something"
+      ],
+      [
+        "phrase",
+        "\u0432\u0438\u0434\u0438\u043c\u043e, ...; \u043f\u043e\u0445\u043e\u0436\u0435, ...",
+        "it seems like ..."
+      ],
+      [
+        "phrase",
+        "\u0441\u043e\u0431\u0438\u0440\u0430\u0442\u044c\u0441\u044f + verb",
+        "to get ready, to plan, to intend to do soemthing"
+      ],
+      [
+        "phrase",
+        "\u043f\u043e\u0447\u0435\u043c\u0443 \u0442\u044b \u043c\u043d\u0435 \u0440\u0430\u043d\u044c\u0448\u0435 \u044d\u0442\u043e \u043d\u0435 \u0440\u0430\u0441\u0441\u043a\u0430\u0437\u044b\u0432\u0430\u043b?",
+        "Why havent you told me this before?"
+      ],
+      [
+        "phrase",
+        "\u0447\u0435\u0432\u043e \u043c\u044b \u0441\u0442\u043e\u0438\u043c",
+        "what were made of"
+      ],
+      [
+        "phrase",
+        "\u0432\u044b\u043b\u0435\u0442\u0435\u043b\u043e \u0438\u0437 \u0433\u043e\u043b\u043e\u0432\u044b",
+        "flew out of my head, it was at the tip of my tongue"
+      ],
+      [
+        "phrase",
+        "\u0441\u043d\u0438\u043c\u0430\u0442\u044c \u0432\u0438\u0434\u0435\u043e",
+        "to shoot a video"
+      ],
+      [
+        "phrase",
+        "\u0443\u0445 \u0442\u044b!",
+        "wow, woah!"
+      ],
+      [
+        "phrase",
+        "\u0433\u0434\u0435 \u0431\u044b \u0442\u044b \u043d\u0435 \u0431\u044b\u043b",
+        "wherever you are"
+      ],
+      [
+        "particle",
+        "\u0440\u0430\u0437\u0432\u0435",
+        "really, (suprise, doubt, concern)"
+      ],
+      [
+        "particle",
+        "\u043d\u0435\u0443\u0436\u0435\u043b\u0438, \u043d\u0435\u0443\u0436\u0442\u043e",
+        "really!, emotional (suprise, doubt, concern)"
+      ],
+      [
+        "preposition",
+        "\u043d\u0430\u0441\u0447\u0451\u0442",
+        "concerning, about"
+      ]
+    ],
+    "type": "Other"
+  }
+}

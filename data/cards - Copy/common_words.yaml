@@ -1,0 +1,94 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Common Words",
+		"type": "categorical",
+		"cards": [
+			[
+				"adjective",
+				"только",
+				"only"
+			],
+			[
+				"adjective",
+				"какой",
+				"what kind of"
+			],
+			[
+				"adjective",
+				"такой",
+				"such a"
+			],
+			[
+				"adjective",
+				"этот",
+				"this"
+			],
+			[
+				"adjective",
+				"тот",
+				"that"
+			],
+			[
+				"adverb",
+				"раз",
+				"time, once, since"
+			],
+			[
+				"adverb",
+				"просто",
+				"simply"
+			],
+			[
+				"pronoun",
+				"это",
+				"it, this, it is"
+			],
+			[
+				"other",
+				"вот",
+				"here is"
+			],
+			[
+				"particle",
+				"же",
+				"and, but, whereas, as for, as to, after all, this very, this same, then, surely, just, on earth"
+			],
+			[
+				"particle",
+				"бы",
+				"would"
+			],
+			[
+				"particle",
+				"то",
+				"some"
+			],
+			[
+				"particle",
+				"нибудь",
+				"some, any"
+			],
+			[
+				"particle",
+				"ли",
+				"whether, if"
+			],
+			[
+				"adverb",
+				"да",
+				"yes"
+			],
+			[
+				"adverb",
+				"нет",
+				"no"
+			],
+			[
+				"interjection",
+				"ну",
+				"well"
+			]
+		]
+	}
+}

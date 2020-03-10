@@ -1,70 +1,269 @@
-card_set:
-  name: 7.a Быть Королевским Гвардейцем...
-  type: Media
-  version: 1
-  cards:
-    - [verb, взбодриться, to cheer up (yourself)]
-    - [verb, гордиться, to be proud]
-    - [verb, состоять, to consist]
-    - [noun, снаряжение, equipment]
-    - [verb, наскучивать, to bore]
-    - [adverb, спустя, after something; later]
-    - [noun, оставшиеся, the remaining]
-    - [noun, жук, bug]
-    - [verb, одолевать, to overcome]
-    - [noun, спасение, 'rescue, salvation']
-    - [noun, скука, boredome]
-    - [noun, развлечение, entertainment]
-    - [noun, копьё, spear]
-    - [verb, греметь, 'to rattle, thunder']
-    - [verb, разочаровывать, to dissapoint]
-    - [adjective, текущий, current]
-    - [verb, передать, to transfer to]
-    - [verb, передавать, to pass; to convey; to broadcast]
-    - [verb, поддерживать, 'to support, maintain']
-    - [noun, храбрость, bravery]
-    - [adjective, пронзительный, 'piercing, harsh to hear']
-    - [noun, уважение, respect]
-    - [noun, аура, aura]
-    - [verb, добраться, to reach someone/smth after time/effort]
-    - [adjective, немой, speechless]
-    - [verb, обвить, to entwine]
-    - [noun, воздух, air]
-    - [verb, применить, 'to apply, implement in practice']
-    - [verb, выделить, 'to highlight, pick out']
-    - [noun, слизь, mucus]
-    - [noun, кляп, a gag (for mouth)]
-    - [noun, простынь, bed sheet]
-    - [verb, остерегаться, to beware]
-    - [adjective, оборотный, negotiable]
-    - [adjective, погружённый, immersed]
-    - [noun, оставка, resignation]
-    - [noun, отбеливатель, bleach]
-    - [noun, порошок, powder]
-    - [adjective, упрямый, stubborn]
-    - [adjective, пряный, spicy]
-    - [phrase, перекрывать спор, to close a dispute]
-    - [verb, смутиться, to be embarressed]
-    - [verb, принадлежить, to belong]
-    - [adjective, враждебный, hostile]
-    - [conjunction, 'тем не менее, ...', 'however, ...; nevertheless, ...']
-    - [noun, носительник, 'wearer, bearer']
-    - [adjective, неизбежный, 'inevitable, unavoidable']
-    - [noun, перемирие, truce]
-    - [verb, оправдать, to justify]
-    - [noun, вражда, 'enmity, feud']
-    - [noun, влияние, influence]
-    - [noun, рассудство, reasoningg]
-    - [noun, безрассудство, a wreckless act]
-    - [noun, присяга, an oath]
-    - [noun, клятва, a vow]
-    - [verb, подать, 'to submit in writing, give by offering, to file']
-    - [verb, дорожить, to hold dear]
-    - [noun, орудие, implement; gun; means to achieve a goal]
-    - [verb, владеть, 'to own, possess']
-    - [noun, рапира, rapier (fencing weapon)]
-    - [noun, укол, 'injection; puncture, jab, prick']
-    - [adverb, сям, here and there]
-    - [noun, глотка, 'throat, pharynx']
-    - [noun, воздействие, action directed at someone to achieve smth]
-    - [noun, проверка, 'a check, verification']
+{
+	"card_set": {
+		"version": 1,
+		"name": "7.a Быть Королевским Гвардейцем...",
+		"type": "media",
+		"cards": [
+			[
+				"verb",
+				"взбодриться"
+			],
+			[
+				"verb",
+				"гордиться"
+			],
+			[
+				"verb",
+				"состоять"
+			],
+			[
+				"noun",
+				"снаряжение"
+			],
+			[
+				"verb",
+				"наскучивать"
+			],
+			[
+				"adverb",
+				"спустя"
+			],
+			[
+				"noun",
+				"оставшиеся"
+			],
+			[
+				"noun",
+				"жук"
+			],
+			[
+				"verb",
+				"одолевать"
+			],
+			[
+				"noun",
+				"спасение"
+			],
+			[
+				"noun",
+				"скука"
+			],
+			[
+				"noun",
+				"развлечение"
+			],
+			[
+				"noun",
+				"копье"
+			],
+			[
+				"verb",
+				"греметь"
+			],
+			[
+				"verb",
+				"разочаровывать"
+			],
+			[
+				"adjective",
+				"текущий"
+			],
+			[
+				"verb",
+				"передать"
+			],
+			[
+				"verb",
+				"передавать"
+			],
+			[
+				"verb",
+				"поддерживать"
+			],
+			[
+				"noun",
+				"храбрость"
+			],
+			[
+				"adjective",
+				"пронзительный"
+			],
+			[
+				"noun",
+				"уважение"
+			],
+			[
+				"noun",
+				"аура"
+			],
+			[
+				"verb",
+				"добраться"
+			],
+			[
+				"adjective",
+				"немой"
+			],
+			[
+				"verb",
+				"обвить"
+			],
+			[
+				"noun",
+				"воздух"
+			],
+			[
+				"verb",
+				"применить"
+			],
+			[
+				"verb",
+				"выделить"
+			],
+			[
+				"noun",
+				"слизь"
+			],
+			[
+				"noun",
+				"кляп"
+			],
+			[
+				"noun",
+				"простынь"
+			],
+			[
+				"verb",
+				"остерегаться"
+			],
+			[
+				"adjective",
+				"оборотный"
+			],
+			[
+				"adjective",
+				"погруженный"
+			],
+			[
+				"noun",
+				"оставка"
+			],
+			[
+				"noun",
+				"отбеливатель"
+			],
+			[
+				"noun",
+				"порошок"
+			],
+			[
+				"adjective",
+				"упрямый"
+			],
+			[
+				"adjective",
+				"пряный"
+			],
+			[
+				"phrase",
+				"перекрывать спор"
+			],
+			[
+				"verb",
+				"смутиться"
+			],
+			[
+				"verb",
+				"принадлежить"
+			],
+			[
+				"adjective",
+				"враждебный"
+			],
+			[
+				"conjunction",
+				"тем не менее, ..."
+			],
+			[
+				"noun",
+				"носительник"
+			],
+			[
+				"adjective",
+				"неизбежный"
+			],
+			[
+				"noun",
+				"перемирие"
+			],
+			[
+				"verb",
+				"оправдать"
+			],
+			[
+				"noun",
+				"вражда"
+			],
+			[
+				"noun",
+				"влияние"
+			],
+			[
+				"noun",
+				"рассудство"
+			],
+			[
+				"noun",
+				"безрассудство"
+			],
+			[
+				"noun",
+				"присяга"
+			],
+			[
+				"noun",
+				"клятва"
+			],
+			[
+				"verb",
+				"подать"
+			],
+			[
+				"verb",
+				"дорожить"
+			],
+			[
+				"noun",
+				"орудие"
+			],
+			[
+				"verb",
+				"владеть"
+			],
+			[
+				"noun",
+				"рапира"
+			],
+			[
+				"noun",
+				"укол"
+			],
+			[
+				"adverb",
+				"сям"
+			],
+			[
+				"noun",
+				"глотка"
+			],
+			[
+				"noun",
+				"воздействие"
+			],
+			[
+				"noun",
+				"проверка"
+			]
+		]
+	}
+}

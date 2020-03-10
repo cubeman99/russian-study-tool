@@ -1,15 +1,49 @@
-card_set:
-  name: 9. Verbs with Stem - Е
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, видеть, to see]
-    - [verb, висеть, to hang (intr.)]
-    - [verb, зависеть, to depend]
-    - [verb, лететь, to fly]
-    - [verb, свистеть, to whistle]
-    - [verb, терпеть, to tolerate]
-    - [verb, храпеть, to snore]
-    - [verb, шуметь, to make noise]
-    - [verb, гореть, to burn]
-    - [verb, смотреть, 'to look, watch']
+{
+	"card_set": {
+		"version": 1,
+		"name": "9. Verbs with Stem - Е",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"видеть"
+			],
+			[
+				"verb",
+				"висеть"
+			],
+			[
+				"verb",
+				"зависеть"
+			],
+			[
+				"verb",
+				"лететь"
+			],
+			[
+				"verb",
+				"свистеть"
+			],
+			[
+				"verb",
+				"терпеть"
+			],
+			[
+				"verb",
+				"храпеть"
+			],
+			[
+				"verb",
+				"шуметь"
+			],
+			[
+				"verb",
+				"гореть"
+			],
+			[
+				"verb",
+				"смотреть"
+			]
+		]
+	}
+}

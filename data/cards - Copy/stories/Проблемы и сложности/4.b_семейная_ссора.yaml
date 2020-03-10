@@ -1,0 +1,329 @@
+{
+  "card_set": {
+    "name": "4.b \u0421\u0435\u043c\u0435\u0439\u043d\u0430\u044f \u0441\u0441\u043e\u0440\u0430",
+    "version": 1,
+    "cards": [
+      [
+        "adjective",
+        "\u0432\u043e\u0437\u043b\u044e\u0431\u043b\u0435\u043d\u043d\u044b\u0439",
+        "beloved, dear, lover"
+      ],
+      [
+        "adjective",
+        "\u0431\u0435\u0437\u0436\u0430\u043b\u043e\u0441\u0442\u044b\u0439",
+        "ruthless, unrelenting"
+      ],
+      [
+        "adjective",
+        "\u0433\u043e\u043b\u0443\u0431\u043e\u0432\u0430\u0442\u044b\u0439",
+        "blue-ish"
+      ],
+      [
+        "adjective",
+        "\u043e\u0442\u0447\u0430\u044f\u043d\u043d\u044b\u0439",
+        "desperate"
+      ],
+      [
+        "adjective",
+        "\u0437\u0430\u0432\u043e\u0440\u043e\u0436\u0451\u043d\u043d\u044b\u0439",
+        "spellbound"
+      ],
+      [
+        "adjective",
+        "\u043b\u044e\u0431\u043e\u043f\u044b\u0442\u043d\u044b\u0439",
+        "curious"
+      ],
+      [
+        "adjective",
+        "\u0435\u0441\u0442\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439",
+        "natural"
+      ],
+      [
+        "adjective",
+        "\u0442\u0440\u0443\u0441\u043b\u0438\u0432\u044b\u0439",
+        "cowardly"
+      ],
+      [
+        "adjective",
+        "\u0432\u043e\u0440\u0447\u043b\u0438\u0432\u044b\u0439",
+        "grumpy"
+      ],
+      [
+        "adjective",
+        "\u0441\u0442\u0430\u0440\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0439",
+        "diligant"
+      ],
+      [
+        "adverb",
+        "\u0447\u0440\u0435\u0437\u0432\u044b\u0447\u0430\u0439\u043d\u043e",
+        "extremely, exceedingly"
+      ],
+      [
+        "noun",
+        "\u043c\u044b\u0448\u0446\u0430, \u043c\u0443\u0441\u043a\u0443\u043b",
+        "muscle"
+      ],
+      [
+        "noun",
+        "\u043e\u0447\u043a\u043e",
+        "point (unit of score)"
+      ],
+      [
+        "noun",
+        "\u0441\u043f\u043e\u0440",
+        "dispute, argument"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043b\u043a\u0430",
+        "shelf"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043b\u044c\u0437\u0430",
+        "benefit, favor"
+      ],
+      [
+        "noun",
+        "\u0438\u0437\u0434\u0430\u043d\u0438\u0435",
+        "edition"
+      ],
+      [
+        "noun",
+        "\u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u0435",
+        "distance"
+      ],
+      [
+        "noun",
+        "\u0447\u0435\u043b\u044e\u0441\u0442\u044c",
+        "jaw"
+      ],
+      [
+        "noun",
+        "\u0434\u0435\u0442\u0430\u043b\u044c",
+        "detail"
+      ],
+      [
+        "noun",
+        "\u0438\u043d\u0442\u0435\u0440\u0435\u0441",
+        "interest"
+      ],
+      [
+        "noun",
+        "\u0437\u0430\u0439\u0447\u0438\u043a",
+        "bright spot of light from sunbeam"
+      ],
+      [
+        "noun",
+        "\u043a\u043e\u0440\u043f\u0443\u0441",
+        "housing, body, hull"
+      ],
+      [
+        "noun",
+        "\u0431\u043b\u0435\u0441\u043a",
+        "shine"
+      ],
+      [
+        "noun",
+        "\u0434\u044e\u0439\u043c",
+        "inch"
+      ],
+      [
+        "noun",
+        "\u043a\u0443\u0448\u0435\u0442\u043a\u0430",
+        "small backless sofa with no headboard"
+      ],
+      [
+        "noun",
+        "\u0447\u0442\u0435\u043d\u0438\u0435",
+        "reading"
+      ],
+      [
+        "noun",
+        "\u0434\u043e\u0432\u0435\u0440\u0438\u0435",
+        "trust"
+      ],
+      [
+        "noun",
+        "\u043d\u0435\u0434\u043e\u0432\u0435\u0440\u0438\u0435",
+        "mistrust, distrust"
+      ],
+      [
+        "noun",
+        "\u0438\u0441\u043f\u0443\u0433",
+        "fright, startle"
+      ],
+      [
+        "noun",
+        "\u0441\u043e\u043f\u0435\u0440\u043d\u0438\u043a",
+        "rival"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0434\u043c\u0435\u043d\u044b\u0448",
+        "changeling"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0442\u0435\u0440\u043f\u0435\u0442\u044c",
+        "to patiently endure (pain, suffering)"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0441\u043b\u0443\u0436\u0438\u0432\u0430\u0442\u044c",
+        "to deserve"
+      ],
+      [
+        "verb",
+        "\u044d\u0433\u043e\u0438\u0441\u0442\u0438\u0447\u043d\u0439\u044b",
+        "selfish"
+      ],
+      [
+        "verb",
+        "\u0432\u043c\u0435\u0448\u0438\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to interfere, meddle"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0445\u0438\u0449\u0430\u0442\u044c",
+        "to abduct"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0445\u0438\u0442\u0438\u0442\u044c",
+        "to abduct"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0432\u043e\u0435\u0432\u0430\u0442\u044c",
+        "to conquer"
+      ],
+      [
+        "verb",
+        "\u043e\u0449\u0435\u0440\u0438\u0442\u044c\u0441\u044f",
+        "to bare teeth"
+      ],
+      [
+        "verb",
+        "\u0432\u0437\u0434\u0440\u043e\u0433\u043d\u0443\u0442\u044c",
+        "to wince, tremble for a moment"
+      ],
+      [
+        "verb",
+        "\u043f\u044b\u043b\u0430\u0442\u044c",
+        "to blaze"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0441\u0442\u043e\u0440\u0436\u0435\u0441\u0442\u0432\u043e\u0432\u0430\u0442\u044c",
+        "to overcome, prevail, triumph"
+      ],
+      [
+        "verb",
+        "\u0441\u043a\u043b\u043e\u043d\u0438\u0442\u044c \u0433\u043e\u043b\u043e\u0432\u0443",
+        "to bow your head"
+      ],
+      [
+        "verb",
+        "\u0441\u0434\u0430\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to surrender, give up"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u043f\u043e\u0440\u0442\u0430\u0447\u0438\u0442\u044c",
+        "to screw up; spoil from inablity or carelessness"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0431\u0440\u043e\u0441\u0438\u0442\u044c\u0441\u044f",
+        "to pounce, to throw yourself"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0437\u043c\u0443\u0442\u0438\u0442\u044c\u0441\u044f",
+        "to be outraged"
+      ],
+      [
+        "verb",
+        "\u0442\u0440\u043e\u043d\u0443\u0442\u044c",
+        "to touch, move (feelings)"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u0431\u043b\u0430\u0437\u043d\u0438\u0442\u044c",
+        "to seduce"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0437\u0434\u0435\u043b\u0430\u0442\u044c",
+        "to carve, process, bring into some state"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0445\u043b\u043e\u043f\u043d\u0443\u0442\u044c",
+        "to slam shut"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u043d\u0443\u0434\u0438\u0442\u044c",
+        "to compel, force, drive"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u043d\u0443\u0436\u0434\u0430\u0442\u044c",
+        "to compel, force, drive"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0446\u0430\u0440\u0438\u0442\u044c\u0441\u044f",
+        "to reign"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0434\u0436\u0438\u0434\u0430\u0442\u044c",
+        "to wait for someones appearance"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u043e\u0441\u043b\u0430\u0442\u044c",
+        "to send out"
+      ],
+      [
+        "verb",
+        "\u0441\u0438\u044f\u0442\u044c",
+        "to shine"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u044f\u0442\u044c\u0441\u044f",
+        "to resist, fight back"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0432\u0435\u0441\u0442\u0438\u0442\u044c",
+        "to visit"
+      ],
+      [
+        "verb",
+        "\u043c\u0435\u043b\u044c\u043a\u043d\u0443\u0442\u044c",
+        "to flicker, flash"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u043c\u0435\u0440\u0435\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to intend, to mean"
+      ],
+      [
+        "verb",
+        "\u0431\u0440\u043e\u0441\u0438\u0442\u044c\u0441\u044f",
+        "to throw oneself, rush quickly"
+      ],
+      [
+        "phrase",
+        "... \u0441\u043a\u043b\u043e\u043d\u043d\u044b \u0431\u044b\u0442\u044c ...",
+        "... tend to be ..."
+      ]
+    ],
+    "type": "Media"
+  }
+}

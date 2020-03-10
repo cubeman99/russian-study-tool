@@ -1,0 +1,134 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "People Labels",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"князь",
+				"prince"
+			],
+			[
+				"noun",
+				"парень",
+				"lad"
+			],
+			[
+				"noun",
+				"король",
+				"king"
+			],
+			[
+				"noun",
+				"царь",
+				"tsar"
+			],
+			[
+				"noun",
+				"умница",
+				"clever person"
+			],
+			[
+				"noun",
+				"плакса",
+				"crybaby"
+			],
+			[
+				"noun",
+				"коллега",
+				"colleague"
+			],
+			[
+				"noun",
+				"разиня",
+				"scatterbrain"
+			],
+			[
+				"noun",
+				"сирота",
+				"orphan"
+			],
+			[
+				"noun",
+				"неряха",
+				"slob, slovenly person"
+			],
+			[
+				"noun",
+				"пьяница",
+				"drunkard"
+			],
+			[
+				"noun",
+				"обжора",
+				"glutton"
+			],
+			[
+				"noun",
+				"бродяга",
+				"tramp"
+			],
+			[
+				"noun",
+				"невежда",
+				"ignoramus"
+			],
+			[
+				"noun",
+				"одиночка",
+				"lone person"
+			],
+			[
+				"noun",
+				"королева",
+				"queen"
+			],
+			[
+				"noun",
+				"напарник",
+				"a partner in work"
+			],
+			[
+				"noun",
+				"поставщик",
+				"provider, supplier"
+			],
+			[
+				"noun",
+				"головорез",
+				"a desparate man (mischievous, bandit, etc.)"
+			],
+			[
+				"noun",
+				"неудачник",
+				"an unlucky person"
+			],
+			[
+				"adjective",
+				"бездомный, беспризорный",
+				"homeless"
+			],
+			[
+				"noun",
+				"толпа",
+				"a crowd"
+			],
+			[
+				"noun",
+				"кумир",
+				"idol"
+			],
+			[
+				"noun",
+				"идиот",
+				"idiot"
+			],
+			[
+				"noun",
+				"зазнайка",
+				"a know-it-all, arrogent person"
+			]
+		]
+	}
+}

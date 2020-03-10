@@ -1,34 +1,125 @@
-card_set:
-  name: Obstruent Stems (б, п, д, т, з, с, г, к, х)
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, везти, to transport]
-    - [verb, лезть, to climb]
-    - [verb, ползти, to crawl]
-    - [verb, нести, to carry]
-    - [verb, спасти, 'to save, rescue']
-    - [verb, трясти, 'to shake, jiggle']
-    - [verb, брести, 'to wander, roam, stroll']
-    - [verb, вести, 'to lead, accompany, drive']
-    - [verb, класть, to put]
-    - [verb, красть, to steal]
-    - [verb, упасть, to fall]
-    - [verb, сесть, to sit down]
-    - [verb, мести, to sweep]
-    - [verb, плести, 'to braid, weave, spin']
-    - [verb, приобрести, 'to purchase, acquire']
-    - [verb, цвести, to bloom]
-    - [verb, прочесть, 'to finish reading, to read through']
-    - [verb, грести, to rake; to row]
-    - [verb, скрести, to scrape]
-    - [verb, беречь, to keep safe]
-    - [verb, стричь, to cut (hair)]
-    - [verb, мочь, to be able]
-    - [verb, помочь, to help]
-    - [verb, лечь, to lie down]
-    - [verb, жечь, to burn something]
-    - [verb, печь, to bake]
-    - [verb, отвлечь, to distract]
-    - [verb, привлечь, to attract]
-    - [verb, течь, to flow]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Obstruent Stems (б, п, д, т, з, с, г, к, х)",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"везти"
+			],
+			[
+				"verb",
+				"лезть"
+			],
+			[
+				"verb",
+				"ползти"
+			],
+			[
+				"verb",
+				"нести"
+			],
+			[
+				"verb",
+				"спасти"
+			],
+			[
+				"verb",
+				"трясти"
+			],
+			[
+				"verb",
+				"брести"
+			],
+			[
+				"verb",
+				"вести"
+			],
+			[
+				"verb",
+				"класть"
+			],
+			[
+				"verb",
+				"красть"
+			],
+			[
+				"verb",
+				"упасть"
+			],
+			[
+				"verb",
+				"сесть"
+			],
+			[
+				"verb",
+				"мести"
+			],
+			[
+				"verb",
+				"плести"
+			],
+			[
+				"verb",
+				"приобрести"
+			],
+			[
+				"verb",
+				"цвести"
+			],
+			[
+				"verb",
+				"прочесть"
+			],
+			[
+				"verb",
+				"грести"
+			],
+			[
+				"verb",
+				"скрести"
+			],
+			[
+				"verb",
+				"беречь"
+			],
+			[
+				"verb",
+				"стричь"
+			],
+			[
+				"verb",
+				"мочь"
+			],
+			[
+				"verb",
+				"помочь"
+			],
+			[
+				"verb",
+				"лечь"
+			],
+			[
+				"verb",
+				"жечь"
+			],
+			[
+				"verb",
+				"печь"
+			],
+			[
+				"verb",
+				"отвлечь"
+			],
+			[
+				"verb",
+				"привлечь"
+			],
+			[
+				"verb",
+				"течь"
+			]
+		]
+	}
+}

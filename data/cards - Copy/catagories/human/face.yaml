@@ -1,0 +1,214 @@
+{
+  "card_set": {
+    "name": "Face",
+    "version": 1,
+    "cards": [
+      [
+        "verb",
+        "\u043d\u0430\u0445\u043c\u0443\u0440\u0438\u0442\u044c\u0441\u044f",
+        "to frown"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043c\u043e\u0440\u0449\u0438\u0442\u044c\u0441\u044f",
+        "to wince, make a wry, wrinkled face"
+      ],
+      [
+        "verb",
+        "\u043e\u0449\u0435\u0440\u0438\u0442\u044c\u0441\u044f",
+        "to bare teeth"
+      ],
+      [
+        "verb",
+        "\u043e\u0441\u043a\u0430\u043b\u0438\u0442\u044c\u0441\u044f",
+        "to bare ones teeth (of animals)"
+      ],
+      [
+        "noun",
+        "\u0443\u043b\u044b\u0431\u043a\u0430",
+        "smile"
+      ],
+      [
+        "verb",
+        "\u0443\u043b\u044b\u0431\u043d\u0443\u0442\u044c\u0441\u044f",
+        "to smile"
+      ],
+      [
+        "verb",
+        "\u043c\u043e\u0440\u0433\u043d\u0443\u0442\u044c",
+        "to blink"
+      ],
+      [
+        "verb",
+        "\u043c\u0438\u0433\u0430\u0442\u044c",
+        "to blink, flicker"
+      ],
+      [
+        "verb",
+        "\u043c\u0438\u0433\u043d\u0443\u0442\u044c",
+        "to blink involuntarily"
+      ],
+      [
+        "noun",
+        "\u0443\u0445\u043c\u044b\u043b\u043a\u0430",
+        "smirk, smug grin"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u043f\u0435\u0442\u044c",
+        "to sniffle"
+      ],
+      [
+        "phrase",
+        "\u0448\u043c\u044b\u0433\u043d\u0443\u0442\u044c \u043d\u043e\u0441\u043e\u043c",
+        "to sniff, snuff your nose"
+      ],
+      [
+        "noun",
+        "\u043a\u0430\u0448\u0435\u043b\u044c",
+        "a cough"
+      ],
+      [
+        "verb",
+        "\u043a\u0430\u0448\u043b\u044f\u0442\u044c",
+        "to cough"
+      ],
+      [
+        "verb",
+        "\u043a\u0430\u0448\u043b\u044f\u043d\u0443\u0442\u044c",
+        "to give a cough"
+      ],
+      [
+        "noun",
+        "\u0447\u0438\u0445\u0430\u0442\u044c",
+        "to sneeze"
+      ],
+      [
+        "noun",
+        "\u0447\u0438\u0445\u043d\u0443\u0442\u044c",
+        "to sneeze"
+      ],
+      [
+        "noun",
+        "\u0437\u0435\u0432\u043e\u043a",
+        "yawn"
+      ],
+      [
+        "verb",
+        "\u0437\u0435\u0432\u0430\u0442\u044c",
+        "to yawn"
+      ],
+      [
+        "verb",
+        "\u0437\u0435\u0432\u043d\u0443\u0442\u044c",
+        "to give a yawn"
+      ],
+      [
+        "noun",
+        "\u0434\u044b\u0445\u0430\u043d\u0438\u0435",
+        "breath"
+      ],
+      [
+        "verb",
+        "\u0434\u0443\u0442\u044c",
+        "to blow"
+      ],
+      [
+        "verb",
+        "\u0445\u043c\u0443\u0440\u0438\u0442\u044c\u0441\u044f",
+        "to frown"
+      ],
+      [
+        "verb",
+        "\u043c\u043e\u0440\u0449\u0438\u0442\u044c\u0441\u044f",
+        "to wince, make a wry, wrinkled face"
+      ],
+      [
+        "noun",
+        "\u0441\u043b\u0435\u0437\u0430",
+        "tear, teardrop"
+      ],
+      [
+        "noun",
+        "\u0441\u043b\u0438\u0437\u044c",
+        "mucus"
+      ],
+      [
+        "verb",
+        "\u0434\u0440\u0430\u043b\u0438\u0442\u044c",
+        "to tear up (teardrops)"
+      ],
+      [
+        "verb",
+        "\u043a\u0438\u0432\u0430\u0442\u044c",
+        "to nod"
+      ],
+      [
+        "verb",
+        "\u043a\u0438\u0432\u043d\u0443\u0442\u044c",
+        "to nod"
+      ],
+      [
+        "verb",
+        "\u043b\u0438\u0437\u0430\u0442\u044c",
+        "to lick"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u043b\u0438\u0437\u044b\u0432\u0430\u0442\u044c",
+        "to lick your lips"
+      ],
+      [
+        "verb",
+        "\u043f\u044b\u0445\u0442\u0435\u0442\u044c",
+        "to puff, breath hard"
+      ],
+      [
+        "verb",
+        "\u0434\u043e\u0445\u043d\u0443\u0442\u044c",
+        "to breath"
+      ],
+      [
+        "noun",
+        "\u0432\u0434\u043e\u0445",
+        "breath, inhalation"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0434\u043e\u0445\u043d\u0443\u0442\u044c",
+        "to exhale"
+      ],
+      [
+        "verb",
+        "\u0432\u0434\u043e\u0445\u043d\u0443\u0442\u044c",
+        "to inhale"
+      ],
+      [
+        "verb",
+        "\u0443\u0445\u043c\u044b\u043b\u044c\u043d\u0443\u0442\u044c\u0441\u044f",
+        "to smirk"
+      ],
+      [
+        "phrase",
+        "\u043f\u043e\u043a\u0430\u0447\u0430\u0442\u044c \u0433\u043e\u043b\u043e\u0432\u043e\u0439",
+        "to shake your head"
+      ],
+      [
+        "verb",
+        "\u0438\u043a\u0430\u0442\u044c",
+        "to hiccup"
+      ],
+      [
+        "noun",
+        "\u0438\u043a\u043e\u0442\u0430",
+        "a hiccup"
+      ],
+      [
+        "noun",
+        "\u043c\u043e\u0440\u0449\u0438\u043d\u0430",
+        "a wrinkle"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

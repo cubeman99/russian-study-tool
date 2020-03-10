@@ -1,45 +1,173 @@
-card_set:
-  name: Verbs of Motion
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, ходить, 'to walk, go on foot']
-    - [verb, идти, 'to walk, go on foot']
-    - [verb, ездить, to go by vehicle]
-    - [verb, ехать, to go by vehicle]
-    - [verb, бегать, 'to run, jog']
-    - [verb, бежать, 'to run, jog']
-    - [verb, бродить, 'to wander, roam, stroll']
-    - [verb, брести, 'to wander, roam, stroll']
-    - [verb, гонять, to drive (force to move)]
-    - [verb, гнать, to drive (force to move)]
-    - [verb, лазить, to climb]
-    - [verb, лезть, to climb]
-    - [verb, летать, to fly]
-    - [verb, лететь, to fly]
-    - [verb, плавать, to swim]
-    - [verb, плыть, to swim]
-    - [verb, ползать, to crawl]
-    - [verb, ползти, to crawl]
-    - [verb, возить, to transport]
-    - [verb, везти, to transport]
-    - [verb, носить, to carry]
-    - [verb, нести, to carry]
-    - [verb, водить, 'to lead, accompany, drive']
-    - [verb, вести, 'to lead, accompany, drive']
-    - [verb, таскать, 'to drag, to pull']
-    - [verb, тащить, 'to drag, to pull']
-    - [verb, втащить, to drag in]
-    - [verb, вытаскивать, to pull out]
-    - [verb, избегать, to avoid]
-    - [verb, избежать, 'to avoid, get away from']
-    - [verb, вводить, 'to enter, input']
-    - [verb, находить, to find]
-    - [verb, находиться, 'to be situated, found, located']
-    - [verb, вносить, to bring in]
-    - [verb, нестись, to move forward at high speed]
-    - [verb, разнести, 'to spread, carry to different places']
-    - [verb, произнести, 'to pronounce, get out']
-    - [verb, относиться, to relate]
-    - [verb, изгнать, to drive out]
-    - [verb, найти, to find]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Verbs of Motion",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"ходить"
+			],
+			[
+				"verb",
+				"идти"
+			],
+			[
+				"verb",
+				"ездить"
+			],
+			[
+				"verb",
+				"ехать"
+			],
+			[
+				"verb",
+				"бегать"
+			],
+			[
+				"verb",
+				"бежать"
+			],
+			[
+				"verb",
+				"бродить"
+			],
+			[
+				"verb",
+				"брести"
+			],
+			[
+				"verb",
+				"гонять"
+			],
+			[
+				"verb",
+				"гнать"
+			],
+			[
+				"verb",
+				"лазить"
+			],
+			[
+				"verb",
+				"лезть"
+			],
+			[
+				"verb",
+				"летать"
+			],
+			[
+				"verb",
+				"лететь"
+			],
+			[
+				"verb",
+				"плавать"
+			],
+			[
+				"verb",
+				"плыть"
+			],
+			[
+				"verb",
+				"ползать"
+			],
+			[
+				"verb",
+				"ползти"
+			],
+			[
+				"verb",
+				"возить"
+			],
+			[
+				"verb",
+				"везти"
+			],
+			[
+				"verb",
+				"носить"
+			],
+			[
+				"verb",
+				"нести"
+			],
+			[
+				"verb",
+				"водить"
+			],
+			[
+				"verb",
+				"вести"
+			],
+			[
+				"verb",
+				"таскать"
+			],
+			[
+				"verb",
+				"тащить"
+			],
+			[
+				"verb",
+				"втащить"
+			],
+			[
+				"verb",
+				"вытаскивать"
+			],
+			[
+				"verb",
+				"избегать"
+			],
+			[
+				"verb",
+				"избежать"
+			],
+			[
+				"verb",
+				"вводить"
+			],
+			[
+				"verb",
+				"находить"
+			],
+			[
+				"verb",
+				"находиться"
+			],
+			[
+				"verb",
+				"вносить"
+			],
+			[
+				"verb",
+				"нестись"
+			],
+			[
+				"verb",
+				"разнести"
+			],
+			[
+				"verb",
+				"произнести"
+			],
+			[
+				"verb",
+				"относиться"
+			],
+			[
+				"verb",
+				"изгнать"
+			],
+			[
+				"verb",
+				"найти"
+			],
+			[
+				"noun",
+				"восхождение"
+			]
+		]
+	}
+}

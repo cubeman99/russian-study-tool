@@ -1,69 +1,265 @@
-card_set:
-  name: 4.a Семейная ссора
-  type: Media
-  version: 1
-  cards:
-    - [adjective, возлюбленный, 'beloved, dear, lover']
-    - [adjective, безжалостый, 'ruthless, unrelenting']
-    - [adjective, голубоватый, blue-ish]
-    - [adjective, отчаянный, desperate]
-    - [adjective, заворожённый, spellbound]
-    - [adjective, любопытный, curious]
-    - [adjective, естественный, natural]
-    - [adjective, трусливый, cowardly]
-    - [adjective, ворчливый, grumpy]
-    - [adjective, старательный, diligant]
-    - [adverb, чрезвычайно, 'extremely, exceedingly']
-    - [noun, 'мышца, мускул', muscle]
-    - [noun, очко, point (unit of score)]
-    - [noun, спор, 'dispute, argument']
-    - [noun, полка, shelf]
-    - [noun, польза, 'benefit, favor']
-    - [noun, издание, edition]
-    - [noun, расстояние, distance]
-    - [noun, челюсть, jaw]
-    - [noun, деталь, detail]
-    - [noun, интерес, interest]
-    - [noun, зайчик, bright spot of light from sunbeam]
-    - [noun, корпус, 'housing, body, hull']
-    - [noun, блеск, shine]
-    - [noun, дюйм, inch]
-    - [noun, кушетка, small backless sofa with no headboard]
-    - [noun, чтение, reading]
-    - [noun, доверие, trust]
-    - [noun, недоверие, 'mistrust, distrust']
-    - [noun, испуг, 'fright, startle']
-    - [noun, соперник, rival]
-    - [noun, подменыш, changeling]
-    - [verb, вытерпеть, 'to patiently endure (pain, suffering)']
-    - [verb, заслуживать, to deserve]
-    - [verb, эгоистичнйы, selfish]
-    - [verb, вмешиваться, 'to interfere, meddle']
-    - [verb, похищать, to abduct]
-    - [verb, похитить, to abduct]
-    - [verb, завоевать, to conquer]
-    - [verb, ощериться, to bare teeth]
-    - [verb, вздрогнуть, 'to wince, tremble for a moment']
-    - [verb, пылать, to blaze]
-    - [verb, восторжествовать, 'to overcome, prevail, triumph']
-    - [verb, склонить голову, to bow your head]
-    - [verb, сдаваться, 'to surrender, give up']
-    - [verb, напортачить, to screw up; spoil from inablity or carelessness]
-    - [verb, наброситься, 'to pounce, to throw yourself']
-    - [verb, возмутиться, to be outraged]
-    - [verb, тронуть, 'to touch, move (feelings)']
-    - [verb, соблазнить, to seduce]
-    - [verb, разделать, 'to carve, process, bring into some state']
-    - [verb, захлопнуть, to slam shut]
-    - [verb, вынудить, 'to compel, force, drive']
-    - [verb, вынуждать, 'to compel, force, drive']
-    - [verb, воцариться, to reign]
-    - [verb, поджидать, to wait for someones appearance]
-    - [verb, отослать, to send out]
-    - [verb, сиять, to shine]
-    - [verb, сопротивляться, 'to resist, fight back']
-    - [verb, навестить, to visit]
-    - [verb, мелькнуть, 'to flicker, flash']
-    - [verb, намереваться, 'to intend, to mean']
-    - [verb, броситься, 'to throw oneself, rush quickly']
-    - [phrase, '... склонны быть ...', '... tend to be ...']
+{
+	"card_set": {
+		"version": 1,
+		"name": "4.b Семейная ссора",
+		"type": "media",
+		"cards": [
+			[
+				"adjective",
+				"возлюбленный"
+			],
+			[
+				"adjective",
+				"безжалостый"
+			],
+			[
+				"adjective",
+				"голубоватый"
+			],
+			[
+				"adjective",
+				"отчаянный"
+			],
+			[
+				"adjective",
+				"завороженный"
+			],
+			[
+				"adjective",
+				"любопытный; любознательный"
+			],
+			[
+				"adjective",
+				"естественный"
+			],
+			[
+				"adjective",
+				"трусливый"
+			],
+			[
+				"adjective",
+				"ворчливый"
+			],
+			[
+				"adjective",
+				"старательный"
+			],
+			[
+				"adverb",
+				"чрезвычайно"
+			],
+			[
+				"noun",
+				"мышца; мускул"
+			],
+			[
+				"noun",
+				"очко"
+			],
+			[
+				"noun",
+				"спор"
+			],
+			[
+				"noun",
+				"полка"
+			],
+			[
+				"noun",
+				"польза"
+			],
+			[
+				"noun",
+				"издание"
+			],
+			[
+				"noun",
+				"расстояние"
+			],
+			[
+				"noun",
+				"челюсть"
+			],
+			[
+				"noun",
+				"деталь"
+			],
+			[
+				"noun",
+				"интерес"
+			],
+			[
+				"noun",
+				"зайчик"
+			],
+			[
+				"noun",
+				"корпус"
+			],
+			[
+				"noun",
+				"блеск"
+			],
+			[
+				"noun",
+				"дюйм"
+			],
+			[
+				"noun",
+				"кушетка"
+			],
+			[
+				"noun",
+				"чтение"
+			],
+			[
+				"noun",
+				"доверие"
+			],
+			[
+				"noun",
+				"недоверие"
+			],
+			[
+				"noun",
+				"испуг"
+			],
+			[
+				"noun",
+				"соперник"
+			],
+			[
+				"noun",
+				"подменыш"
+			],
+			[
+				"verb",
+				"вытерпеть"
+			],
+			[
+				"verb",
+				"заслуживать"
+			],
+			[
+				"verb",
+				"эгоистичнйы"
+			],
+			[
+				"verb",
+				"вмешиваться"
+			],
+			[
+				"verb",
+				"похищать"
+			],
+			[
+				"verb",
+				"похитить"
+			],
+			[
+				"verb",
+				"завоевать"
+			],
+			[
+				"verb",
+				"ощериться"
+			],
+			[
+				"verb",
+				"вздрогнуть"
+			],
+			[
+				"verb",
+				"пылать"
+			],
+			[
+				"verb",
+				"восторжествовать"
+			],
+			[
+				"verb",
+				"склонить голову"
+			],
+			[
+				"verb",
+				"сдаваться"
+			],
+			[
+				"verb",
+				"напортачить"
+			],
+			[
+				"verb",
+				"наброситься"
+			],
+			[
+				"verb",
+				"возмутиться"
+			],
+			[
+				"verb",
+				"тронуть"
+			],
+			[
+				"verb",
+				"соблазнить"
+			],
+			[
+				"verb",
+				"разделать"
+			],
+			[
+				"verb",
+				"захлопнуть"
+			],
+			[
+				"verb",
+				"вынудить"
+			],
+			[
+				"verb",
+				"вынуждать"
+			],
+			[
+				"verb",
+				"воцариться"
+			],
+			[
+				"verb",
+				"поджидать"
+			],
+			[
+				"verb",
+				"отослать"
+			],
+			[
+				"verb",
+				"сиять"
+			],
+			[
+				"verb",
+				"сопротивляться"
+			],
+			[
+				"verb",
+				"навестить"
+			],
+			[
+				"verb",
+				"мелькнуть"
+			],
+			[
+				"verb",
+				"намереваться"
+			],
+			[
+				"verb",
+				"броситься"
+			],
+			[
+				"phrase",
+				"... склонны быть ..."
+			]
+		]
+	}
+}

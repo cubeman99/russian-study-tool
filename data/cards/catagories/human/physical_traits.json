@@ -1,0 +1,77 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Physical Traits",
+		"type": "categorical",
+		"cards": [
+			[
+				"adjective",
+				"хорошенький"
+			],
+			[
+				"adjective",
+				"симпатичный"
+			],
+			[
+				"adjective",
+				"прекрасный"
+			],
+			[
+				"adjective",
+				"высокий"
+			],
+			[
+				"adjective",
+				"привлекательный"
+			],
+			[
+				"verb",
+				"худеть"
+			],
+			[
+				"adjective",
+				"шикарен"
+			],
+			[
+				"adjective",
+				"шикарный"
+			],
+			[
+				"noun",
+				"сила"
+			],
+			[
+				"noun",
+				"слабость"
+			],
+			[
+				"verb",
+				"слабеть"
+			],
+			[
+				"adjective",
+				"ухоженный"
+			],
+			[
+				"adjective",
+				"шустрый"
+			],
+			[
+				"verb",
+				"отбывать"
+			],
+			[
+				"adjective",
+				"ловкий"
+			],
+			[
+				"adjective",
+				"неуклюжий"
+			],
+			[
+				"adjective",
+				"прилизанный"
+			]
+		]
+	}
+}

@@ -1,51 +1,197 @@
-card_set:
-  name: Core
-  type: Categorical
-  version: 1
-  cards:
-    - [noun, карандаш, pencil]
-    - [noun, ручка, 'pen; handle, knob, grib']
-    - [noun, бумага, paper]
-    - [noun, книга, book]
-    - [noun, тетрадь, notebook]
-    - [noun, школа, school]
-    - [noun, урок, lesson]
-    - [noun, письмо, letter]
-    - [noun, газета, newspaper]
-    - [noun, словарь, dictionary]
-    - [noun, слово, word]
-    - [noun, журнал, magazine]
-    - [noun, фотография, photo]
-    - [noun, портфель, briefcase]
-    - [noun, ключ, key]
-    - [noun, кусок (кусочки), a piece (pieces)]
-    - [noun, имя, name]
-    - [noun, страна, country]
-    - [noun, время, time]
-    - [noun, знак, sign]
-    - [noun, пламя, flame]
-    - [noun, ошибка, 'mistake, error']
-    - [noun, шутка, joke]
-    - [noun, край, edge]
-    - [noun, роль, role]
-    - [noun, ружьё, gun]
-    - [noun, семя, seed]
-    - [noun, ложь, lie]
-    - [noun, шаг, step]
-    - [noun, билет, ticket]
-    - [noun, вечеринка, party]
-    - [noun, деньги, money]
-    - [noun, карта, 'map, card']
-    - [noun, проблема, problem]
-    - [noun, проект, project]
-    - [noun, система, system]
-    - [noun, сумка, bag]
-    - [noun, статья, article]
-    - [noun, уровень, level]
-    - [noun, объект, object]
-    - [noun, кошмар, nightmare]
-    - [noun, сон, 'sleep, dream']
-    - [noun, мечта, dream (aspiration)]
-    - [noun, чувство, feeling]
-    - [noun, правда, truth]
-    - [noun, часть, part]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Core",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"карандаш"
+			],
+			[
+				"noun",
+				"ручка"
+			],
+			[
+				"noun",
+				"бумага"
+			],
+			[
+				"noun",
+				"книга"
+			],
+			[
+				"noun",
+				"тетрадь"
+			],
+			[
+				"noun",
+				"школа"
+			],
+			[
+				"noun",
+				"урок"
+			],
+			[
+				"noun",
+				"письмо"
+			],
+			[
+				"noun",
+				"газета"
+			],
+			[
+				"noun",
+				"словарь"
+			],
+			[
+				"noun",
+				"слово"
+			],
+			[
+				"noun",
+				"журнал"
+			],
+			[
+				"noun",
+				"фотография"
+			],
+			[
+				"noun",
+				"портфель"
+			],
+			[
+				"noun",
+				"ключ"
+			],
+			[
+				"noun",
+				"кусок (кусочки)"
+			],
+			[
+				"noun",
+				"имя"
+			],
+			[
+				"noun",
+				"страна"
+			],
+			[
+				"noun",
+				"время"
+			],
+			[
+				"noun",
+				"знак"
+			],
+			[
+				"noun",
+				"пламя"
+			],
+			[
+				"noun",
+				"ошибка"
+			],
+			[
+				"noun",
+				"шутка"
+			],
+			[
+				"noun",
+				"край"
+			],
+			[
+				"noun",
+				"роль"
+			],
+			[
+				"noun",
+				"ружье"
+			],
+			[
+				"noun",
+				"семя"
+			],
+			[
+				"noun",
+				"ложь"
+			],
+			[
+				"noun",
+				"шаг"
+			],
+			[
+				"noun",
+				"билет"
+			],
+			[
+				"noun",
+				"вечеринка"
+			],
+			[
+				"noun",
+				"деньги"
+			],
+			[
+				"noun",
+				"карта"
+			],
+			[
+				"noun",
+				"проблема"
+			],
+			[
+				"noun",
+				"проект"
+			],
+			[
+				"noun",
+				"система"
+			],
+			[
+				"noun",
+				"сумка"
+			],
+			[
+				"noun",
+				"статья"
+			],
+			[
+				"noun",
+				"уровень"
+			],
+			[
+				"noun",
+				"объект"
+			],
+			[
+				"noun",
+				"кошмар"
+			],
+			[
+				"noun",
+				"сон"
+			],
+			[
+				"noun",
+				"мечта"
+			],
+			[
+				"noun",
+				"чувство"
+			],
+			[
+				"noun",
+				"правда"
+			],
+			[
+				"noun",
+				"часть"
+			],
+			[
+				"adjective",
+				"любой"
+			]
+		]
+	}
+}

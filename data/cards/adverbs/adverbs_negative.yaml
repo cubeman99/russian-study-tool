@@ -1,15 +1,49 @@
-card_set:
-  name: Negative Adverbs
-  type: Categorical
-  version: 1
-  cards:
-    - [adverb, нигде, nowhere]
-    - [adverb, никуда, (to) nowhere]
-    - [adverb, никогда, never]
-    - [adverb, никак, in no way]
-    - [adverb, нисколько, not at all]
-    - [adverb, несколько, several]
-    - [adverb, негде, there is no place]
-    - [adverb, некуда, there is no place (to go)]
-    - [adverb, некогда, there is no time]
-    - [adverb, незачем, there is no point]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Negative Adverbs",
+		"type": "categorical",
+		"cards": [
+			[
+				"adverb",
+				"нигде"
+			],
+			[
+				"adverb",
+				"никуда"
+			],
+			[
+				"adverb",
+				"никогда"
+			],
+			[
+				"adverb",
+				"никак"
+			],
+			[
+				"adverb",
+				"нисколько"
+			],
+			[
+				"adverb",
+				"несколько"
+			],
+			[
+				"adverb",
+				"негде"
+			],
+			[
+				"adverb",
+				"некуда"
+			],
+			[
+				"adverb",
+				"некогда"
+			],
+			[
+				"adverb",
+				"незачем"
+			]
+		]
+	}
+}

@@ -1,0 +1,354 @@
+{
+  "card_set": {
+    "name": "New 10",
+    "version": 1,
+    "cards": [
+      [
+        "adjective",
+        "\u0440\u043e\u0431\u043a\u0438\u0439",
+        "timid"
+      ],
+      [
+        "adjective",
+        "\u0440\u0430\u0437\u043d\u044b\u0439",
+        "different, various"
+      ],
+      [
+        "adjective",
+        "\u043d\u0435\u043c\u0435\u0446\u043a\u0438\u0439",
+        "German"
+      ],
+      [
+        "adjective",
+        "\u0432\u0437\u0440\u043e\u0441\u043b\u044b\u0439",
+        "adult"
+      ],
+      [
+        "adjective",
+        "\u0435\u0434\u0438\u043d\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439",
+        "only, sole"
+      ],
+      [
+        "adjective",
+        "\u043d\u0430\u0447\u0438\u043d\u0430\u044e\u0449\u0438\u0439",
+        "beginner"
+      ],
+      [
+        "adjective",
+        "\u043c\u0440\u0430\u0447\u043d\u044b\u0439",
+        "gloomy"
+      ],
+      [
+        "adjective",
+        "\u0441\u043b\u0435\u043f\u043e\u0439",
+        "blind"
+      ],
+      [
+        "adjective",
+        "\u0433\u043b\u0443\u0431\u043e\u043a\u0438\u0439",
+        "deep"
+      ],
+      [
+        "adjective",
+        "\u0441\u0442\u044b\u0434\u043d\u044b\u0439",
+        "shameful"
+      ],
+      [
+        "adjective",
+        "\u0442\u0443\u043f\u043e\u0439",
+        "dull"
+      ],
+      [
+        "adverb",
+        "\u0434\u043e\u0440\u043e\u0436\u0435",
+        "more expensive"
+      ],
+      [
+        "adverb",
+        "\u0441\u043f\u043e\u043b\u043d\u0430",
+        "in full"
+      ],
+      [
+        "adverb",
+        "\u0438\u043c\u0435\u043d\u043d\u043e",
+        "namely, precisely, exactly"
+      ],
+      [
+        "noun",
+        "\u0442\u043e\u0448\u043d\u043e\u0442\u0430",
+        "nausea"
+      ],
+      [
+        "noun",
+        "\u043f\u0443\u0442\u044c",
+        "path, way, route"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0430\u0432\u0438\u043b\u043e",
+        "rule"
+      ],
+      [
+        "noun",
+        "\u0440\u0430\u0437\u043c\u0435\u0440",
+        "size"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u043f\u0443\u0441\u043a",
+        "pass, permit"
+      ],
+      [
+        "noun",
+        "\u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435",
+        "message, report"
+      ],
+      [
+        "noun",
+        "\u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432\u043e",
+        "medicine, drug"
+      ],
+      [
+        "noun",
+        "\u0441\u0442\u0430\u0440\u0438\u043a",
+        "old man"
+      ],
+      [
+        "noun",
+        "\u043d\u0430\u0447\u0430\u043b\u043e",
+        "beginning"
+      ],
+      [
+        "noun",
+        "\u0443\u0447\u0435\u043d\u0438\u0446\u0430",
+        "student, pupil"
+      ],
+      [
+        "noun",
+        "\u043f\u0430\u0446\u0438\u0435\u043d\u0442",
+        "patient"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043b\u043e\u0442\u0435\u043d\u0446\u0435",
+        "towel"
+      ],
+      [
+        "noun",
+        "\u043a\u043e\u0440\u043e\u0431\u043a\u0430",
+        "box, case"
+      ],
+      [
+        "noun",
+        "\u0440\u043e\u0434",
+        "gender, kin"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0435\u0434\u043b\u043e\u0436\u0435\u043d\u0438\u0435",
+        "offer, proposal, suggestion; sentence"
+      ],
+      [
+        "noun",
+        "\u043a\u043e\u043d\u044a\u044e\u043d\u043a\u0446\u0438\u044f",
+        "conjunction"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0435\u0434\u043b\u043e\u0433",
+        "preposition"
+      ],
+      [
+        "noun",
+        "\u0444\u0440\u0430\u0437\u0430",
+        "phrase"
+      ],
+      [
+        "noun",
+        "\u0437\u0430\u043c\u0435\u0447\u0430\u043d\u0438\u0435",
+        "comment, remark, note, observation"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043a\u043e\u0439",
+        "peace, rest"
+      ],
+      [
+        "noun",
+        "\u0442\u0435\u043d\u044c",
+        "shadow"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0435\u043d\u0438\u0435",
+        "continuation"
+      ],
+      [
+        "noun",
+        "\u0432\u0434\u043e\u0445",
+        "breath, inhalation"
+      ],
+      [
+        "noun",
+        "\u0441\u043e\u043c\u043d\u0435\u043d\u0438\u0435",
+        "doubt"
+      ],
+      [
+        "noun",
+        "\u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e",
+        "amount, quantity"
+      ],
+      [
+        "verb",
+        "\u0430\u0440\u0435\u043d\u0434\u043e\u0432\u0430\u0442\u044c",
+        "to rent"
+      ],
+      [
+        "verb",
+        "\u043e\u0441\u043d\u043e\u0432\u044b\u0432\u0430\u0442\u044c",
+        "to found, base, base upon"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u0441\u0443\u0434\u0438\u0442\u044c",
+        "to discuss"
+      ],
+      [
+        "verb",
+        "\u043e\u0441\u043c\u0430\u0442\u0440\u0438\u0432\u0430\u0442\u044c",
+        "to inspect, examine"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043f\u043e\u043c\u043d\u0438\u0442\u044c",
+        "to keep in mind, remember, memorize"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043c\u0435\u0447\u0430\u0442\u044c",
+        "to notice"
+      ],
+      [
+        "verb",
+        "\u0432\u043b\u044e\u0431\u0438\u0442\u044c\u0441\u044f",
+        "to fall in love"
+      ],
+      [
+        "verb",
+        "\u0443\u0441\u0442\u0443\u043f\u0438\u0442\u044c",
+        "to concede, yield, give way"
+      ],
+      [
+        "verb",
+        "\u043a\u0440\u0430\u0441\u0438\u0442\u044c",
+        "to paint"
+      ],
+      [
+        "verb",
+        "\u043f\u0443\u0441\u043a\u0430\u0442\u044c",
+        "to let go"
+      ],
+      [
+        "verb",
+        "\u0434\u0430\u0440\u0438\u0442\u044c",
+        "to gift"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0434\u043e\u0445\u043d\u0443\u0442\u044c",
+        "to exhale"
+      ],
+      [
+        "verb",
+        "\u0432\u0434\u043e\u0445\u043d\u0443\u0442\u044c",
+        "to inhale"
+      ],
+      [
+        "verb",
+        "\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u0442\u044c",
+        "to leave, drop, abandon"
+      ],
+      [
+        "verb",
+        "\u043e\u0441\u0442\u0430\u0432\u0438\u0442\u044c",
+        "to leave, drop, abandon"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c\u0441\u044f",
+        "to turn out, work"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043b\u0443\u0447\u0430\u0442\u044c\u0441\u044f",
+        "to turn out, work"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0438\u0433\u043b\u0430\u0441\u0438\u0442\u044c",
+        "to invite"
+      ],
+      [
+        "phrase",
+        "\u0432\u0441\u0451 \u0432 \u043f\u043e\u0440\u044f\u0434\u043a\u0435",
+        "all is well"
+      ],
+      [
+        "phrase",
+        "\u0432\u043e\u043e\u0431\u0449\u0435-\u0442\u043e",
+        "to be honest, in actuality, by the way"
+      ],
+      [
+        "phrase",
+        "\u044f \u0441\u0447\u0438\u0442\u0430\u044e, \u0447\u0442\u043e...",
+        "I think that, I believe that..."
+      ],
+      [
+        "phrase",
+        "\u043a\u0430\u043a \u043e\u043a\u0430\u0437\u0430\u043b\u043e\u0441\u044c, ...",
+        "as it turned out, ..."
+      ],
+      [
+        "phrase",
+        "\u043d\u0430 \u0441\u0430\u043c\u043e\u043c \u0434\u0435\u043b\u0435, ...",
+        "in actuality, in reality, ..."
+      ],
+      [
+        "phrase",
+        "\u043a \u0441\u043b\u043e\u0436\u043e\u043b\u0435\u043d\u0438\u044e DELETEME",
+        "unfortunately"
+      ],
+      [
+        "phrase",
+        "\u0432 \u043b\u044e\u0431\u043e\u043c \u0441\u043b\u0443\u0447\u0430\u0435, ...",
+        "in any case, ..."
+      ],
+      [
+        "phrase",
+        "\u0447\u0442\u043e \u043a\u0430\u0441\u0430\u0435\u0442\u0441\u044f ____, \u0442\u043e ____",
+        "when it comes to ____, ____"
+      ],
+      [
+        "preposition",
+        "\u043d\u0430\u0434",
+        "over"
+      ],
+      [
+        "preposition",
+        "\u043f\u0435\u0440\u0435\u0434",
+        "in front of"
+      ],
+      [
+        "preposition",
+        "\u0440\u0430\u0434\u043e\u043c \u0441",
+        "next to"
+      ],
+      [
+        "interjection",
+        "\u043c\u043e\u043b\u043e\u0434\u0435\u0446",
+        "well done"
+      ]
+    ],
+    "type": "Other"
+  }
+}

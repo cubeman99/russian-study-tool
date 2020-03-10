@@ -1,0 +1,309 @@
+{
+  "card_set": {
+    "name": "New 21",
+    "version": 1,
+    "cards": [
+      [
+        "noun",
+        "\u043d\u0430\u0434\u043f\u0438\u0441\u044c",
+        "a writing, inscripture (large scale)"
+      ],
+      [
+        "noun",
+        "\u0437\u0430\u043f\u0438\u0441\u044c",
+        "a written note; a recording"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043f\u0438\u0441\u0430\u0442\u044c",
+        "to take a note; to record"
+      ],
+      [
+        "noun",
+        "\u043f\u0435\u0440\u0435\u043f\u0438\u0441\u043a\u0430",
+        "a correspondence between two people"
+      ],
+      [
+        "verb",
+        "\u043f\u0435\u0440\u0435\u043f\u0438\u0441\u044b\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to chat, text someone, correspond"
+      ],
+      [
+        "verb",
+        "\u0434\u043e\u043f\u0438\u0441\u0430\u0442\u044c",
+        "to finish writing something"
+      ],
+      [
+        "noun",
+        "\u0441\u043f\u0438\u0441\u043e\u043a",
+        "a list"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0434\u043f\u0438\u0441\u044c",
+        "a signature"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0441\u0441\u043e\u0437\u0434\u0430\u0442\u044c",
+        "to recreate"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0441\u0441\u043e\u0437\u0434\u0430\u0432\u0430\u0442\u044c",
+        "to recreate"
+      ],
+      [
+        "verb",
+        "\u043e\u0432\u043b\u0430\u0434\u0435\u0442\u044c",
+        "to take possession of"
+      ],
+      [
+        "noun",
+        "\u0432\u043e\u0441\u0445\u043e\u0436\u0434\u0435\u043d\u0438\u0435",
+        "ascent, rise, ascention, climb"
+      ],
+      [
+        "noun",
+        "\u0440\u0430\u0441\u0441\u0440\u0435\u0434\u043e\u0442\u043e\u0447\u0435\u043d\u0438\u0435",
+        "dispersal"
+      ],
+      [
+        "noun",
+        "\u041f\u0430\u0440\u0438\u0436",
+        "Paris"
+      ],
+      [
+        "adjective",
+        "\u0432\u043e\u0435\u043d\u043d\u044b\u0439",
+        "military, war (adj.)"
+      ],
+      [
+        "verb",
+        "\u0443\u043c\u0435\u043d\u044c\u0448\u0438\u0442\u044c",
+        "to reduce"
+      ],
+      [
+        "noun",
+        "\u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e",
+        "a device"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435",
+        "an update"
+      ],
+      [
+        "noun",
+        "\u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u0435",
+        "a notification, notice"
+      ],
+      [
+        "noun",
+        "\u0433\u0438\u043f\u043e\u0442\u0435\u0437\u0430",
+        "a hypothesis"
+      ],
+      [
+        "noun",
+        "\u043f\u0430\u0440\u0438\u043a\u043c\u0430\u0445\u0435\u0440",
+        "hairdresser"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0438\u0447\u0451\u0441\u043a\u0430",
+        "hairstyle"
+      ],
+      [
+        "noun",
+        "\u043c\u0430\u043a\u0438\u044f\u0436",
+        "makeup"
+      ],
+      [
+        "noun",
+        "\u0431\u0443\u043c\u0430\u0436\u043d\u0438\u043a",
+        "wallet"
+      ],
+      [
+        "adjective",
+        "\u0441\u0442\u0435\u043a\u043b\u044f\u043d\u043d\u044b\u0439",
+        "glass (adj.)"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u044f",
+        "profession"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0447\u0435\u0440\u043a",
+        "handwriting"
+      ],
+      [
+        "adverb",
+        "\u0441\u043e\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e",
+        "respectively, accordingly"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0430\u0432\u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435",
+        "spelling"
+      ],
+      [
+        "noun",
+        "\u043e\u0440\u0444\u043e\u0433\u0440\u0430\u0444\u0438\u044f",
+        "orthography"
+      ],
+      [
+        "noun",
+        "\u0441\u043e\u0447\u0435\u043d\u0435\u043d\u0438\u0435",
+        "an essay"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043b\u043d\u043e\u043c\u0435\u0442\u0440\u0430\u0436\u043a\u0430",
+        "feature film"
+      ],
+      [
+        "noun",
+        "\u043c\u0435\u0434\u0441\u0435\u0441\u0442\u0440\u0430",
+        "nurse"
+      ],
+      [
+        "adverb",
+        "\u0431\u0435\u0437\u0440\u0430\u0437\u043b\u0438\u0447\u043d\u043e",
+        "indifferently, doesnt care"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0437\u0434\u043e\u0440\u0430\u0432\u043b\u0438\u0432\u0430\u0442\u044c",
+        "to recover, get better (health)"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043f\u0438\u0442\u044c",
+        "to wash down, drink smth down"
+      ],
+      [
+        "adjective",
+        "\u0431\u0435\u0437\u0434\u043e\u043c\u043d\u044b\u0439, \u0431\u0435\u0441\u043f\u0440\u0438\u0437\u043e\u0440\u043d\u044b\u0439",
+        "homeless"
+      ],
+      [
+        "preposition",
+        "\u0441; \u0441\u043e + gen.",
+        "from a place; since a time period"
+      ],
+      [
+        "verb",
+        "\u0443\u043d\u0438\u0447\u0442\u043e\u0436\u0430\u0442\u044c",
+        "to destroy, wipe out"
+      ],
+      [
+        "verb",
+        "\u043a\u0430\u0437\u0430\u0442\u044c\u0441\u044f",
+        "to seem"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u0441\u0442\u043e\u0438\u0442\u044c",
+        "to consist"
+      ],
+      [
+        "verb",
+        "\u043c\u0430\u043d\u0438\u0442\u044c",
+        "to call, beckon; to hand signal"
+      ],
+      [
+        "verb",
+        "\u0438\u0441\u0447\u0435\u0437\u043d\u0443\u0442\u044c",
+        "to disappear, vanish"
+      ],
+      [
+        "noun",
+        "\u0441\u043e\u043b\u043e\u043c\u043a\u0430",
+        "straw"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u044a\u044f\u0432\u043b\u0435\u043d\u0438\u0435",
+        "announcement"
+      ],
+      [
+        "adjective",
+        "\u0432\u0438\u0434\u043d\u044b\u0439",
+        "visible, noticable, prominent"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0440\u0442\u0440\u0435\u0442",
+        "portrait"
+      ],
+      [
+        "adjective",
+        "\u0433\u0440\u0435\u0448\u043d\u044b\u0439",
+        "sinful"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u043e\u043f\u0430\u0441\u0442\u044c",
+        "to fall into an abyss, to be gone"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u044a\u044f\u0432\u043b\u044f\u0442\u044c",
+        "to declare, announce"
+      ],
+      [
+        "noun",
+        "\u0430\u0434",
+        "hell"
+      ],
+      [
+        "noun",
+        "\u0440\u0430\u0439",
+        "heaven, paradise"
+      ],
+      [
+        "noun",
+        "\u0432\u044b\u0437\u043e\u0432",
+        "a call, summons, invitation to be somewhere"
+      ],
+      [
+        "noun",
+        "\u043d\u0430\u0432\u044b\u043a",
+        "skill acquired from habit"
+      ],
+      [
+        "adjective",
+        "\u043f\u0440\u043e\u043f\u0443\u0449\u0435\u043d\u043d\u044b\u0439",
+        "skipped"
+      ],
+      [
+        "noun",
+        "\u0433\u0438\u0433\u0438\u0435\u043d\u0430",
+        "hygene"
+      ],
+      [
+        "noun",
+        "\u0438\u043a\u043e\u0442\u0430",
+        "a hiccup"
+      ],
+      [
+        "verb",
+        "\u0438\u043a\u0430\u0442\u044c",
+        "to hiccup"
+      ],
+      [
+        "noun",
+        "\u0442\u0440\u0443\u0434",
+        "labor, work"
+      ],
+      [
+        "phrase",
+        "\u043e\u0431\u0430 (m./n.); \u043e\u0431\u0435 (f.)",
+        "both"
+      ]
+    ],
+    "type": "Other"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "card_set": {
+    "name": "Law and Crime",
+    "version": 1,
+    "cards": [
+      [
+        "noun",
+        "\u0441\u0432\u0438\u0434\u0435\u0442\u0435\u043b\u044c",
+        "witness"
+      ],
+      [
+        "verb",
+        "\u0441\u0432\u0438\u0434\u0435\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e\u0432\u0430\u0442\u044c",
+        "to testify"
+      ],
+      [
+        "noun",
+        "\u0443\u043b\u0438\u043a\u0430",
+        "evidence (incriminating)"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0435\u0441\u0442\u0443\u043f\u043d\u043e\u0441\u0442\u044c",
+        "crime (in general)"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u0432\u0438\u043d\u0435\u043d\u0438\u0435",
+        "an accusation"
+      ],
+      [
+        "noun",
+        "\u0430\u0432\u0442\u043e\u0440\u0438\u0442\u0435\u0442",
+        "authority"
+      ],
+      [
+        "verb",
+        "\u0441\u0443\u0434\u0438\u0442\u044c",
+        "to judge"
+      ],
+      [
+        "adjective",
+        "\u043f\u0440\u0435\u0441\u0442\u0443\u043f\u043d\u044b\u0439",
+        "criminal, felonious"
+      ],
+      [
+        "verb",
+        "\u0448\u043f\u0438\u043e\u043d\u0438\u0442\u044c",
+        "to spy"
+      ],
+      [
+        "adjective",
+        "\u043d\u0435\u0437\u0430\u043a\u043e\u043d\u043d\u044b\u0439",
+        "illegal"
+      ],
+      [
+        "noun",
+        "\u043e\u0433\u0440\u0430\u0431\u043b\u0435\u043d\u0438\u0435",
+        "a robbery, heist"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0435\u0442\u0435\u043d\u0437\u0438\u044f",
+        "a claim, pretension, title"
+      ],
+      [
+        "verb",
+        "\u0443\u0442\u0432\u0435\u0440\u0436\u0434\u0430\u0442\u044c",
+        "to assert, argue, allege, to state"
+      ],
+      [
+        "noun",
+        "\u043e\u0445\u0440\u0430\u043d\u0430",
+        "security"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

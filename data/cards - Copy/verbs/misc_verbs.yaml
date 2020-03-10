@@ -1,0 +1,44 @@
+{
+  "card_set": {
+    "name": "Misc Verbs",
+    "version": 1,
+    "cards": [
+      [
+        "verb",
+        "\u0440\u0430\u0437\u0433\u043e\u0432\u0430\u0440\u044b\u0432\u0430\u0442\u044c",
+        "to converse"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0435\u0432\u0440\u0430\u0442\u0438\u0442\u044c\u0441\u044f",
+        "to turn into"
+      ],
+      [
+        "verb",
+        "\u0434\u043e\u0431\u0438\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to strive for"
+      ],
+      [
+        "verb",
+        "\u0434\u043e\u0441\u0442\u0438\u0433\u0430\u0442\u044c",
+        "to achieve"
+      ],
+      [
+        "verb",
+        "\u043f\u0443\u0433\u0430\u0442\u044c\u0441\u044f",
+        "to be frightened of"
+      ],
+      [
+        "verb",
+        "\u0438\u0437\u0431\u0435\u0433\u0430\u0442\u044c",
+        "to avoid"
+      ],
+      [
+        "verb",
+        "\u043d\u0440\u0430\u0432\u0438\u0442\u044c\u0441\u044f",
+        "to appeal to"
+      ]
+    ],
+    "type": "Grammatical"
+  }
+}

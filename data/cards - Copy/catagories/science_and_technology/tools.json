@@ -1,0 +1,184 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Tools",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"шпатель",
+				"a putty knife"
+			],
+			[
+				"noun",
+				"цемент",
+				"cement"
+			],
+			[
+				"noun",
+				"киянка",
+				"a mallet"
+			],
+			[
+				"noun",
+				"молоток",
+				"a small hammer"
+			],
+			[
+				"noun",
+				"молот",
+				"a large hammer"
+			],
+			[
+				"noun",
+				"бетон",
+				"concrete"
+			],
+			[
+				"noun",
+				"таз",
+				"pelvis; a basin (large metal bowl)"
+			],
+			[
+				"noun",
+				"дрель",
+				"a drill"
+			],
+			[
+				"noun",
+				"рулетка",
+				"measuring tape"
+			],
+			[
+				"noun",
+				"лопата",
+				"a shovel"
+			],
+			[
+				"noun",
+				"лом",
+				"scrap"
+			],
+			[
+				"noun",
+				"забор",
+				"a fence"
+			],
+			[
+				"noun",
+				"перила",
+				"a railing"
+			],
+			[
+				"verb",
+				"варить",
+				"to boil; to weld"
+			],
+			[
+				"noun",
+				"шуруповёрт",
+				"a screwdriver"
+			],
+			[
+				"noun",
+				"шуруп",
+				"a screw"
+			],
+			[
+				"verb",
+				"вертеть",
+				"to twirl, spin"
+			],
+			[
+				"verb",
+				"вить",
+				"to twist"
+			],
+			[
+				"noun",
+				"хлам",
+				"stuff, trash (smth old you dont need)"
+			],
+			[
+				"noun",
+				"железака",
+				"a piece of iron"
+			],
+			[
+				"noun",
+				"шпанга",
+				"a barbell"
+			],
+			[
+				"noun",
+				"киприч",
+				"a brick"
+			],
+			[
+				"verb",
+				"соединять",
+				"to connect, join"
+			],
+			[
+				"noun",
+				"грунт",
+				"soil"
+			],
+			[
+				"noun",
+				"слой",
+				"a layer"
+			],
+			[
+				"noun",
+				"раствор",
+				"a solution (liquid)"
+			],
+			[
+				"verb",
+				"раствориться",
+				"to dissolve"
+			],
+			[
+				"noun",
+				"плита",
+				"stove-top"
+			],
+			[
+				"noun",
+				"серп",
+				"a sickle"
+			],
+			[
+				"verb",
+				"заливать",
+				"to fill, overflow, flood, to spread out smth"
+			],
+			[
+				"verb",
+				"заполнять",
+				"to smth fill up/out"
+			],
+			[
+				"noun",
+				"строительство",
+				"construction"
+			],
+			[
+				"phrase",
+				"серп и молот",
+				"hammer and sickle"
+			],
+			[
+				"verb",
+				"ломать",
+				"to break"
+			],
+			[
+				"verb",
+				"сломать",
+				"to break"
+			]
+		]
+	}
+}

@@ -1,78 +1,301 @@
-card_set:
-  name: New 01
-  type: Other
-  version: 1
-  cards:
-    - [adjective, богатый, rich]
-    - [adjective, вкусный, tasty]
-    - [adjective, невкусный, not tasty]
-    - [adjective, неприятный, not pleasant]
-    - [adjective, неудобный, not comfortable]
-    - [adjective, куриный, chicken (adj.)]
-    - [adjective, стильный, 'stylish, trendy']
-    - [adjective, известный, famous]
-    - [adjective, любимый, favorite]
-    - [adjective, штиль, calm]
-    - [adjective, харизматичный, charismatic]
-    - [adjective, всякий, all sorts of]
-    - [adjective, любой, any]
-    - [adverb, конкретно, specifically]
-    - [adverb, отлично, 'perfect, excellent']
-    - [adverb, правильно, correct]
-    - [adverb, 'однозначно, определённо', definitely]
-    - [adverb, лучше, better]
-    - [adverb, хуже, worse]
-    - [adverb, чаще, more often]
-    - [adverb, одинаковый, same]
-    - [noun, стиль, style]
-    - [noun, цена, price]
-    - [noun, война, war]
-    - [noun, заказ, order]
-    - [noun, звук, sound]
-    - [noun, игра, game]
-    - [noun, интеллект, intelligence]
-    - [noun, мир, world; peace]
-    - [noun, память, memory]
-    - [noun, идиот, idiot]
-    - [noun, курьер, delivery person]
-    - [noun, озвучка, voice acting]
-    - [noun, команда, team (sport team)]
-    - [noun, пример, example]
-    - [noun, кумир, idol]
-    - [noun, произношение, pronounciation]
-    - [noun, трава, grass]
-    - [noun, учебник, textbook]
-    - [noun, глагол, verb]
-    - [noun, кино, 'theater, cinema']
-    - [noun, поезд, train]
-    - [noun, движение, 'motion, movement']
-    - [noun, охрана, security]
-    - [noun, послание, message]
-    - [verb, забывать, to forget]
-    - [verb, спорить, to argue]
-    - [verb, стоить, to cost]
-    - [verb, сниться, to dream (during sleep)]
-    - [verb, побеждать, to win]
-    - [verb, значить, 'to mean, signify']
-    - [verb, учиться, to study at educational institution; to learn something by yourself]
-    - [verb, обучать, 'to teach, instruct, train']
-    - [verb, изучать, to study something (with in depth approach)]
-    - [verb, обожать, to adore]
-    - [verb, уважать, to respect]
-    - [verb, отбыть, to depart]
-    - [verb, отбывать, to depart]
-    - [verb, шутить, 'to joke, kid']
-    - [verb, назначить, to schedule]
-    - [verb, извиниться, to apologize]
-    - [verb, простить, 'to excuse, forgive']
-    - [verb, использовать, to use]
-    - [verb, предполагать, 'to assume, suppose, guess']
-    - [verb, предположить, 'to assume, suppose, guess']
-    - [verb, предлагать, 'to offer, propose, suggest']
-    - [verb, предложить, 'to offer, propose, suggest']
-    - [verb, подниматься, 'to rise, get up']
-    - [verb, подняться, 'to rise, get up']
-    - [verb, вдохновлять, to inspire]
-    - [other, возможно, it is possible]
-    - [other, невозможно, it is impossible]
-    - [other, замечательно!, wonderful!]
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 01",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"богатый"
+			],
+			[
+				"adjective",
+				"вкусный"
+			],
+			[
+				"adjective",
+				"невкусный"
+			],
+			[
+				"adjective",
+				"неприятный"
+			],
+			[
+				"adjective",
+				"неудобный"
+			],
+			[
+				"adjective",
+				"куриный"
+			],
+			[
+				"adjective",
+				"стильный"
+			],
+			[
+				"adjective",
+				"известный"
+			],
+			[
+				"adjective",
+				"любимый"
+			],
+			[
+				"adjective",
+				"штиль"
+			],
+			[
+				"adjective",
+				"харизматичный"
+			],
+			[
+				"adjective",
+				"всякий"
+			],
+			[
+				"adjective",
+				"любой"
+			],
+			[
+				"adverb",
+				"конкретно"
+			],
+			[
+				"adverb",
+				"отлично"
+			],
+			[
+				"adverb",
+				"правильно"
+			],
+			[
+				"adverb",
+				"однозначно; определенно"
+			],
+			[
+				"adverb",
+				"лучше"
+			],
+			[
+				"adverb",
+				"хуже"
+			],
+			[
+				"adverb",
+				"чаще"
+			],
+			[
+				"adjective",
+				"одинаковый; идентичный"
+			],
+			[
+				"noun",
+				"стиль"
+			],
+			[
+				"noun",
+				"цена"
+			],
+			[
+				"noun",
+				"война"
+			],
+			[
+				"noun",
+				"заказ"
+			],
+			[
+				"noun",
+				"звук"
+			],
+			[
+				"noun",
+				"игра"
+			],
+			[
+				"noun",
+				"интеллект"
+			],
+			[
+				"noun",
+				"мир"
+			],
+			[
+				"noun",
+				"память"
+			],
+			[
+				"noun",
+				"идиот"
+			],
+			[
+				"noun",
+				"курьер"
+			],
+			[
+				"noun",
+				"озвучка"
+			],
+			[
+				"noun",
+				"команда"
+			],
+			[
+				"noun",
+				"пример"
+			],
+			[
+				"noun",
+				"кумир"
+			],
+			[
+				"noun",
+				"произношение"
+			],
+			[
+				"noun",
+				"трава"
+			],
+			[
+				"noun",
+				"учебник"
+			],
+			[
+				"noun",
+				"глагол"
+			],
+			[
+				"noun",
+				"кино"
+			],
+			[
+				"noun",
+				"поезд"
+			],
+			[
+				"noun",
+				"движение"
+			],
+			[
+				"noun",
+				"охрана"
+			],
+			[
+				"noun",
+				"послание"
+			],
+			[
+				"verb",
+				"забывать"
+			],
+			[
+				"verb",
+				"спорить"
+			],
+			[
+				"verb",
+				"стоить"
+			],
+			[
+				"verb",
+				"сниться"
+			],
+			[
+				"verb",
+				"побеждать"
+			],
+			[
+				"verb",
+				"значить"
+			],
+			[
+				"verb",
+				"учиться"
+			],
+			[
+				"verb",
+				"обучать"
+			],
+			[
+				"verb",
+				"изучать"
+			],
+			[
+				"verb",
+				"обожать"
+			],
+			[
+				"verb",
+				"уважать"
+			],
+			[
+				"verb",
+				"отбыть"
+			],
+			[
+				"verb",
+				"отбывать"
+			],
+			[
+				"verb",
+				"шутить"
+			],
+			[
+				"verb",
+				"назначить"
+			],
+			[
+				"verb",
+				"извиниться"
+			],
+			[
+				"verb",
+				"простить"
+			],
+			[
+				"verb",
+				"использовать"
+			],
+			[
+				"verb",
+				"предполагать"
+			],
+			[
+				"verb",
+				"предположить"
+			],
+			[
+				"verb",
+				"предлагать"
+			],
+			[
+				"verb",
+				"предложить"
+			],
+			[
+				"verb",
+				"подниматься"
+			],
+			[
+				"verb",
+				"подняться"
+			],
+			[
+				"verb",
+				"вдохновлять"
+			],
+			[
+				"adverb",
+				"возможно"
+			],
+			[
+				"adverb",
+				"невозможно"
+			],
+			[
+				"interjection",
+				"замечательно!"
+			]
+		]
+	}
+}

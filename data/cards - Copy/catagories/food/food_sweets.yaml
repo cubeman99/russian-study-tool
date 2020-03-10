@@ -1,0 +1,69 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Sweets/Deserts",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"булочка",
+				"sweet roll"
+			],
+			[
+				"noun",
+				"печенье",
+				"cookie"
+			],
+			[
+				"noun",
+				"кекс",
+				"cupcake"
+			],
+			[
+				"noun",
+				"торт",
+				"cake"
+			],
+			[
+				"noun",
+				"пирожное",
+				"brownie, biscuit, pastry"
+			],
+			[
+				"noun",
+				"мороженое",
+				"ice cream"
+			],
+			[
+				"noun",
+				"конфета",
+				"candy"
+			],
+			[
+				"noun",
+				"батончик",
+				"candy bar"
+			],
+			[
+				"noun",
+				"жевательная резинка, жевачка",
+				"(chewing) gum"
+			],
+			[
+				"noun",
+				"пирожок",
+				"stuffed roll"
+			],
+			[
+				"noun",
+				"шоколад",
+				"chocolate"
+			],
+			[
+				"noun",
+				"тесто",
+				"dough"
+			]
+		]
+	}
+}

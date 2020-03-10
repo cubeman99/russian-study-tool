@@ -1,0 +1,419 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Рог",
+		"type": "media",
+		"cards": [
+			[
+				"verb",
+				"пинать",
+				"to kick"
+			],
+			[
+				"verb",
+				"мучить",
+				"to torment, anguish, torture"
+			],
+			[
+				"verb",
+				"умыться",
+				"to wash oneself"
+			],
+			[
+				"verb",
+				"обмакнуть",
+				"to dip something"
+			],
+			[
+				"noun",
+				"чернила",
+				"writing ink"
+			],
+			[
+				"verb",
+				"разобраться",
+				"to figure it out"
+			],
+			[
+				"conjunction",
+				"однако; впрочем",
+				"but, however"
+			],
+			[
+				"noun",
+				"свойство",
+				"a property, attribute"
+			],
+			[
+				"noun",
+				"днк",
+				"dna"
+			],
+			[
+				"phrase",
+				"иными словами, ...",
+				"in other words, ..."
+			],
+			[
+				"verb",
+				"предопределять",
+				"to predetermine"
+			],
+			[
+				"verb",
+				"наследственность",
+				"heredity"
+			],
+			[
+				"noun",
+				"потеря",
+				"loss"
+			],
+			[
+				"noun",
+				"увечье",
+				"a mutilation"
+			],
+			[
+				"verb",
+				"наколдовать",
+				"to conjure (by witchcraft)"
+			],
+			[
+				"noun",
+				"калдовство",
+				"witchcraft"
+			],
+			[
+				"noun",
+				"синтез",
+				"synthesis"
+			],
+			[
+				"noun",
+				"белок",
+				"protein, egg white"
+			],
+			[
+				"adverb",
+				"сначала; сперва",
+				"(at) first"
+			],
+			[
+				"noun",
+				"дневник",
+				"diary"
+			],
+			[
+				"noun",
+				"заклинание; заклятие",
+				"spell, invocation"
+			],
+			[
+				"noun",
+				"соответствие",
+				"conformity, correspondance, accordance"
+			],
+			[
+				"noun",
+				"наличие",
+				"the presence, existance, availability"
+			],
+			[
+				"adjective",
+				"загадочный",
+				"mysterious, cryptic, puzzling"
+			],
+			[
+				"adjective",
+				"одинаковый; идентичный",
+				"identical"
+			],
+			[
+				"noun",
+				"участок",
+				"an area, site, region, plot"
+			],
+			[
+				"noun",
+				"родство",
+				"kinship"
+			],
+			[
+				"noun",
+				"полоска",
+				"a stripe"
+			],
+			[
+				"noun",
+				"сбой",
+				"a glitch"
+			],
+			[
+				"noun",
+				"куча",
+				"a heap, pile, bunch"
+			],
+			[
+				"noun",
+				"бесонница",
+				"insomnia"
+			],
+			[
+				"preposition",
+				"возле + gen.",
+				"by, near"
+			],
+			[
+				"noun",
+				"пеньюар",
+				"peignoir (womans dressing gown)"
+			],
+			[
+				"verb",
+				"присматривать",
+				"to keep an eye on"
+			],
+			[
+				"adjective",
+				"обыкновенный",
+				"ordinary"
+			],
+			[
+				"adjective",
+				"мечтальный",
+				"dreamy"
+			],
+			[
+				"adverb",
+				"рановато",
+				"its too early"
+			],
+			[
+				"adjective",
+				"прелый",
+				"rotton"
+			],
+			[
+				"verb",
+				"язвительность",
+				"stinginess"
+			],
+			[
+				"adverb",
+				"либидо",
+				"libido"
+			],
+			[
+				"verb",
+				"накапливаться",
+				"to pile up, accrue"
+			],
+			[
+				"phrase",
+				"в результате",
+				"as a result"
+			],
+			[
+				"adjective",
+				"опытный",
+				"experienced"
+			],
+			[
+				"verb",
+				"вытворять",
+				"to do something strange or inappropriate"
+			],
+			[
+				"adjective",
+				"безграничный",
+				"boundless"
+			],
+			[
+				"adverb",
+				"зря",
+				"in vain, to no avail, for nothing"
+			],
+			[
+				"verb",
+				"лечь",
+				"to lie down"
+			],
+			[
+				"verb",
+				"поселить",
+				"to settle smth down"
+			],
+			[
+				"noun",
+				"бой",
+				"a battle, fight, engagement"
+			],
+			[
+				"phrase",
+				"в основном, ...",
+				"basically, primarily, ...."
+			],
+			[
+				"adverb",
+				"кривой; косой",
+				"crooked"
+			],
+			[
+				"noun",
+				"потомок",
+				"a descendant"
+			],
+			[
+				"noun",
+				"потомство",
+				"descendant-cy"
+			],
+			[
+				"adjective",
+				"сельский",
+				"rural"
+			],
+			[
+				"verb",
+				"вкалывать",
+				"to work hard"
+			],
+			[
+				"noun",
+				"рассвет; заря",
+				"dawn"
+			],
+			[
+				"phrase",
+				"от зари до зари",
+				"from dawn to dusk"
+			],
+			[
+				"noun",
+				"племя",
+				"a tribe"
+			],
+			[
+				"verb",
+				"ковырять",
+				"to pick"
+			],
+			[
+				"phrase",
+				"ковырять носу",
+				"to pick your nose"
+			],
+			[
+				"verb",
+				"скрещиваться",
+				"to interbreed"
+			],
+			[
+				"noun",
+				"тёлка",
+				"baby cow; young woman (chick)"
+			],
+			[
+				"adjective",
+				"мифический",
+				"mythical"
+			],
+			[
+				"adjective",
+				"недоверчивый",
+				"distrustful, incredulous"
+			],
+			[
+				"noun",
+				"попа",
+				"booty"
+			],
+			[
+				"noun",
+				"мазь",
+				"ointment, oil, lotion"
+			],
+			[
+				"verb",
+				"намазиться",
+				"to spread, smear, apply"
+			],
+			[
+				"adverb",
+				"всерьёз",
+				"in earnest, seriously"
+			],
+			[
+				"noun",
+				"вымя",
+				"udder"
+			],
+			[
+				"verb",
+				"навыкать",
+				"to protrude"
+			],
+			[
+				"noun",
+				"булка",
+				"a roll"
+			],
+			[
+				"noun",
+				"тысячелетие",
+				"a millenium"
+			],
+			[
+				"verb",
+				"пыриться",
+				"to stare fixidly"
+			],
+			[
+				"adjective",
+				"мелкий",
+				"petty, small, insignificant; shallow"
+			],
+			[
+				"noun",
+				"кувшин",
+				"a jug"
+			],
+			[
+				"noun",
+				"штопоп",
+				"a corkscrew"
+			],
+			[
+				"noun",
+				"дама",
+				"a lady"
+			],
+			[
+				"noun",
+				"присловье",
+				"a saying, expletive"
+			],
+			[
+				"noun",
+				"одолжение",
+				"a favor"
+			],
+			[
+				"adjective",
+				"непотребный",
+				"indecent, obscene"
+			],
+			[
+				"adverb",
+				"небось",
+				"i suppose"
+			],
+			[
+				"verb",
+				"продлить",
+				"to prolong, extend"
+			]
+		]
+	}
+}

@@ -1,65 +1,249 @@
-card_set:
-  name: New 17
-  type: Other
-  version: 1
-  cards:
-    - [adjective, отвратительный, disgusting]
-    - [adjective, хрустальный, crystal]
-    - [adjective, шумный, noisy]
-    - [adjective, неизвестный, unknown]
-    - [adjective, полярный, polar]
-    - [adjective, нежный, 'gentle, tender, affectionate']
-    - [adjective, привычный, 'habitual, accustomed']
-    - [adjective, славный, 'glorious, nice']
-    - [adverb, соответственно, 'respectively, accordingly']
-    - [noun, судба, fate]
-    - [noun, шпион, spy]
-    - [noun, воспоминание, 'a memory, recollection']
-    - [noun, сбор, 'gathering, collection']
-    - [noun, признание, confession]
-    - [noun, ворот, gate; shirt collar]
-    - [noun, люстра, chandelier]
-    - [noun, волнение, excitement]
-    - [noun, растение, 'plant, herb']
-    - [noun, возвращение, return]
-    - [noun, драка, 'a fight, tussle']
-    - [noun, бок, side of torso]
-    - [noun, остановка, 'stop, layover']
-    - [noun, присмотра, supervision]
-    - [noun, меч, sword]
-    - [noun, покупка, purchase]
-    - [noun, морда, 'muzzle, snout']
-    - [noun, посадка, landing]
-    - [noun, разрешение, 'permission, resolution']
-    - [noun, сфера, 'sphere, area, field, scope']
-    - [noun, значение, 'meaning, value']
-    - [noun, опыт, experience]
-    - [verb, подвести, to let down]
-    - [verb, распахнуть, 'to open wide, throw open']
-    - [verb, блестеть, 'to glisten, shine']
-    - [verb, начистить, to polish]
-    - [verb, унять, 'to quiet, calm']
-    - [verb, унимать, 'to quiet, calm']
-    - [verb, устроить, to arrange]
-    - [verb, устраивать, to arrange]
-    - [verb, залить, 'to fill, overflow, flood']
-    - [verb, заливать, 'to fill, overflow, flood']
-    - [verb, признаваться, to confess]
-    - [verb, признаться, to confess]
-    - [verb, веселиться, to have fun]
-    - [verb, купаться, to bathe]
-    - [verb, убивать, to kill]
-    - [verb, убить, to kill]
-    - [verb, оценивать, to evaluate]
-    - [verb, наказать, to punish]
-    - [verb, кивать, to nod]
-    - [verb, прокатиться, to go for a ride]
-    - [verb, переключаться, to switch]
-    - [verb, сближать, to bring together]
-    - [verb, обрадоваться, to rejoice]
-    - [phrase, угощайся, treat/help yourself]
-    - [phrase, с минуты на минуту, at any moment]
-    - [phrase, из года в год, year after year]
-    - [phrase, по полной, to the fullest]
-    - [phrase, как пожелаешь, as you wish]
-    - [phrase, к сожалению, unfortunitely]
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 17",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"отвратительный"
+			],
+			[
+				"adjective",
+				"хрустальный"
+			],
+			[
+				"adjective",
+				"шумный"
+			],
+			[
+				"adjective",
+				"неизвестный"
+			],
+			[
+				"adjective",
+				"полярный"
+			],
+			[
+				"adjective",
+				"нежный"
+			],
+			[
+				"adjective",
+				"привычный"
+			],
+			[
+				"adjective",
+				"славный"
+			],
+			[
+				"adverb",
+				"соответственно"
+			],
+			[
+				"noun",
+				"судьба"
+			],
+			[
+				"noun",
+				"шпион"
+			],
+			[
+				"noun",
+				"воспоминание"
+			],
+			[
+				"noun",
+				"сбор"
+			],
+			[
+				"noun",
+				"признание"
+			],
+			[
+				"noun",
+				"ворот"
+			],
+			[
+				"noun",
+				"люстра"
+			],
+			[
+				"noun",
+				"волнение"
+			],
+			[
+				"noun",
+				"растение"
+			],
+			[
+				"noun",
+				"возвращение"
+			],
+			[
+				"noun",
+				"драка"
+			],
+			[
+				"noun",
+				"бок"
+			],
+			[
+				"noun",
+				"остановка"
+			],
+			[
+				"noun",
+				"присмотра"
+			],
+			[
+				"noun",
+				"меч"
+			],
+			[
+				"noun",
+				"покупка"
+			],
+			[
+				"noun",
+				"морда"
+			],
+			[
+				"noun",
+				"посадка"
+			],
+			[
+				"noun",
+				"разрешение"
+			],
+			[
+				"noun",
+				"сфера"
+			],
+			[
+				"noun",
+				"значение"
+			],
+			[
+				"noun",
+				"опыт"
+			],
+			[
+				"verb",
+				"подвести"
+			],
+			[
+				"verb",
+				"распахнуть"
+			],
+			[
+				"verb",
+				"блестеть"
+			],
+			[
+				"verb",
+				"начистить"
+			],
+			[
+				"verb",
+				"унять"
+			],
+			[
+				"verb",
+				"унимать"
+			],
+			[
+				"verb",
+				"устроить"
+			],
+			[
+				"verb",
+				"устраивать"
+			],
+			[
+				"verb",
+				"залить"
+			],
+			[
+				"verb",
+				"заливать"
+			],
+			[
+				"verb",
+				"признаваться"
+			],
+			[
+				"verb",
+				"признаться"
+			],
+			[
+				"verb",
+				"веселиться"
+			],
+			[
+				"verb",
+				"купаться"
+			],
+			[
+				"verb",
+				"убивать"
+			],
+			[
+				"verb",
+				"убить"
+			],
+			[
+				"verb",
+				"оценивать"
+			],
+			[
+				"verb",
+				"наказать"
+			],
+			[
+				"verb",
+				"кивать"
+			],
+			[
+				"verb",
+				"прокатиться"
+			],
+			[
+				"verb",
+				"переключаться"
+			],
+			[
+				"verb",
+				"сближать"
+			],
+			[
+				"verb",
+				"обрадоваться"
+			],
+			[
+				"phrase",
+				"угощайся"
+			],
+			[
+				"phrase",
+				"с минуты на минуту"
+			],
+			[
+				"phrase",
+				"из года в год"
+			],
+			[
+				"phrase",
+				"по полной"
+			],
+			[
+				"phrase",
+				"как пожелаешь"
+			],
+			[
+				"phrase",
+				"к сожалению"
+			]
+		]
+	}
+}

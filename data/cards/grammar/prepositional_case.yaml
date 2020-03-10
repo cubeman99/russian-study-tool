@@ -1,10 +1,29 @@
-card_set:
-  name: Prepositional Case
-  type: Grammatical
-  version: 1
-  cards:
-    - [preposition, в + prep., 'in, at (location)']
-    - [preposition, на + prep., 'on, at, in (location)']
-    - [preposition, о; об; обо, 'about, concerning']
-    - [verb, заботиться, 'to take care of, look after']
-    - [verb, позаботиться, 'to take care of, look after']
+{
+	"card_set": {
+		"version": 1,
+		"name": "Prepositional Case",
+		"type": "grammatical",
+		"cards": [
+			[
+				"preposition",
+				"в + prep."
+			],
+			[
+				"preposition",
+				"на + prep."
+			],
+			[
+				"preposition",
+				"о; об; обо"
+			],
+			[
+				"verb",
+				"заботиться"
+			],
+			[
+				"verb",
+				"позаботиться"
+			]
+		]
+	}
+}

@@ -1,65 +1,249 @@
-card_set:
-  name: 6.b Меняющиеся союзники
-  type: Media
-  version: 1
-  cards:
-    - [verb, подкрепить, to reinforce]
-    - [verb, преградить, 'to block, obstruct']
-    - [verb, возмутиться, to be outraged]
-    - [verb, 'притворяться, прикидываться', 'to act, pretend, sham']
-    - [verb, 'притвориться, прикинуться', 'to act, pretend, sham']
-    - [noun, дым, smoke]
-    - [verb, дымиться, to emit smoke]
-    - [verb, заглянуть, to drop in; to quickly/stealthily look somewhere]
-    - [verb, перекусить, to have a bite]
-    - [noun, облик, 'guise, appearance, image']
-    - [verb, исназиловать, to rape]
-    - [adjective, мерзкий, 'vile, nasty']
-    - [noun, хныканье, whimper]
-    - [verb, хныкать, to whimper]
-    - [adverb, глубже, deeper]
-    - [verb, погрузиться, to plunge into]
-    - [verb, торчать, 'to stick out, protrude']
-    - [noun, подводная лодка, submarine]
-    - [noun, одеяло, blanket]
-    - [verb, вцепиться, to cling to]
-    - [verb, набраться, 'to pick up, gather, muster']
-    - [adjective, проклятый, 'damned, cursed']
-    - [adjective, достойный, worthy]
-    - [adjective, недостойный, unworthy]
-    - [verb, разрыдаться, to burst into tears]
-    - [verb, заботиться, 'to take care of, look after']
-    - [verb, позаботиться, 'to take care of, look after']
-    - [verb, сопеть, to sniffle]
-    - [adjective, решительный, 'resolute, decisive, determined']
-    - [verb, сжать, to squeeze.]
-    - [noun, клык, 'fang, canine']
-    - [adjective, клыкастый, fanged]
-    - [noun, висок, temple (part of head)]
-    - [adjective, приемлемый, 'acceptable, reasonable']
-    - [adjective, угодный, 'desireable, acceptable']
-    - [noun, светило, heavenly body that emits light]
-    - [verb, дёрнуться, to twitch]
-    - [noun, растрата, 'a criminally wasted amount, a blunder']
-    - [adjective, растраченный, 'wasted, blundered']
-    - [noun, дрожь, 'shiver, shudder, tremble']
-    - [verb, разразиться, 'to break out, manifest with force']
-    - [adjective, душераздирающий, heartbreaking]
-    - [verb, 'зарыть, закопать', 'to bury, dig in']
-    - [verb, взобраться, to climb up with effort]
-    - [phrase, контроль разума, mind control]
-    - [noun, рыдание, sobbing]
-    - [verb, заглушить, to drown out]
-    - [noun, терм, term (word for smth)]
-    - [verb, жаждать, 'to crave, thirst']
-    - [noun, намёк, hint]
-    - [verb, расправлять, 'to spread, straighten']
-    - [verb, выпрямлять, 'to straighten, rectify']
-    - [adjective, величественный, majestic]
-    - [noun, монарх, monarch]
-    - [verb, плясать, to dance (typically a folk dance)]
-    - [verb, трахнуть, 'to bang, crash, boom']
-    - [verb, выплюнуть, to spit out]
-    - [verb, сравнивать, to compare]
-    - [adjective, отвратительный, disgusting]
-    - [noun, овсянка, oatmeal]
+{
+	"card_set": {
+		"version": 1,
+		"name": "6.b Меняющиеся союзники",
+		"type": "media",
+		"cards": [
+			[
+				"verb",
+				"подкрепить"
+			],
+			[
+				"verb",
+				"преградить"
+			],
+			[
+				"verb",
+				"возмутиться"
+			],
+			[
+				"verb",
+				"притворяться; прикидываться"
+			],
+			[
+				"verb",
+				"притвориться; прикинуться"
+			],
+			[
+				"noun",
+				"дым"
+			],
+			[
+				"verb",
+				"дымиться"
+			],
+			[
+				"verb",
+				"заглянуть"
+			],
+			[
+				"verb",
+				"перекусить"
+			],
+			[
+				"noun",
+				"облик"
+			],
+			[
+				"verb",
+				"исназиловать"
+			],
+			[
+				"adjective",
+				"мерзкий"
+			],
+			[
+				"noun",
+				"хныканье"
+			],
+			[
+				"verb",
+				"хныкать"
+			],
+			[
+				"adverb",
+				"глубже"
+			],
+			[
+				"verb",
+				"погрузиться"
+			],
+			[
+				"verb",
+				"торчать"
+			],
+			[
+				"noun",
+				"подводная лодка"
+			],
+			[
+				"noun",
+				"одеяло"
+			],
+			[
+				"verb",
+				"вцепиться"
+			],
+			[
+				"verb",
+				"набраться"
+			],
+			[
+				"adjective",
+				"проклятый"
+			],
+			[
+				"adjective",
+				"достойный"
+			],
+			[
+				"adjective",
+				"недостойный"
+			],
+			[
+				"verb",
+				"разрыдаться"
+			],
+			[
+				"verb",
+				"заботиться"
+			],
+			[
+				"verb",
+				"позаботиться"
+			],
+			[
+				"verb",
+				"сопеть"
+			],
+			[
+				"adjective",
+				"решительный"
+			],
+			[
+				"verb",
+				"сжать"
+			],
+			[
+				"noun",
+				"клык"
+			],
+			[
+				"adjective",
+				"клыкастый"
+			],
+			[
+				"noun",
+				"висок"
+			],
+			[
+				"adjective",
+				"приемлемый"
+			],
+			[
+				"adjective",
+				"угодный"
+			],
+			[
+				"noun",
+				"светило"
+			],
+			[
+				"verb",
+				"дернуться"
+			],
+			[
+				"noun",
+				"растрата"
+			],
+			[
+				"adjective",
+				"растраченный"
+			],
+			[
+				"noun",
+				"дрожь"
+			],
+			[
+				"verb",
+				"разразиться"
+			],
+			[
+				"adjective",
+				"душераздирающий"
+			],
+			[
+				"verb",
+				"зарыть, закопать"
+			],
+			[
+				"verb",
+				"взобраться"
+			],
+			[
+				"phrase",
+				"контроль разума"
+			],
+			[
+				"noun",
+				"рыдание"
+			],
+			[
+				"verb",
+				"заглушить"
+			],
+			[
+				"noun",
+				"терм"
+			],
+			[
+				"verb",
+				"жаждать"
+			],
+			[
+				"noun",
+				"намек"
+			],
+			[
+				"verb",
+				"расправлять"
+			],
+			[
+				"verb",
+				"выпрямлять"
+			],
+			[
+				"adjective",
+				"величественный"
+			],
+			[
+				"noun",
+				"монарх"
+			],
+			[
+				"verb",
+				"плясать"
+			],
+			[
+				"verb",
+				"трахнуть"
+			],
+			[
+				"verb",
+				"выплюнуть"
+			],
+			[
+				"verb",
+				"сравнивать"
+			],
+			[
+				"adjective",
+				"отвратительный"
+			],
+			[
+				"noun",
+				"овсянка"
+			]
+		]
+	}
+}

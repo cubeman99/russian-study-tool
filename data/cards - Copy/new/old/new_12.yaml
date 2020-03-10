@@ -1,0 +1,319 @@
+{
+  "card_set": {
+    "name": "New 12",
+    "version": 1,
+    "cards": [
+      [
+        "adjective",
+        "\u043f\u043e\u0441\u0442\u043e\u044f\u043d\u043d\u044b\u0439",
+        "constant, continuous, permanent"
+      ],
+      [
+        "adjective",
+        "\u043a\u0440\u0435\u0430\u0442\u0438\u0432\u043d\u044b\u0439",
+        "creative"
+      ],
+      [
+        "adjective",
+        "\u043a\u0440\u0438\u043c\u0438\u043d\u0430\u043b\u044c\u043d\u044b\u0439",
+        "criminal"
+      ],
+      [
+        "adjective",
+        "\u043c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0439",
+        "mobile"
+      ],
+      [
+        "adjective",
+        "\u043f\u0440\u043e\u0437\u0440\u0430\u0447\u043d\u044b\u0439",
+        "transparent, clear"
+      ],
+      [
+        "adjective",
+        "\u0441\u043e\u043b\u043d\u0435\u0447\u043d\u044b\u0439",
+        "sunny, solar, sun"
+      ],
+      [
+        "adjective",
+        "\u043e\u0431\u0440\u0435\u0447\u0435\u043d\u043d\u044b\u0439",
+        "doomed"
+      ],
+      [
+        "adjective",
+        "\u0433\u043b\u043e\u0431\u0430\u043b\u044c\u043d\u044b\u0439",
+        "global"
+      ],
+      [
+        "adjective",
+        "\u043f\u043e\u043b\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439",
+        "political"
+      ],
+      [
+        "adjective",
+        "\u043b\u0438\u0447\u043d\u044b\u0439",
+        "personal, private"
+      ],
+      [
+        "adverb",
+        "\u043f\u043e\u0442\u0438\u0445\u043e\u043d\u044c\u043a\u0443",
+        "little by little, silently"
+      ],
+      [
+        "noun",
+        "\u0432\u043f\u0435\u0447\u0430\u0442\u043b\u0435\u043d\u0438\u0435",
+        "impression"
+      ],
+      [
+        "noun",
+        "\u044d\u043c\u043e\u0446\u0438\u044f",
+        "emotion"
+      ],
+      [
+        "noun",
+        "\u0442\u0435\u043c\u0430",
+        "topic"
+      ],
+      [
+        "noun",
+        "\u0441\u043f\u0435\u0448\u043a\u0430",
+        "rush, hurry, haste"
+      ],
+      [
+        "noun",
+        "\u044d\u043d\u0435\u0440\u0433\u0438\u044f",
+        "energy"
+      ],
+      [
+        "noun",
+        "\u0437\u0430\u0431\u043e\u0440",
+        "fence"
+      ],
+      [
+        "noun",
+        "\u0441\u0432\u043e\u0431\u043e\u0434\u0430",
+        "freedom"
+      ],
+      [
+        "noun",
+        "\u0431\u043e\u0440\u043e\u0434\u0430",
+        "beard"
+      ],
+      [
+        "noun",
+        "\u043a\u043e\u043b\u0435\u0441\u043e",
+        "wheel"
+      ],
+      [
+        "noun",
+        "\u043a\u043e\u0441\u043c\u043e\u0441",
+        "outer space, cosmos"
+      ],
+      [
+        "noun",
+        "\u043d\u0435\u0444\u0442\u044c",
+        "oil (petroleum)"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0432\u0435\u0434\u0435\u043d\u0438\u0435",
+        "behavior, conduct"
+      ],
+      [
+        "noun",
+        "\u0448\u0438\u043d\u0430",
+        "tire"
+      ],
+      [
+        "noun",
+        "\u0440\u0430\u0437\u0433\u043e\u0432\u043e\u0440",
+        "conversation, talk"
+      ],
+      [
+        "noun",
+        "\u0448\u0440\u0430\u043c",
+        "scar"
+      ],
+      [
+        "noun",
+        "\u0441\u043e\u043b\u0434\u0430\u0442",
+        "soldier"
+      ],
+      [
+        "noun",
+        "\u0434\u0432\u043e\u0440\u0435\u0446",
+        "palace, castle"
+      ],
+      [
+        "noun",
+        "\u0434\u043d\u0435\u0432\u043d\u0438\u043a",
+        "diary"
+      ],
+      [
+        "noun",
+        "\u0432\u043e\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435",
+        "imagination"
+      ],
+      [
+        "noun",
+        "\u0443\u043c",
+        "mind, wit, intelligence"
+      ],
+      [
+        "noun",
+        "\u043a\u043e\u0440\u043e\u043b\u0435\u0432\u0441\u0442\u0432\u043e",
+        "kingdom"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0445\u0438\u0449\u0435\u043d\u0438\u0435",
+        "abduction"
+      ],
+      [
+        "noun",
+        "\u0431\u0430\u0448\u043d\u044f",
+        "tower"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e",
+        "society"
+      ],
+      [
+        "noun",
+        "\u0432\u044b\u0431\u043e\u0440",
+        "choice, selection"
+      ],
+      [
+        "noun",
+        "\u0438\u0442\u043e\u0433",
+        "summary"
+      ],
+      [
+        "verb",
+        "\u043f\u0435\u0440\u0435\u0441\u0442\u0430\u0442\u044c",
+        "to stop, quit something in progress"
+      ],
+      [
+        "verb",
+        "\u0443\u0441\u0442\u0430\u0442\u044c \u043e\u0442",
+        "to get tired of"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0445\u0432\u0430\u0442\u044b\u0432\u0430\u0442\u044c",
+        "to grab, grip, capture, captivate"
+      ],
+      [
+        "verb",
+        "\u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0438\u0442\u044c",
+        "to limit, restrict"
+      ],
+      [
+        "verb",
+        "\u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0438\u0432\u0430\u0442\u044c",
+        "to limit, restrict"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0431\u043b\u0443\u0434\u0438\u0442\u044c\u0441\u044f",
+        "to get lost, go astray"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u043c\u0435\u043d\u044f\u0442\u044c\u0441\u044f",
+        "to call off, cancel"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u043c\u0435\u043d\u0438\u0442\u044c\u0441\u044f",
+        "to call off, cancel"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0438\u0442\u044c",
+        "to connect"
+      ],
+      [
+        "verb",
+        "\u0442\u0430\u0449\u0438\u0442\u044c",
+        "to drag, to pull"
+      ],
+      [
+        "verb",
+        "\u0433\u043e\u0440\u0434\u0438\u0442\u044c\u0441\u044f",
+        "to be proud"
+      ],
+      [
+        "verb",
+        "\u0443\u043a\u0440\u0430\u0441\u0442\u044c",
+        "to steal"
+      ],
+      [
+        "verb",
+        "\u0441\u043f\u0440\u0430\u0432\u0438\u0442\u044c\u0441\u044f",
+        "to cope, deal, manage"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0437\u0434\u0440\u0430\u0436\u0430\u0442\u044c",
+        "to annoy, irritate, provoke"
+      ],
+      [
+        "verb",
+        "\u043e\u043a\u0443\u043f\u0430\u0442\u044c\u0441\u044f",
+        "to pay off"
+      ],
+      [
+        "verb",
+        "\u0434\u043e\u0436\u0434\u0430\u0442\u044c\u0441\u044f",
+        "to wait for a long time"
+      ],
+      [
+        "phrase",
+        "\u0432 \u043e\u0431\u0449\u0435\u043c",
+        "overall, in general"
+      ],
+      [
+        "phrase",
+        "\u0432\u0435\u0441\u0442\u0438 \u0441\u0435\u0431\u044f",
+        "to behave, conduct oneself"
+      ],
+      [
+        "phrase",
+        "\u041c\u043d\u0435 \u0432\u0435\u0437\u0451\u0442!",
+        "Im in luck!"
+      ],
+      [
+        "phrase",
+        "\u0447\u0442\u043e \u0431\u044b \u043d\u0435 \u0441\u043b\u0443\u0447\u0438\u043b\u043e\u0441\u044c",
+        "whatever happens"
+      ],
+      [
+        "phrase",
+        "\u0432\u0435\u0441\u043a\u0430\u044f \u043f\u0440\u0438\u0447\u0438\u043d\u0430",
+        "good reason"
+      ],
+      [
+        "phrase",
+        "\u0442\u0430\u043a \u0434\u0430\u043b\u0435\u0435",
+        "etc."
+      ],
+      [
+        "phrase",
+        "\u0432\u043e\u0442 \u044d\u0442\u043e \u0434\u0430\ufeff!",
+        "Woah!"
+      ],
+      [
+        "other",
+        "\u043f\u043e\u0448\u043b\u0438",
+        "lets go"
+      ],
+      [
+        "interjection",
+        "\u0443\u0432\u044b",
+        "alas"
+      ]
+    ],
+    "type": "Other"
+  }
+}

@@ -1,45 +1,169 @@
-card_set:
-  name: New 15
-  type: Other
-  version: 1
-  cards:
-    - [adjective, обязательный, 'requried, mandatory']
-    - [adjective, умственный, mental]
-    - [adverb, по-моему, 'in my opinion, to my thinking']
-    - [noun, раб, slave]
-    - [noun, гром, thunder]
-    - [noun, страх, fear]
-    - [noun, желание, 'wish, desire']
-    - [noun, канава, ditch]
-    - [noun, сено, hay]
-    - [noun, перерыв, 'break, pause, interruption']
-    - [noun, детство, childhood]
-    - [noun, водное поло, water polo]
-    - [noun, боевые искусства, martial arts]
-    - [noun, самооборона, self defense]
-    - [noun, физкультура, physical culture]
-    - [noun, секция, section]
-    - [noun, спортзал, gym]
-    - [noun, самочувствие, state of health]
-    - [verb, выть, to howl]
-    - [verb, происходить, 'to happen, occur, take place']
-    - [verb, уронить, to drop]
-    - [verb, ронять, 'to drop, let fall (unintentionally)']
-    - [verb, поместиться, 'to fit, find room']
-    - [verb, развиваться, 'to develop, evolve']
-    - [verb, страдать, to suffer]
-    - [verb, бросать, 'to throw, toss']
-    - [verb, ожидать, to expect]
-    - [verb, воображать, to imagine]
-    - [verb, вообразить, to imagine]
-    - [phrase, возьми, take it]
-    - [phrase, Прошу прошения!, I beg your pardon! Pardon me!]
-    - [phrase, 'В чём дело?', 'Whats the matter?']
-    - [phrase, Какого черта!, what the heck!]
-    - [phrase, Моя жизнь не имеет смысла!, My life has no meaning!]
-    - [phrase, по крайней мере, at least]
-    - [phrase, посмотрим, well see]
-    - [phrase, С раннего детства, since early childhood]
-    - [phrase, многими видами спорта, many types of sports]
-    - [phrase, в самые поздние года, in your later years]
-    - [interjection, забудь, forget it]
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 15",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"обязательный"
+			],
+			[
+				"adjective",
+				"умственный"
+			],
+			[
+				"adverb",
+				"по-моему"
+			],
+			[
+				"noun",
+				"раб"
+			],
+			[
+				"noun",
+				"гром"
+			],
+			[
+				"noun",
+				"страх"
+			],
+			[
+				"noun",
+				"желание"
+			],
+			[
+				"noun",
+				"канава"
+			],
+			[
+				"noun",
+				"сено"
+			],
+			[
+				"noun",
+				"перерыв"
+			],
+			[
+				"noun",
+				"детство"
+			],
+			[
+				"noun",
+				"водное поло"
+			],
+			[
+				"noun",
+				"боевые искусства"
+			],
+			[
+				"noun",
+				"самооборона"
+			],
+			[
+				"noun",
+				"физкультура"
+			],
+			[
+				"noun",
+				"секция"
+			],
+			[
+				"noun",
+				"спортзал"
+			],
+			[
+				"noun",
+				"самочувствие"
+			],
+			[
+				"verb",
+				"выть"
+			],
+			[
+				"verb",
+				"происходить"
+			],
+			[
+				"verb",
+				"уронить"
+			],
+			[
+				"verb",
+				"ронять"
+			],
+			[
+				"verb",
+				"поместиться"
+			],
+			[
+				"verb",
+				"развиваться"
+			],
+			[
+				"verb",
+				"страдать"
+			],
+			[
+				"verb",
+				"бросать"
+			],
+			[
+				"verb",
+				"ожидать"
+			],
+			[
+				"verb",
+				"воображать"
+			],
+			[
+				"verb",
+				"вообразить"
+			],
+			[
+				"phrase",
+				"возьми"
+			],
+			[
+				"phrase",
+				"прошу прошения!"
+			],
+			[
+				"phrase",
+				"в чем дело?"
+			],
+			[
+				"phrase",
+				"какого черта!"
+			],
+			[
+				"phrase",
+				"моя жизнь не имеет смысла!"
+			],
+			[
+				"phrase",
+				"по крайней мере"
+			],
+			[
+				"phrase",
+				"посмотрим"
+			],
+			[
+				"phrase",
+				"с раннего детства"
+			],
+			[
+				"phrase",
+				"многими видами спорта"
+			],
+			[
+				"phrase",
+				"в самые поздние года"
+			],
+			[
+				"interjection",
+				"забудь"
+			]
+		]
+	}
+}

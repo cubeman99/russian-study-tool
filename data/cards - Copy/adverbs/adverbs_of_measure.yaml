@@ -1,0 +1,79 @@
+{
+  "card_set": {
+    "name": "Adverbs of Measure/Degree",
+    "version": 1,
+    "cards": [
+      [
+        "adverb",
+        "\u043e\u0447\u0435\u043d\u044c",
+        "very, very much"
+      ],
+      [
+        "adverb",
+        "\u0442\u0430\u043a",
+        "so"
+      ],
+      [
+        "adverb",
+        "\u043c\u043d\u043e\u0433\u043e",
+        "many, a lot, very much"
+      ],
+      [
+        "adverb",
+        "\u043c\u0430\u043b\u043e",
+        "little"
+      ],
+      [
+        "adverb",
+        "\u043d\u0435\u043c\u043d\u043e\u0433\u043e",
+        "a little"
+      ],
+      [
+        "adverb",
+        "\u0447\u0443\u0442\u044c (\u0447\u0443\u0442\u044c-\u0447\u0443\u0442\u044c)",
+        "a tiny bit"
+      ],
+      [
+        "adverb",
+        "\u0441\u043b\u0435\u0433\u043a\u0430",
+        "slightly"
+      ],
+      [
+        "adverb",
+        "\u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e",
+        "sufficiently"
+      ],
+      [
+        "adverb",
+        "\u0441\u043e\u0432\u0441\u0435\u043c",
+        "quite"
+      ],
+      [
+        "adverb",
+        "\u0441\u043e\u0432\u0435\u0440\u0448\u0435\u043d\u043d\u043e",
+        "absolutely"
+      ],
+      [
+        "adverb",
+        "\u0441\u043b\u0438\u0448\u043a\u043e\u043c",
+        "too, overly"
+      ],
+      [
+        "adverb",
+        "\u043f\u043e\u0447\u0442\u0438",
+        "almost, nearly"
+      ],
+      [
+        "adverb",
+        "\u0442\u0435\u0441\u043d\u043e",
+        "closely, tightly"
+      ],
+      [
+        "adverb",
+        "\u0442\u0438\u043f\u0430",
+        "kinda, seemingly, sort of"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

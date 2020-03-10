@@ -1,72 +1,281 @@
-card_set:
-  name: New 20
-  version: 1
-  cards:
-    - [adjective, отважный; смелый, brave]
-    - [adjective, скромный, modest]
-    - [adjective, заметный, noticable]
-    - [adjective, разбросанный, scattered]
-    - [adjective, внеземной, extraterrestrial]
-    - [adjective, органический; органичный, organic]
-    - [adjective, второстепенный, 'secondary, not best, not main']
-    - [adjective, разумный, reasonable]
-    - [adjective, внезапный, sudden]
-    - [adjective, раболепный, 'servile, subserviant, obliging']
-    - [adjective, раболепствовать, to be subserviant]
-    - [noun, детская площадка, playground]
-    - [noun, горка, slide]
-    - [noun, качель, swing]
-    - [noun, карусель, merry-go-round]
-    - [noun, песочница, sandbox]
-    - [noun, рассуждение, reasoning]
-    - [noun, пасхалка, easter egg]
-    - [noun, переживание, 'experience, state of mind']
-    - [noun, травма, injury]
-    - [noun, ролевая модель, role model]
-    - [noun, мудак, asshole]
-    - [noun, сравнение, comparison]
-    - [verb, хлопать, 'to clap, slam']
-    - [verb, размечтаться, to surrender to dreams]
-    - [verb, выграть, to win]
-    - [verb, переиграть, to replay (a game)]
-    - [verb, игрок, a player (of a game)]
-    - [verb, розыгрыш, prank; giveaway]
-    - [verb, проигрыватель, audio/video player]
-    - [verb, заменить, to replace]
-    - [verb, угомониться, to settle/calm down]
-    - [phrase, опять же, yet again]
-    - [conjunction, '... именно тем, что ...', '... exactly what, precisely what ...']
-    - [adjective, изумительный, 'delightful, leading to amazement']
-    - [noun, изумление, amazement]
-    - [verb, догадываться, 'to guess, have a hunch']
-    - [verb, догадаться, 'to guess, have a hunch']
-    - [noun, загадка, a riddle]
-    - [verb, отгадать, 'to guess, find out by conjecture']
-    - [verb, загадать, 'to make up, think up in your head']
-    - [noun, догадка, a guess]
-    - [phrase, мне стоит + verb, Its worth for me to + verb]
-    - [verb, лягать, to kick hind legs]
-    - [phrase, 'А ты чего ожидал?', 'What did you expect?']
-    - [noun, обмен, 'exchange, interchange (economics)']
-    - [phrase, Я совершил огромную ошибку., I made a terrible mistake.]
-    - [noun, крошка; кроха, 'little baby, crumb']
-    - [verb, деваться, 'to dissapear, to get away']
-    - [verb, синхронизировать, to synchronize]
-    - [noun, синхронизация, synchronization]
-    - [verb, принадлежить, to belong]
-    - [verb, воздержаться, to abstain]
-    - [noun, поддержка, support]
-    - [verb, возбуждать, to excite]
-    - [adjective, охотный, willing]
-    - [adjective, застенчивый; стеснительный, shy]
-    - [phrase, 'Ты так до сих пор и не понял?', 'You still dont understand?']
-    - [adverb, охотно, willingly]
-    - [adverb, вдруг; внезапно, suddenly]
-    - [verb, рассуждать, to reason]
-    - [verb, распространяться, to spread oneself; to propegate]
-    - [phrase, 'прежде всего, ...', 'first of all, ...']
-    - [verb, переосмысливать, 'to reinterpret, rethink']
-    - [adverb, пронзить; проткнуть, to pierce]
-    - [phrase, 'по-хорошому, ...', 'ideally, ...']
-    - [verb, упрощать, to simplify]
-    - [adjective, упрощённый, simplified]
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 20",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"отважный; смелый"
+			],
+			[
+				"adjective",
+				"скромный"
+			],
+			[
+				"adjective",
+				"заметный"
+			],
+			[
+				"adjective",
+				"разбросанный"
+			],
+			[
+				"adjective",
+				"внеземной"
+			],
+			[
+				"adjective",
+				"органический; органичный"
+			],
+			[
+				"adjective",
+				"второстепенный"
+			],
+			[
+				"adjective",
+				"разумный"
+			],
+			[
+				"adjective",
+				"внезапный"
+			],
+			[
+				"adjective",
+				"раболепный"
+			],
+			[
+				"adjective",
+				"раболепствовать"
+			],
+			[
+				"noun",
+				"детская площадка"
+			],
+			[
+				"noun",
+				"горка"
+			],
+			[
+				"noun",
+				"качель"
+			],
+			[
+				"noun",
+				"карусель"
+			],
+			[
+				"noun",
+				"песочница"
+			],
+			[
+				"noun",
+				"рассуждение"
+			],
+			[
+				"noun",
+				"пасхалка"
+			],
+			[
+				"noun",
+				"переживание"
+			],
+			[
+				"noun",
+				"травма"
+			],
+			[
+				"noun",
+				"ролевая модель"
+			],
+			[
+				"noun",
+				"мудак"
+			],
+			[
+				"noun",
+				"сравнение"
+			],
+			[
+				"verb",
+				"хлопать"
+			],
+			[
+				"verb",
+				"размечтаться"
+			],
+			[
+				"verb",
+				"выграть"
+			],
+			[
+				"verb",
+				"переиграть"
+			],
+			[
+				"verb",
+				"игрок"
+			],
+			[
+				"verb",
+				"розыгрыш"
+			],
+			[
+				"verb",
+				"проигрыватель"
+			],
+			[
+				"verb",
+				"заменить"
+			],
+			[
+				"verb",
+				"угомониться"
+			],
+			[
+				"phrase",
+				"опять же"
+			],
+			[
+				"conjunction",
+				"... именно тем, что ..."
+			],
+			[
+				"adjective",
+				"изумительный"
+			],
+			[
+				"noun",
+				"изумление"
+			],
+			[
+				"verb",
+				"догадываться"
+			],
+			[
+				"verb",
+				"догадаться"
+			],
+			[
+				"noun",
+				"загадка"
+			],
+			[
+				"verb",
+				"отгадать"
+			],
+			[
+				"verb",
+				"загадать"
+			],
+			[
+				"noun",
+				"догадка"
+			],
+			[
+				"phrase",
+				"мне стоит + verb"
+			],
+			[
+				"verb",
+				"лягать"
+			],
+			[
+				"phrase",
+				"а ты чего ожидал?"
+			],
+			[
+				"noun",
+				"обмен"
+			],
+			[
+				"phrase",
+				"я совершил огромную ошибку."
+			],
+			[
+				"noun",
+				"крошка; кроха"
+			],
+			[
+				"verb",
+				"деваться"
+			],
+			[
+				"verb",
+				"синхронизировать"
+			],
+			[
+				"noun",
+				"синхронизация"
+			],
+			[
+				"verb",
+				"принадлежить"
+			],
+			[
+				"verb",
+				"воздержаться"
+			],
+			[
+				"noun",
+				"поддержка"
+			],
+			[
+				"verb",
+				"возбуждать"
+			],
+			[
+				"adjective",
+				"охотный"
+			],
+			[
+				"adjective",
+				"застенчивый; стеснительный"
+			],
+			[
+				"phrase",
+				"ты так до сих пор и не понял?"
+			],
+			[
+				"adverb",
+				"охотно"
+			],
+			[
+				"adverb",
+				"вдруг; внезапно"
+			],
+			[
+				"verb",
+				"рассуждать"
+			],
+			[
+				"verb",
+				"распространяться"
+			],
+			[
+				"phrase",
+				"прежде всего, ..."
+			],
+			[
+				"verb",
+				"переосмысливать"
+			],
+			[
+				"adverb",
+				"пронзить; проткнуть"
+			],
+			[
+				"phrase",
+				"по-хорошому, ..."
+			],
+			[
+				"verb",
+				"упрощать"
+			],
+			[
+				"adjective",
+				"упрощенный"
+			]
+		]
+	}
+}

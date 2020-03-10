@@ -1,0 +1,219 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Pony",
+		"type": "media",
+		"cards": [
+			[
+				"noun",
+				"грива",
+				"mane"
+			],
+			[
+				"noun",
+				"копыто",
+				"hoof"
+			],
+			[
+				"noun",
+				"хвост",
+				"tail"
+			],
+			[
+				"noun",
+				"магия",
+				"magic"
+			],
+			[
+				"noun",
+				"дружба",
+				"friendship"
+			],
+			[
+				"noun",
+				"кобыла",
+				"mare"
+			],
+			[
+				"noun",
+				"кобылка",
+				"filly"
+			],
+			[
+				"noun",
+				"пони",
+				"pony"
+			],
+			[
+				"noun",
+				"крыло",
+				"wing"
+			],
+			[
+				"noun",
+				"жеребец",
+				"stallion"
+			],
+			[
+				"noun",
+				"жеребчик",
+				"colt (baby horse)"
+			],
+			[
+				"noun",
+				"жеребёнок, жеребята",
+				"foal, filly"
+			],
+			[
+				"noun",
+				"пасть",
+				"mouth (of an animal)"
+			],
+			[
+				"noun",
+				"морда",
+				"muzzle, snout"
+			],
+			[
+				"noun",
+				"сено",
+				"hay"
+			],
+			[
+				"noun",
+				"сарай",
+				"barn"
+			],
+			[
+				"noun",
+				"королевство",
+				"kingdom"
+			],
+			[
+				"noun",
+				"принц, принцесса",
+				"prince/princess"
+			],
+			[
+				"noun",
+				"королева",
+				"queen"
+			],
+			[
+				"noun",
+				"подменыш",
+				"changeling"
+			],
+			[
+				"noun",
+				"заклинание; заклятие",
+				"spell, invocation"
+			],
+			[
+				"noun",
+				"щит",
+				"shield"
+			],
+			[
+				"noun",
+				"луч",
+				"beam, ray"
+			],
+			[
+				"noun",
+				"облако",
+				"cloud"
+			],
+			[
+				"noun",
+				"солнце",
+				"sun"
+			],
+			[
+				"noun",
+				"восход (солнца)",
+				"sunrise"
+			],
+			[
+				"noun",
+				"закат",
+				"sunset"
+			],
+			[
+				"noun",
+				"луна",
+				"moon"
+			],
+			[
+				"noun",
+				"свадьба",
+				"wedding"
+			],
+			[
+				"noun",
+				"небо",
+				"sky"
+			],
+			[
+				"noun",
+				"поезд",
+				"train"
+			],
+			[
+				"noun",
+				"яблоко",
+				"apple"
+			],
+			[
+				"verb",
+				"рысить",
+				"to trot"
+			],
+			[
+				"verb",
+				"порысить",
+				"to trot"
+			],
+			[
+				"noun",
+				"топот",
+				"tramp, trot"
+			],
+			[
+				"verb",
+				"лягать",
+				"to kick hind legs"
+			],
+			[
+				"noun",
+				"фырканье",
+				"snort"
+			],
+			[
+				"noun",
+				"лошадь",
+				"horse"
+			],
+			[
+				"noun",
+				"конь",
+				"male horse"
+			],
+			[
+				"adjective",
+				"гнедой",
+				"brown horse w/ black mane/tail"
+			],
+			[
+				"noun",
+				"табун",
+				"a herd (of horses, deer, etc.)"
+			],
+			[
+				"verb",
+				"скакать",
+				"to gallop, leap"
+			]
+		]
+	}
+}

@@ -1,0 +1,59 @@
+{
+  "card_set": {
+    "name": "Extended Family",
+    "version": 1,
+    "cards": [
+      [
+        "noun",
+        "\u0440\u043e\u0434\u0441\u0442\u0432\u0435\u043d\u043d\u0438\u043a\u0438",
+        "relatives"
+      ],
+      [
+        "noun",
+        "\u0434\u044f\u0434\u044f",
+        "uncle"
+      ],
+      [
+        "noun",
+        "\u0442\u0451\u0442\u044f",
+        "auntie"
+      ],
+      [
+        "noun",
+        "\u043f\u043b\u0435\u043c\u044f\u043d\u043d\u0438\u043a",
+        "nephew"
+      ],
+      [
+        "noun",
+        "\u043f\u043b\u0435\u043c\u044f\u043d\u043d\u0438\u0446\u0430",
+        "niece"
+      ],
+      [
+        "noun",
+        "\u0434\u0432\u043e\u044e\u0440\u043e\u0434\u043d\u044b\u0439 \u0431\u0440\u0430\u0442",
+        "cousin (male)"
+      ],
+      [
+        "noun",
+        "\u0434\u0432\u043e\u044e\u0440\u043e\u0434\u043d\u0430\u044f \u0441\u0435\u0441\u0442\u0440\u0430",
+        "cousin (female)"
+      ],
+      [
+        "noun",
+        "\u0437\u044f\u0442\u044c",
+        "son-in-law, brother-in-law"
+      ],
+      [
+        "noun",
+        "\u0442\u0435\u0441\u0442\u044c",
+        "father-in-law (wifes father)"
+      ],
+      [
+        "noun",
+        "\u0441\u0432\u0435\u043a\u0440\u043e\u0432\u044c",
+        "mother-in-law (husbands mother)"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

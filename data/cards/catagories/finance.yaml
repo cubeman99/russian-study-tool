@@ -1,8 +1,0 @@
-card_set:
-  name: Finance
-  type: Other
-  version: 1
-  cards:
-    - [noun, зарплата, salery]
-    - [adjective, бесплатный, free (without pay)]
-    - [phrase, деньги не пахнуть, money doesnt smell (the ends justify the means)]

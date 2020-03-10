@@ -1,0 +1,244 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Media",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"ролик",
+				"video, roll"
+			],
+			[
+				"phrase",
+				"снимать видео",
+				"to shoot a video"
+			],
+			[
+				"noun",
+				"книга",
+				"book"
+			],
+			[
+				"noun",
+				"обложка",
+				"paper cover for book"
+			],
+			[
+				"noun",
+				"глава",
+				"chapter"
+			],
+			[
+				"noun",
+				"сюжет",
+				"plot, story"
+			],
+			[
+				"noun",
+				"кинотеатр",
+				"movie theater"
+			],
+			[
+				"noun",
+				"эпос",
+				"epic (story)"
+			],
+			[
+				"noun",
+				"стих",
+				"verse, poetry"
+			],
+			[
+				"noun",
+				"мультик",
+				"cartoon show"
+			],
+			[
+				"noun",
+				"карикатура",
+				"cartoon, comic"
+			],
+			[
+				"noun",
+				"мультфильм",
+				"animated film"
+			],
+			[
+				"noun",
+				"персонаж",
+				"character"
+			],
+			[
+				"verb",
+				"читать",
+				"to read"
+			],
+			[
+				"verb",
+				"прочесть",
+				"to finish reading, to read through"
+			],
+			[
+				"noun",
+				"песня",
+				"song"
+			],
+			[
+				"noun",
+				"наушники",
+				"headphones"
+			],
+			[
+				"noun",
+				"телевизор",
+				"television, tv set"
+			],
+			[
+				"noun",
+				"экран",
+				"screen"
+			],
+			[
+				"noun",
+				"пасхалка",
+				"easter egg"
+			],
+			[
+				"noun",
+				"пение",
+				"singing"
+			],
+			[
+				"verb",
+				"листать",
+				"to flip through, leaf through"
+			],
+			[
+				"noun",
+				"докладь",
+				"a report"
+			],
+			[
+				"verb",
+				"дописать",
+				"to finish writing something"
+			],
+			[
+				"noun",
+				"подпись",
+				"a signature"
+			],
+			[
+				"noun",
+				"лист",
+				"a sheet"
+			],
+			[
+				"noun",
+				"корешок",
+				"spine of a book"
+			],
+			[
+				"noun",
+				"правописание",
+				"spelling"
+			],
+			[
+				"noun",
+				"соченение",
+				"an essay"
+			],
+			[
+				"noun",
+				"полнометражка",
+				"feature film"
+			],
+			[
+				"noun",
+				"почерк",
+				"handwriting"
+			],
+			[
+				"noun",
+				"опечатка",
+				"typo"
+			],
+			[
+				"noun",
+				"открытка",
+				"a post card"
+			],
+			[
+				"noun",
+				"письмо",
+				"letter"
+			],
+			[
+				"noun",
+				"газета",
+				"newspaper"
+			],
+			[
+				"noun",
+				"фотография",
+				"photo"
+			],
+			[
+				"noun",
+				"журнал",
+				"magazine"
+			],
+			[
+				"noun",
+				"статья",
+				"article"
+			],
+			[
+				"noun",
+				"стихотворение",
+				"a poem, piece of poetry"
+			],
+			[
+				"noun",
+				"развязка",
+				"the conclusion, resolution of plot, outcome; traffic interchange"
+			],
+			[
+				"noun",
+				"кульминация",
+				"the climax"
+			],
+			[
+				"noun",
+				"надпись",
+				"a writing, inscripture (large scale)"
+			],
+			[
+				"verb",
+				"записать",
+				"to take a note; to record"
+			],
+			[
+				"verb",
+				"проигрыватель",
+				"audio/video player"
+			],
+			[
+				"noun",
+				"страница",
+				"a page"
+			],
+			[
+				"noun",
+				"предыстория",
+				"a backstory"
+			],
+			[
+				"noun",
+				"пробел",
+				"empty space in text between letters"
+			]
+		]
+	}
+}

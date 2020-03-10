@@ -1,0 +1,84 @@
+{
+  "card_set": {
+    "name": "People (Age/Geneder)",
+    "version": 1,
+    "cards": [
+      [
+        "noun",
+        "\u0447\u0435\u043b\u043e\u0432\u0435\u043a",
+        "person"
+      ],
+      [
+        "noun",
+        "\u043b\u044e\u0434\u0438",
+        "people"
+      ],
+      [
+        "noun",
+        "\u043c\u0443\u0436\u0447\u0438\u043d\u0430",
+        "man"
+      ],
+      [
+        "noun",
+        "\u0436\u0435\u043d\u0449\u0438\u043d\u0430",
+        "woman"
+      ],
+      [
+        "noun",
+        "\u043c\u0430\u043b\u044c\u0447\u0438\u043a",
+        "young boy"
+      ],
+      [
+        "noun",
+        "\u0434\u0435\u0432\u043e\u0447\u043a\u0430",
+        "young girl"
+      ],
+      [
+        "noun",
+        "\u0434\u0435\u0432\u0443\u0448\u043a\u0430",
+        "young woman"
+      ],
+      [
+        "noun",
+        "\u043c\u043e\u043b\u043e\u0434\u043e\u0439 \u0447\u0435\u043b\u043e\u0432\u0435\u043a",
+        "young man"
+      ],
+      [
+        "noun",
+        "\u043c\u043e\u043b\u043e\u0434\u0451\u0436\u044c",
+        "young people"
+      ],
+      [
+        "noun",
+        "\u0432\u0437\u0440\u043e\u0441\u043b\u044b\u0439",
+        "adult"
+      ],
+      [
+        "noun",
+        "\u044e\u043d\u043e\u0448\u0430",
+        "youth"
+      ],
+      [
+        "noun",
+        "\u0440\u0435\u0431\u0435\u043d\u043e\u043a",
+        "child"
+      ],
+      [
+        "noun",
+        "\u0434\u0435\u0442\u0438",
+        "children"
+      ],
+      [
+        "noun",
+        "\u043c\u0430\u043b\u044b\u0448, \u0433\u0440\u0443\u0434\u043d\u043e\u0439 \u0440\u0435\u0431\u0435\u043d\u043e\u043a",
+        "baby"
+      ],
+      [
+        "noun",
+        "\u043c\u0430\u043b\u044e\u0442\u043a\u0430",
+        "baby, little one"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

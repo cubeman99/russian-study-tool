@@ -1,48 +1,181 @@
-card_set:
-  name: Resonant Stems (в, й, м, н, р)
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, жить, to live]
-    - [verb, плыть, to swim]
-    - [verb, слыть, 'to be, be reputed']
-    - [verb, стать, to become; to begin]
-    - [verb, встать, to stand up]
-    - [verb, деть, 'to put, do with']
-    - [verb, надеть, to put on]
-    - [verb, одеться, to get dressed]
-    - [verb, раздеться, to get undressed]
-    - [verb, открыть, to open]
-    - [verb, закрыть, to close]
-    - [verb, мыть, to wash]
-    - [verb, ныть, to ache]
-    - [verb, рыть, to dig]
-    - [verb, бить, to beat]
-    - [verb, вить, to twist]
-    - [verb, лить, to pour]
-    - [verb, пить, to drink]
-    - [verb, шить, to sew]
-    - [verb, дуть, to blow]
-    - [verb, гнить, to rot]
-    - [verb, петь, to sing]
-    - [verb, брить, to shave]
-    - [verb, взять, to take]
-    - [verb, 'жать (жму, жмёшь, … жмут)', 'to press, squeeze']
-    - [verb, 'жать (жну, жнёшь, … жнут)', to reap]
-    - [verb, мять, to crumple]
-    - [verb, начать, to begin]
-    - [verb, распять, to crucify]
-    - [verb, занять, to borrow]
-    - [verb, нанять, to hire]
-    - [verb, понять, to understand]
-    - [verb, обнять, 'to embrace, hug']
-    - [verb, отнять, to take away]
-    - [verb, поднять, 'to raise, lift']
-    - [verb, снять, to take off]
-    - [verb, принять, 'to take (smth), to admit, accept']
-    - [verb, тереть, 'to rub, grate']
-    - [verb, вытереть, to rub (dry)]
-    - [verb, стереть, to erase]
-    - [verb, запереть, to lock]
-    - [verb, отпереть, to unlock]
-    - [verb, умереть, to die]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Resonant Stems (в, й, м, н, р)",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"жить"
+			],
+			[
+				"verb",
+				"плыть"
+			],
+			[
+				"verb",
+				"слыть"
+			],
+			[
+				"verb",
+				"стать"
+			],
+			[
+				"verb",
+				"встать"
+			],
+			[
+				"verb",
+				"деть"
+			],
+			[
+				"verb",
+				"надеть"
+			],
+			[
+				"verb",
+				"одеться"
+			],
+			[
+				"verb",
+				"раздеться"
+			],
+			[
+				"verb",
+				"открыть"
+			],
+			[
+				"verb",
+				"закрыть"
+			],
+			[
+				"verb",
+				"мыть"
+			],
+			[
+				"verb",
+				"ныть"
+			],
+			[
+				"verb",
+				"рыть"
+			],
+			[
+				"verb",
+				"бить"
+			],
+			[
+				"verb",
+				"вить"
+			],
+			[
+				"verb",
+				"лить"
+			],
+			[
+				"verb",
+				"пить"
+			],
+			[
+				"verb",
+				"шить"
+			],
+			[
+				"verb",
+				"дуть"
+			],
+			[
+				"verb",
+				"гнить"
+			],
+			[
+				"verb",
+				"петь"
+			],
+			[
+				"verb",
+				"брить"
+			],
+			[
+				"verb",
+				"взять"
+			],
+			[
+				"verb",
+				"жать (жму, жмешь, … жмут)"
+			],
+			[
+				"verb",
+				"жать (жну, жнешь, … жнут)"
+			],
+			[
+				"verb",
+				"мять"
+			],
+			[
+				"verb",
+				"начать"
+			],
+			[
+				"verb",
+				"распять"
+			],
+			[
+				"verb",
+				"занять"
+			],
+			[
+				"verb",
+				"нанять"
+			],
+			[
+				"verb",
+				"понять"
+			],
+			[
+				"verb",
+				"обнять"
+			],
+			[
+				"verb",
+				"отнять"
+			],
+			[
+				"verb",
+				"поднять"
+			],
+			[
+				"verb",
+				"снять"
+			],
+			[
+				"verb",
+				"принять"
+			],
+			[
+				"verb",
+				"тереть"
+			],
+			[
+				"verb",
+				"вытереть"
+			],
+			[
+				"verb",
+				"стереть"
+			],
+			[
+				"verb",
+				"запереть"
+			],
+			[
+				"verb",
+				"отпереть"
+			],
+			[
+				"verb",
+				"умереть"
+			]
+		]
+	}
+}

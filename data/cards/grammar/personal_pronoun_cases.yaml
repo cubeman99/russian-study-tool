@@ -1,13 +1,41 @@
-card_set:
-  name: Personal Pronoun Cases
-  type: Grammatical
-  version: 1
-  cards:
-    - [pronoun, я, I]
-    - [pronoun, ты, you]
-    - [pronoun, он, 'he, it']
-    - [pronoun, оно, it]
-    - [pronoun, она, 'she, it']
-    - [pronoun, мы, we]
-    - [pronoun, вы, you]
-    - [pronoun, они, they]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Personal Pronoun Cases",
+		"type": "categorical",
+		"cards": [
+			[
+				"pronoun",
+				"я"
+			],
+			[
+				"pronoun",
+				"ты"
+			],
+			[
+				"pronoun",
+				"он"
+			],
+			[
+				"pronoun",
+				"оно"
+			],
+			[
+				"pronoun",
+				"она"
+			],
+			[
+				"pronoun",
+				"мы"
+			],
+			[
+				"pronoun",
+				"вы"
+			],
+			[
+				"pronoun",
+				"они"
+			]
+		]
+	}
+}

@@ -1,17 +1,57 @@
-card_set:
-  name: 'Adjectives: -ж, -ч, -ш, or -щ'
-  type: Grammatical
-  version: 1
-  cards:
-    - [adjective, общий, common]
-    - [adjective, будущий, future]
-    - [adjective, бывший, 'ex, former']
-    - [adjective, рыжий, red-haired]
-    - [adjective, везучий, lucky]
-    - [adjective, рабочий, working]
-    - [adjective, свежий, fresh]
-    - [adjective, младший, younger]
-    - [adjective, старший, older]
-    - [adjective, неуклюжий, clumsy]
-    - [adjective, настоящий, 'real, genuine']
-    - [adjective, чужой, someone elses]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Adjectives: -ж, -ч, -ш, or -щ",
+		"type": "grammatical",
+		"cards": [
+			[
+				"adjective",
+				"общий"
+			],
+			[
+				"adjective",
+				"будущий"
+			],
+			[
+				"adjective",
+				"бывший"
+			],
+			[
+				"adjective",
+				"рыжий"
+			],
+			[
+				"adjective",
+				"везучий"
+			],
+			[
+				"adjective",
+				"рабочий"
+			],
+			[
+				"adjective",
+				"свежий"
+			],
+			[
+				"adjective",
+				"младший"
+			],
+			[
+				"adjective",
+				"старший"
+			],
+			[
+				"adjective",
+				"неуклюжий"
+			],
+			[
+				"adjective",
+				"настоящий"
+			],
+			[
+				"adjective",
+				"чужой"
+			]
+		]
+	}
+}

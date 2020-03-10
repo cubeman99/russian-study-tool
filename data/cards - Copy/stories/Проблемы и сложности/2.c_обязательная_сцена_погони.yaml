@@ -1,0 +1,219 @@
+{
+  "card_set": {
+    "name": "2.c \u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u0441\u0446\u0435\u043d\u0430 \u043f\u043e\u0433\u043e\u043d\u0438",
+    "version": 1,
+    "cards": [
+      [
+        "adjective",
+        "\u043e\u0434\u0435\u0440\u0436\u0438\u043c\u044b\u0439",
+        "obsessed"
+      ],
+      [
+        "adjective",
+        "\u043f\u043e\u0434\u0430\u0432\u043b\u0435\u043d\u043d\u044b\u0439",
+        "depressed"
+      ],
+      [
+        "adjective",
+        "\u0443\u0434\u0438\u0432\u043b\u0451\u043d\u043d\u044b\u0439",
+        "suprised"
+      ],
+      [
+        "adjective",
+        "\u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b\u0439",
+        "required, that which you cant do without"
+      ],
+      [
+        "adjective",
+        "\u0436\u0438\u0437\u043d\u0435\u043d\u043d\u044b\u0439",
+        "vital, important for life"
+      ],
+      [
+        "adjective",
+        "\u043f\u043e\u0431\u0435\u0436\u0451\u043d\u043d\u044b\u0439",
+        "defeated"
+      ],
+      [
+        "adjective",
+        "\u043e\u0441\u0442\u0430\u043b\u044c\u043d\u044b\u0435 + gen.",
+        "the rest (of some group)"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u0441\u0443\u0436\u0434\u0435\u043d\u0438\u0435",
+        "discussion"
+      ],
+      [
+        "noun",
+        "\u0442\u0440\u0430\u0442\u0430",
+        "expense, that which is spent"
+      ],
+      [
+        "noun",
+        "\u0431\u0443\u0431\u043d\u0435\u043d\u0438\u0435, \u0431\u043e\u0440\u043c\u0430\u0442\u0435\u043d\u0438\u0435",
+        "mumbling"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u0433\u043d\u043e\u0437",
+        "prediction, forecast, prognosis"
+      ],
+      [
+        "noun",
+        "\u043a\u0443\u043a\u0443\u0440\u0443\u0437\u0430",
+        "corn"
+      ],
+      [
+        "noun",
+        "\u0437\u0435\u0432\u043e\u043a",
+        "yawn"
+      ],
+      [
+        "noun",
+        "\u0434\u0440\u0435\u043c\u043e\u0442\u0430",
+        "drowsiness"
+      ],
+      [
+        "noun",
+        "\u0434\u0440\u0451\u043c\u0430",
+        "doze, half-sleep"
+      ],
+      [
+        "noun",
+        "\u0443\u0445\u043c\u044b\u043b\u043a\u0430",
+        "smirk, smug grin"
+      ],
+      [
+        "noun",
+        "\u043d\u0430\u0432\u044b\u043a",
+        "skill acquired from habit"
+      ],
+      [
+        "noun",
+        "\u0441\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u0438\u0435",
+        "preservation, conservation"
+      ],
+      [
+        "noun",
+        "\u0437\u043b\u043e",
+        "evil"
+      ],
+      [
+        "noun",
+        "\u043d\u0430\u0431\u043e\u0440",
+        "set, suite, selection"
+      ],
+      [
+        "noun",
+        "\u0442\u0435\u043b\u0435\u0436\u043a\u0430",
+        "a cart"
+      ],
+      [
+        "noun",
+        "\u0441\u043b\u0435\u0434\u0441\u0442\u0432\u0438\u0435",
+        "consequence"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0441\u043b\u0435\u0434\u0441\u0442\u0432\u0438\u0435",
+        "consequence of something"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0432\u0441\u0435\u0434\u043d\u0435\u0432\u043d\u043e\u0441\u0442\u044c",
+        "slice-of-life"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0440\u043e\u0433",
+        "threshold; beam on floor at bottom of doorway"
+      ],
+      [
+        "verb",
+        "\u0443\u0447\u0438\u0442\u044b\u0432\u0430\u0442\u044c",
+        "to take into account"
+      ],
+      [
+        "verb",
+        "\u0438\u0437\u0431\u0435\u0436\u0430\u0442\u044c",
+        "to avoid, get away from"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0434\u0435\u0440\u0436\u0430\u0442\u044c",
+        "to withstand, endure, hold out"
+      ],
+      [
+        "verb",
+        "\u0437\u0435\u0432\u0430\u0442\u044c",
+        "to yawn"
+      ],
+      [
+        "verb",
+        "\u0437\u0435\u0432\u043d\u0443\u0442\u044c",
+        "to give a yawn"
+      ],
+      [
+        "verb",
+        "\u043d\u0435\u0441\u0442\u0438\u0441\u044c",
+        "to move forward at high speed"
+      ],
+      [
+        "verb",
+        "\u043a\u043b\u0435\u0432\u0430\u0442\u044c \u043d\u043e\u0441\u043e\u043c",
+        "to fall asleep, peck with your nose"
+      ],
+      [
+        "verb",
+        "\u043e\u0433\u043b\u044f\u043d\u0443\u0442\u044c\u0441\u044f",
+        "to look back"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u0435\u0440\u043d\u0443\u0442\u044c\u0441\u044f",
+        "to turn around"
+      ],
+      [
+        "verb",
+        "\u0434\u0435\u0442\u044c\u0441\u044f",
+        "to get away, hide"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0442\u043e\u0447\u0438\u0442\u044c",
+        "to subject to imprisonment, to sharpen"
+      ],
+      [
+        "verb",
+        "\u043b\u0438\u0437\u0430\u0442\u044c",
+        "to lick"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u043b\u0438\u0437\u044b\u0432\u0430\u0442\u044c",
+        "to lick your lips"
+      ],
+      [
+        "verb",
+        "\u0442\u043e\u0440\u0436\u0435\u0441\u0442\u0432\u043e\u0432\u0430\u0442\u044c",
+        "to triumph"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0441\u043c\u0430\u0442\u0440\u0438\u0432\u0430\u0442\u044c",
+        "to gaze, look at from time to time"
+      ],
+      [
+        "verb",
+        "\u0443\u0441\u0438\u043b\u0438\u0442\u044c",
+        "to strengthen"
+      ],
+      [
+        "conjunction",
+        "\u043d\u0435\u0436\u0435\u043b\u0438",
+        "than (same as \u0447\u0435\u043c)"
+      ]
+    ],
+    "type": "Media"
+  }
+}

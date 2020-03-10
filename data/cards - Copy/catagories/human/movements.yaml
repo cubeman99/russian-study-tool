@@ -1,0 +1,439 @@
+{
+  "card_set": {
+    "name": "Movements",
+    "version": 1,
+    "cards": [
+      [
+        "verb",
+        "\u0441\u043a\u043e\u043b\u044c\u0437\u043d\u0443\u0442\u044c",
+        "to move quickly, quietly, to slip"
+      ],
+      [
+        "noun",
+        "\u0441\u043a\u043e\u043b\u044c\u0436\u0435\u043d\u0438\u0435",
+        "a glide, slip, slide"
+      ],
+      [
+        "verb",
+        "\u0431\u0435\u0433\u0430\u0442\u044c",
+        "to run, jog"
+      ],
+      [
+        "verb",
+        "\u0431\u0435\u0436\u0430\u0442\u044c",
+        "to run, jog"
+      ],
+      [
+        "verb",
+        "\u0438\u0437\u0431\u0435\u0433\u0430\u0442\u044c",
+        "to avoid"
+      ],
+      [
+        "verb",
+        "\u0443\u0432\u043e\u0440\u0430\u0447\u0438\u0432\u0430\u0442\u044c\u0441\u044f \u043e\u0442 + gen.",
+        "to avoid"
+      ],
+      [
+        "verb",
+        "\u0438\u0437\u0431\u0435\u0436\u0430\u0442\u044c",
+        "to avoid, get away from"
+      ],
+      [
+        "verb",
+        "\u0431\u0440\u043e\u0441\u0438\u0442\u044c\u0441\u044f",
+        "to throw oneself, rush quickly"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u044b\u0433\u0430\u0442\u044c",
+        "to jump"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u044b\u0433\u043d\u0443\u0442\u044c",
+        "to jump"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u0441\u043a\u043e\u0447\u0438\u0442\u044c",
+        "to get off, jump off"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0441\u043a\u043e\u0447\u0438\u0442\u044c",
+        "to pop out, jump out"
+      ],
+      [
+        "verb",
+        "\u043a\u0430\u0442\u0430\u0442\u044c\u0441\u044f",
+        "to roll, ride in a vehicle, ski, bicycle, snowboard"
+      ],
+      [
+        "verb",
+        "\u0432\u0440\u0430\u0449\u0430\u0442\u044c\u0441\u044f",
+        "to rotate"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0432\u043e\u0440\u043e\u0442",
+        "a turn"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u0435\u0440\u043d\u0443\u0442\u044c\u0441\u044f",
+        "to turn around"
+      ],
+      [
+        "verb",
+        "\u043f\u0435\u0440\u0435\u0434\u0432\u0438\u0433\u0430\u0442\u044c\u0441\u044f",
+        "to get around, move around"
+      ],
+      [
+        "verb",
+        "\u0434\u0432\u0438\u0433\u0430\u0442\u044c\u0441\u044f",
+        "to be in motion, to move"
+      ],
+      [
+        "verb",
+        "\u043d\u0435\u0441\u0442\u0438\u0441\u044c",
+        "to move forward at high speed"
+      ],
+      [
+        "verb",
+        "\u043f\u0435\u0440\u0435\u043b\u043e\u0436\u0438\u0442\u044c",
+        "to move something from one place to another"
+      ],
+      [
+        "verb",
+        "\u043c\u0430\u0445\u0430\u0442\u044c",
+        "to wave"
+      ],
+      [
+        "verb",
+        "\u043a\u043e\u043b\u0435\u0431\u0430\u0442\u044c\u0441\u044f",
+        "to sway, wobble; hesitate, waver"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u0442\u0440\u044f\u0441\u0430\u0442\u044c",
+        "to shake, jar"
+      ],
+      [
+        "verb",
+        "\u0442\u0440\u044f\u0441\u0442\u0438",
+        "to shake, jiggle"
+      ],
+      [
+        "verb",
+        "\u0434\u0440\u043e\u0436\u0430\u0442\u044c",
+        "to tremble"
+      ],
+      [
+        "noun",
+        "\u0434\u0440\u043e\u0436\u044c",
+        "shiver, shudder, tremble"
+      ],
+      [
+        "verb",
+        "\u0432\u0437\u0434\u0440\u043e\u0433\u043d\u0443\u0442\u044c",
+        "to wince, tremble for a moment"
+      ],
+      [
+        "verb",
+        "\u0443\u043f\u0430\u0441\u0442\u044c",
+        "to fall"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u043f\u0430\u0441\u0442\u044c",
+        "to fall out"
+      ],
+      [
+        "verb",
+        "\u043f\u0430\u0434\u0430\u0442\u044c",
+        "to fall, drop"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u043e\u0432\u0430\u043b\u0438\u0442\u044c\u0441\u044f",
+        "to fall through"
+      ],
+      [
+        "verb",
+        "\u0442\u0430\u043d\u0446\u0435\u0432\u0430\u0442\u044c",
+        "to dance"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0438\u043f\u043b\u044f\u0441\u044b\u0432\u0430\u0442\u044c",
+        "to dance up and down"
+      ],
+      [
+        "verb",
+        "\u043f\u043b\u044f\u0441\u0430\u0442\u044c",
+        "to dance (typically a folk dance)"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u0433\u0443\u043b\u043a\u0430",
+        "walk, stroll"
+      ],
+      [
+        "verb",
+        "\u0433\u0443\u043b\u044f\u0442\u044c",
+        "to take a stroll"
+      ],
+      [
+        "verb",
+        "\u0431\u0440\u043e\u0434\u0438\u0442\u044c",
+        "to wander, roam, stroll"
+      ],
+      [
+        "verb",
+        "\u0431\u0440\u0435\u0441\u0442\u0438",
+        "to wander, roam, stroll"
+      ],
+      [
+        "verb",
+        "\u0440\u0435\u044f\u0442\u044c",
+        "to flutter, soar"
+      ],
+      [
+        "verb",
+        "\u043f\u0430\u0440\u0438\u0442\u044c",
+        "to soar, steam, vape"
+      ],
+      [
+        "verb",
+        "\u043b\u0435\u0442\u0435\u0442\u044c",
+        "to fly"
+      ],
+      [
+        "verb",
+        "\u043b\u0435\u0442\u0430\u0442\u044c",
+        "to fly"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043b\u0451\u0442",
+        "flight"
+      ],
+      [
+        "noun",
+        "\u0434\u0432\u0438\u0436\u0435\u043d\u0438\u0435",
+        "motion, movement"
+      ],
+      [
+        "verb",
+        "\u0448\u0435\u0432\u0435\u043b\u0438\u0442\u044c\u0441\u044f",
+        "to stir, budge, move"
+      ],
+      [
+        "verb",
+        "\u0442\u0440\u043e\u043d\u0443\u0442\u044c",
+        "to touch, move (feelings)"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u0448\u0430\u0442\u043d\u0443\u0442\u044c\u0441\u044f",
+        "to recoil, swing to the side"
+      ],
+      [
+        "noun",
+        "\u0448\u0430\u0442\u0430\u0442\u044c\u0441\u044f",
+        "to stagger, swing, hesitate"
+      ],
+      [
+        "verb",
+        "\u043a\u0443\u0432\u044b\u0440\u043a\u0430\u0442\u044c\u0441\u044f",
+        "to tumble, somersault"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043b\u043e\u0436\u0438\u0442\u044c",
+        "to put, to lay"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u043b\u043e\u0436\u0438\u0442\u044c",
+        "to take something out and put it"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0438\u043b\u043e\u0436\u0438\u0442\u044c",
+        "to put and hold in place"
+      ],
+      [
+        "verb",
+        "\u0442\u0440\u043e\u0433\u0430\u0442\u044c",
+        "to touch thoroughly, or many times"
+      ],
+      [
+        "phrase",
+        "\u043d\u0438 \u0441 \u043c\u0435\u0441\u0442\u0430",
+        "Dont move!"
+      ],
+      [
+        "interjection",
+        "\u0421\u0442\u043e\u0439!",
+        "Stop! Halt!"
+      ],
+      [
+        "verb",
+        "\u043e\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c\u0441\u044f",
+        "to stop, dwell, stand still"
+      ],
+      [
+        "noun",
+        "\u043e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430",
+        "stop, layover"
+      ],
+      [
+        "verb",
+        "\u0432\u0441\u0442\u0430\u0432\u0430\u0442\u044c",
+        "to get up, stand up"
+      ],
+      [
+        "verb",
+        "\u043e\u0441\u0442\u0430\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to remain, stay, be left"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u0441\u0442\u0430\u0432\u0430\u0442\u044c",
+        "to fall/lag behind"
+      ],
+      [
+        "verb",
+        "\u0441\u0435\u0441\u0442\u044c",
+        "to sit down"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0434\u0441\u0435\u0441\u0442\u044c",
+        "to sit next to something/someone"
+      ],
+      [
+        "verb",
+        "\u0443\u0441\u0435\u0441\u0442\u044c\u0441\u044f",
+        "to sit comfortably, or for a while"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0438\u0441\u0435\u0441\u0442\u044c",
+        "to crouch down; sit for a while"
+      ],
+      [
+        "verb",
+        "\u0433\u043d\u0443\u0442\u044c",
+        "to bend, flex"
+      ],
+      [
+        "verb",
+        "\u0449\u0438\u043f\u0430\u0442\u044c",
+        "to pinch, pluck"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0440\u043e\u0447\u0430\u0442\u044c\u0441\u044f",
+        "to toss and turn"
+      ],
+      [
+        "adverb",
+        "\u0432\u043f\u0440\u0438\u043f\u0440\u044b\u0436\u043a\u0443",
+        "skipping"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0431\u0440\u043e\u0441\u0438\u0442\u044c\u0441\u044f",
+        "to pounce, to throw yourself"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0432\u0430\u043b\u0438\u0442\u044c\u0441\u044f",
+        "to fall out of something"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u043f\u0440\u044f\u043d\u0443\u0442\u044c",
+        "to spring back, recoil"
+      ],
+      [
+        "verb",
+        "\u0448\u043c\u044f\u043a\u043d\u0443\u0442\u044c\u0441\u044f",
+        "to fall onto, plop onto"
+      ],
+      [
+        "verb",
+        "\u0441\u043f\u043e\u0442\u043a\u043d\u0443\u0442\u044c\u0441\u044f",
+        "to trip over"
+      ],
+      [
+        "verb",
+        "\u043c\u0435\u0442\u0430\u0442\u044c\u0441\u044f",
+        "to thrash about"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0437\u043c\u0430\u0445\u0438\u0432\u0430\u0442\u044c",
+        "to wave around, swing around"
+      ],
+      [
+        "verb",
+        "\u0432\u0437\u0432\u0438\u0442\u044c\u0441\u044f",
+        "to soar up, in circles"
+      ],
+      [
+        "verb",
+        "\u0441\u043d\u0438\u0436\u0430\u0442\u044c\u0441\u044f",
+        "to go down, descend; to drop, fall"
+      ],
+      [
+        "verb",
+        "\u0441\u0442\u043e\u043b\u043a\u043d\u0443\u0442\u044c\u0441\u044f",
+        "to collide, run into, unexpectedly meet"
+      ],
+      [
+        "verb",
+        "\u0441\u043c\u0435\u0441\u0442\u0438\u0442\u044c\u0441\u044f",
+        "to shift, change positions"
+      ],
+      [
+        "verb",
+        "\u0432\u0440\u0435\u0437\u0430\u0442\u044c\u0441\u044f",
+        "to bump into"
+      ],
+      [
+        "verb",
+        "\u043c\u0447\u0430\u0442\u044c\u0441\u044f",
+        "to rush, race, tear along"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0441\u0442\u0440\u044f\u0442\u044c",
+        "to get stuck"
+      ],
+      [
+        "noun",
+        "\u0443\u043a\u043b\u043e\u043d\u0435\u043d\u0438\u0435",
+        "evasion, avoidance, dodge"
+      ],
+      [
+        "verb",
+        "\u0445\u043b\u043e\u043f\u0430\u0442\u044c",
+        "to clap, slam"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043f\u043d\u0443\u0442\u044c\u0441\u044f",
+        "to stumble, trip"
+      ],
+      [
+        "verb",
+        "\u0448\u0430\u0440\u043a\u043d\u0443\u0442\u044c",
+        "to shuffle"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

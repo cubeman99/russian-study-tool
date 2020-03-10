@@ -1,0 +1,119 @@
+{
+  "card_set": {
+    "name": "Texture",
+    "version": 1,
+    "cards": [
+      [
+        "adjective",
+        "\u0433\u0443\u0441\u0442\u043e\u0439",
+        "dense, thick"
+      ],
+      [
+        "adjective",
+        "\u0442\u043e\u043b\u0441\u0442\u044b\u0439",
+        "fat, thick"
+      ],
+      [
+        "adjective",
+        "\u0442\u0432\u0451\u0440\u0434\u044b\u0439",
+        "hard, firm"
+      ],
+      [
+        "adjective",
+        "\u043a\u0440\u0435\u043f\u043a\u0438\u0439",
+        "strong, tough"
+      ],
+      [
+        "adjective",
+        "\u0441\u0443\u0445\u043e\u0439",
+        "dry"
+      ],
+      [
+        "adjective",
+        "\u043c\u043e\u043a\u0440\u044b\u0439",
+        "wet"
+      ],
+      [
+        "adjective",
+        "\u0433\u0438\u0431\u043a\u0438\u0439",
+        "flexible"
+      ],
+      [
+        "adjective",
+        "\u043c\u044f\u0433\u043a\u0438\u0439",
+        "soft"
+      ],
+      [
+        "adjective",
+        "\u043e\u0441\u0442\u0440\u044b\u0439",
+        "sharp"
+      ],
+      [
+        "adjective",
+        "\u0443\u0434\u043e\u0431\u043d\u044b\u0439",
+        "comfortable"
+      ],
+      [
+        "adjective",
+        "\u0447\u0438\u0441\u0442\u044b\u0439",
+        "clean"
+      ],
+      [
+        "adjective",
+        "\u0433\u0440\u044f\u0437\u043d\u044b\u0439",
+        "dirty"
+      ],
+      [
+        "adjective",
+        "\u044f\u0441\u043d\u044b\u0439",
+        "clear"
+      ],
+      [
+        "adjective",
+        "\u044f\u0440\u043a\u0438\u0439",
+        "bright"
+      ],
+      [
+        "adjective",
+        "\u0442\u0451\u043c\u043d\u044b\u0439",
+        "dark"
+      ],
+      [
+        "adjective",
+        "\u0445\u043e\u043b\u043e\u0434\u043d\u044b\u0439",
+        "cold"
+      ],
+      [
+        "adjective",
+        "\u0442\u0451\u043f\u043b\u044b\u0439",
+        "warm"
+      ],
+      [
+        "adjective",
+        "\u0433\u043e\u0440\u044f\u0447\u0438\u0439, \u0436\u0430\u0440\u043a\u0438\u0439",
+        "hot"
+      ],
+      [
+        "adjective",
+        "\u0441\u043b\u0430\u0434\u043a\u0438\u0439",
+        "sweet"
+      ],
+      [
+        "adjective",
+        "\u0432\u043a\u0443\u0441\u043d\u0435\u0439\u0448\u0438\u0439",
+        "delicious"
+      ],
+      [
+        "adjective",
+        "\u043b\u0438\u043f\u043a\u0438\u0439; \u043b\u0438\u043f\u0443\u0447\u0438\u0439",
+        "sticky"
+      ],
+      [
+        "adjective",
+        "\u043b\u043e\u0445\u043c\u0430\u0442\u044b\u0439",
+        "shaggy, bushy"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

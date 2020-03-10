@@ -1,70 +1,269 @@
-card_set:
-  name: New 13
-  type: Other
-  version: 1
-  cards:
-    - [adjective, тупенький, 'dumb, stupid']
-    - [adjective, притяжательный, possessive]
-    - [adverb, немножко, a little bit]
-    - [adverb, весьма, 'quite, highly, greatly']
-    - [adverb, лишь, only (literary style)]
-    - [noun, изменение, 'change, variation']
-    - [noun, развод, divorce]
-    - [noun, сюжет, 'plot, story']
-    - [noun, пророчество, prophecy]
-    - [noun, пророк, prophet]
-    - [noun, качество, quality]
-    - [noun, мудрость, wisdom]
-    - [noun, испытание, 'test, trial']
-    - [noun, сотня, a hundred]
-    - [noun, рай, 'heaven, paradise']
-    - [noun, утечка, 'leak, leakage']
-    - [noun, собственность, property]
-    - [noun, союз, union]
-    - [noun, лифчик, brassiere]
-    - [noun, речь, speech]
-    - [noun, способность, ability]
-    - [noun, броня, armor]
-    - [noun, спа, spa]
-    - [noun, терапия, therapy]
-    - [noun, отдых, 'rest, relaxation, recreation']
-    - [noun, слава, 'fame, glory, honor']
-    - [noun, вес, weight]
-    - [noun, век; столетие, century]
-    - [noun, ролик, 'video, roll']
-    - [noun, ластик, eraser]
-    - [noun, преступление, 'a crime, offense']
-    - [noun, имя существительное, noun]
-    - [noun, имя прилагательное, adjective]
-    - [noun, буква, 'letter, character']
-    - [noun, грамматика, grammer]
-    - [noun, именительный падеж, nominative case]
-    - [noun, винительный падеж, accusative case]
-    - [noun, родительный падеж, genetive case]
-    - [noun, дательный падеж, dative case]
-    - [noun, творительный падеж, instrumental case]
-    - [noun, предложный падеж, prepositional case]
-    - [noun, средный род, neuter gender]
-    - [noun, личное местоимение, personal pronouns]
-    - [noun, настоящее время, present tense]
-    - [noun, прошедшее время, past tense]
-    - [verb, связать, 'to tie, connect, join']
-    - [verb, доить, to milk]
-    - [verb, испугаться, to be frightened]
-    - [verb, удалять, 'to delete, remove']
-    - [verb, удалить, 'to delete, remove']
-    - [verb, остерегаться, to beware]
-    - [verb, менять, 'to change, swap, replace']
-    - [phrase, 'А вы уверены об этом?', 'Are you sure of this?']
-    - [phrase, позволь мне, let me]
-    - [phrase, в конце концов, eventually]
-    - [phrase, время от времени, from time to time]
-    - [phrase, честно говоря, honestly]
-    - [phrase, только что, just now]
-    - [preposition, как иронично, how ironic]
-    - [preposition, 'как прошёл ____?', 'how did the ____ go?']
-    - [preposition, Это много для меня значит., It means a lot to me.]
-    - [preposition, поверь, believe me]
-    - [preposition, вот так, there you go]
-    - [preposition, Поверь в себя, Believe in yourself]
-    - [interjection, минуточку, just a minute]
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 13",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"тупенький"
+			],
+			[
+				"adjective",
+				"притяжательный"
+			],
+			[
+				"adverb",
+				"немножко"
+			],
+			[
+				"adverb",
+				"весьма"
+			],
+			[
+				"adverb",
+				"лишь"
+			],
+			[
+				"noun",
+				"изменение"
+			],
+			[
+				"noun",
+				"развод"
+			],
+			[
+				"noun",
+				"сюжет"
+			],
+			[
+				"noun",
+				"пророчество"
+			],
+			[
+				"noun",
+				"пророк"
+			],
+			[
+				"noun",
+				"качество"
+			],
+			[
+				"noun",
+				"мудрость"
+			],
+			[
+				"noun",
+				"испытание"
+			],
+			[
+				"noun",
+				"сотня"
+			],
+			[
+				"noun",
+				"рай"
+			],
+			[
+				"noun",
+				"утечка"
+			],
+			[
+				"noun",
+				"собственность"
+			],
+			[
+				"noun",
+				"союз"
+			],
+			[
+				"noun",
+				"лифчик"
+			],
+			[
+				"noun",
+				"речь"
+			],
+			[
+				"noun",
+				"способность"
+			],
+			[
+				"noun",
+				"броня"
+			],
+			[
+				"noun",
+				"спа"
+			],
+			[
+				"noun",
+				"терапия"
+			],
+			[
+				"noun",
+				"отдых"
+			],
+			[
+				"noun",
+				"слава"
+			],
+			[
+				"noun",
+				"вес"
+			],
+			[
+				"noun",
+				"век; столетие"
+			],
+			[
+				"noun",
+				"ролик"
+			],
+			[
+				"noun",
+				"ластик"
+			],
+			[
+				"noun",
+				"преступление"
+			],
+			[
+				"noun",
+				"имя существительное"
+			],
+			[
+				"noun",
+				"имя прилагательное"
+			],
+			[
+				"noun",
+				"буква"
+			],
+			[
+				"noun",
+				"грамматика"
+			],
+			[
+				"noun",
+				"именительный падеж"
+			],
+			[
+				"noun",
+				"винительный падеж"
+			],
+			[
+				"noun",
+				"родительный падеж"
+			],
+			[
+				"noun",
+				"дательный падеж"
+			],
+			[
+				"noun",
+				"творительный падеж"
+			],
+			[
+				"noun",
+				"предложный падеж"
+			],
+			[
+				"noun",
+				"средный род"
+			],
+			[
+				"noun",
+				"личное местоимение"
+			],
+			[
+				"noun",
+				"настоящее время"
+			],
+			[
+				"noun",
+				"прошедшее время"
+			],
+			[
+				"verb",
+				"связать"
+			],
+			[
+				"verb",
+				"доить"
+			],
+			[
+				"verb",
+				"испугаться"
+			],
+			[
+				"verb",
+				"удалять"
+			],
+			[
+				"verb",
+				"удалить"
+			],
+			[
+				"verb",
+				"остерегаться"
+			],
+			[
+				"verb",
+				"менять"
+			],
+			[
+				"phrase",
+				"а вы уверены об этом?"
+			],
+			[
+				"phrase",
+				"позволь мне"
+			],
+			[
+				"phrase",
+				"в конце концов"
+			],
+			[
+				"phrase",
+				"время от времени"
+			],
+			[
+				"phrase",
+				"честно говоря"
+			],
+			[
+				"adverb",
+				"только что"
+			],
+			[
+				"phrase",
+				"как иронично"
+			],
+			[
+				"phrase",
+				"как прошел ____?"
+			],
+			[
+				"phrase",
+				"это много для меня значит."
+			],
+			[
+				"phrase",
+				"поверь мне"
+			],
+			[
+				"preposition",
+				"вот так"
+			],
+			[
+				"phrase",
+				"поверь в себя"
+			],
+			[
+				"interjection",
+				"минуточку"
+			]
+		]
+	}
+}

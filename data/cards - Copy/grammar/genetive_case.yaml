@@ -1,0 +1,109 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Genetive Case",
+		"type": "grammatical",
+		"cards": [
+			[
+				"preposition",
+				"вдоль + gen.",
+				"along"
+			],
+			[
+				"preposition",
+				"кроме + gen.",
+				"besides, except"
+			],
+			[
+				"adjective",
+				"остальные + gen.",
+				"the rest (of some group)"
+			],
+			[
+				"phrase",
+				"до[verb] + до + gen.",
+				"to reach, get as far as"
+			],
+			[
+				"verb",
+				"увернуться от + gen.",
+				"to evade, dodge"
+			],
+			[
+				"verb",
+				"уворачиваться от + gen.",
+				"to avoid"
+			],
+			[
+				"phrase",
+				"у + gen. + получилось + verb",
+				"to manage to do something"
+			],
+			[
+				"preposition",
+				"у",
+				"by, at a place"
+			],
+			[
+				"preposition",
+				"до",
+				"before, until"
+			],
+			[
+				"preposition",
+				"от",
+				"from"
+			],
+			[
+				"preposition",
+				"из",
+				"from, out of"
+			],
+			[
+				"preposition",
+				"мимо",
+				"past (typical with про- motion verb)"
+			],
+			[
+				"preposition",
+				"помимо",
+				"besides, beside, aside from"
+			],
+			[
+				"preposition",
+				"против",
+				"against, opposed to"
+			],
+			[
+				"preposition",
+				"напротив",
+				"opposite of, across from"
+			],
+			[
+				"preposition",
+				"близ",
+				"near"
+			],
+			[
+				"preposition",
+				"вокруг",
+				"around (physical location)"
+			],
+			[
+				"preposition",
+				"около",
+				"around, near"
+			],
+			[
+				"verb",
+				"отличаться от",
+				"to differ from"
+			],
+			[
+				"preposition",
+				"касательно + gen.",
+				"regarding, concering, over, on"
+			]
+		]
+	}
+}

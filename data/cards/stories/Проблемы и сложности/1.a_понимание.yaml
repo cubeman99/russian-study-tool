@@ -1,71 +1,273 @@
-card_set:
-  name: 1.a Понимание
-  type: Media
-  version: 1
-  cards:
-    - [adverb, равноценно, equivilant to]
-    - [adverb, помимо, 'besides, beside, aside from']
-    - [adverb, насколько, 'by how much, as far as']
-    - [adverb, едва, barely]
-    - [adverb, лично, 'personally, in person']
-    - [adverb, мрачно, gloomy]
-    - [adjective, недовольный, 'dissatisfied, unhappy']
-    - [adjective, входящый, 'incoming, entering']
-    - [adjective, международный, 'international, between nations']
-    - [adjective, полуоткрытый, half-open]
-    - [adjective, сложенный, folded]
-    - [adjective, покрывающий, covering]
-    - [adjective, приглушённый, muted]
-    - [noun, свидание, a date (of love)]
-    - [noun, эпитет, 'term, epithet, adjective']
-    - [noun, поверхность, surface]
-    - [noun, папка, folder]
-    - [noun, стопка, 'stack, shot glass']
-    - [noun, 'темнота, тьма', 'darkness, gloom, obscurity']
-    - [noun, обязанность, 'duty, responsibility']
-    - [noun, совпадение, coincidence]
-    - [noun, подбородок, chin]
-    - [noun, тактика, 'tactic, tactics']
-    - [noun, тишина, quietness]
-    - [noun, стон, groan]
-    - [noun, пищевика, food]
-    - [noun, подземелье, dungeon]
-    - [noun, измена, treason]
-    - [noun, отправление, departure]
-    - [noun, мелочь, 'trifle, little thing']
-    - [noun, чулан, 'closet, room under staircase']
-    - [verb, доминировать, to dominate]
-    - [verb, награждать, 'to reward, award']
-    - [verb, описать, to describe]
-    - [verb, вращаться, to rotate]
-    - [verb, поглощать, 'to absorb, swallow, consume']
-    - [verb, поглотить, 'to absorb, swallow, consume']
-    - [verb, наклониться, to bend over]
-    - [verb, выглядывать, 'to look out, peek out']
-    - [verb, подсчитать, 'to tally up, count']
-    - [verb, чинить, 'to fix, repair, mend']
-    - [verb, учинять, 'to inflict, commit']
-    - [verb, осознавать, 'to be aware, recognize']
-    - [verb, подозревать, 'to suspect, surmise']
-    - [verb, зародить, 'to excite, to raise thought, idea, feeling']
-    - [verb, выразить, 'to express, voice']
-    - [verb, приплясывать, to dance up and down]
-    - [verb, произнести, 'to pronounce, get out']
-    - [verb, задать, 'to charge, entrust someone to do something']
-    - [verb, рушиться, to collapse]
-    - [verb, раздаться, to be heard]
-    - [verb, подсовывать, 'to slip, put under']
-    - [verb, пихнуть, to shove]
-    - [verb, повиснуть, 'to hang, droop']
-    - [verb, достучаться, to reach out]
-    - [verb, дозволить, 'to permit, allow']
-    - [verb, просунуть, to push through]
-    - [verb, утешаться, 'to take confort, be consoled']
-    - [verb, существовать, to exist]
-    - [verb, кинуть, 'to throw, cast']
-    - [verb, объявлять, 'to declare, announce']
-    - [verb, маршировать, to march]
-    - [verb, запихивать, 'to stuff in, box up']
-    - [phrase, 'я думая, я влублена', I think Im in love]
-    - [conjunction, кабы, if only (если бы)]
-    - [verb, украсть, to steal]
+{
+	"card_set": {
+		"version": 1,
+		"name": "1.a Понимание",
+		"type": "media",
+		"cards": [
+			[
+				"adverb",
+				"равноценно"
+			],
+			[
+				"preposition",
+				"помимо"
+			],
+			[
+				"adverb",
+				"насколько"
+			],
+			[
+				"adverb",
+				"едва"
+			],
+			[
+				"adverb",
+				"лично"
+			],
+			[
+				"adverb",
+				"мрачно"
+			],
+			[
+				"adjective",
+				"недовольный"
+			],
+			[
+				"adjective",
+				"входящый"
+			],
+			[
+				"adjective",
+				"международный"
+			],
+			[
+				"adjective",
+				"полуоткрытый"
+			],
+			[
+				"adjective",
+				"сложенный"
+			],
+			[
+				"adjective",
+				"покрывающий"
+			],
+			[
+				"adjective",
+				"приглушенный"
+			],
+			[
+				"noun",
+				"свидание"
+			],
+			[
+				"noun",
+				"эпитет"
+			],
+			[
+				"noun",
+				"поверхность"
+			],
+			[
+				"noun",
+				"папка"
+			],
+			[
+				"noun",
+				"стопка"
+			],
+			[
+				"noun",
+				"темнота; тьма; мрак"
+			],
+			[
+				"noun",
+				"обязанность"
+			],
+			[
+				"noun",
+				"совпадение"
+			],
+			[
+				"noun",
+				"подбородок"
+			],
+			[
+				"noun",
+				"тактика"
+			],
+			[
+				"noun",
+				"тишина"
+			],
+			[
+				"noun",
+				"стон"
+			],
+			[
+				"noun",
+				"пищевика"
+			],
+			[
+				"noun",
+				"подземелье"
+			],
+			[
+				"noun",
+				"измена"
+			],
+			[
+				"noun",
+				"отправление"
+			],
+			[
+				"noun",
+				"мелочь"
+			],
+			[
+				"noun",
+				"чулан"
+			],
+			[
+				"verb",
+				"доминировать"
+			],
+			[
+				"verb",
+				"награждать"
+			],
+			[
+				"verb",
+				"описать"
+			],
+			[
+				"verb",
+				"вращаться"
+			],
+			[
+				"verb",
+				"поглощать"
+			],
+			[
+				"verb",
+				"поглотить"
+			],
+			[
+				"verb",
+				"наклониться"
+			],
+			[
+				"verb",
+				"выглядывать"
+			],
+			[
+				"verb",
+				"подсчитать"
+			],
+			[
+				"verb",
+				"чинить"
+			],
+			[
+				"verb",
+				"учинять"
+			],
+			[
+				"verb",
+				"осознавать"
+			],
+			[
+				"verb",
+				"подозревать"
+			],
+			[
+				"verb",
+				"зародить"
+			],
+			[
+				"verb",
+				"выразить"
+			],
+			[
+				"verb",
+				"приплясывать"
+			],
+			[
+				"verb",
+				"произнести"
+			],
+			[
+				"verb",
+				"задать"
+			],
+			[
+				"verb",
+				"рушиться"
+			],
+			[
+				"verb",
+				"раздаться"
+			],
+			[
+				"verb",
+				"подсовывать"
+			],
+			[
+				"verb",
+				"пихнуть"
+			],
+			[
+				"verb",
+				"повиснуть"
+			],
+			[
+				"verb",
+				"достучаться"
+			],
+			[
+				"verb",
+				"дозволить"
+			],
+			[
+				"verb",
+				"просунуть"
+			],
+			[
+				"verb",
+				"утешаться"
+			],
+			[
+				"verb",
+				"существовать"
+			],
+			[
+				"verb",
+				"кинуть"
+			],
+			[
+				"verb",
+				"объявлять"
+			],
+			[
+				"verb",
+				"маршировать"
+			],
+			[
+				"verb",
+				"запихивать"
+			],
+			[
+				"phrase",
+				"я думая, я влублена"
+			],
+			[
+				"conjunction",
+				"кабы"
+			],
+			[
+				"verb",
+				"украсть"
+			]
+		]
+	}
+}

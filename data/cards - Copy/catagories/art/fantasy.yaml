@@ -1,0 +1,154 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Fantasy",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"единорог",
+				"unicorn"
+			],
+			[
+				"noun",
+				"магия",
+				"magic"
+			],
+			[
+				"noun",
+				"заклинание; заклятие",
+				"spell, invocation"
+			],
+			[
+				"noun",
+				"щит",
+				"shield"
+			],
+			[
+				"noun",
+				"король",
+				"king"
+			],
+			[
+				"noun",
+				"королевство",
+				"kingdom"
+			],
+			[
+				"noun",
+				"королева",
+				"queen"
+			],
+			[
+				"noun",
+				"замок; замок",
+				"a castle; a lock"
+			],
+			[
+				"noun",
+				"дворец",
+				"palace, castle"
+			],
+			[
+				"noun",
+				"зло",
+				"evil"
+			],
+			[
+				"noun",
+				"злодей",
+				"villian, fiend"
+			],
+			[
+				"noun",
+				"рог",
+				"horn"
+			],
+			[
+				"adjective",
+				"королевский",
+				"royal"
+			],
+			[
+				"noun",
+				"гвардия",
+				"guard (such as the royal guard)"
+			],
+			[
+				"noun",
+				"призрак; привидение",
+				"a ghost"
+			],
+			[
+				"noun",
+				"ведьма",
+				"a witch"
+			],
+			[
+				"noun",
+				"скелет",
+				"a skeleton"
+			],
+			[
+				"noun",
+				"феникс",
+				"phoenix"
+			],
+			[
+				"noun",
+				"хозяйка",
+				"hostess, mistress"
+			],
+			[
+				"noun",
+				"ад",
+				"hell"
+			],
+			[
+				"noun",
+				"сокровище",
+				"treasure"
+			],
+			[
+				"noun",
+				"ловушка",
+				"a booby trap"
+			],
+			[
+				"noun",
+				"палочка",
+				"a wand"
+			],
+			[
+				"noun",
+				"рай",
+				"heaven, paradise"
+			],
+			[
+				"noun",
+				"снадобье; зелье",
+				"a potion"
+			],
+			[
+				"adjective",
+				"волшебный",
+				"magical (about fairytales)"
+			],
+			[
+				"noun",
+				"калдовство",
+				"witchcraft"
+			],
+			[
+				"adjective",
+				"мифический",
+				"mythical"
+			],
+			[
+				"noun",
+				"страж",
+				"a guardian, armed guard"
+			]
+		]
+	}
+}

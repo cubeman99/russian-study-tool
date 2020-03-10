@@ -1,68 +1,265 @@
-card_set:
-  name: New 03
-  type: Other
-  version: 1
-  cards:
-    - [adjective, худой, 'slim, skinny, thin']
-    - [adjective, золотой, 'golden, made of gold']
-    - [adjective, странный, strange]
-    - [adjective, удивительный, amazing]
-    - [adjective, мудрый, wise]
-    - [adjective, лучший, best]
-    - [adjective, солёный, salty]
-    - [adjective, уверенный, 'sure, certain, confident']
-    - [adjective, сонный, sleepy]
-    - [adverb, зачем, what for]
-    - [adverb, абсолютно, 'absolutely, totally']
-    - [adverb, иначе, 'differently, otherwise']
-    - [adverb, дальше, 'farther, further']
-    - [adverb, даже, even]
-    - [adverb, наверняка, for sure]
-    - [adverb, ровно, 'exactly, smooth']
-    - [noun, гид, guide]
-    - [noun, 'дурак (m), дура (f)', fool]
-    - [noun, кассир, cashier]
-    - [noun, компания (друзья), a group of friends]
-    - [noun, кружка, mug]
-    - [noun, медицина, medicine]
-    - [noun, праздник, holiday (one day)]
-    - [noun, танец, dance]
-    - [noun, услуга, service]
-    - [noun, процент, percent]
-    - [noun, результат, result]
-    - [noun, галстук, tie]
-    - [noun, игрушка, toy]
-    - [noun, оружие, 'weapon, weapons']
-    - [noun, серия, 'episode, series']
-    - [noun, совет, 'advice, recommendation']
-    - [noun, глава, chapter]
-    - [noun, посылка, 'parcel, package']
-    - [noun, корабль, ship]
-    - [noun, срок, 'date, term, time, period']
-    - [noun, украшение, 'decoration, adornment']
-    - [verb, болтать, 'to chat, gossip; to propel, shake']
-    - [verb, встретиться, to meet]
-    - [verb, ненавидеть, to hate]
-    - [verb, целоваться, to kiss]
-    - [verb, подписать, to sign]
-    - [verb, родиться, to be born]
-    - [verb, находиться, 'to be situated, found, located']
-    - [verb, лепить, to sculpt]
-    - [verb, помнить, to remember]
-    - [verb, считать, 'to count, consider']
-    - [verb, получить, 'to receive, get, obtain']
-    - [verb, оказаться, to turn out to be]
-    - [verb, становиться, 'to become, begin, come']
-    - [verb, заметить, 'to notice, observe']
-    - [verb, доставить, to deliver]
-    - [verb, приглашать, to invite]
-    - [verb, положить, 'to put, to lay']
-    - [verb, скрывать, 'to hide, keep secret, cover from sight']
-    - [verb, случиться, to happen]
-    - [verb, отступить, 'to retreat, step back']
-    - [phrase, 'и вот так, ...', 'and so, ...']
-    - [phrase, не за что, 'its nothing, dont mention it']
-    - [phrase, ровно неделю назад, exactly one week ago]
-    - [preposition, кроме + gen., 'besides, except']
-    - [other, точно, exactly]
-    - [other, ведь, after all]
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 03",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"худой"
+			],
+			[
+				"adjective",
+				"золотой"
+			],
+			[
+				"adjective",
+				"странный"
+			],
+			[
+				"adjective",
+				"удивительный"
+			],
+			[
+				"adjective",
+				"мудрый"
+			],
+			[
+				"adjective",
+				"лучший"
+			],
+			[
+				"adjective",
+				"соленый"
+			],
+			[
+				"adjective",
+				"уверенный"
+			],
+			[
+				"adjective",
+				"сонный"
+			],
+			[
+				"adverb",
+				"зачем"
+			],
+			[
+				"adverb",
+				"абсолютно"
+			],
+			[
+				"adverb",
+				"иначе"
+			],
+			[
+				"adverb",
+				"дальше"
+			],
+			[
+				"adverb",
+				"даже"
+			],
+			[
+				"adverb",
+				"наверняка"
+			],
+			[
+				"adverb",
+				"ровно"
+			],
+			[
+				"noun",
+				"гид"
+			],
+			[
+				"noun",
+				"дурак; дура"
+			],
+			[
+				"noun",
+				"кассир"
+			],
+			[
+				"noun",
+				"компания (друзья)"
+			],
+			[
+				"noun",
+				"кружка"
+			],
+			[
+				"noun",
+				"медицина"
+			],
+			[
+				"noun",
+				"праздник"
+			],
+			[
+				"noun",
+				"танец"
+			],
+			[
+				"noun",
+				"услуга"
+			],
+			[
+				"noun",
+				"процент"
+			],
+			[
+				"noun",
+				"результат"
+			],
+			[
+				"noun",
+				"галстук"
+			],
+			[
+				"noun",
+				"игрушка"
+			],
+			[
+				"noun",
+				"оружие"
+			],
+			[
+				"noun",
+				"серия"
+			],
+			[
+				"noun",
+				"совет"
+			],
+			[
+				"noun",
+				"глава"
+			],
+			[
+				"noun",
+				"посылка"
+			],
+			[
+				"noun",
+				"корабль"
+			],
+			[
+				"noun",
+				"срок"
+			],
+			[
+				"noun",
+				"украшение"
+			],
+			[
+				"verb",
+				"болтать"
+			],
+			[
+				"verb",
+				"встретиться"
+			],
+			[
+				"verb",
+				"ненавидеть"
+			],
+			[
+				"verb",
+				"целоваться"
+			],
+			[
+				"verb",
+				"подписать"
+			],
+			[
+				"verb",
+				"родиться"
+			],
+			[
+				"verb",
+				"находиться"
+			],
+			[
+				"verb",
+				"лепить"
+			],
+			[
+				"verb",
+				"помнить"
+			],
+			[
+				"verb",
+				"считать"
+			],
+			[
+				"verb",
+				"получить"
+			],
+			[
+				"verb",
+				"оказаться"
+			],
+			[
+				"verb",
+				"становиться"
+			],
+			[
+				"verb",
+				"заметить"
+			],
+			[
+				"verb",
+				"доставить"
+			],
+			[
+				"verb",
+				"приглашать"
+			],
+			[
+				"verb",
+				"положить"
+			],
+			[
+				"verb",
+				"скрывать"
+			],
+			[
+				"verb",
+				"случиться"
+			],
+			[
+				"verb",
+				"отступить"
+			],
+			[
+				"phrase",
+				"и вот так, ..."
+			],
+			[
+				"phrase",
+				"не за что"
+			],
+			[
+				"phrase",
+				"ровно неделю назад"
+			],
+			[
+				"preposition",
+				"кроме + gen."
+			],
+			[
+				"adverb",
+				"точно"
+			],
+			[
+				"conjunction",
+				"ведь"
+			],
+			[
+				"verb",
+				"пригласить"
+			]
+		]
+	}
+}

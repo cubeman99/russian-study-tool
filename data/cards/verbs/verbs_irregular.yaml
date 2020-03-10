@@ -1,13 +1,41 @@
-card_set:
-  name: Irregular Verbs
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, хотеть, to want]
-    - [verb, бежать, 'to run, jog']
-    - [verb, быть, to be]
-    - [verb, дать, to give]
-    - [verb, есть, to eat]
-    - [verb, ехать, to go by vehicle]
-    - [verb, идти, 'to walk, go on foot']
-    - [verb, расти, to grow]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Irregular Verbs",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"хотеть"
+			],
+			[
+				"verb",
+				"бежать"
+			],
+			[
+				"verb",
+				"быть"
+			],
+			[
+				"verb",
+				"дать"
+			],
+			[
+				"verb",
+				"есть"
+			],
+			[
+				"verb",
+				"ехать"
+			],
+			[
+				"verb",
+				"идти"
+			],
+			[
+				"verb",
+				"расти"
+			]
+		]
+	}
+}

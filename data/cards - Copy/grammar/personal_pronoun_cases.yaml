@@ -1,0 +1,49 @@
+{
+  "card_set": {
+    "name": "Personal Pronoun Cases",
+    "version": 1,
+    "cards": [
+      [
+        "pronoun",
+        "\u044f",
+        "I"
+      ],
+      [
+        "pronoun",
+        "\u0442\u044b",
+        "you (informal)"
+      ],
+      [
+        "pronoun",
+        "\u043e\u043d",
+        "he, it"
+      ],
+      [
+        "pronoun",
+        "\u043e\u043d\u043e",
+        "it"
+      ],
+      [
+        "pronoun",
+        "\u043e\u043d\u0430",
+        "she, it"
+      ],
+      [
+        "pronoun",
+        "\u043c\u044b",
+        "we"
+      ],
+      [
+        "pronoun",
+        "\u0432\u044b",
+        "you (formal)"
+      ],
+      [
+        "pronoun",
+        "\u043e\u043d\u0438",
+        "they"
+      ]
+    ],
+    "type": "Grammatical"
+  }
+}

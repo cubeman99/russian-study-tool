@@ -1,0 +1,174 @@
+{
+  "card_set": {
+    "name": "Adverbs of Place",
+    "version": 1,
+    "cards": [
+      [
+        "adverb",
+        "\u0433\u0434\u0435",
+        "where"
+      ],
+      [
+        "adverb",
+        "\u043a\u0443\u0434\u0430",
+        "where to"
+      ],
+      [
+        "adverb",
+        "\u043e\u0442\u043a\u0443\u0434\u0430",
+        "from where"
+      ],
+      [
+        "adverb",
+        "\u0437\u0434\u0435\u0441\u044c",
+        "here"
+      ],
+      [
+        "adverb",
+        "\u0441\u044e\u0434\u0430",
+        "to here"
+      ],
+      [
+        "adverb",
+        "\u043e\u0442\u0441\u044e\u0434\u0430",
+        "from here"
+      ],
+      [
+        "adverb",
+        "\u0442\u0430\u043c",
+        "there"
+      ],
+      [
+        "adverb",
+        "\u0442\u0443\u0434\u0430",
+        "to there"
+      ],
+      [
+        "adverb",
+        "\u043e\u0442\u0442\u0443\u0434\u0430",
+        "from there"
+      ],
+      [
+        "adverb",
+        "\u0432\u0435\u0437\u0434\u0435; \u0432\u0441\u044e\u0434\u0443",
+        "everywhere"
+      ],
+      [
+        "adverb",
+        "\u043e\u0442\u043e\u0432\u0441\u044e\u0434\u0443",
+        "from everywhere"
+      ],
+      [
+        "adverb",
+        "\u0434\u043e\u043c\u0430",
+        "at home"
+      ],
+      [
+        "adverb",
+        "\u0434\u043e\u043c\u043e\u0439",
+        "to home"
+      ],
+      [
+        "adverb",
+        "\u0441\u043b\u0435\u0432\u0430",
+        "on the left"
+      ],
+      [
+        "adverb",
+        "\u043d\u0430\u043b\u0435\u0432\u043e",
+        "to the left"
+      ],
+      [
+        "adverb",
+        "\u0441\u043f\u0440\u0430\u0432\u0430",
+        "on the right"
+      ],
+      [
+        "adverb",
+        "\u043d\u0430\u043f\u0440\u0430\u0432\u043e",
+        "to the right"
+      ],
+      [
+        "adverb",
+        "\u0432\u043f\u0435\u0440\u0435\u0434\u0438",
+        "in front, ahead"
+      ],
+      [
+        "adverb",
+        "\u0432\u043f\u0435\u0440\u0451\u0434",
+        "forward, ahead"
+      ],
+      [
+        "adverb",
+        "\u043f\u043e\u0437\u0430\u0434\u0438, \u0441\u0437\u0430\u0434\u0438",
+        "behind"
+      ],
+      [
+        "adverb",
+        "\u043d\u0430\u0437\u0430\u0434",
+        "back(ward), ago"
+      ],
+      [
+        "adverb",
+        "\u043d\u0430\u0432\u0435\u0440\u0445\u0443",
+        "above"
+      ],
+      [
+        "adverb",
+        "\u043d\u0430\u0432\u0435\u0440\u0445",
+        "up(ward)"
+      ],
+      [
+        "adverb",
+        "\u0441\u0432\u0435\u0440\u0445\u0443",
+        "from above, on top of"
+      ],
+      [
+        "adverb",
+        "\u0432\u043d\u0438\u0437\u0443",
+        "below"
+      ],
+      [
+        "adverb",
+        "\u0432\u043d\u0438\u0437",
+        "down(ward)"
+      ],
+      [
+        "adverb",
+        "\u0441\u043d\u0438\u0437\u0443",
+        "from below"
+      ],
+      [
+        "adverb",
+        "\u0432\u043d\u0443\u0442\u0440\u0438",
+        "inside"
+      ],
+      [
+        "adverb",
+        "\u0432\u043d\u0443\u0442\u0440\u044c",
+        "to inside"
+      ],
+      [
+        "adverb",
+        "\u0438\u0437\u043d\u0443\u0442\u0440\u0438",
+        "from inside"
+      ],
+      [
+        "adverb",
+        "\u0441\u043d\u0430\u0440\u0443\u0436\u0438",
+        "on the outside"
+      ],
+      [
+        "adverb",
+        "\u043d\u0430\u0440\u0443\u0436\u0443",
+        "to outside"
+      ],
+      [
+        "adverb",
+        "\u043f\u0440\u044f\u043c\u043e",
+        "straight"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

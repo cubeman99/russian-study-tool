@@ -1,23 +1,133 @@
-card_set:
-  name: Common Words
-  type: Categorical
-  version: 1
-  cards:
-    - [adjective, только, only]
-    - [adjective, какой, what kind of]
-    - [adjective, такой, such a]
-    - [adjective, этот, this]
-    - [adjective, тот, that]
-    - [adverb, раз, 'time, once, since']
-    - [adverb, просто, simply]
-    - [pronoun, это, 'it, this, it is']
-    - [other, вот, here is]
-    - [particle, же, 'and, but, whereas, as for, as to, after all, this very, this same,
-    then, surely, just, on earth']
-    - [particle, бы, would]
-    - [particle, то, some]
-    - [particle, нибудь, 'some, any']
-    - [conjunction, ли, 'whether, if']
-    - [interjection, да, 'yes']
-    - [interjection, нет, 'no']
-    - [interjection, ну, well]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Common Words",
+		"type": "categorical",
+		"cards": [
+			[
+				"adjective",
+				"только"
+			],
+			[
+				"adjective",
+				"какой"
+			],
+			[
+				"adjective",
+				"такой"
+			],
+			[
+				"adjective",
+				"этот"
+			],
+			[
+				"adjective",
+				"тот"
+			],
+			[
+				"adverb",
+				"раз"
+			],
+			[
+				"adverb",
+				"просто"
+			],
+			[
+				"pronoun",
+				"это"
+			],
+			[
+				"other",
+				"вот"
+			],
+			[
+				"particle",
+				"же"
+			],
+			[
+				"particle",
+				"бы"
+			],
+			[
+				"particle",
+				"то"
+			],
+			[
+				"particle",
+				"нибудь"
+			],
+			[
+				"particle",
+				"ли"
+			],
+			[
+				"adverb",
+				"да"
+			],
+			[
+				"adverb",
+				"нет"
+			],
+			[
+				"interjection",
+				"ну"
+			],
+			[
+				"verb",
+				"быть"
+			],
+			[
+				"adjective",
+				"всякий"
+			],
+			[
+				"adverb",
+				"также"
+			],
+			[
+				"adjective",
+				"самый"
+			],
+			[
+				"adjective",
+				"другой"
+			],
+			[
+				"adverb",
+				"тоже"
+			],
+			[
+				"verb",
+				"хотеть"
+			],
+			[
+				"verb",
+				"получиться"
+			],
+			[
+				"verb",
+				"получаться"
+			],
+			[
+				"adverb",
+				"особенно"
+			],
+			[
+				"adjective",
+				"остальные + gen."
+			],
+			[
+				"noun",
+				"дело"
+			],
+			[
+				"verb",
+				"дать"
+			],
+			[
+				"verb",
+				"мочь"
+			]
+		]
+	}
+}

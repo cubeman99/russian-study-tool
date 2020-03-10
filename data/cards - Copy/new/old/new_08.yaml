@@ -1,0 +1,229 @@
+{
+  "card_set": {
+    "name": "New 08",
+    "version": 1,
+    "cards": [
+      [
+        "adjective",
+        "\u0438\u0441\u0442\u0438\u043d\u043d\u044b\u0439",
+        "true, genuine, veritable"
+      ],
+      [
+        "adjective",
+        "\u043a\u0440\u0443\u0433\u043b\u044b\u0439",
+        "round"
+      ],
+      [
+        "adjective",
+        "\u0433\u043e\u0434\u043e\u0432\u043e\u0439",
+        "annual"
+      ],
+      [
+        "adjective",
+        "\u0432\u0430\u0440\u0451\u043d\u044b\u0439",
+        "boiled"
+      ],
+      [
+        "adjective",
+        "\u0432\u043b\u0430\u0436\u043d\u044b\u0439",
+        "damp, wet, humid"
+      ],
+      [
+        "adjective",
+        "\u0433\u0435\u043d\u0438\u0430\u043b\u044c\u043d\u044b\u0439",
+        "ingenious, brilliant"
+      ],
+      [
+        "adverb",
+        "\u0434\u0430\u0440\u043e\u043c",
+        "for nothing, free, in vain"
+      ],
+      [
+        "adverb",
+        "\u043e\u0434\u043d\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e",
+        "at the same time"
+      ],
+      [
+        "noun",
+        "\u043f\u0435\u0440\u0441\u043e\u043d\u0430\u0436",
+        "character"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u0437\u043e\u0440",
+        "overview, review, survey"
+      ],
+      [
+        "noun",
+        "\u0440\u0435\u0430\u043a\u0446\u0438\u044f",
+        "reaction"
+      ],
+      [
+        "noun",
+        "\u0441\u0443\u0442\u044c",
+        "essense, point, core"
+      ],
+      [
+        "noun",
+        "\u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430",
+        "culture"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043a\u043e\u043b\u0435\u043d\u0438\u0435",
+        "generation"
+      ],
+      [
+        "noun",
+        "\u043b\u0435\u043d\u044c",
+        "laziness"
+      ],
+      [
+        "noun",
+        "\u0441\u0432\u044f\u0437\u044c",
+        "connection"
+      ],
+      [
+        "noun",
+        "\u0441\u043b\u0430\u0431\u043e\u0441\u0442\u044c",
+        "weakness"
+      ],
+      [
+        "noun",
+        "\u0447\u0438\u0445\u0430\u0442\u044c",
+        "to sneeze"
+      ],
+      [
+        "noun",
+        "\u0447\u0438\u0445\u043d\u0443\u0442\u044c",
+        "to sneeze"
+      ],
+      [
+        "noun",
+        "\u0432\u0440\u0430\u0433",
+        "enemy"
+      ],
+      [
+        "noun",
+        "\u0434\u043b\u0438\u043d\u0430",
+        "length"
+      ],
+      [
+        "noun",
+        "\u0442\u043e\u0432\u0430\u0440",
+        "goods"
+      ],
+      [
+        "noun",
+        "\u0433\u0435\u043d\u0438\u0439",
+        "genius"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u0440\u0430\u0437",
+        "form, image"
+      ],
+      [
+        "noun",
+        "\u0434\u0435\u043b\u043e",
+        "business, affair, matter"
+      ],
+      [
+        "noun",
+        "\u0441\u0442\u043e\u0440\u043e\u043d\u0430",
+        "side, party"
+      ],
+      [
+        "noun",
+        "\u043c\u044b\u0441\u043b\u044c",
+        "thought, idea"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u0435\u0449\u0430\u0442\u044c",
+        "to promise"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c",
+        "to earn"
+      ],
+      [
+        "verb",
+        "\u0441\u043d\u0438\u043c\u0430\u0442\u044c",
+        "to take off"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0442\u0440\u0430\u0433\u0438\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to touch upon"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0442\u043e\u043f\u0438\u0442\u044c",
+        "to flood"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u043b\u0430\u0434\u0430\u0442\u044c",
+        "to possess"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0437\u043e\u0431\u0440\u0430\u0442\u044c",
+        "to dismantle, deconstruct, analyze"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0436\u0438\u0432\u0430\u0442\u044c",
+        "to survive"
+      ],
+      [
+        "verb",
+        "\u0433\u0440\u0443\u0441\u0442\u0438\u0442\u044c",
+        "to be sad, grieve"
+      ],
+      [
+        "verb",
+        "\u0442\u0440\u043e\u0433\u0430\u0442\u044c",
+        "to touch thoroughly, or many times"
+      ],
+      [
+        "verb",
+        "\u0431\u0440\u043e\u0441\u0438\u0442\u044c",
+        "to leave, abandon (person, family, work)"
+      ],
+      [
+        "verb",
+        "\u0434\u0432\u0438\u0433\u0430\u0442\u044c\u0441\u044f",
+        "to be in motion, to move"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043a\u0443\u0441\u044b\u0432\u0430\u0442\u044c",
+        "to have a bite to eat, snack"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043a\u0443\u0441\u0438\u0442\u044c",
+        "to have a bite to eat, snack"
+      ],
+      [
+        "verb",
+        "\u0432\u0432\u043e\u0434\u0438\u0442\u044c",
+        "to enter, input"
+      ],
+      [
+        "phrase",
+        "\u0434\u0430\u0432\u043d\u044b\u043c-\u0434\u0430\u0432\u043d\u043e",
+        "long ago and far away, once upon a time"
+      ],
+      [
+        "preposition",
+        "\u0432\u043e\u043a\u0440\u0443\u0433",
+        "around (physical location)"
+      ]
+    ],
+    "type": "Other"
+  }
+}

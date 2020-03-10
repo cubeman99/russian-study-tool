@@ -1,17 +1,69 @@
-card_set:
-  name: Modal Words
-  type: Grammatical
-  version: 1
-  cards:
-    - [adverb, 'надо, нужно', 'it is necessary, one must']
-    - [adverb, должен, 'one should, one is supposed to']
-    - [adverb, можно, it is allowed]
-    - [adverb, нельзя, 'it is not possible (pf.), it is not allowed (imp.)']
-    - [adverb, обязательно, has to]
-    - [adverb, желательно, it is desireable]
-    - [adverb, важно, it is important]
-    - [adjective, намеренный, intentional]
-    - [verb, тошнить, 'to cause nausia, to make sick']
-    - [phrase, так нельзя, you cant do it in this way]
-    - [verb, удаваться, 'to pan out, work out']
-    - [phrase, у + gen. + получилось + verb, to manage to do something]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Modal Words",
+		"type": "categorical",
+		"cards": [
+			[
+				"adverb",
+				"надо, нужно"
+			],
+			[
+				"adverb",
+				"должен"
+			],
+			[
+				"adverb",
+				"можно"
+			],
+			[
+				"adverb",
+				"нельзя"
+			],
+			[
+				"adverb",
+				"обязательно"
+			],
+			[
+				"adverb",
+				"желательно"
+			],
+			[
+				"adverb",
+				"важно"
+			],
+			[
+				"adjective",
+				"намеренный"
+			],
+			[
+				"verb",
+				"тошнить"
+			],
+			[
+				"phrase",
+				"так нельзя"
+			],
+			[
+				"verb",
+				"удаваться"
+			],
+			[
+				"phrase",
+				"у + gen. + получилось + verb"
+			],
+			[
+				"adverb",
+				"возможно"
+			],
+			[
+				"adverb",
+				"невозможно"
+			],
+			[
+				"adverb",
+				"охота"
+			]
+		]
+	}
+}

@@ -1,0 +1,184 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Love",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"любовь",
+				"love"
+			],
+			[
+				"noun",
+				"любовник",
+				"lover"
+			],
+			[
+				"verb",
+				"любить",
+				"to like, love"
+			],
+			[
+				"verb",
+				"влюбиться",
+				"to fall in love"
+			],
+			[
+				"noun",
+				"свидание",
+				"a date (of love)"
+			],
+			[
+				"phrase",
+				"я думая, я влублена",
+				"i think im in love"
+			],
+			[
+				"adjective",
+				"возлюбленный",
+				"beloved, dear, lover"
+			],
+			[
+				"noun",
+				"муж",
+				"husband"
+			],
+			[
+				"noun",
+				"жена",
+				"wife"
+			],
+			[
+				"noun",
+				"свадьба",
+				"wedding"
+			],
+			[
+				"adjective",
+				"свадебный",
+				"wedding (adj.)"
+			],
+			[
+				"noun",
+				"невеста",
+				"bride"
+			],
+			[
+				"noun",
+				"жених",
+				"groom"
+			],
+			[
+				"verb",
+				"трахнуть",
+				"to bang, crash, boom"
+			],
+			[
+				"noun",
+				"красота",
+				"beauty"
+			],
+			[
+				"adjective",
+				"прекрасный",
+				"perfect, beautiful"
+			],
+			[
+				"verb",
+				"ебать",
+				"to fuck"
+			],
+			[
+				"noun",
+				"румянец",
+				"blush"
+			],
+			[
+				"verb",
+				"краснеть",
+				"to turn red, blush"
+			],
+			[
+				"noun",
+				"страсть",
+				"passion"
+			],
+			[
+				"adjective",
+				"страстный",
+				"passionate"
+			],
+			[
+				"verb",
+				"ухаживать",
+				"to court, woo, look after deleteme"
+			],
+			[
+				"noun",
+				"ласка",
+				"affection"
+			],
+			[
+				"adjective",
+				"лестный",
+				"flattering"
+			],
+			[
+				"adjective",
+				"потный",
+				"sweaty"
+			],
+			[
+				"noun",
+				"пот",
+				"sweat"
+			],
+			[
+				"verb",
+				"любоваться",
+				"to look at in pleasure"
+			],
+			[
+				"adjective",
+				"знойный",
+				"sultry, hot, full of heat"
+			],
+			[
+				"noun",
+				"тёлка",
+				"baby cow; young woman (chick)"
+			],
+			[
+				"verb",
+				"скрещиваться",
+				"to interbreed"
+			],
+			[
+				"noun",
+				"попа",
+				"booty"
+			],
+			[
+				"adjective",
+				"мечтальный",
+				"dreamy"
+			],
+			[
+				"adverb",
+				"либидо",
+				"libido"
+			],
+			[
+				"noun",
+				"плётка",
+				"a small whip"
+			],
+			[
+				"verb",
+				"хлестать",
+				"to whip smth/someone (with a whip)"
+			]
+		]
+	}
+}

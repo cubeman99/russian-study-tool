@@ -1,0 +1,64 @@
+{
+  "card_set": {
+    "name": "Root \u0434\u0435\u0440\u0436\u0430\u0442\u044c",
+    "version": 1,
+    "cards": [
+      [
+        "verb",
+        "\u0434\u0435\u0440\u0436\u0430\u0442\u044c",
+        "to hold, keep"
+      ],
+      [
+        "verb",
+        "\u0441\u0434\u0435\u0440\u0436\u0430\u0442\u044c",
+        "to hold back, restrain"
+      ],
+      [
+        "adjective",
+        "\u043e\u0434\u0435\u0440\u0436\u0438\u043c\u044b\u0439",
+        "obsessed"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0434\u0435\u0440\u0436\u0430\u0442\u044c",
+        "to withstand, endure, hold out"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430",
+        "support"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0442\u044c",
+        "to support, maintain"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0437\u0434\u0435\u0440\u0436\u0430\u0442\u044c\u0441\u044f",
+        "to abstain"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u043e\u0434\u0435\u0440\u0436\u0430\u0442\u044c\u0441\u044f",
+        "to last, hold out, maintain position"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0438\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to stick to, adhere, abide"
+      ],
+      [
+        "verb",
+        "\u0443\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0442\u044c \u0441\u0435\u0431\u044f",
+        "to hold back"
+      ],
+      [
+        "phrase",
+        "\u0434\u0435\u0440\u0436\u0430\u0442\u044c \u0432 \u0441\u0442\u043e\u0440\u043e\u043d\u0435 \u043e\u0442 ...",
+        "to keep away from ..."
+      ]
+    ],
+    "type": "Grammatical"
+  }
+}

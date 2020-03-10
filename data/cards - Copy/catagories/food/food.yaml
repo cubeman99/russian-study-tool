@@ -1,0 +1,229 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Food",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"пищевика",
+				"food"
+			],
+			[
+				"noun",
+				"угощение",
+				"treat (food/drink)"
+			],
+			[
+				"phrase",
+				"угощайся",
+				"treat/help yourself"
+			],
+			[
+				"noun",
+				"напитки",
+				"drinks"
+			],
+			[
+				"noun",
+				"напиток",
+				"drink, beverage"
+			],
+			[
+				"verb",
+				"пить",
+				"to drink"
+			],
+			[
+				"noun",
+				"завтрак",
+				"breakfast"
+			],
+			[
+				"verb",
+				"завтракать",
+				"to have breakfast"
+			],
+			[
+				"noun",
+				"обед",
+				"lunch"
+			],
+			[
+				"verb",
+				"обедать",
+				"to have lunch"
+			],
+			[
+				"noun",
+				"ужин",
+				"dinner"
+			],
+			[
+				"verb",
+				"ужинать",
+				"to have dinner"
+			],
+			[
+				"noun",
+				"пьяница",
+				"drunkard"
+			],
+			[
+				"verb",
+				"пьянеть",
+				"to get drunk"
+			],
+			[
+				"verb",
+				"кусать",
+				"to bite"
+			],
+			[
+				"verb",
+				"укусить",
+				"to bite"
+			],
+			[
+				"verb",
+				"откусить",
+				"to take a bite"
+			],
+			[
+				"verb",
+				"перекусить",
+				"to have a bite"
+			],
+			[
+				"verb",
+				"закусывать",
+				"to have a bite to eat, snack"
+			],
+			[
+				"verb",
+				"закусить",
+				"to have a bite to eat, snack"
+			],
+			[
+				"adjective",
+				"голодный",
+				"hungry"
+			],
+			[
+				"verb",
+				"проголодаться",
+				"to get hungry"
+			],
+			[
+				"verb",
+				"потягивать",
+				"to sip"
+			],
+			[
+				"adjective",
+				"вкусный",
+				"tasty"
+			],
+			[
+				"adjective",
+				"невкусный",
+				"not tasty"
+			],
+			[
+				"adjective",
+				"вкуснейший",
+				"delicious"
+			],
+			[
+				"adjective",
+				"восхитительный",
+				"delicious, delightful"
+			],
+			[
+				"noun",
+				"пир",
+				"feast, banquet"
+			],
+			[
+				"adjective",
+				"отвратительный",
+				"disgusting"
+			],
+			[
+				"noun",
+				"пища",
+				"meals"
+			],
+			[
+				"noun",
+				"столовая (комната)",
+				"dining (room)"
+			],
+			[
+				"noun",
+				"вилка",
+				"fork"
+			],
+			[
+				"noun",
+				"нож",
+				"knife"
+			],
+			[
+				"noun",
+				"ложка",
+				"spoon"
+			],
+			[
+				"noun",
+				"тарелка",
+				"plate"
+			],
+			[
+				"noun",
+				"блюдо",
+				"dish, meal"
+			],
+			[
+				"noun",
+				"официант, официантка",
+				"waiter/waitress"
+			],
+			[
+				"verb",
+				"заказывать",
+				"to order"
+			],
+			[
+				"verb",
+				"заказать",
+				"to order"
+			],
+			[
+				"noun",
+				"посуда",
+				"dishes"
+			],
+			[
+				"noun",
+				"посудомоечная машина",
+				"dishwasher"
+			],
+			[
+				"verb",
+				"запить",
+				"to wash down, drink smth down"
+			],
+			[
+				"noun",
+				"соломка",
+				"straw"
+			],
+			[
+				"verb",
+				"жевать",
+				"to chew"
+			]
+		]
+	}
+}

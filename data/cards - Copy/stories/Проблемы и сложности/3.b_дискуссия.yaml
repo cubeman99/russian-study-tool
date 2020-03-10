@@ -1,0 +1,304 @@
+{
+  "card_set": {
+    "name": "3.b \u0414\u0438\u0441\u043a\u0443\u0441\u0441\u0438\u044f",
+    "version": 1,
+    "cards": [
+      [
+        "adverb",
+        "\u0431\u0435\u0441\u043f\u0435\u0447\u043d\u043e",
+        "carelessly"
+      ],
+      [
+        "adjective",
+        "\u043b\u043e\u0432\u043a\u0438\u0439",
+        "agile, clever"
+      ],
+      [
+        "adjective",
+        "\u043d\u0435\u043b\u043e\u0432\u043a\u0438\u0439",
+        "akward, clumsy"
+      ],
+      [
+        "adjective",
+        "\u0431\u0435\u0441\u043f\u0440\u0435\u0446\u0435\u0434\u0435\u043d\u0442\u044b\u0439",
+        "unprecedented"
+      ],
+      [
+        "adjective",
+        "\u043e\u0441\u043e\u0431\u044b\u0439",
+        "particular, special"
+      ],
+      [
+        "adjective",
+        "\u0442\u0440\u0435\u0432\u043e\u0436\u043d\u044b\u0439",
+        "anxious"
+      ],
+      [
+        "adjective",
+        "\u043b\u0435\u0434\u044f\u043d\u044b\u0439",
+        "icy"
+      ],
+      [
+        "adjective",
+        "\u043f\u0430\u0442\u0440\u0443\u043b\u043d\u044b\u0439",
+        "patrol (adj.)"
+      ],
+      [
+        "adjective",
+        "\u043d\u0435\u0443\u043c\u0435\u0441\u0442\u043d\u044b\u0439",
+        "irrelevant"
+      ],
+      [
+        "adjective",
+        "\u0443\u043c\u0435\u0441\u0442\u043d\u044b\u0439",
+        "relevant"
+      ],
+      [
+        "adjective",
+        "\u043e\u0441\u043b\u0435\u043f\u043b\u0451\u043d\u043d\u044b\u0439",
+        "blinded"
+      ],
+      [
+        "noun",
+        "\u043b\u043e\u0432\u043a\u043e\u0441\u0442\u044c",
+        "agility, dexterity"
+      ],
+      [
+        "noun",
+        "\u043d\u0435\u043b\u043e\u0432\u043a\u043e\u0441\u0442\u044c",
+        "akwardness"
+      ],
+      [
+        "noun",
+        "\u0443\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u0435",
+        "mention"
+      ],
+      [
+        "noun",
+        "\u0441\u043e\u043a\u0440\u044b\u0442\u0438\u0435",
+        "concealment"
+      ],
+      [
+        "noun",
+        "\u0438\u0437\u0433\u0438\u0431",
+        "bend, curve"
+      ],
+      [
+        "noun",
+        "\u0437\u0432\u043e\u043d\u043e\u043a",
+        "metal bell, signal device"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0445\u043e\u0436\u0434\u0435\u043d\u0438\u0435, \u043f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435",
+        "adventure"
+      ],
+      [
+        "noun",
+        "\u0441\u043b\u0443\u0445",
+        "hearing (the sense)"
+      ],
+      [
+        "noun",
+        "\u0441\u043b\u0443\u0445\u0438; \u0441\u043f\u043b\u0435\u0442\u043d\u044f",
+        "gossip"
+      ],
+      [
+        "noun",
+        "\u043e\u0441\u0432\u043e\u0431\u043e\u0436\u0434\u0435\u043d\u0438\u0435",
+        "liberation"
+      ],
+      [
+        "noun",
+        "\u0433\u0430\u0440\u0435\u043c",
+        "harem"
+      ],
+      [
+        "noun",
+        "\u0432\u043e\u0437\u0440\u0430\u0436\u0435\u043d\u0438\u0435",
+        "objection"
+      ],
+      [
+        "noun",
+        "\u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435",
+        "expression (same as in English)"
+      ],
+      [
+        "noun",
+        "\u0434\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u0438\u0435",
+        "addition, adding"
+      ],
+      [
+        "noun",
+        "\u043b\u043e\u0431",
+        "forehead"
+      ],
+      [
+        "noun",
+        "\u043e\u0431\u0441\u0442\u043e\u044f\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e",
+        "circumstance"
+      ],
+      [
+        "noun",
+        "\u0433\u0440\u0451\u0437\u0430",
+        "fantasy, dreamworld"
+      ],
+      [
+        "noun",
+        "\u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a",
+        "source, spring, fount"
+      ],
+      [
+        "verb",
+        "\u0443\u0434\u0438\u0432\u043b\u044f\u0442\u044c",
+        "to suprise"
+      ],
+      [
+        "verb",
+        "\u0443\u0434\u0438\u0432\u0438\u0442\u044c",
+        "to suprise"
+      ],
+      [
+        "verb",
+        "\u0431\u043e\u0433\u043e\u0442\u0432\u043e\u0440\u0438\u0442\u044c",
+        "to worship"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0434\u0434\u0430\u0442\u044c\u0441\u044f",
+        "to succumb"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0441\u0441\u0435\u044f\u0442\u044c",
+        "to scatter, dispel, dissipate"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0440\u0442\u0438\u0442\u044c",
+        "to spoil"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u043e\u043d\u0438\u043a\u0430\u0442\u044c",
+        "to infiltrate, penetrate"
+      ],
+      [
+        "verb",
+        "\u043a\u0430\u0448\u043b\u044f\u0442\u044c",
+        "to cough"
+      ],
+      [
+        "verb",
+        "\u043a\u0430\u0448\u043b\u044f\u043d\u0443\u0442\u044c",
+        "to give a cough"
+      ],
+      [
+        "verb",
+        "\u0438\u0437\u0433\u043d\u0430\u0442\u044c",
+        "to drive out"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0447\u0435\u0440\u043a\u043d\u0443\u0442\u044c",
+        "to cross out"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0442\u044c",
+        "to calculate"
+      ],
+      [
+        "verb",
+        "\u0438\u0441\u043a\u043e\u0440\u0435\u043d\u0438\u0442\u044c",
+        "to eradicate"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0441\u043f\u0440\u0438\u043d\u0438\u043c\u0430\u0442\u044c",
+        "to perceive"
+      ],
+      [
+        "verb",
+        "\u043e\u0447\u0430\u0440\u043e\u0432\u0430\u0442\u044c",
+        "to charm, enchant, fascinate"
+      ],
+      [
+        "verb",
+        "\u043e\u0447\u0430\u0440\u043e\u0432\u044b\u0432\u0430\u0442\u044c",
+        "to charm, enchant, fascinate"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0435\u0442\u0435\u043d\u0434\u043e\u0432\u0430\u0442\u044c",
+        "to claim, pretend"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043f\u0440\u0435\u0449\u0430\u0442\u044c",
+        "to forbid"
+      ],
+      [
+        "verb",
+        "\u0443\u0431\u0440\u0430\u0442\u044c",
+        "to remove, place somewhere"
+      ],
+      [
+        "verb",
+        "\u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f",
+        "to share"
+      ],
+      [
+        "verb",
+        "\u0434\u0435\u043b\u0438\u0442\u044c",
+        "to device, divvy"
+      ],
+      [
+        "verb",
+        "\u043a\u043e\u043f\u0438\u0442\u044c",
+        "to save up, hoard"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u043e\u0431\u043e\u0440\u043c\u0430\u0442\u0430\u0442\u044c",
+        "to mumble, say quickly/unclearly"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u043f\u0440\u0430\u0432\u043b\u044f\u0442\u044c\u0441\u044f",
+        "to set off"
+      ],
+      [
+        "verb",
+        "\u0443\u0445\u0430\u0436\u0438\u0432\u0430\u0442\u044c",
+        "to court, woo, look after DELETEME"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0437\u043d\u0435\u0441\u0442\u0438",
+        "to spread, carry to different places"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0437\u0440\u0430\u0437\u0438\u0442\u044c",
+        "to object"
+      ],
+      [
+        "verb",
+        "\u0432\u0441\u0442\u0430\u0442\u044c",
+        "to stand up"
+      ],
+      [
+        "verb",
+        "\u043b\u043e\u043f\u043d\u0443\u0442\u044c",
+        "to burst, split"
+      ],
+      [
+        "verb",
+        "\u043e\u0441\u0442\u0430\u0442\u044c\u0441\u044f",
+        "to remain, stay, be left"
+      ]
+    ],
+    "type": "Media"
+  }
+}

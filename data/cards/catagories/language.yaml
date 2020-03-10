@@ -1,47 +1,245 @@
-card_set:
-  name: Language
-  type: Categorical
-  version: 1
-  cards:
-    - [noun, дательный падеж, dative case]
-    - [noun, родительный падеж, genetive case]
-    - [noun, именительный падеж, nominative case]
-    - [noun, винительный падеж, accusative case]
-    - [noun, предлог, preposition]
-    - [noun, предложный падеж, prepositional case]
-    - [noun, творительный падеж, instrumental case]
-    - [noun, наречие, adverb]
-    - [noun, имя существительное, noun]
-    - [noun, имя прилагательное, adjective]
-    - [noun, язык, 'language, tongue']
-    - [noun, предложение, 'offer, proposal, suggestion; sentence']
-    - [noun, грамматика, grammer]
-    - [noun, словарь, dictionary]
-    - [noun, слово, word]
-    - [noun, терм, term (word for smth)]
-    - [noun, эпитет, 'term, epithet, adjective']
-    - [adjective, совершенный, perfective (aspect)]
-    - [adjective, несовершенный, imperfective (aspect)]
-    - [noun, настоящее время, present tense]
-    - [noun, будущее время, future tense]
-    - [noun, запятая, comma]
-    - [noun, точка, period (punctuation); point (geometry)]
-    - [noun, восклицательный знак, exclamation mark]
-    - [noun, вопросительный знак, question mark]
-    - [noun, фраза, phrase]
-    - [noun, речь, speech]
-    - [noun, конъюнкция, conjunction]
-    - [noun, глагол, verb]
-    - [noun, выражение, expression (same as in English)]
-    - [noun, сокращение, 'abbreviation, shortening, reduction']
-    - [noun, кавычка, quotation mark]
-    - [noun, правописание, spelling]
-    - [noun, почерк, handwriting]
-    - [noun, орфография, orthography]
-    - [adjective, множественный, plural]
-    - [adjective, просторечный, '"simple spech", vernacular']
-    - [noun, гласный (звук), a vowel]
-    - [noun, окончение, 'the ending, suffix']
-    - [noun, имя числительное, numeral (part of speech)]
-    - [noun, имя, name]
-    - [noun, знак, sign]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Language",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"дательный падеж"
+			],
+			[
+				"noun",
+				"родительный падеж"
+			],
+			[
+				"noun",
+				"именительный падеж"
+			],
+			[
+				"noun",
+				"винительный падеж"
+			],
+			[
+				"noun",
+				"предлог"
+			],
+			[
+				"noun",
+				"предложный падеж"
+			],
+			[
+				"noun",
+				"творительный падеж"
+			],
+			[
+				"noun",
+				"наречие"
+			],
+			[
+				"noun",
+				"имя существительное"
+			],
+			[
+				"noun",
+				"имя прилагательное"
+			],
+			[
+				"noun",
+				"язык"
+			],
+			[
+				"noun",
+				"предложение"
+			],
+			[
+				"noun",
+				"грамматика"
+			],
+			[
+				"noun",
+				"словарь"
+			],
+			[
+				"noun",
+				"слово"
+			],
+			[
+				"noun",
+				"терм"
+			],
+			[
+				"noun",
+				"эпитет"
+			],
+			[
+				"adjective",
+				"совершенный"
+			],
+			[
+				"adjective",
+				"несовершенный"
+			],
+			[
+				"noun",
+				"настоящее время"
+			],
+			[
+				"noun",
+				"будущее время"
+			],
+			[
+				"noun",
+				"запятая"
+			],
+			[
+				"noun",
+				"точка"
+			],
+			[
+				"noun",
+				"восклицательный знак"
+			],
+			[
+				"noun",
+				"вопросительный знак"
+			],
+			[
+				"noun",
+				"фраза"
+			],
+			[
+				"noun",
+				"речь"
+			],
+			[
+				"noun",
+				"конъюнкция"
+			],
+			[
+				"noun",
+				"глагол"
+			],
+			[
+				"noun",
+				"выражение"
+			],
+			[
+				"noun",
+				"сокращение"
+			],
+			[
+				"noun",
+				"кавычка"
+			],
+			[
+				"noun",
+				"правописание"
+			],
+			[
+				"noun",
+				"почерк"
+			],
+			[
+				"noun",
+				"орфография"
+			],
+			[
+				"adjective",
+				"множественный"
+			],
+			[
+				"adjective",
+				"просторечный"
+			],
+			[
+				"noun",
+				"гласный (звук)"
+			],
+			[
+				"noun",
+				"окончение"
+			],
+			[
+				"noun",
+				"имя числительное"
+			],
+			[
+				"noun",
+				"имя"
+			],
+			[
+				"noun",
+				"знак"
+			],
+			[
+				"noun",
+				"согласный (звук)"
+			],
+			[
+				"noun",
+				"слог"
+			],
+			[
+				"noun",
+				"лексика"
+			],
+			[
+				"noun",
+				"пример"
+			],
+			[
+				"noun",
+				"рема"
+			],
+			[
+				"noun",
+				"буква"
+			],
+			[
+				"noun",
+				"исправление"
+			],
+			[
+				"noun",
+				"значение"
+			],
+			[
+				"noun",
+				"знаки ударения"
+			],
+			[
+				"noun",
+				"произношение"
+			],
+			[
+				"noun",
+				"прошедшее время"
+			],
+			[
+				"noun",
+				"средный род"
+			],
+			[
+				"noun",
+				"старик"
+			],
+			[
+				"verb",
+				"значить"
+			],
+			[
+				"noun",
+				"личное местоимение"
+			],
+			[
+				"noun",
+				"жест"
+			],
+			[
+				"noun",
+				"местоимение"
+			]
+		]
+	}
+}

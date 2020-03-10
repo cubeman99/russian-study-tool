@@ -1,39 +1,145 @@
-card_set:
-  name: 3. Verbs with Stem - ОВА/УЙ
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, рисковать, to risk]
-    - [verb, анализировать, to analyze]
-    - [verb, копировать, to copy]
-    - [verb, арестовать, to arrest]
-    - [verb, легализовать, to legalize]
-    - [verb, волноваться, to be nervous]
-    - [verb, организовать, to organize]
-    - [verb, гарантировать, to guarantee]
-    - [verb, ночевать, to spend the night]
-    - [verb, горевать, to grieve]
-    - [verb, паковать, to pack]
-    - [verb, действовать, 'to function, work']
-    - [verb, парковать, to park]
-    - [verb, жаловаться, to complain]
-    - [verb, практиковаться, to practice]
-    - [verb, импортировать, to import]
-    - [verb, приватизировать, to privatize]
-    - [verb, интересоваться, to be interested in]
-    - [verb, пробовать, 'to test, try']
-    - [verb, комбинировать, to combine]
-    - [verb, путешествовать, to travel]
-    - [verb, радовать, to gladden]
-    - [verb, танцевать, to dance]
-    - [verb, рекламировать, to advertise]
-    - [verb, требовать, to demand]
-    - [verb, рекомендовать, to recommend]
-    - [verb, участвовать, to take part in]
-    - [verb, ремонтировать, to repair]
-    - [verb, чувствовать, to feel]
-    - [verb, рисовать, to draw]
-    - [verb, фотографировать, to photograph]
-    - [verb, следовать, to follow]
-    - [verb, экспортировать, to export]
-    - [verb, советовать, to advise]
+{
+	"card_set": {
+		"version": 1,
+		"name": "3. Verbs with Stem - ОВА/УЙ",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"рисковать"
+			],
+			[
+				"verb",
+				"анализировать"
+			],
+			[
+				"verb",
+				"копировать"
+			],
+			[
+				"verb",
+				"арестовать"
+			],
+			[
+				"verb",
+				"легализовать"
+			],
+			[
+				"verb",
+				"волноваться"
+			],
+			[
+				"verb",
+				"организовать"
+			],
+			[
+				"verb",
+				"гарантировать"
+			],
+			[
+				"verb",
+				"ночевать"
+			],
+			[
+				"verb",
+				"горевать"
+			],
+			[
+				"verb",
+				"паковать"
+			],
+			[
+				"verb",
+				"действовать"
+			],
+			[
+				"verb",
+				"парковать"
+			],
+			[
+				"verb",
+				"жаловаться"
+			],
+			[
+				"verb",
+				"практиковаться"
+			],
+			[
+				"verb",
+				"импортировать"
+			],
+			[
+				"verb",
+				"приватизировать"
+			],
+			[
+				"verb",
+				"интересоваться"
+			],
+			[
+				"verb",
+				"пробовать"
+			],
+			[
+				"verb",
+				"комбинировать"
+			],
+			[
+				"verb",
+				"путешествовать"
+			],
+			[
+				"verb",
+				"радовать"
+			],
+			[
+				"verb",
+				"танцевать"
+			],
+			[
+				"verb",
+				"рекламировать"
+			],
+			[
+				"verb",
+				"требовать"
+			],
+			[
+				"verb",
+				"рекомендовать"
+			],
+			[
+				"verb",
+				"участвовать"
+			],
+			[
+				"verb",
+				"ремонтировать"
+			],
+			[
+				"verb",
+				"чувствовать"
+			],
+			[
+				"verb",
+				"рисовать"
+			],
+			[
+				"verb",
+				"фотографировать"
+			],
+			[
+				"verb",
+				"следовать"
+			],
+			[
+				"verb",
+				"экспортировать"
+			],
+			[
+				"verb",
+				"советовать"
+			]
+		]
+	}
+}

@@ -1,0 +1,284 @@
+{
+  "card_set": {
+    "name": "New 06",
+    "version": 1,
+    "cards": [
+      [
+        "adjective",
+        "\u0431\u0430\u043d\u0430\u043b\u044c\u043d\u044b\u0439",
+        "banal, commonplace, trite"
+      ],
+      [
+        "adjective",
+        "\u0440\u0443\u0441\u044b\u0439",
+        "light brown (hair color)"
+      ],
+      [
+        "adjective",
+        "\u043a\u043b\u0451\u0432\u043e",
+        "cool"
+      ],
+      [
+        "adjective",
+        "\u0441\u043a\u043e\u043b\u044c\u0437\u043a\u0438\u0439",
+        "slippery"
+      ],
+      [
+        "adjective",
+        "\u0434\u0438\u043a\u0438\u0439",
+        "wild"
+      ],
+      [
+        "adjective",
+        "\u0442\u043e\u0449\u0438\u0439",
+        "skinny"
+      ],
+      [
+        "adjective",
+        "\u0440\u0435\u0430\u043b\u044c\u043d\u044b\u0439",
+        "real"
+      ],
+      [
+        "adverb",
+        "\u0440\u0430\u043d\u044c\u0448\u0435",
+        "earlier"
+      ],
+      [
+        "adverb",
+        "\u0431\u0443\u0440\u043d\u043e",
+        "violently"
+      ],
+      [
+        "adverb",
+        "\u043f\u043e\u0437\u0436\u0435",
+        "later"
+      ],
+      [
+        "adverb",
+        "\u0442\u0430\u043a\u0436\u0435",
+        "also (one subject, different thing)"
+      ],
+      [
+        "noun",
+        "\u0432\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u0435",
+        "introduction, entry"
+      ],
+      [
+        "noun",
+        "\u0436\u0438\u0437\u043d\u044c",
+        "life"
+      ],
+      [
+        "noun",
+        "\u0443\u0434\u0438\u0432\u043b\u0435\u043d\u0438\u0435",
+        "suprise"
+      ],
+      [
+        "noun",
+        "\u043c\u0435\u0441\u0442\u044c",
+        "revenge"
+      ],
+      [
+        "noun",
+        "\u0442\u0440\u043e\u043f\u0430",
+        "trail"
+      ],
+      [
+        "noun",
+        "\u043c\u0435\u043b\u043e\u043a",
+        "chalk"
+      ],
+      [
+        "noun",
+        "\u0441\u0442\u043e\u043b\u043e\u0432\u0430\u044f (\u043a\u043e\u043c\u043d\u0430\u0442\u0430)",
+        "dining (room)"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0434\u0432\u0430\u043b",
+        "basement"
+      ],
+      [
+        "noun",
+        "\u043b\u0435\u0441\u0442\u043d\u0438\u0446\u0430",
+        "stairs"
+      ],
+      [
+        "noun",
+        "\u0443\u0431\u0435\u0436\u0438\u0449\u0435",
+        "shelter, refuge, asylum"
+      ],
+      [
+        "noun",
+        "\u0440\u0430\u0434\u043e\u0441\u0442\u044c",
+        "joy"
+      ],
+      [
+        "noun",
+        "\u0448\u0443\u043c",
+        "noise"
+      ],
+      [
+        "noun",
+        "\u0441\u0430\u0440\u0430\u0439",
+        "barn"
+      ],
+      [
+        "noun",
+        "\u0440\u0438\u0441\u0443\u043d\u043e\u043a",
+        "drawing"
+      ],
+      [
+        "noun",
+        "\u0442\u0430\u0431\u0443\u0440\u0435\u0442\u043a\u0430",
+        "stool"
+      ],
+      [
+        "noun",
+        "\u044f\u0449\u0438\u043a",
+        "crate, box, chest"
+      ],
+      [
+        "noun",
+        "\u043c\u043e\u043b\u043e\u0442\u043e\u043a",
+        "hammer"
+      ],
+      [
+        "noun",
+        "\u0430\u0440\u0444\u0430",
+        "harp"
+      ],
+      [
+        "noun",
+        "\u043c\u044f\u0447",
+        "ball (sport)"
+      ],
+      [
+        "noun",
+        "\u0448\u0430\u0440",
+        "orb, sphere, globe, ball"
+      ],
+      [
+        "noun",
+        "\u0434\u043e\u0441\u043a\u0430",
+        "board"
+      ],
+      [
+        "noun",
+        "\u0441\u043f\u043e\u0441\u043e\u0431",
+        "way, method"
+      ],
+      [
+        "noun",
+        "\u0443\u043b\u044b\u0431\u043a\u0430",
+        "smile"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0437\u0432\u0438\u0442\u044c",
+        "to develop, expand"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0441\u043a\u043b\u0438\u043a\u043d\u0443\u0442\u044c",
+        "to exclaim"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u043d\u044f\u0442\u044c",
+        "to stink"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c",
+        "to check"
+      ],
+      [
+        "verb",
+        "\u043e\u0440\u0430\u0442\u044c",
+        "to yell"
+      ],
+      [
+        "verb",
+        "\u0445\u0432\u0430\u0442\u0438\u0442\u044c",
+        "to suffice"
+      ],
+      [
+        "verb",
+        "\u0432\u043a\u043b\u044e\u0447\u0438\u0442\u044c",
+        "to turn on"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u043a\u043b\u044e\u0447\u0438\u0442\u044c",
+        "to turn off"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u043e\u0438\u0433\u0440\u0430\u0442\u044c",
+        "to lose"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0430\u0442\u044c",
+        "to continue"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u0433\u043b\u0430\u0441\u0438\u0442\u044c",
+        "to agree"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u0432\u0435\u0442\u0438\u0442\u044c",
+        "to answer, reply"
+      ],
+      [
+        "verb",
+        "\u0441\u043f\u0440\u043e\u0441\u0438\u0442\u044c",
+        "to ask (about something)"
+      ],
+      [
+        "verb",
+        "\u0441\u043f\u0430\u0442\u044c",
+        "to sleep"
+      ],
+      [
+        "verb",
+        "\u0432\u0441\u043a\u0440\u0438\u043a\u043d\u0443\u0442\u044c",
+        "to shout out loudly"
+      ],
+      [
+        "phrase",
+        "\u0441\u043b\u0430\u0432\u0430 \u0431\u043e\u0433\u0443",
+        "Thank God"
+      ],
+      [
+        "phrase",
+        "\u0445\u0432\u0430\u0442\u0438\u0442 ____!",
+        "enough ____!"
+      ],
+      [
+        "phrase",
+        "\u0442\u0430\u043a \u0436\u0435 \u043a\u0430\u043a \u0438",
+        "like, similar too, as usual"
+      ],
+      [
+        "preposition",
+        "\u043c\u0438\u043c\u043e",
+        "past (typical with \u043f\u0440\u043e- motion verb)"
+      ],
+      [
+        "conjunction",
+        "\u0438\u0442\u0430\u043a",
+        "and so"
+      ],
+      [
+        "conjunction",
+        "\u043f\u043e\u0441\u043b\u0435 \u0442\u043e\u0432\u043e",
+        "after that"
+      ]
+    ],
+    "type": "Other"
+  }
+}

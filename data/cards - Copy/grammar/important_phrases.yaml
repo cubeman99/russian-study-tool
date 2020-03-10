@@ -1,0 +1,374 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Important Phrases",
+		"type": "grammatical",
+		"cards": [
+			[
+				"phrase",
+				"на самом деле, ...",
+				"in actuality, in reality, ..."
+			],
+			[
+				"conjunction",
+				"тем не менее, ...",
+				"however, ...; nevertheless, ..."
+			],
+			[
+				"phrase",
+				"вообще-то",
+				"to be honest, in actuality, by the way"
+			],
+			[
+				"adverb",
+				"вообще-то",
+				"generally, in general, in fact"
+			],
+			[
+				"phrase",
+				"в общем",
+				"overall, in general"
+			],
+			[
+				"phrase",
+				"по крайней мере",
+				"at least"
+			],
+			[
+				"adverb",
+				"учитывая...",
+				"considering..."
+			],
+			[
+				"phrase",
+				"что касается ____, то ____",
+				"when it comes to ____, ____"
+			],
+			[
+				"preposition",
+				"касательно + gen.",
+				"regarding, concering, over, on"
+			],
+			[
+				"phrase",
+				"честно говоря",
+				"honestly"
+			],
+			[
+				"phrase",
+				"хоть и нехотя",
+				"albeit reluctantly"
+			],
+			[
+				"phrase",
+				"по-хорошому, ...",
+				"ideally, ..."
+			],
+			[
+				"phrase",
+				"прежде всего, ...",
+				"first of all, ..."
+			],
+			[
+				"adverb",
+				"всё равно",
+				"its all the same, who cares"
+			],
+			[
+				"phrase",
+				"всё в порядке",
+				"all is well"
+			],
+			[
+				"phrase",
+				"честное слово.",
+				"you have my word."
+			],
+			[
+				"phrase",
+				"не за что",
+				"its nothing, dont mention it"
+			],
+			[
+				"phrase",
+				"не за что duplicate",
+				"its my pleasure"
+			],
+			[
+				"phrase",
+				"как тебе угодно",
+				"as you please"
+			],
+			[
+				"phrase",
+				"в свою очередь",
+				"in turn"
+			],
+			[
+				"adverb",
+				"кстати",
+				"by the way"
+			],
+			[
+				"phrase",
+				"то есть",
+				"that is, that is to say, i.e."
+			],
+			[
+				"phrase",
+				"хватит ____!",
+				"enough ____!"
+			],
+			[
+				"phrase",
+				"из года в год",
+				"year after year"
+			],
+			[
+				"phrase",
+				"в конце концов",
+				"eventually"
+			],
+			[
+				"adverb",
+				"через мгновенье",
+				"in a moment"
+			],
+			[
+				"adverb",
+				"наконец",
+				"finally"
+			],
+			[
+				"adverb",
+				"наконец-то",
+				"finally, at last"
+			],
+			[
+				"adverb",
+				"по-моему",
+				"in my opinion, to my thinking"
+			],
+			[
+				"phrase",
+				"у + gen. + получилось + verb",
+				"to manage to do something"
+			],
+			[
+				"phrase",
+				"собираться + verb",
+				"to get ready, to plan, to intend to do soemthing"
+			],
+			[
+				"adverb",
+				"вряд ли...",
+				"its unlikely that..."
+			],
+			[
+				"phrase",
+				"до какой-то степени",
+				"to some extent"
+			],
+			[
+				"phrase",
+				"вот бы [было хорошо] ...",
+				"it would be great if ..."
+			],
+			[
+				"interjection",
+				"ничего себе!",
+				"woah, ah! (something said in suprise)"
+			],
+			[
+				"adverb",
+				"на раз",
+				"with ease"
+			],
+			[
+				"phrase",
+				"вот-вот",
+				"exactly; quickly"
+			],
+			[
+				"phrase",
+				"с боку на бок",
+				"from side to side"
+			],
+			[
+				"phrase",
+				"пуститься наутёк",
+				"to start off, running (lit.)"
+			],
+			[
+				"phrase",
+				"в данный момент",
+				"at the moment"
+			],
+			[
+				"phrase",
+				"на грани",
+				"on the brink/verge"
+			],
+			[
+				"phrase",
+				"держать в стороне от ...",
+				"to keep away from ..."
+			],
+			[
+				"phrase",
+				"пожать плечами",
+				"to shrug"
+			],
+			[
+				"verb",
+				"склонить голову",
+				"to bow your head"
+			],
+			[
+				"adverb",
+				"наоборот...",
+				"on the contrary..."
+			],
+			[
+				"phrase",
+				"покачать головой",
+				"to shake your head"
+			],
+			[
+				"phrase",
+				"ни с места",
+				"dont move!"
+			],
+			[
+				"phrase",
+				"я имею в виду, ...",
+				"i mean, ..."
+			],
+			[
+				"adverb",
+				"вкратце, ...",
+				"in short, ..."
+			],
+			[
+				"phrase",
+				"так нельзя",
+				"you cant do it in this way"
+			],
+			[
+				"phrase",
+				"мне везёт!",
+				"im in luck!"
+			],
+			[
+				"phrase",
+				"прямо сейчас",
+				"right now"
+			],
+			[
+				"phrase",
+				"это и есть.",
+				"thats what it is."
+			],
+			[
+				"phrase",
+				"это не так просто.",
+				"its not that simple."
+			],
+			[
+				"phrase",
+				"как оказалось, ...",
+				"as it turned out, ..."
+			],
+			[
+				"phrase",
+				"просто так.",
+				"just because."
+			],
+			[
+				"phrase",
+				"что не так?",
+				"whats wrong?"
+			],
+			[
+				"interjection",
+				"...не так ли?",
+				"...isnt it? didnt it?"
+			],
+			[
+				"phrase",
+				"жду не дождусь",
+				"i cant wait"
+			],
+			[
+				"phrase",
+				"хоть как",
+				"anyhow, whatever; regardless"
+			],
+			[
+				"phrase",
+				"как-то так",
+				"something/somehow like this"
+			],
+			[
+				"phrase",
+				"тем более (что)",
+				"especially (since)"
+			],
+			[
+				"conjunction",
+				"... именно тем, что ...",
+				"... exactly what, precisely what ..."
+			],
+			[
+				"phrase",
+				"опять же",
+				"yet again"
+			],
+			[
+				"phrase",
+				"мне стоит + verb",
+				"its worth for me to + verb"
+			],
+			[
+				"phrase",
+				"о чём ты?",
+				"what are you talking about?"
+			],
+			[
+				"phrase",
+				"сматываем удочки!",
+				"lets get out of here!"
+			],
+			[
+				"phrase",
+				"dat. + пришлось + verb",
+				"to have to do smth; it became necessary to do smth"
+			],
+			[
+				"phrase",
+				"извините за беспокойство",
+				"sorry to bother you!"
+			],
+			[
+				"phrase",
+				"в результате",
+				"as a result"
+			],
+			[
+				"phrase",
+				"иными словами, ...",
+				"in other words, ..."
+			],
+			[
+				"phrase",
+				"в основном, ...",
+				"basically, primarily, ...."
+			],
+			[
+				"phrase",
+				"от зари до зари",
+				"from dawn to dusk"
+			]
+		]
+	}
+}

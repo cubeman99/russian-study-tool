@@ -1,73 +1,281 @@
-card_set:
-  name: 2.a Обязательная сцена погони
-  type: Media
-  version: 1
-  cards:
-    - [adverb, наедине, 'in private, alone']
-    - [adverb, исключительно, 'exclusively, only']
-    - [adverb, буквально, literally]
-    - [adverb, гораздо, 'much, much more']
-    - [adverb, частично, 'partly, partially']
-    - [adjective, незамечанный, unnoticed]
-    - [adjective, непреодолимый, insurmountable]
-    - [adjective, юный, young]
-    - [adjective, суровый, 'severe, harsh']
-    - [adjective, намеренный, intentional]
-    - [adjective, злющий, 'furious, very angry']
-    - [adjective, многоцветный, multicolored]
-    - [noun, преимущество, advantage]
-    - [noun, технически, technically]
-    - [noun, событие, 'event, development']
-    - [noun, закон, law]
-    - [noun, чуточка, a little bit]
-    - [noun, завершение, completion]
-    - [noun, заседание, 'sitting, meeting']
-    - [noun, счёт, 'account, score']
-    - [noun, состояние, 'state, condition']
-    - [noun, наказание, punishment]
-    - [noun, гонка, race]
-    - [noun, совещание, meeting for discussion of smth]
-    - [noun, пара, a couple]
-    - [noun, вспышка, flash]
-    - [noun, направление, direction]
-    - [noun, ярость, 'fury, rage']
-    - [noun, топот, 'tramp, trot']
-    - [noun, фырканье, snort]
-    - [noun, единорог, unicorn]
-    - [noun, вопль, 'scream, yell']
-    - [noun, отметка, 'mark, grade']
-    - [noun, 'глас, голос', voice]
-    - [verb, проектировать, to design]
-    - [verb, спроектировать, to design]
-    - [verb, прикрыть, to cover up]
-    - [verb, передвигаться, 'to get around, move around']
-    - [verb, придать, 'to add to, give extra']
-    - [verb, скользнуть, 'to move quickly, quietly, to slip']
-    - [verb, вносить, to bring in]
-    - [verb, укрощать, to tame]
-    - [verb, укротить, to tame]
-    - [verb, расширить, to expand]
-    - [verb, расширять, 'to widen, expand']
-    - [verb, придерживаться, 'to stick to, adhere, abide']
-    - [verb, суметь, to be skillful enough to do smth]
-    - [verb, уворачиваться от + gen., to avoid]
-    - [verb, увернуться от + gen., 'to evade, dodge']
-    - [verb, сопровождать, to accompany]
-    - [verb, обмануть, 'to cheat, deceive']
-    - [verb, обманывать, 'to cheat, deceive']
-    - [verb, улавливать, 'to detect, pick up, locate']
-    - [verb, рыскать, 'to scour, prowl']
-    - [verb, выслеживать, 'to track, hunt down']
-    - [verb, понадобиться, 'to become necessary, will need']
-    - [verb, поморщиться, 'to wince, make a wry, wrinkled face']
-    - [verb, морщиться, 'to wince, make a wry, wrinkled face']
-    - [verb, натворить, to do in a bad or wrong way]
-    - [phrase, судя по всему, judging by the situation]
-    - [phrase, '... на всю мощь', to its full extent]
-    - [phrase, прикрыть глаза, to close your eyes]
-    - [preposition, извне, from outside]
-    - [preposition, вне, outside]
-    - [adverb, 'позади, сзади', behind]
-    - [adjective, злобный, 'mean, wicked, spiteful']
-    - [noun, замечание, 'comment, remark, note, observation']
-    - [noun, отвлечение, distraction]
+{
+	"card_set": {
+		"version": 1,
+		"name": "2.a Обязательная сцена погони",
+		"type": "media",
+		"cards": [
+			[
+				"adverb",
+				"наедине"
+			],
+			[
+				"adverb",
+				"исключительно"
+			],
+			[
+				"adverb",
+				"буквально"
+			],
+			[
+				"adverb",
+				"гораздо"
+			],
+			[
+				"adverb",
+				"частично"
+			],
+			[
+				"adjective",
+				"незамечанный"
+			],
+			[
+				"adjective",
+				"непреодолимый"
+			],
+			[
+				"adjective",
+				"юный"
+			],
+			[
+				"adjective",
+				"суровый"
+			],
+			[
+				"adjective",
+				"намеренный"
+			],
+			[
+				"adjective",
+				"злющий"
+			],
+			[
+				"adjective",
+				"многоцветный"
+			],
+			[
+				"noun",
+				"преимущество"
+			],
+			[
+				"noun",
+				"технически"
+			],
+			[
+				"noun",
+				"событие"
+			],
+			[
+				"noun",
+				"закон"
+			],
+			[
+				"noun",
+				"чуточка"
+			],
+			[
+				"noun",
+				"завершение"
+			],
+			[
+				"noun",
+				"заседание"
+			],
+			[
+				"noun",
+				"счет"
+			],
+			[
+				"noun",
+				"состояние"
+			],
+			[
+				"noun",
+				"наказание"
+			],
+			[
+				"noun",
+				"гонка"
+			],
+			[
+				"noun",
+				"совещание"
+			],
+			[
+				"noun",
+				"пара"
+			],
+			[
+				"noun",
+				"вспышка"
+			],
+			[
+				"noun",
+				"направление"
+			],
+			[
+				"noun",
+				"ярость"
+			],
+			[
+				"noun",
+				"топот"
+			],
+			[
+				"noun",
+				"фырканье"
+			],
+			[
+				"noun",
+				"единорог"
+			],
+			[
+				"noun",
+				"вопль"
+			],
+			[
+				"noun",
+				"отметка"
+			],
+			[
+				"noun",
+				"глас; голос"
+			],
+			[
+				"verb",
+				"проектировать"
+			],
+			[
+				"verb",
+				"спроектировать"
+			],
+			[
+				"verb",
+				"прикрыть"
+			],
+			[
+				"verb",
+				"передвигаться"
+			],
+			[
+				"verb",
+				"придать"
+			],
+			[
+				"verb",
+				"скользнуть"
+			],
+			[
+				"verb",
+				"вносить"
+			],
+			[
+				"verb",
+				"укрощать"
+			],
+			[
+				"verb",
+				"укротить"
+			],
+			[
+				"verb",
+				"расширить"
+			],
+			[
+				"verb",
+				"расширять"
+			],
+			[
+				"verb",
+				"придерживаться"
+			],
+			[
+				"verb",
+				"суметь"
+			],
+			[
+				"verb",
+				"уворачиваться от + gen."
+			],
+			[
+				"verb",
+				"увернуться от + gen."
+			],
+			[
+				"verb",
+				"сопровождать"
+			],
+			[
+				"verb",
+				"обмануть"
+			],
+			[
+				"verb",
+				"обманывать"
+			],
+			[
+				"verb",
+				"улавливать"
+			],
+			[
+				"verb",
+				"рыскать"
+			],
+			[
+				"verb",
+				"выслеживать"
+			],
+			[
+				"verb",
+				"понадобиться"
+			],
+			[
+				"verb",
+				"поморщиться"
+			],
+			[
+				"verb",
+				"морщиться"
+			],
+			[
+				"verb",
+				"натворить"
+			],
+			[
+				"phrase",
+				"судя по всему"
+			],
+			[
+				"phrase",
+				"... на всю мощь"
+			],
+			[
+				"phrase",
+				"прикрыть глаза"
+			],
+			[
+				"preposition",
+				"извне"
+			],
+			[
+				"preposition",
+				"вне"
+			],
+			[
+				"adverb",
+				"позади, сзади"
+			],
+			[
+				"adjective",
+				"злобный"
+			],
+			[
+				"noun",
+				"замечание"
+			],
+			[
+				"noun",
+				"отвлечение"
+			]
+		]
+	}
+}

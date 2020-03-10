@@ -1,0 +1,84 @@
+{
+  "card_set": {
+    "name": "Test Set",
+    "version": 1,
+    "cards": [
+      [
+        "noun",
+        "\u0441\u0442\u043e\u043b",
+        "table"
+      ],
+      [
+        "verb",
+        "\u0440\u043e\u0434\u0438\u0442\u044c",
+        "to give birth"
+      ],
+      [
+        "adjective",
+        "\u0443\u043c\u0435\u043b\u044b\u0439",
+        "skillfull"
+      ],
+      [
+        "verb",
+        "\u0443\u043c\u0435\u0442\u044c",
+        "to know how"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043c\u0435\u0442\u0438\u0442\u044c",
+        "to notice, observe"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043c\u0435\u0447\u0430\u0442\u044c",
+        "to notice"
+      ],
+      [
+        "conjunction",
+        "\u043f\u0440\u0435\u0436\u0434\u0435, \u0447\u0435\u043c ...",
+        "before ... (implies intent)"
+      ],
+      [
+        "conjunction",
+        "\u0434\u043e \u0442\u043e\u0433\u043e \u043a\u0430\u043a ...",
+        "before ...; before the fact that ..."
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0434\u0443\u0448\u043a\u0430",
+        "pillow"
+      ],
+      [
+        "noun",
+        "\u0438\u0437\u043c\u0435\u043d\u0430",
+        "treason"
+      ],
+      [
+        "noun",
+        "\u0441\u0442\u043e\u043b\u043b",
+        "tablesjfgtest"
+      ],
+      [
+        "verb",
+        "\u0434\u0443\u043c\u0430\u0442\u044c",
+        "to think"
+      ],
+      [
+        "noun",
+        "\u0441\u043f\u043e\u0440",
+        "dispute, argument"
+      ],
+      [
+        "verb",
+        "\u0441\u043f\u043e\u0440\u0438\u0442\u044c",
+        "to argue"
+      ],
+      [
+        "phrase",
+        "\u0438\u043b\u0438 \u043d\u0435\u0442",
+        "... or not"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

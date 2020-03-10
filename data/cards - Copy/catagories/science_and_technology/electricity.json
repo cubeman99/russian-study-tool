@@ -1,0 +1,149 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Electricity",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"розетка",
+				"a power outlet"
+			],
+			[
+				"noun",
+				"электростанция",
+				"a power plant"
+			],
+			[
+				"noun",
+				"электричество",
+				"electricity"
+			],
+			[
+				"noun",
+				"теплоэлектростанциа; тэс",
+				"a thermal power plant"
+			],
+			[
+				"noun",
+				"атомная электростанция; аэс",
+				"a nuclear power plant"
+			],
+			[
+				"noun",
+				"гидроэлектростанция; гэс",
+				"a hydroelectric power plant"
+			],
+			[
+				"noun",
+				"геотермальная электростанция; геотэс",
+				"a geothermal power plant"
+			],
+			[
+				"noun",
+				"солнечная батерея",
+				"a solar panel"
+			],
+			[
+				"noun",
+				"ветрогенератор; ветряк",
+				"a wind turbine"
+			],
+			[
+				"noun",
+				"электрический столб",
+				"an electricity pole"
+			],
+			[
+				"noun",
+				"кабель",
+				"cable (smaller, wire)"
+			],
+			[
+				"noun",
+				"провод",
+				"cable (larger, bulky)"
+			],
+			[
+				"noun",
+				"линия электропередачи",
+				"a power line"
+			],
+			[
+				"noun",
+				"опора",
+				"a big power line tower"
+			],
+			[
+				"noun",
+				"напряжение",
+				"voltage"
+			],
+			[
+				"verb",
+				"вокнуть",
+				"to thrust in, plug in, to insert"
+			],
+			[
+				"verb",
+				"включить",
+				"to turn on"
+			],
+			[
+				"verb",
+				"выключить",
+				"to turn off"
+			],
+			[
+				"verb",
+				"подключить",
+				"to connect"
+			],
+			[
+				"noun",
+				"удлинитель",
+				"an extender, power strip"
+			],
+			[
+				"noun",
+				"вилка",
+				"a fork; the prongs on a plug"
+			],
+			[
+				"noun",
+				"переходник",
+				"an adapter"
+			],
+			[
+				"noun",
+				"выключатель",
+				"a switch (wall/light switch)"
+			],
+			[
+				"verb",
+				"врубить",
+				"to switch on, turn on (slang)"
+			],
+			[
+				"noun",
+				"зарядка",
+				"a charger"
+			],
+			[
+				"verb",
+				"заряжать",
+				"to charge smth (power)"
+			],
+			[
+				"noun",
+				"рубильник",
+				"a circuit breaker"
+			],
+			[
+				"noun",
+				"переключатель",
+				"a switch (smaller, on/off or knob switch)"
+			]
+		]
+	}
+}

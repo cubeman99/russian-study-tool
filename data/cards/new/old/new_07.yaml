@@ -1,44 +1,169 @@
-card_set:
-  name: New 07
-  version: 1
-  cards:
-    - [adjective, подземный, underground]
-    - [adjective, подводный, underwater]
-    - [adjective, ядовитый, poisonous]
-    - [adjective, непохожий, different]
-    - [adjective, уютный, cozy]
-    - [adjective, холостой, 'single, unmarried']
-    - [adverb, наконец-то, 'finally, at last']
-    - [adverb, действительно, 'actually, truely, really']
-    - [noun, наречие, adverb]
-    - [noun, армия, army]
-    - [noun, битва, battle]
-    - [noun, бочка, barrel]
-    - [noun, горизонт, horizon]
-    - [noun, камин, fireplace]
-    - [noun, дымоход, chimney]
-    - [noun, кукла, doll]
-    - [noun, лужа, puddle]
-    - [noun, очередь, queue]
-    - [noun, яд, poison]
-    - [noun, янтарь, amber]
-    - [noun, ширина, width]
-    - [noun, огонь, fire]
-    - [noun, пожар, 'large fire, conflagration']
-    - [noun, сказка, fairy-tale]
-    - [noun, стих, 'verse, poetry']
-    - [noun, предел, limit]
-    - [noun, салфетка, napkin]
-    - [noun, болезнь, 'illness, disease']
-    - [verb, успокоить, 'to calm, soothe, reassure']
-    - [verb, проголодаться, to get hungry]
-    - [verb, аплодировать, to applaud]
-    - [verb, перебивать, 'to break, interrupt']
-    - [verb, тратить, to spend]
-    - [verb, шмыгнуть, 'to dart, dash, scramble']
-    - [verb, кататься, 'to roll, ride in a vehicle, ski, bicycle, snowboard']
-    - [verb, достать, 'to reach, fetch, obtain']
-    - [verb, бронировать, 'to reserve, book, make a reservation']
-    - [phrase, всё равно, 'its all the same, who cares']
-    - [other, кстати, by the way]
-    - [interjection, Удачи!, Good luck!]
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 07",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"подземный"
+			],
+			[
+				"adjective",
+				"подводный"
+			],
+			[
+				"adjective",
+				"ядовитый"
+			],
+			[
+				"adjective",
+				"непохожий"
+			],
+			[
+				"adjective",
+				"уютный"
+			],
+			[
+				"adjective",
+				"холостой"
+			],
+			[
+				"adverb",
+				"наконец-то"
+			],
+			[
+				"adverb",
+				"действительно"
+			],
+			[
+				"noun",
+				"наречие"
+			],
+			[
+				"noun",
+				"армия"
+			],
+			[
+				"noun",
+				"битва"
+			],
+			[
+				"noun",
+				"бочка"
+			],
+			[
+				"noun",
+				"горизонт"
+			],
+			[
+				"noun",
+				"камин"
+			],
+			[
+				"noun",
+				"дымоход"
+			],
+			[
+				"noun",
+				"кукла"
+			],
+			[
+				"noun",
+				"лужа"
+			],
+			[
+				"noun",
+				"очередь"
+			],
+			[
+				"noun",
+				"яд"
+			],
+			[
+				"noun",
+				"янтарь"
+			],
+			[
+				"noun",
+				"ширина"
+			],
+			[
+				"noun",
+				"огонь"
+			],
+			[
+				"noun",
+				"пожар"
+			],
+			[
+				"noun",
+				"сказка"
+			],
+			[
+				"noun",
+				"стих"
+			],
+			[
+				"noun",
+				"предел"
+			],
+			[
+				"noun",
+				"салфетка"
+			],
+			[
+				"noun",
+				"болезнь"
+			],
+			[
+				"verb",
+				"успокоить"
+			],
+			[
+				"verb",
+				"проголодаться"
+			],
+			[
+				"verb",
+				"аплодировать"
+			],
+			[
+				"verb",
+				"перебивать"
+			],
+			[
+				"verb",
+				"тратить"
+			],
+			[
+				"verb",
+				"шмыгнуть"
+			],
+			[
+				"verb",
+				"кататься"
+			],
+			[
+				"verb",
+				"достать"
+			],
+			[
+				"verb",
+				"бронировать"
+			],
+			[
+				"adverb",
+				"все равно"
+			],
+			[
+				"adverb",
+				"кстати"
+			],
+			[
+				"interjection",
+				"удачи!"
+			]
+		]
+	}
+}

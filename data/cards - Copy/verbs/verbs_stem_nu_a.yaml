@@ -1,0 +1,104 @@
+{
+  "card_set": {
+    "name": "4. Verbs with Stem - \u041d\u0423",
+    "version": 1,
+    "cards": [
+      [
+        "verb",
+        "\u0432\u0435\u0440\u043d\u0443\u0442\u044c\u0441\u044f",
+        "to return"
+      ],
+      [
+        "verb",
+        "\u043b\u043e\u043f\u043d\u0443\u0442\u044c",
+        "to burst, split"
+      ],
+      [
+        "verb",
+        "\u0432\u0437\u0433\u043b\u044f\u043d\u0443\u0442\u044c",
+        "to cast a glance"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u0434\u043e\u0445\u043d\u0443\u0442\u044c",
+        "to rest"
+      ],
+      [
+        "verb",
+        "\u0432\u0437\u0434\u043e\u0445\u043d\u0443\u0442\u044c",
+        "to sigh; to take a breath"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u043e\u0441\u043d\u0443\u0442\u044c\u0441\u044f",
+        "to wake up"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u043a\u0438\u043d\u0443\u0442\u044c",
+        "to throw out"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u044b\u0433\u043d\u0443\u0442\u044c",
+        "to jump"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u043d\u0443\u0442\u044c",
+        "to take out"
+      ],
+      [
+        "verb",
+        "\u0440\u0438\u0441\u043a\u043d\u0443\u0442\u044c",
+        "to risk"
+      ],
+      [
+        "verb",
+        "\u0434\u0451\u0440\u043d\u0443\u0442\u044c",
+        "to pull"
+      ],
+      [
+        "verb",
+        "\u0440\u0443\u0445\u043d\u0443\u0442\u044c",
+        "to collapse"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0441\u043d\u0443\u0442\u044c",
+        "to fall asleep"
+      ],
+      [
+        "verb",
+        "\u0443\u043b\u044b\u0431\u043d\u0443\u0442\u044c\u0441\u044f",
+        "to smile"
+      ],
+      [
+        "verb",
+        "\u043a\u0440\u0438\u043a\u043d\u0443\u0442\u044c",
+        "to shout"
+      ],
+      [
+        "verb",
+        "\u0448\u0430\u0433\u043d\u0443\u0442\u044c",
+        "to step"
+      ],
+      [
+        "verb",
+        "\u0442\u043e\u043d\u0443\u0442\u044c",
+        "to drown"
+      ],
+      [
+        "verb",
+        "\u0442\u044f\u043d\u0443\u0442\u044c",
+        "to pull"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043c\u044f\u043d\u0443\u0442\u044c",
+        "to mention"
+      ]
+    ],
+    "type": "Grammatical"
+  }
+}

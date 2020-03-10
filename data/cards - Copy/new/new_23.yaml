@@ -1,0 +1,364 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 23",
+		"type": "other",
+		"cards": [
+			[
+				"noun",
+				"предыстория",
+				"a backstory"
+			],
+			[
+				"adjective",
+				"всемирный",
+				"world-wide"
+			],
+			[
+				"adjective",
+				"вселенский",
+				"universal"
+			],
+			[
+				"noun",
+				"угроза",
+				"a threat"
+			],
+			[
+				"noun",
+				"государство",
+				"the state (government)"
+			],
+			[
+				"adjective",
+				"ванильный",
+				"vanilla (adj.)"
+			],
+			[
+				"noun",
+				"претензия",
+				"a claim, pretension, title"
+			],
+			[
+				"noun",
+				"покорение",
+				"conquest, subjugation"
+			],
+			[
+				"verb",
+				"навредить",
+				"to do great harm to someone"
+			],
+			[
+				"noun",
+				"вред",
+				"harm"
+			],
+			[
+				"adjective",
+				"вредный",
+				"harmful"
+			],
+			[
+				"verb",
+				"утверждать",
+				"to assert, argue, allege, to state"
+			],
+			[
+				"verb",
+				"запутать",
+				"to entangle, tangle, confuse"
+			],
+			[
+				"verb",
+				"путать",
+				"to tangle, mix up (with), confuse (with)"
+			],
+			[
+				"adjective",
+				"тягомотный",
+				"painful, boring, burdensome"
+			],
+			[
+				"noun",
+				"привычка",
+				"a habit"
+			],
+			[
+				"adjective",
+				"ядерный",
+				"nuclear"
+			],
+			[
+				"noun",
+				"лексика",
+				"vocabulary"
+			],
+			[
+				"noun",
+				"гроза",
+				"thunderstorm, disastor, terror"
+			],
+			[
+				"verb",
+				"вредить",
+				"to harm, hurt, injure, damage, to cause damage"
+			],
+			[
+				"noun",
+				"сет; комплект",
+				"a set"
+			],
+			[
+				"noun",
+				"знаки ударения",
+				"stress marks"
+			],
+			[
+				"noun",
+				"изготовитель",
+				"a manufacturer"
+			],
+			[
+				"verb",
+				"изготовить",
+				"to manufacture"
+			],
+			[
+				"noun",
+				"отблеск",
+				"a reflection, gleam, shimmer"
+			],
+			[
+				"adjective",
+				"неуловимый",
+				"elusive"
+			],
+			[
+				"adjective",
+				"старинный",
+				"really old, ancient"
+			],
+			[
+				"noun",
+				"крепость",
+				"a fortress"
+			],
+			[
+				"verb",
+				"взывать",
+				"to appeal (to someone), to cry out"
+			],
+			[
+				"noun",
+				"оковы",
+				"shackles"
+			],
+			[
+				"verb",
+				"настать",
+				"(about time) to come, begin"
+			],
+			[
+				"noun",
+				"шёпот",
+				"a whisper"
+			],
+			[
+				"verb",
+				"отметить",
+				"to mark, note"
+			],
+			[
+				"adjective",
+				"безликий",
+				"faceless, featureless"
+			],
+			[
+				"interjection",
+				"пращай!",
+				"farewell, adieu!"
+			],
+			[
+				"adjective",
+				"тернистый",
+				"thorny"
+			],
+			[
+				"adjective",
+				"мятежный",
+				"rebellious"
+			],
+			[
+				"verb",
+				"влечь",
+				"to attract, draw, pull, entail"
+			],
+			[
+				"noun",
+				"член",
+				"a member (person)"
+			],
+			[
+				"adjective",
+				"общенационалный",
+				"nation-wide"
+			],
+			[
+				"noun",
+				"признание",
+				"confession, recognition, acknowledgement"
+			],
+			[
+				"noun",
+				"условие",
+				"condition"
+			],
+			[
+				"adjective",
+				"результативный",
+				"effective, productive"
+			],
+			[
+				"noun",
+				"единство",
+				"unity"
+			],
+			[
+				"noun",
+				"родина",
+				"homeland, fatherland"
+			],
+			[
+				"adverb",
+				"безусловно",
+				"unconditionally, certainly"
+			],
+			[
+				"verb",
+				"расти",
+				"to grow"
+			],
+			[
+				"adjective",
+				"волшебный",
+				"magical (about fairytales)"
+			],
+			[
+				"phrase",
+				"в коком смысле?",
+				"in what sense? what do you mean?"
+			],
+			[
+				"verb",
+				"сдувать",
+				"to blow away"
+			],
+			[
+				"verb",
+				"переживать",
+				"to worry, relive"
+			],
+			[
+				"verb",
+				"пережить",
+				"to live thru something"
+			],
+			[
+				"adjective",
+				"бывший",
+				"ex, former"
+			],
+			[
+				"noun",
+				"туман",
+				"mist"
+			],
+			[
+				"verb",
+				"расступить",
+				"to part ways"
+			],
+			[
+				"adjective",
+				"притягательный",
+				"alluring"
+			],
+			[
+				"noun",
+				"тряпка",
+				"a rag"
+			],
+			[
+				"noun",
+				"труба",
+				"a tube; a trumpet"
+			],
+			[
+				"noun",
+				"купол",
+				"a dome"
+			],
+			[
+				"phrase",
+				"серп и молот",
+				"hammer and sickle"
+			],
+			[
+				"phrase",
+				"ты скучал по мне?",
+				"did you miss me?"
+			],
+			[
+				"verb",
+				"велеть; приказать",
+				"to command, order"
+			],
+			[
+				"noun",
+				"мерзавец",
+				"a son of a bitch"
+			],
+			[
+				"noun",
+				"лагерь",
+				"a camp, encampment"
+			],
+			[
+				"phrase",
+				"искетать кровью",
+				"to bleed, to lose blood"
+			],
+			[
+				"verb",
+				"шлёпнуть",
+				"to slap, spank"
+			],
+			[
+				"verb",
+				"повиноваться",
+				"to obey"
+			],
+			[
+				"noun",
+				"дно",
+				"the bottom of something"
+			],
+			[
+				"noun",
+				"поводок",
+				"a leash (for pets)"
+			],
+			[
+				"noun",
+				"предмет",
+				"a subject (topic)"
+			],
+			[
+				"noun",
+				"повиновение",
+				"obedience"
+			]
+		]
+	}
+}

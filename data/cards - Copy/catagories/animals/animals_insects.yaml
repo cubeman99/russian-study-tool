@@ -1,0 +1,44 @@
+{
+  "card_set": {
+    "name": "Insects",
+    "version": 1,
+    "cards": [
+      [
+        "noun",
+        "\u043f\u0430\u0443\u043a",
+        "spider"
+      ],
+      [
+        "noun",
+        "\u043c\u0443\u0440\u0430\u0432\u0435\u0439",
+        "ant"
+      ],
+      [
+        "noun",
+        "\u043f\u0447\u0435\u043b\u0430",
+        "bee"
+      ],
+      [
+        "noun",
+        "\u043e\u0441\u0430",
+        "wasp"
+      ],
+      [
+        "noun",
+        "\u0447\u0435\u0440\u0432\u044f\u043a",
+        "worm"
+      ],
+      [
+        "noun",
+        "\u0431\u0430\u0431\u043e\u0447\u043a\u0430",
+        "butterfly"
+      ],
+      [
+        "noun",
+        "\u043c\u043e\u043b\u044c",
+        "moth"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

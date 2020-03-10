@@ -1,0 +1,244 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Language",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"дательный падеж",
+				"dative case"
+			],
+			[
+				"noun",
+				"родительный падеж",
+				"genetive case"
+			],
+			[
+				"noun",
+				"именительный падеж",
+				"nominative case"
+			],
+			[
+				"noun",
+				"винительный падеж",
+				"accusative case"
+			],
+			[
+				"noun",
+				"предлог",
+				"preposition"
+			],
+			[
+				"noun",
+				"предложный падеж",
+				"prepositional case"
+			],
+			[
+				"noun",
+				"творительный падеж",
+				"instrumental case"
+			],
+			[
+				"noun",
+				"наречие",
+				"adverb"
+			],
+			[
+				"noun",
+				"имя существительное",
+				"noun"
+			],
+			[
+				"noun",
+				"имя прилагательное",
+				"adjective"
+			],
+			[
+				"noun",
+				"язык",
+				"language, tongue"
+			],
+			[
+				"noun",
+				"предложение",
+				"offer, proposal, suggestion; sentence"
+			],
+			[
+				"noun",
+				"грамматика",
+				"grammer"
+			],
+			[
+				"noun",
+				"словарь",
+				"dictionary"
+			],
+			[
+				"noun",
+				"слово",
+				"word"
+			],
+			[
+				"noun",
+				"терм",
+				"term (word for smth)"
+			],
+			[
+				"noun",
+				"эпитет",
+				"term, epithet, adjective"
+			],
+			[
+				"adjective",
+				"совершенный",
+				"perfective (aspect)"
+			],
+			[
+				"adjective",
+				"несовершенный",
+				"imperfective (aspect)"
+			],
+			[
+				"noun",
+				"настоящее время",
+				"present tense"
+			],
+			[
+				"noun",
+				"будущее время",
+				"future tense"
+			],
+			[
+				"noun",
+				"запятая",
+				"comma"
+			],
+			[
+				"noun",
+				"точка",
+				"period (punctuation); point (geometry)"
+			],
+			[
+				"noun",
+				"восклицательный знак",
+				"exclamation mark"
+			],
+			[
+				"noun",
+				"вопросительный знак",
+				"question mark"
+			],
+			[
+				"noun",
+				"фраза",
+				"phrase"
+			],
+			[
+				"noun",
+				"речь",
+				"speech"
+			],
+			[
+				"noun",
+				"конъюнкция",
+				"conjunction"
+			],
+			[
+				"noun",
+				"глагол",
+				"verb"
+			],
+			[
+				"noun",
+				"выражение",
+				"expression (same as in english)"
+			],
+			[
+				"noun",
+				"сокращение",
+				"abbreviation, shortening, reduction"
+			],
+			[
+				"noun",
+				"кавычка",
+				"quotation mark"
+			],
+			[
+				"noun",
+				"правописание",
+				"spelling"
+			],
+			[
+				"noun",
+				"почерк",
+				"handwriting"
+			],
+			[
+				"noun",
+				"орфография",
+				"orthography"
+			],
+			[
+				"adjective",
+				"множественный",
+				"plural"
+			],
+			[
+				"adjective",
+				"просторечный",
+				"\"simple spech\", vernacular"
+			],
+			[
+				"noun",
+				"гласный (звук)",
+				"a vowel"
+			],
+			[
+				"noun",
+				"окончение",
+				"the ending, suffix"
+			],
+			[
+				"noun",
+				"имя числительное",
+				"numeral (part of speech)"
+			],
+			[
+				"noun",
+				"имя",
+				"name"
+			],
+			[
+				"noun",
+				"знак",
+				"sign"
+			],
+			[
+				"noun",
+				"согласный (звук)",
+				"a consonant"
+			],
+			[
+				"noun",
+				"слог",
+				"syllable"
+			],
+			[
+				"noun",
+				"лексика",
+				"vocabulary"
+			],
+			[
+				"noun",
+				"пример",
+				"an example"
+			],
+			[
+				"noun",
+				"рема",
+				"the focus (in linguistics)"
+			]
+		]
+	}
+}

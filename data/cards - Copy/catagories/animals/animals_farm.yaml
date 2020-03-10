@@ -1,0 +1,79 @@
+{
+  "card_set": {
+    "name": "Farm Animals",
+    "version": 1,
+    "cards": [
+      [
+        "noun",
+        "\u043a\u0443\u0440\u0438\u0446\u0430",
+        "chicken"
+      ],
+      [
+        "noun",
+        "\u043f\u0435\u0442\u0443\u0445",
+        "cock (chicken)"
+      ],
+      [
+        "noun",
+        "\u043a\u043e\u0440\u043e\u0432\u0430",
+        "cow"
+      ],
+      [
+        "noun",
+        "\u0431\u044b\u043a",
+        "bull"
+      ],
+      [
+        "noun",
+        "\u043e\u0432\u0446\u0430",
+        "sheep"
+      ],
+      [
+        "noun",
+        "\u0431\u0430\u0440\u0430\u043d",
+        "ram"
+      ],
+      [
+        "noun",
+        "\u043a\u043e\u0437\u0430",
+        "goat (female)"
+      ],
+      [
+        "noun",
+        "\u043a\u043e\u0437\u0451\u043b",
+        "goat (male)"
+      ],
+      [
+        "noun",
+        "\u043e\u0441\u0435\u043b",
+        "donkey"
+      ],
+      [
+        "noun",
+        "\u043b\u043e\u0448\u0430\u0434\u044c",
+        "horse"
+      ],
+      [
+        "noun",
+        "\u0433\u0443\u0441\u044c",
+        "goose"
+      ],
+      [
+        "noun",
+        "\u0443\u0442\u043a\u0430",
+        "duck"
+      ],
+      [
+        "noun",
+        "\u0446\u044b\u043f\u043b\u0451\u043d\u043e\u043a",
+        "chick (baby chicken)"
+      ],
+      [
+        "adjective",
+        "\u0448\u0435\u0440\u0441\u0442\u044f\u043d\u044b\u0439",
+        "woolen"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

@@ -1,77 +1,297 @@
-card_set:
-  name: 01 Шмяк
-  type: Media
-  version: 1
-  cards:
-    - [noun, палатка, tent]
-    - [noun, фонарик, flashlight]
-    - [noun, мешок, 'bag, sack']
-    - [noun, ночёвка, sleepover]
-    - [noun, усы, mustache; whiskers]
-    - [verb, проголодаться, to get hungry]
-    - [noun, угощение, treat (food/drink)]
-    - [verb, таращиться, to open eyes wide in suprise]
-    - [adverb, тесно, 'closely, tightly']
-    - [phrase, Мне не спится, I cant sleep]
-    - [phrase, с боку на бок, from side to side]
-    - [verb, вопить, 'to yell loudly, to wail']
-    - [adverb, постепенно, gradually]
-    - [verb, слипаться, to stick together]
-    - [noun, спальный мешок, sleeping bag]
-    - [verb, выскочить, 'to pop out, jump out']
-    - [phrase, Мы не дадим друг друга в обиду., We dont give eachother a hard time.]
-    - [verb, обещать, to promise]
-    - [phrase, шмыгнуть носом, 'to sniff, snuff your nose']
-    - [phrase, Честное слово., You have my word.]
-    - [verb, ворочаться, to toss and turn]
-    - [verb, опрокинуть, to knock over]
-    - [noun, нетерпение, impatience]
-    - [verb, рассмеяться, to burst out laughing]
-    - [verb, воскликнуть, to exclaim]
-    - [noun, лапа, paw]
-    - [verb, испугаться, to be frightened]
-    - [verb, поздороваться, to say hello]
-    - [verb, пригласить, to invite]
-    - [verb, дрожать, to tremble]
-    - [adverb, получше, a little better]
-    - [verb, наброситься, 'to pounce, to throw yourself']
-    - [verb, напугать, to scare someone]
-    - [adjective, шустрый, nimble]
-    - [noun, цыплёнок, chick (baby chicken)]
-    - [noun, живой уголок, pets corner]
-    - [noun, питомец, pet]
-    - [phrase, появиться на свет, 'to be born, appear in the light']
-    - [noun, присмотра, supervision]
-    - [adjective, кошачий, feline]
-    - [phrase, глаз да глаз, 'much attention, eyes at all times']
-    - [phrase, вот-вот, exactly; quickly]
-    - [verb, растеряться, to not know what to do; to lose oneself]
-    - [phrase, тянуть жребий, to draw straws]
-    - [verb, наблюдать, to observe (empirically)]
-    - [noun, скорлупка, shell]
-    - [adverb, на раз, with ease]
-    - [adverb, вприпрыжку, skipping]
-    - [verb, нести, to carry]
-    - [noun, гнездо, a nest]
-    - [noun, комод, dresser (for clothes)]
-    - [noun, пятка, heel]
-    - [verb, щипать, 'to pinch, pluck']
-    - [interjection, Ничего себе!, 'Woah, ah! (something said in suprise)']
-    - [verb, разбудить, to wake (someone)]
-    - [phrase, навострить уши, 'to perk your ears, intently listen, pinpointing a sound']
-    - [adjective, шерстяный, woolen]
-    - [verb, прикорнуть, to take a nap]
-    - [noun, будильник, alarm clock]
-    - [verb, усыпить, to put to sleep]
-    - [noun, грузовик, truck]
-    - [noun, гуашь, watercolor]
-    - [verb, мазаться, 'to smear, get dirty, apply smth to face']
-    - [verb, отыскать, to find after searching]
-    - [noun, клюв, beak]
-    - [phrase, пуститься наутёк, 'to start off, running (lit.)']
-    - [noun, лужа, puddle]
-    - [phrase, Шагом марш!, March forward!]
-    - [noun, отряд, squad]
-    - [conjunction, однако; впрочем, 'but, however']
-    - [verb, обрадоваться, to rejoice]
-    - [verb, клевать, to peck]
+{
+	"card_set": {
+		"version": 1,
+		"name": "01 Шмяк",
+		"type": "media",
+		"cards": [
+			[
+				"noun",
+				"палатка"
+			],
+			[
+				"noun",
+				"фонарик"
+			],
+			[
+				"noun",
+				"мешок"
+			],
+			[
+				"noun",
+				"ночевка"
+			],
+			[
+				"noun",
+				"усы"
+			],
+			[
+				"verb",
+				"проголодаться"
+			],
+			[
+				"noun",
+				"угощение"
+			],
+			[
+				"verb",
+				"таращиться"
+			],
+			[
+				"adverb",
+				"тесно"
+			],
+			[
+				"phrase",
+				"мне не спится"
+			],
+			[
+				"phrase",
+				"с боку на бок"
+			],
+			[
+				"verb",
+				"вопить"
+			],
+			[
+				"adverb",
+				"постепенно"
+			],
+			[
+				"verb",
+				"слипаться"
+			],
+			[
+				"noun",
+				"спальный мешок"
+			],
+			[
+				"verb",
+				"выскочить"
+			],
+			[
+				"phrase",
+				"мы не дадим друг друга в обиду."
+			],
+			[
+				"verb",
+				"обещать"
+			],
+			[
+				"phrase",
+				"шмыгнуть носом"
+			],
+			[
+				"phrase",
+				"честное слово."
+			],
+			[
+				"verb",
+				"ворочаться"
+			],
+			[
+				"verb",
+				"опрокинуть"
+			],
+			[
+				"noun",
+				"нетерпение"
+			],
+			[
+				"verb",
+				"рассмеяться"
+			],
+			[
+				"verb",
+				"воскликнуть"
+			],
+			[
+				"noun",
+				"лапа"
+			],
+			[
+				"verb",
+				"испугаться"
+			],
+			[
+				"verb",
+				"поздороваться"
+			],
+			[
+				"verb",
+				"пригласить"
+			],
+			[
+				"verb",
+				"дрожать"
+			],
+			[
+				"adverb",
+				"получше"
+			],
+			[
+				"verb",
+				"наброситься"
+			],
+			[
+				"verb",
+				"напугать"
+			],
+			[
+				"adjective",
+				"шустрый"
+			],
+			[
+				"noun",
+				"цыпленок"
+			],
+			[
+				"noun",
+				"живой уголок"
+			],
+			[
+				"noun",
+				"питомец"
+			],
+			[
+				"phrase",
+				"появиться на свет"
+			],
+			[
+				"noun",
+				"присмотра"
+			],
+			[
+				"adjective",
+				"кошачий"
+			],
+			[
+				"phrase",
+				"глаз да глаз"
+			],
+			[
+				"phrase",
+				"вот-вот"
+			],
+			[
+				"verb",
+				"растеряться"
+			],
+			[
+				"phrase",
+				"тянуть жребий"
+			],
+			[
+				"verb",
+				"наблюдать"
+			],
+			[
+				"noun",
+				"скорлупка"
+			],
+			[
+				"adverb",
+				"на раз"
+			],
+			[
+				"adverb",
+				"вприпрыжку"
+			],
+			[
+				"verb",
+				"нести"
+			],
+			[
+				"noun",
+				"гнездо"
+			],
+			[
+				"noun",
+				"комод"
+			],
+			[
+				"noun",
+				"пятка"
+			],
+			[
+				"verb",
+				"щипать"
+			],
+			[
+				"interjection",
+				"ничего себе!"
+			],
+			[
+				"verb",
+				"разбудить"
+			],
+			[
+				"phrase",
+				"навострить уши"
+			],
+			[
+				"adjective",
+				"шерстяный"
+			],
+			[
+				"verb",
+				"прикорнуть"
+			],
+			[
+				"noun",
+				"будильник"
+			],
+			[
+				"verb",
+				"усыпить"
+			],
+			[
+				"noun",
+				"грузовик"
+			],
+			[
+				"noun",
+				"гуашь"
+			],
+			[
+				"verb",
+				"мазаться"
+			],
+			[
+				"verb",
+				"отыскать"
+			],
+			[
+				"noun",
+				"клюв"
+			],
+			[
+				"phrase",
+				"пуститься наутек"
+			],
+			[
+				"noun",
+				"лужа"
+			],
+			[
+				"phrase",
+				"шагом марш!"
+			],
+			[
+				"noun",
+				"отряд"
+			],
+			[
+				"conjunction",
+				"однако; впрочем"
+			],
+			[
+				"verb",
+				"обрадоваться"
+			],
+			[
+				"verb",
+				"клевать"
+			]
+		]
+	}
+}

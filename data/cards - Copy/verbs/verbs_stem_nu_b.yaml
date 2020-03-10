@@ -1,0 +1,79 @@
+{
+  "card_set": {
+    "name": "4. Verbs with Stem - (\u041d\u0423)",
+    "version": 1,
+    "cards": [
+      [
+        "verb",
+        "\u0431\u043b\u0451\u043a\u043d\u0443\u0442\u044c",
+        "to fade; to wither"
+      ],
+      [
+        "verb",
+        "\u043a\u0440\u0435\u043f\u043d\u0443\u0442\u044c",
+        "to grow stronger"
+      ],
+      [
+        "verb",
+        "\u0433\u0430\u0441\u043d\u0443\u0442\u044c",
+        "to be extinguished"
+      ],
+      [
+        "verb",
+        "\u043c\u0451\u0440\u0437\u043d\u0443\u0442\u044c",
+        "to be cold, freeze"
+      ],
+      [
+        "verb",
+        "\u0433\u0438\u0431\u043d\u0443\u0442\u044c",
+        "to perish"
+      ],
+      [
+        "verb",
+        "\u043c\u043e\u043a\u043d\u0443\u0442\u044c",
+        "to get wet/soaked"
+      ],
+      [
+        "verb",
+        "\u0433\u043b\u043e\u0445\u043d\u0443\u0442\u044c",
+        "to go deaf"
+      ],
+      [
+        "verb",
+        "\u043f\u0430\u0445\u043d\u0443\u0442\u044c",
+        "to smell"
+      ],
+      [
+        "verb",
+        "\u0434\u043e\u0441\u0442\u0438\u0433\u043d\u0443\u0442\u044c",
+        "to reach; to achieve"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0438\u0432\u044b\u043a\u043d\u0443\u0442\u044c",
+        "to get used to"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043c\u043e\u043b\u043a\u043d\u0443\u0442\u044c",
+        "to fall silent"
+      ],
+      [
+        "verb",
+        "\u0441\u043b\u0435\u043f\u043d\u0443\u0442\u044c",
+        "to go blind"
+      ],
+      [
+        "verb",
+        "\u043a\u0438\u0441\u043d\u0443\u0442\u044c",
+        "to turn sour"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u0445\u043d\u0443\u0442\u044c",
+        "to become dry"
+      ]
+    ],
+    "type": "Grammatical"
+  }
+}

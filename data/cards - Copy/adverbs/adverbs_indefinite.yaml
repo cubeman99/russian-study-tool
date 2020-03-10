@@ -1,0 +1,59 @@
+{
+  "card_set": {
+    "name": "Indefinite Adverbs",
+    "version": 1,
+    "cards": [
+      [
+        "adverb",
+        "\u0433\u0434\u0435-\u0442\u043e",
+        "somewhere"
+      ],
+      [
+        "adverb",
+        "\u0433\u0434\u0435-\u043d\u0438\u0431\u0443\u0434\u044c",
+        "somewhere (anywhere)"
+      ],
+      [
+        "adverb",
+        "\u043a\u0443\u0434\u0430-\u0442\u043e",
+        "to somewhere"
+      ],
+      [
+        "adverb",
+        "\u043a\u0443\u0434\u0430-\u043d\u0438\u0431\u0443\u0434\u044c",
+        "to somewhere (anywhere)"
+      ],
+      [
+        "adverb",
+        "\u043a\u043e\u0433\u0434\u0430-\u0442\u043e",
+        "once, at one time"
+      ],
+      [
+        "adverb",
+        "\u043a\u043e\u0433\u0434\u0430-\u043d\u0438\u0431\u0443\u0434\u044c",
+        "ever, at any time"
+      ],
+      [
+        "adverb",
+        "\u043a\u0430\u043a-\u0442\u043e",
+        "somehow"
+      ],
+      [
+        "adverb",
+        "\u043a\u0430\u043a-\u043d\u0438\u0431\u0443\u0434\u044c",
+        "somehow (or other)"
+      ],
+      [
+        "adverb",
+        "\u043f\u043e\u0447\u0435\u043c\u0443-\u0442\u043e",
+        "for some reason"
+      ],
+      [
+        "adverb",
+        "\u043f\u043e\u0447\u0435\u043c\u0443-\u043d\u0438\u0431\u0443\u0434\u044c",
+        "for any reason"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

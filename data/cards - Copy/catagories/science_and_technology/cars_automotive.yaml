@@ -1,0 +1,409 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Cars & Automotive",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"колесо",
+				"wheel"
+			],
+			[
+				"noun",
+				"шина",
+				"tire"
+			],
+			[
+				"noun",
+				"грузовик",
+				"truck"
+			],
+			[
+				"noun",
+				"мостовая",
+				"paved/asphalt covered roadway"
+			],
+			[
+				"noun",
+				"маршрут",
+				"route"
+			],
+			[
+				"noun",
+				"билет",
+				"ticket"
+			],
+			[
+				"noun",
+				"сцепление",
+				"a clutch (car part)"
+			],
+			[
+				"noun",
+				"машина",
+				"a car"
+			],
+			[
+				"adjective",
+				"запасной",
+				"spare, auxiliary"
+			],
+			[
+				"phrase",
+				"запчасти (запасные части)",
+				"spare parts"
+			],
+			[
+				"noun",
+				"кузов",
+				"car body"
+			],
+			[
+				"noun",
+				"железо",
+				"iron"
+			],
+			[
+				"noun",
+				"капот",
+				"the hood"
+			],
+			[
+				"noun",
+				"двигатель; мотор",
+				"engine, motor"
+			],
+			[
+				"noun",
+				"воздушный фильтр",
+				"air filter"
+			],
+			[
+				"noun",
+				"карбюратор",
+				"carburetor"
+			],
+			[
+				"noun",
+				"аккумулятор",
+				"car battery"
+			],
+			[
+				"noun",
+				"радиатор",
+				"car radiator"
+			],
+			[
+				"noun",
+				"бампер",
+				"car bumper"
+			],
+			[
+				"noun",
+				"номер",
+				"license plate; number (telephone)"
+			],
+			[
+				"noun",
+				"фара",
+				"headlight"
+			],
+			[
+				"noun",
+				"поворот",
+				"a turn"
+			],
+			[
+				"noun",
+				"поворотник",
+				"blinker, turn signal"
+			],
+			[
+				"phrase",
+				"ближный свет",
+				"near beam (headlight)"
+			],
+			[
+				"phrase",
+				"далний свет",
+				"high beam (headlight)"
+			],
+			[
+				"noun",
+				"дворники (стеклоочистители)",
+				"windshield wipers"
+			],
+			[
+				"noun",
+				"боковые зеркала",
+				"side mirror"
+			],
+			[
+				"noun",
+				"зеркало заднего вида",
+				"rearview mirror"
+			],
+			[
+				"noun",
+				"стеклоподъёмник",
+				"window raiser"
+			],
+			[
+				"noun",
+				"багажник",
+				"trunk (of a car)"
+			],
+			[
+				"adjective",
+				"ржавый",
+				"rusty"
+			],
+			[
+				"noun",
+				"ржавчина",
+				"rust"
+			],
+			[
+				"noun",
+				"покрышка (резина)",
+				"a tire (of a car)"
+			],
+			[
+				"phrase",
+				"зимняя/летняя резина",
+				"winter/summer tires"
+			],
+			[
+				"noun",
+				"бензобак",
+				"gas/fuel tank"
+			],
+			[
+				"noun",
+				"крышка бензобака",
+				"fuel cap"
+			],
+			[
+				"noun",
+				"бензин",
+				"gas/petrol"
+			],
+			[
+				"phrase",
+				"залезть в машину",
+				"to climp/jump into the car"
+			],
+			[
+				"noun",
+				"руль",
+				"steering wheel"
+			],
+			[
+				"noun",
+				"сигналь",
+				"horn; signal"
+			],
+			[
+				"noun",
+				"переключатель",
+				"a switch"
+			],
+			[
+				"noun",
+				"зажигание (замок зажигания)",
+				"ignition, engine starter"
+			],
+			[
+				"phrase",
+				"завести автомобиль",
+				"to start the car"
+			],
+			[
+				"noun",
+				"приборная панель",
+				"car dashboard"
+			],
+			[
+				"noun",
+				"бардачок",
+				"glove box"
+			],
+			[
+				"noun",
+				"магнитола",
+				"car media player"
+			],
+			[
+				"noun",
+				"прикуриватель",
+				"cigarette lighter"
+			],
+			[
+				"noun",
+				"печка (машины)",
+				"stove (car heater)"
+			],
+			[
+				"phrase",
+				"механическая коробка передач",
+				"manual gearbox"
+			],
+			[
+				"phrase",
+				"автоматическая коробка передач",
+				"automatic gearbox"
+			],
+			[
+				"noun",
+				"спидометр",
+				"speedometer"
+			],
+			[
+				"noun",
+				"тахометр",
+				"tacometer"
+			],
+			[
+				"noun",
+				"датчики",
+				"sensors"
+			],
+			[
+				"noun",
+				"ручной тормоз (ручник)",
+				"handbrake"
+			],
+			[
+				"phrase",
+				"педаль газа",
+				"gas pedal"
+			],
+			[
+				"phrase",
+				"педаль тормоза",
+				"brake pedal"
+			],
+			[
+				"phrase",
+				"педаль сцепления",
+				"clutch pedal"
+			],
+			[
+				"phrase",
+				"водительская сиденье",
+				"driver seat"
+			],
+			[
+				"phrase",
+				"пассажирская сиденье",
+				"passenger seat"
+			],
+			[
+				"phrase",
+				"заднее сиденье",
+				"rear seat"
+			],
+			[
+				"noun",
+				"аварийка",
+				"hazard (emergency stop button)"
+			],
+			[
+				"noun",
+				"пробег",
+				"mileage"
+			],
+			[
+				"verb",
+				"прикурить",
+				"to light up (a cigarette); to jump start (a car)"
+			],
+			[
+				"phrase",
+				"аккумулятор сел",
+				"the battery has died"
+			],
+			[
+				"phrase",
+				"заряжать аккумулятор",
+				"to charge the battery"
+			],
+			[
+				"phrase",
+				"аккумулятор заряжен",
+				"the battery is (fully) charged"
+			],
+			[
+				"phrase",
+				"спущено колесо",
+				"a flat tire"
+			],
+			[
+				"phrase",
+				"накачать колесо",
+				"to pump up the wheel"
+			],
+			[
+				"phrase",
+				"подкачать колесо",
+				"to pump up the wheel little a bit"
+			],
+			[
+				"phrase",
+				"заправлять машину бензином",
+				"to fill the car with gas"
+			],
+			[
+				"noun",
+				"заправка",
+				"a gas station"
+			],
+			[
+				"phrase",
+				"бензин кончается",
+				"the gas is running low"
+			],
+			[
+				"phrase",
+				"бензин кончился",
+				"the gas is out"
+			],
+			[
+				"noun",
+				"задняя передача",
+				"reverse gear"
+			],
+			[
+				"phrase",
+				"машина буксует",
+				"the car is skidding"
+			],
+			[
+				"phrase",
+				"задний/передний привод",
+				"rear/front drive unit"
+			],
+			[
+				"noun",
+				"поезд",
+				"train"
+			],
+			[
+				"noun",
+				"мотоцикл",
+				"a motorcycle"
+			],
+			[
+				"noun",
+				"асфальт",
+				"asphalt"
+			],
+			[
+				"phrase",
+				"грунтовая дорога",
+				"a dirt road"
+			]
+		]
+	}
+}

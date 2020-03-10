@@ -1,40 +1,149 @@
-card_set:
-  name: 1. Verbs with Stem - АЙ
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, бегать, 'to run, jog']
-    - [verb, объяснять, to explain]
-    - [verb, вспоминать, to recall]
-    - [verb, опаздывать, to be late]
-    - [verb, встречать, to meet]
-    - [verb, отвечать, to answer]
-    - [verb, выступать, to perform]
-    - [verb, отдыхать, 'to rest, relax']
-    - [verb, гулять, to take a stroll]
-    - [verb, повторять, to repeat]
-    - [verb, делать, 'to do, make']
-    - [verb, покупать, to buy]
-    - [verb, думать, to think]
-    - [verb, помогать, to help]
-    - [verb, завтракать, to have breakfast]
-    - [verb, понимать, to understand]
-    - [verb, заниматься, 'to engage in, study']
-    - [verb, посылать, to send]
-    - [verb, знать, to know]
-    - [verb, работать, to work]
-    - [verb, играть, to play]
-    - [verb, решать, 'to decide, solve']
-    - [verb, кончать, to finish]
-    - [verb, слушать, to listen]
-    - [verb, мечтать, to dream (about a goal)]
-    - [verb, собирать, to collect]
-    - [verb, начинать, to begin]
-    - [verb, спрашивать, to ask]
-    - [verb, обедать, to have lunch]
-    - [verb, ужинать, to have dinner]
-    - [verb, обсуждать, to discuss]
-    - [verb, читать, to read]
-    - [verb, получать, to receive]
-    - [verb, рассказывать, 'to narrate, to tell']
-    - [verb, сделать, to do]
+{
+	"card_set": {
+		"version": 1,
+		"name": "1. Verbs with Stem - АЙ",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"бегать"
+			],
+			[
+				"verb",
+				"объяснять"
+			],
+			[
+				"verb",
+				"вспоминать"
+			],
+			[
+				"verb",
+				"опаздывать"
+			],
+			[
+				"verb",
+				"встречать"
+			],
+			[
+				"verb",
+				"отвечать"
+			],
+			[
+				"verb",
+				"выступать"
+			],
+			[
+				"verb",
+				"отдыхать"
+			],
+			[
+				"verb",
+				"гулять"
+			],
+			[
+				"verb",
+				"повторять"
+			],
+			[
+				"verb",
+				"делать"
+			],
+			[
+				"verb",
+				"покупать"
+			],
+			[
+				"verb",
+				"думать"
+			],
+			[
+				"verb",
+				"помогать"
+			],
+			[
+				"verb",
+				"завтракать"
+			],
+			[
+				"verb",
+				"понимать"
+			],
+			[
+				"verb",
+				"заниматься"
+			],
+			[
+				"verb",
+				"посылать"
+			],
+			[
+				"verb",
+				"знать"
+			],
+			[
+				"verb",
+				"работать"
+			],
+			[
+				"verb",
+				"играть"
+			],
+			[
+				"verb",
+				"решать"
+			],
+			[
+				"verb",
+				"кончать"
+			],
+			[
+				"verb",
+				"слушать"
+			],
+			[
+				"verb",
+				"мечтать"
+			],
+			[
+				"verb",
+				"собирать"
+			],
+			[
+				"verb",
+				"начинать"
+			],
+			[
+				"verb",
+				"спрашивать"
+			],
+			[
+				"verb",
+				"обедать"
+			],
+			[
+				"verb",
+				"ужинать"
+			],
+			[
+				"verb",
+				"обсуждать"
+			],
+			[
+				"verb",
+				"читать"
+			],
+			[
+				"verb",
+				"получать"
+			],
+			[
+				"verb",
+				"рассказывать"
+			],
+			[
+				"verb",
+				"сделать"
+			]
+		]
+	}
+}

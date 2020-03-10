@@ -1,0 +1,334 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 14",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"физический",
+				"physical"
+			],
+			[
+				"adjective",
+				"пошлый",
+				"vulgar"
+			],
+			[
+				"adjective",
+				"божественный",
+				"divine, heavenly, godlike"
+			],
+			[
+				"adjective",
+				"уморительный",
+				"hilarious"
+			],
+			[
+				"adjective",
+				"обалденный deleteme",
+				"astounding"
+			],
+			[
+				"adjective",
+				"знакомый",
+				"familiar, acquainted"
+			],
+			[
+				"adjective",
+				"видный",
+				"visible, noticable, prominent"
+			],
+			[
+				"adjective",
+				"трогательный",
+				"touching, moving (emotion)"
+			],
+			[
+				"adverb",
+				"примерно",
+				"roughly speaking, about"
+			],
+			[
+				"adverb",
+				"случайно",
+				"by chance, accidentally"
+			],
+			[
+				"adverb",
+				"кратко",
+				"briefly"
+			],
+			[
+				"adverb",
+				"разве",
+				"really, perhaps, unless"
+			],
+			[
+				"noun",
+				"проход",
+				"passageway, aisle"
+			],
+			[
+				"noun",
+				"заклинание; заклятие",
+				"spell, invocation"
+			],
+			[
+				"noun",
+				"глупость",
+				"stupidity"
+			],
+			[
+				"noun",
+				"чепуха",
+				"poppycock, malarkey, nonsense"
+			],
+			[
+				"noun",
+				"человечество",
+				"mankind"
+			],
+			[
+				"noun",
+				"мнение",
+				"opinion"
+			],
+			[
+				"noun",
+				"ожидание",
+				"expectation"
+			],
+			[
+				"noun",
+				"зов",
+				"call"
+			],
+			[
+				"noun",
+				"толпа",
+				"a crowd"
+			],
+			[
+				"noun",
+				"тюрьма",
+				"jail"
+			],
+			[
+				"noun",
+				"пончик",
+				"donut"
+			],
+			[
+				"noun",
+				"рог",
+				"horn"
+			],
+			[
+				"noun",
+				"вонь",
+				"stench"
+			],
+			[
+				"noun",
+				"облако",
+				"cloud"
+			],
+			[
+				"noun",
+				"свадьба",
+				"wedding"
+			],
+			[
+				"noun",
+				"соглашение",
+				"agreement"
+			],
+			[
+				"noun",
+				"шанс",
+				"chance, opportunity"
+			],
+			[
+				"noun",
+				"боль",
+				"pain"
+			],
+			[
+				"verb",
+				"плевать",
+				"to spit"
+			],
+			[
+				"verb",
+				"плюнуть",
+				"to spit"
+			],
+			[
+				"verb",
+				"выручить",
+				"to help out"
+			],
+			[
+				"verb",
+				"сасать",
+				"to suck"
+			],
+			[
+				"verb",
+				"ранить",
+				"to wound, injure, hurt"
+			],
+			[
+				"verb",
+				"развеять",
+				"to scatter, dispell"
+			],
+			[
+				"verb",
+				"дружить",
+				"to be friends"
+			],
+			[
+				"verb",
+				"разойтись",
+				"to break up, to part"
+			],
+			[
+				"verb",
+				"общаться",
+				"to communicate, socialize"
+			],
+			[
+				"verb",
+				"исправить",
+				"to fix, correct"
+			],
+			[
+				"verb",
+				"наговорить",
+				"to talk on, tell lies about"
+			],
+			[
+				"verb",
+				"научить",
+				"to teach something in its entirety"
+			],
+			[
+				"verb",
+				"наготовить",
+				"to prepare/cook extra or well ahead of time"
+			],
+			[
+				"verb",
+				"находить",
+				"to find"
+			],
+			[
+				"verb",
+				"написать",
+				"to write down"
+			],
+			[
+				"verb",
+				"выговорить",
+				"to annunciate"
+			],
+			[
+				"verb",
+				"выучить",
+				"to learn the entire concept of something"
+			],
+			[
+				"verb",
+				"выписать",
+				"to take out and write down"
+			],
+			[
+				"verb",
+				"заговорить",
+				"to talk someones head off"
+			],
+			[
+				"verb",
+				"заучить",
+				"to learn but not understand"
+			],
+			[
+				"verb",
+				"заготовить",
+				"to prepare ahead of time"
+			],
+			[
+				"verb",
+				"записать",
+				"to take a note; to record"
+			],
+			[
+				"verb",
+				"приговорить",
+				"to sentence someone to something (in court)"
+			],
+			[
+				"verb",
+				"приучить",
+				"to get someone accustomed to something, to train"
+			],
+			[
+				"verb",
+				"приписать, подписать",
+				"to add in, insert writing"
+			],
+			[
+				"verb",
+				"подговорить",
+				"to talk someone into something, to pursue someone"
+			],
+			[
+				"verb",
+				"подучить",
+				"to learn a bit more of something"
+			],
+			[
+				"verb",
+				"подготовить",
+				"to prepare, get something ready for someone"
+			],
+			[
+				"phrase",
+				"покажи мне",
+				"show me"
+			],
+			[
+				"phrase",
+				"что это за место",
+				"what kind of place is this?"
+			],
+			[
+				"phrase",
+				"прошлом году",
+				"last year"
+			],
+			[
+				"phrase",
+				"в ближайшее время",
+				"soon, in the near future"
+			],
+			[
+				"phrase",
+				"идёт дождь",
+				"it is raining"
+			],
+			[
+				"phrase",
+				"шёл снег",
+				"it was snowing"
+			],
+			[
+				"interjection",
+				"стой!",
+				"stop! halt!"
+			]
+		]
+	}
+}

@@ -1,10 +1,29 @@
-card_set:
-  name: Instrumental Case
-  type: Grammatical
-  version: 1
-  cards:
-    - [preposition, за + instr., 'behind, beyond (location)']
-    - [preposition, под + instr., under (location)]
-    - [adverb, вслед + instr., following...]
-    - [adjective, охваченный + instr., covered with]
-    - [verb, заниматься, 'to engage in, study']
+{
+	"card_set": {
+		"version": 1,
+		"name": "Instrumental Case",
+		"type": "grammatical",
+		"cards": [
+			[
+				"preposition",
+				"за + instr."
+			],
+			[
+				"preposition",
+				"под + instr."
+			],
+			[
+				"adverb",
+				"вслед + instr."
+			],
+			[
+				"adjective",
+				"охваченный + instr."
+			],
+			[
+				"verb",
+				"заниматься"
+			]
+		]
+	}
+}

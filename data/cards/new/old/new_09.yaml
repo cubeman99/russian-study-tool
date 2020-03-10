@@ -1,77 +1,297 @@
-card_set:
-  name: New 09
-  version: 1
-  cards:
-    - [adjective, свободный, 'free, spare, vacant']
-    - [adjective, полный, 'full, total, complete']
-    - [adjective, прохладный, 'chill, cool']
-    - [adjective, положительный, positive]
-    - [adjective, нервный, nervous]
-    - [adjective, заботливый, 'careful, attentive']
-    - [adjective, прошлый, 'last, past, previous']
-    - [adverb, плотно, 'tightly, thickly']
-    - [adverb, вовсе, at all (old style word)]
-    - [adverb, полностью, 'fully, completely']
-    - [adverb, срочно, urgent]
-    - [noun, исправление, correction]
-    - [noun, опасность, danger]
-    - [noun, полгода, half-year]
-    - [noun, половина, half]
-    - [noun, тайна, secret]
-    - [noun, обещание, promise]
-    - [noun, молчание, silence]
-    - [noun, 'злость, гнев', anger]
-    - [noun, шерсть, 'wool, fur, coat']
-    - [noun, тротуар, 'sidewalk, pavement']
-    - [noun, критика, criticism]
-    - [noun, народ, 'people, nation']
-    - [noun, бутылка, bottle]
-    - [noun, зонт, umbrella]
-    - [noun, авария, accident]
-    - [noun, роман, novel]
-    - [noun, таблетка, 'tablet, pill']
-    - [noun, пункт, 'point, item, article']
-    - [noun, приказ, 'order, command']
-    - [noun, мозг, brain]
-    - [noun, злодей, 'villian, fiend']
-    - [noun, пользователь, user]
-    - [noun, простуда, cold (illness)]
-    - [noun, разум, 'mind, reason']
-    - [noun, сценарий, 'scenario, script']
-    - [noun, удовольствие, 'satisfaction, pleasure']
-    - [noun, суд, 'court, trial']
-    - [noun, велосипед, bicycle]
-    - [noun, рюкзак, backpack]
-    - [noun, багаж, luggage]
-    - [verb, разбираться, to deal with]
-    - [verb, запускать, 'to launch, run']
-    - [verb, сдержать, 'to hold back, restrain']
-    - [verb, размышлять, 'to ponder, reflect, speculate']
-    - [verb, темнеть, to darken]
-    - [verb, рехнуться, 'to lose your mind, go crazy']
-    - [verb, преследовать, 'to chase, persue']
-    - [verb, разбросать, to scatter]
-    - [verb, исчезать, 'to dissapear, vanish, pass away']
-    - [verb, пытаться, 'to try, attempt']
-    - [verb, высказать, to express]
-    - [verb, тошнить, 'to cause nausia, to make sick']
-    - [verb, ломать, to break]
-    - [verb, сломать, to break]
-    - [verb, записываться, 'to enroll, register, sign up']
-    - [verb, ругаться, 'to swear, curse']
-    - [verb, создавать, to create]
-    - [verb, создать, to create]
-    - [verb, терять, to lose (something)]
-    - [verb, привлекать, to attract]
-    - [verb, выдавать, 'to give, distribute']
-    - [verb, выдать, 'to give, distribute']
-    - [verb, заботиться, 'to take care of, look after']
-    - [verb, управлять, to manage]
-    - [phrase, я согласен, I agree]
-    - [phrase, Я ничего раньше подобного не видела!, I have never seen anything like this
-    before!]
-    - [phrase, то есть, 'that is, that is to say, i.e.']
-    - [phrase, "Не за что\uFEFF", Its my pleasure]
-    - [phrase, до скорого, see you soon]
-    - [preposition, вроде, 'like, such as']
-    - [preposition, возле, 'by, near']
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 09",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"свободный"
+			],
+			[
+				"adjective",
+				"полный"
+			],
+			[
+				"adjective",
+				"прохладный"
+			],
+			[
+				"adjective",
+				"положительный"
+			],
+			[
+				"adjective",
+				"нервный"
+			],
+			[
+				"adjective",
+				"заботливый"
+			],
+			[
+				"adjective",
+				"прошлый"
+			],
+			[
+				"adverb",
+				"плотно"
+			],
+			[
+				"adverb",
+				"вовсе"
+			],
+			[
+				"adverb",
+				"полностью"
+			],
+			[
+				"adverb",
+				"срочно"
+			],
+			[
+				"noun",
+				"исправление"
+			],
+			[
+				"noun",
+				"опасность"
+			],
+			[
+				"noun",
+				"полгода"
+			],
+			[
+				"noun",
+				"половина"
+			],
+			[
+				"noun",
+				"тайна"
+			],
+			[
+				"noun",
+				"обещание"
+			],
+			[
+				"noun",
+				"молчание"
+			],
+			[
+				"noun",
+				"злость; гнев"
+			],
+			[
+				"noun",
+				"шерсть"
+			],
+			[
+				"noun",
+				"тротуар"
+			],
+			[
+				"noun",
+				"критика"
+			],
+			[
+				"noun",
+				"народ"
+			],
+			[
+				"noun",
+				"бутылка"
+			],
+			[
+				"noun",
+				"зонт"
+			],
+			[
+				"noun",
+				"авария"
+			],
+			[
+				"noun",
+				"роман"
+			],
+			[
+				"noun",
+				"таблетка"
+			],
+			[
+				"noun",
+				"пункт"
+			],
+			[
+				"noun",
+				"приказ"
+			],
+			[
+				"noun",
+				"мозг"
+			],
+			[
+				"noun",
+				"злодей"
+			],
+			[
+				"noun",
+				"пользователь"
+			],
+			[
+				"noun",
+				"простуда"
+			],
+			[
+				"noun",
+				"разум"
+			],
+			[
+				"noun",
+				"сценарий"
+			],
+			[
+				"noun",
+				"удовольствие"
+			],
+			[
+				"noun",
+				"суд"
+			],
+			[
+				"noun",
+				"велосипед"
+			],
+			[
+				"noun",
+				"рюкзак"
+			],
+			[
+				"noun",
+				"багаж"
+			],
+			[
+				"verb",
+				"разбираться"
+			],
+			[
+				"verb",
+				"запускать"
+			],
+			[
+				"verb",
+				"сдержать"
+			],
+			[
+				"verb",
+				"размышлять"
+			],
+			[
+				"verb",
+				"темнеть"
+			],
+			[
+				"verb",
+				"рехнуться"
+			],
+			[
+				"verb",
+				"преследовать"
+			],
+			[
+				"verb",
+				"разбросать"
+			],
+			[
+				"verb",
+				"исчезать"
+			],
+			[
+				"verb",
+				"пытаться"
+			],
+			[
+				"verb",
+				"высказать"
+			],
+			[
+				"verb",
+				"тошнить"
+			],
+			[
+				"verb",
+				"ломать"
+			],
+			[
+				"verb",
+				"сломать"
+			],
+			[
+				"verb",
+				"записываться"
+			],
+			[
+				"verb",
+				"ругаться"
+			],
+			[
+				"verb",
+				"создавать"
+			],
+			[
+				"verb",
+				"создать"
+			],
+			[
+				"verb",
+				"терять"
+			],
+			[
+				"verb",
+				"привлекать"
+			],
+			[
+				"verb",
+				"выдавать"
+			],
+			[
+				"verb",
+				"выдать"
+			],
+			[
+				"verb",
+				"заботиться"
+			],
+			[
+				"verb",
+				"управлять"
+			],
+			[
+				"phrase",
+				"я согласен"
+			],
+			[
+				"phrase",
+				"я ничего раньше подобного не видела!"
+			],
+			[
+				"phrase",
+				"то есть"
+			],
+			[
+				"phrase",
+				"не за что duplicate"
+			],
+			[
+				"phrase",
+				"до скорого"
+			],
+			[
+				"preposition",
+				"вроде"
+			],
+			[
+				"preposition",
+				"возле + gen."
+			]
+		]
+	}
+}

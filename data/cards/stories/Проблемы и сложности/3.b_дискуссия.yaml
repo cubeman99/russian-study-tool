@@ -1,64 +1,245 @@
-card_set:
-  name: 3.b Дискуссия
-  type: Media
-  version: 1
-  cards:
-    - [adverb, беспечно, carelessly]
-    - [adjective, ловкий, 'agile, clever']
-    - [adjective, неловкий, 'akward, clumsy']
-    - [adjective, беспрецедентый, unprecedented]
-    - [adjective, особый, 'particular, special']
-    - [adjective, тревожный, anxious]
-    - [adjective, ледяный, icy]
-    - [adjective, патрулный, patrol (adj.)]
-    - [adjective, неуместный, irrelevant]
-    - [adjective, уместный, relevant]
-    - [adjective, ослеплённый, blinded]
-    - [noun, ловкость, 'agility, dexterity']
-    - [noun, неловкость, akwardness]
-    - [noun, упоминание, mention]
-    - [noun, сокрытие, concealment]
-    - [noun, изгиб, 'bend, curve']
-    - [noun, звонок, 'metal bell, signal device']
-    - [noun, 'похождение, приключение', adventure]
-    - [noun, слух, hearing (the sense)]
-    - [noun, слухи; сплетня, gossip]
-    - [noun, освобождение, liberation]
-    - [noun, гарем, harem]
-    - [noun, возражение, objection]
-    - [noun, выражение, expression (same as in English)]
-    - [noun, добавление, 'addition, adding']
-    - [noun, лоб, forehead]
-    - [noun, обстоятельство, circumstance]
-    - [noun, грёза, 'fantasy, dreamworld']
-    - [noun, источник, 'source, spring, fount']
-    - [verb, удивлять, to suprise]
-    - [verb, удивить, to suprise]
-    - [verb, боготворить, to worship]
-    - [verb, поддаться, to succumb]
-    - [verb, рассеять, 'to scatter, dispel, dissipate']
-    - [verb, портить, to spoil]
-    - [verb, проникать, 'to infiltrate, penetrate']
-    - [verb, кашлять, to cough]
-    - [verb, кашлянуть, to give a cough]
-    - [verb, изгнать, to drive out]
-    - [verb, вычеркнуть, to cross out]
-    - [verb, рассчитать, to calculate]
-    - [verb, искоренить, to eradicate]
-    - [verb, воспринимать, to perceive]
-    - [verb, очаровать, 'to charm, enchant, fascinate']
-    - [verb, очаровывать, 'to charm, enchant, fascinate']
-    - [verb, претендовать, 'to claim, pretend']
-    - [verb, запрещать, to forbid]
-    - [verb, убрать, 'to remove, place somewhere']
-    - [verb, делиться, to share]
-    - [verb, делить, 'to device, divvy']
-    - [verb, копить, 'to save up, hoard']
-    - [verb, проборматать, 'to mumble, say quickly/unclearly']
-    - [verb, отправляться, to set off]
-    - [verb, ухаживать, 'to court, woo, look after']
-    - [verb, разнести, 'to spread, carry to different places']
-    - [verb, возразить, to object]
-    - [verb, встать, to stand up]
-    - [verb, лопнуть, 'to burst, split']
-    - [verb, остаться, 'to remain, stay, be left']
+{
+	"card_set": {
+		"version": 1,
+		"name": "3.b Дискуссия",
+		"type": "media",
+		"cards": [
+			[
+				"adverb",
+				"беспечно"
+			],
+			[
+				"adjective",
+				"ловкий"
+			],
+			[
+				"adjective",
+				"неловкий"
+			],
+			[
+				"adjective",
+				"беспрецедентый"
+			],
+			[
+				"adjective",
+				"особый"
+			],
+			[
+				"adjective",
+				"тревожный"
+			],
+			[
+				"adjective",
+				"ледяный"
+			],
+			[
+				"adjective",
+				"патрулный"
+			],
+			[
+				"adjective",
+				"неуместный"
+			],
+			[
+				"adjective",
+				"уместный"
+			],
+			[
+				"adjective",
+				"ослепленный"
+			],
+			[
+				"noun",
+				"ловкость"
+			],
+			[
+				"noun",
+				"неловкость"
+			],
+			[
+				"noun",
+				"упоминание"
+			],
+			[
+				"noun",
+				"сокрытие"
+			],
+			[
+				"noun",
+				"изгиб"
+			],
+			[
+				"noun",
+				"звонок"
+			],
+			[
+				"noun",
+				"похождение; приключение"
+			],
+			[
+				"noun",
+				"слух"
+			],
+			[
+				"noun",
+				"слухи; сплетня"
+			],
+			[
+				"noun",
+				"освобождение"
+			],
+			[
+				"noun",
+				"гарем"
+			],
+			[
+				"noun",
+				"возражение"
+			],
+			[
+				"noun",
+				"выражение"
+			],
+			[
+				"noun",
+				"добавление"
+			],
+			[
+				"noun",
+				"лоб"
+			],
+			[
+				"noun",
+				"обстоятельство"
+			],
+			[
+				"noun",
+				"греза"
+			],
+			[
+				"noun",
+				"источник"
+			],
+			[
+				"verb",
+				"удивлять"
+			],
+			[
+				"verb",
+				"удивить"
+			],
+			[
+				"verb",
+				"боготворить"
+			],
+			[
+				"verb",
+				"поддаться"
+			],
+			[
+				"verb",
+				"рассеять"
+			],
+			[
+				"verb",
+				"портить"
+			],
+			[
+				"verb",
+				"проникать"
+			],
+			[
+				"verb",
+				"кашлять"
+			],
+			[
+				"verb",
+				"кашлянуть"
+			],
+			[
+				"verb",
+				"изгнать"
+			],
+			[
+				"verb",
+				"вычеркнуть"
+			],
+			[
+				"verb",
+				"рассчитать"
+			],
+			[
+				"verb",
+				"искоренить"
+			],
+			[
+				"verb",
+				"воспринимать"
+			],
+			[
+				"verb",
+				"очаровать"
+			],
+			[
+				"verb",
+				"очаровывать"
+			],
+			[
+				"verb",
+				"претендовать"
+			],
+			[
+				"verb",
+				"запрещать"
+			],
+			[
+				"verb",
+				"убрать"
+			],
+			[
+				"verb",
+				"делиться"
+			],
+			[
+				"verb",
+				"делить"
+			],
+			[
+				"verb",
+				"копить"
+			],
+			[
+				"verb",
+				"проборматать"
+			],
+			[
+				"verb",
+				"отправляться"
+			],
+			[
+				"verb",
+				"ухаживать"
+			],
+			[
+				"verb",
+				"разнести"
+			],
+			[
+				"verb",
+				"возразить"
+			],
+			[
+				"verb",
+				"встать"
+			],
+			[
+				"verb",
+				"лопнуть"
+			],
+			[
+				"verb",
+				"остаться"
+			]
+		]
+	}
+}

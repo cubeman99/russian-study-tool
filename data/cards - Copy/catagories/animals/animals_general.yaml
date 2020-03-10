@@ -1,0 +1,229 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Animals",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"животное",
+				"animal"
+			],
+			[
+				"noun",
+				"кот",
+				"cat (male)"
+			],
+			[
+				"noun",
+				"кошка",
+				"cat (female)"
+			],
+			[
+				"noun",
+				"собака",
+				"dog (female)"
+			],
+			[
+				"noun",
+				"медведь",
+				"bear"
+			],
+			[
+				"noun",
+				"кролик",
+				"rabbit"
+			],
+			[
+				"noun",
+				"заяц",
+				"hare"
+			],
+			[
+				"noun",
+				"обезьяна",
+				"monkey"
+			],
+			[
+				"noun",
+				"волк",
+				"wolf"
+			],
+			[
+				"noun",
+				"лиса",
+				"fox"
+			],
+			[
+				"noun",
+				"крот",
+				"mole"
+			],
+			[
+				"noun",
+				"мышь",
+				"mouse"
+			],
+			[
+				"noun",
+				"крыса",
+				"rat"
+			],
+			[
+				"noun",
+				"ёжик",
+				"hedge-hog"
+			],
+			[
+				"noun",
+				"змея",
+				"snake"
+			],
+			[
+				"noun",
+				"лось",
+				"elk, moose"
+			],
+			[
+				"noun",
+				"олень",
+				"deer"
+			],
+			[
+				"noun",
+				"дикобраз",
+				"porcupine"
+			],
+			[
+				"noun",
+				"белка",
+				"squirrel"
+			],
+			[
+				"noun",
+				"енот",
+				"raccoon"
+			],
+			[
+				"noun",
+				"бурундук",
+				"chipmunk"
+			],
+			[
+				"adjective",
+				"кошачий",
+				"feline"
+			],
+			[
+				"noun",
+				"живой уголок",
+				"pets corner"
+			],
+			[
+				"noun",
+				"питомец",
+				"pet"
+			],
+			[
+				"noun",
+				"лапа",
+				"paw"
+			],
+			[
+				"noun",
+				"усы",
+				"mustache; whiskers"
+			],
+			[
+				"noun",
+				"клетка",
+				"animal cage"
+			],
+			[
+				"noun",
+				"добыча",
+				"prey"
+			],
+			[
+				"noun",
+				"любимец",
+				"favorite; pet"
+			],
+			[
+				"verb",
+				"кормить",
+				"to feed"
+			],
+			[
+				"noun",
+				"шерсть",
+				"wool, fur, coat"
+			],
+			[
+				"noun",
+				"пасть",
+				"mouth (of an animal)"
+			],
+			[
+				"noun",
+				"хвост",
+				"tail"
+			],
+			[
+				"adjective",
+				"клыкастый",
+				"fanged"
+			],
+			[
+				"noun",
+				"клык",
+				"fang, canine"
+			],
+			[
+				"verb",
+				"прорычать",
+				"to growl, snarl"
+			],
+			[
+				"noun",
+				"вой",
+				"a howl"
+			],
+			[
+				"verb",
+				"выть",
+				"to howl"
+			],
+			[
+				"verb",
+				"взвыть",
+				"to suddenly howl"
+			],
+			[
+				"verb",
+				"лаять",
+				"to bark"
+			],
+			[
+				"verb",
+				"ржать",
+				"to neigh"
+			],
+			[
+				"noun",
+				"крыло",
+				"wing"
+			],
+			[
+				"noun",
+				"кожа",
+				"leather, skin"
+			],
+			[
+				"noun",
+				"пёс",
+				"a male dog"
+			]
+		]
+	}
+}

@@ -1,22 +1,77 @@
-card_set:
-  name: Misc
-  type: Categorical
-  version: 1
-  cards:
-    - [noun, чушь, nonsense]
-    - [noun, вещь, thing]
-    - [noun, мощь, 'power, might']
-    - [noun, помощь, help]
-    - [noun, молодость, 'youth (25 - 30, usable with inanimate objs)']
-    - [noun, юношество, 'youth (14 - 17, only for animate objs)']
-    - [noun, зрелость, maturity]
-    - [noun, грубость, rudeness]
-    - [noun, вежливость, politeness]
-    - [noun, свежесть, freshness]
-    - [noun, новость, news]
-    - [noun, тяжесть, gravity]
-    - [noun, неуклюжесть, clumsiness]
-    - [noun, смелость, boldness]
-    - [noun, бельё, linen]
-    - [noun, знамя, banner]
-    - [noun, бремя, burden]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Misc",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"чушь"
+			],
+			[
+				"noun",
+				"вещь"
+			],
+			[
+				"noun",
+				"мощь"
+			],
+			[
+				"noun",
+				"помощь"
+			],
+			[
+				"noun",
+				"молодость"
+			],
+			[
+				"noun",
+				"юношество"
+			],
+			[
+				"noun",
+				"зрелость"
+			],
+			[
+				"noun",
+				"грубость"
+			],
+			[
+				"noun",
+				"вежливость"
+			],
+			[
+				"noun",
+				"свежесть"
+			],
+			[
+				"noun",
+				"новость"
+			],
+			[
+				"noun",
+				"тяжесть"
+			],
+			[
+				"noun",
+				"неуклюжесть"
+			],
+			[
+				"noun",
+				"смелость"
+			],
+			[
+				"noun",
+				"белье"
+			],
+			[
+				"noun",
+				"знамя"
+			],
+			[
+				"noun",
+				"бремя"
+			]
+		]
+	}
+}

@@ -1,0 +1,114 @@
+{
+  "card_set": {
+    "name": "Vegetables",
+    "version": 1,
+    "cards": [
+      [
+        "noun",
+        "\u043e\u0432\u043e\u0449\u0438",
+        "vegtables"
+      ],
+      [
+        "noun",
+        "\u043e\u0433\u0443\u0440\u0435\u0446 (\u043e\u0433\u0443\u0440\u0446\u044b)",
+        "cucumber"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043c\u0438\u0434\u043e\u0440 (\u043f\u043e\u043c\u0438\u0434\u043e\u0440\u044b)",
+        "tomato"
+      ],
+      [
+        "noun",
+        "\u043a\u0430\u0431\u0430\u0447\u043e\u043a (\u043a\u0430\u0431\u0430\u0447\u043a\u0438)",
+        "vegtable marrow"
+      ],
+      [
+        "noun",
+        "\u043a\u0430\u0440\u0442\u043e\u0444\u0435\u043b\u044c",
+        "potato"
+      ],
+      [
+        "noun",
+        "\u0431\u0430\u043a\u043b\u0430\u0436\u0430\u043d (\u0431\u0430\u043a\u043b\u0430\u0436\u0430\u043d\u044b)",
+        "aubergine, egg-plant"
+      ],
+      [
+        "noun",
+        "\u043a\u0430\u043f\u0443\u0441\u0442\u0430",
+        "cabbage"
+      ],
+      [
+        "noun",
+        "\u0446\u0432\u0435\u0442\u043d\u0430\u044f \u043a\u0430\u043f\u0443\u0441\u0442\u0430",
+        "cauliflower"
+      ],
+      [
+        "noun",
+        "\u0431\u0440\u043e\u043a\u043a\u043e\u043b\u0438",
+        "broccoli"
+      ],
+      [
+        "noun",
+        "\u043f\u0430\u0442\u0438\u0441\u043e\u043d (\u043f\u0430\u0442\u0438\u0441\u043e\u043d\u044b)",
+        "squash"
+      ],
+      [
+        "noun",
+        "\u0442\u044b\u043a\u0432\u0430",
+        "a pumpkin"
+      ],
+      [
+        "noun",
+        "\u043c\u043e\u0440\u043a\u043e\u0432\u044c",
+        "carrot"
+      ],
+      [
+        "noun",
+        "\u043b\u0443\u043a",
+        "onion"
+      ],
+      [
+        "noun",
+        "\u043f\u0435\u0440\u0435\u0446 (\u043f\u0435\u0440\u0446\u044b)",
+        "pepper, capsicum"
+      ],
+      [
+        "noun",
+        "\u0444\u0430\u0441\u043e\u043b\u044c",
+        "bean"
+      ],
+      [
+        "noun",
+        "\u0433\u043e\u0440\u043e\u0445",
+        "pea"
+      ],
+      [
+        "noun",
+        "\u0441\u0435\u043b\u044c\u0434\u0435\u0440\u0435\u0439",
+        "celery"
+      ],
+      [
+        "noun",
+        "\u043f\u044e\u0440\u0435 \u043a\u0430\u0440\u0442\u043e\u0444\u0435\u043b\u044c\u043d\u043e\u0435",
+        "mashed potatoes"
+      ],
+      [
+        "noun",
+        "\u0441\u0432\u0435\u043a\u043b\u0430",
+        "beetroot, beet"
+      ],
+      [
+        "noun",
+        "\u0441\u0430\u043b\u0430\u0442",
+        "lettuce, salad"
+      ],
+      [
+        "noun",
+        "\u0433\u0440\u0438\u0431 (\u0433\u0440\u0438\u0431\u044b)",
+        "mushroom"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

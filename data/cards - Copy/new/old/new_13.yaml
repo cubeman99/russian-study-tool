@@ -1,0 +1,334 @@
+{
+  "card_set": {
+    "name": "New 13",
+    "version": 1,
+    "cards": [
+      [
+        "adjective",
+        "\u0442\u0443\u043f\u0435\u043d\u044c\u043a\u0438\u0439",
+        "dumb, stupid"
+      ],
+      [
+        "adjective",
+        "\u043f\u0440\u0438\u0442\u044f\u0436\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0439",
+        "possessive"
+      ],
+      [
+        "adverb",
+        "\u043d\u0435\u043c\u043d\u043e\u0436\u043a\u043e",
+        "a little bit"
+      ],
+      [
+        "adverb",
+        "\u0432\u0435\u0441\u044c\u043c\u0430",
+        "quite, highly, greatly"
+      ],
+      [
+        "adverb",
+        "\u043b\u0438\u0448\u044c",
+        "only (literary style)"
+      ],
+      [
+        "noun",
+        "\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435",
+        "change, variation"
+      ],
+      [
+        "noun",
+        "\u0440\u0430\u0437\u0432\u043e\u0434",
+        "divorce"
+      ],
+      [
+        "noun",
+        "\u0441\u044e\u0436\u0435\u0442",
+        "plot, story"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u0440\u043e\u0447\u0435\u0441\u0442\u0432\u043e",
+        "prophecy"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u0440\u043e\u043a",
+        "prophet"
+      ],
+      [
+        "noun",
+        "\u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+        "quality"
+      ],
+      [
+        "noun",
+        "\u043c\u0443\u0434\u0440\u043e\u0441\u0442\u044c",
+        "wisdom"
+      ],
+      [
+        "noun",
+        "\u0438\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0435",
+        "test, trial"
+      ],
+      [
+        "noun",
+        "\u0441\u043e\u0442\u043d\u044f",
+        "a hundred"
+      ],
+      [
+        "noun",
+        "\u0440\u0430\u0439",
+        "heaven, paradise"
+      ],
+      [
+        "noun",
+        "\u0443\u0442\u0435\u0447\u043a\u0430",
+        "leak, leakage"
+      ],
+      [
+        "noun",
+        "\u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u044c",
+        "property"
+      ],
+      [
+        "noun",
+        "\u0441\u043e\u044e\u0437",
+        "union"
+      ],
+      [
+        "noun",
+        "\u043b\u0438\u0444\u0447\u0438\u043a",
+        "brassiere"
+      ],
+      [
+        "noun",
+        "\u0440\u0435\u0447\u044c",
+        "speech"
+      ],
+      [
+        "noun",
+        "\u0441\u043f\u043e\u0441\u043e\u0431\u043d\u043e\u0441\u0442\u044c",
+        "ability"
+      ],
+      [
+        "noun",
+        "\u0431\u0440\u043e\u043d\u044f",
+        "armor"
+      ],
+      [
+        "noun",
+        "\u0441\u043f\u0430",
+        "spa"
+      ],
+      [
+        "noun",
+        "\u0442\u0435\u0440\u0430\u043f\u0438\u044f",
+        "therapy"
+      ],
+      [
+        "noun",
+        "\u043e\u0442\u0434\u044b\u0445",
+        "rest, relaxation, recreation"
+      ],
+      [
+        "noun",
+        "\u0441\u043b\u0430\u0432\u0430",
+        "fame, glory, honor"
+      ],
+      [
+        "noun",
+        "\u0432\u0435\u0441",
+        "weight"
+      ],
+      [
+        "noun",
+        "\u0432\u0435\u043a; \u0441\u0442\u043e\u043b\u0435\u0442\u0438\u0435",
+        "century"
+      ],
+      [
+        "noun",
+        "\u0440\u043e\u043b\u0438\u043a",
+        "video, roll"
+      ],
+      [
+        "noun",
+        "\u043b\u0430\u0441\u0442\u0438\u043a",
+        "eraser"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0435\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u0435",
+        "a crime, offense"
+      ],
+      [
+        "noun",
+        "\u0438\u043c\u044f \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0435",
+        "noun"
+      ],
+      [
+        "noun",
+        "\u0438\u043c\u044f \u043f\u0440\u0438\u043b\u0430\u0433\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0435",
+        "adjective"
+      ],
+      [
+        "noun",
+        "\u0431\u0443\u043a\u0432\u0430",
+        "letter, character"
+      ],
+      [
+        "noun",
+        "\u0433\u0440\u0430\u043c\u043c\u0430\u0442\u0438\u043a\u0430",
+        "grammer"
+      ],
+      [
+        "noun",
+        "\u0438\u043c\u0435\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u043f\u0430\u0434\u0435\u0436",
+        "nominative case"
+      ],
+      [
+        "noun",
+        "\u0432\u0438\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u043f\u0430\u0434\u0435\u0436",
+        "accusative case"
+      ],
+      [
+        "noun",
+        "\u0440\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u043f\u0430\u0434\u0435\u0436",
+        "genetive case"
+      ],
+      [
+        "noun",
+        "\u0434\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u043f\u0430\u0434\u0435\u0436",
+        "dative case"
+      ],
+      [
+        "noun",
+        "\u0442\u0432\u043e\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u043f\u0430\u0434\u0435\u0436",
+        "instrumental case"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0435\u0434\u043b\u043e\u0436\u043d\u044b\u0439 \u043f\u0430\u0434\u0435\u0436",
+        "prepositional case"
+      ],
+      [
+        "noun",
+        "\u0441\u0440\u0435\u0434\u043d\u044b\u0439 \u0440\u043e\u0434",
+        "neuter gender"
+      ],
+      [
+        "noun",
+        "\u043b\u0438\u0447\u043d\u043e\u0435 \u043c\u0435\u0441\u0442\u043e\u0438\u043c\u0435\u043d\u0438\u0435",
+        "personal pronouns"
+      ],
+      [
+        "noun",
+        "\u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u0435 \u0432\u0440\u0435\u043c\u044f",
+        "present tense"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u0448\u0435\u0434\u0448\u0435\u0435 \u0432\u0440\u0435\u043c\u044f",
+        "past tense"
+      ],
+      [
+        "verb",
+        "\u0441\u0432\u044f\u0437\u0430\u0442\u044c",
+        "to tie, connect, join"
+      ],
+      [
+        "verb",
+        "\u0434\u043e\u0438\u0442\u044c",
+        "to milk"
+      ],
+      [
+        "verb",
+        "\u0438\u0441\u043f\u0443\u0433\u0430\u0442\u044c\u0441\u044f",
+        "to be frightened"
+      ],
+      [
+        "verb",
+        "\u0443\u0434\u0430\u043b\u044f\u0442\u044c",
+        "to delete, remove"
+      ],
+      [
+        "verb",
+        "\u0443\u0434\u0430\u043b\u0438\u0442\u044c",
+        "to delete, remove"
+      ],
+      [
+        "verb",
+        "\u043e\u0441\u0442\u0435\u0440\u0435\u0433\u0430\u0442\u044c\u0441\u044f",
+        "to beware"
+      ],
+      [
+        "verb",
+        "\u043c\u0435\u043d\u044f\u0442\u044c",
+        "to change, swap, replace"
+      ],
+      [
+        "phrase",
+        "\u0410 \u0432\u044b \u0443\u0432\u0435\u0440\u0435\u043d\u044b \u043e\u0431 \u044d\u0442\u043e\u043c?",
+        "Are you sure of this?"
+      ],
+      [
+        "phrase",
+        "\u043f\u043e\u0437\u0432\u043e\u043b\u044c \u043c\u043d\u0435",
+        "let me"
+      ],
+      [
+        "phrase",
+        "\u0432 \u043a\u043e\u043d\u0446\u0435 \u043a\u043e\u043d\u0446\u043e\u0432",
+        "eventually"
+      ],
+      [
+        "phrase",
+        "\u0432\u0440\u0435\u043c\u044f \u043e\u0442 \u0432\u0440\u0435\u043c\u0435\u043d\u0438",
+        "from time to time"
+      ],
+      [
+        "phrase",
+        "\u0447\u0435\u0441\u0442\u043d\u043e \u0433\u043e\u0432\u043e\u0440\u044f",
+        "honestly"
+      ],
+      [
+        "phrase",
+        "\u0442\u043e\u043b\u044c\u043a\u043e \u0447\u0442\u043e",
+        "just now"
+      ],
+      [
+        "preposition",
+        "\u043a\u0430\u043a \u0438\u0440\u043e\u043d\u0438\u0447\u043d\u043e",
+        "how ironic"
+      ],
+      [
+        "preposition",
+        "\u043a\u0430\u043a \u043f\u0440\u043e\u0448\u0451\u043b ____?",
+        "how did the ____ go?"
+      ],
+      [
+        "preposition",
+        "\u042d\u0442\u043e \u043c\u043d\u043e\u0433\u043e \u0434\u043b\u044f \u043c\u0435\u043d\u044f \u0437\u043d\u0430\u0447\u0438\u0442.",
+        "It means a lot to me."
+      ],
+      [
+        "preposition",
+        "\u043f\u043e\u0432\u0435\u0440\u044c",
+        "believe me"
+      ],
+      [
+        "preposition",
+        "\u0432\u043e\u0442 \u0442\u0430\u043a",
+        "there you go"
+      ],
+      [
+        "preposition",
+        "\u041f\u043e\u0432\u0435\u0440\u044c \u0432 \u0441\u0435\u0431\u044f",
+        "Believe in yourself"
+      ],
+      [
+        "interjection",
+        "\u043c\u0438\u043d\u0443\u0442\u043e\u0447\u043a\u0443",
+        "just a minute"
+      ]
+    ],
+    "type": "Other"
+  }
+}

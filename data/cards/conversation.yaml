@@ -1,10 +1,169 @@
-card_set:
-  name: Conversation
-  type: Categorical
-  version: 1
-  cards:
-    - [other, извините, excuse me; Im sorry]
-    - [other, пока, bye! (informal)]
-    - [other, спасибо, thank you]
-    - [interjection, пожалуйста, please]
-    - [verb, поздороваться, to say hello]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Conversation",
+		"type": "categorical",
+		"cards": [
+			[
+				"other",
+				"извините"
+			],
+			[
+				"interjection",
+				"пока!"
+			],
+			[
+				"other",
+				"спасибо"
+			],
+			[
+				"interjection",
+				"пожалуйста"
+			],
+			[
+				"verb",
+				"поздороваться"
+			],
+			[
+				"interjection",
+				"пращай!"
+			],
+			[
+				"phrase",
+				"какая погода сейчас?"
+			],
+			[
+				"interjection",
+				"ладно"
+			],
+			[
+				"other",
+				"пошли"
+			],
+			[
+				"other",
+				"простите"
+			],
+			[
+				"adverb",
+				"точно"
+			],
+			[
+				"phrase",
+				"вот это да﻿!"
+			],
+			[
+				"phrase",
+				"в чем дело?"
+			],
+			[
+				"phrase",
+				"а дальше﻿?"
+			],
+			[
+				"phrase",
+				"ух ты!"
+			],
+			[
+				"phrase",
+				"я согласен"
+			],
+			[
+				"interjection",
+				"молодец"
+			],
+			[
+				"interjection",
+				"удачи!"
+			],
+			[
+				"conjunction",
+				"итак"
+			],
+			[
+				"phrase",
+				"в коком смысле?"
+			],
+			[
+				"phrase",
+				"до скорого"
+			],
+			[
+				"interjection",
+				"замечательно!"
+			],
+			[
+				"verb",
+				"звать"
+			],
+			[
+				"phrase",
+				"как прикажете"
+			],
+			[
+				"phrase",
+				"как пожелаешь"
+			],
+			[
+				"adverb",
+				"конечно"
+			],
+			[
+				"preposition",
+				"вот так"
+			],
+			[
+				"particle",
+				"неужели; неужто"
+			],
+			[
+				"adverb",
+				"действительно"
+			],
+			[
+				"phrase",
+				"слава богу"
+			],
+			[
+				"interjection",
+				"забудь"
+			],
+			[
+				"verb",
+				"пожаловать"
+			],
+			[
+				"phrase",
+				"посмотрим"
+			],
+			[
+				"verb",
+				"простить"
+			],
+			[
+				"phrase",
+				"прошу прошения!"
+			],
+			[
+				"verb",
+				"извиниться"
+			],
+			[
+				"particle",
+				"разве"
+			],
+			[
+				"phrase",
+				"возьми"
+			],
+			[
+				"adverb",
+				"здорово"
+			],
+			[
+				"interjection",
+				"увы"
+			]
+		]
+	}
+}

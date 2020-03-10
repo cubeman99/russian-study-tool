@@ -1,0 +1,124 @@
+{
+	"card_set": {
+		"name": "Pronouns",
+		"version": 1,
+		"cards": [
+			[
+				"pronoun",
+				"кто",
+				"who"
+			],
+			[
+				"pronoun",
+				"какой",
+				"what sort of"
+			],
+			[
+				"pronoun",
+				"что",
+				"what"
+			],
+			[
+				"pronoun",
+				"друг друга",
+				"each other"
+			],
+			[
+				"pronoun",
+				"себя",
+				"self"
+			],
+			[
+				"pronoun",
+				"весь",
+				"the whole, all the"
+			],
+			[
+				"pronoun",
+				"все (plural)",
+				"all"
+			],
+			[
+				"pronoun",
+				"всё (neuter)",
+				"everything"
+			],
+			[
+				"pronoun",
+				"чей",
+				"whose"
+			],
+			[
+				"pronoun",
+				"этот",
+				"this, that"
+			],
+			[
+				"pronoun",
+				"тот",
+				"that"
+			],
+			[
+				"pronoun",
+				"такой",
+				"such a, like that"
+			],
+			[
+				"pronoun",
+				"сам",
+				"(them)self, used for emphasis"
+			],
+			[
+				"pronoun",
+				"самый",
+				"the very"
+			],
+			[
+				"pronoun",
+				"ничто",
+				"nothing"
+			],
+			[
+				"pronoun",
+				"никто",
+				"noone"
+			],
+			[
+				"pronoun",
+				"мой",
+				"my"
+			],
+			[
+				"pronoun",
+				"твой",
+				"your (singular/informal)"
+			],
+			[
+				"pronoun",
+				"наш",
+				"our"
+			],
+			[
+				"pronoun",
+				"ваш",
+				"your (plural/formal)"
+			],
+			[
+				"pronoun",
+				"их",
+				"their"
+			],
+			[
+				"pronoun",
+				"свой",
+				"ones own (my/your/his/etc.)"
+			],
+			[
+				"phrase",
+				"оба (m./n.); обе (f.)",
+				"both"
+			]
+		],
+		"type": "Grammatical"
+	}
+}

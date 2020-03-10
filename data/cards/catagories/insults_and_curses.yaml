@@ -1,27 +1,153 @@
-card_set:
-  name: Insults and Curses
-  type: Categorical
-  version: 1
-  cards:
-    - [verb, ебать, to fuck]
-    - [interjection, Отвали!, Get lost! Fuck off!]
-    - [interjection, чёрт, hells balls; darn]
-    - [noun, блин, pancake; safe version of блять]
-    - [noun, 'дурак (m), дура (f)', fool]
-    - [noun, зануда, tedious and annoyingly obsessive person]
-    - [noun, урод, freak]
-    - [noun, дебил, moron]
-    - [adjective, проклятый, 'damned, cursed']
-    - [verb, проклинать, to curse]
-    - [verb, проклясть, to curse]
-    - [verb, ругаться, 'to swear, curse']
-    - [phrase, Заткнись!, Shut up!]
-    - [noun, разиня, scatterbrain]
-    - [noun, козёл, goat (male)]
-    - [noun, корова, cow]
-    - [noun, дятел, a woodpecker; a stupid person]
-    - [noun, идиот, idiot]
-    - [noun, мудак, asshole]
-    - [noun, подонок, scumbag]
-    - [noun, бардак, a complete mess]
-    - [noun, головорез, 'a desparate man (mischievous, bandit, etc.)']
+{
+	"card_set": {
+		"version": 1,
+		"name": "Insults and Curses",
+		"type": "categorical",
+		"cards": [
+			[
+				"verb",
+				"ебать"
+			],
+			[
+				"interjection",
+				"отвали!"
+			],
+			[
+				"interjection",
+				"черт"
+			],
+			[
+				"noun",
+				"блин"
+			],
+			[
+				"noun",
+				"дурак; дура"
+			],
+			[
+				"noun",
+				"зануда"
+			],
+			[
+				"noun",
+				"урод"
+			],
+			[
+				"noun",
+				"дебил"
+			],
+			[
+				"adjective",
+				"проклятый"
+			],
+			[
+				"verb",
+				"проклинать"
+			],
+			[
+				"verb",
+				"проклясть"
+			],
+			[
+				"verb",
+				"ругаться"
+			],
+			[
+				"phrase",
+				"заткнись!"
+			],
+			[
+				"noun",
+				"разиня"
+			],
+			[
+				"noun",
+				"козел"
+			],
+			[
+				"noun",
+				"корова"
+			],
+			[
+				"noun",
+				"дятел"
+			],
+			[
+				"noun",
+				"идиот"
+			],
+			[
+				"noun",
+				"мудак"
+			],
+			[
+				"noun",
+				"подонок"
+			],
+			[
+				"noun",
+				"бардак"
+			],
+			[
+				"noun",
+				"головорез"
+			],
+			[
+				"phrase",
+				"валять дурака"
+			],
+			[
+				"noun",
+				"зазнайка"
+			],
+			[
+				"noun",
+				"жопа"
+			],
+			[
+				"noun",
+				"мерзавец"
+			],
+			[
+				"noun",
+				"хрен"
+			],
+			[
+				"adjective",
+				"пошлый"
+			],
+			[
+				"interjection",
+				"дерьмо!"
+			],
+			[
+				"interjection",
+				"святые ...!"
+			],
+			[
+				"adjective",
+				"гавно"
+			],
+			[
+				"verb",
+				"исназиловать"
+			],
+			[
+				"phrase",
+				"какого черта!"
+			],
+			[
+				"phrase",
+				"слава богу"
+			],
+			[
+				"noun",
+				"чепуха"
+			],
+			[
+				"verb",
+				"материться"
+			]
+		]
+	}
+}

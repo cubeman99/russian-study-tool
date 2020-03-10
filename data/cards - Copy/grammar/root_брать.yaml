@@ -1,0 +1,84 @@
+{
+  "card_set": {
+    "name": "Root \u0431\u0440\u0430\u0442\u044c",
+    "version": 1,
+    "cards": [
+      [
+        "verb",
+        "\u0431\u0440\u0430\u0442\u044c",
+        "to take"
+      ],
+      [
+        "verb",
+        "\u0443\u0431\u0440\u0430\u0442\u044c",
+        "to remove, place somewhere"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0431\u0440\u0430\u0442\u044c",
+        "to choose, select"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0431\u0440\u0430\u0442\u044c",
+        "to dial; to gather, assemble"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0437\u043e\u0431\u0440\u0430\u0442\u044c",
+        "to dismantle, deconstruct, analyze"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0431\u0440\u0430\u0442\u044c\u0441\u044f",
+        "to pick up, gather, muster"
+      ],
+      [
+        "verb",
+        "\u0434\u043e\u0431\u0440\u0430\u0442\u044c\u0441\u044f",
+        "to reach someone/smth after time/effort"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0431\u0440\u0430\u0442\u044c\u0441\u044f",
+        "to get out from somewhere with difficulty"
+      ],
+      [
+        "verb",
+        "\u0432\u0437\u043e\u0431\u0440\u0430\u0442\u044c\u0441\u044f",
+        "to climb up with effort"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0437\u043e\u0431\u0440\u0430\u0442\u044c\u0441\u044f",
+        "to figure it out"
+      ],
+      [
+        "verb",
+        "\u0443\u0431\u0438\u0440\u0430\u0442\u044c",
+        "remove, tidy up, clear"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u0431\u0438\u0440\u0430\u0442\u044c",
+        "to collect"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0437\u0431\u0438\u0440\u0430\u0442\u044c\u0441\u044f",
+        "to deal with"
+      ],
+      [
+        "phrase",
+        "\u0441\u043e\u0431\u0438\u0440\u0430\u0442\u044c\u0441\u044f + verb",
+        "to get ready, to plan, to intend to do soemthing"
+      ],
+      [
+        "adjective",
+        "\u043d\u0430\u0431\u0440\u0430\u043d\u043d\u044b\u0439",
+        "collected, typed, gathered"
+      ]
+    ],
+    "type": "Grammatical"
+  }
+}

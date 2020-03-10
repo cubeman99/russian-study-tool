@@ -1,68 +1,261 @@
-card_set:
-  name: 4.a Семейная ссора
-  type: Media
-  version: 1
-  cards:
-    - [adjective, семейный, family (adj.)]
-    - [adjective, напряжённый, tense]
-    - [adjective, испуганный, 'frightened, scared']
-    - [adjective, возмущённый, 'outraged, indignant']
-    - [adjective, обиженный, offended]
-    - [adjective, потрясающий, 'terrific, awesome, very exciting']
-    - [adjective, лукавый, 'sly, cunning']
-    - [adjective, натянутый, 'deprived of sincerity, friendliness']
-    - [adjective, заинтересованный, interested]
-    - [adjective, латунный, brass]
-    - [adverb, тесно, 'closely, tightly']
-    - [noun, каприз, whim]
-    - [noun, капля, 'a drop, blob, ounce']
-    - [noun, страсть, passion]
-    - [noun, хватка, 'grip, grasp, clutch']
-    - [noun, груда, a big pile of smth]
-    - [noun, поражение, defeat]
-    - [noun, румянец, blush]
-    - [noun, внешность, the appearance of smth]
-    - [noun, метка, distinctive mark on smth]
-    - [noun, трусиха, coward]
-    - [noun, соблазнение, seduction]
-    - [noun, власть, 'power, authority']
-    - [noun, ссора, quarrel]
-    - [noun, булыжник, cobblestone]
-    - [noun, скольжение, 'a glide, slip, slide']
-    - [noun, куст, bush]
-    - [noun, скорость, speed]
-    - [noun, полный скорость, full speed]
-    - [noun, трение, friction]
-    - [verb, выпасть, to fall out]
-    - [verb, угрожать, to threaten]
-    - [verb, поджечь, 'to set fire, ignite']
-    - [verb, загореть, to tan]
-    - [verb, заявить, 'to state, declare']
-    - [verb, передумать, 'to change your mind, rethink']
-    - [verb, настаивать, to insist]
-    - [verb, игнорировать, to ignore]
-    - [verb, ссориться, to quarrel]
-    - [verb, надуть, to inflate]
-    - [verb, высунуть, to stick out]
-    - [verb, сцепиться, 'to cling, get close to ea.oth.; start to argue']
-    - [verb, соорудить, 'to build, erect']
-    - [verb, толкаться, 'to hustle, justle, shove']
-    - [verb, заскучать, to get bored]
-    - [verb, тянуться, 'to reach out, lengthen']
-    - [verb, одолжить, to lend]
-    - [verb, отдать, 'to give back (return), give out']
-    - [verb, приподнять, to lift slightly]
-    - [verb, раскидать, to scatter (разобросать)]
-    - [verb, улучшить, 'to improve, better']
-    - [verb, улучшать, 'to improve, better']
-    - [verb, полировать, to polish]
-    - [verb, льстить, to flatter]
-    - [verb, присесть, to crouch down; sit for a while]
-    - [verb, обратить внимание, 'to pay attention, take note']
-    - [verb, надуться, 'to pout, be offended']
-    - [verb, наслаждать, 'to enjoy, relish, delight']
-    - [verb, намекать, 'to hind, allude']
-    - [verb, прикусить, 'to lightly bite, squeeze lips']
-    - [verb, звенеть, 'to clink, ring, ding']
-    - [phrase, вон там, out there]
-    - [phrase, произойдёт, 'will happen, take place']
+{
+	"card_set": {
+		"version": 1,
+		"name": "4.a Семейная ссора",
+		"type": "media",
+		"cards": [
+			[
+				"adjective",
+				"семейный"
+			],
+			[
+				"adjective",
+				"напряженный"
+			],
+			[
+				"adjective",
+				"испуганный"
+			],
+			[
+				"adjective",
+				"возмущенный"
+			],
+			[
+				"adjective",
+				"обиженный"
+			],
+			[
+				"adjective",
+				"потрясающий"
+			],
+			[
+				"adjective",
+				"лукавый"
+			],
+			[
+				"adjective",
+				"натянутый"
+			],
+			[
+				"adjective",
+				"заинтересованный"
+			],
+			[
+				"adjective",
+				"латунный"
+			],
+			[
+				"adverb",
+				"тесно"
+			],
+			[
+				"noun",
+				"каприз"
+			],
+			[
+				"noun",
+				"капля"
+			],
+			[
+				"noun",
+				"страсть"
+			],
+			[
+				"noun",
+				"хватка"
+			],
+			[
+				"noun",
+				"груда"
+			],
+			[
+				"noun",
+				"поражение"
+			],
+			[
+				"noun",
+				"румянец"
+			],
+			[
+				"noun",
+				"внешность"
+			],
+			[
+				"noun",
+				"метка"
+			],
+			[
+				"noun",
+				"трусиха"
+			],
+			[
+				"noun",
+				"соблазнение"
+			],
+			[
+				"noun",
+				"власть"
+			],
+			[
+				"noun",
+				"ссора"
+			],
+			[
+				"noun",
+				"булыжник"
+			],
+			[
+				"noun",
+				"скольжение"
+			],
+			[
+				"noun",
+				"куст"
+			],
+			[
+				"noun",
+				"скорость"
+			],
+			[
+				"noun",
+				"полный скорость"
+			],
+			[
+				"noun",
+				"трение"
+			],
+			[
+				"verb",
+				"выпасть"
+			],
+			[
+				"verb",
+				"угрожать"
+			],
+			[
+				"verb",
+				"поджечь"
+			],
+			[
+				"verb",
+				"загореть"
+			],
+			[
+				"verb",
+				"заявить"
+			],
+			[
+				"verb",
+				"передумать"
+			],
+			[
+				"verb",
+				"настаивать"
+			],
+			[
+				"verb",
+				"игнорировать"
+			],
+			[
+				"verb",
+				"ссориться"
+			],
+			[
+				"verb",
+				"надуть"
+			],
+			[
+				"verb",
+				"высунуть"
+			],
+			[
+				"verb",
+				"сцепиться"
+			],
+			[
+				"verb",
+				"соорудить"
+			],
+			[
+				"verb",
+				"толкаться"
+			],
+			[
+				"verb",
+				"заскучать"
+			],
+			[
+				"verb",
+				"тянуться"
+			],
+			[
+				"verb",
+				"одолжить"
+			],
+			[
+				"verb",
+				"отдать"
+			],
+			[
+				"verb",
+				"приподнять"
+			],
+			[
+				"verb",
+				"раскидать"
+			],
+			[
+				"verb",
+				"улучшить"
+			],
+			[
+				"verb",
+				"улучшать"
+			],
+			[
+				"verb",
+				"полировать"
+			],
+			[
+				"verb",
+				"льстить"
+			],
+			[
+				"verb",
+				"присесть"
+			],
+			[
+				"verb",
+				"обратить внимание"
+			],
+			[
+				"verb",
+				"надуться"
+			],
+			[
+				"verb",
+				"наслаждать"
+			],
+			[
+				"verb",
+				"намекать"
+			],
+			[
+				"verb",
+				"прикусить"
+			],
+			[
+				"verb",
+				"звенеть"
+			],
+			[
+				"phrase",
+				"вон там"
+			],
+			[
+				"phrase",
+				"произойдет"
+			]
+		]
+	}
+}

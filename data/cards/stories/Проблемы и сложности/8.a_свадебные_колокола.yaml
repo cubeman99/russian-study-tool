@@ -1,75 +1,285 @@
-card_set:
-  name: 8.a Свадебные колокола
-  type: Media
-  version: 1
-  cards:
-    - [verb, относиться, to relate]
-    - [adverb, относительно; касаемо, regardingg]
-    - [verb, ойкнуть, to hoot]
-    - [noun, подзатыльник, slap on the back of the head]
-    - [noun, затылок, back of the head]
-    - [adjective, нудный, tedious]
-    - [noun, зануда, tedious and annoyingly obsessive person]
-    - [adverb, пристально, 'intently, fixedly']
-    - [verb, становиться, 'to become, begin, come']
-    - [noun, след, 'trace, trail, footprint']
-    - [verb, сузить, to narrow down]
-    - [verb, разинуть, 'to open widely, to gape']
-    - [adjective, страстный, passionate]
-    - [verb, кувыркаться, 'to tumble, somersault']
-    - [adjective, усиленный, 'strengthened, reinforced']
-    - [noun, титан, titanium]
-    - [noun, одобрение, 'the "okay", approval']
-    - [verb, выяснять, 'to find out, clear up']
-    - [adjective, невинный, innocent]
-    - [adjective, неудачный, 'unsuccessful, unlucky']
-    - [other, обеих, of both]
-    - [verb, перепробудить, to reawaken]
-    - [adjective, слышный, 'audible, can be heard']
-    - [verb, употребить, 'to employ, apply smth for smth']
-    - [noun, пение, singing]
-    - [noun, память, memory]
-    - [verb, прочесть, 'to finish reading, to read through']
-    - [verb, нахмуриться, to frown]
-    - [noun, сосредоточение, a concentration (of smth)]
-    - [adjective, сосредоточенный, concentrated]
-    - [noun, трактат, a scientific work; a treatise]
-    - [adjective, возбуждённый, excited]
-    - [adjective, всебълемющий, comprehensive]
-    - [adjective, рассеянный, 'scattered, dispelled, dissipated; not able to concentrate,
-    innattentive']
-    - [verb, листать, 'to flip through, leaf through']
-    - [preposition, вдоль + gen., along]
-    - [verb, рыться, 'to rummage, burrow']
-    - [adjective, набранный, 'collected, typed, gathered']
-    - [verb, сотрясать, 'to shake, jar']
-    - [noun, взрыв, explosion]
-    - [adjective, встревоженный, alarmed]
-    - [verb, снести, 'to carry down, tear down']
-    - [noun, этаж, 'floor, story, level']
-    - [adverb, добровольно, voluntarily]
-    - [noun, вторжение, invasion]
-    - [verb, копаться, 'to delve, rummage in, bury yourself in']
-    - [noun, ласка, affection]
-    - [verb, перевить, 'to weave, cross']
-    - [verb, подавить, 'to suppress, crush']
-    - [verb, удерживать себя, to hold back]
-    - [verb, расстаться, to break up with someone]
-    - [verb, распутывать, 'to unravel, untangle']
-    - [noun, просьба, a request to satisfy some needs]
-    - [noun, беседа, 'a chat, conversation']
-    - [adverb, вглубь, 'deep, into the depths of']
-    - [noun, услуга, service]
-    - [verb, ненависть, hatred]
-    - [noun, взвизг, a screech]
-    - [noun, узы, 'bonds, ties, links']
-    - [adverb, вряд ли..., its unlikely that...]
-    - [adjective, липкий; липучий, sticky]
-    - [verb, гнуть, 'to bend, flex']
-    - [noun, докладь, a report]
-    - [noun, жажда, 'thirst, craving']
-    - [verb, жаждать, 'to crave, thirst']
-    - [adjective, жаждущий, thirsty]
-    - [verb, ощетиниться, 'to raised the hair on back, prepare to attack']
-    - [verb, осквернить, 'to desecrate, dishonor']
-    - [noun, колокол, bell]
+{
+	"card_set": {
+		"version": 1,
+		"name": "8.a Свадебные колокола",
+		"type": "media",
+		"cards": [
+			[
+				"verb",
+				"относиться"
+			],
+			[
+				"adverb",
+				"относительно; касаемо"
+			],
+			[
+				"verb",
+				"ойкнуть"
+			],
+			[
+				"noun",
+				"подзатыльник"
+			],
+			[
+				"noun",
+				"затылок"
+			],
+			[
+				"adjective",
+				"нудный"
+			],
+			[
+				"noun",
+				"зануда"
+			],
+			[
+				"adverb",
+				"пристально"
+			],
+			[
+				"verb",
+				"становиться"
+			],
+			[
+				"noun",
+				"след"
+			],
+			[
+				"verb",
+				"сузить"
+			],
+			[
+				"verb",
+				"разинуть"
+			],
+			[
+				"adjective",
+				"страстный"
+			],
+			[
+				"verb",
+				"кувыркаться"
+			],
+			[
+				"adjective",
+				"усиленный"
+			],
+			[
+				"noun",
+				"титан"
+			],
+			[
+				"noun",
+				"одобрение"
+			],
+			[
+				"verb",
+				"выяснять"
+			],
+			[
+				"adjective",
+				"невинный"
+			],
+			[
+				"adjective",
+				"неудачный"
+			],
+			[
+				"other",
+				"обеих"
+			],
+			[
+				"verb",
+				"перепробудить"
+			],
+			[
+				"adjective",
+				"слышный"
+			],
+			[
+				"verb",
+				"употребить"
+			],
+			[
+				"noun",
+				"пение"
+			],
+			[
+				"noun",
+				"память"
+			],
+			[
+				"verb",
+				"прочесть"
+			],
+			[
+				"verb",
+				"нахмуриться"
+			],
+			[
+				"noun",
+				"сосредоточение"
+			],
+			[
+				"adjective",
+				"сосредоточенный"
+			],
+			[
+				"noun",
+				"трактат"
+			],
+			[
+				"adjective",
+				"возбужденный"
+			],
+			[
+				"adjective",
+				"всебълемющий"
+			],
+			[
+				"adjective",
+				"рассеянный"
+			],
+			[
+				"verb",
+				"листать"
+			],
+			[
+				"preposition",
+				"вдоль + gen."
+			],
+			[
+				"verb",
+				"рыться"
+			],
+			[
+				"adjective",
+				"набранный"
+			],
+			[
+				"verb",
+				"сотрясать"
+			],
+			[
+				"noun",
+				"взрыв"
+			],
+			[
+				"adjective",
+				"встревоженный"
+			],
+			[
+				"verb",
+				"снести"
+			],
+			[
+				"noun",
+				"этаж"
+			],
+			[
+				"adverb",
+				"добровольно"
+			],
+			[
+				"noun",
+				"вторжение"
+			],
+			[
+				"verb",
+				"копаться"
+			],
+			[
+				"noun",
+				"ласка"
+			],
+			[
+				"verb",
+				"перевить"
+			],
+			[
+				"verb",
+				"подавить"
+			],
+			[
+				"verb",
+				"удерживать себя"
+			],
+			[
+				"verb",
+				"расстаться"
+			],
+			[
+				"verb",
+				"распутывать"
+			],
+			[
+				"noun",
+				"просьба"
+			],
+			[
+				"noun",
+				"беседа"
+			],
+			[
+				"adverb",
+				"вглубь"
+			],
+			[
+				"noun",
+				"услуга"
+			],
+			[
+				"verb",
+				"ненависть"
+			],
+			[
+				"noun",
+				"взвизг"
+			],
+			[
+				"noun",
+				"узы"
+			],
+			[
+				"adverb",
+				"вряд ли..."
+			],
+			[
+				"adjective",
+				"липкий; липучий"
+			],
+			[
+				"verb",
+				"гнуть"
+			],
+			[
+				"noun",
+				"докладь"
+			],
+			[
+				"noun",
+				"жажда"
+			],
+			[
+				"verb",
+				"жаждать"
+			],
+			[
+				"adjective",
+				"жаждущий"
+			],
+			[
+				"verb",
+				"ощетиниться"
+			],
+			[
+				"verb",
+				"осквернить"
+			],
+			[
+				"noun",
+				"колокол"
+			]
+		]
+	}
+}

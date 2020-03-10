@@ -1,0 +1,309 @@
+{
+  "card_set": {
+    "name": "New 17",
+    "version": 1,
+    "cards": [
+      [
+        "adjective",
+        "\u043e\u0442\u0432\u0440\u0430\u0442\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439",
+        "disgusting"
+      ],
+      [
+        "adjective",
+        "\u0445\u0440\u0443\u0441\u0442\u0430\u043b\u044c\u043d\u044b\u0439",
+        "crystal"
+      ],
+      [
+        "adjective",
+        "\u0448\u0443\u043c\u043d\u044b\u0439",
+        "noisy"
+      ],
+      [
+        "adjective",
+        "\u043d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u044b\u0439",
+        "unknown"
+      ],
+      [
+        "adjective",
+        "\u043f\u043e\u043b\u044f\u0440\u043d\u044b\u0439",
+        "polar"
+      ],
+      [
+        "adjective",
+        "\u043d\u0435\u0436\u043d\u044b\u0439",
+        "gentle, tender, affectionate"
+      ],
+      [
+        "adjective",
+        "\u043f\u0440\u0438\u0432\u044b\u0447\u043d\u044b\u0439",
+        "habitual, accustomed"
+      ],
+      [
+        "adjective",
+        "\u0441\u043b\u0430\u0432\u043d\u044b\u0439",
+        "glorious, nice"
+      ],
+      [
+        "adverb",
+        "\u0441\u043e\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e",
+        "respectively, accordingly"
+      ],
+      [
+        "noun",
+        "\u0441\u0443\u0434\u0431\u0430",
+        "fate"
+      ],
+      [
+        "noun",
+        "\u0448\u043f\u0438\u043e\u043d",
+        "spy"
+      ],
+      [
+        "noun",
+        "\u0432\u043e\u0441\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u0435",
+        "a memory, recollection"
+      ],
+      [
+        "noun",
+        "\u0441\u0431\u043e\u0440",
+        "gathering, collection"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0438\u0437\u043d\u0430\u043d\u0438\u0435",
+        "confession"
+      ],
+      [
+        "noun",
+        "\u0432\u043e\u0440\u043e\u0442",
+        "gate; shirt collar"
+      ],
+      [
+        "noun",
+        "\u043b\u044e\u0441\u0442\u0440\u0430",
+        "chandelier"
+      ],
+      [
+        "noun",
+        "\u0432\u043e\u043b\u043d\u0435\u043d\u0438\u0435",
+        "excitement"
+      ],
+      [
+        "noun",
+        "\u0440\u0430\u0441\u0442\u0435\u043d\u0438\u0435",
+        "plant, herb"
+      ],
+      [
+        "noun",
+        "\u0432\u043e\u0437\u0432\u0440\u0430\u0449\u0435\u043d\u0438\u0435",
+        "return"
+      ],
+      [
+        "noun",
+        "\u0434\u0440\u0430\u043a\u0430",
+        "a fight, tussle"
+      ],
+      [
+        "noun",
+        "\u0431\u043e\u043a",
+        "side of torso"
+      ],
+      [
+        "noun",
+        "\u043e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430",
+        "stop, layover"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u0438\u0441\u043c\u043e\u0442\u0440\u0430",
+        "supervision"
+      ],
+      [
+        "noun",
+        "\u043c\u0435\u0447",
+        "sword"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u043a\u0443\u043f\u043a\u0430",
+        "purchase"
+      ],
+      [
+        "noun",
+        "\u043c\u043e\u0440\u0434\u0430",
+        "muzzle, snout"
+      ],
+      [
+        "noun",
+        "\u043f\u043e\u0441\u0430\u0434\u043a\u0430",
+        "landing"
+      ],
+      [
+        "noun",
+        "\u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u0435",
+        "permission, resolution"
+      ],
+      [
+        "noun",
+        "\u0441\u0444\u0435\u0440\u0430",
+        "sphere, area, field, scope"
+      ],
+      [
+        "noun",
+        "\u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435",
+        "meaning, value"
+      ],
+      [
+        "noun",
+        "\u043e\u043f\u044b\u0442",
+        "experience"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0434\u0432\u0435\u0441\u0442\u0438",
+        "to let down"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0441\u043f\u0430\u0445\u043d\u0443\u0442\u044c",
+        "to open wide, throw open"
+      ],
+      [
+        "verb",
+        "\u0431\u043b\u0435\u0441\u0442\u0435\u0442\u044c",
+        "to glisten, shine"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0447\u0438\u0441\u0442\u0438\u0442\u044c",
+        "to polish"
+      ],
+      [
+        "verb",
+        "\u0443\u043d\u044f\u0442\u044c",
+        "to quiet, calm"
+      ],
+      [
+        "verb",
+        "\u0443\u043d\u0438\u043c\u0430\u0442\u044c",
+        "to quiet, calm"
+      ],
+      [
+        "verb",
+        "\u0443\u0441\u0442\u0440\u043e\u0438\u0442\u044c",
+        "to arrange"
+      ],
+      [
+        "verb",
+        "\u0443\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0442\u044c",
+        "to arrange"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043b\u0438\u0442\u044c",
+        "to fill, overflow, flood"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043b\u0438\u0432\u0430\u0442\u044c",
+        "to fill, overflow, flood"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0438\u0437\u043d\u0430\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to confess"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0438\u0437\u043d\u0430\u0442\u044c\u0441\u044f",
+        "to confess"
+      ],
+      [
+        "verb",
+        "\u0432\u0435\u0441\u0435\u043b\u0438\u0442\u044c\u0441\u044f",
+        "to have fun"
+      ],
+      [
+        "verb",
+        "\u043a\u0443\u043f\u0430\u0442\u044c\u0441\u044f",
+        "to bathe"
+      ],
+      [
+        "verb",
+        "\u0443\u0431\u0438\u0432\u0430\u0442\u044c",
+        "to kill"
+      ],
+      [
+        "verb",
+        "\u0443\u0431\u0438\u0442\u044c",
+        "to kill"
+      ],
+      [
+        "verb",
+        "\u043e\u0446\u0435\u043d\u0438\u0432\u0430\u0442\u044c",
+        "to evaluate"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u043a\u0430\u0437\u0430\u0442\u044c",
+        "to punish"
+      ],
+      [
+        "verb",
+        "\u043a\u0438\u0432\u0430\u0442\u044c",
+        "to nod"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u043e\u043a\u0430\u0442\u0438\u0442\u044c\u0441\u044f",
+        "to go for a ride"
+      ],
+      [
+        "verb",
+        "\u043f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0430\u0442\u044c\u0441\u044f",
+        "to switch"
+      ],
+      [
+        "verb",
+        "\u0441\u0431\u043b\u0438\u0436\u0430\u0442\u044c",
+        "to bring together"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u0440\u0430\u0434\u043e\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to rejoice"
+      ],
+      [
+        "phrase",
+        "\u0443\u0433\u043e\u0449\u0430\u0439\u0441\u044f",
+        "treat/help yourself"
+      ],
+      [
+        "phrase",
+        "\u0441 \u043c\u0438\u043d\u0443\u0442\u044b \u043d\u0430 \u043c\u0438\u043d\u0443\u0442\u0443",
+        "at any moment"
+      ],
+      [
+        "phrase",
+        "\u0438\u0437 \u0433\u043e\u0434\u0430 \u0432 \u0433\u043e\u0434",
+        "year after year"
+      ],
+      [
+        "phrase",
+        "\u043f\u043e \u043f\u043e\u043b\u043d\u043e\u0439",
+        "to the fullest"
+      ],
+      [
+        "phrase",
+        "\u043a\u0430\u043a \u043f\u043e\u0436\u0435\u043b\u0430\u0435\u0448\u044c",
+        "as you wish"
+      ],
+      [
+        "phrase",
+        "\u043a \u0441\u043e\u0436\u0430\u043b\u0435\u043d\u0438\u044e",
+        "unfortunitely"
+      ]
+    ],
+    "type": "Other"
+  }
+}

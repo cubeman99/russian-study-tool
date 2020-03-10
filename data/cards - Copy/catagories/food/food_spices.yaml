@@ -1,0 +1,99 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Spices",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"специи",
+				"spice"
+			],
+			[
+				"noun",
+				"соль",
+				"salt"
+			],
+			[
+				"noun",
+				"сахар",
+				"sugar"
+			],
+			[
+				"noun",
+				"тимьян",
+				"thyme"
+			],
+			[
+				"noun",
+				"черный перец",
+				"pepper"
+			],
+			[
+				"noun",
+				"маслина?, оливка",
+				"olive"
+			],
+			[
+				"noun",
+				"каперсы",
+				"caper"
+			],
+			[
+				"noun",
+				"шафран",
+				"saffron"
+			],
+			[
+				"noun",
+				"ваниль",
+				"vanilla"
+			],
+			[
+				"noun",
+				"имбирь",
+				"ginger"
+			],
+			[
+				"noun",
+				"розмарин",
+				"rosemary"
+			],
+			[
+				"noun",
+				"горчица",
+				"mustard"
+			],
+			[
+				"noun",
+				"корица",
+				"cinnamon"
+			],
+			[
+				"noun",
+				"базилик",
+				"basil"
+			],
+			[
+				"adjective",
+				"ванильный",
+				"vanilla (adj.)"
+			],
+			[
+				"noun",
+				"сахарница",
+				"a sugar contanier"
+			],
+			[
+				"noun",
+				"солокна",
+				"a salt shaker"
+			],
+			[
+				"noun",
+				"перечница",
+				"a pepper shaker"
+			]
+		]
+	}
+}

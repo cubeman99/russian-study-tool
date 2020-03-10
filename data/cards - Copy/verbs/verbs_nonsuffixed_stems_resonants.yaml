@@ -1,0 +1,224 @@
+{
+  "card_set": {
+    "name": "Resonant Stems (\u0432, \u0439, \u043c, \u043d, \u0440)",
+    "version": 1,
+    "cards": [
+      [
+        "verb",
+        "\u0436\u0438\u0442\u044c",
+        "to live"
+      ],
+      [
+        "verb",
+        "\u043f\u043b\u044b\u0442\u044c",
+        "to swim"
+      ],
+      [
+        "verb",
+        "\u0441\u043b\u044b\u0442\u044c",
+        "to be, be reputed"
+      ],
+      [
+        "verb",
+        "\u0441\u0442\u0430\u0442\u044c",
+        "to become; to begin"
+      ],
+      [
+        "verb",
+        "\u0432\u0441\u0442\u0430\u0442\u044c",
+        "to stand up"
+      ],
+      [
+        "verb",
+        "\u0434\u0435\u0442\u044c",
+        "to put, do with"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0434\u0435\u0442\u044c",
+        "to put on"
+      ],
+      [
+        "verb",
+        "\u043e\u0434\u0435\u0442\u044c\u0441\u044f",
+        "to get dressed"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0437\u0434\u0435\u0442\u044c\u0441\u044f",
+        "to get undressed"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u043a\u0440\u044b\u0442\u044c",
+        "to open"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043a\u0440\u044b\u0442\u044c",
+        "to close"
+      ],
+      [
+        "verb",
+        "\u043c\u044b\u0442\u044c",
+        "to wash"
+      ],
+      [
+        "verb",
+        "\u043d\u044b\u0442\u044c",
+        "to whine, complain, ache"
+      ],
+      [
+        "verb",
+        "\u0440\u044b\u0442\u044c",
+        "to dig"
+      ],
+      [
+        "verb",
+        "\u0431\u0438\u0442\u044c",
+        "to beat"
+      ],
+      [
+        "verb",
+        "\u0432\u0438\u0442\u044c",
+        "to twist"
+      ],
+      [
+        "verb",
+        "\u043b\u0438\u0442\u044c",
+        "to pour"
+      ],
+      [
+        "verb",
+        "\u043f\u0438\u0442\u044c",
+        "to drink"
+      ],
+      [
+        "verb",
+        "\u0448\u0438\u0442\u044c",
+        "to sew"
+      ],
+      [
+        "verb",
+        "\u0434\u0443\u0442\u044c",
+        "to blow"
+      ],
+      [
+        "verb",
+        "\u0433\u043d\u0438\u0442\u044c",
+        "to rot"
+      ],
+      [
+        "verb",
+        "\u043f\u0435\u0442\u044c",
+        "to sing"
+      ],
+      [
+        "verb",
+        "\u0431\u0440\u0438\u0442\u044c",
+        "to shave"
+      ],
+      [
+        "verb",
+        "\u0432\u0437\u044f\u0442\u044c",
+        "to take"
+      ],
+      [
+        "verb",
+        "\u0436\u0430\u0442\u044c (\u0436\u043c\u0443, \u0436\u043c\u0451\u0448\u044c, \u2026 \u0436\u043c\u0443\u0442)",
+        "to press, squeeze"
+      ],
+      [
+        "verb",
+        "\u0436\u0430\u0442\u044c (\u0436\u043d\u0443, \u0436\u043d\u0451\u0448\u044c, \u2026 \u0436\u043d\u0443\u0442)",
+        "to reap"
+      ],
+      [
+        "verb",
+        "\u043c\u044f\u0442\u044c",
+        "to crumple"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0447\u0430\u0442\u044c",
+        "to begin"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0441\u043f\u044f\u0442\u044c",
+        "to crucify"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043d\u044f\u0442\u044c",
+        "to borrow"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u043d\u044f\u0442\u044c",
+        "to hire"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043d\u044f\u0442\u044c",
+        "to understand"
+      ],
+      [
+        "verb",
+        "\u043e\u0431\u043d\u044f\u0442\u044c",
+        "to embrace, hug"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u043d\u044f\u0442\u044c",
+        "to take away"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0434\u043d\u044f\u0442\u044c",
+        "to raise, lift"
+      ],
+      [
+        "verb",
+        "\u0441\u043d\u044f\u0442\u044c",
+        "to take off"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u0438\u043d\u044f\u0442\u044c",
+        "to take (smth), to admit, accept"
+      ],
+      [
+        "verb",
+        "\u0442\u0435\u0440\u0435\u0442\u044c",
+        "to rub, grate"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0442\u0435\u0440\u0435\u0442\u044c",
+        "to rub (dry)"
+      ],
+      [
+        "verb",
+        "\u0441\u0442\u0435\u0440\u0435\u0442\u044c",
+        "to erase"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u043f\u0435\u0440\u0435\u0442\u044c",
+        "to lock"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u043f\u0435\u0440\u0435\u0442\u044c",
+        "to unlock"
+      ],
+      [
+        "verb",
+        "\u0443\u043c\u0435\u0440\u0435\u0442\u044c",
+        "to die"
+      ]
+    ],
+    "type": "Grammatical"
+  }
+}

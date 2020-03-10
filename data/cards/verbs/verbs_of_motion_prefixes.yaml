@@ -1,18 +1,61 @@
-card_set:
-  name: Verbs of Motion Prefixes
-  type: Grammatical
-  version: 1
-  cards:
-    - [other, при-, 'coming motion, arriving motion']
-    - [other, у-, 'leaving motion, departing']
-    - [other, до-, 'reaching motion, as far as']
-    - [other, от-, 'withdrawal motion, away from']
-    - [other, в- (во-), 'coming in/into motion, entering motion']
-    - [other, вы-, 'coming out of motion, exiting motion']
-    - [other, вс-, 'ascending motion, going up']
-    - [other, с-, 'descending motion, going down']
-    - [other, под-, 'reaching (from under) motion, come up to, approach']
-    - [other, за-, '1) drop in, stop by; 2) going behind motion']
-    - [other, пере-, 1) across motion; 2) moving motion]
-    - [other, об-, 'around motion, bypass']
-    - [other, про-, 'going past motion, going by, going through']
+{
+	"card_set": {
+		"version": 1,
+		"name": "Verbs of Motion Prefixes",
+		"type": "categorical",
+		"cards": [
+			[
+				"other",
+				"при-"
+			],
+			[
+				"other",
+				"у-"
+			],
+			[
+				"other",
+				"до-"
+			],
+			[
+				"other",
+				"от-"
+			],
+			[
+				"other",
+				"в- (во-)"
+			],
+			[
+				"other",
+				"вы-"
+			],
+			[
+				"other",
+				"вс-"
+			],
+			[
+				"other",
+				"с-"
+			],
+			[
+				"other",
+				"под-"
+			],
+			[
+				"other",
+				"за-"
+			],
+			[
+				"other",
+				"пере-"
+			],
+			[
+				"other",
+				"об-"
+			],
+			[
+				"other",
+				"про-"
+			]
+		]
+	}
+}

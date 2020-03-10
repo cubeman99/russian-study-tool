@@ -1,12 +1,37 @@
-card_set:
-  name: Misc Verbs
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, разговарывать, to converse]
-    - [verb, превратиться, to turn into]
-    - [verb, добиваться, to strive for]
-    - [verb, достигать, to achieve]
-    - [verb, пугаться, to be frightened of]
-    - [verb, избегать, to avoid]
-    - [verb, нравиться, to appeal to]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Misc Verbs",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"разговарывать"
+			],
+			[
+				"verb",
+				"превратиться"
+			],
+			[
+				"verb",
+				"добиваться"
+			],
+			[
+				"verb",
+				"достигать"
+			],
+			[
+				"verb",
+				"пугаться"
+			],
+			[
+				"verb",
+				"избегать"
+			],
+			[
+				"verb",
+				"нравиться"
+			]
+		]
+	}
+}

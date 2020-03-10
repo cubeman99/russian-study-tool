@@ -1,37 +1,137 @@
-card_set:
-  name: 'Adjectives: Soft -н'
-  type: Grammatical
-  version: 1
-  cards:
-    - [adjective, весенний, spring]
-    - [adjective, зимний, winter]
-    - [adjective, летний, summer]
-    - [adjective, осенний, autumn]
-    - [adjective, вчерашний, yesterdays]
-    - [adjective, завтрашний, tomorrows]
-    - [adjective, сегодняшний, todays]
-    - [adjective, ранний, early]
-    - [adjective, поздний, late]
-    - [adjective, вечерний, evening]
-    - [adjective, утренний, morning]
-    - [adjective, нынешний, present-day]
-    - [adjective, теперешний, present-day (nowadays)]
-    - [adjective, тогдашний, of that time]
-    - [adjective, недавний, recent]
-    - [adjective, давний, 'old, long-standing']
-    - [adjective, древний, ancient]
-    - [adjective, прежний, former]
-    - [adjective, верхний, 'upper, top']
-    - [adjective, нижний, 'lower, bottom']
-    - [adjective, передний, front]
-    - [adjective, средний, middle]
-    - [adjective, задний, 'back, rear']
-    - [adjective, здешний, local]
-    - [adjective, ближний, near]
-    - [adjective, дальний, far]
-    - [adjective, внутренний, internal]
-    - [adjective, внешний, external]
-    - [adjective, домашний, 'home, domestic']
-    - [adjective, соседний, neighboring]
-    - [adjective, лишний, 'spare, unnecessary']
-    - [adjective, посторонний, 'outside, extraneous']
+{
+	"card_set": {
+		"version": 1,
+		"name": "Adjectives: Soft -н",
+		"type": "grammatical",
+		"cards": [
+			[
+				"adjective",
+				"весенний"
+			],
+			[
+				"adjective",
+				"зимний"
+			],
+			[
+				"adjective",
+				"летний"
+			],
+			[
+				"adjective",
+				"осенний"
+			],
+			[
+				"adjective",
+				"вчерашний"
+			],
+			[
+				"adjective",
+				"завтрашний"
+			],
+			[
+				"adjective",
+				"сегодняшний"
+			],
+			[
+				"adjective",
+				"ранний"
+			],
+			[
+				"adjective",
+				"поздний"
+			],
+			[
+				"adjective",
+				"вечерний"
+			],
+			[
+				"adjective",
+				"утренний"
+			],
+			[
+				"adjective",
+				"нынешний"
+			],
+			[
+				"adjective",
+				"теперешний"
+			],
+			[
+				"adjective",
+				"тогдашний"
+			],
+			[
+				"adjective",
+				"недавний"
+			],
+			[
+				"adjective",
+				"давний"
+			],
+			[
+				"adjective",
+				"древний"
+			],
+			[
+				"adjective",
+				"прежний"
+			],
+			[
+				"adjective",
+				"верхний"
+			],
+			[
+				"adjective",
+				"нижний"
+			],
+			[
+				"adjective",
+				"передний"
+			],
+			[
+				"adjective",
+				"средний"
+			],
+			[
+				"adjective",
+				"задний"
+			],
+			[
+				"adjective",
+				"здешний"
+			],
+			[
+				"adjective",
+				"ближний"
+			],
+			[
+				"adjective",
+				"дальний"
+			],
+			[
+				"adjective",
+				"внутренний"
+			],
+			[
+				"adjective",
+				"внешний"
+			],
+			[
+				"adjective",
+				"домашний"
+			],
+			[
+				"adjective",
+				"соседний"
+			],
+			[
+				"adjective",
+				"лишний"
+			],
+			[
+				"adjective",
+				"посторонний"
+			]
+		]
+	}
+}

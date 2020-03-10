@@ -1,0 +1,149 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Drinks",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"напитки",
+				"drinks"
+			],
+			[
+				"noun",
+				"чай",
+				"tea"
+			],
+			[
+				"noun",
+				"кофе",
+				"coffee"
+			],
+			[
+				"noun",
+				"сок",
+				"juice"
+			],
+			[
+				"noun",
+				"апельсиновый",
+				"orange juice"
+			],
+			[
+				"noun",
+				"яблочный (сок)",
+				"apple juice"
+			],
+			[
+				"noun",
+				"грушевый (сок)",
+				"pear juice"
+			],
+			[
+				"noun",
+				"персиковый (сок)",
+				"peach juice"
+			],
+			[
+				"noun",
+				"абрикосовый (сок)",
+				"apricot juice"
+			],
+			[
+				"noun",
+				"вишнёвый (сок)",
+				"cherry juice"
+			],
+			[
+				"noun",
+				"смешанный (сок)",
+				"mixed juice"
+			],
+			[
+				"noun",
+				"грейпфрутовый (сок)",
+				"gapefruit juice"
+			],
+			[
+				"noun",
+				"молочный коктейль",
+				"milkshake"
+			],
+			[
+				"noun",
+				"вода",
+				"water"
+			],
+			[
+				"noun",
+				"молоко",
+				"milk"
+			],
+			[
+				"noun",
+				"кефир",
+				"kefir"
+			],
+			[
+				"noun",
+				"сливки",
+				"cream"
+			],
+			[
+				"noun",
+				"лимонад",
+				"lemonade"
+			],
+			[
+				"noun",
+				"кока-кола",
+				"coke"
+			],
+			[
+				"noun",
+				"какао",
+				"hot chocolate"
+			],
+			[
+				"noun",
+				"бокал",
+				"wine glass"
+			],
+			[
+				"verb",
+				"распить",
+				"to drink around, between multiple people"
+			],
+			[
+				"verb",
+				"выпить",
+				"to drink (usually alcohol)"
+			],
+			[
+				"verb",
+				"допить",
+				"to finish drinking"
+			],
+			[
+				"phrase",
+				"отпить (от)",
+				"to sip off the top (of smth)"
+			],
+			[
+				"verb",
+				"перепить",
+				"to drink too much"
+			],
+			[
+				"noun",
+				"соломка",
+				"straw"
+			],
+			[
+				"noun",
+				"молочник",
+				"a milk jug"
+			]
+		]
+	}
+}

@@ -1,0 +1,44 @@
+{
+  "card_set": {
+    "name": "Communication",
+    "version": 1,
+    "cards": [
+      [
+        "verb",
+        "\u0441\u0432\u044f\u0437\u044b\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to contact, get in contact with"
+      ],
+      [
+        "noun",
+        "\u0431\u0435\u0441\u0435\u0434\u0430",
+        "a chat, conversation"
+      ],
+      [
+        "noun",
+        "\u043f\u0440\u043e\u0441\u044c\u0431\u0430",
+        "a request to satisfy some needs"
+      ],
+      [
+        "verb",
+        "\u0434\u043e\u043f\u0438\u0441\u0430\u0442\u044c",
+        "to finish writing something"
+      ],
+      [
+        "verb",
+        "\u043f\u0435\u0440\u0435\u043f\u0438\u0441\u044b\u0432\u0430\u0442\u044c\u0441\u044f",
+        "to chat, text someone, correspond"
+      ],
+      [
+        "noun",
+        "\u043f\u0435\u0440\u0435\u043f\u0438\u0441\u043a\u0430",
+        "a correspondence between two people"
+      ],
+      [
+        "verb",
+        "\u0441\u043e\u0446\u0438\u0430\u043b\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u0442\u044c",
+        "to socialize"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

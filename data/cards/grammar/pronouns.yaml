@@ -1,28 +1,101 @@
-card_set:
-  name: Pronouns
-  type: Grammatical
-  version: 1
-  cards:
-    - [pronoun, кто, who]
-    - [pronoun, какой, what sort of]
-    - [pronoun, что, what]
-    - [pronoun, друг друга, each other]
-    - [pronoun, себя, self]
-    - [pronoun, весь, 'the whole, all the']
-    - [pronoun, все, all]
-    - [pronoun, всё, everything]
-    - [pronoun, чей, whose]
-    - [pronoun, этот, 'this, that']
-    - [pronoun, тот, that]
-    - [pronoun, такой, 'such a, like that']
-    - [pronoun, сам, '(them)self, used for emphasis']
-    - [pronoun, самый, the very]
-    - [pronoun, ничто, nothing]
-    - [pronoun, никто, noone]
-    - [pronoun, мой, my]
-    - [pronoun, твой, your (singular/informal)]
-    - [pronoun, наш, our]
-    - [pronoun, ваш, your (plural/formal)]
-    - [pronoun, их, their]
-    - [pronoun, свой, ones own (my/your/his/etc.)]
-    - [phrase, оба (m./n.); обе (f.), both]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Pronouns",
+		"type": "categorical",
+		"cards": [
+			[
+				"pronoun",
+				"кто"
+			],
+			[
+				"pronoun",
+				"какой"
+			],
+			[
+				"pronoun",
+				"что"
+			],
+			[
+				"pronoun",
+				"друг друга"
+			],
+			[
+				"pronoun",
+				"себя"
+			],
+			[
+				"pronoun",
+				"весь"
+			],
+			[
+				"pronoun",
+				"все (plural)"
+			],
+			[
+				"pronoun",
+				"все (neuter)"
+			],
+			[
+				"pronoun",
+				"чей"
+			],
+			[
+				"pronoun",
+				"этот"
+			],
+			[
+				"pronoun",
+				"тот"
+			],
+			[
+				"pronoun",
+				"такой"
+			],
+			[
+				"pronoun",
+				"сам"
+			],
+			[
+				"pronoun",
+				"самый"
+			],
+			[
+				"pronoun",
+				"ничто"
+			],
+			[
+				"pronoun",
+				"никто"
+			],
+			[
+				"pronoun",
+				"мой"
+			],
+			[
+				"pronoun",
+				"твой"
+			],
+			[
+				"pronoun",
+				"наш"
+			],
+			[
+				"pronoun",
+				"ваш"
+			],
+			[
+				"pronoun",
+				"их"
+			],
+			[
+				"pronoun",
+				"свой"
+			],
+			[
+				"phrase",
+				"оба (m./n.); обе (f.)"
+			]
+		]
+	}
+}

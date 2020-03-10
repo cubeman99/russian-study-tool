@@ -1,68 +1,257 @@
-card_set:
-  name: New 18
-  type: Other
-  version: 1
-  cards:
-    - [adjective, 'бездомный, беспризорный', homeless]
-    - [adjective, достойный, worthy]
-    - [adjective, застенчивый; стеснительный, shy]
-    - [adjective, вслух, aloud]
-    - [adjective, явный, obvious]
-    - [adjective, токсичный, toxic]
-    - [adverb, здорово, 'very good, perfect']
-    - [adverb, обратно, 'back, return, inverse, opposite']
-    - [noun, продажа, sale (purchase)]
-    - [noun, примерочная, fitting room]
-    - [noun, касса, register]
-    - [noun, веер, fan (hand fan)]
-    - [noun, сдача, change (money)]
-    - [noun, наличные (деньги), cash]
-    - [noun, знания, knowledge]
-    - [noun, образование, 'education, formation']
-    - [noun, гласность, 'publicity, openness']
-    - [noun, перестройка, reconstruction]
-    - [noun, вор, theif]
-    - [noun, замка из песка, sand castle]
-    - [noun, положение, 'position, location, situation']
-    - [noun, влечение, attraction]
-    - [noun, ребята, 'guys, children']
-    - [noun, мех, fur]
-    - [noun, пробуждение, awakening]
-    - [noun, бровь, eyebrow]
-    - [noun, рынок, 'market, mart']
-    - [noun, сцена, scene]
-    - [noun, назначение, 'purpose, assignment, function']
-    - [noun, противостояние, standoff]
-    - [noun, беспокойство, 'anxiety, concern']
-    - [noun, сковорода, frying pan]
-    - [noun, кисть, brush]
-    - [verb, померить, to measure]
-    - [verb, простаивать, to stand idle]
-    - [verb, вложить, to invest]
-    - [verb, выложить, to take something out and put it]
-    - [verb, приложить, to put and hold in place]
-    - [verb, переложить, to move something from one place to another]
-    - [verb, стремиться, 'to aspire, aim, seek']
-    - [verb, предавать, to betray]
-    - [verb, обидеть, to offend]
-    - [verb, обижать, to offend]
-    - [verb, переживать, 'to worry, relive']
-    - [verb, сомневаться, to doubt]
-    - [verb, прильнуть, 'to snuggle, nestle']
-    - [verb, хихикать, to giggle]
-    - [verb, хихикнуть, to giggle]
-    - [verb, расслабляться, 'to relax, loosen up']
-    - [verb, сражаться, to battle]
-    - [phrase, у + gen. + получилось + verb, to manage to do something]
-    - [phrase, 'видимо, ...; похоже, ...', it seems like ...]
-    - [phrase, собираться + verb, 'to get ready, to plan, to intend to do soemthing']
-    - [phrase, 'почему ты мне раньше это не рассказывал?', 'Why havent you told me this
-    before?']
-    - [phrase, чево мы стоим, what were made of]
-    - [phrase, вылетело из головы, 'flew out of my head, it was at the tip of my tongue']
-    - [phrase, снимать видео, to shoot a video]
-    - [phrase, ух ты!, 'wow, woah!']
-    - [phrase, где бы ты не был, wherever you are]
-    - [particle, разве, 'really, (suprise, doubt, concern)']
-    - [particle, 'неужели, неужто', 'really!, emotional (suprise, doubt, concern)']
-    - [preposition, насчёт, 'concerning, about']
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 18",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"бездомный, беспризорный"
+			],
+			[
+				"adjective",
+				"достойный"
+			],
+			[
+				"adjective",
+				"застенчивый; стеснительный"
+			],
+			[
+				"adjective",
+				"вслух"
+			],
+			[
+				"adjective",
+				"явный"
+			],
+			[
+				"adjective",
+				"токсичный"
+			],
+			[
+				"adverb",
+				"здорово"
+			],
+			[
+				"adverb",
+				"обратно"
+			],
+			[
+				"noun",
+				"продажа"
+			],
+			[
+				"noun",
+				"примерочная"
+			],
+			[
+				"noun",
+				"касса"
+			],
+			[
+				"noun",
+				"веер"
+			],
+			[
+				"noun",
+				"сдача"
+			],
+			[
+				"noun",
+				"наличные (деньги)"
+			],
+			[
+				"noun",
+				"знания"
+			],
+			[
+				"noun",
+				"образование"
+			],
+			[
+				"noun",
+				"гласность"
+			],
+			[
+				"noun",
+				"перестройка"
+			],
+			[
+				"noun",
+				"вор"
+			],
+			[
+				"noun",
+				"замка из песка"
+			],
+			[
+				"noun",
+				"положение"
+			],
+			[
+				"noun",
+				"влечение"
+			],
+			[
+				"noun",
+				"ребята"
+			],
+			[
+				"noun",
+				"мех"
+			],
+			[
+				"noun",
+				"пробуждение"
+			],
+			[
+				"noun",
+				"бровь"
+			],
+			[
+				"noun",
+				"рынок"
+			],
+			[
+				"noun",
+				"сцена"
+			],
+			[
+				"noun",
+				"назначение"
+			],
+			[
+				"noun",
+				"противостояние"
+			],
+			[
+				"noun",
+				"беспокойство"
+			],
+			[
+				"noun",
+				"сковорода"
+			],
+			[
+				"noun",
+				"кисть"
+			],
+			[
+				"verb",
+				"померить"
+			],
+			[
+				"verb",
+				"простаивать"
+			],
+			[
+				"verb",
+				"вложить"
+			],
+			[
+				"verb",
+				"выложить"
+			],
+			[
+				"verb",
+				"приложить"
+			],
+			[
+				"verb",
+				"переложить"
+			],
+			[
+				"verb",
+				"стремиться"
+			],
+			[
+				"verb",
+				"предавать"
+			],
+			[
+				"verb",
+				"обидеть"
+			],
+			[
+				"verb",
+				"обижать"
+			],
+			[
+				"verb",
+				"переживать"
+			],
+			[
+				"verb",
+				"сомневаться"
+			],
+			[
+				"verb",
+				"прильнуть"
+			],
+			[
+				"verb",
+				"хихикать"
+			],
+			[
+				"verb",
+				"хихикнуть"
+			],
+			[
+				"verb",
+				"расслабляться"
+			],
+			[
+				"verb",
+				"сражаться"
+			],
+			[
+				"phrase",
+				"у + gen. + получилось + verb"
+			],
+			[
+				"phrase",
+				"видимо, ...; похоже, ..."
+			],
+			[
+				"phrase",
+				"собираться + verb"
+			],
+			[
+				"phrase",
+				"почему ты мне раньше это не рассказывал?"
+			],
+			[
+				"phrase",
+				"чево мы стоим"
+			],
+			[
+				"phrase",
+				"вылетело из головы"
+			],
+			[
+				"phrase",
+				"снимать видео"
+			],
+			[
+				"phrase",
+				"ух ты!"
+			],
+			[
+				"phrase",
+				"где бы ты не был"
+			],
+			[
+				"particle",
+				"разве"
+			],
+			[
+				"particle",
+				"неужели; неужто"
+			],
+			[
+				"preposition",
+				"насчет"
+			]
+		]
+	}
+}

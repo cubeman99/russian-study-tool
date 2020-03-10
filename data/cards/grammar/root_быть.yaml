@@ -1,17 +1,57 @@
-card_set:
-  name: Root быть
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, быть, to be]
-    - [verb, отбыть, to depart]
-    - [verb, прибыть, to arrive (official)]
-    - [verb, сбыться, to come true]
-    - [phrase, '... склонны быть ...', '... tend to be ...']
-    - [verb, бывать, 'to be; to occur, happen (at some frequency)']
-    - [verb, забывать, to forget]
-    - [verb, отбывать, to depart]
-    - [verb, сбываться, to come true]
-    - [interjection, забудь, forget it]
-    - [phrase, то есть, 'that is, that is to say, i.e.']
-    - [phrase, Это и есть., Thats what it is.]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Root быть",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"быть"
+			],
+			[
+				"verb",
+				"отбыть"
+			],
+			[
+				"verb",
+				"прибыть"
+			],
+			[
+				"verb",
+				"сбыться"
+			],
+			[
+				"phrase",
+				"... склонны быть ..."
+			],
+			[
+				"verb",
+				"бывать"
+			],
+			[
+				"verb",
+				"забывать"
+			],
+			[
+				"verb",
+				"отбывать"
+			],
+			[
+				"verb",
+				"сбываться"
+			],
+			[
+				"interjection",
+				"забудь"
+			],
+			[
+				"phrase",
+				"то есть"
+			],
+			[
+				"phrase",
+				"это и есть."
+			]
+		]
+	}
+}

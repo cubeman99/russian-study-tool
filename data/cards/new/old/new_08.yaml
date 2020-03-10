@@ -1,48 +1,185 @@
-card_set:
-  name: New 08
-  version: 1
-  cards:
-    - [adjective, истинный, 'true, genuine, veritable']
-    - [adjective, круглый, round]
-    - [adjective, годовой, annual]
-    - [adjective, варёный, boiled]
-    - [adjective, влажный, 'damp, wet, humid']
-    - [adjective, гениальный, 'ingenious, brilliant']
-    - [adverb, даром, 'for nothing, free, in vain']
-    - [adverb, одновременно, at the same time]
-    - [noun, персонаж, character]
-    - [noun, обзор, 'overview, review, survey']
-    - [noun, реакция, reaction]
-    - [noun, суть, 'essense, point, core']
-    - [noun, культура, culture]
-    - [noun, поколение, generation]
-    - [noun, лень, laziness]
-    - [noun, связь, connection]
-    - [noun, слабость, weakness]
-    - [noun, чихать, to sneeze]
-    - [noun, чихнуть, to sneeze]
-    - [noun, враг, enemy]
-    - [noun, длина, length]
-    - [noun, товар, goods]
-    - [noun, гений, genius]
-    - [noun, образ, 'form, image']
-    - [noun, дело, 'business, affair, matter']
-    - [noun, сторона, 'side, party']
-    - [noun, мысль, 'thought, idea']
-    - [verb, обещать, to promise]
-    - [verb, заработать, to earn]
-    - [verb, снимать, to take off]
-    - [verb, затрагиваться, to touch upon]
-    - [verb, затопить, to flood]
-    - [verb, обладать, to possess]
-    - [verb, разобрать, 'to dismantle, deconstruct, analyze']
-    - [verb, выживать, to survive]
-    - [verb, грустить, 'to be sad, grieve']
-    - [verb, трогать, 'to touch thoroughly, or many times']
-    - [verb, бросить, 'to leave, abandon (person, family, work)']
-    - [verb, двигаться, 'to be in motion, to move']
-    - [verb, закусывать, 'to have a bite to eat, snack']
-    - [verb, закусить, 'to have a bite to eat, snack']
-    - [verb, вводить, 'to enter, input']
-    - [phrase, давным-давно, 'long ago and far away, once upon a time']
-    - [preposition, вокруг, around (physical location)]
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 08",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"истинный"
+			],
+			[
+				"adjective",
+				"круглый"
+			],
+			[
+				"adjective",
+				"годовой"
+			],
+			[
+				"adjective",
+				"вареный"
+			],
+			[
+				"adjective",
+				"влажный"
+			],
+			[
+				"adjective",
+				"гениальный"
+			],
+			[
+				"adverb",
+				"даром"
+			],
+			[
+				"adverb",
+				"одновременно"
+			],
+			[
+				"noun",
+				"персонаж"
+			],
+			[
+				"noun",
+				"обзор"
+			],
+			[
+				"noun",
+				"реакция"
+			],
+			[
+				"noun",
+				"суть"
+			],
+			[
+				"noun",
+				"культура"
+			],
+			[
+				"noun",
+				"поколение"
+			],
+			[
+				"noun",
+				"лень"
+			],
+			[
+				"noun",
+				"связь"
+			],
+			[
+				"noun",
+				"слабость"
+			],
+			[
+				"noun",
+				"чихать"
+			],
+			[
+				"noun",
+				"чихнуть"
+			],
+			[
+				"noun",
+				"враг"
+			],
+			[
+				"noun",
+				"длина"
+			],
+			[
+				"noun",
+				"товар"
+			],
+			[
+				"noun",
+				"гений"
+			],
+			[
+				"noun",
+				"образ"
+			],
+			[
+				"noun",
+				"дело"
+			],
+			[
+				"noun",
+				"сторона"
+			],
+			[
+				"noun",
+				"мысль"
+			],
+			[
+				"verb",
+				"обещать"
+			],
+			[
+				"verb",
+				"заработать"
+			],
+			[
+				"verb",
+				"снимать"
+			],
+			[
+				"verb",
+				"затрагиваться"
+			],
+			[
+				"verb",
+				"затопить"
+			],
+			[
+				"verb",
+				"обладать"
+			],
+			[
+				"verb",
+				"разобрать"
+			],
+			[
+				"verb",
+				"выживать"
+			],
+			[
+				"verb",
+				"грустить"
+			],
+			[
+				"verb",
+				"трогать"
+			],
+			[
+				"verb",
+				"бросить"
+			],
+			[
+				"verb",
+				"двигаться"
+			],
+			[
+				"verb",
+				"закусывать"
+			],
+			[
+				"verb",
+				"закусить"
+			],
+			[
+				"verb",
+				"вводить"
+			],
+			[
+				"adverb",
+				"давным-давно"
+			],
+			[
+				"preposition",
+				"вокруг"
+			]
+		]
+	}
+}

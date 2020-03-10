@@ -1,47 +1,177 @@
-card_set:
-  name: 2.c Обязательная сцена погони
-  type: Media
-  version: 1
-  cards:
-    - [adjective, одержимый, obsessed]
-    - [adjective, подавленный, depressed]
-    - [adjective, удивлённый, suprised]
-    - [adjective, необходимый, 'required, that which you cant do without']
-    - [adjective, жизненный, 'vital, important for life']
-    - [adjective, побежённый, defeated]
-    - [adjective, остальные + gen., the rest (of some group)]
-    - [noun, обсуждение, discussion]
-    - [noun, трата, 'expense, that which is spent']
-    - [noun, 'бубнение, борматение', mumbling]
-    - [noun, прогноз, 'prediction, forecast, prognosis']
-    - [noun, кукуруза, corn]
-    - [noun, зевок, yawn]
-    - [noun, дремота, drowsiness]
-    - [noun, дрёма, 'doze, half-sleep']
-    - [noun, ухмылка, 'smirk, smug grin']
-    - [noun, навык, skill acquired from habit]
-    - [noun, сохранение, 'preservation, conservation']
-    - [noun, зло, evil]
-    - [noun, набор, 'set, suite, selection']
-    - [noun, тележка, a cart]
-    - [noun, следствие, consequence]
-    - [noun, последствие, consequence of something]
-    - [noun, повседневность, slice-of-life]
-    - [noun, порог, threshold; beam on floor at bottom of doorway]
-    - [verb, учитывать, to take into account]
-    - [verb, избежать, 'to avoid, get away from']
-    - [verb, выдержать, 'to withstand, endure, hold out']
-    - [verb, зевать, to yawn]
-    - [verb, зевнуть, to give a yawn]
-    - [verb, нестись, to move forward at high speed]
-    - [verb, клевать носом, 'to fall asleep, peck with your nose']
-    - [verb, оглянуться, to look back]
-    - [verb, обернуться, to turn around]
-    - [verb, деться, 'to get away, hide']
-    - [verb, заточить, 'to subject to imprisonment, to sharpen']
-    - [verb, лизать, to lick]
-    - [verb, облизывать, to lick your lips]
-    - [verb, торжествовать, to triumph]
-    - [verb, посматривать, 'to gaze, look at from time to time']
-    - [verb, усилить, to strengthen]
-    - [conjunction, нежели, than (same as чем)]
+{
+	"card_set": {
+		"version": 1,
+		"name": "2.c Обязательная сцена погони",
+		"type": "media",
+		"cards": [
+			[
+				"adjective",
+				"одержимый"
+			],
+			[
+				"adjective",
+				"подавленный"
+			],
+			[
+				"adjective",
+				"удивленный"
+			],
+			[
+				"adjective",
+				"необходимый"
+			],
+			[
+				"adjective",
+				"жизненный"
+			],
+			[
+				"adjective",
+				"побеженный"
+			],
+			[
+				"adjective",
+				"остальные + gen."
+			],
+			[
+				"noun",
+				"обсуждение"
+			],
+			[
+				"noun",
+				"трата"
+			],
+			[
+				"noun",
+				"бубнение; борматение"
+			],
+			[
+				"noun",
+				"прогноз"
+			],
+			[
+				"noun",
+				"кукуруза"
+			],
+			[
+				"noun",
+				"зевок"
+			],
+			[
+				"noun",
+				"дремота"
+			],
+			[
+				"noun",
+				"дрема"
+			],
+			[
+				"noun",
+				"ухмылка"
+			],
+			[
+				"noun",
+				"навык"
+			],
+			[
+				"noun",
+				"сохранение"
+			],
+			[
+				"noun",
+				"зло"
+			],
+			[
+				"noun",
+				"набор"
+			],
+			[
+				"noun",
+				"тележка"
+			],
+			[
+				"noun",
+				"следствие"
+			],
+			[
+				"noun",
+				"последствие"
+			],
+			[
+				"noun",
+				"повседневность"
+			],
+			[
+				"noun",
+				"порог"
+			],
+			[
+				"verb",
+				"учитывать"
+			],
+			[
+				"verb",
+				"избежать"
+			],
+			[
+				"verb",
+				"выдержать"
+			],
+			[
+				"verb",
+				"зевать"
+			],
+			[
+				"verb",
+				"зевнуть"
+			],
+			[
+				"verb",
+				"нестись"
+			],
+			[
+				"verb",
+				"клевать носом"
+			],
+			[
+				"verb",
+				"оглянуться"
+			],
+			[
+				"verb",
+				"обернуться"
+			],
+			[
+				"verb",
+				"деться"
+			],
+			[
+				"verb",
+				"заточить"
+			],
+			[
+				"verb",
+				"лизать"
+			],
+			[
+				"verb",
+				"облизывать"
+			],
+			[
+				"verb",
+				"торжествовать"
+			],
+			[
+				"verb",
+				"посматривать"
+			],
+			[
+				"verb",
+				"усилить"
+			],
+			[
+				"conjunction",
+				"нежели"
+			]
+		]
+	}
+}

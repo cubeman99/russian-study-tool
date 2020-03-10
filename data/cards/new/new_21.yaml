@@ -1,65 +1,249 @@
-card_set:
-  name: New 21
-  type: Other
-  version: 1
-  cards:
-    - [noun, надпись, 'a writing, inscripture (large scale)']
-    - [noun, запись, a written note; a recording]
-    - [verb, записать, to take a note; to record]
-    - [noun, переписка, a correspondence between two people]
-    - [verb, переписываться, 'to chat, text someone, correspond']
-    - [verb, дописать, to finish writing something]
-    - [noun, список, a list]
-    - [noun, подпись, a signature]
-    - [verb, воссоздать, to recreate]
-    - [verb, воссоздавать, to recreate]
-    - [verb, овладеть, to take possession of]
-    - [noun, восхождение, 'ascent, rise, ascention, climb']
-    - [noun, рассредоточение, dispersal]
-    - [noun, Париж, Paris]
-    - [adjective, военный, 'military, war (adj.)']
-    - [verb, уменьшить, to reduce]
-    - [noun, устройство, a device]
-    - [noun, обновление, an update]
-    - [noun, уведомление, 'a notification, notice']
-    - [noun, гипотеза, a hypothesis]
-    - [noun, парикмахер, hairdresser]
-    - [noun, причёска, hairstyle]
-    - [noun, макияж, makeup]
-    - [noun, бумажник, wallet]
-    - [adjective, стеклянный, glass (adj.)]
-    - [noun, профессия, profession]
-    - [noun, почерк, handwriting]
-    - [adverb, соответственно, 'respectively, accordingly']
-    - [noun, правописание, spelling]
-    - [noun, орфография, orthography]
-    - [noun, соченение, an essay]
-    - [noun, полнометражка, feature film]
-    - [noun, медсестра, nurse]
-    - [adverb, безразлично, 'indifferently, doesnt care']
-    - [verb, выздоравливать, 'to recover, get better (health)']
-    - [verb, запить, 'to wash down, drink']
-    - [adjective, 'бездомный, беспризорный', homeless]
-    - [preposition, с; со + gen., from a place; since a time period]
-    - [verb, уничтожать, 'to destroy, wipe out']
-    - [verb, казаться, to seem]
-    - [verb, состоить, to consist]
-    - [verb, манить, 'to call, beckon; to hand signal']
-    - [verb, исчезнуть, 'to disappear, vanish']
-    - [noun, соломка, straw]
-    - [noun, объявление, announcement]
-    - [adjective, видный, 'visible, noticable, prominent']
-    - [noun, портрет, portrait]
-    - [adjective, грешный, sinful]
-    - [verb, пропасть, 'to fall into an abyss, to be gone']
-    - [verb, объявлять, 'to declare, announce']
-    - [noun, ад, hell]
-    - [noun, рай, 'heaven, paradise']
-    - [noun, вызов, 'a call, summons, invitation to be somewhere']
-    - [noun, навык, skill acquired from habit]
-    - [adjective, пропущенный, skipped]
-    - [noun, гигиена, hygene]
-    - [noun, икота, a hiccup]
-    - [verb, икать, to hiccup]
-    - [noun, труд, 'labor, work']
-    - [phrase, оба (m./n.); обе (f.), both]
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 21",
+		"type": "other",
+		"cards": [
+			[
+				"noun",
+				"надпись"
+			],
+			[
+				"noun",
+				"запись"
+			],
+			[
+				"verb",
+				"записать"
+			],
+			[
+				"noun",
+				"переписка"
+			],
+			[
+				"verb",
+				"переписываться"
+			],
+			[
+				"verb",
+				"дописать"
+			],
+			[
+				"noun",
+				"список"
+			],
+			[
+				"noun",
+				"подпись"
+			],
+			[
+				"verb",
+				"воссоздать"
+			],
+			[
+				"verb",
+				"воссоздавать"
+			],
+			[
+				"verb",
+				"овладеть"
+			],
+			[
+				"noun",
+				"восхождение"
+			],
+			[
+				"noun",
+				"рассредоточение"
+			],
+			[
+				"noun",
+				"париж"
+			],
+			[
+				"adjective",
+				"военный"
+			],
+			[
+				"verb",
+				"уменьшить"
+			],
+			[
+				"noun",
+				"устройство"
+			],
+			[
+				"noun",
+				"обновление"
+			],
+			[
+				"noun",
+				"уведомление"
+			],
+			[
+				"noun",
+				"гипотеза"
+			],
+			[
+				"noun",
+				"парикмахер"
+			],
+			[
+				"noun",
+				"прическа"
+			],
+			[
+				"noun",
+				"макияж"
+			],
+			[
+				"noun",
+				"бумажник"
+			],
+			[
+				"adjective",
+				"стеклянный"
+			],
+			[
+				"noun",
+				"профессия"
+			],
+			[
+				"noun",
+				"почерк"
+			],
+			[
+				"adverb",
+				"соответственно"
+			],
+			[
+				"noun",
+				"правописание"
+			],
+			[
+				"noun",
+				"орфография"
+			],
+			[
+				"noun",
+				"соченение"
+			],
+			[
+				"noun",
+				"полнометражка"
+			],
+			[
+				"noun",
+				"медсестра"
+			],
+			[
+				"adverb",
+				"безразлично"
+			],
+			[
+				"verb",
+				"выздоравливать"
+			],
+			[
+				"verb",
+				"запить"
+			],
+			[
+				"adjective",
+				"бездомный, беспризорный"
+			],
+			[
+				"preposition",
+				"с; со + gen."
+			],
+			[
+				"verb",
+				"уничтожать"
+			],
+			[
+				"verb",
+				"казаться"
+			],
+			[
+				"verb",
+				"состоить"
+			],
+			[
+				"verb",
+				"манить"
+			],
+			[
+				"verb",
+				"исчезнуть"
+			],
+			[
+				"noun",
+				"соломка"
+			],
+			[
+				"noun",
+				"объявление"
+			],
+			[
+				"adjective",
+				"видный"
+			],
+			[
+				"noun",
+				"портрет"
+			],
+			[
+				"adjective",
+				"грешный"
+			],
+			[
+				"verb",
+				"пропасть"
+			],
+			[
+				"verb",
+				"объявлять"
+			],
+			[
+				"noun",
+				"ад"
+			],
+			[
+				"noun",
+				"рай"
+			],
+			[
+				"noun",
+				"вызов"
+			],
+			[
+				"noun",
+				"навык"
+			],
+			[
+				"adjective",
+				"пропущенный"
+			],
+			[
+				"noun",
+				"гигиена"
+			],
+			[
+				"noun",
+				"икота"
+			],
+			[
+				"verb",
+				"икать"
+			],
+			[
+				"noun",
+				"труд"
+			],
+			[
+				"phrase",
+				"оба (m./n.); обе (f.)"
+			]
+		]
+	}
+}

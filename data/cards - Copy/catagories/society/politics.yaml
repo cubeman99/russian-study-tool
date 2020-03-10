@@ -1,0 +1,154 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Politics",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"налог",
+				"a tax"
+			],
+			[
+				"adjective",
+				"нейтральный",
+				"neutral"
+			],
+			[
+				"adjective",
+				"политический",
+				"political"
+			],
+			[
+				"noun",
+				"страна",
+				"country"
+			],
+			[
+				"adjective",
+				"международный",
+				"international, between nations"
+			],
+			[
+				"noun",
+				"район",
+				"area, district"
+			],
+			[
+				"noun",
+				"гражданин",
+				"citizen"
+			],
+			[
+				"adverb",
+				"гражданство",
+				"citizenship"
+			],
+			[
+				"noun",
+				"перестройка",
+				"reconstruction"
+			],
+			[
+				"noun",
+				"гласность",
+				"publicity, openness"
+			],
+			[
+				"noun",
+				"труд",
+				"labor, work"
+			],
+			[
+				"adjective",
+				"иностранный",
+				"foreign"
+			],
+			[
+				"noun",
+				"соперник",
+				"rival"
+			],
+			[
+				"noun",
+				"враг",
+				"enemy"
+			],
+			[
+				"noun",
+				"перемирие",
+				"truce"
+			],
+			[
+				"noun",
+				"мир",
+				"world; peace"
+			],
+			[
+				"noun",
+				"народ",
+				"people, nation"
+			],
+			[
+				"noun",
+				"род",
+				"gender, kin"
+			],
+			[
+				"adjective",
+				"городской",
+				"city"
+			],
+			[
+				"noun",
+				"столица",
+				"capital (a main city)"
+			],
+			[
+				"verb",
+				"голосовать",
+				"to vote"
+			],
+			[
+				"verb",
+				"управлять",
+				"to manage"
+			],
+			[
+				"noun",
+				"деньги",
+				"money"
+			],
+			[
+				"noun",
+				"государство",
+				"the state (government)"
+			],
+			[
+				"noun",
+				"условие",
+				"condition"
+			],
+			[
+				"noun",
+				"держава",
+				"a state, power"
+			],
+			[
+				"noun",
+				"средиземноморье",
+				"the mediterranean sea"
+			],
+			[
+				"noun",
+				"торговля",
+				"trade"
+			],
+			[
+				"verb",
+				"господствовать",
+				"to rule, reign; to dominate, command"
+			]
+		]
+	}
+}

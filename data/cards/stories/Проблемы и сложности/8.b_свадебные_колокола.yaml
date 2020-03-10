@@ -1,73 +1,281 @@
-card_set:
-  name: 8.b Свадебные колокола
-  type: Media
-  version: 1
-  cards:
-    - [noun, забота, 'care, attention']
-    - [adverb, гражданство, citizenship]
-    - [noun, гражданин, citizen]
-    - [adjective, примирительный, 'apologetic, reconciliatory']
-    - [adjective, неуважительный, disrespectful]
-    - [adjective, уважительный, 'respectful, good']
-    - [noun, пот, sweat]
-    - [adjective, потный, sweaty]
-    - [adjective, основной, 'the most important, main, basic']
-    - [noun, домысел, a speculation]
-    - [verb, отличаться от, to differ from]
-    - [noun, взаимность, 'mutuality, reciprocity']
-    - [verb, создать, to create]
-    - [adjective, замкнутый, 'isolated, closed-mouthed']
-    - [noun, петля, 'a loop, hinge; a noose']
-    - [noun, понятие, 'notion, idea, concept']
-    - [verb, связываться, 'to contact, get in contact with']
-    - [adjective, смертный, mortal]
-    - [phrase, до какой-то степени, to some extent]
-    - [verb, предупредить, to warn]
-    - [verb, предупреждать, to warn]
-    - [verb, остановить, to stop someone/smth]
-    - [verb, образовать, to educate; to form]
-    - [noun, род, 'gender, kin']
-    - [noun, пол, floor; gender/sex]
-    - [noun, птенец, baby bird]
-    - [noun, вылупение, hatching]
-    - [verb, вылупеяться, to hatch]
-    - [noun, источник, 'source, spring, fount']
-    - [noun, благо, 'the good, well-being']
-    - [adjective, заботящийся, caring]
-    - [verb, восхвалять, 'to preach up, praise']
-    - [noun, восхищение, 'admiration, delight']
-    - [noun, гладкость, smoothness]
-    - [adjective, роскошный, luxurious]
-    - [verb, надоедать, 'to bother, bore, tire']
-    - [adjective, немыслимый, unthinkable]
-    - [noun, остроумие, wit]
-    - [adjective, остроумный, witty]
-    - [adjective, неописуемый, indescribable]
-    - [adjective, лестный, flattering]
-    - [verb, похитить, to abduct]
-    - [verb, подчинить, to subdue]
-    - [noun, извинение, an apology]
-    - [adjective, раненый, wounded]
-    - [adjective, озабоченный, preoccupied]
-    - [noun, благосостаяние, 'welfare, prosperity']
-    - [noun, скот, 'livestock, cattle']
-    - [adjective, протяжный, 'lingering, slow, lasting a for long time']
-    - [verb, одобрять, 'to approve, give the "okay"']
-    - [verb, одобрить, 'to approve, give the "okay"']
-    - [noun, одобрение, 'the "okay", approval']
-    - [noun, ободрение, encouragement]
-    - [verb, ободрять, to give encouragement]
-    - [noun, объятие, 'hug, embrace']
-    - [verb, жужжать, to buzz]
-    - [verb, потеплеть, to grow warmer]
-    - [noun, прощение, forgiveness]
-    - [noun, упоминание, mention]
-    - [noun, выставка, exhibition]
-    - [noun, хор, a choir]
-    - [verb, расследовать, to investigate]
-    - [noun, расследование, investigation]
-    - [noun, обитатель, 'inhabitant, permanent resident']
-    - [adjective, поддельный, 'fake, counterfit, forged']
-    - [noun, век; столетие, century]
-    - [verb, состоять, to consist]
-    - [verb, надоесть, 'to bother, bore, tire']
+{
+	"card_set": {
+		"version": 1,
+		"name": "8.b Свадебные колокола",
+		"type": "media",
+		"cards": [
+			[
+				"noun",
+				"забота"
+			],
+			[
+				"adverb",
+				"гражданство"
+			],
+			[
+				"noun",
+				"гражданин"
+			],
+			[
+				"adjective",
+				"примирительный"
+			],
+			[
+				"adjective",
+				"неуважительный"
+			],
+			[
+				"adjective",
+				"уважительный"
+			],
+			[
+				"noun",
+				"пот"
+			],
+			[
+				"adjective",
+				"потный"
+			],
+			[
+				"adjective",
+				"основной"
+			],
+			[
+				"noun",
+				"домысел"
+			],
+			[
+				"verb",
+				"отличаться от"
+			],
+			[
+				"noun",
+				"взаимность"
+			],
+			[
+				"verb",
+				"создать"
+			],
+			[
+				"adjective",
+				"замкнутый"
+			],
+			[
+				"noun",
+				"петля"
+			],
+			[
+				"noun",
+				"понятие"
+			],
+			[
+				"verb",
+				"связываться"
+			],
+			[
+				"adjective",
+				"смертный"
+			],
+			[
+				"phrase",
+				"до какой-то степени"
+			],
+			[
+				"verb",
+				"предупредить"
+			],
+			[
+				"verb",
+				"предупреждать"
+			],
+			[
+				"verb",
+				"остановить"
+			],
+			[
+				"verb",
+				"образовать"
+			],
+			[
+				"noun",
+				"род"
+			],
+			[
+				"noun",
+				"пол"
+			],
+			[
+				"noun",
+				"птенец"
+			],
+			[
+				"noun",
+				"вылупение"
+			],
+			[
+				"verb",
+				"вылупеяться"
+			],
+			[
+				"noun",
+				"источник"
+			],
+			[
+				"noun",
+				"благо"
+			],
+			[
+				"adjective",
+				"заботящийся"
+			],
+			[
+				"verb",
+				"восхвалять"
+			],
+			[
+				"noun",
+				"восхищение"
+			],
+			[
+				"noun",
+				"гладкость"
+			],
+			[
+				"adjective",
+				"роскошный"
+			],
+			[
+				"verb",
+				"надоедать"
+			],
+			[
+				"adjective",
+				"немыслимый"
+			],
+			[
+				"noun",
+				"остроумие"
+			],
+			[
+				"adjective",
+				"остроумный"
+			],
+			[
+				"adjective",
+				"неописуемый"
+			],
+			[
+				"adjective",
+				"лестный"
+			],
+			[
+				"verb",
+				"похитить"
+			],
+			[
+				"verb",
+				"подчинить"
+			],
+			[
+				"noun",
+				"извинение"
+			],
+			[
+				"adjective",
+				"раненый"
+			],
+			[
+				"adjective",
+				"озабоченный"
+			],
+			[
+				"noun",
+				"благосостаяние"
+			],
+			[
+				"noun",
+				"скот"
+			],
+			[
+				"adjective",
+				"протяжный"
+			],
+			[
+				"verb",
+				"одобрять"
+			],
+			[
+				"verb",
+				"одобрить"
+			],
+			[
+				"noun",
+				"одобрение"
+			],
+			[
+				"noun",
+				"ободрение"
+			],
+			[
+				"verb",
+				"ободрять"
+			],
+			[
+				"noun",
+				"объятие"
+			],
+			[
+				"verb",
+				"жужжать"
+			],
+			[
+				"verb",
+				"потеплеть"
+			],
+			[
+				"noun",
+				"прощение"
+			],
+			[
+				"noun",
+				"упоминание"
+			],
+			[
+				"noun",
+				"выставка"
+			],
+			[
+				"noun",
+				"хор"
+			],
+			[
+				"verb",
+				"расследовать"
+			],
+			[
+				"noun",
+				"расследование"
+			],
+			[
+				"noun",
+				"обитатель"
+			],
+			[
+				"adjective",
+				"поддельный"
+			],
+			[
+				"noun",
+				"век; столетие"
+			],
+			[
+				"verb",
+				"состоять"
+			],
+			[
+				"verb",
+				"надоесть"
+			]
+		]
+	}
+}

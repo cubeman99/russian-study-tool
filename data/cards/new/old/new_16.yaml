@@ -1,67 +1,257 @@
-card_set:
-  name: New 16
-  type: Other
-  version: 1
-  cards:
-    - [adjective, безмолвный, 'silent, speechless']
-    - [adjective, тщетный, 'vain, futile']
-    - [adjective, внимательный, attentive]
-    - [adjective, юго-западный, southwest]
-    - [adjective, восхитительный, 'delicious, delightful']
-    - [adjective, бессмертный, immortal]
-    - [adjective, голый, naked]
-    - [adjective, остальный, the rest]
-    - [adjective, гавно, 'shit, very bad']
-    - [adverb, охота, 'feel like, it is desired (modal)']
-    - [noun, снеговик, snowman]
-    - [noun, наряд, 'outfit, attire']
-    - [noun, метель, 'blizzard, snowstorm']
-    - [noun, ураган, hurricane]
-    - [noun, внимание, attention]
-    - [noun, ответственность, responsibility]
-    - [noun, прогулка, 'walk, stroll']
-    - [noun, существо, 'being, living thing']
-    - [noun, песок, sand]
-    - [noun, пыль, dust]
-    - [noun, чистота, 'cleanliness, purity']
-    - [noun, счастье, happiness]
-    - [noun, любимец, favorite; pet]
-    - [noun, управление, 'management, control']
-    - [noun, пир, 'feast, banquet']
-    - [noun, возможность, 'opportunity, possibility']
-    - [noun, большинство, 'the majority, most']
-    - [noun, постель, bed with two sides]
-    - [noun, питомец, pet]
-    - [noun, кореш, close friend (slang)]
-    - [noun, кнопка, 'button, switch']
-    - [verb, скачать, to download]
-    - [verb, скачивать, to download]
-    - [verb, пропустить, 'to skip, miss']
-    - [verb, укрывать, 'to shelter, cover']
-    - [verb, стонать, 'to moan, groan']
-    - [verb, хранить, 'to keep, guard']
-    - [verb, отпустить, to let go]
-    - [verb, бушевать, 'to rage, storm']
-    - [verb, ухаживать за, 'to look after, care for']
-    - [verb, совершать, to accomplish]
-    - [verb, совершить, to accomplish]
-    - [verb, следить, 'to track, watch, follow']
-    - [verb, убирать, 'remove, tidy up, clear']
-    - [verb, пылесос, vacuum cleaner]
-    - [verb, обратить, 'to direct, turn, draw']
-    - [verb, обращать, 'to direct, turn, draw']
-    - [verb, взвесить, to weigh; to think through]
-    - [verb, взвешивать, to weigh; to think through]
-    - [verb, влиять, to influence]
-    - [verb, являться, to appear]
-    - [verb, тусить, 'to party, hang out, chill']
-    - [phrase, несмотря на это, in spite of this]
-    - [phrase, Заткнись!, Shut up!]
-    - [phrase, ещё разок, one more time (dimminutive)]
-    - [phrase, вот и всё, that is all]
-    - [phrase, ничего страшного, 'nothings wrong, thats all right']
-    - [conjunction, либо, 'or (exclusive or, either or)']
-    - [conjunction, вдобавок, in addition]
-    - [conjunction, кроме того, besides]
-    - [conjunction, допустим, 'lets say, supposably']
-    - [conjunction, из-за того, because of]
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 16",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"безмолвный"
+			],
+			[
+				"adjective",
+				"тщетный"
+			],
+			[
+				"adjective",
+				"внимательный"
+			],
+			[
+				"adjective",
+				"юго-западный"
+			],
+			[
+				"adjective",
+				"восхитительный"
+			],
+			[
+				"adjective",
+				"бессмертный"
+			],
+			[
+				"adjective",
+				"голый"
+			],
+			[
+				"adjective",
+				"остальный"
+			],
+			[
+				"adjective",
+				"гавно"
+			],
+			[
+				"adverb",
+				"охота"
+			],
+			[
+				"noun",
+				"снеговик"
+			],
+			[
+				"noun",
+				"наряд"
+			],
+			[
+				"noun",
+				"метель"
+			],
+			[
+				"noun",
+				"ураган"
+			],
+			[
+				"noun",
+				"внимание"
+			],
+			[
+				"noun",
+				"ответственность"
+			],
+			[
+				"noun",
+				"прогулка"
+			],
+			[
+				"noun",
+				"существо"
+			],
+			[
+				"noun",
+				"песок"
+			],
+			[
+				"noun",
+				"пыль"
+			],
+			[
+				"noun",
+				"чистота"
+			],
+			[
+				"noun",
+				"счастье"
+			],
+			[
+				"noun",
+				"любимец"
+			],
+			[
+				"noun",
+				"управление"
+			],
+			[
+				"noun",
+				"пир"
+			],
+			[
+				"noun",
+				"возможность"
+			],
+			[
+				"noun",
+				"большинство"
+			],
+			[
+				"noun",
+				"постель"
+			],
+			[
+				"noun",
+				"питомец"
+			],
+			[
+				"noun",
+				"кореш"
+			],
+			[
+				"noun",
+				"кнопка"
+			],
+			[
+				"verb",
+				"скачать"
+			],
+			[
+				"verb",
+				"скачивать"
+			],
+			[
+				"verb",
+				"пропустить"
+			],
+			[
+				"verb",
+				"укрывать"
+			],
+			[
+				"verb",
+				"стонать"
+			],
+			[
+				"verb",
+				"хранить"
+			],
+			[
+				"verb",
+				"отпустить"
+			],
+			[
+				"verb",
+				"бушевать"
+			],
+			[
+				"verb",
+				"ухаживать за"
+			],
+			[
+				"verb",
+				"совершать"
+			],
+			[
+				"verb",
+				"совершить"
+			],
+			[
+				"verb",
+				"следить"
+			],
+			[
+				"verb",
+				"убирать"
+			],
+			[
+				"verb",
+				"пылесос"
+			],
+			[
+				"verb",
+				"обратить"
+			],
+			[
+				"verb",
+				"обращать"
+			],
+			[
+				"verb",
+				"взвесить"
+			],
+			[
+				"verb",
+				"взвешивать"
+			],
+			[
+				"verb",
+				"влиять"
+			],
+			[
+				"verb",
+				"являться"
+			],
+			[
+				"verb",
+				"тусить"
+			],
+			[
+				"phrase",
+				"несмотря на это"
+			],
+			[
+				"phrase",
+				"заткнись!"
+			],
+			[
+				"phrase",
+				"еще разок"
+			],
+			[
+				"phrase",
+				"вот и все."
+			],
+			[
+				"phrase",
+				"ничего страшного"
+			],
+			[
+				"conjunction",
+				"либо"
+			],
+			[
+				"conjunction",
+				"вдобавок"
+			],
+			[
+				"conjunction",
+				"кроме того"
+			],
+			[
+				"conjunction",
+				"допустим"
+			],
+			[
+				"conjunction",
+				"из-за того"
+			]
+		]
+	}
+}

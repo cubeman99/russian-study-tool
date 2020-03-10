@@ -1,0 +1,94 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Shape and Size",
+		"type": "categorical",
+		"cards": [
+			[
+				"adjective",
+				"продолговатый",
+				"elongated, oblong (in shape)"
+			],
+			[
+				"adjective",
+				"большой",
+				"big"
+			],
+			[
+				"adjective",
+				"маленький",
+				"small"
+			],
+			[
+				"adjective",
+				"толстый",
+				"fat, thick"
+			],
+			[
+				"adjective",
+				"густой",
+				"dense, thick"
+			],
+			[
+				"noun",
+				"шар",
+				"orb, sphere, globe, ball"
+			],
+			[
+				"noun",
+				"сфера",
+				"sphere, area, field, scope"
+			],
+			[
+				"noun",
+				"круг",
+				"circle"
+			],
+			[
+				"noun",
+				"размер",
+				"size"
+			],
+			[
+				"noun",
+				"габарит",
+				"size, dimension"
+			],
+			[
+				"adjective",
+				"круглый",
+				"round"
+			],
+			[
+				"adjective",
+				"огромный",
+				"huge"
+			],
+			[
+				"adjective",
+				"крошечный",
+				"tiny, itty-bitty"
+			],
+			[
+				"noun",
+				"изгиб",
+				"bend, curve"
+			],
+			[
+				"noun",
+				"арка",
+				"arch, arc"
+			],
+			[
+				"adverb",
+				"прямо",
+				"straight"
+			],
+			[
+				"verb",
+				"расправлять",
+				"to spread, straighten"
+			]
+		]
+	}
+}

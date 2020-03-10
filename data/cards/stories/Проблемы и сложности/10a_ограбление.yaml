@@ -1,74 +1,285 @@
-card_set:
-  name: 10.a Ограбление
-  type: Media
-  version: 1
-  cards:
-    - [verb, провозгласить, to proclaim]
-    - [noun, швейцар, doorman]
-    - [noun, вершина, 'the very top, pinnacle']
-    - [verb, устилать, 'to lay down, to carpet (smth)']
-    - [noun, ковёр, carpet]
-    - [noun, арка, 'arch, arc']
-    - [noun, плющ, ivy]
-    - [adjective, гнедой, brown horse w/ black mane/tail]
-    - [adjective, прилизанный, 'sleek, smooth, combed, tidy']
-    - [noun, кушак, 'sash, band worn around waiste']
-    - [noun, петлица, lapel (colord patch on collar of uniform)]
-    - [adjective, очаровательный, charming]
-    - [phrase, рватный рефлекс, gag reflex]
-    - [noun, реверанс, respectful curtesy bow by women]
-    - [noun, приём, a reception]
-    - [adjective, ослепительный, 'dazzling, glaring, amazing']
-    - [noun, смесь, 'a mixture, blend']
-    - [adjective, огненный, fiery]
-    - [adjective, облегающий, tight-fitting]
-    - [noun, хозяйка, 'hostess, mistress']
-    - [noun, вставка, an insert]
-    - [noun, открытка, a post card]
-    - [noun, оборка; оборочка, a frill]
-    - [noun, кружево, lace]
-    - [adjective, светлый, light-colored]
-    - [noun, взгляд, 'sight, view']
-    - [noun, взор, gaze]
-    - [verb, раствориться, to dissolve]
-    - [noun, толпа, a crowd]
-    - [noun, чертёж, a technical drawing]
-    - [phrase, бельмо на глазу, thorn in my side (lit. catterax cloud in my eye)]
-    - [verb, презирать, to despise]
-    - [noun, складка, 'a fold, crease, wrinkle']
-    - [verb, присутствовать, to be present]
-    - [noun, присутствие, a presence]
-    - [verb, подтверждать, to confirm]
-    - [verb, подтвердить, to confirm]
-    - [noun, боа, 'boa snake, large womans neck scarf']
-    - [noun, феникс, phoenix]
-    - [phrase, Мне везёт!, Im in luck!]
-    - [adjective, воздушный, 'airy, light, aerial']
-    - [adjective, отделённый, separated]
-    - [verb, виднеться, 'to be seen, be visible']
-    - [noun, налог, a tax]
-    - [noun, проявление, manifestation]
-    - [verb, стареть, 'to grow old, age']
-    - [verb, снижаться, 'to go down, descend; to drop, fall']
-    - [verb, перезапустить, to restart]
-    - [adjective, незаконный, illegal]
-    - [adjective, милосердный, merciful]
-    - [noun, милость, mercy]
-    - [noun, клетка, animal cage]
-    - [verb, ёжиться, 'to shiver, huddle over when cold']
-    - [noun, поставщик, 'provider, supplier']
-    - [adjective, крошечный, 'tiny, itty-bitty']
-    - [noun, бокал, wine glass]
-    - [noun, обморок, fainting]
-    - [verb, напевать, to hum]
-    - [verb, столкнуться, 'to collide, run into, unexpectedly meet']
-    - [noun, столкновение, collision]
-    - [noun, драка, 'a fight, tussle']
-    - [noun, чары, 'enchantment, charm']
-    - [noun, хранилище, 'storage, repository, vault']
-    - [phrase, 'тише воды, ниже травы', 'quieter than water, lower than grass']
-    - [verb, разузнать, to find out from various sources]
-    - [noun, головорез, 'a desparate man (mischievous, bandit, etc.)']
-    - [verb, нанять, to hire]
-    - [verb, падать в обморок, to faint]
-    - [verb, напеть, to hum]
+{
+	"card_set": {
+		"version": 1,
+		"name": "10.a Ограбление",
+		"type": "media",
+		"cards": [
+			[
+				"verb",
+				"провозгласить"
+			],
+			[
+				"noun",
+				"швейцар"
+			],
+			[
+				"noun",
+				"вершина"
+			],
+			[
+				"verb",
+				"устилать"
+			],
+			[
+				"noun",
+				"ковер"
+			],
+			[
+				"noun",
+				"арка"
+			],
+			[
+				"noun",
+				"плющ"
+			],
+			[
+				"adjective",
+				"гнедой"
+			],
+			[
+				"adjective",
+				"прилизанный"
+			],
+			[
+				"noun",
+				"кушак"
+			],
+			[
+				"noun",
+				"петлица"
+			],
+			[
+				"adjective",
+				"очаровательный"
+			],
+			[
+				"phrase",
+				"рватный рефлекс"
+			],
+			[
+				"noun",
+				"реверанс"
+			],
+			[
+				"noun",
+				"прием"
+			],
+			[
+				"adjective",
+				"ослепительный"
+			],
+			[
+				"noun",
+				"смесь"
+			],
+			[
+				"adjective",
+				"огненный"
+			],
+			[
+				"adjective",
+				"облегающий"
+			],
+			[
+				"noun",
+				"хозяйка"
+			],
+			[
+				"noun",
+				"вставка"
+			],
+			[
+				"noun",
+				"открытка"
+			],
+			[
+				"noun",
+				"оборка; оборочка"
+			],
+			[
+				"noun",
+				"кружево"
+			],
+			[
+				"adjective",
+				"светлый"
+			],
+			[
+				"noun",
+				"взгляд"
+			],
+			[
+				"noun",
+				"взор"
+			],
+			[
+				"verb",
+				"раствориться"
+			],
+			[
+				"noun",
+				"толпа"
+			],
+			[
+				"noun",
+				"чертеж"
+			],
+			[
+				"phrase",
+				"бельмо на глазу"
+			],
+			[
+				"verb",
+				"презирать"
+			],
+			[
+				"noun",
+				"складка"
+			],
+			[
+				"verb",
+				"присутствовать"
+			],
+			[
+				"noun",
+				"присутствие"
+			],
+			[
+				"verb",
+				"подтверждать"
+			],
+			[
+				"verb",
+				"подтвердить"
+			],
+			[
+				"noun",
+				"боа"
+			],
+			[
+				"noun",
+				"феникс"
+			],
+			[
+				"phrase",
+				"мне везет!"
+			],
+			[
+				"adjective",
+				"воздушный"
+			],
+			[
+				"adjective",
+				"отделенный"
+			],
+			[
+				"verb",
+				"виднеться"
+			],
+			[
+				"noun",
+				"налог"
+			],
+			[
+				"noun",
+				"проявление"
+			],
+			[
+				"verb",
+				"стареть"
+			],
+			[
+				"verb",
+				"снижаться"
+			],
+			[
+				"verb",
+				"перезапустить"
+			],
+			[
+				"adjective",
+				"незаконный"
+			],
+			[
+				"adjective",
+				"милосердный"
+			],
+			[
+				"noun",
+				"милость"
+			],
+			[
+				"noun",
+				"клетка"
+			],
+			[
+				"verb",
+				"ежиться"
+			],
+			[
+				"noun",
+				"поставщик"
+			],
+			[
+				"adjective",
+				"крошечный"
+			],
+			[
+				"noun",
+				"бокал"
+			],
+			[
+				"noun",
+				"обморок"
+			],
+			[
+				"verb",
+				"напевать"
+			],
+			[
+				"verb",
+				"столкнуться"
+			],
+			[
+				"noun",
+				"столкновение"
+			],
+			[
+				"noun",
+				"драка"
+			],
+			[
+				"noun",
+				"чары"
+			],
+			[
+				"noun",
+				"хранилище"
+			],
+			[
+				"phrase",
+				"тише воды, ниже травы"
+			],
+			[
+				"verb",
+				"разузнать"
+			],
+			[
+				"noun",
+				"головорез"
+			],
+			[
+				"verb",
+				"нанять"
+			],
+			[
+				"verb",
+				"падать в обморок"
+			],
+			[
+				"verb",
+				"напеть"
+			]
+		]
+	}
+}

@@ -1,0 +1,294 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Materials",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"титан",
+				"titanium (n.)"
+			],
+			[
+				"noun",
+				"золото",
+				"gold (n.)"
+			],
+			[
+				"adjective",
+				"золотой",
+				"gold, golden (adj.)"
+			],
+			[
+				"adjective",
+				"серебрянный",
+				"silver (adj.)"
+			],
+			[
+				"noun",
+				"серебро",
+				"silver (n.)"
+			],
+			[
+				"adjective",
+				"мраморный",
+				"marble (adj.)"
+			],
+			[
+				"noun",
+				"булыжник",
+				"cobblestone (n.)"
+			],
+			[
+				"adjective",
+				"шерстяный",
+				"wool, woolen (adj.)"
+			],
+			[
+				"adjective",
+				"металический",
+				"metal (adj.)"
+			],
+			[
+				"verb",
+				"плавить",
+				"to melt into molten liquid"
+			],
+			[
+				"adjective",
+				"стеклянный",
+				"glass (adj.)"
+			],
+			[
+				"noun",
+				"изумруд",
+				"emerald"
+			],
+			[
+				"verb",
+				"ткать",
+				"to weave"
+			],
+			[
+				"adjective",
+				"тканный",
+				"woven"
+			],
+			[
+				"noun",
+				"ткань",
+				"colth; tissue (of organism)"
+			],
+			[
+				"noun",
+				"бумага",
+				"paper (n.)"
+			],
+			[
+				"noun",
+				"железо",
+				"iron (n.)"
+			],
+			[
+				"adjective",
+				"ржавый",
+				"rusty"
+			],
+			[
+				"noun",
+				"бензин",
+				"gas/petrol"
+			],
+			[
+				"noun",
+				"ржавчина",
+				"rust"
+			],
+			[
+				"noun",
+				"воздух",
+				"air"
+			],
+			[
+				"noun",
+				"вода",
+				"water"
+			],
+			[
+				"noun",
+				"песок",
+				"sand"
+			],
+			[
+				"noun",
+				"камень",
+				"stone, rock"
+			],
+			[
+				"noun",
+				"алмаз",
+				"diamond"
+			],
+			[
+				"adjective",
+				"ядерный",
+				"nuclear"
+			],
+			[
+				"adjective",
+				"воздушный",
+				"airy, light, aerial"
+			],
+			[
+				"noun",
+				"асфальт",
+				"asphalt"
+			],
+			[
+				"phrase",
+				"слоновая кость",
+				"ivory"
+			],
+			[
+				"noun",
+				"сажа",
+				"soot"
+			],
+			[
+				"noun",
+				"дерево",
+				"a tree; wood"
+			],
+			[
+				"adjective",
+				"деревянный",
+				"wooden"
+			],
+			[
+				"noun",
+				"пластик",
+				"plastic (n.)"
+			],
+			[
+				"adjective",
+				"пластиковый",
+				"plastic (adj.)"
+			],
+			[
+				"noun",
+				"силикон",
+				"silicon (n.)"
+			],
+			[
+				"adjective",
+				"силиконовый",
+				"silicon (adj.)"
+			],
+			[
+				"noun",
+				"резина",
+				"rubber (n.)"
+			],
+			[
+				"adjective",
+				"золотистый",
+				"silver (color)"
+			],
+			[
+				"adjective",
+				"серебриистый",
+				"golden (color)"
+			],
+			[
+				"noun",
+				"керамика",
+				"ceramics"
+			],
+			[
+				"adjective",
+				"керамический",
+				"cermic (adj.)"
+			],
+			[
+				"noun",
+				"фарфор",
+				"porcelain (n.)"
+			],
+			[
+				"noun",
+				"металл",
+				"metal (n.)"
+			],
+			[
+				"noun",
+				"кожа",
+				"leather, skin (n.)"
+			],
+			[
+				"adjective",
+				"кожаный",
+				"leather (adj.)"
+			],
+			[
+				"noun",
+				"мех",
+				"fur (n.)"
+			],
+			[
+				"adjective",
+				"меховый",
+				"fur, furry (adj.)"
+			],
+			[
+				"noun",
+				"шерсть",
+				"wool, fur, coat"
+			],
+			[
+				"noun",
+				"шёлк",
+				"silk (n.)"
+			],
+			[
+				"adjective",
+				"шёлковый",
+				"silk (adj.)"
+			],
+			[
+				"noun",
+				"хлопок",
+				"cotton (n.)"
+			],
+			[
+				"adjective",
+				"хлопковый",
+				"cotton (adj.)"
+			],
+			[
+				"adjective",
+				"бумажный",
+				"paper (adj.)"
+			],
+			[
+				"adverb",
+				"стекло",
+				"glass (n.)"
+			],
+			[
+				"noun",
+				"картон",
+				"cardboard (n.)"
+			],
+			[
+				"adjective",
+				"картонный",
+				"cardboard (adj.)"
+			],
+			[
+				"adjective",
+				"прозрачный",
+				"transparent, clear"
+			]
+		]
+	}
+}

@@ -1,0 +1,64 @@
+{
+  "card_set": {
+    "name": "Meat",
+    "version": 1,
+    "cards": [
+      [
+        "noun",
+        "\u043c\u044f\u0441\u043e",
+        "meat"
+      ],
+      [
+        "noun",
+        "\u0433\u043e\u0432\u044f\u0434\u0438\u043d\u0430",
+        "beef"
+      ],
+      [
+        "noun",
+        "\u0431\u0430\u0440\u0430\u043d\u0438\u043d\u0430",
+        "mutton"
+      ],
+      [
+        "noun",
+        "\u0441\u0432\u0438\u043d\u0438\u043d\u0430",
+        "pork"
+      ],
+      [
+        "noun",
+        "\u0442\u0435\u043b\u044f\u0442\u0438\u043d\u0430",
+        "veal"
+      ],
+      [
+        "noun",
+        "\u044f\u0433\u043d\u044f\u0442\u0438\u043d\u0430",
+        "lamb"
+      ],
+      [
+        "noun",
+        "\u043a\u0440\u043e\u043b\u044c\u0447\u0430\u0442\u0438\u043d\u0430 (\u043a\u0440\u043e\u043b\u0438\u043a)",
+        "rabbit (food)"
+      ],
+      [
+        "noun",
+        "\u0432\u0435\u0442\u0447\u0438\u043d\u0430",
+        "ham"
+      ],
+      [
+        "noun",
+        "\u0431\u0435\u043a\u043e\u043d",
+        "bacon"
+      ],
+      [
+        "noun",
+        "\u043a\u043e\u043b\u0431\u0430\u0441\u0430",
+        "sausage"
+      ],
+      [
+        "adjective",
+        "\u043a\u0443\u0440\u0438\u043d\u044b\u0439",
+        "chicken (adj.)"
+      ]
+    ],
+    "type": "Categorical"
+  }
+}

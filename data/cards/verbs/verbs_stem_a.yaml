@@ -1,31 +1,113 @@
-card_set:
-  name: 5. Verbs with Stem - А (Я)
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, писать, to write]
-    - [verb, махать, to wave]
-    - [verb, резать, to cut]
-    - [verb, сказать, to say]
-    - [verb, плакать, to cry]
-    - [verb, прятать, to hide]
-    - [verb, шептать, to whisper]
-    - [verb, щекотать, to tickle]
-    - [verb, искать, to look for]
-    - [verb, сыпать, to sprinkle]
-    - [verb, колебаться, 'to sway, wobble; hesitate, waver']
-    - [verb, дремать, to doze]
-    - [verb, сеять, to sow]
-    - [verb, надеяться, to hope]
-    - [verb, смеяться, to laugh]
-    - [verb, лаять, to bark]
-    - [verb, таять, to melt]
-    - [verb, врать, to tell lies (colloquial)]
-    - [verb, ждать, to wait]
-    - [verb, жрать, to guzzle]
-    - [verb, лгать, to lie (to tell lies)]
-    - [verb, рвать, to tear]
-    - [verb, ржать, to neigh]
-    - [verb, брать, to take]
-    - [verb, драть, to tear up]
-    - [verb, звать, to call]
+{
+	"card_set": {
+		"version": 1,
+		"name": "5. Verbs with Stem - А (Я)",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"писать"
+			],
+			[
+				"verb",
+				"махать"
+			],
+			[
+				"verb",
+				"резать"
+			],
+			[
+				"verb",
+				"сказать"
+			],
+			[
+				"verb",
+				"плакать"
+			],
+			[
+				"verb",
+				"прятать"
+			],
+			[
+				"verb",
+				"шептать"
+			],
+			[
+				"verb",
+				"щекотать"
+			],
+			[
+				"verb",
+				"искать"
+			],
+			[
+				"verb",
+				"сыпать"
+			],
+			[
+				"verb",
+				"колебаться"
+			],
+			[
+				"verb",
+				"дремать"
+			],
+			[
+				"verb",
+				"сеять"
+			],
+			[
+				"verb",
+				"надеяться"
+			],
+			[
+				"verb",
+				"смеяться"
+			],
+			[
+				"verb",
+				"лаять"
+			],
+			[
+				"verb",
+				"таять"
+			],
+			[
+				"verb",
+				"врать"
+			],
+			[
+				"verb",
+				"ждать"
+			],
+			[
+				"verb",
+				"жрать"
+			],
+			[
+				"verb",
+				"лгать"
+			],
+			[
+				"verb",
+				"рвать"
+			],
+			[
+				"verb",
+				"ржать"
+			],
+			[
+				"verb",
+				"брать"
+			],
+			[
+				"verb",
+				"драть"
+			],
+			[
+				"verb",
+				"звать"
+			]
+		]
+	}
+}

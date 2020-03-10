@@ -1,64 +1,245 @@
-card_set:
-  name: 6.a Меняющиеся союзники
-  type: Media
-  version: 1
-  cards:
-    - [verb, трогать, 'to touch thoroughly, or many times']
-    - [verb, касаться, 'to touch, mention']
-    - [verb, коснуться, 'to touch, mention']
-    - [adjective, неосознанный, unconsious]
-    - [verb, заставить, to force]
-    - [noun, приход, arrival (foot)]
-    - [noun, приезд, arrival (transport)]
-    - [verb, усесться, 'to sit comfortably, or for a while']
-    - [verb, стукнуть, 'to give a knock, strike']
-    - [adjective, взаимный, mutual]
-    - [verb, печатать, to print]
-    - [verb, впечатать, to imprint]
-    - [noun, шататься, 'to stagger, swing, hesitate']
-    - [verb, отшатнуться, 'to recoil, swing to the side']
-    - [adjective, ошеломлённый, 'stunned, perplexed, dumbfounded']
-    - [verb, шевелиться, 'to stir, budge, move']
-    - [verb, покусывать, to nibble]
-    - [adjective, растерянный, 'bewildered, helpless from excitement/shock']
-    - [adjective, беспомощный, helpless]
-    - [verb, погодить, to wait a little]
-    - [verb, протествовать, to protest]
-    - [verb, прервать, to interrupt]
-    - [verb, ёрзать, 'to fidget, wiggle']
-    - [noun, судорога, 'spasm, convulsion, cramp']
-    - [noun, наслаждение, 'enjoyment, highest degree of pleasure']
-    - [verb, воспользоваться, to take advantage of]
-    - [verb, проникать, 'to infiltrate, penetrate']
-    - [verb, проникнуть, 'to infiltrate, penetrate']
-    - [adverb, тщетно, in vain]
-    - [verb, прижимать, to press against]
-    - [noun, пробка, cork; traffic jam]
-    - [adjective, заглушённый, 'silenced, drowned, muffled']
-    - [verb, исследовать, to explore]
-    - [adjective, переломный, 'crucial, critical']
-    - [verb, наступить, 'to tread on; to start, come']
-    - [adjective, публичный, public]
-    - [adjective, удвоенный, doubled]
-    - [interjection, Отвали!, Get lost! Fuck off!]
-    - [verb, тыкать, 'to poke, prod']
-    - [verb, соскочить, 'to get off, jump off']
-    - [adverb, основательно, thoroughly]
-    - [verb, 'притворяться, прикидываться', 'to act, pretend, sham']
-    - [noun, рост, growth]
-    - [verb, прибавить, 'to increase, size, number, quantity']
-    - [adjective, пытливый, 'inquisitive, inquiring']
-    - [noun, 'монстр, чудовище', monster]
-    - [adverb, врасплох, 'by suprise, suddenly, unexpectedly']
-    - [verb, застать, 'to find, see in some place, position, condition']
-    - [verb, заискрыться, to sparkle]
-    - [noun, луч, 'beam, ray']
-    - [verb, прекращать, 'to cease, discontinue, stop']
-    - [noun, атака, an attack]
-    - [verb, мстить, to avenge]
-    - [adjective, опасливый, 'cautious, wary']
-    - [noun, улей, hive]
-    - [noun, трутень, drone]
-    - [noun, разум, 'mind, reason']
-    - [verb, лениться, to be lazy]
-    - [adverb, поблизости, 'nearby, close to smth']
+{
+	"card_set": {
+		"version": 1,
+		"name": "6.a Меняющиеся союзники",
+		"type": "media",
+		"cards": [
+			[
+				"verb",
+				"трогать"
+			],
+			[
+				"verb",
+				"касаться"
+			],
+			[
+				"verb",
+				"коснуться"
+			],
+			[
+				"adjective",
+				"неосознанный"
+			],
+			[
+				"verb",
+				"заставить"
+			],
+			[
+				"noun",
+				"приход"
+			],
+			[
+				"noun",
+				"приезд"
+			],
+			[
+				"verb",
+				"усесться"
+			],
+			[
+				"verb",
+				"стукнуть"
+			],
+			[
+				"adjective",
+				"взаимный"
+			],
+			[
+				"verb",
+				"печатать"
+			],
+			[
+				"verb",
+				"впечатать"
+			],
+			[
+				"noun",
+				"шататься"
+			],
+			[
+				"verb",
+				"отшатнуться"
+			],
+			[
+				"adjective",
+				"ошеломленный"
+			],
+			[
+				"verb",
+				"шевелиться"
+			],
+			[
+				"verb",
+				"покусывать"
+			],
+			[
+				"adjective",
+				"растерянный"
+			],
+			[
+				"adjective",
+				"беспомощный"
+			],
+			[
+				"verb",
+				"погодить"
+			],
+			[
+				"verb",
+				"протествовать"
+			],
+			[
+				"verb",
+				"прервать"
+			],
+			[
+				"verb",
+				"ерзать"
+			],
+			[
+				"noun",
+				"судорога"
+			],
+			[
+				"noun",
+				"наслаждение"
+			],
+			[
+				"verb",
+				"воспользоваться"
+			],
+			[
+				"verb",
+				"проникать"
+			],
+			[
+				"verb",
+				"проникнуть"
+			],
+			[
+				"adverb",
+				"тщетно"
+			],
+			[
+				"verb",
+				"прижимать"
+			],
+			[
+				"noun",
+				"пробка"
+			],
+			[
+				"adjective",
+				"заглушенный"
+			],
+			[
+				"verb",
+				"исследовать"
+			],
+			[
+				"adjective",
+				"переломный"
+			],
+			[
+				"verb",
+				"наступить"
+			],
+			[
+				"adjective",
+				"публичный"
+			],
+			[
+				"adjective",
+				"удвоенный"
+			],
+			[
+				"interjection",
+				"отвали!"
+			],
+			[
+				"verb",
+				"тыкать"
+			],
+			[
+				"verb",
+				"соскочить"
+			],
+			[
+				"adverb",
+				"основательно"
+			],
+			[
+				"verb",
+				"притворяться; прикидываться"
+			],
+			[
+				"noun",
+				"рост"
+			],
+			[
+				"verb",
+				"прибавить"
+			],
+			[
+				"adjective",
+				"пытливый"
+			],
+			[
+				"noun",
+				"монстр; чудовище"
+			],
+			[
+				"adverb",
+				"врасплох"
+			],
+			[
+				"verb",
+				"застать"
+			],
+			[
+				"verb",
+				"заискрыться"
+			],
+			[
+				"noun",
+				"луч"
+			],
+			[
+				"verb",
+				"прекращать"
+			],
+			[
+				"noun",
+				"атака"
+			],
+			[
+				"verb",
+				"мстить"
+			],
+			[
+				"adjective",
+				"опасливый"
+			],
+			[
+				"noun",
+				"улей"
+			],
+			[
+				"noun",
+				"трутень"
+			],
+			[
+				"noun",
+				"разум"
+			],
+			[
+				"verb",
+				"лениться"
+			],
+			[
+				"adverb",
+				"поблизости"
+			]
+		]
+	}
+}

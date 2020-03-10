@@ -1,20 +1,69 @@
-card_set:
-  name: Root брать
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, брать, to take]
-    - [verb, убрать, 'to remove, place somewhere']
-    - [verb, выбрать, 'to choose, select']
-    - [verb, набрать, 'to dial; to gather, assemble']
-    - [verb, разобрать, 'to dismantle, deconstruct, analyze']
-    - [verb, набраться, 'to pick up, gather, muster']
-    - [verb, добраться, to reach someone/smth after time/effort]
-    - [verb, выбраться, to get out from somewhere with difficulty]
-    - [verb, взобраться, to climb up with effort]
-    - [verb, разобраться, to figure it out]
-    - [verb, убирать, 'remove, tidy up, clear']
-    - [verb, собирать, to collect]
-    - [verb, разбираться, to deal with]
-    - [phrase, собираться + verb, 'to get ready, to plan, to intend to do soemthing']
-    - [adjective, набранный, 'collected, typed, gathered']
+{
+	"card_set": {
+		"version": 1,
+		"name": "Root брать",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"брать"
+			],
+			[
+				"verb",
+				"убрать"
+			],
+			[
+				"verb",
+				"выбрать"
+			],
+			[
+				"verb",
+				"набрать"
+			],
+			[
+				"verb",
+				"разобрать"
+			],
+			[
+				"verb",
+				"набраться"
+			],
+			[
+				"verb",
+				"добраться"
+			],
+			[
+				"verb",
+				"выбраться"
+			],
+			[
+				"verb",
+				"взобраться"
+			],
+			[
+				"verb",
+				"разобраться"
+			],
+			[
+				"verb",
+				"убирать"
+			],
+			[
+				"verb",
+				"собирать"
+			],
+			[
+				"verb",
+				"разбираться"
+			],
+			[
+				"phrase",
+				"собираться + verb"
+			],
+			[
+				"adjective",
+				"набранный"
+			]
+		]
+	}
+}

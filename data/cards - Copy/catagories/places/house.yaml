@@ -1,0 +1,254 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "House",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"дверь",
+				"door"
+			],
+			[
+				"noun",
+				"окно",
+				"window"
+			],
+			[
+				"noun",
+				"комната",
+				"room"
+			],
+			[
+				"noun",
+				"диван",
+				"couch"
+			],
+			[
+				"noun",
+				"кресло",
+				"armchair"
+			],
+			[
+				"noun",
+				"лампа",
+				"lamp"
+			],
+			[
+				"noun",
+				"стеллаж",
+				"shelves"
+			],
+			[
+				"noun",
+				"шторы",
+				"curtains"
+			],
+			[
+				"noun",
+				"телевизор",
+				"television, tv set"
+			],
+			[
+				"noun",
+				"тумбочка",
+				"drawers"
+			],
+			[
+				"noun",
+				"шкаф",
+				"wardrobe, cabinets"
+			],
+			[
+				"noun",
+				"кухня",
+				"kitchen"
+			],
+			[
+				"noun",
+				"посуда",
+				"dishes"
+			],
+			[
+				"noun",
+				"чайник",
+				"kettle"
+			],
+			[
+				"noun",
+				"плита",
+				"stove-top"
+			],
+			[
+				"noun",
+				"духовка",
+				"oven"
+			],
+			[
+				"noun",
+				"посудомоечная машина",
+				"dishwasher"
+			],
+			[
+				"noun",
+				"тостер",
+				"toaster"
+			],
+			[
+				"noun",
+				"печь",
+				"stove, furnace"
+			],
+			[
+				"noun",
+				"батарея",
+				"battery, radiator"
+			],
+			[
+				"noun",
+				"зеркало",
+				"mirror"
+			],
+			[
+				"noun",
+				"кран",
+				"faucet"
+			],
+			[
+				"noun",
+				"раковина",
+				"sink"
+			],
+			[
+				"noun",
+				"корзина для белья",
+				"laundry basket"
+			],
+			[
+				"noun",
+				"душ",
+				"shower"
+			],
+			[
+				"noun",
+				"душевая кабина",
+				"standup shower"
+			],
+			[
+				"noun",
+				"туалет",
+				"toilet"
+			],
+			[
+				"noun",
+				"спальная (комната)",
+				"bedroom"
+			],
+			[
+				"noun",
+				"кровать",
+				"bed"
+			],
+			[
+				"noun",
+				"подушка",
+				"pillow"
+			],
+			[
+				"noun",
+				"мышка",
+				"computer mouse"
+			],
+			[
+				"noun",
+				"наушники",
+				"headphones"
+			],
+			[
+				"noun",
+				"стол",
+				"table"
+			],
+			[
+				"noun",
+				"стул",
+				"chair"
+			],
+			[
+				"noun",
+				"пол",
+				"floor; gender/sex"
+			],
+			[
+				"noun",
+				"комод",
+				"dresser (for clothes)"
+			],
+			[
+				"noun",
+				"порог",
+				"threshold; beam on floor at bottom of doorway"
+			],
+			[
+				"noun",
+				"проём",
+				"opening, doorway/window hole"
+			],
+			[
+				"adjective",
+				"огороженный",
+				"fenced"
+			],
+			[
+				"noun",
+				"засов",
+				"large door latch, bolt"
+			],
+			[
+				"noun",
+				"одеяло",
+				"blanket"
+			],
+			[
+				"noun",
+				"домь",
+				"house"
+			],
+			[
+				"noun",
+				"кладовая (комната)",
+				"pantry"
+			],
+			[
+				"noun",
+				"гардероб",
+				"wardrobe"
+			],
+			[
+				"noun",
+				"коврик",
+				"a mat, rug"
+			],
+			[
+				"phrase",
+				"вынести мусор",
+				"to take out the trash"
+			],
+			[
+				"phrase",
+				"мусорка; урна",
+				"a trash can"
+			],
+			[
+				"phrase",
+				"почтовый ящик",
+				"a mail box"
+			],
+			[
+				"noun",
+				"чердак",
+				"an attic"
+			]
+		]
+	}
+}

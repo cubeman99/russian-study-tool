@@ -1,0 +1,319 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "11 Сбывшаяся мечта",
+		"type": "media",
+		"cards": [
+			[
+				"noun",
+				"долг",
+				"duty; debt"
+			],
+			[
+				"adjective",
+				"пристыжённый",
+				"ashamed"
+			],
+			[
+				"adjective",
+				"взволнованный",
+				"thrilled, excited"
+			],
+			[
+				"noun",
+				"повод",
+				"an occasion"
+			],
+			[
+				"verb",
+				"шаркнуть",
+				"to shuffle"
+			],
+			[
+				"verb",
+				"выспаться",
+				"to sleep in, get enough sleep"
+			],
+			[
+				"adjective",
+				"некий ...",
+				"a certain ..."
+			],
+			[
+				"adjective",
+				"прочий",
+				"the rest, other"
+			],
+			[
+				"noun",
+				"гардероб",
+				"wardrobe"
+			],
+			[
+				"noun",
+				"ленто",
+				"ribbon; tape"
+			],
+			[
+				"noun",
+				"бант",
+				"a bow (clothing)"
+			],
+			[
+				"verb",
+				"развеваться",
+				"to flutter, wave around (about loose hair)"
+			],
+			[
+				"verb",
+				"нервничать",
+				"to get nervous"
+			],
+			[
+				"adjective",
+				"помятый",
+				"rumpled, stale"
+			],
+			[
+				"verb",
+				"забросить",
+				"to throw far away, to abandon"
+			],
+			[
+				"adjective",
+				"стыдный",
+				"shameful"
+			],
+			[
+				"adjective",
+				"нынешний",
+				"present-day"
+			],
+			[
+				"verb",
+				"ухаживать",
+				"to court, woo, look after deleteme"
+			],
+			[
+				"verb",
+				"ухаживать за",
+				"to look after, care for; to court, woo"
+			],
+			[
+				"adjective",
+				"обыденный",
+				"mundane"
+			],
+			[
+				"verb",
+				"вычеркнуть",
+				"to cross out"
+			],
+			[
+				"verb",
+				"мять",
+				"to crumple"
+			],
+			[
+				"noun",
+				"сочетание",
+				"a combination"
+			],
+			[
+				"noun",
+				"коврик",
+				"a mat, rug"
+			],
+			[
+				"noun",
+				"морщина",
+				"a wrinkle"
+			],
+			[
+				"noun",
+				"страница",
+				"a page"
+			],
+			[
+				"verb",
+				"гладить",
+				"to iron"
+			],
+			[
+				"verb",
+				"разгладиться",
+				"to smooth out, become smooth, free from bumps, wrinkles"
+			],
+			[
+				"verb",
+				"оформляться",
+				"to take shape, to form"
+			],
+			[
+				"noun",
+				"тыл",
+				"rear (butt)"
+			],
+			[
+				"adjective",
+				"потертый",
+				"shabby, well-worn, threadbare"
+			],
+			[
+				"verb",
+				"приобретать",
+				"to acquire"
+			],
+			[
+				"noun",
+				"промежуток",
+				"gap, interval (in space or time)"
+			],
+			[
+				"noun",
+				"получаса",
+				"half an hour"
+			],
+			[
+				"adjective",
+				"бесполезный",
+				"useless"
+			],
+			[
+				"noun",
+				"супруга",
+				"partner (wife or husband)"
+			],
+			[
+				"verb",
+				"наткнуться",
+				"to stumble upon, bump into smth"
+			],
+			[
+				"noun",
+				"отрицание",
+				"denial, negation"
+			],
+			[
+				"verb",
+				"запнуться",
+				"to stumble, trip"
+			],
+			[
+				"noun",
+				"кладовая (комната)",
+				"pantry"
+			],
+			[
+				"adjective",
+				"назойливый",
+				"pestering, intrusive, annoying"
+			],
+			[
+				"verb",
+				"поглаживать",
+				"to pat, stroke"
+			],
+			[
+				"verb",
+				"мчаться",
+				"to rush, race, tear along"
+			],
+			[
+				"noun",
+				"обёрточная бумага",
+				"wrapping, wrapping-paper"
+			],
+			[
+				"noun",
+				"избыток",
+				"excess, surplus"
+			],
+			[
+				"noun",
+				"шпагат",
+				"twine; a split (in gymnastics)"
+			],
+			[
+				"noun",
+				"озарение",
+				"insight, sudden clarification"
+			],
+			[
+				"noun",
+				"лавина",
+				"an avalanche"
+			],
+			[
+				"verb",
+				"зажигать",
+				"to set fire, to light, to kindle, to inflame, to ignite"
+			],
+			[
+				"verb",
+				"издеваться",
+				"to mock, scoff"
+			],
+			[
+				"verb",
+				"топать; топатать",
+				"to stomp"
+			],
+			[
+				"noun",
+				"яма",
+				"a pit"
+			],
+			[
+				"verb",
+				"стряхнуть",
+				"to shake off"
+			],
+			[
+				"verb",
+				"пересечь",
+				"to cross, go through smth"
+			],
+			[
+				"noun",
+				"снадобье; зелье",
+				"a potion"
+			],
+			[
+				"adverb",
+				"едко",
+				"caustically"
+			],
+			[
+				"adverb",
+				"безмерно",
+				"immeasurably, immensely"
+			],
+			[
+				"phrase",
+				"побочный эффект",
+				"side-effect"
+			],
+			[
+				"phrase",
+				"о чём ты?",
+				"what are you talking about?"
+			],
+			[
+				"noun",
+				"зрачок",
+				"pupil (part of eye)"
+			],
+			[
+				"verb",
+				"пересекать",
+				"to cross, traverse"
+			],
+			[
+				"verb",
+				"зажечь",
+				"to set fire, to light, to kindle, to inflame, to ignite"
+			]
+		]
+	}
+}

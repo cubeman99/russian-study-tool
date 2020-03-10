@@ -1,0 +1,59 @@
+{
+  "card_set": {
+    "name": "9. Verbs with Stem - \u0415",
+    "version": 1,
+    "cards": [
+      [
+        "verb",
+        "\u0432\u0438\u0434\u0435\u0442\u044c",
+        "to see"
+      ],
+      [
+        "verb",
+        "\u0432\u0438\u0441\u0435\u0442\u044c",
+        "to hang (intr.)"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0432\u0438\u0441\u0435\u0442\u044c",
+        "to depend"
+      ],
+      [
+        "verb",
+        "\u043b\u0435\u0442\u0435\u0442\u044c",
+        "to fly"
+      ],
+      [
+        "verb",
+        "\u0441\u0432\u0438\u0441\u0442\u0435\u0442\u044c",
+        "to whistle"
+      ],
+      [
+        "verb",
+        "\u0442\u0435\u0440\u043f\u0435\u0442\u044c",
+        "to tolerate"
+      ],
+      [
+        "verb",
+        "\u0445\u0440\u0430\u043f\u0435\u0442\u044c",
+        "to snore"
+      ],
+      [
+        "verb",
+        "\u0448\u0443\u043c\u0435\u0442\u044c",
+        "to make noise"
+      ],
+      [
+        "verb",
+        "\u0433\u043e\u0440\u0435\u0442\u044c",
+        "to burn"
+      ],
+      [
+        "verb",
+        "\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c",
+        "to look, watch"
+      ]
+    ],
+    "type": "Grammatical"
+  }
+}

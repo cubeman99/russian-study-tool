@@ -1,39 +1,141 @@
-card_set:
-  name: Вселленая Стевена
-  type: Media
-  version: 1
-  cards:
-    - [verb, терзать, to torment]
-    - [verb, реять, 'to flutter, soar']
-    - [noun, отвага, courage]
-    - [verb, смолкать, 'to grow silent, to shut up']
-    - [verb, подсесть, to sit next to something/someone]
-    - [preposition, прежде, before]
-    - [adjective, нежный, 'gentle, tender, affectionate']
-    - [noun, алмаз, diamond]
-    - [verb, сливаться, 'to flow together, merge, fuse']
-    - [noun, слияние, 'fusion, merger']
-    - [noun, камень, 'stone, rock']
-    - [noun, жемчуг, pearl]
-    - [noun, сила, 'strength, power, force']
-    - [phrase, 'почему ты мне раньше это не рассказывал?', 'Why havent you told me this
-    before?']
-    - [phrase, никогда ещё не было ничего и никого подобного, there has never been anything
-    or anyone like this]
-    - [verb, защищать, to protect]
-    - [noun, щит, shield]
-    - [noun, шар, 'orb, sphere, globe, ball']
-    - [adjective, бескрайный, 'immense, boundless']
-    - [noun, изумруд, emerald]
-    - [noun, вселенная, universe]
-    - [noun, ребята, 'guys, children']
-    - [phrase, где бы ты не был, wherever you are]
-    - [phrase, ух ты!, 'wow, woah!']
-    - [verb, беречь, to keep safe]
-    - [adverb, вмиг, in a flash]
-    - [phrase, один и тот же, one in the same]
-    - [noun, хрен, horseradish]
-    - [verb, цензурировать, to sensor]
-    - [noun, грех, sin]
-    - [adjective, трагический, tragic]
-    - [verb, слиться, 'to flow together, merge, fuse']
+{
+	"card_set": {
+		"version": 1,
+		"name": "Вселленая Стевена",
+		"type": "media",
+		"cards": [
+			[
+				"verb",
+				"терзать"
+			],
+			[
+				"verb",
+				"реять"
+			],
+			[
+				"noun",
+				"отвага"
+			],
+			[
+				"verb",
+				"смолкать"
+			],
+			[
+				"verb",
+				"подсесть"
+			],
+			[
+				"preposition",
+				"прежде"
+			],
+			[
+				"adjective",
+				"нежный"
+			],
+			[
+				"noun",
+				"алмаз"
+			],
+			[
+				"verb",
+				"сливаться"
+			],
+			[
+				"noun",
+				"слияние"
+			],
+			[
+				"noun",
+				"камень"
+			],
+			[
+				"noun",
+				"жемчуг"
+			],
+			[
+				"noun",
+				"сила"
+			],
+			[
+				"phrase",
+				"почему ты мне раньше это не рассказывал?"
+			],
+			[
+				"phrase",
+				"никогда еще не было ничего и никого подобного"
+			],
+			[
+				"verb",
+				"защищать"
+			],
+			[
+				"noun",
+				"щит"
+			],
+			[
+				"noun",
+				"шар"
+			],
+			[
+				"adjective",
+				"бескрайный"
+			],
+			[
+				"noun",
+				"изумруд"
+			],
+			[
+				"noun",
+				"вселенная"
+			],
+			[
+				"noun",
+				"ребята"
+			],
+			[
+				"phrase",
+				"где бы ты не был"
+			],
+			[
+				"phrase",
+				"ух ты!"
+			],
+			[
+				"verb",
+				"беречь"
+			],
+			[
+				"adverb",
+				"вмиг"
+			],
+			[
+				"phrase",
+				"один и тот же"
+			],
+			[
+				"noun",
+				"хрен"
+			],
+			[
+				"verb",
+				"цензурировать"
+			],
+			[
+				"noun",
+				"грех"
+			],
+			[
+				"adjective",
+				"трагический"
+			],
+			[
+				"verb",
+				"слиться"
+			],
+			[
+				"verb",
+				"заблуждаться"
+			]
+		]
+	}
+}

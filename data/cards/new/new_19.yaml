@@ -1,69 +1,261 @@
-card_set:
-  name: New 19
-  type: Other
-  version: 1
-  cards:
-    - [adjective, неприличный, indecent]
-    - [adjective, приличный, decent]
-    - [adjective, изрядный, 'fair, hefty, significant in quantity']
-    - [adjective, преступный, 'criminal, felonious']
-    - [adjective, живописный, 'scenic, picturesque']
-    - [adjective, бесплатный, free (without pay)]
-    - [adjective, бескрайный, 'immense, boundless']
-    - [adverb, 'Вкратце, ...', 'In short, ...']
-    - [noun, призвание, 'calling, vocation']
-    - [noun, изумруд, emerald]
-    - [noun, опечатка, typo]
-    - [noun, зарплата, salery]
-    - [noun, образец, sample]
-    - [noun, привал, a stop along the way]
-    - [noun, распоряжение, 'disposition, order, command']
-    - [noun, бардак, a complete mess]
-    - [noun, завоевание, conquest]
-    - [noun, награда, reward]
-    - [noun, урод, freak]
-    - [noun, дебил, moron]
-    - [noun, сходка, gathering]
-    - [noun, маршрут, route]
-    - [noun, преданность, 'devotion, dedication']
-    - [noun, американский горки, roller coaster]
-    - [noun, ощущение, 'feeling, sensation']
-    - [noun, наука, science]
-    - [noun, ссылка, 'link, reference']
-    - [noun, кузница, forge]
-    - [noun, эпоха, 'era, age']
-    - [noun, алмаз, diamond]
-    - [verb, повысить, 'to increase, raise']
-    - [verb, повышать, 'to increase, raise']
-    - [verb, выполнять, 'to accomplish, execute, perform']
-    - [verb, выполнить, 'to accomplish, execute, perform']
-    - [verb, любоваться, to look at in pleasure]
-    - [verb, пялиться, to stare]
-    - [verb, наблюдать, to observe (empirically)]
-    - [verb, выглядеть, to look (appearance)]
-    - [verb, распаковать, to unpack]
-    - [verb, хоронить, 'to bury, tomb, lay to rest']
-    - [verb, сливаться, 'to flow together, merge, fuse']
-    - [verb, слиться, 'to flow together, merge, fuse']
-    - [verb, защищать, to protect]
-    - [verb, судить, to judge]
-    - [verb, пожаловать, to welcome]
-    - [verb, скучать, to miss due to absance; to feel bored]
-    - [verb, шпионить, to spy]
-    - [verb, задремать, to doze off]
-    - [verb, дралить, to tear up (teardrops)]
-    - [verb, набрать, 'to dial; to gather, assemble']
-    - [verb, огорчить, to upset (cause grief)]
-    - [verb, расколоть, to split]
-    - [verb, беда, trouble]
-    - [phrase, никогда ещё не было ничего и никого подобного, there has never been anything
-    or anyone like this]
-    - [phrase, так нельзя, you cant do it in this way]
-    - [phrase, 'Что ты хочешь, чтобы я сказал?', 'What do you want me to say?']
-    - [phrase, деньги не пахнуть, money doesnt smell (the ends justify the means)]
-    - [phrase, ударить в грязь лицом, to fall into the dirt face first]
-    - [phrase, у чёрта на куличиках, hell knows where]
-    - [phrase, утра вечера мудренее, morning is wiser than the evening (lets sleep on it)]
-    - [phrase, ни с места, Dont move!]
-    - [phrase, 'я имею в виду, ...', 'I mean, ...']
-    - [phrase, как тебе угодно, as you please]
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 19",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"неприличный"
+			],
+			[
+				"adjective",
+				"приличный"
+			],
+			[
+				"adjective",
+				"изрядный"
+			],
+			[
+				"adjective",
+				"преступный"
+			],
+			[
+				"adjective",
+				"живописный"
+			],
+			[
+				"adjective",
+				"бесплатный"
+			],
+			[
+				"adjective",
+				"бескрайный"
+			],
+			[
+				"adverb",
+				"вкратце, ..."
+			],
+			[
+				"noun",
+				"призвание"
+			],
+			[
+				"noun",
+				"изумруд"
+			],
+			[
+				"noun",
+				"опечатка"
+			],
+			[
+				"noun",
+				"зарплата"
+			],
+			[
+				"noun",
+				"образец"
+			],
+			[
+				"noun",
+				"привал"
+			],
+			[
+				"noun",
+				"распоряжение"
+			],
+			[
+				"noun",
+				"бардак"
+			],
+			[
+				"noun",
+				"завоевание"
+			],
+			[
+				"noun",
+				"награда"
+			],
+			[
+				"noun",
+				"урод"
+			],
+			[
+				"noun",
+				"дебил"
+			],
+			[
+				"noun",
+				"сходка"
+			],
+			[
+				"noun",
+				"маршрут"
+			],
+			[
+				"noun",
+				"преданность"
+			],
+			[
+				"noun",
+				"американский горки"
+			],
+			[
+				"noun",
+				"ощущение"
+			],
+			[
+				"noun",
+				"наука"
+			],
+			[
+				"noun",
+				"ссылка"
+			],
+			[
+				"noun",
+				"кузница"
+			],
+			[
+				"noun",
+				"эпоха"
+			],
+			[
+				"noun",
+				"алмаз"
+			],
+			[
+				"verb",
+				"повысить"
+			],
+			[
+				"verb",
+				"повышать"
+			],
+			[
+				"verb",
+				"выполнять"
+			],
+			[
+				"verb",
+				"выполнить"
+			],
+			[
+				"verb",
+				"любоваться"
+			],
+			[
+				"verb",
+				"пялиться"
+			],
+			[
+				"verb",
+				"наблюдать"
+			],
+			[
+				"verb",
+				"выглядеть"
+			],
+			[
+				"verb",
+				"распаковать"
+			],
+			[
+				"verb",
+				"хоронить"
+			],
+			[
+				"verb",
+				"сливаться"
+			],
+			[
+				"verb",
+				"слиться"
+			],
+			[
+				"verb",
+				"защищать"
+			],
+			[
+				"verb",
+				"судить"
+			],
+			[
+				"verb",
+				"пожаловать"
+			],
+			[
+				"verb",
+				"скучать"
+			],
+			[
+				"verb",
+				"шпионить"
+			],
+			[
+				"verb",
+				"задремать"
+			],
+			[
+				"verb",
+				"дралить"
+			],
+			[
+				"verb",
+				"набрать"
+			],
+			[
+				"verb",
+				"огорчить"
+			],
+			[
+				"verb",
+				"расколоть"
+			],
+			[
+				"verb",
+				"беда"
+			],
+			[
+				"phrase",
+				"никогда еще не было ничего и никого подобного"
+			],
+			[
+				"phrase",
+				"так нельзя"
+			],
+			[
+				"phrase",
+				"что ты хочешь, чтобы я сказал?"
+			],
+			[
+				"phrase",
+				"деньги не пахнуть"
+			],
+			[
+				"phrase",
+				"ударить в грязь лицом"
+			],
+			[
+				"phrase",
+				"у черта на куличиках"
+			],
+			[
+				"phrase",
+				"утра вечера мудренее"
+			],
+			[
+				"phrase",
+				"ни с места"
+			],
+			[
+				"phrase",
+				"я имею в виду, ..."
+			],
+			[
+				"phrase",
+				"как тебе угодно"
+			]
+		]
+	}
+}

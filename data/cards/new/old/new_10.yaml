@@ -1,74 +1,285 @@
-card_set:
-  name: New 10
-  type: Other
-  version: 1
-  cards:
-    - [adjective, робкий, timid]
-    - [adjective, разный, 'different, various']
-    - [adjective, немецкий, German]
-    - [adjective, взрослый, adult]
-    - [adjective, единственный, 'only, sole']
-    - [adjective, начинающий, beginner]
-    - [adjective, мрачный, gloomy]
-    - [adjective, слепой, blind]
-    - [adjective, глубокий, deep]
-    - [adjective, стыдный, ashamed]
-    - [adjective, тупой, dull]
-    - [adverb, дороже, more expensive]
-    - [adverb, сполна, in full]
-    - [adverb, именно, 'namely, precisely, exactly']
-    - [noun, тошнота, nausea]
-    - [noun, путь, 'path, way, route']
-    - [noun, правило, rule]
-    - [noun, размер, size]
-    - [noun, пропуск, 'pass, permit']
-    - [noun, сообщение, 'message, report']
-    - [noun, лекарство, 'medicine, drug']
-    - [noun, старик, old man]
-    - [noun, начало, beginning]
-    - [noun, ученица, 'student, pupil']
-    - [noun, пациент, patient]
-    - [noun, полотенце, towel]
-    - [noun, коробка, 'box, case']
-    - [noun, род, 'gender, kin']
-    - [noun, предложение, 'offer, proposal, suggestion; sentence']
-    - [noun, конъюнкция, conjunction]
-    - [noun, предлог, preposition]
-    - [noun, фраза, phrase]
-    - [noun, замечание, 'comment, remark, note, observation']
-    - [noun, покой, 'peace, rest']
-    - [noun, тень, shadow]
-    - [noun, продолжение, continuation]
-    - [noun, вдох, 'breath, inhalation']
-    - [noun, сомнение, doubt]
-    - [noun, количество, 'amount, quantity']
-    - [verb, арендовать, to rent]
-    - [verb, основывать, 'to found, base, base upon']
-    - [verb, обсудить, to discuss]
-    - [verb, осматривать, 'to inspect, examine']
-    - [verb, запомнить, 'to keep in mind, remember, memorize']
-    - [verb, замечать, to notice]
-    - [verb, влюбиться, to fall in love]
-    - [verb, уступить, 'to concede, yield, give way']
-    - [verb, красить, to paint]
-    - [verb, пускать, to let go]
-    - [verb, дарить, to gift]
-    - [verb, выдохнуть, to exhale]
-    - [verb, вдохнуть, to inhale]
-    - [verb, оставлять, 'to leave, drop, abandon']
-    - [verb, оставить, 'to leave, drop, abandon']
-    - [verb, получиться, 'to turn out, work']
-    - [verb, получаться, 'to turn out, work']
-    - [verb, пригласить, to invite]
-    - [phrase, всё в порядке, all is well]
-    - [phrase, вообще-то, 'to be honest, in actuality, by the way']
-    - [phrase, 'я считаю, что...', 'I think that, I believe that...']
-    - [phrase, 'как оказалось, ...', 'as it turned out, ...']
-    - [phrase, 'на самом деле, ...', 'in actuality, in reality, ...']
-    - [phrase, к сложолению DELETEME, unfortunately]
-    - [phrase, 'в любом случае, ...', 'in any case, ...']
-    - [phrase, 'что касается ____, то ____', 'when it comes to ____, ____']
-    - [preposition, над, over]
-    - [preposition, перед, in front of]
-    - [preposition, радом с, next to]
-    - [interjection, молодец, well done]
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 10",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"робкий"
+			],
+			[
+				"adjective",
+				"разный"
+			],
+			[
+				"adjective",
+				"немецкий"
+			],
+			[
+				"adjective",
+				"взрослый"
+			],
+			[
+				"adjective",
+				"единственный"
+			],
+			[
+				"adjective",
+				"начинающий"
+			],
+			[
+				"adjective",
+				"мрачный"
+			],
+			[
+				"adjective",
+				"слепой"
+			],
+			[
+				"adjective",
+				"глубокий"
+			],
+			[
+				"adjective",
+				"стыдный"
+			],
+			[
+				"adjective",
+				"тупой"
+			],
+			[
+				"adverb",
+				"дороже"
+			],
+			[
+				"adverb",
+				"сполна"
+			],
+			[
+				"adverb",
+				"именно"
+			],
+			[
+				"noun",
+				"тошнота"
+			],
+			[
+				"noun",
+				"путь"
+			],
+			[
+				"noun",
+				"правило"
+			],
+			[
+				"noun",
+				"размер"
+			],
+			[
+				"noun",
+				"пропуск"
+			],
+			[
+				"noun",
+				"сообщение"
+			],
+			[
+				"noun",
+				"лекарство"
+			],
+			[
+				"noun",
+				"старик"
+			],
+			[
+				"noun",
+				"начало"
+			],
+			[
+				"noun",
+				"ученица"
+			],
+			[
+				"noun",
+				"пациент"
+			],
+			[
+				"noun",
+				"полотенце"
+			],
+			[
+				"noun",
+				"коробка"
+			],
+			[
+				"noun",
+				"род"
+			],
+			[
+				"noun",
+				"предложение"
+			],
+			[
+				"noun",
+				"конъюнкция"
+			],
+			[
+				"noun",
+				"предлог"
+			],
+			[
+				"noun",
+				"фраза"
+			],
+			[
+				"noun",
+				"замечание"
+			],
+			[
+				"noun",
+				"покой"
+			],
+			[
+				"noun",
+				"тень"
+			],
+			[
+				"noun",
+				"продолжение"
+			],
+			[
+				"noun",
+				"вдох"
+			],
+			[
+				"noun",
+				"сомнение"
+			],
+			[
+				"noun",
+				"количество"
+			],
+			[
+				"verb",
+				"арендовать"
+			],
+			[
+				"verb",
+				"основывать"
+			],
+			[
+				"verb",
+				"обсудить"
+			],
+			[
+				"verb",
+				"осматривать"
+			],
+			[
+				"verb",
+				"запомнить"
+			],
+			[
+				"verb",
+				"замечать"
+			],
+			[
+				"verb",
+				"влюбиться"
+			],
+			[
+				"verb",
+				"уступить"
+			],
+			[
+				"verb",
+				"красить"
+			],
+			[
+				"verb",
+				"пускать"
+			],
+			[
+				"verb",
+				"дарить"
+			],
+			[
+				"verb",
+				"выдохнуть"
+			],
+			[
+				"verb",
+				"вдохнуть"
+			],
+			[
+				"verb",
+				"оставлять"
+			],
+			[
+				"verb",
+				"оставить"
+			],
+			[
+				"verb",
+				"получиться"
+			],
+			[
+				"verb",
+				"получаться"
+			],
+			[
+				"verb",
+				"пригласить"
+			],
+			[
+				"phrase",
+				"все в порядке"
+			],
+			[
+				"phrase",
+				"вообще-то"
+			],
+			[
+				"phrase",
+				"я считаю, что..."
+			],
+			[
+				"phrase",
+				"как оказалось, ..."
+			],
+			[
+				"phrase",
+				"на самом деле, ..."
+			],
+			[
+				"phrase",
+				"к сложолению deleteme"
+			],
+			[
+				"phrase",
+				"в любом случае, ..."
+			],
+			[
+				"phrase",
+				"что касается ____, то ____"
+			],
+			[
+				"preposition",
+				"над"
+			],
+			[
+				"preposition",
+				"перед"
+			],
+			[
+				"preposition",
+				"радом с"
+			],
+			[
+				"interjection",
+				"молодец"
+			]
+		]
+	}
+}

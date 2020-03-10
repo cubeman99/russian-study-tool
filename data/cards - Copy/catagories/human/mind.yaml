@@ -1,0 +1,369 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Mind",
+		"type": "categorical",
+		"cards": [
+			[
+				"verb",
+				"подумать",
+				"to think"
+			],
+			[
+				"verb",
+				"думать",
+				"to think"
+			],
+			[
+				"verb",
+				"задумать",
+				"to conceive, plan"
+			],
+			[
+				"verb",
+				"передумать",
+				"to change your mind, rethink"
+			],
+			[
+				"noun",
+				"разум",
+				"mind, reason"
+			],
+			[
+				"adjective",
+				"разумный",
+				"reasonable"
+			],
+			[
+				"phrase",
+				"контроль разума",
+				"mind control"
+			],
+			[
+				"noun",
+				"ум",
+				"mind, wit, intelligence"
+			],
+			[
+				"adjective",
+				"умный",
+				"clever, smart, intelligent"
+			],
+			[
+				"adjective",
+				"остроумный",
+				"witty"
+			],
+			[
+				"adjective",
+				"безумный",
+				"crazy, insane"
+			],
+			[
+				"verb",
+				"обезуметь",
+				"to go crazy"
+			],
+			[
+				"noun",
+				"мысль",
+				"thought, idea"
+			],
+			[
+				"verb",
+				"помыслить",
+				"to think, be in thought"
+			],
+			[
+				"adjective",
+				"немыслимый",
+				"unthinkable"
+			],
+			[
+				"verb",
+				"переосмысливать",
+				"to reinterpret, rethink"
+			],
+			[
+				"noun",
+				"домысел",
+				"a speculation"
+			],
+			[
+				"verb",
+				"подозревать",
+				"to suspect, surmise"
+			],
+			[
+				"adverb",
+				"подозрительно",
+				"suspiciously"
+			],
+			[
+				"verb",
+				"взвесить",
+				"to weigh; to think through"
+			],
+			[
+				"verb",
+				"взвешивать",
+				"to weigh; to think through"
+			],
+			[
+				"adverb",
+				"по-моему",
+				"in my opinion, to my thinking"
+			],
+			[
+				"verb",
+				"загадать",
+				"to make up, think up in your head"
+			],
+			[
+				"phrase",
+				"я считаю, что...",
+				"i think that, i believe that..."
+			],
+			[
+				"noun",
+				"загадка",
+				"a riddle"
+			],
+			[
+				"noun",
+				"догадка",
+				"a guess"
+			],
+			[
+				"verb",
+				"отгадать",
+				"to guess, find out by conjecture"
+			],
+			[
+				"verb",
+				"догадаться",
+				"to guess, have a hunch"
+			],
+			[
+				"noun",
+				"рассуждение",
+				"reasoning"
+			],
+			[
+				"noun",
+				"рассудство",
+				"reasoningg"
+			],
+			[
+				"verb",
+				"рассуждать",
+				"to reason"
+			],
+			[
+				"phrase",
+				"веская причина",
+				"good reason"
+			],
+			[
+				"adjective",
+				"стрёмный",
+				"dumb"
+			],
+			[
+				"adjective",
+				"тупенький",
+				"dumb, stupid"
+			],
+			[
+				"noun",
+				"сон",
+				"sleep, dream"
+			],
+			[
+				"verb",
+				"сниться",
+				"to dream (during sleep)"
+			],
+			[
+				"verb",
+				"считать",
+				"to count, consider"
+			],
+			[
+				"verb",
+				"рассматривать",
+				"to consider, view, regard, review"
+			],
+			[
+				"verb",
+				"учитывать",
+				"to take into account"
+			],
+			[
+				"verb",
+				"ценить",
+				"to value"
+			],
+			[
+				"verb",
+				"понять",
+				"to understand"
+			],
+			[
+				"verb",
+				"понимать",
+				"to understand"
+			],
+			[
+				"verb",
+				"знать",
+				"to know"
+			],
+			[
+				"verb",
+				"узнавать",
+				"to recognize; to find out"
+			],
+			[
+				"verb",
+				"сознавать",
+				"to be conscious of, realize"
+			],
+			[
+				"verb",
+				"осознавать",
+				"to be aware, recognize"
+			],
+			[
+				"noun",
+				"знания",
+				"knowledge"
+			],
+			[
+				"adjective",
+				"неизвестный",
+				"unknown"
+			],
+			[
+				"verb",
+				"напоминать",
+				"to remind"
+			],
+			[
+				"noun",
+				"переживание",
+				"experience, state of mind"
+			],
+			[
+				"verb",
+				"рехнуться",
+				"to lose your mind, go crazy"
+			],
+			[
+				"verb",
+				"запомнить",
+				"to keep in mind, remember, memorize"
+			],
+			[
+				"verb",
+				"помнить",
+				"to remember"
+			],
+			[
+				"noun",
+				"память",
+				"memory"
+			],
+			[
+				"noun",
+				"воспоминание",
+				"a memory, recollection"
+			],
+			[
+				"noun",
+				"мозг",
+				"brain"
+			],
+			[
+				"noun",
+				"разиня",
+				"scatterbrain"
+			],
+			[
+				"noun",
+				"обдумывание",
+				"pondering"
+			],
+			[
+				"verb",
+				"размышлять",
+				"to ponder, reflect, speculate"
+			],
+			[
+				"verb",
+				"воображать",
+				"to imagine"
+			],
+			[
+				"verb",
+				"вообразить",
+				"to imagine"
+			],
+			[
+				"noun",
+				"воображение",
+				"imagination"
+			],
+			[
+				"verb",
+				"представить",
+				"to imagine, present, introduce"
+			],
+			[
+				"verb",
+				"претендовать",
+				"to claim, pretend"
+			],
+			[
+				"noun",
+				"гипотеза",
+				"a hypothesis"
+			],
+			[
+				"noun",
+				"подсознание",
+				"subconcious"
+			],
+			[
+				"verb",
+				"решить",
+				"to decide, solve"
+			],
+			[
+				"noun",
+				"мечта",
+				"dream (aspiration)"
+			],
+			[
+				"verb",
+				"размечтаться",
+				"to surrender to dreams"
+			],
+			[
+				"verb",
+				"догадываться",
+				"to guess, have a hunch"
+			],
+			[
+				"verb",
+				"забывать",
+				"to forget"
+			],
+			[
+				"verb",
+				"выдумать",
+				"to make up, dream up"
+			]
+		]
+	}
+}

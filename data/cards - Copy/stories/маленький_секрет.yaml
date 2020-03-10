@@ -1,0 +1,359 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Маленький секрет",
+		"type": "media",
+		"cards": [
+			[
+				"noun",
+				"вступительный экзамен",
+				"entry exam"
+			],
+			[
+				"adjective",
+				"одарённый",
+				"gifted"
+			],
+			[
+				"adverb",
+				"впоследствии",
+				"subsequently, afterwards"
+			],
+			[
+				"adjective",
+				"равнодушный",
+				"indifferent"
+			],
+			[
+				"verb",
+				"презирать",
+				"to despise"
+			],
+			[
+				"verb",
+				"тусить",
+				"to party, hang out, chill"
+			],
+			[
+				"verb",
+				"тусоваться",
+				"to hang out"
+			],
+			[
+				"noun",
+				"тусовка",
+				"a get-together with friends"
+			],
+			[
+				"conjunction",
+				"причём",
+				"moreover"
+			],
+			[
+				"noun",
+				"табун",
+				"a herd (of horses, deer, etc.)"
+			],
+			[
+				"verb",
+				"бунтовать",
+				"to rebel, riot"
+			],
+			[
+				"noun",
+				"зазнайка",
+				"a know-it-all, arrogent person"
+			],
+			[
+				"adjective",
+				"невыносимый",
+				"unbearable, insufferable"
+			],
+			[
+				"verb",
+				"жевать",
+				"to chew"
+			],
+			[
+				"adverb",
+				"иногда; порой",
+				"sometimes"
+			],
+			[
+				"noun",
+				"дебош",
+				"a brawl"
+			],
+			[
+				"noun",
+				"снадобье; зелье",
+				"a potion"
+			],
+			[
+				"verb",
+				"отчислять",
+				"to deduct"
+			],
+			[
+				"adjective",
+				"ехидный",
+				"sarcastic"
+			],
+			[
+				"noun",
+				"злорадство",
+				"delight in someone elses misfortune"
+			],
+			[
+				"noun",
+				"кора",
+				"bark (of a tree)"
+			],
+			[
+				"adjective",
+				"излишний",
+				"surplus, superfluous, needless"
+			],
+			[
+				"verb",
+				"рвануть",
+				"to jerk, yank sharply"
+			],
+			[
+				"noun",
+				"сажа",
+				"soot"
+			],
+			[
+				"noun",
+				"проделка",
+				"a shenanigan, trick, prank"
+			],
+			[
+				"verb",
+				"огорчаться",
+				"to be upset, grieve"
+			],
+			[
+				"noun",
+				"пробирка",
+				"a test tube"
+			],
+			[
+				"verb",
+				"загородить",
+				"to block, fence in, enclose"
+			],
+			[
+				"noun",
+				"стук",
+				"a knock (on a door)"
+			],
+			[
+				"adjective",
+				"причастный",
+				"involved, participating, being part of smth"
+			],
+			[
+				"verb",
+				"валяться",
+				"to wallow, lie around in"
+			],
+			[
+				"phrase",
+				"неуспевающий ученик",
+				"a dunce, non-acheiver"
+			],
+			[
+				"phrase",
+				"разумеется",
+				"of course, all right, naturally"
+			],
+			[
+				"phrase",
+				"проявить себя",
+				"to prove oneself"
+			],
+			[
+				"phrase",
+				"валять дурака",
+				"to make a fool of oneself"
+			],
+			[
+				"verb",
+				"калечить",
+				"to cripple, maim, mangle"
+			],
+			[
+				"verb",
+				"прихоть",
+				"whimsy, fancy, whim, wish"
+			],
+			[
+				"verb",
+				"заверить",
+				"to assure, pledge"
+			],
+			[
+				"phrase",
+				"как прикажете",
+				"as you command"
+			],
+			[
+				"adjective",
+				"непослушный",
+				"naughty, disobedient"
+			],
+			[
+				"noun",
+				"сережки; серьги",
+				"earrings"
+			],
+			[
+				"noun",
+				"ирокез",
+				"a mohawk (hairstyle)"
+			],
+			[
+				"adjective",
+				"вызван",
+				"caused by"
+			],
+			[
+				"verb",
+				"побагроветь",
+				"to turn red/purple"
+			],
+			[
+				"phrase",
+				"гробовая тишина",
+				"a deathly silence"
+			],
+			[
+				"noun",
+				"возглас",
+				"a loud exclamation"
+			],
+			[
+				"noun",
+				"умывальник",
+				"a washbasin"
+			],
+			[
+				"verb",
+				"скакать",
+				"to gallop, leap"
+			],
+			[
+				"noun",
+				"страж",
+				"a guardian, armed guard"
+			],
+			[
+				"noun",
+				"рычаг",
+				"a lever"
+			],
+			[
+				"noun",
+				"совесть",
+				"sense of moral responsibility"
+			],
+			[
+				"noun",
+				"плеть",
+				"a whip"
+			],
+			[
+				"noun",
+				"плётка",
+				"a small whip"
+			],
+			[
+				"adjective",
+				"продолговатый",
+				"elongated, oblong (in shape)"
+			],
+			[
+				"verb",
+				"хлестать",
+				"to lash, to whip"
+			],
+			[
+				"noun",
+				"круп",
+				"croup (part of horse from back to tail)"
+			],
+			[
+				"interjection",
+				"святые ...!",
+				"holy ...!"
+			],
+			[
+				"noun",
+				"чердак",
+				"an attic"
+			],
+			[
+				"noun",
+				"постулат",
+				"postulate, logic, initial position"
+			],
+			[
+				"adjective",
+				"отстающий",
+				"lagging begind"
+			],
+			[
+				"noun",
+				"мероприятие",
+				"arrangement, event, measure"
+			],
+			[
+				"verb",
+				"упорядочить",
+				"to put things in order"
+			],
+			[
+				"noun",
+				"уборка",
+				"cleaning, cleanup"
+			],
+			[
+				"adverb",
+				"следом",
+				"directly behind someone"
+			],
+			[
+				"verb",
+				"заикаться",
+				"to stutter, stammer"
+			],
+			[
+				"noun",
+				"стирание",
+				"erasure, erasing"
+			],
+			[
+				"noun",
+				"пробел",
+				"empty space in text between letters"
+			],
+			[
+				"noun",
+				"выдумка",
+				"a fib, artifice"
+			],
+			[
+				"verb",
+				"выдумать",
+				"to make up, dream up"
+			],
+			[
+				"noun",
+				"клетка",
+				"animal cage"
+			]
+		]
+	}
+}

@@ -1,0 +1,359 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Emotion",
+		"type": "categorical",
+		"cards": [
+			[
+				"adjective",
+				"счастливый",
+				"happy"
+			],
+			[
+				"adjective",
+				"весёлый",
+				"cheerful"
+			],
+			[
+				"verb",
+				"веселеть",
+				"to become cheerful"
+			],
+			[
+				"adjective",
+				"жизнерадостный",
+				"cheerful (life-happy)"
+			],
+			[
+				"verb",
+				"ободрить",
+				"to encourage, cheer up"
+			],
+			[
+				"verb",
+				"взбодриться",
+				"to cheer up (yourself)"
+			],
+			[
+				"adjective",
+				"гневный",
+				"angry, wrathy"
+			],
+			[
+				"adjective",
+				"злющий",
+				"furious, very angry"
+			],
+			[
+				"adjective",
+				"грустный, печальный",
+				"sad"
+			],
+			[
+				"verb",
+				"грустить",
+				"to be sad, grieve"
+			],
+			[
+				"adjective",
+				"стыдный",
+				"shameful"
+			],
+			[
+				"verb",
+				"стыдиться",
+				"to be ashamed"
+			],
+			[
+				"adjective",
+				"смущённый",
+				"embarrassed"
+			],
+			[
+				"verb",
+				"смутиться",
+				"to be embarressed"
+			],
+			[
+				"adjective",
+				"нервный",
+				"nervous"
+			],
+			[
+				"verb",
+				"волноваться",
+				"to be nervous"
+			],
+			[
+				"adjective",
+				"тревожный",
+				"anxious"
+			],
+			[
+				"noun",
+				"беспокойство",
+				"anxiety, concern"
+			],
+			[
+				"adjective",
+				"спокойный",
+				"calm, peaceful"
+			],
+			[
+				"verb",
+				"успокоить",
+				"to calm, soothe, reassure"
+			],
+			[
+				"verb",
+				"беспокоить",
+				"to bother, trouble, discomfort, unsettle"
+			],
+			[
+				"noun",
+				"румянец",
+				"blush"
+			],
+			[
+				"verb",
+				"краснеть",
+				"to turn red, blush"
+			],
+			[
+				"verb",
+				"бледнеть",
+				"to grow pale"
+			],
+			[
+				"verb",
+				"напугать",
+				"to scare someone"
+			],
+			[
+				"adjective",
+				"испуганный",
+				"frightened, scared"
+			],
+			[
+				"noun",
+				"удивление",
+				"suprise"
+			],
+			[
+				"adjective",
+				"удивлённый",
+				"suprised"
+			],
+			[
+				"verb",
+				"удивлять",
+				"to suprise"
+			],
+			[
+				"verb",
+				"удивить",
+				"to suprise"
+			],
+			[
+				"noun",
+				"страх",
+				"fear"
+			],
+			[
+				"noun",
+				"ужас",
+				"horror"
+			],
+			[
+				"adjective",
+				"раздражающий",
+				"annoying"
+			],
+			[
+				"verb",
+				"раздражать",
+				"to annoy, irritate, provoke"
+			],
+			[
+				"noun",
+				"скука",
+				"boredome"
+			],
+			[
+				"verb",
+				"заскучать",
+				"to get bored"
+			],
+			[
+				"adjective",
+				"скучный",
+				"boring"
+			],
+			[
+				"verb",
+				"наскучивать",
+				"to bore"
+			],
+			[
+				"verb",
+				"возбуждать",
+				"to excite"
+			],
+			[
+				"verb",
+				"ненависть",
+				"hatred"
+			],
+			[
+				"adjective",
+				"возбуждённый",
+				"excited"
+			],
+			[
+				"adjective",
+				"лестный",
+				"flattering"
+			],
+			[
+				"noun",
+				"восхищение",
+				"admiration, delight"
+			],
+			[
+				"adjective",
+				"встревоженный",
+				"alarmed"
+			],
+			[
+				"verb",
+				"испугаться",
+				"to be frightened"
+			],
+			[
+				"adjective",
+				"усталый",
+				"tired"
+			],
+			[
+				"noun",
+				"облегчение",
+				"relief"
+			],
+			[
+				"verb",
+				"бесить",
+				"to enrage, drive wild"
+			],
+			[
+				"noun",
+				"отчаяние",
+				"despair"
+			],
+			[
+				"verb",
+				"выдергивать",
+				"to yank out"
+			],
+			[
+				"verb",
+				"утешить",
+				"to console, confort"
+			],
+			[
+				"verb",
+				"расстроиться",
+				"to get upset"
+			],
+			[
+				"verb",
+				"огорчить",
+				"to upset (cause grief)"
+			],
+			[
+				"verb",
+				"скучать",
+				"to miss due to absance; to feel bored"
+			],
+			[
+				"verb",
+				"любоваться",
+				"to look at in pleasure"
+			],
+			[
+				"verb",
+				"презирать",
+				"to despise"
+			],
+			[
+				"verb",
+				"развлекаться",
+				"to have a good time"
+			],
+			[
+				"noun",
+				"благоговение",
+				"awe"
+			],
+			[
+				"verb",
+				"завидовать",
+				"to envy"
+			],
+			[
+				"adjective",
+				"гордый",
+				"proud"
+			],
+			[
+				"adjective",
+				"знойный",
+				"sultry, hot, full of heat"
+			],
+			[
+				"noun",
+				"милость",
+				"mercy"
+			],
+			[
+				"noun",
+				"воля",
+				"a will, wish, desire"
+			],
+			[
+				"noun",
+				"кошмар",
+				"nightmare"
+			],
+			[
+				"noun",
+				"шутка",
+				"joke"
+			],
+			[
+				"noun",
+				"позор",
+				"shame, disgrace"
+			],
+			[
+				"noun",
+				"изумление",
+				"amazement"
+			],
+			[
+				"adjective",
+				"изумительный",
+				"delightful, leading to amazement"
+			],
+			[
+				"verb",
+				"побеспокоить",
+				"to bother, trouble, discomfort, unsettle"
+			],
+			[
+				"verb",
+				"побагроветь",
+				"to turn red/purple"
+			]
+		]
+	}
+}

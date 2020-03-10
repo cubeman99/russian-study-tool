@@ -1,0 +1,34 @@
+{
+  "card_set": {
+    "name": "Prepositional Case",
+    "version": 1,
+    "cards": [
+      [
+        "preposition",
+        "\u0432 + prep.",
+        "in, at (location)"
+      ],
+      [
+        "preposition",
+        "\u043d\u0430 + prep.",
+        "on, at, in (location)"
+      ],
+      [
+        "preposition",
+        "\u043e; \u043e\u0431; \u043e\u0431\u043e",
+        "about, concerning"
+      ],
+      [
+        "verb",
+        "\u0437\u0430\u0431\u043e\u0442\u0438\u0442\u044c\u0441\u044f",
+        "to take care of, look after"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u0437\u0430\u0431\u043e\u0442\u0438\u0442\u044c\u0441\u044f",
+        "to take care of, look after"
+      ]
+    ],
+    "type": "Grammatical"
+  }
+}

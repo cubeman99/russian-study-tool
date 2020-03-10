@@ -1,0 +1,74 @@
+{
+  "card_set": {
+    "name": "Verbs of Motion Prefixes",
+    "version": 1,
+    "cards": [
+      [
+        "other",
+        "\u043f\u0440\u0438-",
+        "coming motion, arriving motion"
+      ],
+      [
+        "other",
+        "\u0443-",
+        "leaving motion, departing"
+      ],
+      [
+        "other",
+        "\u0434\u043e-",
+        "reaching motion, as far as"
+      ],
+      [
+        "other",
+        "\u043e\u0442-",
+        "withdrawal motion, away from"
+      ],
+      [
+        "other",
+        "\u0432- (\u0432\u043e-)",
+        "coming in/into motion, entering motion"
+      ],
+      [
+        "other",
+        "\u0432\u044b-",
+        "coming out of motion, exiting motion"
+      ],
+      [
+        "other",
+        "\u0432\u0441-",
+        "ascending motion, going up"
+      ],
+      [
+        "other",
+        "\u0441-",
+        "descending motion, going down"
+      ],
+      [
+        "other",
+        "\u043f\u043e\u0434-",
+        "reaching (from under) motion, come up to, approach"
+      ],
+      [
+        "other",
+        "\u0437\u0430-",
+        "1) drop in, stop by; 2) going behind motion"
+      ],
+      [
+        "other",
+        "\u043f\u0435\u0440\u0435-",
+        "1) across motion; 2) moving motion"
+      ],
+      [
+        "other",
+        "\u043e\u0431-",
+        "around motion, bypass"
+      ],
+      [
+        "other",
+        "\u043f\u0440\u043e-",
+        "going past motion, going by, going through"
+      ]
+    ],
+    "type": "Grammatical"
+  }
+}

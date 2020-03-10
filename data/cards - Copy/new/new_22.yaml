@@ -1,0 +1,359 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 22",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"множественный",
+				"plural"
+			],
+			[
+				"noun",
+				"окончение",
+				"the ending, suffix"
+			],
+			[
+				"noun",
+				"имя числительное",
+				"numeral (part of speech)"
+			],
+			[
+				"verb",
+				"нарушать",
+				"to violate"
+			],
+			[
+				"verb",
+				"заблуждаться",
+				"to be wrong, to err"
+			],
+			[
+				"interjection",
+				"...не так ли?",
+				"...isnt it? didnt it?"
+			],
+			[
+				"phrase",
+				"просто так.",
+				"just because."
+			],
+			[
+				"phrase",
+				"это не так просто.",
+				"its not that simple."
+			],
+			[
+				"phrase",
+				"что не так?",
+				"whats wrong?"
+			],
+			[
+				"verb",
+				"оказаться",
+				"to turn out to be"
+			],
+			[
+				"phrase",
+				"как оказалось, ...",
+				"as it turned out, ..."
+			],
+			[
+				"verb",
+				"оставить",
+				"to leave, drop, abandon"
+			],
+			[
+				"verb",
+				"оставлять",
+				"to leave, drop, abandon"
+			],
+			[
+				"adjective",
+				"членораздельный",
+				"articulate (about speech)"
+			],
+			[
+				"noun",
+				"палочка",
+				"a wand"
+			],
+			[
+				"verb",
+				"сбываться",
+				"to come true"
+			],
+			[
+				"verb",
+				"сбыться",
+				"to come true"
+			],
+			[
+				"noun",
+				"воля",
+				"a will, wish, desire"
+			],
+			[
+				"noun",
+				"валеизъявление",
+				"an expression of will, wish, desire"
+			],
+			[
+				"adjective",
+				"просторечный",
+				"\"simple spech\", vernacular"
+			],
+			[
+				"noun",
+				"гласный (звук)",
+				"a vowel"
+			],
+			[
+				"noun",
+				"согласный (звук)",
+				"a consonant"
+			],
+			[
+				"phrase",
+				"домашное задание",
+				"homework"
+			],
+			[
+				"noun",
+				"флот",
+				"the navy"
+			],
+			[
+				"adverb",
+				"окончательно",
+				"finally, definitively"
+			],
+			[
+				"verb",
+				"поздравлять",
+				"to congratulate"
+			],
+			[
+				"noun",
+				"слог",
+				"syllable"
+			],
+			[
+				"adjective",
+				"усердный",
+				"eager, zealous"
+			],
+			[
+				"noun",
+				"щедрость",
+				"generosity"
+			],
+			[
+				"adjective",
+				"полноценный",
+				"full-fledged, of full-value"
+			],
+			[
+				"noun",
+				"позор",
+				"shame, disgrace"
+			],
+			[
+				"adjective",
+				"заветый",
+				"cherished"
+			],
+			[
+				"adverb",
+				"типа",
+				"kinda, seemingly, sort of"
+			],
+			[
+				"noun",
+				"сцепление",
+				"a clutch (car part)"
+			],
+			[
+				"noun",
+				"собор",
+				"a cathedral"
+			],
+			[
+				"phrase",
+				"тем более (что)",
+				"especially (since)"
+			],
+			[
+				"noun",
+				"кожа",
+				"leather, skin (n.)"
+			],
+			[
+				"noun",
+				"мурашки",
+				"goosebumps"
+			],
+			[
+				"noun",
+				"напряжение",
+				"voltage"
+			],
+			[
+				"phrase",
+				"жду не дождусь",
+				"i cant wait"
+			],
+			[
+				"noun",
+				"гостеприимство",
+				"hospitality"
+			],
+			[
+				"adjective",
+				"приветливый",
+				"benevolent, welcoming, affectionate"
+			],
+			[
+				"verb",
+				"ныть",
+				"to whine, complain, ache"
+			],
+			[
+				"noun",
+				"стихотворение",
+				"a poem, piece of poetry"
+			],
+			[
+				"phrase",
+				"как-то так",
+				"something/somehow like this"
+			],
+			[
+				"verb",
+				"хвастаться",
+				"to brag"
+			],
+			[
+				"verb",
+				"допить",
+				"to finish drinking"
+			],
+			[
+				"verb",
+				"запить",
+				"to wash down, drink smth down"
+			],
+			[
+				"verb",
+				"выпить",
+				"to drink (usually alcohol)"
+			],
+			[
+				"phrase",
+				"отпить (от)",
+				"to sip off the top (of smth)"
+			],
+			[
+				"verb",
+				"распить",
+				"to drink around, between multiple people"
+			],
+			[
+				"verb",
+				"перепить",
+				"to drink too much"
+			],
+			[
+				"verb",
+				"спиться",
+				"to drink your life away"
+			],
+			[
+				"noun",
+				"кульминация",
+				"the climax"
+			],
+			[
+				"noun",
+				"развязка",
+				"the conclusion, resolution of plot, outcome; traffic interchange"
+			],
+			[
+				"verb",
+				"наращивать",
+				"to grow, develop, intensify, build up"
+			],
+			[
+				"adjective",
+				"накаченный",
+				"buff, pumped up"
+			],
+			[
+				"noun",
+				"сюжет",
+				"plot, story"
+			],
+			[
+				"verb",
+				"пропасть",
+				"to fall into an abyss, to be gone"
+			],
+			[
+				"noun",
+				"пропасть",
+				"abyss, chasm; lots, tons"
+			],
+			[
+				"verb",
+				"взаимодействовать",
+				"to interact"
+			],
+			[
+				"noun",
+				"масштаб",
+				"scale, scope"
+			],
+			[
+				"adjective",
+				"масштабный",
+				"large-scale, wide-scale"
+			],
+			[
+				"verb",
+				"социализировать",
+				"to socialize"
+			],
+			[
+				"noun",
+				"костыль",
+				"a crutch"
+			],
+			[
+				"verb",
+				"возникать",
+				"to arise, spring up, emerge, appear"
+			],
+			[
+				"adverb",
+				"наоборот...",
+				"on the contrary..."
+			],
+			[
+				"noun",
+				"ранение",
+				"wound"
+			],
+			[
+				"noun",
+				"миг",
+				"a moment, instant"
+			],
+			[
+				"phrase",
+				"хоть как",
+				"anyhow, whatever; regardless"
+			]
+		]
+	}
+}

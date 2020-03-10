@@ -1,0 +1,214 @@
+{
+  "card_set": {
+    "name": "Verbs of Motion",
+    "version": 1,
+    "cards": [
+      [
+        "verb",
+        "\u0445\u043e\u0434\u0438\u0442\u044c",
+        "to walk, go on foot"
+      ],
+      [
+        "verb",
+        "\u0438\u0434\u0442\u0438",
+        "to walk, go on foot"
+      ],
+      [
+        "verb",
+        "\u0435\u0437\u0434\u0438\u0442\u044c",
+        "to go by vehicle"
+      ],
+      [
+        "verb",
+        "\u0435\u0445\u0430\u0442\u044c",
+        "to go by vehicle"
+      ],
+      [
+        "verb",
+        "\u0431\u0435\u0433\u0430\u0442\u044c",
+        "to run, jog"
+      ],
+      [
+        "verb",
+        "\u0431\u0435\u0436\u0430\u0442\u044c",
+        "to run, jog"
+      ],
+      [
+        "verb",
+        "\u0431\u0440\u043e\u0434\u0438\u0442\u044c",
+        "to wander, roam, stroll"
+      ],
+      [
+        "verb",
+        "\u0431\u0440\u0435\u0441\u0442\u0438",
+        "to wander, roam, stroll"
+      ],
+      [
+        "verb",
+        "\u0433\u043e\u043d\u044f\u0442\u044c",
+        "to drive (force to move)"
+      ],
+      [
+        "verb",
+        "\u0433\u043d\u0430\u0442\u044c",
+        "to drive (force to move)"
+      ],
+      [
+        "verb",
+        "\u043b\u0430\u0437\u0438\u0442\u044c",
+        "to climb"
+      ],
+      [
+        "verb",
+        "\u043b\u0435\u0437\u0442\u044c",
+        "to climb"
+      ],
+      [
+        "verb",
+        "\u043b\u0435\u0442\u0430\u0442\u044c",
+        "to fly"
+      ],
+      [
+        "verb",
+        "\u043b\u0435\u0442\u0435\u0442\u044c",
+        "to fly"
+      ],
+      [
+        "verb",
+        "\u043f\u043b\u0430\u0432\u0430\u0442\u044c",
+        "to swim"
+      ],
+      [
+        "verb",
+        "\u043f\u043b\u044b\u0442\u044c",
+        "to swim"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043b\u0437\u0430\u0442\u044c",
+        "to crawl"
+      ],
+      [
+        "verb",
+        "\u043f\u043e\u043b\u0437\u0442\u0438",
+        "to crawl"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0437\u0438\u0442\u044c",
+        "to transport"
+      ],
+      [
+        "verb",
+        "\u0432\u0435\u0437\u0442\u0438",
+        "to transport"
+      ],
+      [
+        "verb",
+        "\u043d\u043e\u0441\u0438\u0442\u044c",
+        "to carry"
+      ],
+      [
+        "verb",
+        "\u043d\u0435\u0441\u0442\u0438",
+        "to carry"
+      ],
+      [
+        "verb",
+        "\u0432\u043e\u0434\u0438\u0442\u044c",
+        "to lead, accompany, drive"
+      ],
+      [
+        "verb",
+        "\u0432\u0435\u0441\u0442\u0438",
+        "to lead, accompany, drive"
+      ],
+      [
+        "verb",
+        "\u0442\u0430\u0441\u043a\u0430\u0442\u044c",
+        "to drag, to pull"
+      ],
+      [
+        "verb",
+        "\u0442\u0430\u0449\u0438\u0442\u044c",
+        "to drag, to pull"
+      ],
+      [
+        "verb",
+        "\u0432\u0442\u0430\u0449\u0438\u0442\u044c",
+        "to drag in"
+      ],
+      [
+        "verb",
+        "\u0432\u044b\u0442\u0430\u0441\u043a\u0438\u0432\u0430\u0442\u044c",
+        "to pull out"
+      ],
+      [
+        "verb",
+        "\u0438\u0437\u0431\u0435\u0433\u0430\u0442\u044c",
+        "to avoid"
+      ],
+      [
+        "verb",
+        "\u0438\u0437\u0431\u0435\u0436\u0430\u0442\u044c",
+        "to avoid, get away from"
+      ],
+      [
+        "verb",
+        "\u0432\u0432\u043e\u0434\u0438\u0442\u044c",
+        "to enter, input"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0445\u043e\u0434\u0438\u0442\u044c",
+        "to find"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0445\u043e\u0434\u0438\u0442\u044c\u0441\u044f",
+        "to be situated, found, located"
+      ],
+      [
+        "verb",
+        "\u0432\u043d\u043e\u0441\u0438\u0442\u044c",
+        "to bring in"
+      ],
+      [
+        "verb",
+        "\u043d\u0435\u0441\u0442\u0438\u0441\u044c",
+        "to move forward at high speed"
+      ],
+      [
+        "verb",
+        "\u0440\u0430\u0437\u043d\u0435\u0441\u0442\u0438",
+        "to spread, carry to different places"
+      ],
+      [
+        "verb",
+        "\u043f\u0440\u043e\u0438\u0437\u043d\u0435\u0441\u0442\u0438",
+        "to pronounce, get out"
+      ],
+      [
+        "verb",
+        "\u043e\u0442\u043d\u043e\u0441\u0438\u0442\u044c\u0441\u044f",
+        "to relate"
+      ],
+      [
+        "verb",
+        "\u0438\u0437\u0433\u043d\u0430\u0442\u044c",
+        "to drive out"
+      ],
+      [
+        "verb",
+        "\u043d\u0430\u0439\u0442\u0438",
+        "to find"
+      ],
+      [
+        "noun",
+        "\u0432\u043e\u0441\u0445\u043e\u0436\u0434\u0435\u043d\u0438\u0435",
+        "ascent, rise, ascention, climb"
+      ]
+    ],
+    "type": "Grammatical"
+  }
+}

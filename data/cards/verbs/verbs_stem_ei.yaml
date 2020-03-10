@@ -1,33 +1,121 @@
-card_set:
-  name: 2. Verbs with Stem - ЕЙ
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, беднеть, to grow poor]
-    - [verb, неметь, to grow numb]
-    - [verb, белеть, to become/show white]
-    - [verb, полнеть, to become stout]
-    - [verb, бледнеть, to grow pale]
-    - [verb, пустеть, to become empty]
-    - [verb, богатеть, to get rich]
-    - [verb, пьянеть, to get drunk]
-    - [verb, болеть, to be ill]
-    - [verb, редеть, to thin out]
-    - [verb, веселеть, to become cheerful]
-    - [verb, робеть, to be timid]
-    - [verb, владеть, 'to own, possess']
-    - [verb, слабеть, to become weak]
-    - [verb, голубеть, to turn blue]
-    - [verb, сметь, to dare]
-    - [verb, греть, to warm]
-    - [verb, стареть, 'to grow old, age']
-    - [verb, жалеть, 'to be sorry, regret']
-    - [verb, теплеть, to become warm]
-    - [verb, желтеть, to turn yellow]
-    - [verb, уметь, to know how]
-    - [verb, здороветь, to become healthy]
-    - [verb, иметь, to have]
-    - [verb, худеть, 'to become thin, lose weight']
-    - [verb, краснеть, 'to turn red, blush']
-    - [verb, яснеть, to clear up]
-    - [verb, лысеть, to grow bald]
+{
+	"card_set": {
+		"version": 1,
+		"name": "2. Verbs with Stem - ЕЙ",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"беднеть"
+			],
+			[
+				"verb",
+				"неметь"
+			],
+			[
+				"verb",
+				"белеть"
+			],
+			[
+				"verb",
+				"полнеть"
+			],
+			[
+				"verb",
+				"бледнеть"
+			],
+			[
+				"verb",
+				"пустеть"
+			],
+			[
+				"verb",
+				"богатеть"
+			],
+			[
+				"verb",
+				"пьянеть"
+			],
+			[
+				"verb",
+				"болеть"
+			],
+			[
+				"verb",
+				"редеть"
+			],
+			[
+				"verb",
+				"веселеть"
+			],
+			[
+				"verb",
+				"робеть"
+			],
+			[
+				"verb",
+				"владеть"
+			],
+			[
+				"verb",
+				"слабеть"
+			],
+			[
+				"verb",
+				"голубеть"
+			],
+			[
+				"verb",
+				"сметь"
+			],
+			[
+				"verb",
+				"греть"
+			],
+			[
+				"verb",
+				"стареть"
+			],
+			[
+				"verb",
+				"жалеть"
+			],
+			[
+				"verb",
+				"теплеть"
+			],
+			[
+				"verb",
+				"желтеть"
+			],
+			[
+				"verb",
+				"уметь"
+			],
+			[
+				"verb",
+				"здороветь"
+			],
+			[
+				"verb",
+				"иметь"
+			],
+			[
+				"verb",
+				"худеть"
+			],
+			[
+				"verb",
+				"краснеть"
+			],
+			[
+				"verb",
+				"яснеть"
+			],
+			[
+				"verb",
+				"лысеть"
+			]
+		]
+	}
+}

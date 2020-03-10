@@ -1,0 +1,104 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Nationalities",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"россиянин, россиянка",
+				"russian (citizen)"
+			],
+			[
+				"noun",
+				"американец, американка",
+				"american"
+			],
+			[
+				"noun",
+				"немец, немка",
+				"german"
+			],
+			[
+				"adjective",
+				"немецкий",
+				"german"
+			],
+			[
+				"noun",
+				"славянин, славянка",
+				"slav"
+			],
+			[
+				"noun",
+				"англичанин, англичанка",
+				"englishman/englishwoman"
+			],
+			[
+				"noun",
+				"париж",
+				"paris"
+			],
+			[
+				"noun",
+				"поляк",
+				"pole (polish person)"
+			],
+			[
+				"noun",
+				"китай",
+				"china"
+			],
+			[
+				"noun",
+				"франция",
+				"france"
+			],
+			[
+				"noun",
+				"германия",
+				"germany"
+			],
+			[
+				"noun",
+				"италия",
+				"italy"
+			],
+			[
+				"noun",
+				"испания",
+				"spain"
+			],
+			[
+				"noun",
+				"азия",
+				"asia"
+			],
+			[
+				"noun",
+				"европа",
+				"europe"
+			],
+			[
+				"noun",
+				"япония",
+				"japan"
+			],
+			[
+				"noun",
+				"средиземноморье",
+				"the mediterranean sea"
+			],
+			[
+				"noun",
+				"османская империя",
+				"the ottoman empire"
+			],
+			[
+				"noun",
+				"пиренейский полуостров",
+				"the iberian peninsula"
+			]
+		]
+	}
+}

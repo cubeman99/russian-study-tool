@@ -1,41 +1,161 @@
-card_set:
-  name: New 05
-  version: 1
-  cards:
-    - [adjective, безумный, 'crazy, insane']
-    - [adjective, уникальный, unique]
-    - [adjective, осторожный, careful]
-    - [adjective, незабываемо, unforgettable]
-    - [adjective, резкий, harsh]
-    - [adjective, эпичный, epic]
-    - [adjective, способный, 'capable, able']
-    - [adverb, крайне, extremely]
-    - [noun, свеча, candle]
-    - [noun, сотрудник, 'worker, assistant']
-    - [noun, лапа, paw]
-    - [noun, крыша, roof]
-    - [noun, матрос, sailor]
-    - [noun, палуба, deck]
-    - [noun, пловец, swimmer]
-    - [noun, пасть, mouth (of an animal)]
-    - [noun, ужас, horror]
-    - [noun, чудо, miracle]
-    - [noun, шторм, storm]
-    - [noun, забота, 'care, attention']
-    - [noun, богадство, wealth]
-    - [verb, душить, to strangle]
-    - [verb, задушить, to strangle]
-    - [verb, скрипеть, 'to creak, squeak']
-    - [verb, ценить, to value]
-    - [verb, потеть, to sweat]
-    - [verb, изобретать, to invent]
-    - [verb, изобрести, to invent]
-    - [verb, вырасти, 'to grow up, to increase']
-    - [verb, кусать, to bite]
-    - [verb, укусить, to bite]
-    - [verb, праздновать, to celebrate]
-    - [verb, бывать, 'to be; to occur, happen (at some frequency)']
-    - [phrase, "а дальше\uFEFF?", 'and then what? what next?']
-    - [phrase, "и я о том же\uFEFF", thats exactly what I mean]
-    - [other, пусть, let]
-    - [interjection, чёрт, hells balls; darn]
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 05",
+		"type": "other",
+		"cards": [
+			[
+				"adjective",
+				"безумный"
+			],
+			[
+				"adjective",
+				"уникальный"
+			],
+			[
+				"adjective",
+				"осторожный"
+			],
+			[
+				"adjective",
+				"незабываемый"
+			],
+			[
+				"adjective",
+				"резкий"
+			],
+			[
+				"adjective",
+				"эпичный"
+			],
+			[
+				"adjective",
+				"способный"
+			],
+			[
+				"adverb",
+				"крайне"
+			],
+			[
+				"noun",
+				"свеча"
+			],
+			[
+				"noun",
+				"сотрудник"
+			],
+			[
+				"noun",
+				"лапа"
+			],
+			[
+				"noun",
+				"крыша"
+			],
+			[
+				"noun",
+				"матрос"
+			],
+			[
+				"noun",
+				"палуба"
+			],
+			[
+				"noun",
+				"пловец"
+			],
+			[
+				"verb",
+				"пасть"
+			],
+			[
+				"noun",
+				"ужас"
+			],
+			[
+				"noun",
+				"чудо"
+			],
+			[
+				"noun",
+				"шторм"
+			],
+			[
+				"noun",
+				"забота"
+			],
+			[
+				"noun",
+				"богадство"
+			],
+			[
+				"verb",
+				"душить"
+			],
+			[
+				"verb",
+				"задушить"
+			],
+			[
+				"verb",
+				"скрипеть"
+			],
+			[
+				"verb",
+				"ценить"
+			],
+			[
+				"verb",
+				"потеть"
+			],
+			[
+				"verb",
+				"изобретать"
+			],
+			[
+				"verb",
+				"изобрести"
+			],
+			[
+				"verb",
+				"вырасти"
+			],
+			[
+				"verb",
+				"кусать"
+			],
+			[
+				"verb",
+				"укусить"
+			],
+			[
+				"verb",
+				"праздновать"
+			],
+			[
+				"verb",
+				"бывать"
+			],
+			[
+				"phrase",
+				"а дальше﻿?"
+			],
+			[
+				"phrase",
+				"и я о том же﻿"
+			],
+			[
+				"other",
+				"пусть"
+			],
+			[
+				"interjection",
+				"черт"
+			],
+			[
+				"noun",
+				"изображение"
+			]
+		]
+	}
+}

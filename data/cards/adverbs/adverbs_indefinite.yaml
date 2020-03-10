@@ -1,15 +1,49 @@
-card_set:
-  name: Indefinite Adverbs
-  type: Categorical
-  version: 1
-  cards:
-    - [adverb, где-то, somewhere]
-    - [adverb, где-нибудь, somewhere (anywhere)]
-    - [adverb, куда-то, to somewhere]
-    - [adverb, куда-нибудь, to somewhere (anywhere)]
-    - [adverb, когда-то, 'once, at one time']
-    - [adverb, когда-нибудь, 'ever, at any time']
-    - [adverb, как-то, somehow]
-    - [adverb, как-нибудь, somehow (or other)]
-    - [adverb, почему-то, for some reason]
-    - [adverb, почему-нибудь, for any reason]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Indefinite Adverbs",
+		"type": "categorical",
+		"cards": [
+			[
+				"adverb",
+				"где-то"
+			],
+			[
+				"adverb",
+				"где-нибудь"
+			],
+			[
+				"adverb",
+				"куда-то"
+			],
+			[
+				"adverb",
+				"куда-нибудь"
+			],
+			[
+				"adverb",
+				"когда-то"
+			],
+			[
+				"adverb",
+				"когда-нибудь"
+			],
+			[
+				"adverb",
+				"как-то"
+			],
+			[
+				"adverb",
+				"как-нибудь"
+			],
+			[
+				"adverb",
+				"почему-то"
+			],
+			[
+				"adverb",
+				"почему-нибудь"
+			]
+		]
+	}
+}

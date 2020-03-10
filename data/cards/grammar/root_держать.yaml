@@ -1,16 +1,53 @@
-card_set:
-  name: Root держать
-  type: Grammatical
-  version: 1
-  cards:
-    - [verb, держать, 'to hold, keep']
-    - [verb, сдержать, 'to hold back, restrain']
-    - [adjective, одержимый, obsessed]
-    - [verb, выдержать, 'to withstand, endure, hold out']
-    - [noun, поддержка, support]
-    - [verb, поддерживать, 'to support, maintain']
-    - [verb, воздержаться, to abstain]
-    - [verb, продержаться, 'to last, hold out, maintain position']
-    - [verb, придерживаться, 'to stick to, adhere, abide']
-    - [verb, удерживать себя, to hold back]
-    - [phrase, держать в стороне от ..., to keep away from ...]
+{
+	"card_set": {
+		"version": 1,
+		"name": "Root держать",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"держать"
+			],
+			[
+				"verb",
+				"сдержать"
+			],
+			[
+				"adjective",
+				"одержимый"
+			],
+			[
+				"verb",
+				"выдержать"
+			],
+			[
+				"noun",
+				"поддержка"
+			],
+			[
+				"verb",
+				"поддерживать"
+			],
+			[
+				"verb",
+				"воздержаться"
+			],
+			[
+				"verb",
+				"продержаться"
+			],
+			[
+				"verb",
+				"придерживаться"
+			],
+			[
+				"verb",
+				"удерживать себя"
+			],
+			[
+				"phrase",
+				"держать в стороне от ..."
+			]
+		]
+	}
+}

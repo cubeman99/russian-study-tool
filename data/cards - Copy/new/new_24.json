@@ -1,0 +1,344 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 24",
+		"type": "other",
+		"cards": [
+			[
+				"noun",
+				"почтальон",
+				"a mail man"
+			],
+			[
+				"phrase",
+				"почтовый ящик",
+				"a mail box"
+			],
+			[
+				"noun",
+				"ёлка",
+				"a christmas tree"
+			],
+			[
+				"noun",
+				"солокна",
+				"a salt shaker"
+			],
+			[
+				"noun",
+				"перечница",
+				"a pepper shaker"
+			],
+			[
+				"phrase",
+				"чехол для очков",
+				"a glasses case"
+			],
+			[
+				"noun",
+				"молочник",
+				"a milk jug"
+			],
+			[
+				"noun",
+				"сахарница",
+				"a sugar contanier"
+			],
+			[
+				"noun",
+				"салфетница",
+				"a napkin holder"
+			],
+			[
+				"verb",
+				"мешать",
+				"to interfere, disturb, prevent"
+			],
+			[
+				"verb",
+				"помешать",
+				"to interfere, disturb, prevent"
+			],
+			[
+				"phrase",
+				"головная боль",
+				"a headache"
+			],
+			[
+				"phrase",
+				"извините за беспокойство",
+				"sorry to bother you!"
+			],
+			[
+				"verb",
+				"беспокоить",
+				"to bother, trouble, discomfort, unsettle"
+			],
+			[
+				"verb",
+				"побеспокоить",
+				"to bother, trouble, discomfort, unsettle"
+			],
+			[
+				"verb",
+				"отвлекать",
+				"to distract"
+			],
+			[
+				"verb",
+				"отвлечь",
+				"to distract"
+			],
+			[
+				"noun",
+				"пёс",
+				"a male dog"
+			],
+			[
+				"phrase",
+				"dat. + пришлось + verb",
+				"to have to do smth; it became necessary to do smth"
+			],
+			[
+				"verb",
+				"переодеваться",
+				"to change clothes"
+			],
+			[
+				"noun",
+				"мотоцикл",
+				"a motorcycle"
+			],
+			[
+				"phrase",
+				"грунтовая дорога",
+				"a dirt road"
+			],
+			[
+				"noun",
+				"асфальт",
+				"asphalt"
+			],
+			[
+				"noun",
+				"тесто",
+				"dough"
+			],
+			[
+				"phrase",
+				"сматываем удочки!",
+				"lets get out of here!"
+			],
+			[
+				"phrase",
+				"вынести мусор",
+				"to take out the trash"
+			],
+			[
+				"noun",
+				"мусор",
+				"trash, garbage"
+			],
+			[
+				"phrase",
+				"платить посуточно",
+				"to pass by the day"
+			],
+			[
+				"verb",
+				"поскользнуться",
+				"to slip"
+			],
+			[
+				"noun",
+				"поребрик; бордюр",
+				"the curb"
+			],
+			[
+				"noun",
+				"пешеходный переход",
+				"a crosswalk"
+			],
+			[
+				"noun",
+				"скамейка",
+				"a bench"
+			],
+			[
+				"phrase",
+				"мусорка; урна",
+				"a trash can"
+			],
+			[
+				"noun",
+				"рема",
+				"the focus (in linguistics)"
+			],
+			[
+				"verb",
+				"переименовать",
+				"to rename smth"
+			],
+			[
+				"verb",
+				"наименовать",
+				"to name smth"
+			],
+			[
+				"verb",
+				"удалять",
+				"to delete, remove"
+			],
+			[
+				"verb",
+				"рассматривать",
+				"to consider, view, regard, review"
+			],
+			[
+				"verb",
+				"выяснять",
+				"to find out, clear up"
+			],
+			[
+				"verb",
+				"выяснить",
+				"to find out, clear up"
+			],
+			[
+				"noun",
+				"протяжение",
+				"a stretch, expanse, length of smth (usually land)"
+			],
+			[
+				"noun",
+				"век; столетие",
+				"a century"
+			],
+			[
+				"noun",
+				"пустыня",
+				"a desert"
+			],
+			[
+				"noun",
+				"средиземноморье",
+				"the mediterranean sea"
+			],
+			[
+				"verb",
+				"доставлять",
+				"to deliver"
+			],
+			[
+				"verb",
+				"доставить",
+				"to deliver"
+			],
+			[
+				"phrase",
+				"слоновая кость",
+				"ivory"
+			],
+			[
+				"adjective",
+				"прибыльный",
+				"profitable, lucrative"
+			],
+			[
+				"noun",
+				"османская империя",
+				"the ottoman empire"
+			],
+			[
+				"noun",
+				"пиренейский полуостров",
+				"the iverian peninsula"
+			],
+			[
+				"verb",
+				"господствовать",
+				"to rule, reign; to dominate, command"
+			],
+			[
+				"noun",
+				"парусное судно",
+				"a sailing vessel"
+			],
+			[
+				"noun",
+				"побережье",
+				"the coast"
+			],
+			[
+				"adjective",
+				"сухопутноый",
+				"land, by land (as opposed to by sea/air)"
+			],
+			[
+				"adverb",
+				"наиболее",
+				"the most, above all, most-of-all"
+			],
+			[
+				"verb",
+				"деятельность",
+				"an activity; work"
+			],
+			[
+				"noun",
+				"торговля",
+				"trade"
+			],
+			[
+				"noun",
+				"влияние",
+				"influence"
+			],
+			[
+				"verb",
+				"влиять",
+				"to influence"
+			],
+			[
+				"adverb",
+				"стремительно",
+				"swiftly"
+			],
+			[
+				"noun",
+				"соперничество",
+				"a rivalry"
+			],
+			[
+				"verb",
+				"восстанавливать",
+				"to recover, restore"
+			],
+			[
+				"verb",
+				"независимость",
+				"independance"
+			],
+			[
+				"noun",
+				"зависимость",
+				"a dependancy, addiction"
+			],
+			[
+				"verb",
+				"сталкиваться + с + instr.",
+				"to face, collide, encounter"
+			],
+			[
+				"noun",
+				"держава",
+				"a state, power"
+			],
+			[
+				"adjective",
+				"неизменный",
+				"unaltered, unchanged"
+			]
+		]
+	}
+}
