@@ -5,72 +5,12 @@
 		"type": "categorical",
 		"cards": [
 			[
-				"noun",
-				"стол"
-			],
-			[
-				"verb",
-				"родить"
-			],
-			[
-				"adjective",
-				"умелый"
-			],
-			[
-				"verb",
-				"уметь"
-			],
-			[
-				"verb",
-				"заметить"
-			],
-			[
-				"verb",
-				"замечать"
-			],
-			[
-				"conjunction",
-				"прежде, чем"
-			],
-			[
-				"conjunction",
-				"до того как"
-			],
-			[
-				"noun",
-				"подушка"
-			],
-			[
-				"noun",
-				"измена"
-			],
-			[
-				"noun",
-				"столл"
-			],
-			[
-				"verb",
-				"думать"
-			],
-			[
-				"noun",
-				"спор"
-			],
-			[
-				"verb",
-				"спорить"
-			],
-			[
-				"phrase",
-				"или нет"
-			],
-			[
 				"phrase",
 				"test card 1 deleteme"
 			],
 			[
 				"verb",
-				"воспрещать"
+				"воспрещать deleteme"
 			],
 			[
 				"phrase",
@@ -78,7 +18,59 @@
 			],
 			[
 				"noun",
-				"холостой"
+				"холостой deleteme"
+			],
+			[
+				"verb",
+				"жениться deleteme"
+			],
+			[
+				"adjective",
+				"обалденный deleteme"
+			],
+			[
+				"other",
+				"обеих deleteme"
+			],
+			[
+				"adverb",
+				"разве deleteme"
+			],
+			[
+				"verb",
+				"склонить deleteme"
+			],
+			[
+				"phrase",
+				"не за что deleteme duplicate"
+			],
+			[
+				"verb",
+				"мучить deleteme"
+			],
+			[
+				"noun",
+				"столл deleteme"
+			],
+			[
+				"verb",
+				"ухаживать deleteme"
+			],
+			[
+				"noun",
+				"родственники deleteme"
+			],
+			[
+				"adjective",
+				"отстающий deleteme"
+			],
+			[
+				"pronoun",
+				"какой deleteme"
+			],
+			[
+				"noun",
+				"пыль deleteme"
 			]
 		]
 	}

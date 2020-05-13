@@ -1,4 +1,4 @@
-from cmg.math import Vec2
+import cmg
 from cmg.color import Colors
 from study_tool.entities.entity import Entity
 

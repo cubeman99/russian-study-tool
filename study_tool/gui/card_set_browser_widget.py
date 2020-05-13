@@ -13,7 +13,8 @@ class CardSetBrowserWidget(widgets.Widget):
     """
     Widget for browsing card sets like a file explorer.
     """
-    def __init__(self, card_set_package: CardSetPackage, card_set_mode=True, close_on_select=True):
+    def __init__(self, card_set_package: CardSetPackage,
+                 card_set_mode=True, close_on_select=True):
         super().__init__()
         self.__package = card_set_package
         self.__card_set_mode = card_set_mode

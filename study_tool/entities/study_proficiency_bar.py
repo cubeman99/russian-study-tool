@@ -1,6 +1,6 @@
 import pygame
+import cmg
 from cmg.color import Colors
-from cmg.graphics import Align
 from study_tool.config import Config
 from study_tool.entities.entity import Entity
 
@@ -96,6 +96,7 @@ class StudyProficiencyBar(Entity):
                                 color=Config.proficiency_level_colors[level])
                     x += level_width
         g.draw_text(self.left + left_margin - 4, self.center_y, text="{}%".format(self.__score),
-                    color=Colors.BLACK, align=Align.MiddleRight, font=font)
+                    color=cmg.Theme.color_text, align=cmg.Align.MiddleRight, font=font)
         g.draw_text(self.right - right_margin + 4, self.center_y, text=str(self.__total_cards),
-                    color=Colors.BLACK, align=Align.MiddleLeft, font=font)
+                    color=cmg.Theme.color_text, align=cmg.Align.MiddleLeft, font=font)
+

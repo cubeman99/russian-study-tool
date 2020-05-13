@@ -4,7 +4,6 @@ import cmg
 from cmg import widgets
 from cmg import gui
 from cmg.event import Event
-from cmg.color import Colors
 from cmg.input import Keys
 from cmg.input import MouseButtons
 
@@ -16,7 +15,7 @@ class CheckBox(widgets.Widget):
         
         self.clicked = Event()
         self.__text = text
-        self.__font = gui.Font(32)
+        self.__font = cmg.Font(32)
         self.__surface = None
         self.__checked = checked
         self.__update_size()
@@ -55,7 +54,8 @@ class CheckBox(widgets.Widget):
 
     def on_draw(self, g):
         if not self.__surface:
-            self.__surface = self.__font.render(self.__text)
+            self.__surface = self.__font.render(
+                self.__text, color=cmg.Theme.color_text)
             
         y = self.rect.top + \
             int((self.get_height() - self.__surface.get_height()) / 2)
@@ -65,22 +65,24 @@ class CheckBox(widgets.Widget):
 
         if False:
             x = self.get_rect().right - p - w
-            g.draw_rect(x, y, w, h, color=Colors.BLACK)
+            g.draw_rect(x, y, w, h, color=cmg.Theme.color_checkbox_box)
             if self.__checked:
-                g.fill_rect(x + p, y + p, w - p * 2, h - p * 2, color=Colors.BLACK)
+                g.fill_rect(x + p, y + p, w - p * 2, h - p * 2,
+                            color=cmg.Theme.color_checkbox_box)
             x -= p + self.__surface.get_width()
             g.draw_image(self.__surface, x, y)
         else:
             x = self.get_rect().left + p
-            g.draw_rect(x, y, w, h, color=Colors.BLACK)
+            g.draw_rect(x, y, w, h, color=cmg.Theme.color_checkbox_box)
             if self.__checked:
-                g.fill_rect(x + p, y + p, w - p * 2, h - p * 2, color=Colors.BLACK)
+                g.fill_rect(x + p, y + p, w - p * 2, h - p * 2,
+                            color=cmg.Theme.color_checkbox_box)
             x += w + p
             g.draw_image(self.__surface, x, y)
             
         # Draw the box border
         if self.is_focused():
-            g.draw_rect(self.rect, color=Colors.BLUE)
+            g.draw_rect(self.rect, color=cmg.Theme.color_outline_focused)
 
     def __update_size(self):
         size = self.__font.measure(self.__text)

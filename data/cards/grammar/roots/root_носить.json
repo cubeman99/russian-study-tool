@@ -1,0 +1,13 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Root носить",
+		"type": "grammatical",
+		"cards": [
+			[
+				"noun",
+				"нанесение"
+			]
+		]
+	}
+}

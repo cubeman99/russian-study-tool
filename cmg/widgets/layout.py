@@ -1,9 +1,7 @@
-from cmg.graphics import Graphics
+import cmg
 from pygame.rect import Rect
-from cmg import color
 from cmg.widgets.layout_item import LayoutItem
 from cmg.widgets import Widget
-from cmg.math import Vec2
 
 
 class Layout(LayoutItem):
@@ -18,8 +16,8 @@ class Layout(LayoutItem):
             for widget in child.iter_widgets():
                 yield widget
 
-    def get_offset(self) -> Vec2:
-        return Vec2(0, 0)
+    def get_offset(self) -> cmg.Vec2:
+        return cmg.Vec2(0, 0)
 
     def get_children(self):
         pass
@@ -60,22 +58,22 @@ class Layout(LayoutItem):
         for child in self.get_visible_children():
             child.draw(g)
 
-    def calc_maximum_size(self) -> Vec2:
+    def calc_maximum_size(self) -> cmg.Vec2:
         children = self._get_layout_item_children()
         if not children:
-            return Vec2(self.DEFAULT_MAX_SIZE, self.DEFAULT_MAX_SIZE)
-        max_size = Vec2(0, 0)
+            return cmg.Vec2(self.DEFAULT_MAX_SIZE, self.DEFAULT_MAX_SIZE)
+        max_size = cmg.Vec2(0, 0)
         for child in children:
             child_max_size = child.calc_maximum_size()
             max_size.x = max(max_size.x, child_max_size.x)
             max_size.y = max(max_size.y, child_max_size.y)
         return max_size
 
-    def calc_minimum_size(self) -> Vec2:
+    def calc_minimum_size(self) -> cmg.Vec2:
         children = self._get_layout_item_children()
         if not children:
-            return Vec2(0, 0)
-        min_size = Vec2(0, 0)
+            return cmg.Vec2(0, 0)
+        min_size = cmg.Vec2(0, 0)
         for child in children:
             child_min_size = child.calc_minimum_size()
             min_size.x = min(min_size.x, child_min_size.x)

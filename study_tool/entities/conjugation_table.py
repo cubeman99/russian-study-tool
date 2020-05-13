@@ -1,7 +1,6 @@
-from cmg.color import Colors
+import cmg
 from cmg.color import Color
-from cmg.graphics import Align
-from cmg.graphics import AccentedText
+from study_tool.russian.word import AccentedText
 from study_tool.entities.entity import Entity
 
 
@@ -18,11 +17,11 @@ class ConjugationTable(Entity):
                  row_height=22,
                  row_header_count=1,
                  column_header_count=1,
-                 outline_color=Colors.BLACK,
-                 background_color=Colors.WHITE,
-                 header_background_color=Color(220),
-                 text_color=Colors.BLACK,
-                 highlight_color=Colors.YELLOW):
+                 outline_color=cmg.Theme.color_outline,
+                 background_color=cmg.Theme.color_background,
+                 header_background_color=cmg.Theme.color_background_light,
+                 text_color=cmg.Theme.color_text,
+                 highlight_color=cmg.Theme.color_background_highlighted):
         """Entity constructor."""
         super().__init__()
         self.__row_height = row_height
@@ -97,6 +96,6 @@ class ConjugationTable(Entity):
                     text=AccentedText(text),
                     font=self.__font,
                     color=self.__text_color,
-                    align=Align.MiddleLeft)
+                    align=cmg.Align.MiddleLeft)
                 cx += w
             cy += h

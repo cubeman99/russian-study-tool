@@ -1,9 +1,7 @@
 from pygame.rect import Rect
-from cmg.graphics import Graphics
-from cmg import color
+import cmg
 from cmg.widgets import Widget
 from cmg.widgets.layout import Layout
-from cmg.math import Vec2
 
 
 class Expandable2DArray:
@@ -150,12 +148,12 @@ class GridLayout(Layout):
         self.__update_axis_layout(0)
         self.__update_axis_layout(1)
         
-    def calc_maximum_size(self) -> Vec2:
+    def calc_maximum_size(self) -> cmg.Vec2:
         """Calculate and return widget maximum sizes."""
         if not self.get_children():
             return super().calc_maximum_size()
 
-        max_size = Vec2(0, 0)
+        max_size = cmg.Vec2(0, 0)
 
         for child in self.get_children():
             child.calc_maximum_size()
@@ -175,12 +173,12 @@ class GridLayout(Layout):
         self.set_maximum_size(max_size)
         return max_size
 
-    def calc_minimum_size(self) -> Vec2:
+    def calc_minimum_size(self) -> cmg.Vec2:
         """Calculate and return widget minimum sizes."""
         if not self.get_children():
             return super().calc_minimum_size()
 
-        min_size = Vec2(0, 0)
+        min_size = cmg.Vec2(0, 0)
 
         for child in self.get_children():
             child.calc_minimum_size()
@@ -267,14 +265,14 @@ class GridLayout(Layout):
                         stretch_list_index += 1
         
         # Set final positions
-        position = Vec2(self.get_rect().topleft)[axis]
+        position = cmg.Vec2(self.get_rect().topleft)[axis]
         positions = {}
         for i in range(count):
             positions[i] = position
             for _, child in cross_items(i):
                 rect = child.get_rect()
-                pos = Vec2(rect.topleft)
-                size = Vec2(rect.size)
+                pos = cmg.Vec2(rect.topleft)
+                size = cmg.Vec2(rect.size)
                 pos[axis] = position
                 size[axis] = sizes[i]
                 rect.topleft = pos.totuple()

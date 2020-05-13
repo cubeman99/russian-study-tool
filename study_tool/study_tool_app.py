@@ -8,7 +8,6 @@ import shutil
 import sys
 import yaml
 import cmg
-from cmg import color
 import cmg.logging
 from cmg import math
 from cmg.input import *
@@ -28,6 +27,7 @@ from study_tool.gui.query_widget import QueryWidget
 from study_tool.gui.card_set_browser_widget import CardSetBrowserWidget
 from study_tool.gui.card_set_browser_widget import CardSetPackageBrowserWidget
 from study_tool.gui.card_search_widget import CardSearchWidget
+from study_tool.gui.main_menu_widget import MainMenuWidget
 from study_tool.query import CardQuery
 from study_tool.russian import conjugation
 from study_tool.russian.word import WordSourceEnum
@@ -63,7 +63,7 @@ class StudyCardsApp(Application):
         self.__font_status = cmg.Font(20)
 
         self.clock = pygame.time.Clock()
-        self.graphics = Graphics(self.screen)
+        self.graphics = cmg.Graphics(self.screen)
         self.joystick_ready = False
         self.inputs = [
             Input(index=2, name="Middle", min=1, max=-1, dead_zone=DEAD_ZONE),
@@ -94,6 +94,12 @@ class StudyCardsApp(Application):
         self.load_example_database()
         self.load_study_data()
         self.save_word_database()
+        self.save_study_data()
+
+        # Save all card sets as JSON
+        # for card_set in self.card_database.iter_card_sets():
+        #     self.card_database.save_card_set_as_json(card_set)
+        self.save_card_data()
 
         Config.logger.info("Initialization complete!")
 
@@ -127,6 +133,7 @@ class StudyCardsApp(Application):
         #self.push_study_state(test_set, study_params=StudyParams(random_side=True), scheduler_params=SchedulerParams(max_repetitions=1))
         #self.push_state(GUIState(widget=QueryWidget(self, test_set.get_cards()), title="Study Query"))
         #self.push_gui_state(CardSetBrowserWidget(self.card_database.get_root_package()))
+        #self.push_gui_state(MainMenuWidget(self.card_database.get_root_package()))
         #self.push_gui_state(CardSetPackageBrowserWidget(self.card_database.get_root_package()))
         #self.push_gui_state(CardSearchWidget())
 
@@ -143,8 +150,8 @@ class StudyCardsApp(Application):
     def on_quit(self):
         self.cooljugator_thread.stop()
 
-    def on_window_resized(self, size: Vec2):
-        self.graphics = Graphics(self.screen)
+    def on_window_resized(self, size: cmg.Vec2):
+        self.graphics = cmg.Graphics(self.screen)
 
     @property
     def root(self) -> CardSetPackage:
@@ -372,7 +379,7 @@ class StudyCardsApp(Application):
 
     def draw(self):
         self.graphics.recache()
-        self.graphics.clear(color.WHITE)
+        self.graphics.clear(cmg.Theme.color_background)
         screen_width, screen_height = self.screen.get_size()
 
         states_to_draw = []
@@ -387,8 +394,8 @@ class StudyCardsApp(Application):
         # Draw save status
         kwargs = dict( 
             font=self.__font_status,
-            align=Align.TopLeft,
-            color=Colors.RED)
+            align=cmg.Align.TopLeft,
+            color=cmg.Theme.color_text_box_background_text)
         y = screen_height - Config.margin_top + 4
         if self.study_database.is_saving():
             self.graphics.draw_text(
@@ -414,8 +421,8 @@ class StudyCardsApp(Application):
             4, 4,
             text="FPS = {}".format(int(round(fps))),
             font=self.__font_fps,
-            align=Align.TopLeft,
-            color=Colors.RED)
+            align=cmg.Align.TopLeft,
+            color=cmg.Theme.color_text_box_background_text)
 
         # Draw pedal inputs
         fps = self.get_frame_rate()
@@ -427,8 +434,8 @@ class StudyCardsApp(Application):
             screen_width - 4, screen_height - 4,
             text=input_str.format(int(round(fps))),
             font=self.__font_fps,
-            align=Align.BottomRight,
-            color=Colors.GRAY)
+            align=cmg.Align.BottomRight,
+            color=cmg.Theme.color_text_box_background_text)
 
     def __on_key_pressed(self, key, mod, text):
         self.state.on_key_pressed(key, mod, text)

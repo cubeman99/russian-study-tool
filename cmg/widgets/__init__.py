@@ -13,3 +13,4 @@ from .button import *
 from .combo_box import *
 from .check_box import *
 from .group_box import *
+from .image import *

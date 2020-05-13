@@ -3,12 +3,12 @@ import os
 import pygame
 import random
 import time
+import cmg
 from cmg import color
 from cmg import math
 from cmg.input import *
 from cmg.graphics import *
 from cmg.application import *
-from cmg.math import Vec2
 from study_tool.card import *
 from study_tool.card_set import *
 from study_tool.entities.menu import Menu
@@ -26,7 +26,7 @@ class KeyboardState(State):
         self.buttons[2] = Button("Scroll Down")
         self.button_width = 64
         self.button_height = 64
-        self.cursor_position = Vec2(0, 0)
+        self.cursor_position = cmg.Vec2(0, 0)
         self.text = ""
         self.grid = [" йцукенгшщзх",
                      " фывапролджэ",
@@ -66,7 +66,7 @@ class KeyboardState(State):
         move = (self.app.inputs[0].get_amount(),
                 self.app.inputs[2].get_amount())
         speed = 20.0
-        prev_cursor_position = Vec2(self.cursor_position)
+        prev_cursor_position = cmg.Vec2(self.cursor_position)
         self.click_timer += dt
 
         for i in range(2):
@@ -122,7 +122,7 @@ class KeyboardState(State):
                 if isinstance(c, tuple):
                     c = c[0]
                 g.draw_text(cx, cy, text=c, color=color.BLACK,
-                            align=Align.Centered)
+                            align=cmg.Align.Centered)
 
         x = gx + 0.5 * self.button_width
         y = gy + self.cursor_position[0] * self.button_height
@@ -136,4 +136,4 @@ class KeyboardState(State):
 
         g.draw_text(screen_center_x, self.margin_top / 2,
                     text=self.text + "_", color=color.BLACK,
-                    align=Align.Centered)
+                    align=cmg.Align.Centered)

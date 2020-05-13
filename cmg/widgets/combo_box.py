@@ -2,9 +2,9 @@ from enum import IntEnum
 import os
 import pygame
 from pygame import Rect
+import cmg
 from cmg import gui
 from cmg import widgets
-from cmg.color import Colors
 from cmg.event import Event
 from cmg.input import Keys, MouseButtons
 
@@ -16,8 +16,9 @@ class ComboBox(widgets.Widget):
 
         self.index_changed = Event()
 
+        self.__image = cmg.Res.images[cmg.Theme.image_scrollbar_arrow_down]
         self.__text = ""
-        self.__font = gui.Font(32)
+        self.__font = cmg.Font(32)
         self.__surface = None
         self.__options = []
         for option in options:
@@ -73,7 +74,11 @@ class ComboBox(widgets.Widget):
     def on_draw(self, g):
         # Render the text
         if not self.__surface:
-            self.__surface = self.__font.render(self.__text)
+            self.__surface = self.__font.render(
+                self.__text, color=cmg.Theme.color_text)
+            
+        # Draw the box background
+        g.fill_rect(self.rect, color=cmg.Theme.color_combo_box_background)
 
         # Draw the text
         y = self.rect.top + \
@@ -81,10 +86,17 @@ class ComboBox(widgets.Widget):
         g.draw_image(self.__surface, self.rect.left + 4, y)
         
         # Draw the box border
-        c = Colors.BLACK
+        c = cmg.Theme.color_outline
         if self.is_focused():
-            c = Colors.BLUE
+            c = cmg.Theme.color_outline_focused
         g.draw_rect(self.rect, color=c)
+        
+        # Draw the arrow image
+        if self.__image:
+            image_rect = Rect(self.get_rect())
+            image_rect.width = image_rect.height
+            image_rect.left = self.get_rect().right - image_rect.width
+            g.draw_image(self.__image, image_rect)
 
     def __get_option_text(self, option) -> str:
         if isinstance(option, IntEnum):

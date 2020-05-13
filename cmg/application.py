@@ -2,12 +2,11 @@ import pygame
 import queue
 import time
 import traceback
-from cmg import color
+import cmg
 from cmg.input import InputManager
 from cmg.input import MouseButtons
 from cmg.input import Keys
 from cmg.input import KeyMods
-from cmg.math import Vec2
 from cmg.event import Event
 
 
@@ -46,7 +45,7 @@ class Application:
     def on_quit(self):
         pass
 
-    def on_window_resized(self, size: Vec2):
+    def on_window_resized(self, size: cmg.Vec2):
         pass
 
     def update(self, dt):
@@ -72,13 +71,13 @@ class Application:
                     elif event.type == pygame.KEYUP:
                         self.input.on_key_up(Keys(event.key), KeyMods(event.mod))
                     elif event.type == pygame.MOUSEBUTTONDOWN:
-                        self.input.on_mouse_down(Vec2(event.pos), MouseButtons(event.button))
+                        self.input.on_mouse_down(cmg.Vec2(event.pos), MouseButtons(event.button))
                     elif event.type == pygame.MOUSEBUTTONUP:
-                        self.input.on_mouse_up(Vec2(event.pos), MouseButtons(event.button))
+                        self.input.on_mouse_up(cmg.Vec2(event.pos), MouseButtons(event.button))
                     elif event.type == pygame.VIDEORESIZE:
                         self.screen = pygame.display.set_mode(
                             (event.w, event.h), flags=pygame.RESIZABLE)
-                        self.on_window_resized(Vec2(event.size))
+                        self.on_window_resized(cmg.Vec2(event.size))
 
                 # Process queued events
                 try:
@@ -94,7 +93,7 @@ class Application:
                 self.update(dt=1.0 / self.framerate)
 
                 # Draw
-                self.screen.fill(tuple(color.WHITE))
+                self.screen.fill(tuple(cmg.Theme.color_background))
                 self.draw()
                 pygame.display.flip()
             

@@ -178,7 +178,7 @@ class WordDatabase:
             word_data = self.serialize()
             temp_path = path + ".temp"
             with open(temp_path, "w", encoding="utf8") as f:
-                json.dump(word_data, f, indent=2,
+                json.dump(word_data, f, indent='\t',
                             sort_keys=True, ensure_ascii=False)
             os.remove(path)
             os.rename(temp_path, path)

@@ -1,6 +1,6 @@
 from pygame.rect import Rect
-from cmg.math import Vec2
 import abc
+import cmg
 
 
 class LayoutItem:
@@ -10,20 +10,20 @@ class LayoutItem:
         super().__init__()
         self.parent = None
         self.rect = Rect(80, 200, 200, 60)
-        self.__maximum_size = Vec2(
+        self.__maximum_size = cmg.Vec2(
             self.DEFAULT_MAX_SIZE, self.DEFAULT_MAX_SIZE)
-        self.__minimum_size = Vec2(10, 10)
+        self.__minimum_size = cmg.Vec2(10, 10)
 
     @abc.abstractclassmethod
     def _get_layout_item_children(self):
         return []
 
     @abc.abstractclassmethod
-    def calc_maximum_size(self) -> Vec2:
+    def calc_maximum_size(self) -> cmg.Vec2:
         pass
 
     @abc.abstractclassmethod
-    def calc_minimum_size(self) -> Vec2:
+    def calc_minimum_size(self) -> cmg.Vec2:
         pass
 
     @abc.abstractclassmethod
@@ -31,7 +31,7 @@ class LayoutItem:
         """Returns True if this item is visible."""
         return self.__visible
 
-    def get_maximum_size(self) -> Vec2:
+    def get_maximum_size(self) -> cmg.Vec2:
         return self.__maximum_size
 
     def get_maximum_width(self) -> int:
@@ -40,7 +40,7 @@ class LayoutItem:
     def get_maximum_height(self) -> int:
         return self.__maximum_size.y
 
-    def get_minimum_size(self) -> Vec2:
+    def get_minimum_size(self) -> cmg.Vec2:
         return self.__minimum_size
 
     def get_minimum_width(self) -> int:
@@ -58,8 +58,8 @@ class LayoutItem:
     def get_height(self) -> int:
         return self.rect.height
 
-    def get_size(self) -> Vec2:
-        return Vec2(self.rect.size)
+    def get_size(self) -> cmg.Vec2:
+        return cmg.Vec2(self.rect.size)
 
     def get_root_parent(self):
         if self.parent:
@@ -73,10 +73,10 @@ class LayoutItem:
         self.rect = Rect(rect)
 
     def set_size(self, size):
-        self.rect.size = Vec2(size).totuple()
+        self.rect.size = cmg.Vec2(size).totuple()
 
     def set_maximum_size(self, size):
-        self.__maximum_size = Vec2(size)
+        self.__maximum_size = cmg.Vec2(size)
 
     def set_maximum_width(self, width):
         self.__maximum_size.x = width
@@ -85,7 +85,7 @@ class LayoutItem:
         self.__maximum_size.y = height
 
     def set_minimum_size(self, size):
-        self.__minimum_size = Vec2(size)
+        self.__minimum_size = cmg.Vec2(size)
 
     def set_minimum_width(self, width):
         self.__minimum_size.x = width

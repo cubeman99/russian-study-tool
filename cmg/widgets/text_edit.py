@@ -7,10 +7,9 @@ import cmg
 from cmg import gui
 from cmg.application import Application
 from cmg.input import Keys
+from cmg.color import Color
 from cmg.input import KeyMods
 from cmg.event import Event
-from cmg.color import Color
-from cmg.color import Colors
 from cmg.widgets.widget import Widget
 
 class TextEdit(Widget):
@@ -32,8 +31,8 @@ class TextEdit(Widget):
         self.__autocomplete_source = None
         self.__background_text = None
         self.__autocomplete_text = None
-        self.__background_color = Colors.WHITE
-        self.__background_text_color = Colors.LIGHT_GRAY
+        self.__background_color = cmg.Theme.color_text_box_background
+        self.__background_text_color = cmg.Theme.color_text_box_background_text
         self.__surface_background_text = pygame.Surface((1, 1))
         self.__surface_text = pygame.Surface((1, 1))
         self.__surface = pygame.Surface((1, 1))
@@ -42,7 +41,7 @@ class TextEdit(Widget):
         self.__text = text  # Inputted text
         self.__prev_state = (None, None, None)
 
-        self.__font = gui.Font(32)
+        self.__font = cmg.Font(32)
         size = self.__font.measure(self.__text)
         self.set_minimum_height(size.y + 4)
         self.set_maximum_height(size.y + 4)
@@ -148,7 +147,8 @@ class TextEdit(Widget):
             self.cursor_visible = self.is_focused()
         if state != self.__prev_state:
             self.__prev_state = state
-            self.__surface_text = self.__font.render(self.__text)
+            self.__surface_text = self.__font.render(
+                self.__text, color=cmg.Theme.color_text)
             if self.__background_text:
                 self.__surface_background_text = self.__font.render(
                     self.__background_text,
@@ -339,7 +339,7 @@ class TextEdit(Widget):
             box_span = self.__font.measure(self.__text[start:end])[0]
             g.fill_rect(box_offset, self.rect.top + top_padding,
                         box_span, cursor_height,
-                        color=Colors.BLUE)
+                        color=cmg.Theme.color_text_box_selection_background)
         if self.__text:
             g.draw_image(self.__surface_text,
                          self.rect.left + left_padding,
@@ -353,12 +353,12 @@ class TextEdit(Widget):
                 self.__text[:self.__cursor_position])[0]
             g.fill_rect(cursor_x_pos, self.rect.top + top_padding,
                         cursor_width, cursor_height,
-                        color=self.__font.get_text_color())
+                        color=cmg.Theme.color_text_cursor)
         
         # Draw the box border
-        c = Colors.BLACK
+        c = cmg.Theme.color_outline
         if self.is_focused():
-            c = Colors.BLUE
+            c = cmg.Theme.color_outline_focused
         g.draw_rect(self.rect, color=c)
 
     def __get_ctrl_boundary(self, step=1):

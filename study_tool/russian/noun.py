@@ -4,7 +4,7 @@ from study_tool.russian.types import Case
 from study_tool.russian.types import Gender
 from study_tool.russian.types import WordType
 from study_tool.russian.word import AccentedText
-from study_tool.russian.word import Word
+from study_tool.russian.word import Word, CONSONANTS
 
 
 class NounDeclension:

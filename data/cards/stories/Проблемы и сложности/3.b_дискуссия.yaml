@@ -1,7 +1,7 @@
 {
 	"card_set": {
 		"version": 1,
-		"name": "3.b Дискуссия",
+		"name": "03b Дискуссия",
 		"type": "media",
 		"cards": [
 			[
@@ -218,7 +218,7 @@
 			],
 			[
 				"verb",
-				"ухаживать"
+				"ухаживать deleteme"
 			],
 			[
 				"verb",

@@ -3,11 +3,7 @@ import os
 import pygame
 import random
 import time
-from cmg import color
-from cmg import math
-from cmg.input import *
-from cmg.graphics import *
-from cmg.application import *
+import cmg
 from study_tool.card import *
 from study_tool.card_set import *
 from study_tool.entities.menu import Menu
@@ -23,10 +19,10 @@ class CardListState(State):
 
         self.card_font = pygame.font.Font(None, 30)
         self.line_spacing = 30
-        self.row_colors = [color.WHITE,
-                           color.gray(230)]
+        self.row_colors = [cmg.Theme.color_background,
+                           cmg.Theme.color_background_light]
         self.menu = None
-        self.row_unseen_color = color.make_gray(230)
+        self.row_unseen_color = cmg.Theme.color_background_light
 
     def begin(self):
         self.buttons[0] = Button("Scroll Up")
@@ -70,12 +66,12 @@ class CardListState(State):
         if not study_data.is_encountered():
             row_color = self.row_unseen_color
         else:
-            row_color = math.lerp(Config.proficiency_level_colors[
-                study_data.get_proficiency_level()], color.WHITE, 0.7)
+            row_color = cmg.mathlib.lerp(Config.proficiency_level_colors[
+                study_data.get_proficiency_level()], cmg.Theme.color_background, 0.7)
         if index % 2 == 1:
             row_color *= 0.94
         if highlighted:
-            row_color = math.lerp(row_color, color.WHITE, 0.5)
+            row_color = cmg.mathlib.lerp(row_color, cmg.Theme.color_background, 0.5)
         return row_color
 
     def draw_menu_option_text(self, g, option, rect, highlighted):
@@ -92,10 +88,10 @@ class CardListState(State):
 
         g.draw_text(column_1_x, center_y,
                     text=card.get_display_text(CardSide.Russian), font=self.card_font,
-                    color=text_color, align=Align.MiddleLeft)
+                    color=text_color, align=cmg.Align.MiddleLeft)
         g.draw_text(column_2_x, center_y,
                     text=card.get_display_text(CardSide.English), font=self.card_font,
-                    color=text_color, align=Align.MiddleLeft)
+                    color=text_color, align=cmg.Align.MiddleLeft)
 
     def draw(self, g):
         screen_width, screen_height = self.app.screen.get_size()
@@ -109,4 +105,4 @@ class CardListState(State):
         g.draw_text(32, self.margin_top / 2,
                     text=self.card_set.name,
                     color=Config.title_color,
-                    align=Align.MiddleLeft)
+                    align=cmg.Align.MiddleLeft)

@@ -1,9 +1,7 @@
 import pygame
 import os
+import cmg
 from cmg import widgets
-from cmg.graphics import Graphics
-from cmg.math import Vec2
-from cmg import color
 from cmg.input import MouseButtons, KeyMods, Keys
 from cmg.widgets import widget
 from cmg.widgets.box_layout import HBoxLayout
@@ -14,16 +12,16 @@ class SubRegionLayout(widgets.Layout):
         super().__init__()
         self.__widget = widget
         self.__surface = None
-        self.__offset = Vec2(0, 0)
+        self.__offset = cmg.Vec2(0, 0)
 
-    def get_offset(self) -> Vec2:
+    def get_offset(self) -> cmg.Vec2:
         return self.__offset
 
     def get_widget(self) -> widgets.Widget:
         return self.__widget
 
-    def set_offset(self, offset: Vec2):
-        self.__offset = Vec2(offset)
+    def set_offset(self, offset: cmg.Vec2):
+        self.__offset = cmg.Vec2(offset)
 
     def set_widget(self, widget: widgets.Widget):
         assert isinstance(widget, widgets.Widget)
@@ -37,7 +35,7 @@ class SubRegionLayout(widgets.Layout):
     def on_update(self):
         if self.__widget:
             self.__widget.set_rect(self.get_rect())
-            size = Vec2(self.get_size())
+            size = cmg.Vec2(self.get_size())
             size.y = self.__widget.get_minimum_height()
             self.__widget.set_size(size)
 
@@ -57,8 +55,8 @@ class SubRegionLayout(widgets.Layout):
                 self.__surface = pygame.Surface(self.rect.size)
 
             # Render the widget into the sub-surface
-            subg = Graphics(self.__surface)
-            subg.clear(color.WHITE)
+            subg = cmg.Graphics(self.__surface)
+            subg.clear(cmg.Theme.color_background)
             subg.set_translation(-(self.rect.left + self.__offset[0]),
                                  -(self.rect.top + self.__offset[1]))
             self.__widget.draw(subg)
@@ -105,14 +103,14 @@ class ScrollBar(widgets.Widget):
 
     def draw(self, g):
         axis = self.__axis
-        end_size = Vec2(self.__end_size, self.__end_size)
+        end_size = cmg.Vec2(self.__end_size, self.__end_size)
 
 
-        topleft = Vec2(self.get_rect().topleft)
+        topleft = cmg.Vec2(self.get_rect().topleft)
         size = self.get_size()
         end_size[1 - axis] = size[1 - axis]
-        bar_size = Vec2(size)
-        bar_pos = Vec2(topleft)
+        bar_size = cmg.Vec2(size)
+        bar_pos = cmg.Vec2(topleft)
         bar_pos[axis] += end_size[axis]
         span_size = size[axis] - (end_size[axis] * 2)
         bar_size[axis] = span_size
@@ -124,7 +122,7 @@ class ScrollBar(widgets.Widget):
                 (self.__maximum - self.__minimum + self.__page_step))
             bar_pos[axis] += int(round((span_size - bar_size[axis]) * percent))
 
-        xy = Vec2(topleft)
+        xy = cmg.Vec2(topleft)
         end_rect_1 = pygame.Rect(xy.totuple(), end_size.totuple())
         xy[axis] += end_size[axis]
 
@@ -133,16 +131,16 @@ class ScrollBar(widgets.Widget):
         xy[axis] = topleft[axis] + size[axis] - end_size[axis]
         end_rect_2 = pygame.Rect(xy.totuple(), end_size.totuple())
 
-        g.fill_rect(self.get_rect(), color=color.LIGHT_GRAY)
+        g.fill_rect(self.get_rect(), color=cmg.Theme.color_scrollbar_background)
 
-        g.fill_rect(end_rect_1, color=color.YELLOW)
-        g.draw_rect(end_rect_1, color=color.BLACK)
+        g.fill_rect(end_rect_1, color=cmg.Theme.color_scrollbar_bar_background)
+        g.draw_rect(end_rect_1, color=cmg.Theme.color_outline)
 
-        g.fill_rect(end_rect_2, color=color.GREEN)
-        g.draw_rect(end_rect_2, color=color.BLACK)
+        g.fill_rect(end_rect_2, color=cmg.Theme.color_scrollbar_bar_background)
+        g.draw_rect(end_rect_2, color=cmg.Theme.color_outline)
 
-        g.fill_rect(bar_rect, color=color.WHITE)
-        g.draw_rect(bar_rect, color=color.BLACK)
+        g.fill_rect(bar_rect, color=cmg.Theme.color_scrollbar_bar_background)
+        g.draw_rect(bar_rect, color=cmg.Theme.color_outline)
 
 
 class AbstractScrollArea(widgets.Widget):
@@ -175,7 +173,7 @@ class AbstractScrollArea(widgets.Widget):
         self.__scrollbar_v.set_maximum(
             max(0, area_height - viewport_height))
         self.__scrollbar_v.set_page_step(viewport_height)
-        self.__layout.set_offset(Vec2(
+        self.__layout.set_offset(cmg.Vec2(
             0, self.__scrollbar_v.get_value()))
 
     def on_key_pressed(self, key, mod, text):

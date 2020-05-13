@@ -1,0 +1,29 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "History",
+		"type": "categorical",
+		"cards": [
+			[
+				"adverb",
+				"тягло"
+			],
+			[
+				"adjective",
+				"тягловый"
+			],
+			[
+				"noun",
+				"латы"
+			],
+			[
+				"noun",
+				"мумия"
+			],
+			[
+				"phrase",
+				"ров с водой"
+			]
+		]
+	}
+}

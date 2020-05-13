@@ -1,10 +1,8 @@
 import os
 import pygame
-from cmg.graphics import Graphics
+import cmg
 from cmg import color
 from cmg.color import Color
-from cmg.widgets.layout_item import LayoutItem
-from cmg.math import Vec2
 
 
 class Font:
@@ -20,17 +18,24 @@ class Font:
             font_family = pygame.font.match_font(font_family)
         self.__font = pygame.font.Font(None, self.__font_size)
 
+    def get_pygame_font(self) -> pygame.font.Font:
+        return self.__font
+
     def get_text_color(self) -> Color:
         return Color(self.__text_color)
 
     def get_size(self):
         return self.__font_size
 
-    def set_size(self, size):
-        self.__font_size = size
+    def set_size(self, size: int):
+        if size != self.__font_size:
+            self.__font_size = size
+            self.__font = pygame.font.Font(None, self.__font_size)
 
-    def measure(self, text: str) -> Vec2:
-        return Vec2(self.__font.size(text))
+    def measure(self, text: str) -> cmg.Vec2:
+        if not isinstance(text, str):
+            raise TypeError(text)
+        return cmg.Vec2(self.__font.size(text))
 
     def render(self, text: str, color=None):
         if not color:

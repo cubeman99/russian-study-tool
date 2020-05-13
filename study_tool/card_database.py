@@ -4,6 +4,7 @@ import random
 import re
 import threading
 import time
+import json
 import yaml
 from cmg.event import Event
 from cmg.utilities import ReadWriteLock
@@ -277,7 +278,7 @@ class CardDatabase:
             # Unlink related cards
             related_cards = list(card.get_related_cards())
             for related_card in related_cards:
-                self.ununlink_related_cards(card, related_card)
+                self.unlink_related_cards(card, related_card)
 
             # Remove from russian key dict
             found_ru_key = False
@@ -564,13 +565,16 @@ class CardDatabase:
 
                 # Save to temp file first
                 temp_path = path + ".temp"
-                with open(temp_path, "wb") as f:
-                    f.write(b"cards:\n")
-                    for card in state:
-                        f.write(b"- ")
-                        yaml.dump(card, f, encoding="utf8",
-                                  allow_unicode=True, default_flow_style=True,
-                                  Dumper=yaml.CDumper)
+                with open(temp_path, "w", encoding="utf8") as f:
+                    json.dump({"cards": state}, f, indent='\t', ensure_ascii=False)
+                #with open(temp_path, "wb") as f:
+                #    f.write(b"cards:\n")
+                #    for card in state:
+                #        f.write(b"- ")
+                #        yaml.dump(card, f, encoding="utf8",
+                #                  allow_unicode=True, default_flow_style=True,
+                #                  Dumper=yaml.CDumper)
+
                 os.remove(path)
                 os.rename(temp_path, path)
                 with self.__lock_dirty:
@@ -588,6 +592,8 @@ class CardDatabase:
             with open(path, "r", encoding="utf8") as f:
                 state = yaml.load(f, Loader=yaml.CLoader)
                 self.__deserialize_card_data(state)
+            # with open(path + ".json", "w", encoding="utf8") as f:
+            #     json.dump(state, f, indent=2)
             with self.__lock_dirty:
                 self.__dirty_cards.clear()
                     
@@ -607,6 +613,8 @@ class CardDatabase:
         """
         Save a single card set file to a YAML file.
         """
+        self.save_card_set_as_json(card_set=card_set, path=path)
+        return
         Config.logger.info("Saving card set '{}'".format(card_set.get_name()))
         with self.__lock_save:
             self.__is_saving = True
@@ -640,6 +648,22 @@ class CardDatabase:
             with self.__lock_dirty:
                 if card_set in self.__dirty_card_sets:
                     self.__dirty_card_sets.remove(card_set)
+            self.__is_saving = False
+
+    def save_card_set_as_json(self, card_set: CardSet, path=None):
+        """
+        Save a single card set file to a JSON file.
+        """
+        Config.logger.info("Saving card set '{}' as JSON".format(card_set.get_name()))
+        with self.__lock_save:
+            self.__is_saving = True
+            with self.__lock_modify.acquire_read():
+                if path is None:
+                    path = card_set.get_file_path()
+                    assert path is not None
+                state = card_set.serialize()
+                with open(path, "w", encoding="utf8") as f:
+                    json.dump(state, f, indent='\t', ensure_ascii=False)
             self.__is_saving = False
 
     def __serialize_card_data(self) -> dict:

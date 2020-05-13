@@ -30,6 +30,7 @@ from study_tool.states.state import *
 from study_tool.states.sub_menu_state import SubMenuState
 from study_tool.card_database import CardDatabase
 from study_tool.russian.word import Word
+from study_tool.russian.word import AccentedText
 from study_tool.russian.noun import Noun
 from study_tool.russian.verb import Verb
 from cmg.application import Application
@@ -95,7 +96,7 @@ class CardRussianTextEdit(widgets.TextEdit):
                                  text=text,
                                  font=self.__attribute_font,
                                  color=text_color,
-                                 align=Align.Centered)
+                                 align=cmg.Align.Centered)
             x -= spacing
 
 
@@ -328,12 +329,11 @@ class CardRow(widgets.Widget):
         if existing_card and existing_card != self.card:
             valid = False
 
-        color = Colors.WHITE
-        color_default = Colors.WHITE
-        color_invalid = Color(255, 200, 200)
-        color_new = Color(200, 255, 200)
-        color_invalid = Color(255, 200, 200)
-        color_modified = Color(255, 255, 200)
+        color = cmg.Theme.color_background
+        color_default = cmg.Theme.color_background
+        color_new = Config.color_edit_new
+        color_invalid = Config.color_edit_invalid
+        color_modified = Config.color_edit_modified
         
         if new_in_database and empty:
             color_word_type = color_default
@@ -476,10 +476,13 @@ class CardSetEditWidget(widgets.Widget):
 
         # Create layouts
         left_layout = widgets.VBoxLayout()
-        left_layout.add(widgets.HBoxLayout(widgets.Label("Name:"), self.__box_name))
+        hbox = widgets.HBoxLayout()
+        hbox.add(widgets.Label("Name:"))#), stretch=0)
+        hbox.add(self.__combo_type)#, stretch=1)
+        left_layout.add(hbox)
         left_layout.add(widgets.HBoxLayout(widgets.Label("Type:"), self.__combo_type))
         left_layout.add(widgets.HBoxLayout(widgets.Label("Path:"), self.__label_path))
-        left_layout.add(self.__button_convert)
+        #left_layout.add(self.__button_convert)
         left_layout.add(widgets.HBoxLayout(self.__label_card_count, self.__button_add_card))
         left_layout.add(widgets.AbstractScrollArea(self.table))
         left_layout.add(widgets.HBoxLayout(self.__button_done, self.__button_save))

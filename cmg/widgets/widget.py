@@ -1,9 +1,8 @@
 import traceback
 from pygame.rect import Rect
-from cmg.graphics import Graphics
-from cmg import color
+import cmg
+from cmg.color import Color
 from cmg.widgets.layout_item import LayoutItem
-from cmg.math import Vec2
 from cmg.event import Event
 from cmg.input import KeyShortcut
 
@@ -124,12 +123,12 @@ class Widget(LayoutItem):
                 self.change_focus(widgets[index])
         return self.focused_widget
 
-    def calc_maximum_size(self) -> Vec2:
+    def calc_maximum_size(self) -> cmg.Vec2:
         if self.layout:
             self.set_maximum_size(self.layout.calc_maximum_size())
         return self.get_maximum_size()
 
-    def calc_minimum_size(self) -> Vec2:
+    def calc_minimum_size(self) -> cmg.Vec2:
         if self.layout:
             self.set_minimum_size(self.layout.calc_minimum_size())
         return self.get_minimum_size()
@@ -211,17 +210,19 @@ class Widget(LayoutItem):
         if self.rect.width <= 0 or self.rect.height <= 0:
             return
         
-        c = color.WHITE
+        back_color = cmg.Theme.color_background
         if self.is_focused():
-            c = color.rgb(235, 235, 255)
-            g.fill_rect(self.rect, color=c)
+            back_color = cmg.Theme.color_background_focused
+        g.fill_rect(self.rect, color=back_color)
 
         self.on_draw(g)
         if self.layout:
             self.layout.draw(g)
 
         if not self.is_enabled():
-            g.fill_rect(self.rect, color=color.rgba(255, 255, 255, 128))
+            back_color = Color(back_color)
+            back_color.a = 128;
+            g.fill_rect(self.rect, color=back_color)
 
     def _get_layout_item_children(self):
         if self.layout:

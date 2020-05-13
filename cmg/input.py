@@ -3,8 +3,8 @@ from enum import IntFlag
 import pygame
 import time
 import operator
+import cmg
 from cmg.event import Event
-from cmg.math import Vec2
 
 
 class Keys(IntEnum):
@@ -483,8 +483,8 @@ class InputManager:
         self.down_keys = set()
         self.key_pressed = Event(Keys, KeyMods, str)
         self.key_released = Event(Keys, KeyMods)
-        self.mouse_pressed = Event(Vec2, MouseButtons)
-        self.mouse_released = Event(Vec2, MouseButtons)
+        self.mouse_pressed = Event(cmg.Vec2, MouseButtons)
+        self.mouse_released = Event(cmg.Vec2, MouseButtons)
         self.__key_mods = KeyMods.NONE
 
     def bind(self, key, pressed=None, released=None, down=None):

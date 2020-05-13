@@ -1,9 +1,6 @@
-from cmg.color import Colors
+import cmg
 from cmg.color import Color
-from cmg.graphics import Align
-from cmg.graphics import AccentedText
-from cmg.graphics import Graphics
-from cmg.math import Vec2
+from study_tool.russian.word import AccentedText
 from study_tool.entities.entity import Entity
 
 class TextLabel(Entity):
@@ -14,12 +11,12 @@ class TextLabel(Entity):
     def __init__(self,
                  text: AccentedText,
                  font=None,
-                 color=Colors.BLACK,
-                 align=Align.TopLeft):
+                 color=None,
+                 align=cmg.Align.TopLeft):
         """Entity constructor."""
         super().__init__()
         self.__text = AccentedText(text)
-        self.__color = Color(color)
+        self.__color = Color(color) if color else cmg.Theme.color_text
         self.__font = font
         self.__align = align
 
@@ -28,14 +25,14 @@ class TextLabel(Entity):
 
     def set_text(self, text):
         self.__text = AccentedText(text)
-        self.set_size(Graphics(None).measure_text(self.__text, font=self.__font))
+        self.set_size(cmg.Graphics(None).measure_text(self.__text, font=self.__font))
 
     def set_color(self, color: Color):
         self.__color = Color(color)
 
     def on_create(self):
         """Called when the entity is created."""
-        self.set_size(Graphics(None).measure_text(self.__text, font=self.__font))
+        self.set_size(cmg.Graphics(None).measure_text(self.__text, font=self.__font))
 
     def update(self, dt):
         """Updates the entity."""

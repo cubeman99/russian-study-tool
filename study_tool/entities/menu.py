@@ -4,7 +4,7 @@ import pygame
 import random
 import time
 import cmg
-from cmg import math
+import cmg.mathlib
 from cmg.application import *
 from cmg.graphics import *
 from cmg.input import *
@@ -49,16 +49,16 @@ class Menu(Entity):
             option = option[0]
         g.draw_text(rect.x + 16, rect.y + (rect.height / 2),
                     text=str(option), font=self.option_font,
-                    color=text_color, align=Align.MiddleLeft)
+                    color=text_color, align=cmg.Align.MiddleLeft)
 
     def update(self, dt):
         app = self.context
 
         # Update cursor movement
         move = app.inputs[2].get_amount() - app.inputs[0].get_amount()
-        sign = cmg.math.sign(move)
+        sign = cmg.mathlib.sign(move)
         speed = Config.menu_cursor_speed
-        self.cursor += cmg.math.pow(abs(move), 1.5) * sign * dt * speed
+        self.cursor += cmg.mathlib.pow(abs(move), 1.5) * sign * dt * speed
         if self.cursor < 0.5:
             self.cursor += len(self.options)
         if self.cursor > len(self.options) - 0.5:
@@ -72,7 +72,7 @@ class Menu(Entity):
             desired_scroll_position = max(0, desired_scroll_position)
             desired_scroll_position = min(desired_scroll_position,
                                           option_list_height - option_area_height)
-            self.scroll_position = cmg.math.lerp(
+            self.scroll_position = cmg.mathlib.lerp(
                 self.scroll_position,
                 desired_scroll_position,
                 0.2)

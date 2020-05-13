@@ -1,0 +1,13 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "New 29",
+		"type": "other",
+		"cards": [
+			[
+				"noun",
+				"обслуживание"
+			]
+		]
+	}
+}

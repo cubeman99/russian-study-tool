@@ -9,7 +9,6 @@ from cmg import color
 import cmg.logging
 from cmg import math
 from cmg.input import *
-from cmg.graphics import *
 from cmg.application import *
 from cmg import widgets
 from enum import IntEnum
@@ -35,13 +34,12 @@ class GUITesterApp(Application):
             Input(index=1, name="Left", min=1, max=-1, dead_zone=DEAD_ZONE),
             Input(index=3, name="Right", min=1, max=-1, dead_zone=DEAD_ZONE)]
 
-
         self.input.bind(pygame.K_ESCAPE, pressed=self.quit)
         self.input.key_pressed.connect(self.__on_key_pressed)
         self.input.key_released.connect(self.__on_key_released)
         self.input.mouse_pressed.connect(self.__on_mouse_pressed)
         self.input.mouse_released.connect(self.__on_mouse_released)
-        self.graphics = Graphics(self.screen)
+        self.graphics = cmg.Graphics(self.screen)
 
         grid_layout = widgets.GridLayout()
         grid_layout.add(widgets.Label("ID"), 0, 0)
@@ -59,6 +57,13 @@ class GUITesterApp(Application):
         layout.add(widgets.HBoxLayout(
             widgets.Label("Combo Box:"),
             widgets.ComboBox(["Cat", "Dog", "Horse"])))
+        
+        image_layout = widgets.HBoxLayout()
+        for name in ["wiktionary.png", "cooljugator.jpg", "audio.png"]:
+            image = pygame.image.load("data/images/icons/" + name)
+            image_layout.add(widgets.ImageView(image))
+        layout.add(image_layout)
+
         text_edit = widgets.TextEdit()
         layout.add(text_edit)
         button = widgets.Button("Hello")

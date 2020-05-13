@@ -3,8 +3,8 @@ from pygame import Rect
 from enum import IntFlag
 import cmg
 from cmg.color import Colors
+from cmg.graphics.image import Image
 from study_tool.russian.word import AccentedText
-from cmg.math import Vec2
 
 
 class Align(IntFlag):
@@ -38,7 +38,7 @@ class Graphics:
         self.font = pygame.font.Font(None, 38)
         self.accent_input_chars = "'´`"
         self.accent_render_char = "´"
-        self.__translation = Vec2(0, 0)
+        self.__translation = cmg.Vec2(0, 0)
         self.__cached_text_bitmaps_prev = {}
         self.__cached_text_bitmaps = {}
 
@@ -55,21 +55,27 @@ class Graphics:
         self.screen.fill(tuple(color))
 
     def set_translation(self, x, y):
-        self.__translation = Vec2(x, y)
+        self.__translation = cmg.Vec2(x, y)
 
     #-------------------------------------------------------------------------
     # Shapes
     #-------------------------------------------------------------------------
 
-    def draw_image(self, image, x, y=None):
-        if y is None:
+    def draw_image(self, image: cmg.Image, x, y=None):
+        if isinstance(image, cmg.Image):
+            image = image.get_surface()
+        if isinstance(x, Rect):
+            image = pygame.transform.scale(
+                image, (x.width, x.height))
+            self.blit(image, (x.left, x.top))
+        elif y is None:
             self.blit(image, tuple(x))
         else:
             self.blit(image, (x, y))
 
     def draw_image_part(self, image, dest: tuple, source: Rect):
         self.screen.blit(source=image,
-                         dest=(Vec2(dest) + self.__translation).totuple(),
+                         dest=(cmg.Vec2(dest) + self.__translation).totuple(),
                          area=source)
 
     def draw_rect(self, x, y=None, width=None, height=None, color=Colors.BLACK, thickness=1):
@@ -112,8 +118,8 @@ class Graphics:
         if isinstance(font, cmg.Font):
             font = font.get_pygame_font()
         if isinstance(text, AccentedText):
-            return Vec2(font.size(text.text))
-        return Vec2(font.size(text))
+            return cmg.Vec2(font.size(text.text))
+        return cmg.Vec2(font.size(text))
 
     def get_font_to_fit(self, text, width: float,
                         fonts: list) -> pygame.font.Font:
@@ -209,10 +215,10 @@ class Graphics:
             self.cache_text(bitmap=text_bitmap, font=font,
                             text=repr(text), color=tuple(color))
 
-        self.blit(text_bitmap, Vec2(x, y))
+        self.blit(text_bitmap, cmg.Vec2(x, y))
 
     def blit(self, image, dest):
-        self.screen.blit(image, (Vec2(dest) + self.__translation).totuple())
+        self.screen.blit(image, (cmg.Vec2(dest) + self.__translation).totuple())
 
     def recache(self):
         self.__cached_text_bitmaps_prev = self.__cached_text_bitmaps

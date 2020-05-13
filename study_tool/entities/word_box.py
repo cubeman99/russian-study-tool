@@ -2,11 +2,8 @@ import pygame
 import cmg
 from cmg.color import Colors
 from cmg.color import Color
-from cmg.graphics import Align
-from cmg.graphics import Graphics
-from cmg.graphics import AccentedText
-from cmg.math import Vec2
-from cmg import math
+import cmg.mathlib
+from study_tool.russian.word import AccentedText
 from study_tool.entities.entity import Entity
 from study_tool.card import Card
 from study_tool.russian.word import Word
@@ -35,8 +32,8 @@ class WordBox(Entity):
         self.__font = font
         if self.__font is None:
             self.__font = cmg.Font(24)
-        self.__padding = Vec2(4, 2)
-        self.__size = Vec2(0, 0)
+        self.__padding = cmg.Vec2(4, 2)
+        self.__size = cmg.Vec2(0, 0)
 
     def on_create(self):
         """Called when the entity is created."""
@@ -44,7 +41,7 @@ class WordBox(Entity):
             self.__word = self.context.word_database.lookup_word(self.__text.text)
         if not self.__cards:
             self.__cards = list(self.context.card_database.find_cards_by_word(self.__text.text))
-        self.__size = Graphics(None).measure_text(self.__text, font=self.__font)
+        self.__size = cmg.Graphics(None).measure_text(self.__text, font=self.__font)
         self.set_size(self.__size + (self.__padding * 2))
 
     def update(self, dt):
@@ -65,7 +62,7 @@ class WordBox(Entity):
             outline_color = Colors.BLACK
             card = self.__cards[0]
             study_data = self.context.study_database.get_card_study_data(card)
-            background_color = math.lerp(
+            background_color = cmg.mathlib.lerp(
                 Color(255, 128, 128),
                 Color(128, 255, 128),
                 t=study_data.get_history_score())
@@ -90,4 +87,4 @@ class WordBox(Entity):
                              text=self.__text,
                              font=self.__font,
                              color=text_color,
-                             align=Align.TopLeft)
+                             align=cmg.Align.TopLeft)

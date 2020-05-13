@@ -14,23 +14,7 @@
 			],
 			[
 				"adjective",
-				"самый"
-			],
-			[
-				"adjective",
 				"великий"
-			],
-			[
-				"adjective",
-				"большой"
-			],
-			[
-				"adjective",
-				"маленький"
-			],
-			[
-				"adjective",
-				"огромный"
 			],
 			[
 				"adjective",
@@ -54,27 +38,7 @@
 			],
 			[
 				"adjective",
-				"молодой"
-			],
-			[
-				"adjective",
-				"интересный"
-			],
-			[
-				"adjective",
-				"скучный"
-			],
-			[
-				"adjective",
 				"прекрасный"
-			],
-			[
-				"adjective",
-				"красивый"
-			],
-			[
-				"adjective",
-				"некрасивый"
 			],
 			[
 				"adjective",
@@ -122,27 +86,11 @@
 			],
 			[
 				"adjective",
-				"близкий"
-			],
-			[
-				"adjective",
-				"похожий"
-			],
-			[
-				"adjective",
 				"каждый"
 			],
 			[
 				"adjective",
 				"целый"
-			],
-			[
-				"adjective",
-				"низкий"
-			],
-			[
-				"adjective",
-				"последний"
 			],
 			[
 				"adjective",
@@ -155,10 +103,6 @@
 			[
 				"adjective",
 				"частный"
-			],
-			[
-				"adjective",
-				"громкий"
 			],
 			[
 				"adjective",
@@ -178,15 +122,7 @@
 			],
 			[
 				"adjective",
-				"бедный"
-			],
-			[
-				"adjective",
 				"иностранный"
-			],
-			[
-				"adjective",
-				"забавный"
 			],
 			[
 				"adjective",
@@ -194,27 +130,7 @@
 			],
 			[
 				"adjective",
-				"живой"
-			],
-			[
-				"adjective",
-				"жив"
-			],
-			[
-				"adjective",
-				"ужасный"
-			],
-			[
-				"adjective",
-				"ужасен"
-			],
-			[
-				"adjective",
 				"чудесный"
-			],
-			[
-				"adjective",
-				"опасный"
 			],
 			[
 				"adjective",
@@ -226,23 +142,7 @@
 			],
 			[
 				"adjective",
-				"больной"
-			],
-			[
-				"adjective",
-				"здоровый"
-			],
-			[
-				"adjective",
-				"равный"
-			],
-			[
-				"adjective",
 				"ложный"
-			],
-			[
-				"adjective",
-				"правый"
 			],
 			[
 				"adjective",
@@ -270,23 +170,7 @@
 			],
 			[
 				"adjective",
-				"широкий"
-			],
-			[
-				"adjective",
-				"светлый"
-			],
-			[
-				"adjective",
 				"городской"
-			],
-			[
-				"adjective",
-				"мужской"
-			],
-			[
-				"adjective",
-				"жуткий"
 			],
 			[
 				"adjective",
@@ -310,10 +194,6 @@
 			],
 			[
 				"adjective",
-				"крошечный"
-			],
-			[
-				"adjective",
 				"обалденный"
 			],
 			[
@@ -322,15 +202,7 @@
 			],
 			[
 				"adjective",
-				"худой"
-			],
-			[
-				"adjective",
 				"любимый"
-			],
-			[
-				"adjective",
-				"крупный"
 			],
 			[
 				"adjective",
@@ -371,6 +243,90 @@
 			[
 				"adjective",
 				"остальный"
+			],
+			[
+				"adjective",
+				"глобальный"
+			],
+			[
+				"adjective",
+				"особый"
+			],
+			[
+				"adjective",
+				"напряженный"
+			],
+			[
+				"adjective",
+				"натянутый"
+			],
+			[
+				"adjective",
+				"основной"
+			],
+			[
+				"adjective",
+				"токсичный"
+			],
+			[
+				"adjective",
+				"античный"
+			],
+			[
+				"adjective",
+				"личный"
+			],
+			[
+				"adjective",
+				"неприятный"
+			],
+			[
+				"adjective",
+				"резкий"
+			],
+			[
+				"adjective",
+				"суровый"
+			],
+			[
+				"adjective",
+				"свободный"
+			],
+			[
+				"adjective",
+				"тщетный"
+			],
+			[
+				"adverb",
+				"тщетно"
+			],
+			[
+				"adjective",
+				"эпичный"
+			],
+			[
+				"adjective",
+				"адекватный"
+			],
+			[
+				"adjective",
+				"истинный"
+			],
+			[
+				"adjective",
+				"банальный"
+			],
+			[
+				"adjective",
+				"живописный"
+			],
+			[
+				"adjective",
+				"приемлемый"
+			],
+			[
+				"adjective",
+				"простенький"
 			]
 		]
 	}

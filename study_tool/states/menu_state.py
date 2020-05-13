@@ -100,7 +100,7 @@ class MenuState(State):
         
         # Create proficiency bar
         title_left = self.option_margin
-        title_right = title_left + Graphics(None).measure_text(
+        title_right = title_left + cmg.Graphics(None).measure_text(
             text=self.title, font=self.title_font)[0]
         bar = StudyProficiencyBar(
             center_y=self.margin_top / 2,
@@ -151,7 +151,7 @@ class MenuState(State):
                     text=name,
                     font=self.option_font,
                     color=text_color,
-                    align=Align.MiddleLeft)
+                    align=cmg.Align.MiddleLeft)
 
         # Draw the completion bar
         if bar:
@@ -176,14 +176,14 @@ class MenuState(State):
                     text=self.title,
                     font=self.title_font,
                     color=Config.title_color,
-                    align=Align.MiddleLeft)
+                    align=cmg.Align.MiddleLeft)
 
         g.draw_text(screen_center_x, self.margin_top / 2,
                     text="{:.0f} / {:.0f}".format(self.__metrics.get_proficiency_count(),
                                                   self.__metrics.history_score),
                     font=self.title_font,
                     color=Config.title_color,
-                    align=Align.Centered)
+                    align=cmg.Align.Centered)
 
     def __open_study_mode(self):
         self.app.push_state(ReadTextState())

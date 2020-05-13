@@ -1,13 +1,13 @@
 import pygame
 import os
+import cmg
 from cmg import widgets
-from cmg import gui
 
 class Label(widgets.Widget):
     def __init__(self, text=""):
         super().__init__()
         self.__text = text
-        self.__font = gui.Font(32)
+        self.__font = cmg.Font(32)
         self.__surface = None
         self.__update_size()
 
@@ -29,7 +29,8 @@ class Label(widgets.Widget):
 
     def on_draw(self, g):
         if not self.__surface:
-            self.__surface = self.__font.render(self.__text)
+            self.__surface = self.__font.render(
+                self.__text, color=cmg.Theme.color_text)
         y = self.rect.top + \
             int((self.get_height() - self.__surface.get_height()) / 2)
         g.draw_image(self.__surface, self.rect.left + 4, y)

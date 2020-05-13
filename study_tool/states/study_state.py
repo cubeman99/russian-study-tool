@@ -7,10 +7,7 @@ import time
 import win32clipboard
 import cmg
 from cmg import math
-from cmg.math import Vec2
 from cmg.input import *
-from cmg.graphics import *
-from cmg.application import *
 from study_tool import card_attributes
 from study_tool.card import Card, CardSide
 from study_tool.card_attributes import *
@@ -22,7 +19,8 @@ from study_tool.russian.noun import Noun
 from study_tool.russian.verb import Verb
 from study_tool.scheduler import Scheduler
 from study_tool.scheduler import SchedulerParams
-from study_tool.states.state import State, Button
+from study_tool.states.state import State
+from study_tool.states.state import Button
 from study_tool.states.sub_menu_state import SubMenuState
 from study_tool import example_database
 from study_tool.entities.word_box import WordBox
@@ -199,15 +197,15 @@ class StudyState(State):
         self.__entity_prompt_text = self.add_entity(LabelBox(
             text="<PROMPT-TEXT>",
             font=None,
-            color=Colors.BLACK,
-            align=Align.Centered,
+            color=cmg.Theme.color_text,
+            align=cmg.Align.Centered,
             max_font_size=74,
             min_font_size=12))
         self.__entity_reveal_text = self.__entity_reveal_root.add_child(LabelBox(
             text="<REVEAL-TEXT>",
             font=None,
-            color=Colors.BLACK,
-            align=Align.Centered,
+            color=cmg.Theme.color_text,
+            align=cmg.Align.Centered,
             max_font_size=74,
             min_font_size=16))
         h = self.__card_text_area_height
@@ -219,9 +217,9 @@ class StudyState(State):
             TextLabel(
                 text="<WORD-TYPE>",
                 font=self.__font_word_type,
-                color=Colors.GRAY,
-                align=Align.TopCenter),
-            pos=Vec2(screen_center_x, self.margin_top + 32 + 16))
+                color=cmg.Theme.color_text_box_background_text,
+                align=cmg.Align.TopCenter),
+            pos=cmg.Vec2(screen_center_x, self.margin_top + 32 + 16))
         
         # Card Set list
         card_sets = []
@@ -238,24 +236,24 @@ class StudyState(State):
             column_widths=[400],
             row_height=self.__table_row_height)
         self.__table_card_sets.set_text(0, 0, "Found in Card Sets")
-        self.__entity_reveal_root.add_child(self.__table_card_sets, pos=Vec2(x, y))
+        self.__entity_reveal_root.add_child(self.__table_card_sets, pos=cmg.Vec2(x, y))
 
         y = screen_height - self.margin_bottom - 20 - (22 * 8) - 12 - (25 * 2)
         self.__entity_related_cards = self.__entity_reveal_root.add_child(
             TextLabel("Related cards:", font=self.__font_details),
-            pos=Vec2(self.__left_margin, y))
+            pos=cmg.Vec2(self.__left_margin, y))
         y += self.__line_spacing
         self.__entity_counterparts = self.__entity_verb_root.add_child(
             TextLabel("Imperfective Counterparts:", font=self.__font_details),
-            pos=Vec2(self.__left_margin, y))
+            pos=cmg.Vec2(self.__left_margin, y))
         y += self.__line_spacing
         self.__entity_word_translation = self.__entity_verb_root.add_child(
             TextLabel("<translation>", font=self.__font_details),
-            pos=Vec2(self.__left_margin, y))
+            pos=cmg.Vec2(self.__left_margin, y))
         y += self.__line_spacing
         self.__entity_word_details = self.__entity_verb_root.add_child(
             TextLabel("<details>", font=self.__font_details),
-            pos=Vec2(self.__left_margin, y))
+            pos=cmg.Vec2(self.__left_margin, y))
 
         table_bottom = screen_height - self.margin_bottom - self.__bottom_margin
 
@@ -276,7 +274,7 @@ class StudyState(State):
         self.__table_verb_present.set_text(6, 0, "они")
         self.__entity_verb_root.add_child(
             self.__table_verb_present,
-            pos=Vec2(table_x, table_bottom - (self.__table_row_height * 7)))
+            pos=cmg.Vec2(table_x, table_bottom - (self.__table_row_height * 7)))
         table_x += self.__table_verb_present.get_width() + 16
 
         # Create the Verb Past Tense conjugation table
@@ -295,7 +293,7 @@ class StudyState(State):
         self.__table_verb_past.set_text(6, 0, "imp2")
         self.__entity_verb_root.add_child(
             self.__table_verb_past,
-            pos=Vec2(table_x, table_bottom - (self.__table_row_height * 7)))
+            pos=cmg.Vec2(table_x, table_bottom - (self.__table_row_height * 7)))
         table_x += self.__table_verb_past.get_width() + 16
         
         # Create the Verb Participle conjugation table
@@ -312,7 +310,7 @@ class StudyState(State):
         self.__table_verb_participles.set_text(3, 0, "Passive")
         self.__entity_verb_root.add_child(
             self.__table_verb_participles,
-            pos=Vec2(table_x, table_bottom - (self.__table_row_height * 4)))
+            pos=cmg.Vec2(table_x, table_bottom - (self.__table_row_height * 4)))
         
         # Create the Adjective conjugation table
         self.__table_adjective = ConjugationTable(
@@ -331,7 +329,7 @@ class StudyState(State):
             self.__table_adjective.set_text(1 + index, 0, case.name)
         self.__entity_adjective_root.add_child(
             self.__table_adjective,
-            pos=Vec2(self.__left_margin, table_bottom - (self.__table_row_height * 8)))
+            pos=cmg.Vec2(self.__left_margin, table_bottom - (self.__table_row_height * 8)))
         
         # Create the Noun conjugation table
         self.__table_noun = ConjugationTable(
@@ -347,7 +345,7 @@ class StudyState(State):
             self.__table_noun.set_text(1 + index, 0, case.name)
         self.__entity_noun_root.add_child(
             self.__table_noun,
-            pos=Vec2(self.__left_margin, table_bottom - (self.__table_row_height * 7)))
+            pos=cmg.Vec2(self.__left_margin, table_bottom - (self.__table_row_height * 7)))
         
         self.__tables = [self.__table_noun,
                          self.__table_adjective,
@@ -554,13 +552,13 @@ class StudyState(State):
         if word:
             term_name = word.get_name()
         self.__wiktionary_term = Config.app.wiktionary.get_term(term_name)
-        self.__sound = Config.app.wiktionary.get_sound(term_name)
-        if not self.__sound:
-            Config.app.wiktionary.download_sound(term_name)
-            self.__sound = Config.app.wiktionary.get_sound(term_name)
-        if self.__sound:
-            self.__sound.play()
-        print(term_name, self.__wiktionary_term, self.__sound)
+        # TODO: Sound
+        #self.__sound = Config.app.wiktionary.get_sound(term_name)
+        #if not self.__sound:
+        #    Config.app.wiktionary.download_sound(term_name)
+        #    self.__sound = Config.app.wiktionary.get_sound(term_name)
+        #if self.__sound:
+        #    self.__sound.play()
 
         # Get the card text and attributes
         self.prompt_attributes = []
@@ -596,9 +594,9 @@ class StudyState(State):
             self.__entity_example_root.add_child(
                 TextLabel(text=AccentedText(sentence).text,
                           font=self.__font_details,
-                          color=Colors.BLACK,
-                          align=Align.TopLeft),
-                pos=Vec2(self.__left_margin, y))
+                          color=cmg.Theme.color_text,
+                          align=cmg.Align.TopLeft),
+                pos=cmg.Vec2(self.__left_margin, y))
             if occurences is None:
                 occurences = []
             for start, word in occurences:
@@ -606,17 +604,17 @@ class StudyState(State):
                 self.__entity_example_root.add_child(
                     TextLabel(text=word,
                               font=self.__font_details,
-                              color=Colors.RED,
-                              align=Align.TopLeft),
-                    pos=Vec2(self.__left_margin + size.x, y))
+                              color=cmg.Theme.color_text_highlighted,
+                              align=cmg.Align.TopLeft),
+                    pos=cmg.Vec2(self.__left_margin + size.x, y))
             y += self.__line_spacing
         if examples:
             self.__entity_example_root.add_child(
                 TextLabel(text="({} total examples)".format(total_example_count),
                           font=self.__font_details,
-                          color=Colors.GRAY,
-                          align=Align.TopLeft),
-                pos=Vec2(self.__left_margin, y))
+                          color=cmg.Theme.color_text_box_background_text,
+                          align=cmg.Align.TopLeft),
+                pos=cmg.Vec2(self.__left_margin, y))
 
         self.__entity_prompt_text.set_text(self.prompt_text)
         self.__entity_reveal_text.set_text(self.reveal_text)
@@ -687,7 +685,7 @@ class StudyState(State):
         y = self.__entity_related_cards.get_position().y
         for related_card in self.card.get_related_cards():
             entity = self.__entity_related_cards.add_child(
-                WordBox(related_card, font=self.__font_details), pos=Vec2(x, y))
+                WordBox(related_card, font=self.__font_details), pos=cmg.Vec2(x, y))
             self.__related_cards.append(entity)
             x += entity.get_width() + self.__card_box_spacing
             
@@ -738,7 +736,7 @@ class StudyState(State):
             y = self.__entity_counterparts.get_position().y
             for counterpart in verb.get_counterparts():
                 entity = self.__entity_counterparts.add_child(
-                    WordBox(counterpart, font=self.__font_details), pos=Vec2(x, y))
+                    WordBox(counterpart, font=self.__font_details), pos=cmg.Vec2(x, y))
                 self.__counterparts.append(entity)
                 x += entity.get_width() + self.__card_box_spacing
 
@@ -784,7 +782,7 @@ class StudyState(State):
         self.buttons[0] = Button("Mark", lambda: self.next(knew_it=False))
         self.__on_revealed_changed()
 
-    def draw_top_proficiency_bar(self, g: Graphics, top_y, bar_height, bar_color):
+    def draw_top_proficiency_bar(self, g: cmg.Graphics, top_y, bar_height, bar_color):
         screen_width, screen_height = self.app.screen.get_size()
         screen_center_x = screen_width / 2
         screen_center_y = screen_height / 2
@@ -800,7 +798,7 @@ class StudyState(State):
         for index in range(0, history_display_count):
             marked = not self.__study_data.get_history_list()[index]
             t = index / (max_history_display_count * 1.2)
-            c = cmg.math.lerp(marked_overlay_color, bar_color, t)
+            c = cmg.mathlib.lerp(marked_overlay_color, bar_color, t)
             x = padding + ((history_display_count - index - 1) *
                            (spacing + history_box_size))
             if marked:
@@ -815,7 +813,7 @@ class StudyState(State):
         # Draw time since last encounter (right)
         g.draw_text(screen_width - 16, top_y + (bar_height // 2),
                     text=self.__study_data.elapsed_time_string(),
-                    align=Align.MiddleRight,
+                    align=cmg.Align.MiddleRight,
                     color=marked_overlay_color,
                     font=self.card_status_font)
 
@@ -826,19 +824,19 @@ class StudyState(State):
         g.draw_text(screen_center_x, top_y + (bar_height // 2),
                     text="{:.4f} < {:.4f} > {:.4f}".format(
                         score_fail, score, score_pass),
-                    align=Align.Centered,
+                    align=cmg.Align.Centered,
                     color=marked_overlay_color,
                     font=self.card_status_font)
 
-    def draw(self, g: Graphics):
+    def draw(self, g: cmg.Graphics):
         screen_width, screen_height = self.app.screen.get_size()
         screen_center_x = screen_width / 2
         screen_center_y = screen_height / 2
 
         # Draw top/bottom proficiency bars
         if self.__study_data.get_proficiency_level() > 0:
-            marked_state_color = cmg.math.lerp(Config.proficiency_level_colors[
-                self.__study_data.get_proficiency_level()], color.WHITE, 0.7)
+            marked_state_color = cmg.mathlib.lerp(Config.proficiency_level_colors[
+                self.__study_data.get_proficiency_level()], cmg.Theme.color_background, 0.7)
             g.fill_rect(0, self.margin_top, screen_width,
                         self.proficiency_margin_height,
                         color=marked_state_color)
@@ -856,11 +854,11 @@ class StudyState(State):
         # Draw text at top
         g.draw_text(32, self.margin_top / 2,
                     text=self.card_set.name,
-                    color=cmg.color.GRAY,
-                    align=Align.MiddleLeft)
+                    color=cmg.Theme.color_text,
+                    align=cmg.Align.MiddleLeft)
         g.draw_text(screen_center_x, self.margin_top / 2,
                     text="{:.0f} / {:.0f}".format(self.__study_metrics.get_proficiency_count(),
                                                   self.__study_metrics.history_score),
-                    color=cmg.color.GRAY,
-                    align=Align.Centered)
+                    color=cmg.Theme.color_text,
+                    align=cmg.Align.Centered)
         

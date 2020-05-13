@@ -1,9 +1,7 @@
-from cmg.graphics import Graphics
 from pygame.rect import Rect
-from cmg import color
+import cmg
 from cmg.widgets.layout_item import LayoutItem
 from cmg.widgets import Widget
-from cmg.math import Vec2
 from cmg.widgets.layout import Layout
 
 
@@ -49,7 +47,7 @@ class BoxLayout(Layout):
 
     def __update_axis_layout(self, axis: int):
         size = self.get_size()
-        child_size = Vec2(self.get_size())
+        child_size = cmg.Vec2(self.get_size())
         stretch_space = size[axis]
         stretch_list = []
         stretch_factors = dict(self.__stretch_factors)
@@ -108,14 +106,14 @@ class BoxLayout(Layout):
                         index += 1
         
         # Set final positions
-        child_pos = Vec2(self.get_rect().topleft)
+        child_pos = cmg.Vec2(self.get_rect().topleft)
         for index, child in enumerate(visible_children):
             rect = child.get_rect()
             rect.topleft = child_pos.totuple()
             child_pos[axis] += child.get_size()[axis]
 
-    def calc_maximum_size(self) -> Vec2:
-        max_size = Vec2(self.DEFAULT_MAX_SIZE, self.DEFAULT_MAX_SIZE)
+    def calc_maximum_size(self) -> cmg.Vec2:
+        max_size = cmg.Vec2(self.DEFAULT_MAX_SIZE, self.DEFAULT_MAX_SIZE)
         max_size[self.axis] = 0
         for child in self.get_visible_children():
             child_max_size = child.calc_maximum_size()
@@ -125,10 +123,10 @@ class BoxLayout(Layout):
         self.set_maximum_size(max_size)
         return max_size
 
-    def calc_minimum_size(self) -> Vec2:
+    def calc_minimum_size(self) -> cmg.Vec2:
         if not self.children:
             return super().calc_minimum_size()
-        min_size = Vec2(0, 0)
+        min_size = cmg.Vec2(0, 0)
         for child in self.get_visible_children():
             child_min_size = child.calc_minimum_size()
             min_size[self.axis] += child_min_size[self.axis]

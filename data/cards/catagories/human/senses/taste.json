@@ -1,0 +1,57 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Taste",
+		"type": "categorical",
+		"cards": [
+			[
+				"adjective",
+				"сладкий"
+			],
+			[
+				"verb",
+				"киснуть"
+			],
+			[
+				"adjective",
+				"соленый"
+			],
+			[
+				"adjective",
+				"пряный"
+			],
+			[
+				"adjective",
+				"острый"
+			],
+			[
+				"adjective",
+				"вкусный"
+			],
+			[
+				"adjective",
+				"невкусный"
+			],
+			[
+				"adjective",
+				"вкуснейший"
+			],
+			[
+				"adjective",
+				"восхитительный"
+			],
+			[
+				"noun",
+				"вкус"
+			],
+			[
+				"adjective",
+				"горький"
+			],
+			[
+				"verb",
+				"утолить"
+			]
+		]
+	}
+}

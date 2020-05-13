@@ -1,6 +1,7 @@
 import os
 import threading
 import time
+import json
 import yaml
 from datetime import datetime
 from cmg.event import Event
@@ -282,38 +283,41 @@ class StudyDatabase:
                     path = self.__word_data_path
                 self.__word_data_path = path
                 assert path is not None
+                
+                temp_path = path + ".temp"
 
                 Config.logger.debug("Saving study data to: " + path)
                 state = self.__serialize()
+                with open(temp_path, "w", encoding="utf8") as f:
+                    json.dump(state, f, indent='\t', ensure_ascii=False)
 
-                cards_state = state["cards"]
-                del state["cards"]
-                metrics_state_dict = state["metrics"]
-                del state["metrics"]
-
-                temp_path = path + ".temp"
-                with open(temp_path, "wb") as opened_file:
-                    yaml.dump(state, opened_file, encoding="utf8",
-                              allow_unicode=True, default_flow_style=False,
-                              Dumper=yaml.CDumper)
-                
-                    opened_file.write(b"cards:\n")
-                    for card_state in cards_state:
-                        opened_file.write(b"  - ")
-                        yaml.dump(
-                            card_state, opened_file, encoding="utf8",
-                            allow_unicode=True, default_flow_style=True,
-                            Dumper=yaml.CDumper)
-
-                    opened_file.write(b"metrics:\n")
-                    metrics_state_dict = list(metrics_state_dict.items())
-                    metrics_state_dict.sort(key=lambda x: x[0])
-                    for data_string, metrics_state in metrics_state_dict:
-                        opened_file.write("  {}: ".format(data_string).encode())
-                        yaml.dump(
-                            metrics_state, opened_file, encoding="utf8",
-                            allow_unicode=True, default_flow_style=True,
-                            Dumper=yaml.CDumper)
+                #metrics_state_dict = state["metrics"]
+                #del state["metrics"]
+                #cards_state = state["cards"]
+                #del state["cards"]
+                #
+                #with open(temp_path, "wb") as opened_file:
+                #    yaml.dump(state, opened_file, encoding="utf8",
+                #              allow_unicode=True, default_flow_style=False,
+                #              Dumper=yaml.CDumper)
+                #
+                #    opened_file.write(b"cards:\n")
+                #    for card_state in cards_state:
+                #        opened_file.write(b"  - ")
+                #        yaml.dump(
+                #            card_state, opened_file, encoding="utf8",
+                #            allow_unicode=True, default_flow_style=True,
+                #            Dumper=yaml.CDumper)
+                #
+                #    opened_file.write(b"metrics:\n")
+                #    metrics_state_dict = list(metrics_state_dict.items())
+                #    metrics_state_dict.sort(key=lambda x: x[0])
+                #    for data_string, metrics_state in metrics_state_dict:
+                #        opened_file.write("  {}: ".format(data_string).encode())
+                #        yaml.dump(
+                #            metrics_state, opened_file, encoding="utf8",
+                #            allow_unicode=True, default_flow_style=True,
+                #            Dumper=yaml.CDumper)
 
                 if os.path.isfile(path):
                     os.remove(path)

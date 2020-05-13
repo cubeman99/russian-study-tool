@@ -1,0 +1,61 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Verbs of Motion Prefixes",
+		"type": "categorical",
+		"cards": [
+			[
+				"prefix",
+				"при-"
+			],
+			[
+				"prefix",
+				"у-"
+			],
+			[
+				"prefix",
+				"до-"
+			],
+			[
+				"prefix",
+				"от-"
+			],
+			[
+				"prefix",
+				"в-; во-"
+			],
+			[
+				"prefix",
+				"вы-"
+			],
+			[
+				"prefix",
+				"вз-; вс-"
+			],
+			[
+				"prefix",
+				"с-"
+			],
+			[
+				"prefix",
+				"под-"
+			],
+			[
+				"prefix",
+				"за-"
+			],
+			[
+				"prefix",
+				"пере-"
+			],
+			[
+				"prefix",
+				"об-"
+			],
+			[
+				"prefix",
+				"про-"
+			]
+		]
+	}
+}

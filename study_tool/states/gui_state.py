@@ -168,11 +168,13 @@ class GUIState(State):
 
         # Update layout
         if self.__widget:
+            margin = 2
             screen_width, screen_height = self.app.screen.get_size()
-            self.__widget.rect.top = self.margin_top + 4
-            self.__widget.rect.left = 4
-            self.__widget.rect.width = screen_width - 8
-            self.__widget.rect.height = screen_height - self.margin_top - self.margin_bottom - 8
+            self.__widget.rect.top = self.margin_top + margin
+            self.__widget.rect.left = margin
+            self.__widget.rect.width = screen_width - (margin * 2)
+            self.__widget.rect.height = (screen_height - self.margin_top -
+                                         self.margin_bottom - (margin * 2))
             self.__widget.main_update()
             if not self.__widget.is_visible():
                 self.app.pop_state()
@@ -220,7 +222,7 @@ class GUIState(State):
         g.draw_accented_text(32, self.margin_top / 2,
                              text=self.__title,
                              color=Config.title_color,
-                             align=Align.MiddleLeft)
+                             align=cmg.Align.MiddleLeft)
 
     def __close(self):
         if self.__widget:

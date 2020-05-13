@@ -1,10 +1,7 @@
 import cmg
 from cmg.color import Colors
 from cmg.color import Color
-from cmg.graphics import Align
-from cmg.graphics import AccentedText
-from cmg.graphics import Graphics
-from cmg.math import Vec2
+from study_tool.russian.word import AccentedText
 from study_tool.entities.entity import Entity
 
 class LabelBox(Entity):
@@ -15,8 +12,8 @@ class LabelBox(Entity):
     def __init__(self,
                  text: AccentedText,
                  font=None,
-                 color=Colors.BLACK,
-                 align=Align.Centered,
+                 color=cmg.Theme.color_text,
+                 align=cmg.Align.Centered,
                  max_font_size=24,
                  min_font_size=12):
         """Entity constructor."""
@@ -54,11 +51,11 @@ class LabelBox(Entity):
                              text=self.__text,
                              font=self.__font,
                              color=self.__color,
-                             align=Align.Centered)
+                             align=cmg.Align.Centered)
 
     def __recalc_font_size(self):
         """Recalcs font size."""
-        font_size = Graphics(None).get_font_size_to_fit(
+        font_size = cmg.Graphics(None).get_font_size_to_fit(
             text=self.__text,
             max_font_size=self.__max_font_size,
             min_font_size=self.__min_font_size,

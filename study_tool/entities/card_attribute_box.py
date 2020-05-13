@@ -2,16 +2,13 @@ import pygame
 import cmg
 from cmg.color import Colors
 from cmg.color import Color
-from cmg.graphics import Align
-from cmg.graphics import Graphics
-from cmg.graphics import AccentedText
-from cmg.math import Vec2
 from cmg import math
-from study_tool.entities.entity import Entity
-from study_tool.card import Card
-from study_tool.russian.word import Word
 from study_tool import card_attributes
+from study_tool.card import Card
 from study_tool.card_attributes import *
+from study_tool.entities.entity import Entity
+from study_tool.russian.word import AccentedText
+from study_tool.russian.word import Word
 
 
 class CardAttributeBox(Entity):
@@ -28,7 +25,7 @@ class CardAttributeBox(Entity):
         self.__font = font
         if self.__font is None:
             self.__font = cmg.Font(24)
-        self.__padding = Vec2(8, 6)
+        self.__padding = cmg.Vec2(8, 6)
 
     def on_create(self):
         """Called when the entity is created."""
@@ -60,4 +57,4 @@ class CardAttributeBox(Entity):
                              text=self.__text,
                              font=self.__font,
                              color=text_color,
-                             align=Align.Centered)
+                             align=cmg.Align.Centered)

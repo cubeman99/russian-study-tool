@@ -1,0 +1,33 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Dative Case",
+		"type": "grammatical",
+		"cards": [
+			[
+				"verb",
+				"приступить + к + dat."
+			],
+			[
+				"preposition",
+				"по + dat."
+			],
+			[
+				"phrase",
+				"dat. + удалось + inf."
+			],
+			[
+				"phrase",
+				"dat. + следует + inf."
+			],
+			[
+				"phrase",
+				"dat. + пришлось/придет + verb"
+			],
+			[
+				"preposition",
+				"к + dat."
+			]
+		]
+	}
+}

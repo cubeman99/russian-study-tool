@@ -123,7 +123,7 @@ class State:
                         thickness=Config.button_border_thickness,
                         color=Config.button_border_color)
             g.draw_text(r.x + (r.width / 2), r.y + (r.height / 2),
-                        text=button.name, align=Align.Centered,
+                        text=button.name, align=cmg.Align.Centered,
                         color=Config.button_text_color)
 
         # Draw entities

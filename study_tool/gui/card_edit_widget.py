@@ -16,7 +16,7 @@ from study_tool import card_attributes
 from study_tool.config import Config
 from study_tool.russian.types import WordType, get_word_type_short_name
 from study_tool.russian.verb import Verb
-from study_tool.russian.word import Word, split_words
+from study_tool.russian.word import Word, split_words, AccentedText
 from study_tool.card import Card
 from study_tool.card_attributes import CardAttributes
 from study_tool.gui.card_search_widget import CardSearchWidget

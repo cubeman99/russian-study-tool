@@ -1,0 +1,21 @@
+{
+	"card_set": {
+		"version": 1,
+		"name": "Building",
+		"type": "categorical",
+		"cards": [
+			[
+				"noun",
+				"подъезд"
+			],
+			[
+				"noun",
+				"палата"
+			],
+			[
+				"noun",
+				"проход"
+			]
+		]
+	}
+}

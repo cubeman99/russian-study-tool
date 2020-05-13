@@ -1,8 +1,9 @@
 import os
 import pygame
 from pygame import Rect
-from cmg import gui
+import cmg
 from cmg import widgets
+from cmg.theme import Theme
 from cmg.color import Colors
 from cmg.color import Color
 from cmg.event import Event
@@ -17,7 +18,7 @@ class Button(widgets.Widget):
         self.clicked = Event()
 
         self.__text = text
-        self.__font = gui.Font(32)
+        self.__font = cmg.Font(32)
         self.__surface = None
 
         size = self.__font.measure(self.__text)
@@ -50,7 +51,8 @@ class Button(widgets.Widget):
 
     def on_draw(self, g):
         if not self.__surface:
-            self.__surface = self.__font.render(self.__text)
+            self.__surface = self.__font.render(
+                self.__text, color=cmg.Theme.color_text)
         y = self.rect.top + \
             int((self.get_height() - self.__surface.get_height()) / 2)
         g.fill_rect(self.get_rect(), color=Colors.YELLOW)
@@ -59,9 +61,9 @@ class Button(widgets.Widget):
         r.y = self.get_rect().bottom - r.height
 
         # Draw the box background
-        c = Color(190, 205, 255)
+        c = cmg.Theme.color_button_background
         if self.is_focused():
-            c = Color(160, 190, 255)
+            c = cmg.Theme.color_button_background_focused
         g.fill_rect(self.rect, color=c)
 
         # Draw the text
@@ -70,9 +72,9 @@ class Button(widgets.Widget):
                      self.get_rect().centery - self.__surface.get_height() / 2,)
 
         # Draw the box border
-        c = Colors.BLACK
+        c = cmg.Theme.color_outline
         if self.is_focused():
-            c = Colors.BLUE
+            c = cmg.Theme.color_outline_focused
         g.draw_rect(self.rect, color=c)
 
     def __repr__(self):

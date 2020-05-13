@@ -88,6 +88,6 @@ class SubMenuState(State):
                     text=self.title,
                     font=self.title_font,
                     color=self.title_color,
-                    align=Align.Centered)
+                    align=cmg.Align.Centered)
 
         self.entity_manager.draw(g)

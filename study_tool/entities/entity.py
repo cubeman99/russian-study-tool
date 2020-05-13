@@ -1,5 +1,4 @@
-from cmg.math import Vec2
-from cmg.math import Rect
+import cmg
 
 class Entity:
     """
@@ -10,8 +9,8 @@ class Entity:
         super().__init__()
         self.__visible = True
         self.__destroyed = False
-        self.__position = Vec2(0, 0)
-        self.__size = Vec2(0, 0)
+        self.__position = cmg.Vec2(0, 0)
+        self.__size = cmg.Vec2(0, 0)
         self.__manager = None
         self.__context = None
         self.__parent = None
@@ -33,18 +32,18 @@ class Entity:
     def get_height(self):
         return self.__size.y
 
-    def get_position(self) -> Vec2:
+    def get_position(self) -> cmg.Vec2:
         return self.__position
 
-    def get_center(self) -> Vec2:
+    def get_center(self) -> cmg.Vec2:
         return self.__position + (self.__size * 0.5)
 
-    def get_size(self) -> Vec2:
+    def get_size(self) -> cmg.Vec2:
         return self.__size
 
-    def get_rect(self) -> Rect:
-        return Rect(self.__position.x, self.__position.y,
-                    self.__size.x, self.__size.y)
+    def get_rect(self) -> cmg.Rect:
+        return cmg.Rect(self.__position.x, self.__position.y,
+                        self.__size.x, self.__size.y)
 
     def is_destroyed(self) -> bool:
         return self.__destroyed
@@ -83,28 +82,28 @@ class Entity:
     def set_y(self, y):
         self.__position.y = y
 
-    def set_position(self, position: Vec2, y=None):
+    def set_position(self, position: cmg.Vec2, y=None):
         if y is None:
-            self.__position = Vec2(position)
+            self.__position = cmg.Vec2(position)
         else:
-            self.__position = Vec2(position, y)
+            self.__position = cmg.Vec2(position, y)
 
-    def set_size(self, size: Vec2, height=None):
+    def set_size(self, size: cmg.Vec2, height=None):
         if height is None:
-            self.__size = Vec2(size)
+            self.__size = cmg.Vec2(size)
         else:
-            self.__size = Vec2(size, height)
+            self.__size = cmg.Vec2(size, height)
 
     def set_rect(self, x, y=None, width=None, height=None):
         if y is None:
-            self.__position = Vec2(x.left, x.top)
-            self.__size = Vec2(x.width, x.height)
+            self.__position = cmg.Vec2(x.left, x.top)
+            self.__size = cmg.Vec2(x.width, x.height)
         elif width is None:
-            self.__position = Vec2(x)
-            self.__size = Vec2(y)
+            self.__position = cmg.Vec2(x)
+            self.__size = cmg.Vec2(y)
         else:
-            self.__position = Vec2(x, y)
-            self.__size = Vec2(width, height)
+            self.__position = cmg.Vec2(x, y)
+            self.__size = cmg.Vec2(width, height)
 
     def set_visible(self, visible: bool):
         self.__visible = visible
@@ -130,5 +129,5 @@ class Entity:
         self.__context = context
         self.__destroyed = False
         if pos is not None:
-            self.__position = Vec2(pos)
+            self.__position = cmg.Vec2(pos)
         self.on_create()
